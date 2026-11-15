@@ -31,10 +31,10 @@ def metrics(records):
     ambiguous=[c for c in claims if not c['identifiable']]
     extra={}
     for slot in ('tone','modulation'):
-        chosen=[c for c in claims if c['slot']==slot and c['asserted']];matched=[c for c in chosen if c['correct'] and c.get('numeric_absolute_error') is not None]
+        chosen=[c for c in claims if c['slot']==slot and c['asserted']];matched=[c for c in chosen if c['correct'] and c.get('numeric_matched_absolute_error') is not None]
         measured=[c for c in chosen if c.get('numeric_absolute_error') is not None]
         extra.update({slot+'_assertions':len(chosen),slot+'_matched_assertions':len(matched),slot+'_match_coverage':ratio(len(matched),len(chosen)),
-            slot+'_matched_mae_hz':float(np.mean([c['numeric_absolute_error'] for c in matched])) if matched else None,
+            slot+'_matched_mae_hz':float(np.mean([c['numeric_matched_absolute_error'] for c in matched])) if matched else None,
             slot+'_reference_available_assertions':len(measured),slot+'_nearest_reference_mae_hz':float(np.mean([c['numeric_absolute_error'] for c in measured])) if measured else None})
     return {**extra,'total_reports':len(records),'retained_reports':n,'report_coverage':ratio(n,len(records)),'supported_coverage':ratio(g,4*n),
         'whole_test_useful_coverage':ratio(g,4*len(records)),'assertion_coverage':ratio(a,4*n),'unsupported_rate':ratio(u,a),
@@ -42,9 +42,15 @@ def metrics(records):
         'mean_loss':float(np.mean([r['score']['loss'] for r in kept])) if kept else None,
         'class_accuracy':ratio(sum(r['score']['class_correct'] for r in kept),n),
         'class_macro_f1':float(f1_score(y,pred,labels=range(5),average='macro',zero_division=0)) if n else None,
+        'class_balanced_accuracy':float(recall_score(y,pred,labels=range(5),average='macro',zero_division=0)) if n else None,
+        'class_per_class_recall':recall_score(y,pred,labels=range(5),average=None,zero_division=0).tolist() if n else None,
         'class_abstention_rate':ratio(sum(not r['score']['class_asserted'] for r in kept),n),
         'factual_error_rate_on_assertions':ratio(sum(r['score']['factual_errors'] for r in kept),a),
+        'factual_error_rate_on_identifiable_assertions':ratio(sum(r['score']['factual_errors'] for r in kept),sum(c['asserted'] and c['identifiable'] for c in claims)),
         'citation_fidelity_on_assertions':ratio(sum(c['citation_supported'] for c in claims),a),
+        'assertions_with_citations':sum(c['has_citation'] for c in claims),
+        'citation_support_precision':ratio(sum(c['citation_supported'] for c in claims),sum(c['has_citation'] for c in claims)),
+        'independently_supported_citation_precision':ratio(sum(c['supported'] for c in claims),sum(c['has_citation'] for c in claims)),
         'citation_completeness_on_correct_assertions':ratio(sum(c['correct'] and c['citation_supported'] for c in claims),sum(c['correct'] for c in claims)),
         'reference_identifiability':ratio(sum(r['score']['identifiable'] for r in kept),4*n),
         'appropriate_uncertainty_on_ambiguous':ratio(sum(c['appropriate_uncertainty'] for c in ambiguous),len(ambiguous)),
@@ -53,6 +59,10 @@ def metrics(records):
         'mean_tools_all':float(np.mean([r['tool_calls'] for r in records])),
         'mean_generator_calls_all':float(np.mean([r['generator_calls'] for r in records])),
         'mean_terminal_output_tokens_all':float(np.mean([r['output_tokens'] for r in records])),
+        'mean_evidence_tokens_all':float(np.mean([r.get('evidence_tokens',0) for r in records])),
+        'mean_terminal_input_text_tokens_all':float(np.mean([r.get('terminal_input_text_tokens',0) for r in records])),
+        'mean_planner_output_tokens_all':float(np.mean([r.get('planner_output_tokens',0) for r in records])),
+        'mean_total_output_tokens_all':float(np.mean([r['output_tokens']+r.get('planner_output_tokens',0) for r in records])),
         'mean_reconstructed_seconds_all':float(np.mean([r['reconstructed_seconds'] for r in records]))}
 
 def rows_for(method,items,settings,ensemble,class_ensemble,labels,threshold=None,budget=2):
@@ -61,13 +71,19 @@ def rows_for(method,items,settings,ensemble,class_ensemble,labels,threshold=None
         mask,trace=method_mask(method,item,settings,ensemble,class_ensemble,budget);risk=ensemble.predict(item['asset'],max(mask,0))[2]
         if method=='B8_deterministic':
             scored=deterministic_score(item,mask,labels);report=deterministic_report(item['asset'],mask,labels);terminal_seconds=0;tokens=0;calls=0
+            evidence_tokens=0;input_text_tokens=0
         else:
             scored=item['scores'][mask];generation=item['reports'][mask]['result'];report=generation['parsed'];terminal_seconds=generation['amortized_seconds'];tokens=generation['output_tokens'];calls=1
-        if method=='B6_planner':calls+=len(item['planner']['calls']);terminal_seconds+=sum(c['amortized_seconds'] for c in item['planner']['calls'])
+            evidence_tokens=sum(item['reports'][mask]['key']['family_tokens'].values());input_text_tokens=generation['input_text_tokens']
+        planner_tokens=0
+        if method=='B6_planner':
+            calls+=len(item['planner']['calls']);terminal_seconds+=sum(c['amortized_seconds'] for c in item['planner']['calls'])
+            planner_tokens=sum(c['output_tokens'] for c in item['planner']['calls'])
         value=report['class']['value'] if report and scored['valid'] and scored['class_asserted'] else None;prediction=labels.index(value) if value in labels else -1
         out.append({'id':item['row']['id'],'source_group':item['row']['source_group'],'date':item['row']['date'],'label_index':item['row']['label_index'],
             'prediction':prediction,'mask':mask,'actions':trace,'risk':risk,'retained':threshold is None or risk<=threshold,'score':scored,
-            'tool_calls':max(mask,0).bit_count(),'generator_calls':calls,'output_tokens':tokens,
+            'tool_calls':max(mask,0).bit_count(),'generator_calls':calls,'output_tokens':tokens,'planner_output_tokens':planner_tokens,
+            'evidence_tokens':evidence_tokens,'terminal_input_text_tokens':input_text_tokens,
             'reconstructed_seconds':terminal_seconds+sum(item['asset']['tool_seconds']['ABCD'[a]] for a in trace)})
     return out
 
@@ -100,10 +116,14 @@ def main():
         threshold=settings['thresholds'][method]
         rows=rows_for(method,data['test'],settings,ensemble,class_ensemble,labels,threshold);method_rows[method]=rows;table[method]=metrics(rows)
         ordered=sorted(rows,key=lambda r:(r['risk'],r['id']));curve=[]
-        for coverage in np.linspace(.1,1,19):
-            n=max(1,int(np.ceil(coverage*len(rows))));selected=[{**r,'retained':True} for r in ordered[:n]]
+        for percent in range(10,101,5):
+            n=max(1,int(np.ceil(percent*len(rows)/100)));selected=[{**r,'retained':True} for r in ordered[:n]]
             value=metrics(selected);curve.append({'coverage':n/len(rows),'supported_coverage':value['supported_coverage'],'unsupported_rate':value['unsupported_rate'],'loss':value['mean_loss']})
         curves[method]=curve
+        # Uniform rank increments, including every retained prefix; no test tuning.
+        losses=np.array([r['score']['loss'] for r in ordered],dtype=float)
+        table[method]['descriptive_risk_coverage_area']=float(np.mean(np.cumsum(losses)/np.arange(1,len(rows)+1)))
+        table[method]['descriptive_fixed_coverage']={str(percent):next(v for v in curve if v['coverage']==percent/100) for percent in (50,70,90)}
     contrast_names=[settings['locked_comparator'],'B7_class_only','A1_one_shot'];contrasts={name:cluster_contrast(method_rows['P'],method_rows[name]) for name in contrast_names}
     adjusted=holm_adjust([contrasts[n]['p_two_sided_centered_bootstrap'] if contrasts[n]['p_two_sided_centered_bootstrap'] is not None else 1. for n in contrast_names])
     for n,p in zip(contrast_names,adjusted):
@@ -125,10 +145,17 @@ def main():
         budget_results[str(budget)]=metrics(rows_for('P',data['test'],settings,ensemble,class_ensemble,labels,threshold,budget))
     p=table['P'];base=table[settings['locked_comparator']];primary=contrasts[settings['locked_comparator']]
     success=bool(primary['difference'] is not None and primary['difference']>=.05 and primary['ci95'][0]>0 and p['unsupported_rate'] is not None and base['unsupported_rate'] is not None and p['unsupported_rate']<=base['unsupported_rate'] and p['class_macro_f1']>=base['class_macro_f1']-.02 and all(v['difference'] is not None and v['difference']>0 and v['p_holm'] is not None and v['p_holm']<.05 for v in contrasts.values()))
+    decision_diagnostics={'no_tool_reports':sum(r['mask']==0 for r in method_rows['P']),
+        'one_tool_reports':sum(r['tool_calls']==1 for r in method_rows['P']),
+        'two_tool_reports':sum(r['tool_calls']==2 for r in method_rows['P']),
+        'different_mask_from_one_shot':sum(a['mask']!=b['mask'] for a,b in zip(method_rows['P'],method_rows['A1_one_shot'])),
+        'first_actions':{f:sum(bool(r['actions']) and r['actions'][0]==i for r in method_rows['P']) for i,f in enumerate('ABCD')},
+        'second_actions':{f:sum(len(r['actions'])>1 and r['actions'][1]==i for r in method_rows['P']) for i,f in enumerate('ABCD')}}
     summary={'labels':labels,'assessment_clips':len(data['test']),'assessment_source_groups':len({i['row']['source_group'] for i in data['test']}),
         'assessment_utc_days':len({i['row']['date'] for i in data['test']}),'locked_comparator':settings['locked_comparator'],'methods':table,'primary_contrasts':contrasts,
         'classifier_all_test':classifier,'controller_seeds':seed_results,'tool_budget_sensitivity':budget_results,'preregistered_success_criteria_met':success,
-        'human_reviewers':0,'endpoint':'automated proxy supported coverage','latency_is_reconstructed_not_online_benchmark':True}
+        'human_reviewers':0,'endpoint':'automated proxy supported coverage','latency_is_reconstructed_not_online_benchmark':True,
+        'latency_excludes_shared_classifier_and_model_loading':True,'policy_decisions':decision_diagnostics}
     atomic_json(ROOT/'results/tables/main_results.json',summary);atomic_json(ROOT/'results/tables/risk_coverage_curves.json',curves)
     atomic_json(ROOT/'results/raw/scored_test_records.json',method_rows)
     with (ROOT/'results/tables/main_results.csv').open('w',newline='') as handle:

@@ -1,0 +1,29 @@
+[
+  {
+    "key": "signals1",
+    "url": "https://arxiv.org/html/2610.22064v1",
+    "read_date": "2026-11-15",
+    "scope": "Sections IV-D, V and VI: physics-aware encoding, LoRA adaptation and parameterized simulated vessel recordings.",
+    "sha256": "1cd3411f796eb3368853bd15da7508624862dc3523f5e010a21475a03569fb89",
+    "cached_bytes": 280471,
+    "status": "preprint; method inspected, external system not reproduced"
+  },
+  {
+    "key": "signals2",
+    "url": "https://arxiv.org/html/2610.31346v1",
+    "read_date": "2026-11-15",
+    "scope": "Sections IV-VI: direction-guided multichannel encoding, simulated propagation, structured-field metrics and an explicitly adverse constant-median range comparison.",
+    "sha256": "db9a916a99f21b7ad48ccf0b065e2fbd3066872f2040824c1881a796abc5cfdd",
+    "cached_bytes": 372907,
+    "status": "preprint; method inspected, external system not reproduced"
+  },
+  {
+    "key": "ua_bench",
+    "url": "https://arxiv.org/html/2610.16942v1",
+    "read_date": "2026-11-15",
+    "scope": "Sections 1-3 and abstract: parameterized sources, modeled propagation, source-grouped partitions and paired silent-audio control.",
+    "sha256": "1bcbc8a4f6012d2092c312959c97a2269827f502c275810e192cbc11359b88c1",
+    "cached_bytes": 83139,
+    "status": "preprint; method inspected, external system not reproduced"
+  }
+]

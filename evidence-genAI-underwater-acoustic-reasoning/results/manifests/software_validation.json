@@ -1,0 +1,485 @@
+{
+  "analysis_math": {
+    "checks_passed": 8,
+    "scope": [
+      "conditional denominators",
+      "whole-test denominator",
+      "unsupported ratio",
+      "paired identical methods",
+      "empty retention",
+      "pairing rejection",
+      "genuine-score Brier",
+      "equal-frequency ECE"
+    ],
+    "small_sample_ece_caveat": "With five records and ten requested bins, the implementation uses five singleton nonempty bins.",
+    "test_outcomes_used": false
+  },
+  "checkpoint_process_resume": {
+    "checkpoint": "checkpoints/search17_lr1e-06_last.pt",
+    "checkpoint_sha256": "6775d6a7dc68d8a7d8ac8d604ddb8cff28151d0ce2ff8adeb9e8d2fa177b2293",
+    "completed_epoch": 19,
+    "expected_next_epoch": 20,
+    "kind": "controlled_process_termination_for_resume_test",
+    "observed_resume_log": "RESUME search17_lr1e-06 next_epoch 20 optimizer_states 209",
+    "optimizer_states": 209,
+    "recorded_at_utc": "2026-11-15T21:59:04.481237+00:00",
+    "resume_verified": true,
+    "rng_fields": [
+      "python",
+      "numpy",
+      "torch",
+      "cuda"
+    ],
+    "subsequent_epoch_completed": true
+  },
+  "local": {
+    "errors": 0,
+    "failures": 0,
+    "junit_sha256": "b587527026f704c79a353f3cf5a67cc2ee199a3bf668922a607b7aeb29a6c81d",
+    "passed": 56,
+    "python": "3.10.18",
+    "seconds": 14.889,
+    "skipped": 1,
+    "tests": 57
+  },
+  "reference_boundaries": {
+    "cases": [
+      {
+        "corrected_reference": {
+          "candidates": [
+            {
+              "autocorrelation": 0.8895899757431627,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 2.012728328957577,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "intermediate_reference_v11": {
+          "candidates": [
+            {
+              "autocorrelation": 0.8895899757431627,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 2.012728328957577,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            },
+            {
+              "autocorrelation": 0.8895901966451545,
+              "carrier_hz": [
+                1000,
+                8000
+              ],
+              "rate_hz": 2.0127304388009017,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "known_rate_hz": 2.0,
+        "reference": {
+          "candidates": [],
+          "identifiable": false,
+          "value": null
+        }
+      },
+      {
+        "corrected_reference": {
+          "candidates": [
+            {
+              "autocorrelation": 0.962955013296788,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 6.011708487029548,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "intermediate_reference_v11": {
+          "candidates": [
+            {
+              "autocorrelation": 0.962955013296788,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 6.011708487029548,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            },
+            {
+              "autocorrelation": 0.9629554547750756,
+              "carrier_hz": [
+                1000,
+                8000
+              ],
+              "rate_hz": 6.01172595228512,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "known_rate_hz": 6.0,
+        "reference": {
+          "candidates": [
+            {
+              "autocorrelation": 0.9611568522128549,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 5.9523809523809526,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            },
+            {
+              "autocorrelation": 0.9611559824180894,
+              "carrier_hz": [
+                1000,
+                8000
+              ],
+              "rate_hz": 5.9523809523809526,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        }
+      },
+      {
+        "corrected_reference": {
+          "candidates": [
+            {
+              "autocorrelation": 0.9907840100321783,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 30.011998697535873,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "intermediate_reference_v11": {
+          "candidates": [
+            {
+              "autocorrelation": 0.9907840100321783,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 30.011998697535873,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            },
+            {
+              "autocorrelation": 0.9907865998453279,
+              "carrier_hz": [
+                1000,
+                8000
+              ],
+              "rate_hz": 30.012385739951522,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "known_rate_hz": 30.0,
+        "reference": {
+          "candidates": [
+            {
+              "autocorrelation": 0.9619296687850609,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 31.25,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            },
+            {
+              "autocorrelation": 0.9618967222948633,
+              "carrier_hz": [
+                1000,
+                8000
+              ],
+              "rate_hz": 31.25,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        }
+      },
+      {
+        "corrected_reference": {
+          "candidates": [
+            {
+              "autocorrelation": 0.988637019808062,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 70.0332387966265,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "intermediate_reference_v11": {
+          "candidates": [
+            {
+              "autocorrelation": 0.988637019808062,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 70.0332387966265,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            },
+            {
+              "autocorrelation": 0.9884273836868196,
+              "carrier_hz": [
+                1000,
+                8000
+              ],
+              "rate_hz": 70.03627606420947,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "known_rate_hz": 70.0,
+        "reference": {
+          "candidates": [
+            {
+              "autocorrelation": 0.9605400836723078,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 35.714285714285715,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            },
+            {
+              "autocorrelation": 0.9596844544765454,
+              "carrier_hz": [
+                1000,
+                8000
+              ],
+              "rate_hz": 35.714285714285715,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        }
+      },
+      {
+        "corrected_reference": {
+          "candidates": [
+            {
+              "autocorrelation": 0.9647767742934243,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 80.0,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "intermediate_reference_v11": {
+          "candidates": [
+            {
+              "autocorrelation": 0.9647767742934243,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 80.0,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            },
+            {
+              "autocorrelation": 0.9643680613009329,
+              "carrier_hz": [
+                1000,
+                8000
+              ],
+              "rate_hz": 80.0,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "known_rate_hz": 80.0,
+        "reference": {
+          "candidates": [
+            {
+              "autocorrelation": 0.8677916555402148,
+              "carrier_hz": [
+                100,
+                1000
+              ],
+              "rate_hz": 41.666666666666664,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            },
+            {
+              "autocorrelation": 0.8664830267124803,
+              "carrier_hz": [
+                1000,
+                8000
+              ],
+              "rate_hz": 41.666666666666664,
+              "time_s": [
+                0.25,
+                4.75
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        }
+      }
+    ],
+    "corrected_at_utc": "2026-11-15T23:15:46.343414+00:00",
+    "final_reference_version": "independent-proxy-1.2",
+    "reference_source_sha256": "0e8fcaa53fd155e39fb97accaff237c8cc43c54ae20e34fc798a9f988c6ff1c2",
+    "stage": "corrected_before_test",
+    "test_outcomes_used": false,
+    "unmodulated_tone_controls": [
+      {
+        "frequency_hz": 20,
+        "modulation": {
+          "candidates": [],
+          "identifiable": false,
+          "value": null
+        }
+      },
+      {
+        "frequency_hz": 60,
+        "modulation": {
+          "candidates": [],
+          "identifiable": false,
+          "value": null
+        }
+      },
+      {
+        "frequency_hz": 90,
+        "modulation": {
+          "candidates": [],
+          "identifiable": false,
+          "value": null
+        }
+      },
+      {
+        "frequency_hz": 250,
+        "modulation": {
+          "candidates": [],
+          "identifiable": false,
+          "value": null
+        }
+      },
+      {
+        "frequency_hz": 1500,
+        "modulation": {
+          "candidates": [],
+          "identifiable": false,
+          "value": null
+        }
+      }
+    ]
+  },
+  "remote": {
+    "errors": 0,
+    "failures": 0,
+    "junit_sha256": "139cd50317a526ffea22d4af98eadb988274e6e94220ae2f606e3991e0469abd",
+    "passed": 58,
+    "seconds": 4.912,
+    "skipped": 0,
+    "tests": 58
+  }
+}

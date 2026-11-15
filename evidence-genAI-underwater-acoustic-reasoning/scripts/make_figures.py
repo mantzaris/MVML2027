@@ -14,17 +14,20 @@ COLORS=['#0072B2','#D55E00','#009E73','#CC79A7','#E69F00','#56B4E9']
 NAMES={'P':'Sequential risk','B3_fixed':'Fixed pair','B9_entropy':'Entropy heuristic','B7_class_only':'Class-only policy','A1_one_shot':'One-shot policy','B5_all':'All four tools','B8_deterministic':'Deterministic report','B6_planner':'Prompt planner'}
 
 def save(fig,name):
-    fig.savefig(OUT/(name+'.pdf'));fig.savefig(OUT/(name+'.png'),dpi=220);plt.close(fig)
+    fig.savefig(OUT/(name+'.pdf'));fig.savefig(OUT/(name+'.png'),dpi=300);plt.close(fig)
 
 def pipeline():
     fig,ax=plt.subplots(figsize=(7.3,2.3));ax.set_xlim(0,10);ax.set_ylim(0,3);ax.axis('off')
-    boxes=[(.1,1.6,1.7,.9,'5-second audio\nSwin + class prior'),(2.25,1.6,2,.9,'Observed state\n3-member risk MLP'),(4.7,1.6,1.9,.9,'Select / stop\nBudget: two tools'),(7.1,1.6,2.7,.9,'Frozen Omni terminal call\nFive slots + interpretation'),
-        (2.5,.1,3.8,.8,'A spectrum · B modulation\nC received energy · D retrieval'),(7.1,.1,2.7,.8,'Independent numeric proxies\n+ blinded AI assessments')]
+    boxes=[(.1,1.6,1.7,.9,'5 s audio\nSwin classifier\nClass prior'),(2.25,1.6,2,.9,'Observed state\nRisk ensemble\n(3 small MLPs)'),(4.7,1.6,1.9,.9,'Choose / stop\nAt most 2 tools'),(7.1,1.6,2.7,.9,'Frozen Omni\nOne terminal call\n5 slots + interpretation'),
+        (2.5,.1,3.8,.8,'A Spectrum · B Modulation\nC Energy · D Retrieval'),(7.1,.1,2.7,.8,'Score against separate\nnumeric proxies and\nblinded AI assessments')]
     for x,y,w,h,label in boxes:
-        ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=.05',facecolor='#F1F6FA',edgecolor='#40576B',linewidth=1));ax.text(x+w/2,y+h/2,label,ha='center',va='center')
+        ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=.05',facecolor='#F1F6FA',edgecolor='#40576B',linewidth=1));ax.text(x+w/2,y+h/2,label,ha='center',va='center',fontsize=8)
     for start,end in [((1.85,2.05),(2.2,2.05)),((4.3,2.05),(4.65,2.05)),((6.65,2.05),(7.05,2.05)),((5.65,1.55),(5.65,.95)),((3.25,.95),(3.25,1.55)),((8.45,1.55),(8.45,.95))]:
         ax.add_patch(FancyArrowPatch(start,end,arrowstyle='-|>',mutation_scale=10,color='#40576B'))
     ax.text(5,.01,'Numerical correctness and citation fidelity are checked separately. No human reference labels.',ha='center',va='top',fontsize=8)
+    ax.plot([.95,.95,8.45],[2.55,2.85,2.85],color='#40576B',lw=.8)
+    ax.add_patch(FancyArrowPatch((8.45,2.85),(8.45,2.55),arrowstyle='-|>',mutation_scale=8,color='#40576B'))
+    ax.text(4.7,2.87,'Audio + prior',ha='center',va='bottom',fontsize=7.5)
     save(fig,'pipeline')
 
 def main():

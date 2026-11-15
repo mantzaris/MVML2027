@@ -1,0 +1,40 @@
+{
+  "elapsed_seconds": 63.18533601099625,
+  "human_reviewers": 0,
+  "interpretation": "Known-signal agreement characterizes these controls only, not human or real-ocean truth.",
+  "model": "Qwen2.5-Omni-7B",
+  "reviewer_calls": 40,
+  "schema_valid": 38,
+  "shared_model_roles_are_correlated": true,
+  "slot_results": {
+    "band": {
+      "agreement_with_constructed_control": 0.95,
+      "assertions": 30,
+      "false_positive_count": 0,
+      "known_positive_correct": 30,
+      "known_positive_judgments": 32
+    },
+    "modulation": {
+      "agreement_with_constructed_control": 0.95,
+      "assertions": 7,
+      "false_positive_count": 0,
+      "known_positive_correct": 6,
+      "known_positive_judgments": 8
+    },
+    "tone": {
+      "agreement_with_constructed_control": 0.9,
+      "assertions": 22,
+      "false_positive_count": 0,
+      "known_positive_correct": 20,
+      "known_positive_judgments": 24
+    },
+    "trend": {
+      "agreement_with_constructed_control": 0.95,
+      "assertions": 30,
+      "false_positive_count": 0,
+      "known_positive_correct": 30,
+      "known_positive_judgments": 32
+    }
+  },
+  "unique_constructed_signals": 20
+}

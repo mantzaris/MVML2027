@@ -11,8 +11,8 @@ excluded from the corrected comparison cache.
 The common corrective pass uses schema-constrained greedy decoding with
 `xgrammar==0.2.9` (`apache-tvm-ffi==0.1.16`), following its official Transformers integration:
 https://github.com/mlc-ai/xgrammar/blob/main/python/xgrammar/contrib/hf.py .
-The initial LM Format Enforcer 0.11.3 benchmark stalled for over seven minutes
-before producing its first batch and was terminated; its failed job record is retained. The grammar fixes object shape,
+The initial LM Format Enforcer 0.11.3 benchmark was terminated after 373 seconds
+without producing its first batch; its failed job record is retained. The grammar fixes object shape,
 status/value types, empty uncertainty fields, citation-array types, and the
 60–100-word interpretation contract. It contains no query measurements,
 reference values, correct classes, selected-action restriction or source IDs.

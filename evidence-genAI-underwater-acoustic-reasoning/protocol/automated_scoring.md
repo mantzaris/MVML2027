@@ -1,6 +1,6 @@
 # Automated scoring and reviewer interpretation
 
-Fixed before main development reports and before test outcomes. The original
+Initial rules were fixed before main development reports. The [constructed-signal correction](reference_correction.md) updates modulation estimation and AI references before controller fitting and test outcomes. The original
 human-reviewed endpoint cannot be produced under the user's no-human design.
 Use independent numerical estimates as the primary **proxy** reference, with
 two blinded AI assessments and a conservative agreement sensitivity analysis.
@@ -16,7 +16,7 @@ exceeds the runner-up by at least 1 dB. Narrowband candidates require 12 dB
 full-window contrast and a matching peak at 9 dB in at least three consecutive
 non-overlapping one-second multitaper frames. Modulation uses squared-amplitude
 low-pass envelopes and an autocorrelation peak >=.30 with prominence >=.08 and
-a repeated-period correlation >=.15; no qualifying peak is ambiguous, not a
+a repeated-period correlation >=.15. Version 1.2 uses 1 kHz envelope sampling, interpolates the earliest qualifying autocorrelation peak, requires at least 1% carrier-passband energy, and rejects later-peak aliases; no qualifying peak is ambiguous, not a
 verified absence. First/last-second received-energy change is compared with
 3 dB; values within .5 dB of either boundary are ambiguous. Silence is ambiguous.
 No estimator certifies physical source mechanisms or motion.

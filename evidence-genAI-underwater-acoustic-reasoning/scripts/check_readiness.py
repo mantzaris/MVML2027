@@ -28,6 +28,6 @@ gates={
 for name,passed in gates.items():print(('PASS ' if passed else 'PENDING ')+name)
 print('Measured adaptive-selection success:',main.get('preregistered_success_criteria_met','not yet evaluated'))
 print('No human reviewers; Pod must remain running; no push or submission.')
-print('Submission metadata pending: author affiliation/contact and template margin discrepancy resolution.')
+print('Manuscript is anonymous by instruction. Submission formatting item: template margin discrepancy resolution.')
 if config.get('actual_pod_hourly_usd') is None:print('Dollar cost and prior billed allocation remain unknown.')
 raise SystemExit(0 if all(gates.values()) else 2)

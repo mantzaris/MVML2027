@@ -1,0 +1,15 @@
+{
+  "checks_passed": 8,
+  "scope": [
+    "conditional denominators",
+    "whole-test denominator",
+    "unsupported ratio",
+    "paired identical methods",
+    "empty retention",
+    "pairing rejection",
+    "genuine-score Brier",
+    "equal-frequency ECE"
+  ],
+  "small_sample_ece_caveat": "With five records and ten requested bins, the implementation uses five singleton nonempty bins.",
+  "test_outcomes_used": false
+}

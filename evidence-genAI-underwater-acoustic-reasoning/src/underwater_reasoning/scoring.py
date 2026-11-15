@@ -73,13 +73,16 @@ def score(report,label,reference,assets,mask,reviews=(),errors=()):
         correct=asserted and agrees(slot,claim,ref);cited=asserted and citation_support(slot,claim,assets,mask,reference,reviews)
         supported=bool(correct and cited);consensus=bool(supported and reviewer_agrees(slot,claim,reviews))
         loss=(0. if supported else 1.) if asserted else (.25 if ident else 0.)
-        numeric_error=None
+        numeric_error=None;matched_error=None
         if asserted and ident and slot in ('tone','modulation'):
             key='frequency_hz' if slot=='tone' else 'rate_hz'
-            if isinstance(claim.get(key),(int,float)) and ref.get('candidates'):numeric_error=min(abs(claim[key]-v[key]) for v in ref['candidates'])
-        records.append({'slot':slot,'asserted':asserted,'identifiable':ident,'correct':bool(correct),'citation_supported':bool(cited),
+            if isinstance(claim.get(key),(int,float)) and ref.get('candidates'):
+                numeric_error=min(abs(claim[key]-v[key]) for v in ref['candidates'])
+                matches=[v for v in ref['candidates'] if agrees(slot,claim,{**ref,'candidates':[v]})]
+                if matches:matched_error=min(abs(claim[key]-v[key]) for v in matches)
+        records.append({'slot':slot,'asserted':asserted,'identifiable':ident,'correct':bool(correct),'citation_supported':bool(cited),'has_citation':bool(asserted and claim.get('evidence')),
             'supported':supported,'consensus_supported':consensus,'factual_error':bool(asserted and ident and not correct),'loss':loss,
-            'appropriate_uncertainty':bool(not asserted and not ident),'numeric_absolute_error':numeric_error})
+            'appropriate_uncertainty':bool(not asserted and not ident),'numeric_absolute_error':numeric_error,'numeric_matched_absolute_error':matched_error})
     physical_loss=float(np.mean([r['loss'] for r in records]));assertions=sum(r['asserted'] for r in records);supported=sum(r['supported'] for r in records)
     return {'loss':.5*class_loss+.5*physical_loss,'class_loss':class_loss,'physical_loss':physical_loss,'assertions':assertions,'supported':supported,
         'unsupported':assertions-supported,'consensus_supported':sum(r['consensus_supported'] for r in records),'factual_errors':sum(r['factual_error'] for r in records),

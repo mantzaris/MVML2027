@@ -27,3 +27,12 @@ def test_uncertainty_not_positive_and_word_count_not_hidden_repair():
     ref,assets,report=fixture();report['band']['status']='uncertain';report['band']['value']=None;report['band']['evidence']=[]
     result=score(report,'cargo',ref,assets,0,errors=['interpretation_word_count'])
     assert result['valid'] and not result['format_valid'] and result['supported']==0 and result['assertions']==0
+
+def test_matched_numeric_error_uses_a_reference_in_the_claimed_interval():
+    ref,assets,report=fixture()
+    ref['tone']={'identifiable':True,'value':'present','candidates':[
+        {'frequency_hz':100,'time_s':[2,5]}, {'frequency_hz':102,'time_s':[0,3]}]}
+    report['tone'].update(status='asserted',value='present',frequency_hz=100,time_s=[0,3])
+    value=next(v for v in score(report,'cargo',ref,assets,0)['physical'] if v['slot']=='tone')
+    assert value['correct'] and value['numeric_absolute_error']==0
+    assert value['numeric_matched_absolute_error']==2

@@ -10,7 +10,7 @@ import numpy as np
 from scipy import signal,ndimage
 
 BANDS=((20,100),(100,500),(500,2000),(2000,8000))
-VERSION='independent-proxy-1.0'
+VERSION='independent-proxy-1.2'
 
 @lru_cache(maxsize=4)
 def tapers(n,nw,k):return signal.windows.dpss(n,NW=nw,Kmax=k)
@@ -45,16 +45,30 @@ def estimate(audio,fs):
     modulation=[]
     for low,high in ((100,1000),(1000,8000)):
         y=signal.sosfiltfilt(signal.butter(3,[low,min(high,fs/2-1)],fs=fs,btype='bandpass',output='sos'),x)
+        # Attenuated out-of-band tones must not define a normalized envelope
+        # reference merely because the absolute floating-point energy is nonzero.
+        if np.mean(y*y)<.01*max(energy,1e-20):continue
         envelope_power=signal.sosfiltfilt(signal.butter(3,100,fs=fs,output='sos'),y*y)
-        env=np.sqrt(np.maximum(envelope_power,0))[fs//4:-fs//4:max(1,fs//250)]
+        env=np.sqrt(np.maximum(envelope_power,0))[fs//4:-fs//4:max(1,fs//1000)]
         relative=float(np.std(env)/max(float(np.mean(env)),1e-30));env-=env.mean()
         ac=signal.correlate(env,env,mode='full',method='fft')[len(env)-1:];ac/=max(float(ac[0]),1e-30)
-        hz=fs/max(1,fs//250);lo=int(np.ceil(hz/80));hi=min(len(ac)-1,int(hz/2))
-        peaks,_=signal.find_peaks(ac[lo:hi+1],height=.30,prominence=.08)
-        if len(peaks) and relative>=.03 and np.mean(y*y)>1e-20:
-            candidates=peaks+lo
+        hz=fs/max(1,fs//1000)
+        # Find peaks before cutting the permitted lag interval: slicing first
+        # discards boundary peaks and can select a half-rate subharmonic.
+        peaks,_=signal.find_peaks(ac,height=.30,prominence=.08)
+        candidates=[]
+        for lag in peaks[:1]:
+            # A faster dominant period cannot be relabeled by choosing its
+            # second or later autocorrelation peak inside the task range.
+            if not max(1,int(np.floor(hz/80)))<=lag<=int(np.ceil(hz/2)):continue
+            curvature=ac[lag-1]-2*ac[lag]+ac[lag+1]
+            offset=.5*(ac[lag-1]-ac[lag+1])/curvature if curvature else 0.
+            refined=lag+float(np.clip(offset,-.5,.5));rate=hz/refined
+            # Tiny endpoint tolerance covers finite-window interpolation bias.
+            if 1.99<=rate<=80.1:candidates.append((lag,float(np.clip(rate,2,80))))
+        if candidates and relative>=.03 and np.mean(y*y)>1e-20:
             # Earliest prominent repeating period prevents selecting a later subharmonic.
-            lag=int(candidates[0]);rate=float(hz/lag)
+            lag,rate=candidates[0]
             repeat=2*lag<len(ac) and ac[2*lag]>=.15
             if repeat:modulation.append({'rate_hz':rate,'time_s':[.25,4.75],'carrier_hz':[low,high],'autocorrelation':float(ac[lag])})
     first=float(np.dot(x[:fs],x[:fs])/fs);last=float(np.dot(x[-fs:],x[-fs:])/fs)

@@ -4,15 +4,16 @@ from pathlib import Path
 import numpy as np
 from scipy import signal
 from underwater_reasoning.references import estimate
-from underwater_reasoning.omni import Omni
-from underwater_reasoning.io import atomic_json
+from underwater_reasoning.omni import Omni,REVISION
+from underwater_reasoning.io import atomic_json,canonical_hash
 from run_generation import review_contract
+from underwater_reasoning.control_scoring import score_controls
 ROOT=Path(__file__).resolve().parents[1]
 if __name__=='__main__':
     fs=32000;t=np.arange(5*fs)/fs;rng=np.random.default_rng(20261115);signals=[]
     for frequency,band in [(60,'20-100'),(250,'100-500'),(800,'500-2000'),(1500,'500-2000')]:
         signals.append((.2*np.sin(2*np.pi*frequency*t),{'kind':'tone','band':band,'tone':frequency,'modulation':None,'trend':'steady'}))
-    for rate in (4,6,12,20):
+    for rate in (2,6,70,80):
         signals.append((.2*(1+.6*np.sin(2*np.pi*rate*t))*np.sin(2*np.pi*600*t),{'kind':'am','band':'500-2000','tone':600,'modulation':rate,'trend':'steady'}))
     for low,high,band in [(30,70,'20-100'),(150,350,'100-500'),(700,1500,'500-2000'),(3000,6000,'2000-8000')]:
         x=signal.sosfiltfilt(signal.butter(5,[low,high],fs=fs,btype='bandpass',output='sos'),rng.normal(0,.1,len(t)))
@@ -37,24 +38,14 @@ if __name__=='__main__':
                 if raw.startswith('```'):raw=raw[raw.find('\n')+1:].rsplit('```',1)[0]
                 parsed=json.loads(raw)
             except ValueError:parsed=None
-            results.append({'id':job['id'],'role':job['role'],'truth':job['truth'],'reference':job['reference'],'parsed':parsed,**output})
-    valid=sum(isinstance(r['parsed'],dict) and all(isinstance(r['parsed'].get(s),dict) for s in ('band','tone','modulation','trend')) for r in results)
-    scores={}
-    for slot in ('band','tone','modulation','trend'):
-        correct=0;asserted=0;false_positive=0;known_positive=0;positive_correct=0
-        for row in results:
-            truth=row['truth'][slot];known_positive+=truth is not None
-            claim=row['parsed'].get(slot,{}) if isinstance(row['parsed'],dict) else {};yes=claim.get('identifiable') is True;asserted+=yes
-            if truth is None:ok=not yes;false_positive+=yes
-            elif slot in ('band','trend'):ok=yes and claim.get('value')==truth
-            else:
-                value=claim.get('frequency_hz' if slot=='tone' else 'rate_hz');tol=max(3,.03*truth) if slot=='tone' else max(1,.1*truth)
-                ok=yes and isinstance(value,(int,float)) and abs(value-truth)<=tol
-            correct+=ok;positive_correct+=bool(ok and truth is not None)
-        scores[slot]={'agreement_with_constructed_control':correct/len(results),'assertions':int(asserted),'false_positive_count':int(false_positive),
-            'known_positive_judgments':int(known_positive),'known_positive_correct':int(positive_correct)}
+            valid=isinstance(parsed,dict) and all(isinstance(parsed.get(s),dict) and isinstance(parsed[s].get('identifiable'),bool) for s in ('band','tone','modulation','trend'))
+            results.append({'id':job['id'],'role':job['role'],'truth':job['truth'],'reference':job['reference'],'parsed':parsed,
+                'contract_valid':valid,'prompt_sha256':canonical_hash(job['text']),'model_revision':REVISION,**output})
+    valid=sum(r['contract_valid'] for r in results)
+    scores=score_controls(results)
     atomic_json(ROOT/'results/raw/reviewer_controls.json',results)
     atomic_json(ROOT/'results/manifests/reviewer_controls.json',{'unique_constructed_signals':20,'reviewer_calls':40,'schema_valid':valid,'slot_results':scores,
         'elapsed_seconds':time.monotonic()-start,'human_reviewers':0,'model':'Qwen2.5-Omni-7B','shared_model_roles_are_correlated':True,
+        'tone_control_truth':'AM carrier and both spectral sidebands are accepted','model_revision':REVISION,'reference_version':results[0]['reference']['version'],'am_control_rates_hz':[2,6,70,80],
         'interpretation':'Known-signal agreement characterizes these controls only, not human or real-ocean truth.'})
     print(json.dumps(scores,indent=2),flush=True)

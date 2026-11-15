@@ -43,6 +43,12 @@ controller-seed variation is separate and reuses the same fixed greedy reports.
 Only genuine temperature-scaled classifier scores receive multiclass Brier and
 10-bin equal-frequency ECE. Risk/coverage curves ranked on test risk are explicitly
 descriptive, separate from the calibration-locked operating point.
+Report descriptive 50/70/90% ranked operating points and the area under the
+composite-risk/coverage curve, defined as the mean cumulative risk across all
+ranked prefixes (uniform increments from 1/n through 1). Citation support
+precision uses assertions with at least one citation as its denominator;
+also give the stricter numerator requiring independent correctness. These
+diagnostics do not change controller targets or the confirmatory endpoint.
 
 Success requires a >=.05 supported-coverage gain over the locked comparator,
 a positive paired lower confidence bound, no higher wrong/unsupported rate,
@@ -51,3 +57,11 @@ report a negative or inconclusive adaptive-selection result. All-tools and
 deterministic baselines remain visible even if they outperform the learned policy.
 Latency reconstructed from cached tools and batched generation is identified as
 such, and never substituted for a measured online speedup.
+
+Before test unlock, report a development-only precision diagnostic: aggregate
+unfiltered supported-coverage differences within recorded source groups and
+estimate normal-approximation 95% half-width and 80% detectable effect at the
+planned 93 test groups. This optimistic calculation does not estimate power for
+the calibrated conditional endpoint or the Holm family. Selection on development
+and unmeasured dependence may invalidate its transfer. Keep the fixed assessment
+size and report actual intervals; never expand it after seeing test outcomes.

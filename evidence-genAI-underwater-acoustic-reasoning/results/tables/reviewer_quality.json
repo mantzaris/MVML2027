@@ -2,10 +2,10 @@
   "caveat": "Blinded, correlated same-checkpoint AI proxy assessments; agreement is not accuracy or human validation.",
   "checkpoint_shared_with_generator": true,
   "counts": {
-    "output_tokens": 100751,
+    "output_tokens": 98877,
     "requested": 540,
     "truncated": 0,
-    "valid": 539
+    "valid": 540
   },
   "human_reviewers": 0,
   "partitions": {
@@ -23,62 +23,62 @@
     },
     "test": {
       "requested": 200,
-      "valid": 199
+      "valid": 200
     }
   },
   "reviewer_roles": 2,
   "slots": {
     "band": {
-      "both_identifiable": 206,
-      "both_identifiable_value_agreement": 206,
-      "identifiability_agreement": 269,
+      "both_identifiable": 207,
+      "both_identifiable_value_agreement": 207,
+      "identifiability_agreement": 270,
       "identifiability_kappa": 1.0,
       "mean_interval_endpoint_difference_seconds": 0.0,
-      "paired_interval_count": 206,
+      "paired_interval_count": 207,
       "paired_numeric_count": 0,
       "paired_numeric_median_absolute_difference_hz": null,
-      "paired_valid": 269,
-      "role0_identifiable": 206,
-      "role1_identifiable": 206
+      "paired_valid": 270,
+      "role0_identifiable": 207,
+      "role1_identifiable": 207
     },
     "modulation": {
-      "both_identifiable": 40,
-      "both_identifiable_value_agreement": 27,
-      "identifiability_agreement": 269,
+      "both_identifiable": 18,
+      "both_identifiable_value_agreement": 9,
+      "identifiability_agreement": 270,
       "identifiability_kappa": 1.0,
       "mean_interval_endpoint_difference_seconds": 0.0,
-      "paired_interval_count": 12,
-      "paired_numeric_count": 27,
+      "paired_interval_count": 6,
+      "paired_numeric_count": 9,
       "paired_numeric_median_absolute_difference_hz": 0.0,
-      "paired_valid": 269,
-      "role0_identifiable": 40,
-      "role1_identifiable": 40
+      "paired_valid": 270,
+      "role0_identifiable": 18,
+      "role1_identifiable": 18
     },
     "tone": {
-      "both_identifiable": 164,
-      "both_identifiable_value_agreement": 90,
-      "identifiability_agreement": 269,
+      "both_identifiable": 165,
+      "both_identifiable_value_agreement": 87,
+      "identifiability_agreement": 270,
       "identifiability_kappa": 1.0,
       "mean_interval_endpoint_difference_seconds": 0.0,
-      "paired_interval_count": 58,
-      "paired_numeric_count": 91,
+      "paired_interval_count": 56,
+      "paired_numeric_count": 89,
       "paired_numeric_median_absolute_difference_hz": 0.0,
-      "paired_valid": 269,
-      "role0_identifiable": 164,
-      "role1_identifiable": 164
+      "paired_valid": 270,
+      "role0_identifiable": 165,
+      "role1_identifiable": 165
     },
     "trend": {
-      "both_identifiable": 262,
-      "both_identifiable_value_agreement": 262,
-      "identifiability_agreement": 269,
+      "both_identifiable": 263,
+      "both_identifiable_value_agreement": 263,
+      "identifiability_agreement": 270,
       "identifiability_kappa": 1.0,
       "mean_interval_endpoint_difference_seconds": 0.0,
-      "paired_interval_count": 168,
+      "paired_interval_count": 164,
       "paired_numeric_count": 0,
       "paired_numeric_median_absolute_difference_hz": null,
-      "paired_valid": 269,
-      "role0_identifiable": 262,
-      "role1_identifiable": 262
+      "paired_valid": 270,
+      "role0_identifiable": 263,
+      "role1_identifiable": 263
     }
   }
 }

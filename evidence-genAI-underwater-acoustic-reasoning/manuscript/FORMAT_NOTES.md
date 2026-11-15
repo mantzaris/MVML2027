@@ -1,18 +1,20 @@
-# Draft format and readiness
+# Manuscript format and author review
 
-The working source is the official [MVML 2027 DOCX](https://mvml.org/documents/MVML27_Paper_Template.docx), downloaded and retained under `template/`. The generated manuscript is explicitly an **incomplete preparation draft**, not a submission-ready results paper. Author affiliation/contact details and all model-result sections remain unresolved. No fabricated result tables are included.
+The working source is the official [MVML 2027 DOCX](https://mvml.org/documents/MVML27_Paper_Template.docx), retained under `template/`. The empirical builder reads completed experiment tables and cannot substitute placeholder findings. The manuscript is **anonymous by the user's instruction**, including its author metadata; affiliation and contact details are intentionally omitted. This is a user preference, not a claim about the conference's review policy.
 
-Current [author guidelines](https://mvml.org/author-guidelines/) limit full papers to eight pages and accept LaTeX while providing a DOCX template. Plan for eight total pages including references; an explicit reference-page exemption and review anonymity policy were not established. [Important dates](https://mvml.org/important-dates/) list January 21, 2027 submission, February 25 notification, March 18 final version, and August 15–17 conference dates. Recheck before submission.
+The verified [author guidelines](https://mvml.org/author-guidelines/) impose an eight-page limit. This project counts references within those eight pages. The original source audit retains the access dates, template hash and conference dates; recheck submission requirements before any eventual submission. No submission or publication is authorized here.
 
-The downloaded DOCX is US Letter (215.9 × 279.4 mm), with left/right margins 11.994 mm and top/bottom 25.4 mm. Its prose instead prescribes 25 mm margins on all sides. The draft preserves the actual DOCX section geometry; the conflict remains to be resolved before final submission. It is not silently corrected or called an official LaTeX recreation. Body font is Times New Roman 11 pt and headings Arial; verify font availability in the final publication renderer.
+The DOCX is US Letter, with left/right margins 11.994 mm and top/bottom 25.4 mm. Its prose instead prescribes 25 mm margins on all sides. The working document preserves the downloaded section geometry. The organizer must resolve that conflict before submission. Body text uses Times New Roman 11 pt and headings Arial; tables/captions/references use 10 pt, following the template. Fonts and every rendered page are checked in the final inspection record.
 
-To rebuild the editable draft:
+After the clean analysis, stress tests and report audits finish:
 
 ```bash
-.venv/bin/python scripts/build_bibliography.py
-.venv/bin/python scripts/build_manuscript_draft.py
-libreoffice --headless --convert-to pdf --outdir manuscript manuscript/manuscript_draft.docx
-pdfinfo manuscript/manuscript_draft.pdf
+.venv/bin/python scripts/make_figures.py
+.venv/bin/python scripts/make_real_examples.py
+.venv/bin/python scripts/build_manuscript.py
+libreoffice -env:UserInstallation=file:///tmp/mvml2027-lo-profile --headless --convert-to pdf --outdir manuscript manuscript/manuscript.docx
+pdfinfo manuscript/manuscript.pdf
+pdffonts manuscript/manuscript.pdf
 ```
 
-Use a writable temporary LibreOffice profile if the normal application profile is unavailable. Re-render and inspect every page after substantive edits. The draft reports actual data-audit and synthetic/software checks only; AI reviewers and model experiments have not yet run.
+Inspect every page after substantive edits. `results/manifests/manuscript_inspection.json` records the final PDF hash and visual inspection once completed. The initial two-page preparation draft is historical and will be removed from the working tree when the empirical manuscript is verified; Git retains its history.

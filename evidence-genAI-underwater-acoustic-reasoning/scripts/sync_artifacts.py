@@ -12,8 +12,8 @@ if __name__=='__main__':
         result=subprocess.run(['rsync','-az','--update','--prune-empty-dirs','-e',a.ssh,
             '--exclude=.writing-*','--exclude=checkpoints/checkpoint-*.pt',
             '--include=*/','--include=results/***','--include=checkpoints/***','--include=data/derived/classifier*.npz',
-            '--include=data/derived/evidence/***','--include=data/derived/references/***',
-            '--include=data/derived/robustness_classifier.npz','--include=data/private/robustness_manifest.json',
+            '--include=data/derived/evidence/***','--include=data/derived/references*/***',
+            '--include=data/derived/robustness_classifier.npz','--include=data/private/*.json',
             '--include=data/raw/robustness/***','--exclude=*',
             f'{a.host}:/workspace/evidence-genAI-underwater-acoustic-reasoning/',str(ROOT)+'/'])
         print('artifact_sync_exit',result.returncode,flush=True)

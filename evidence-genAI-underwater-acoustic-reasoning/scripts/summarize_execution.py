@@ -1,5 +1,5 @@
 """Compact execution ledger; detailed per-job records remain outside Git."""
-import argparse,json
+import argparse,csv,json
 from datetime import datetime,timezone
 from pathlib import Path
 from collections import Counter
@@ -28,10 +28,14 @@ def main():
         'pod_stop_requested':False,'actual_pod_billing_hours':None,'actual_usd_cost':None,'guarded_stages':jobs,
         'saved_inference_records':dict(counts),'saved_output_tokens':dict(tokens),'output_limit_hits':dict(limits),
         'raw_record_bytes_excluded_from_git':raw_bytes,
-        'counting_note':'Counts cover saved individual inference records; smoke batches and planner calls may use separate aggregate files. Guarded elapsed times include loading and CPU stages, not measured GPU utilization.'}
+        'counting_note':'Counts cover saved individual inference records; smoke batches and planner calls may use separate aggregate files, and interrupted batches may consume compute without a saved output. Guarded elapsed times include loading and CPU stages, not measured GPU utilization.'}
     if args.finished and any(j.get('status')=='running' for j in jobs):raise ValueError('A guarded stage still has running status')
     if args.finished and not ledger['within_authorized_window']:raise ValueError('Research exceeded authorization window')
     atomic_json(ROOT/'results/manifests/execution_ledger.json',ledger)
+    with (ROOT/'results/tables/cost_ledger.csv').open('w',newline='') as handle:
+        writer=csv.DictWriter(handle,fieldnames=['stage','started_utc','ended_utc','elapsed_seconds','status','actual_usd_cost','note']);writer.writeheader()
+        for job in jobs:writer.writerow({'stage':job.get('name',job['record']),**{k:job.get(k) for k in ('started_utc','ended_utc','elapsed_seconds','status')},
+            'actual_usd_cost':'','note':'Stage wall time includes CPU/loading; do not sum as allocated GPU time. Pod rate and prior billing unknown.'})
     print(json.dumps({k:v for k,v in ledger.items() if k!='guarded_stages'},indent=2))
 
 if __name__=='__main__':main()

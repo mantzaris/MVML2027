@@ -1,0 +1,36 @@
+{
+  "other_physical_slots_unchanged": true,
+  "paired_reference_digest": "ff4a03759f2d3b91b76879511b26a2130b5b08fb3a2a1d3a6f1e250f025c5e0f",
+  "partitions": {
+    "calibration": {
+      "clips": 37,
+      "identifiability_changed": 6,
+      "modulation_record_changed": 9,
+      "new_identifiable": 3,
+      "old_identifiable": 9
+    },
+    "development": {
+      "clips": 33,
+      "identifiability_changed": 5,
+      "modulation_record_changed": 5,
+      "new_identifiable": 1,
+      "old_identifiable": 4
+    },
+    "policy_fit": {
+      "clips": 100,
+      "identifiability_changed": 8,
+      "modulation_record_changed": 12,
+      "new_identifiable": 5,
+      "old_identifiable": 11
+    },
+    "test": {
+      "clips": 100,
+      "identifiability_changed": 7,
+      "modulation_record_changed": 16,
+      "new_identifiable": 9,
+      "old_identifiable": 16
+    }
+  },
+  "test_terminal_outcomes_used": false,
+  "waveforms_unchanged": true
+}

@@ -1,0 +1,35 @@
+{
+  "best_fixed_pair": 12,
+  "best_pair_distribution": {
+    "3": 8,
+    "5": 9,
+    "6": 6,
+    "9": 9,
+    "12": 1
+  },
+  "best_pair_loss": 0.1543560606060606,
+  "checkpoint_recovery_passed": true,
+  "development_clips": 33,
+  "dollar_rate_unknown": true,
+  "full_format_validity": 1.0,
+  "mean_seconds_per_terminal_report": 1.0220867536907352,
+  "oracle_pair_advantage": 0.04166666666666667,
+  "oracle_pair_loss": 0.11268939393939394,
+  "pair_losses": {
+    "3": 0.22348484848484848,
+    "5": 0.2159090909090909,
+    "6": 0.19507575757575757,
+    "9": 0.1590909090909091,
+    "10": 0.18181818181818182,
+    "12": 0.1543560606060606
+  },
+  "passed": true,
+  "peak_vram_bytes": 25499792896,
+  "projected_remaining_core_terminal_seconds": 4117.987530619972,
+  "remaining_wall_clock_seconds": 25466.368231,
+  "reports": 528,
+  "schema_validity": 1.0,
+  "scoring_sha256": "dfca4708a712b1698b19cd6b8c20f58c58d03aef02c0b565f6b5f66e8ff5b5e8",
+  "terminal_prompt_sha256": "546ed6231c2a7cc46fdcb592d81d1343417dff6228032724c2a767234724b8e3",
+  "test_outcomes_examined": false
+}

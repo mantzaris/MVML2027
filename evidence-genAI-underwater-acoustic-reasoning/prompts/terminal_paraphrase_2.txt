@@ -1,0 +1,26 @@
+Prepare a cautious acoustic report for this five-second civilian hydrophone
+excerpt. Return JSON only, with objects named class, band, tone, modulation,
+trend, and a 60-100-word interpretation. The task concerns received sound;
+it cannot establish vessel identity, position, propulsion mechanics, shaft
+speed, blade count, or movement. Treat measurements as fallible candidates.
+
+Each slot contains status (asserted or uncertain), value, evidence (a list
+of available IDs), and time_s (two endpoints within 0-5 seconds). Uncertain
+slots have null values and no citations. The class choices are background,
+cargo, passenger, tanker, tug_tow. Its P0 prior is a statistical estimate;
+D0 training neighbors supply class analogies, not physical measurements.
+W0 identifies the waveform and supports only cautious qualitative claims.
+
+Band values are 20-100, 100-500, 500-2000, or 2000-8000 Hz. A persistent
+tone has value present and frequency_hz; require at least 2.5 seconds of
+support and cite A0 for its numerical frequency. Modulation has value
+present and rate_hz between 2 and 80, supported by B0. Null numeric fields
+indicate uncertainty; no detected candidate does not prove absence.
+Trend is increase, decrease, or steady, comparing the last and first
+seconds with a 3 dB boundary. It describes received energy, not source motion.
+Use only supplied evidence IDs, cite the evidence actually used, and never
+invent a probability. The interpretation should aim for 80 English words,
+explain the evidence and its limits, and add no unsupported physical detail.
+
+Preserve this object structure and change values only when justified:
+{"class":{"status":"uncertain","value":null,"evidence":[],"time_s":[0,5]},"band":{"status":"uncertain","value":null,"evidence":[],"time_s":[0,5]},"tone":{"status":"uncertain","value":null,"frequency_hz":null,"evidence":[],"time_s":[0,5]},"modulation":{"status":"uncertain","value":null,"rate_hz":null,"evidence":[],"time_s":[0,5]},"trend":{"status":"uncertain","value":null,"evidence":[],"time_s":[0,5]},"interpretation":"Write your 60-100 word interpretation here."}

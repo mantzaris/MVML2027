@@ -1,0 +1,35 @@
+{
+  "best_fixed_pair": 12,
+  "best_pair_distribution": {
+    "3": 8,
+    "5": 9,
+    "6": 6,
+    "9": 9,
+    "12": 1
+  },
+  "best_pair_loss": 0.1571969696969697,
+  "checkpoint_recovery_passed": true,
+  "development_clips": 33,
+  "dollar_rate_unknown": true,
+  "full_format_validity": 1.0,
+  "mean_seconds_per_terminal_report": 1.0220867536907352,
+  "oracle_pair_advantage": 0.04166666666666667,
+  "oracle_pair_loss": 0.11553030303030302,
+  "pair_losses": {
+    "3": 0.22632575757575757,
+    "5": 0.21875,
+    "6": 0.19791666666666666,
+    "9": 0.16193181818181818,
+    "10": 0.18371212121212122,
+    "12": 0.1571969696969697
+  },
+  "passed": true,
+  "peak_vram_bytes": 25499792896,
+  "projected_remaining_core_terminal_seconds": 4117.987530619972,
+  "remaining_wall_clock_seconds": 27040.746716,
+  "reports": 528,
+  "schema_validity": 1.0,
+  "scoring_sha256": "9cd89d4285391b712fc0932f86ac2245c53a512eefae88d6b349ab6fe94e66b9",
+  "terminal_prompt_sha256": "546ed6231c2a7cc46fdcb592d81d1343417dff6228032724c2a767234724b8e3",
+  "test_outcomes_examined": false
+}

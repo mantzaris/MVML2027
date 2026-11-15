@@ -15,3 +15,5 @@ run_stage calibration_terminal .venv/bin/python scripts/run_generation.py --part
 run_stage planner_development .venv/bin/python scripts/run_planner.py --partition development
 run_stage planner_calibration .venv/bin/python scripts/run_planner.py --partition calibration
 run_stage controller .venv/bin/python scripts/train_controller.py
+run_stage pretest_design .venv/bin/python scripts/audit_pretest_design.py
+run_stage grammar_repeat .venv/bin/python scripts/smoke_omni.py --name grammar_repeat --repeat 3 --report-schema

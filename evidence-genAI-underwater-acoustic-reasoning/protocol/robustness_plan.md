@@ -21,9 +21,23 @@ presented card and the clean reference. Do not equate internal card consistency
 with independent correctness, and do not grant a swapped card the query's
 provenance. Report abstention and erroneous assertion changes, not hidden repairs.
 
-Prompt paraphrase: regenerate P's selected evidence on all 100 clean assessment
-test clips with one fixed paraphrase of the user instructions, retaining the
-same schema, token budget and decoder. Report paired change descriptively.
+Final scope check before test unlock: add three controls to match the execution
+brief. On the same 25 clips, cyclically change every retrieved class label to
+the next of the five labels in the all-tools report (125 interventions in total
+so far). Separately, remove a cited and an uncited card from all-tools reports:
+eligible clips must contain a cited/uncited A-D family respectively. Choose up
+to 25 clips per condition in seed-17 hash order and remove the first eligible
+family in A-D order. Report eligible/selected counts; if fewer than 25 qualify,
+use all eligible clips without replacement. Compare each intervention with its
+matching unmodified subset report. This yields at most 175 intervention calls.
+These fixed-evidence interventions do not rerun the acquisition policy and
+therefore make no claim about post-corruption action changes.
+
+Prompt paraphrases: regenerate P's selected evidence on all 100 clean assessment
+test clips with two fixed paraphrases of the user instructions (200 calls),
+retaining the same schema, token budget and decoder. Both prompt files and this
+scope extension are included in the prospective test freeze. Report paired
+changes separately and descriptively; do not select a preferred paraphrase.
 
 Prose audit: select 30 clean test clips (six per class) and four report methods
 (P, locked comparator, all tools, deterministic), giving 120 reports. A separate

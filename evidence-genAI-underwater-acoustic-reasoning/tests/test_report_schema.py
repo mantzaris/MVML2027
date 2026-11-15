@@ -1,15 +1,10 @@
 import json
-import pytest
+import jsonschema
 from underwater_reasoning.report_schema import terminal_schema
 
-lmfe=pytest.importorskip('lmformatenforcer')
-
 def accepts(report):
-    parser=lmfe.JsonSchemaParser(terminal_schema())
-    for char in json.dumps(report,separators=(',',':')):
-        if char not in parser.get_allowed_characters():return False
-        parser=parser.add_character(char)
-    return parser.can_end()
+    try:jsonschema.validate(report,terminal_schema());return True
+    except jsonschema.ValidationError:return False
 
 def report():
     value={s:{'status':'uncertain','value':None,'evidence':[],'time_s':[0,5]} for s in ('class','band','tone','modulation','trend')}

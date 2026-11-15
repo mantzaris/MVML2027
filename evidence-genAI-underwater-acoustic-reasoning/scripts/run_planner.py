@@ -12,6 +12,8 @@ if __name__=='__main__':
     if a.partition=='test' and not json.loads((ROOT/'protocol/test_unlock_log.json').read_text()).get('unlocked'):raise ValueError('Test locked')
     torch.set_num_threads(8);path=(ROOT/'.cache/planner_path.txt').read_text().strip();tokenizer=AutoTokenizer.from_pretrained(path,padding_side='left')
     model=AutoModelForCausalLM.from_pretrained(path,dtype=torch.bfloat16,device_map='cuda:0',attn_implementation='sdpa').eval()
+    stop_ids=model.generation_config.eos_token_id or tokenizer.eos_token_id
+    stop_set=set(stop_ids if isinstance(stop_ids,list) else [stop_ids])
     manifest=json.loads((ROOT/'data/private/experiment_manifest.json').read_text());prompt=(ROOT/'prompts/planner.txt').read_text();items=[];started=time.monotonic()
     class TokenCounter:
         def tokens(self,text):return len(tokenizer.encode(text,add_special_tokens=False))
@@ -21,7 +23,7 @@ if __name__=='__main__':
         asset=json.loads((ROOT/f'data/derived/evidence/{uid}.json').read_text())
         key={'revision':REVISION,'prompt_sha256':canonical_hash(prompt),'waveform_sha256':asset['waveform_sha256'],
             'observations_sha256':canonical_hash([asset['initial_state'],asset['prior'],asset['compact']]),
-            'family_token_cap':256,'text_token_cap':4096,'batch_size':a.batch_size,'max_new_tokens':32,'greedy':True,'precision':'bfloat16'}
+            'family_token_cap':256,'text_token_cap':4096,'batch_size':a.batch_size,'max_new_tokens':32,'greedy':True,'precision':'bfloat16','attention':'sdpa','eos_token_ids':sorted(stop_set)}
         if out.exists():
             if json.loads(out.read_text()).get('key')!=key:raise ValueError('Planner cache content key mismatch')
             continue
@@ -41,16 +43,17 @@ if __name__=='__main__':
                 if counter.tokens(texts[-1])>4096:raise ValueError('Planner text budget exceeded')
                 item['step_family_tokens']=counts;item['step_family_trimmed']=trims
             inputs=tokenizer(texts,return_tensors='pt',padding=True).to(model.device);torch.cuda.synchronize();t=time.monotonic()
-            with torch.inference_mode():outputs=model.generate(**inputs,max_new_tokens=32,do_sample=False,pad_token_id=tokenizer.pad_token_id)
-            torch.cuda.synchronize();elapsed=time.monotonic()-t;raw=tokenizer.batch_decode(outputs[:,inputs['input_ids'].shape[1]:],skip_special_tokens=True)
-            for item,text in zip(active,raw):
+            with torch.inference_mode():outputs=model.generate(**inputs,max_new_tokens=32,do_sample=False,pad_token_id=tokenizer.pad_token_id,eos_token_id=stop_ids)
+            torch.cuda.synchronize();elapsed=time.monotonic()-t;generated=outputs[:,inputs['input_ids'].shape[1]:];raw=tokenizer.batch_decode(generated,skip_special_tokens=True)
+            for row_index,(item,text) in enumerate(zip(active,raw)):
                 try:
                     cleaned=text.strip()
                     if cleaned.startswith('```'):cleaned=cleaned[cleaned.find('\n')+1:].rsplit('```',1)[0]
                     action=json.loads(cleaned).get('action');valid=action in ['A','B','C','D','STOP']
                 except (ValueError,AttributeError):action=None;valid=False
+                token_ids=generated[row_index].tolist();count=next((j+1 for j,v in enumerate(token_ids) if v in stop_set),len(token_ids))
                 item['calls'].append({'raw':text,'valid':valid,'batch_seconds':elapsed,'amortized_seconds':elapsed/len(active),'step':step,
-                    'input_tokens':len(tokenizer.encode(texts[active.index(item)])),'output_tokens':len(tokenizer.encode(text,add_special_tokens=False)),
+                    'input_tokens':int(inputs['attention_mask'][row_index].sum()),'output_tokens':count,'hit_output_limit':not any(v in stop_set for v in token_ids),
                     'family_tokens':item['step_family_tokens'],'family_trimmed':item['step_family_trimmed']})
                 if not valid or action=='STOP':item['stopped']=True;continue
                 index='ABCD'.index(action)

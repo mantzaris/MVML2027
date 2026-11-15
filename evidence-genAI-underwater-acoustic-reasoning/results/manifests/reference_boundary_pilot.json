@@ -1,0 +1,431 @@
+{
+  "cases": [
+    {
+      "corrected_reference": {
+        "candidates": [
+          {
+            "autocorrelation": 0.8895899757431627,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 2.012728328957577,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      },
+      "intermediate_reference_v11": {
+        "candidates": [
+          {
+            "autocorrelation": 0.8895899757431627,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 2.012728328957577,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          },
+          {
+            "autocorrelation": 0.8895901966451545,
+            "carrier_hz": [
+              1000,
+              8000
+            ],
+            "rate_hz": 2.0127304388009017,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      },
+      "known_rate_hz": 2.0,
+      "reference": {
+        "candidates": [],
+        "identifiable": false,
+        "value": null
+      }
+    },
+    {
+      "corrected_reference": {
+        "candidates": [
+          {
+            "autocorrelation": 0.962955013296788,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 6.011708487029548,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      },
+      "intermediate_reference_v11": {
+        "candidates": [
+          {
+            "autocorrelation": 0.962955013296788,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 6.011708487029548,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          },
+          {
+            "autocorrelation": 0.9629554547750756,
+            "carrier_hz": [
+              1000,
+              8000
+            ],
+            "rate_hz": 6.01172595228512,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      },
+      "known_rate_hz": 6.0,
+      "reference": {
+        "candidates": [
+          {
+            "autocorrelation": 0.9611568522128549,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 5.9523809523809526,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          },
+          {
+            "autocorrelation": 0.9611559824180894,
+            "carrier_hz": [
+              1000,
+              8000
+            ],
+            "rate_hz": 5.9523809523809526,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      }
+    },
+    {
+      "corrected_reference": {
+        "candidates": [
+          {
+            "autocorrelation": 0.9907840100321783,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 30.011998697535873,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      },
+      "intermediate_reference_v11": {
+        "candidates": [
+          {
+            "autocorrelation": 0.9907840100321783,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 30.011998697535873,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          },
+          {
+            "autocorrelation": 0.9907865998453279,
+            "carrier_hz": [
+              1000,
+              8000
+            ],
+            "rate_hz": 30.012385739951522,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      },
+      "known_rate_hz": 30.0,
+      "reference": {
+        "candidates": [
+          {
+            "autocorrelation": 0.9619296687850609,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 31.25,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          },
+          {
+            "autocorrelation": 0.9618967222948633,
+            "carrier_hz": [
+              1000,
+              8000
+            ],
+            "rate_hz": 31.25,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      }
+    },
+    {
+      "corrected_reference": {
+        "candidates": [
+          {
+            "autocorrelation": 0.988637019808062,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 70.0332387966265,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      },
+      "intermediate_reference_v11": {
+        "candidates": [
+          {
+            "autocorrelation": 0.988637019808062,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 70.0332387966265,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          },
+          {
+            "autocorrelation": 0.9884273836868196,
+            "carrier_hz": [
+              1000,
+              8000
+            ],
+            "rate_hz": 70.03627606420947,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      },
+      "known_rate_hz": 70.0,
+      "reference": {
+        "candidates": [
+          {
+            "autocorrelation": 0.9605400836723078,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 35.714285714285715,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          },
+          {
+            "autocorrelation": 0.9596844544765454,
+            "carrier_hz": [
+              1000,
+              8000
+            ],
+            "rate_hz": 35.714285714285715,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      }
+    },
+    {
+      "corrected_reference": {
+        "candidates": [
+          {
+            "autocorrelation": 0.9647767742934243,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 80.0,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      },
+      "intermediate_reference_v11": {
+        "candidates": [
+          {
+            "autocorrelation": 0.9647767742934243,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 80.0,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          },
+          {
+            "autocorrelation": 0.9643680613009329,
+            "carrier_hz": [
+              1000,
+              8000
+            ],
+            "rate_hz": 80.0,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      },
+      "known_rate_hz": 80.0,
+      "reference": {
+        "candidates": [
+          {
+            "autocorrelation": 0.8677916555402148,
+            "carrier_hz": [
+              100,
+              1000
+            ],
+            "rate_hz": 41.666666666666664,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          },
+          {
+            "autocorrelation": 0.8664830267124803,
+            "carrier_hz": [
+              1000,
+              8000
+            ],
+            "rate_hz": 41.666666666666664,
+            "time_s": [
+              0.25,
+              4.75
+            ]
+          }
+        ],
+        "identifiable": true,
+        "value": "present"
+      }
+    }
+  ],
+  "corrected_at_utc": "2026-11-15T23:15:46.343414+00:00",
+  "final_reference_version": "independent-proxy-1.2",
+  "reference_source_sha256": "0e8fcaa53fd155e39fb97accaff237c8cc43c54ae20e34fc798a9f988c6ff1c2",
+  "stage": "corrected_before_test",
+  "test_outcomes_used": false,
+  "unmodulated_tone_controls": [
+    {
+      "frequency_hz": 20,
+      "modulation": {
+        "candidates": [],
+        "identifiable": false,
+        "value": null
+      }
+    },
+    {
+      "frequency_hz": 60,
+      "modulation": {
+        "candidates": [],
+        "identifiable": false,
+        "value": null
+      }
+    },
+    {
+      "frequency_hz": 90,
+      "modulation": {
+        "candidates": [],
+        "identifiable": false,
+        "value": null
+      }
+    },
+    {
+      "frequency_hz": 250,
+      "modulation": {
+        "candidates": [],
+        "identifiable": false,
+        "value": null
+      }
+    },
+    {
+      "frequency_hz": 1500,
+      "modulation": {
+        "candidates": [],
+        "identifiable": false,
+        "value": null
+      }
+    }
+  ]
+}

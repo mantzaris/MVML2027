@@ -40,11 +40,13 @@ def main():
             jobs.append({'id':uid,'row':row,'text':text,'mode':'review','condition':role,'out':ROOT/f'results/raw/review/robustness/{uid}_{role}.json','waveform_sha256':asset['waveform_sha256']})
         for mask in sorted({item['choices'][m][0] for m in methods if m!='B8_deterministic'}):
             evidence,counts,trims=serialize_evidence(runner,asset,mask);text=prompt+'\nAvailable evidence: W0 raw audio.\n'+json.dumps(asset['prior'],separators=(',',':'))+'\n'+evidence+'\nProduce the required JSON report.'
-            jobs.append({'id':uid,'row':row,'text':text,'mode':'terminal','condition':mask,'out':ROOT/f'results/raw/terminal/robustness/{uid}_{mask}.json','waveform_sha256':asset['waveform_sha256']})
+            jobs.append({'id':uid,'row':row,'text':text,'mode':'terminal','condition':mask,'out':ROOT/f'results/raw/terminal/robustness/{uid}_{mask}.json','waveform_sha256':asset['waveform_sha256'],'family_tokens':counts,'family_trimmed':trims})
     remaining=[]
     for job in jobs:
         job['key']={'model_revision':REVISION,'waveform_sha256':job['waveform_sha256'],'prompt_sha256':canonical_hash(job['text']),'mode':job['mode'],'condition':job['condition'],'precision':'bfloat16','max_new_tokens':1024 if job['mode']=='terminal' else 768,'greedy':True,'batch_size':16}
-        if job['mode']=='terminal':job['key']['format_schema_sha256']=canonical_hash(terminal_schema());job['key']['format_enforcer']='xgrammar==0.2.9'
+        if job['mode']=='terminal':
+            job['key']['format_schema_sha256']=canonical_hash(terminal_schema());job['key']['format_enforcer']='xgrammar==0.2.9'
+            job['key']['family_tokens']=job['family_tokens'];job['key']['family_trimmed']=job['family_trimmed']
         if job['out'].exists():
             if json.loads(job['out'].read_text())['key']!=job['key']:raise ValueError('Stress cache mismatch')
         else:remaining.append(job)
@@ -69,12 +71,14 @@ def main():
             mask,trace=item['choices'][method];risk=ensemble.predict(item['asset'],mask)[2]
             if method=='B8_deterministic':
                 report=deterministic_report(item['asset'],mask,labels);errors=[];seconds=0;tokens=0;calls=0
+                evidence_tokens=0;input_text_tokens=0
             else:
-                result=json.loads((ROOT/f'results/raw/terminal/robustness/{uid}_{mask}.json').read_text())['result'];report=result['parsed'];errors=result['errors'];seconds=result['amortized_seconds'];tokens=result['output_tokens'];calls=1
+                record=json.loads((ROOT/f'results/raw/terminal/robustness/{uid}_{mask}.json').read_text());result=record['result'];report=result['parsed'];errors=result['errors'];seconds=result['amortized_seconds'];tokens=result['output_tokens'];calls=1
+                evidence_tokens=sum(record['key']['family_tokens'].values());input_text_tokens=result['input_text_tokens']
             value=score(report,row['label'],item['reference'],item['asset'],mask,reviews,errors);label=report['class']['value'] if report and value['valid'] and value['class_asserted'] else None
             scored[row['variant']][method].append({'id':uid,'original_id':row['original_id'],'source_group':row['source_group'],'date':row['date'],'label_index':row['label_index'],
                 'prediction':labels.index(label) if label in labels else -1,'mask':mask,'actions':trace,'risk':risk,'retained':risk<=settings['thresholds'][method],
-                'score':value,'tool_calls':mask.bit_count(),'generator_calls':calls,'output_tokens':tokens,'reconstructed_seconds':seconds+sum(item['asset']['tool_seconds']['ABCD'[a]] for a in trace)})
+                'score':value,'tool_calls':mask.bit_count(),'generator_calls':calls,'output_tokens':tokens,'evidence_tokens':evidence_tokens,'terminal_input_text_tokens':input_text_tokens,'reconstructed_seconds':seconds+sum(item['asset']['tool_seconds']['ABCD'[a]] for a in trace)})
     summary={};prediction=np.load(ROOT/'data/derived/robustness_classifier.npz')
     for variant,method_records in scored.items():
         idx=[i for i,r in enumerate(rows) if r['variant']==variant];y=np.array([rows[i]['label_index'] for i in idx])

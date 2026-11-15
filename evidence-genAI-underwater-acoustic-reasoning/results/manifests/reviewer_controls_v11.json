@@ -1,0 +1,83 @@
+{
+  "am_control_rates_hz": [
+    2,
+    6,
+    70,
+    80
+  ],
+  "elapsed_seconds": 62.311457705218345,
+  "human_reviewers": 0,
+  "interpretation": "Known-signal agreement characterizes these controls only, not human or real-ocean truth.",
+  "model": "Qwen2.5-Omni-7B",
+  "model_revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+  "reference_version": "independent-proxy-1.1",
+  "reviewer_calls": 40,
+  "schema_valid": 38,
+  "scoring_clarification": {
+    "AM_tone_truth": "carrier and both sidebands",
+    "extra_model_calls": 0,
+    "previous_slot_results": {
+      "band": {
+        "agreement_with_constructed_control": 0.95,
+        "assertions": 30,
+        "false_positive_count": 0,
+        "known_positive_correct": 30,
+        "known_positive_judgments": 32
+      },
+      "modulation": {
+        "agreement_with_constructed_control": 0.825,
+        "assertions": 9,
+        "false_positive_count": 2,
+        "known_positive_correct": 4,
+        "known_positive_judgments": 8
+      },
+      "tone": {
+        "agreement_with_constructed_control": 0.825,
+        "assertions": 22,
+        "false_positive_count": 0,
+        "known_positive_correct": 17,
+        "known_positive_judgments": 24
+      },
+      "trend": {
+        "agreement_with_constructed_control": 0.95,
+        "assertions": 30,
+        "false_positive_count": 0,
+        "known_positive_correct": 30,
+        "known_positive_judgments": 32
+      }
+    },
+    "saved_outputs_reused": true
+  },
+  "shared_model_roles_are_correlated": true,
+  "slot_results": {
+    "band": {
+      "agreement_with_constructed_control": 0.95,
+      "assertions": 30,
+      "false_positive_count": 0,
+      "known_positive_correct": 30,
+      "known_positive_judgments": 32
+    },
+    "modulation": {
+      "agreement_with_constructed_control": 0.825,
+      "assertions": 9,
+      "false_positive_count": 2,
+      "known_positive_correct": 4,
+      "known_positive_judgments": 8
+    },
+    "tone": {
+      "agreement_with_constructed_control": 0.825,
+      "assertions": 22,
+      "false_positive_count": 0,
+      "known_positive_correct": 17,
+      "known_positive_judgments": 24
+    },
+    "trend": {
+      "agreement_with_constructed_control": 0.95,
+      "assertions": 30,
+      "false_positive_count": 0,
+      "known_positive_correct": 30,
+      "known_positive_judgments": 32
+    }
+  },
+  "unique_constructed_signals": 20
+}
