@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "scripts/run_generation.py",
+    "--partition",
+    "development",
+    "--mode",
+    "review"
+  ],
+  "deadline_utc": "2026-11-16T06:40:57+00:00",
+  "elapsed_seconds": 73.89688395801932,
+  "ended_utc": "2026-11-15T21:47:35.339539+00:00",
+  "name": "development_review",
+  "pod_stop_requested": false,
+  "returncode": 0,
+  "started_utc": "2026-11-15T21:46:21.442682+00:00",
+  "status": "complete"
+}

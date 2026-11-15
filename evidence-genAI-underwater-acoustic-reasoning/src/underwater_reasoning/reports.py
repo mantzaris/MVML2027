@@ -13,17 +13,20 @@ def parse_report(raw):
     except (ValueError,TypeError):return None,['json_parse']
     errors=[]
     if not isinstance(report,dict):return None,['not_object']
+    if set(report)!=set(SLOTS)|{'interpretation'}:errors.append('top_level_fields')
     for slot in SLOTS:
         claim=report.get(slot)
         if not isinstance(claim,dict):errors.append(slot+'_missing');continue
         status=claim.get('status');value=claim.get('value')
         if status not in {'asserted','uncertain'}:errors.append(slot+'_status')
-        if status=='asserted' and value not in VALUES[slot]:errors.append(slot+'_value')
+        if status=='asserted' and (not isinstance(value,str) or value not in VALUES[slot]):errors.append(slot+'_value')
         if status=='uncertain' and value is not None:errors.append(slot+'_uncertain_value')
         if not isinstance(claim.get('evidence'),list) or not all(isinstance(v,str) for v in claim.get('evidence',[])):errors.append(slot+'_evidence')
+        if status=='uncertain' and claim.get('evidence')!=[]:errors.append(slot+'_uncertain_evidence')
         span=claim.get('time_s')
         if not isinstance(span,list) or len(span)!=2 or not all(isinstance(v,(int,float)) for v in span) or not 0<=span[0]<span[1]<=5:errors.append(slot+'_time')
         numeric='frequency_hz' if slot=='tone' else 'rate_hz' if slot=='modulation' else None
+        if numeric and status=='uncertain' and claim.get(numeric) is not None:errors.append(slot+'_uncertain_numeric')
         if numeric and status=='asserted':
             number=claim.get(numeric)
             if not isinstance(number,(int,float)) or not (20<=number<=2000 if slot=='tone' else 2<=number<=80):errors.append(slot+'_numeric')

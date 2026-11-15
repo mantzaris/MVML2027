@@ -20,5 +20,9 @@ frequency needs A0 and modulation rate needs B0. Cite the actual evidence used.
 W0 may support cautious qualitative observations; it does not measure exact
 frequency, modulation rate, or calibrated probability. Never invent a tool ID
 or probability. Mark unresolved physical attributes uncertain. Interpretation
-must contain 60-100 English words, explain the reported evidence and its limits,
+must contain 60-100 English words (aim for 80 words), explain the reported evidence and its limits,
 and contain no additional unsupported physical or mechanical claims.
+
+Use this exact structure, replacing values when evidence supports them:
+{"class":{"status":"uncertain","value":null,"evidence":[],"time_s":[0,5]},"band":{"status":"uncertain","value":null,"evidence":[],"time_s":[0,5]},"tone":{"status":"uncertain","value":null,"frequency_hz":null,"evidence":[],"time_s":[0,5]},"modulation":{"status":"uncertain","value":null,"rate_hz":null,"evidence":[],"time_s":[0,5]},"trend":{"status":"uncertain","value":null,"evidence":[],"time_s":[0,5]},"interpretation":"Write your 60-100 word interpretation here."}
+Do not simplify the slot objects into strings. Output only the completed JSON.

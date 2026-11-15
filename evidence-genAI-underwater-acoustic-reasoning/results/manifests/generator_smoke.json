@@ -1,0 +1,17 @@
+{
+  "batch_size": 20,
+  "benchmark_calls": 20,
+  "full_word_count_compliant": 11,
+  "json_and_slot_schema_valid": 20,
+  "note": "Repeated smoke waveforms are not independent experimental samples; BF16 greedy rationale strings may differ. Production prompt adds an 80-word target.",
+  "peak_vram_bytes": 23779352064,
+  "seconds": 7.999978424049914,
+  "structured_repeat_consistency": {
+    "sample_background.wav": 1,
+    "sample_cargo.wav": 1,
+    "sample_passengership.wav": 1,
+    "sample_tanker.wav": 1,
+    "sample_tug.wav": 1
+  },
+  "unique_training_samples": 5
+}

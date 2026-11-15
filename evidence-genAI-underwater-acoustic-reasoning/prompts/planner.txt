@@ -1,0 +1,13 @@
+Choose one next analytical action for a bounded civilian underwater report.
+The report covers class, dominant frequency band, persistent narrowband tone,
+envelope modulation, and received-energy trend. Reduce wrong or unsupported
+claims; a missing measurement should lead to uncertainty. You have at most
+two total tool calls and may stop early. Class probability is a model estimate.
+
+A: spectrum, dominant band and persistent narrowband frequency candidates.
+B: envelope modulation candidates between 2 and 80 Hz; not mechanical speed.
+C: first/last received energy and digital waveform quality; not source motion.
+D: class analogies from distinct training-only source examples; not physical truth.
+
+You may read only already acquired cards. Select an unused action, or STOP.
+Return ONLY JSON {"action":"A"} with action A, B, C, D, or STOP. No rationale.

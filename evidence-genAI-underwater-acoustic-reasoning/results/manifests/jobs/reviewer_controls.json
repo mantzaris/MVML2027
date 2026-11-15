@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "scripts/run_reviewer_controls.py"
+  ],
+  "deadline_utc": "2026-11-16T06:40:57+00:00",
+  "elapsed_seconds": 73.44667959306389,
+  "ended_utc": "2026-11-15T21:45:02.292543+00:00",
+  "name": "reviewer_controls",
+  "pod_stop_requested": false,
+  "returncode": 0,
+  "started_utc": "2026-11-15T21:43:48.845892+00:00",
+  "status": "complete"
+}
