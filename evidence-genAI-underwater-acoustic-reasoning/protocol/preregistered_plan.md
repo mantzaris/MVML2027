@@ -1,0 +1,67 @@
+# Protocol draft — NOT frozen or registered
+
+Working title: **Evidence-Grounded Generative AI for Underwater Acoustic Reasoning**.
+
+This document records prospective decisions from the supplied execution prompt. There are no model outcomes. `test_unlock_log.json` remains locked; calling this file a preregistration plan does not imply registration with an external service. Freeze a content hash only after the following data and annotation amendments are resolved.
+
+**User amendment, 2026-11-15:** use AI reviewers instead of humans; maximum approximately 10 GPU-hours on the existing service; keep Git small. This supersedes the supplied documents' human-review requirement. No human-review recruitment or claims will be made. AI reviewer judgments and independent signal-processing estimates are automated proxies. Consequently, the study cannot claim human-validated evidence grounding, hypothetical-human agreement, or the originally proposed independent-human-supervision novelty. The scientific question and endpoint are narrowed to *automated evidence-consistency risk*. The working title is unchanged.
+
+## Question and scope
+
+Does automated evidence-consistency risk supervision improve a sequential evidence selector over the strongest development-selected fixed/heuristic selector, a classification-only selector, and a one-shot selector? The intended evaluation uses public civilian recordings. There is no submarine identification, operational sonar, localization, shaft-speed, blade-count, or source-motion ground truth.
+
+Novelty is contingent on controlled improvement, not on combining an LLM with underwater tools. See [nearest work](nearest_work.md). Preserve a negative result if fixed or all-tool reports win, or if deterministic reports introduce fewer errors.
+
+## Data and necessary amendments discovered before outcomes
+
+Use the linked UniqueShip 12-class/five-hour-per-class v1.0 release; select background, cargo, passengership, tanker, and tug with the explicit [label mapping](../configs/label_mapping.json). Fold 1 is the current prospective choice, not yet frozen. Inspect headers and hashes before use; preserve original audio and identity records outside Git.
+
+The actual release metadata and five sampled training WAVs are 32 kHz. Amend the originally proposed native-20-kHz assumption: native DSP/reference work stays at 32 kHz; the classifier receives a documented anti-aliased 20 kHz derivative, and a generator-specific 16 kHz derivative only if its processor requires one. Do not mislabel derived waveforms as native. The strict intake currently excludes non-five-second or non-mono inputs; record these exclusions before training.
+
+Official vessel MMSIs and background UTC dates are disjoint in fold 1. Full provenance is unresolved: no parent recording/deployment columns, and background device fields are blank. Never fill these with independent IDs derived from filenames. Documented timestamps may be parsed as timestamps, but they do not establish source identity. Resolve authoritative mappings or justify and validate a conservative grouping amendment before main evaluation.
+
+Training groups are split approximately 75/25 into acoustic-fit/policy-fit; validation groups 50/50 into development/calibration; preserve official test. Deterministic class-stratified group allocation uses seed 17. Proposed training/validation per-source cap 100 is provisional; report sensitivity and fix it before outcomes. It does not reduce full test classifier evaluation. Audits reject source, parent, and waveform-hash collisions. Temporal exclusions use a 60 s guard, retaining test before calibration, development, policy-fit, and acoustic-fit. Log every excluded clip and re-audit. A passing reduced audit does not repair missing identities.
+
+The originally proposed 600 references (now automated/AI reviewed: 240 policy, 60 development, 60 calibration, 240 test) cannot presently be class-balanced with at most three clips per source: every official test fold has fewer than 16 passenger vessels. Alternatives for protocol amendment are a smaller or unbalanced source-respecting assessment set, additional verified recordings from more passenger sources, or a declared increase in per-source sampling with honest cluster counts. Do not silently select an alternative. Resolve precision and sampling before test outcomes, and retain the strongest provenance checks.
+
+## Bounded report and reference rules
+
+All generators must use the same five slots: vessel class/abstain; dominant band among 20–100, 100–500, 500–2000, and 2000–8000 Hz; persistent narrowband presence; 2–80 Hz envelope modulation; and first/last-second received-energy trend. Require statuses, units, time/frequency support intervals, evidence IDs, uncertainty, limitations, and a 60–100-word interpretation. Probabilities are included only when supplied by a real calibrated classifier. No hidden chain-of-thought is requested.
+
+Persistent tones span at least half the clip. Initial center-frequency tolerance is max(3 Hz, 3%); modulation tolerance max(1 Hz, 10%); trend threshold 3 dB. Retain ambiguous references. Use blinded AI reviewer roles described in `annotation_guide.md`; first validate their behavior on known-signal controls and a 20-clip development-only consistency exercise. Reference aids use separately implemented DPSS multitaper estimates and rectified-envelope autocorrelation, not the proposed Welch/Hilbert measurements. Agreement is an automated consistency measure, not human ground truth. Separately audit at least 120 final rationales with AI review, and retain disagreements rather than automatically declaring consensus correct.
+
+Multi-citation rule proposed for freeze: each supplied citation must exist, belong to the actual query, and be compatible with the asserted attribute; the union must cover the asserted interval. Numeric/semantic consistency is evaluated against separately derived reference estimates and blinded AI assessments. Invalid extra citations are not excused by a valid one. W0 can receive provisional qualitative support only after localized AI assessment; this remains an automated proxy. Precise numeric claims require measured evidence. The current structural checker is not this semantic evaluator.
+
+## Models, tools, and learning target
+
+Train Swin V2 Tiny ImageNet initialization on acoustic-fit only. Inputs: 128-bin log-mel, 20–8000 Hz, FFT/window 1024, hop 256, 90 dB relative range, 256×256, three replicated channels. No arbitrary pitch shifts or image flips. Use AdamW, batch 32/equivalent accumulation, 30 epochs maximum, patience five, head LR 1e-3, weight decay .01; tune backbone LR {1e-6, 1e-5, 3e-5} on seed 17/development. Run seeds 17, 29, 43 and use the seed-17 anchor for matched generation. Fit its probability temperature on development and its 32-dimensional embedding PCA on acoustic-fit.
+
+Freeze Qwen2.5-Omni-7B; disable talker. One greedy terminal call/report, initially 768 output tokens, no generative repair. Use a common precision/revision/prompt across methods. Evidence serialization A/B/C/D has 256 tokens per family, total 1024; unused capacity is not transferred. Total text prompt cap 4096 plus native audio tokens. Log counts/truncation, and permit only one deterministic JSON cleanup. Any common output-limit adjustment is made on development before freeze. Qwen2.5-7B-Instruct is the optional planner backend for the essential prompt-planner comparator; count its calls separately. Model metadata revisions are recorded in the access audit, not yet smoke-tested/downloaded.
+
+A: Welch/STFT spectrum and persistence; B: band-filtered Hilbert envelope measurements; C: RMS, first/last energy change, and digital-signal quality; D: five distinct-source acoustic-fit cosine neighbors, excluding query group. Tool output provides measurement candidates, not mechanical interpretation or independent truth. The preparation implementation uses provisional 12 dB peak-to-floor detection thresholds; validate them on development, log all changes, and never tune them on test.
+
+Cache all 16 subsets for 240 policy clips and up to 60 each development/calibration, initially 5760 terminal reports. Full keys include waveform hash, model revision, precision, prompt hash, subset, evidence serialization/version hashes, classifier/PCA/normalization versions, and decoding settings. No unselected cached result enters a policy state.
+
+For identifiable physical slots: loss 0 for correct and supported, 1 for wrong or unsupported, .25 for uncertainty/omission. For ambiguous references: 0 for explicit uncertainty, .25 for omission, 1 for assertion. Class loss: 0 correct, 1 wrong, .25 abstain. L(S) = .5 class loss + .5 mean physical loss; Delta(S,a) = L(S) − L(S∪{a}). Prose errors are separate.
+
+Train three source-bootstrap MLPs (64,32; dropout .1) per controller seed, Huber loss, AdamW 1e-3/1e-4 decay, 100 epochs/patience ten. Keep all subset rows and transformed copies together. Normalize on training only and mask missing observations explicitly. Select maximum mean Delta − beta×SD − lambda×cost among unselected actions; stop when no positive score remains or B is exhausted. Primary B=2, sensitivity B=1/3. Tune beta {0,.5,1}, lambda {0,.02,.05} on development. Spread is a heuristic, not a conformal bound.
+
+## Comparisons and statistics
+
+Essential: B0 classifier; B1 raw Omni; B2 audio+prior; B3 best fixed pair; B4 retrieval and retrieval+DSP; B5 all tools (unmatched budget); B6 bounded prompt planner adaptation; B7 accuracy-only learned target; B8 deterministic report; B9 entropy heuristic; P proposed; A1 one-shot/no acquired values; A2 beta=0; A3 forced full budget. Lock strongest B3/B9 competitor on development. Give matched selectors the same risk head, checker, and calibration opportunity. Do not claim full reproduction of external agents.
+
+Generate an offline terminal report for every clip before rejection. Fix threshold on calibration targeting 70% report coverage; report actual test coverage. Test-ranked curves at 50/70/90% are descriptive diagnostics. Primary endpoint is supported coverage among retained reports at B=2, with unsupported rate as a mandatory guardrail. Also report whole-test useful coverage.
+
+For N retained clips, A definite physical assertions, G independently correct-and-supported assertions, and U unsupported assertions: supported coverage=G/(4N), assertion coverage=A/(4N), unsupported rate=U/A (NA if A=0). Uncertainty is never a positive fact. Report factual error, identifiability, appropriate uncertainty, citation support/completeness, matched frequency error and its coverage, class accuracy/macro-F1/balanced accuracy, per-class recall, genuine-score Brier/ECE (10 equal-frequency bins), schema validity, calls, tokens, latency, peak VRAM, and allocated GPU-hours. Specify all denominators.
+
+Use 2000 paired source-cluster bootstrap samples and 95% intervals, carrying both methods and all waveform variants together. Report classifier and controller seed variability separately. Planned confirmatory contrasts are P vs locked B3/B9, P vs B7, P vs A1; apply Holm adjustment to valid cluster-based p-values when computed. Do not derive p-values from arbitrary window-level independence assumptions. Greedy cached reports are not independent repeats.
+
+Freeze added-noise ratios 20/10/0 dB, low-pass 2 kHz, gain/clipping/missing-tool severities, evidence swaps/false numeric cards, seeds, 100-clip prompt-paraphrase subset, and paired transformed-reference sampling before test. At least 60 transformed test clips need fresh automated reference estimates and AI assessments when physical attributes change. Current 100 structural interventions are checker tests only, not the future generator intervention experiment.
+
+## Gates and preservation
+
+The user authorizes a hard 10-hour GPU ceiling on the existing service; no new paid provisioning is authorized. Actual rate and prior allocated idle time are unknown. Main experiments still require verified artifact preservation, valid real-data groups, and automated pilot references. Keep the initial pilot within four GPU-hours and the remaining 10-hour total; include reviewer calls and idle allocation, and checkpoint before the ceiling. Dollar cost remains unknown until the actual rate is obtained, rather than inventing a USD budget. Require ≥98% parse validity, measured throughput/VRAM, full model/optimizer/RNG checkpoint recovery, and development-only tool-complementarity evidence. Atomic result-shard tests here do not establish GPU checkpoint recovery.
+
+Success thresholds are hypotheses: ≥5 percentage-point supported-coverage gain, paired CI excluding zero, unsupported rate no worse, class macro-F1 within two points, and supporting B7/A1 contrasts. If absent, preserve the negative or inconclusive result. No synthetic-only replacement of the primary study. **Leave the Pod running when finished**, as explicitly requested by the user; do not stop/delete/terminate it. The 10-hour limit governs research workloads, not unbounded later idle billing.
+
+Freeze test protocol, source/split/reference hashes, actual hyperparameters, prompt, model versions, comparator, and statistical family before test unlock. Keep data/weights/private identities outside Git; atomic checkpoints and content-addressed predictions on verified persistent storage, with verified local backups. User owns all subsequent Git pushes and any eventual submission/publication.

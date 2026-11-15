@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Independent acoustic review</title>
+<style>body{font:16px system-ui;max-width:1100px;margin:2rem auto;padding:0 1rem;background:#f5f7fa;color:#172536}button,input,select,textarea{font:inherit;padding:.5rem;margin:.2rem}button{cursor:pointer}fieldset{margin:1rem 0;border:1px solid #aab8c8;background:white}label{display:inline-block;margin:.4rem}img{width:100%}textarea{width:90%}nav{position:sticky;top:0;background:#e4ebf4;padding:.6rem}small{display:block;color:#405269}.status{font-weight:bold}</style>
+<h1>Independent acoustic review</h1>
+<p>Record only audible or measured properties. The plots are review aids, not ground truth. Do not infer vessel identity, source motion, RPM, shaft speed or blade count.</p>
+<label>Reviewer ID <input id="reviewer" autocomplete="off"></label>
+<nav><button id="previous">Previous</button><span id="position"></span><button id="next">Next</button><button id="save">Save this review</button><button id="export">Export reviews</button><span id="status" class="status" role="status"></span></nav>
+<h2 id="clip"></h2><audio id="audio" controls></audio><img id="views" alt="Waveform, spectrogram, multitaper spectrum, and envelope autocorrelation">
+<form id="form"><div id="fields"></div><label>Ambiguity / identifiability notes<textarea name="notes" rows="3" required></textarea></label></form>
+<p>Save before changing clips. Reviews are kept in this browser for each reviewer ID. Export JSON and keep a separate copy; browser storage is not an archival backup.</p>
+<script>
+const pack=/*PACK_DATA*/;
+const slots={dominant_band:['20-100','100-500','500-2000','2000-8000'],narrowband:['present','absent'],modulation:['present','absent'],energy_trend:['increase','decrease','steady']};
+let index=0;
+const fields=document.getElementById('fields'), form=document.getElementById('form');
+for(const [name,values] of Object.entries(slots)){
+ const box=document.createElement('fieldset'),legend=document.createElement('legend');legend.textContent=name.replaceAll('_',' ');box.append(legend);
+ const status=document.createElement('select');status.name=name+'_status';status.required=true;
+ for(const value of ['',...values,'uncertain']){const o=document.createElement('option');o.value=value;o.textContent=value||'Select after reviewing';status.append(o)}
+ box.append(status);
+ for(const suffix of ['time_start_s','time_end_s',...(name==='narrowband'?['frequency_low_hz','frequency_high_hz']:name==='modulation'?['rate_low_hz','rate_high_hz','carrier_low_hz','carrier_high_hz']:[]),'tolerance']){
+  const label=document.createElement('label');label.textContent=suffix.replaceAll('_',' ');const input=document.createElement('input');input.type='number';input.step='any';input.min='0';input.name=name+'_'+suffix;input.style.width='6rem';label.append(input);box.append(label)
+ }
+ const note=document.createElement('small');note.textContent='Uncertain is a valid reference. Mark the inspected time interval; for present tones/modulation, record the frequency/rate bounds. Tolerance is in Hz for tone/modulation, dB for trend; leave blank when inapplicable.';box.append(note);fields.append(box)
+}
+function key(){const r=document.getElementById('reviewer').value.trim();if(!r)throw Error('Enter a reviewer ID.');return 'acoustic-review:'+pack.pack_id+':'+r}
+function reviews(){return JSON.parse(localStorage.getItem(key())||'{}')}
+function notice(msg){document.getElementById('status').textContent=msg}
+function load(){const clip=pack.clips[index];document.getElementById('position').textContent=` ${index+1} / ${pack.clips.length} `;document.getElementById('clip').textContent=clip.id;document.getElementById('audio').src=clip.id+'.wav';document.getElementById('views').src=clip.id+'.png';form.reset();try{const old=reviews()[clip.id];if(old)for(const [k,v] of Object.entries(old.fields)){if(form.elements[k])form.elements[k].value=v??''}}catch(e){}notice('')}
+function save(){if(!form.reportValidity())return false;const fields=Object.fromEntries(new FormData(form)),duration=pack.clips[index].duration_seconds;
+ for(const name of Object.keys(slots)){const start=fields[name+'_time_start_s'],end=fields[name+'_time_end_s'];if(start===''||end===''||+start>=+end||+end>duration)throw Error('Enter a valid inspected time interval for '+name);
+ if(fields[name+'_status']==='present'){const type=name==='narrowband'?'frequency':'rate',low=fields[name+'_'+type+'_low_hz'],high=fields[name+'_'+type+'_high_hz'];if(low===''||high===''||+low>+high)throw Error('Enter valid '+type+' bounds.');if(name==='narrowband'&&( +low<20||+high>2000||+end- +start<duration/2))throw Error('Persistent tone must be in 20–2000 Hz and span at least half the clip.');if(name==='modulation'&&( +low<2||+high>80))throw Error('Modulation rates must be in 2–80 Hz.')}}
+ const all=reviews();all[pack.clips[index].id]={reviewed_at:new Date().toISOString(),fields};localStorage.setItem(key(),JSON.stringify(all));notice('Saved');return true}
+document.getElementById('save').onclick=()=>{try{save()}catch(e){notice(e.message)}};
+document.getElementById('previous').onclick=()=>{index=Math.max(0,index-1);load()};document.getElementById('next').onclick=()=>{index=Math.min(pack.clips.length-1,index+1);load()};document.getElementById('reviewer').onchange=load;
+document.getElementById('export').onclick=()=>{try{const data={schema_version:'0.1.0',pack_id:pack.pack_id,reviewer_id:document.getElementById('reviewer').value.trim(),reviews:reviews(),expected_clips:pack.clips.length};const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='acoustic-reviews.json';a.click();URL.revokeObjectURL(url);notice('Exported '+Object.keys(data.reviews).length+' reviews')}catch(e){notice(e.message)}};load();
+</script></html>

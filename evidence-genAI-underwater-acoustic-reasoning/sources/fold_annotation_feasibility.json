@@ -1,0 +1,37 @@
+[
+  {
+    "capacity_sufficient": false,
+    "fold": "fold_1",
+    "maximum_passenger_annotations_at_cap3": 39,
+    "needed_balanced_passenger_annotations": 48,
+    "passenger_test_vessels": 13
+  },
+  {
+    "capacity_sufficient": false,
+    "fold": "fold_2",
+    "maximum_passenger_annotations_at_cap3": 15,
+    "needed_balanced_passenger_annotations": 48,
+    "passenger_test_vessels": 5
+  },
+  {
+    "capacity_sufficient": false,
+    "fold": "fold_3",
+    "maximum_passenger_annotations_at_cap3": 30,
+    "needed_balanced_passenger_annotations": 48,
+    "passenger_test_vessels": 10
+  },
+  {
+    "capacity_sufficient": false,
+    "fold": "fold_4",
+    "maximum_passenger_annotations_at_cap3": 27,
+    "needed_balanced_passenger_annotations": 48,
+    "passenger_test_vessels": 9
+  },
+  {
+    "capacity_sufficient": false,
+    "fold": "fold_5",
+    "maximum_passenger_annotations_at_cap3": 30,
+    "needed_balanced_passenger_annotations": 48,
+    "passenger_test_vessels": 10
+  }
+]

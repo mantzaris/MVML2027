@@ -1,0 +1,120 @@
+{
+  "DOI": "10.1109/icassp55912.2026.11461966",
+  "title": [
+    "A LLM-Driven Acoustic Semantic Enriched Framework for Underwater Acoustic Target Recognition"
+  ],
+  "author": [
+    {
+      "given": "Jingkai",
+      "family": "Cao",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Donghua University,School of Computer Science and Technology,Shanghai,China"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Shicheng",
+      "family": "Ding",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Tabor Academy,Massachusetts,USA"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Shuai",
+      "family": "Yu",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Dalian University of Technology,School of Information and Communication Engineering,Dalian,China"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Wei",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Fudan University,School of Computer Science and Technology,Shanghai,China"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "type": "proceedings-article",
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        5,
+        3
+      ]
+    ]
+  },
+  "container-title": [
+    "ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+  ],
+  "URL": "https://doi.org/10.1109/icassp55912.2026.11461966",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            3
+          ]
+        ],
+        "date-time": "2026-05-03T00:00:00Z",
+        "timestamp": 1777766400000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-029"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            3
+          ]
+        ],
+        "date-time": "2026-05-03T00:00:00Z",
+        "timestamp": 1777766400000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-037"
+    }
+  ]
+}

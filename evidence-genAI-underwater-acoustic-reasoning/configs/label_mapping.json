@@ -1,0 +1,11 @@
+{
+  "source": "UniqueShip v1.0 fold_1 metadata_5s CSVs inspected 2026-11-15",
+  "mapping": {
+    "background": "background",
+    "cargo": "cargo",
+    "passengership": "passenger",
+    "tanker": "tanker",
+    "tug": "tug_tow"
+  },
+  "other_release_labels": "excluded from the five-class study"
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "release_readme",
+    "file_id": "1Nzyqr6KJiYt96PIHLZMM0oCp9nAJJVyP",
+    "status": 200,
+    "content_type": "application/octet-stream",
+    "content_range": null,
+    "content_length": "2564",
+    "probe_bytes": 2564,
+    "sha256": "2219878b52045d5da85454d9c9804613f70b5feaa91a9891e74a373730e2c835"
+  },
+  {
+    "name": "archive_tail",
+    "file_id": "1gBOsHTfSKmAhXKODFK2twz5AGtQT3Od1",
+    "status": 206,
+    "content_type": "application/octet-stream",
+    "content_range": "bytes 7058511785-7059560360/7059560361",
+    "content_length": "1048576",
+    "probe_bytes": 1048576,
+    "sha256": "1da5f9f17491559951761c1ce247a06d588c626fa8975b64648029940ddb5965"
+  }
+]

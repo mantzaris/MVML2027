@@ -1,0 +1,249 @@
+[
+  {
+    "key": "autagent",
+    "type": "inproceedings",
+    "fields": {
+      "title": "AuTAgent: A Reinforcement Learning Framework for Tool-Augmented Audio Reasoning",
+      "author": "Siqian Tong and Li Xuan and Yiwei Wang and Baolong Bi and Yujun Cai and Shenghua Liu and Yuchen He and Hao Chengpeng",
+      "year": "2026",
+      "url": "https://proceedings.mlr.press/v306/tong26l.html",
+      "booktitle": "International Conference on Machine Learning",
+      "pages": "121743--121756"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "signals1",
+    "type": "misc",
+    "fields": {
+      "title": "From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part I: Framework and Recognition",
+      "author": "Zhang, Yuge and Chen, Jie and Zhao, Zhengqiao and Yao, Xiling and Xu, Lingji and Chen, Jingdong and Yang, Yixin",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2610.22064",
+      "eprint": "2610.22064",
+      "archivePrefix": "arXiv",
+      "note": "Preprint; bibliographic metadata verified 2026-11-15"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "signals2",
+    "type": "misc",
+    "fields": {
+      "title": "From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part II: Passive Detection",
+      "author": "Li, Zhiyuan and Zhang, Yuge and Chen, Jie and Su, Xiruo and Zhao, Zhengqiao and Yao, Xiling and Xu, Lingji and Chen, Jingdong and Yang, Yixin",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2610.31346",
+      "eprint": "2610.31346",
+      "archivePrefix": "arXiv",
+      "note": "Preprint; bibliographic metadata verified 2026-11-15"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "audio_mind",
+    "type": "misc",
+    "fields": {
+      "title": "Audio-Mind: An Auditable Agentic Framework for Audio Understanding",
+      "author": "Wang, Yucheng and Peng, Jing and Li, Hanqi and Wang, Chenghao and Tu, Wenming and Xi, Yu and Sun, Zhaokai and Yu, Kai and Wang, Shuai",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2605.28480",
+      "eprint": "2605.28480",
+      "archivePrefix": "arXiv",
+      "note": "Preprint; bibliographic metadata verified 2026-11-15"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "sear",
+    "type": "misc",
+    "fields": {
+      "title": "SEAR: Spoofing Evidence-Grounded Audio Reasoning Benchmark for Audio Language Models",
+      "author": "Wan, Rong and Qin, Suliu and Li, Jiaxi and Xie, Wei and Wang, Wenwu and Han, Xiaolong and Yin, Lu and Wang, Xilu",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2609.39847",
+      "eprint": "2609.39847",
+      "archivePrefix": "arXiv",
+      "note": "Preprint; bibliographic metadata verified 2026-11-15"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "ace_cap",
+    "type": "misc",
+    "fields": {
+      "title": "ACE-Cap: Active Evidence Acquisition via Agentic Co-Evolution for Long-Paragraph Fine-Grained Audio Captioning",
+      "author": "Ma, Fengji and Rong, Yan and Li, Xu and Xu, Xuenan and Zhang, Chen and Liu, Li",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2608.16162",
+      "eprint": "2608.16162",
+      "archivePrefix": "arXiv",
+      "note": "Preprint; bibliographic metadata verified 2026-11-15"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "uniqueship",
+    "type": "misc",
+    "fields": {
+      "title": "UniqueShip: Mitigating Data Leakage in Acoustic Ship Classification Benchmark Datasets",
+      "author": "Hashemi, Connor and Stout, Trevor and Hoogs, Anthony and Parham, Jason",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2609.13659",
+      "eprint": "2609.13659",
+      "archivePrefix": "arXiv",
+      "note": "Author manuscript; arXiv records acceptance at OCEANS 2026; final proceedings pages unverified"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "ua_bench",
+    "type": "misc",
+    "fields": {
+      "title": "UA-Bench: Benchmarking Large Audio-Language Models on Underwater Acoustic Recognition",
+      "author": "Sun, Zhe and An, Liang and Yao, Jiayu and Qian, Ronglai and Cai, Jianing and Huang, Ziwei and Fan, Qing and Yang, Zhiyuan and Cai, Yujun and Cao, Hongli and Wang, Yiwei and Wang, Xiaoyan",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2610.16942",
+      "eprint": "2610.16942",
+      "archivePrefix": "arXiv",
+      "note": "Preprint; bibliographic metadata verified 2026-11-15"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "wow_bench",
+    "type": "inproceedings",
+    "fields": {
+      "title": "WoW-Bench: Evaluating Fine-Grained Acoustic Perception in Audio-Language Models via Marine Mammal Vocalizations",
+      "author": "Jaeyeon Kim and Heeseung Yun and Tony Woo and Chao-Han Huck Yang and Gunhee Kim",
+      "year": "2026",
+      "url": "https://aclanthology.org/2026.findings-acl.1562/",
+      "booktitle": "Findings of the Association for Computational Linguistics: ACL 2026",
+      "doi": "10.18653/v1/2026.findings-acl.1562",
+      "pages": "31208--31229"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "self_rag",
+    "type": "inproceedings",
+    "fields": {
+      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "author": "Asai, Akari and Wu, Zeqiu and Wang, Yizhong and Sil, Avi and Hajishirzi, Hannaneh",
+      "year": "2024",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/25f7be9694d7b32d5cc670927b8091e1-Abstract-Conference.html",
+      "booktitle": "International Conference on Learning Representations",
+      "pages": "9112--9141"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "alce",
+    "type": "inproceedings",
+    "fields": {
+      "title": "Enabling Large Language Models to Generate Text with Citations",
+      "author": "Tianyu Gao and Howard Yen and Jiatong Yu and Danqi Chen",
+      "year": "2023",
+      "url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "booktitle": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+      "doi": "10.18653/v1/2023.emnlp-main.398",
+      "pages": "6465--6488"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "conformal_factuality",
+    "type": "inproceedings",
+    "fields": {
+      "title": "Language Models with Conformal Factuality Guarantees",
+      "author": "Christopher Mohri and Tatsunori Hashimoto",
+      "year": "2024",
+      "url": "https://proceedings.mlr.press/v235/mohri24a.html",
+      "booktitle": "International Conference on Machine Learning",
+      "pages": "36029--36047"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "cofact",
+    "type": "inproceedings",
+    "fields": {
+      "title": "CoFact: Conformal Factuality Guarantees for Language Models under Covariate Shift",
+      "author": "Hu, Zirui and Zhang, Zheng and Wang, Yingjie and Rutkowski, Leszek and Tao, Dacheng",
+      "year": "2026",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/bd074b828bbd782d4bece89306caff84-Abstract-Conference.html",
+      "booktitle": "International Conference on Learning Representations",
+      "pages": "116267--116297"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "aha",
+    "type": "misc",
+    "fields": {
+      "title": "AHA: Aligning Large Audio-Language Models for Reasoning Hallucinations via Counterfactual Hard Negatives",
+      "author": "Chen, Yanxi and Zhu, Wenhui and Chen, Xiwen and Wang, Zhipeng and Li, Xin and Qiu, Peijie and Wang, Hao and Dong, Xuanzhao and Xiong, Yujian and Schneider, Anderson and Nevmyvaka, Yuriy and Wang, Yalin",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2512.24052",
+      "eprint": "2512.24052",
+      "archivePrefix": "arXiv",
+      "note": "Preprint; bibliographic metadata verified 2026-11-15"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "hallu_audio",
+    "type": "inproceedings",
+    "fields": {
+      "title": "HalluAudio: A Comprehensive Benchmark for Hallucination Detection in Large Audio-Language Models",
+      "author": "Feiyu Zhao and Yiming Chen and Wenhuan Lu and Daipeng Zhang and Xianghu Yue and Jianguo Wei",
+      "year": "2026",
+      "url": "https://aclanthology.org/2026.acl-long.1797/",
+      "booktitle": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "doi": "10.18653/v1/2026.acl-long.1797",
+      "pages": "38797--38816"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "passive_contrastive",
+    "type": "article",
+    "fields": {
+      "title": "Contrastive learning for passive acoustic monitoring: A framework for sound source discovery and cross-site comparison in marine soundscapes",
+      "author": "Richard Acs and Ali Ibrahim and Hanqi Zhuang and Laurent M. Chérubin",
+      "year": "2026",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014005",
+      "journal": "PLOS Computational Biology",
+      "doi": "10.1371/journal.pcbi.1014005"
+    },
+    "verification": "bibliographic_metadata_only_unless_discussed_in_nearest_work"
+  },
+  {
+    "key": "ase_clap",
+    "type": "inproceedings",
+    "fields": {
+      "title": "A LLM-Driven Acoustic Semantic Enriched Framework for Underwater Acoustic Target Recognition",
+      "author": "Cao, Jingkai and Ding, Shicheng and Yu, Shuai and Li, Wei",
+      "year": "2026",
+      "doi": "10.1109/icassp55912.2026.11461966",
+      "url": "https://doi.org/10.1109/icassp55912.2026.11461966",
+      "booktitle": "ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "note": "Crossref metadata verified; full method not independently reviewed in this preparation stage"
+    },
+    "verification": "crossref_metadata"
+  },
+  {
+    "key": "underwater_embeddings",
+    "type": "article",
+    "fields": {
+      "title": "The computation of generalized embeddings for underwater acoustic target recognition using contrastive learning",
+      "author": "Hummel, Hilde I. and Gansekoele, Arwin and Bhulai, Sandjai and van der Mei, Rob",
+      "year": "2026",
+      "doi": "10.1016/j.apacoust.2025.111103",
+      "url": "https://doi.org/10.1016/j.apacoust.2025.111103",
+      "journal": "Applied Acoustics",
+      "note": "Crossref metadata verified; full method not independently reviewed in this preparation stage"
+    },
+    "verification": "crossref_metadata"
+  }
+]

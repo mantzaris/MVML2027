@@ -1,0 +1,137 @@
+{
+  "all_vessel_cross_split_overlap": {
+    "train_test": 0,
+    "train_validation": 0,
+    "validation_test": 0
+  },
+  "blocking_fields": [
+    "No parent recording ID column",
+    "No deployment ID column; hydrophone device IDs are not deployment IDs",
+    "Background hydrophone fields missing",
+    "Only date field for time; documented filenames contain clip times but do not establish parent/deployment identity"
+  ],
+  "cross_split_group_overlap": {
+    "background": {
+      "train_test": 0,
+      "train_validation": 0,
+      "validation_test": 0
+    },
+    "cargo": {
+      "train_test": 0,
+      "train_validation": 0,
+      "validation_test": 0
+    },
+    "passengership": {
+      "train_test": 0,
+      "train_validation": 0,
+      "validation_test": 0
+    },
+    "tanker": {
+      "train_test": 0,
+      "train_validation": 0,
+      "validation_test": 0
+    },
+    "tug": {
+      "train_test": 0,
+      "train_validation": 0,
+      "validation_test": 0
+    }
+  },
+  "test": {
+    "background": {
+      "clips": 362,
+      "days": 82,
+      "missing_hydrophone": 362,
+      "shorter_than_5s": 0
+    },
+    "cargo": {
+      "clips": 457,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 0,
+      "vessels": 311
+    },
+    "passengership": {
+      "clips": 432,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 0,
+      "vessels": 13
+    },
+    "tanker": {
+      "clips": 526,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 0,
+      "vessels": 34
+    },
+    "tug": {
+      "clips": 473,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 1,
+      "vessels": 39
+    }
+  },
+  "train": {
+    "background": {
+      "clips": 2880,
+      "days": 641,
+      "missing_hydrophone": 2880,
+      "shorter_than_5s": 0
+    },
+    "cargo": {
+      "clips": 2865,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 2,
+      "vessels": 2017
+    },
+    "passengership": {
+      "clips": 2879,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 0,
+      "vessels": 88
+    },
+    "tanker": {
+      "clips": 2877,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 2,
+      "vessels": 186
+    },
+    "tug": {
+      "clips": 2871,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 0,
+      "vessels": 237
+    }
+  },
+  "validation": {
+    "background": {
+      "clips": 358,
+      "days": 79,
+      "missing_hydrophone": 358,
+      "shorter_than_5s": 0
+    },
+    "cargo": {
+      "clips": 279,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 0,
+      "vessels": 194
+    },
+    "passengership": {
+      "clips": 289,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 0,
+      "vessels": 9
+    },
+    "tanker": {
+      "clips": 198,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 0,
+      "vessels": 13
+    },
+    "tug": {
+      "clips": 257,
+      "missing_hydrophone": 0,
+      "shorter_than_5s": 0,
+      "vessels": 21
+    }
+  },
+  "vessels_with_conflicting_class_labels": 0
+}

@@ -1,0 +1,10 @@
+{
+  "status": "locked",
+  "protocol_frozen": false,
+  "protocol_sha256": null,
+  "split_manifest_sha256": null,
+  "annotations_sha256": null,
+  "locked_comparator": null,
+  "test_outcomes_examined": false,
+  "events": []
+}

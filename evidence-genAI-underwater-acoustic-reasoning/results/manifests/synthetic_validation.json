@@ -1,0 +1,37 @@
+{
+  "detailed_results_sha256": "39e7ee1965887395778b95716d974af46c18d85354d7ed8cccf461455942a294",
+  "human_annotations": 0,
+  "limitations": [
+    "No generator/controller behavior was tested.",
+    "A structurally valid but false numeric card deliberately passes; independent references are necessary.",
+    "Synthetic fixtures are not ship data or validated ocean propagation."
+  ],
+  "real_experiments": 0,
+  "status": "synthetic_tool_validation_only",
+  "structural_interventions": {
+    "cases": 100,
+    "passed": 100
+  },
+  "summary": {
+    "am": {
+      "n": 100,
+      "passed": 100
+    },
+    "chirp": {
+      "n": 100,
+      "passed": 100
+    },
+    "noise": {
+      "n": 100,
+      "passed": 100
+    },
+    "silence": {
+      "n": 100,
+      "passed": 100
+    },
+    "tone": {
+      "n": 100,
+      "passed": 100
+    }
+  }
+}

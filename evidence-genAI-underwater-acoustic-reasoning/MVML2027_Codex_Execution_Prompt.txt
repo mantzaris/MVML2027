@@ -1,0 +1,334 @@
+Implement and execute the research plan below, then produce a reproducible repository and an honest MVML 2027 conference manuscript. This prompt is self-contained. Do not assume access to an earlier conversation.
+
+TITLE AND PURPOSE
+
+Keep this working title exactly:
+Evidence-Grounded Generative AI for Underwater Acoustic Reasoning
+
+The author is Alexander V. Mantzaris, an academic data scientist. The study connects acoustic machine learning, generative audio models and agents that select analytical evidence. The longer-term motivation is maritime and submarine-related sensing research. The actual evaluation uses public civilian underwater recordings. Do not claim submarine identification, operational sonar performance, source localization, shaft speed, blade count or submarine-specific validation without appropriate ground truth.
+
+The settled direction is a learned claim-risk evidence acquisition controller: predict how revealing an additional acoustic analysis changes the correctness and support of a frozen generator's report. Select analyses sequentially under a budget; stop when additional evidence is not predicted to help; report uncertainty when the recording does not support a claim. Train the acoustic classifier and a small controller. Do not fine-tune the generative model in the core study.
+
+This is a proposed, incremental contribution, not an established positive result. Existing papers already cover underwater audio-language reports, learned audio-tool selection, uncertainty-led tool use, and counterfactual evidence credit. The novelty claim must depend on independently scored real-data claim risk, the specific learned selection objective, and controlled empirical improvement. A new underwater wrapper around an existing agent is insufficient.
+
+EXECUTION INPUTS TO FILL OR DISCOVER
+
+Repository directory or remote: <REPOSITORY_PATH_OR_URL>
+Existing RunPod SSH alias: <RUNPOD_SSH_ALIAS>
+Local SSH config path: <SSH_CONFIG_PATH_OR_DEFAULT>
+Verified persistent remote directory: <REMOTE_PERSISTENT_PATH>
+Approved maximum total spend in USD: <APPROVED_TOTAL_USD>
+Approved maximum allocated GPU-hours: <APPROVED_GPU_HOURS>
+May stop the designated Pod after checkpointing: <YES_OR_NO>
+Human reference annotation directory/contact process: <ANNOTATION_PATH_OR_PENDING>
+Author/coauthor affiliations and emails: <AUTHOR_DETAILS_OR_PENDING>
+
+Do not invent these values or ask for private keys in chat. Inspect existing configuration without exposing secrets. Connect to the supplied existing Pod if authorized. An empty budget is not permission to provision or spend. Complete useful CPU work, data audits, tests, annotation tooling and manuscript structure while missing inputs are resolved. Do not create a paid Pod, send dataset-request emails, submit a paper, publish a repository, or post a manuscript without authorization. Do not delete a volume or terminate a Pod automatically.
+
+1. CONFERENCE REQUIREMENTS AND RELATED WORK
+
+Recheck current official requirements before writing:
+https://mvml.org/
+https://mvml.org/author-guidelines/
+https://mvml.org/important-dates/
+https://mvml.org/documents/MVML27_Paper_Template.docx
+
+Planning check on November 15, 2026 found: 13th MVML, August 15-17, 2027, Prague and ordinary virtual participation; initial full-paper deadline January 21, 2027; notification February 25; final manuscript March 18; full paper maximum eight pages; virtual oral presentation ten minutes. At least one author must register. The organizer advertises EECSS proceedings and Scopus/Google Scholar indexing. Do not guarantee future indexing.
+
+Plan for eight TOTAL pages including references. Explicit reference exclusion and review anonymity were not established. Recheck rather than inventing a double-blind policy. The linked official template is DOCX. LaTeX is accepted but no official LaTeX package was located. Deliver the official-template editable DOCX and PDF; optionally also provide a faithful LaTeX source, clearly identified as recreated if appropriate. The template prose says US Letter, 25 mm margins, 11 pt Times New Roman body, Arial headings, abstract at most 300 words, four to eight keywords, IEEE references. Its embedded Word left/right margins differ from its prose. Preserve the supplied DOCX working format, document the discrepancy and resolve it before submission; do not silently label a homemade format official.
+
+Read and cite these nearest sources, checking actual methods, revisions, publication status and repositories. Do not imply that all are peer reviewed:
+
+- AuTAgent, ICML 2026: https://proceedings.mlr.press/v306/tong26l.html ; https://arxiv.org/html/2602.13685v1 ; https://tongsiqian.github.io/AuTAgent/ . Learned audio-tool selection and differential task reward already exist. Code was marked coming soon during planning.
+- From Signals to Evidence, Part I, October 2026 preprint: https://arxiv.org/abs/2610.22064 . Physics-aware acoustic features and generative interpretation of simulated underwater targets already exist.
+- From Signals to Evidence, Part II, October 2026 preprint: https://arxiv.org/abs/2610.31346 . Array/bearing/detection reporting on simulated data; examine its admitted evaluation limitations.
+- Audio-Mind, 2026 preprint: https://arxiv.org/abs/2605.28480 ; https://github.com/DELTA-DoubleWise/Audio-Mind . Conditional acquisition and evidence tracking already exist; the public system's models differ from our small local comparator.
+- SEAR/BAEA, September 2026 preprint: https://arxiv.org/abs/2609.39847 ; paper-linked repository https://github.com/SEAR-benchmark/SEAR . Static and adaptive acoustic evidence selection already exist. Verify repository contents before relying on it.
+- ACE-Cap, August 2026 preprint: https://arxiv.org/abs/2608.16162 . Active evidence and counterfactual credit already exist; do not claim that Delta alone is new.
+- ASE-CLAP, ICASSP 2026: https://doi.org/10.1109/ICASSP55912.2026.11461966 . LLM-derived acoustic semantic enrichment for underwater recognition. Full text was not obtained in planning, so verify exact datasets before describing them.
+- UniqueShip, OCEANS 2026 author manuscript: https://arxiv.org/abs/2609.13659 ; https://uniqueshipdata.org/ . The real-data release and vessel-disjoint evaluation are central.
+- UA-Bench, October 2026 preprint: https://arxiv.org/abs/2610.16942 ; https://github.com/sunzhe12/ua-bench . A synthetic underwater audio-language benchmark, not independent real-recording confirmation.
+- WoW-Bench, Findings of ACL 2026: https://aclanthology.org/2026.findings-acl.1562/ . Marine-audio cognition and distractor sensitivity.
+- Self-RAG, ICLR 2024: https://proceedings.iclr.cc/paper_files/paper/2024/hash/25f7be9694d7b32d5cc670927b8091e1-Abstract-Conference.html
+- ALCE, EMNLP 2023: https://aclanthology.org/2023.emnlp-main.398/ . Separate correctness, citation support and completeness.
+- Mohri and Hashimoto, conformal factuality, ICML 2024: https://proceedings.mlr.press/v235/mohri24a.html ; CoFact, ICLR 2026: https://proceedings.iclr.cc/paper_files/paper/2026/hash/bd074b828bbd782d4bece89306caff84-Abstract-Conference.html . Do not claim a conformal guarantee from our heuristic ensemble or clustered domain-shift evaluation.
+- AHA: https://arxiv.org/html/2512.24052v2 ; https://github.com/LLM-VLM-GSL/AHA ; HalluAudio: https://aclanthology.org/2026.acl-long.1797/ . Audio hallucination and counterfactual controls.
+- Additional representation-learning context: https://doi.org/10.1016/j.apacoust.2025.111103 and https://doi.org/10.1371/journal.pcbi.1014005 . Use these and the nearest papers to check whether newer work removes the proposed gap.
+
+Create a verified bibliography and a short nearest-work comparison before making novelty claims. Keep source PDFs/metadata where permitted. An unavailable repository is not implemented code. Avoid fabricated author lists, publication dates, DOIs or citations.
+
+2. PRIMARY DATA AND SPLITS
+
+Use real UniqueShip recordings as the primary study:
+https://uniqueshipdata.org/
+https://arxiv.org/abs/2609.13659
+https://www.oceannetworks.ca/data/data-policy/
+
+Download the actually linked 12-class release with five hours per class, about 60 hours total. Planning estimated 17.8 GB compressed and 26 GB extracted. Retain the five classes background, cargo, passenger, tanker and tug/tow to derive approximately 25 hours, about 18,000 five-second clips. Preserve the official label mapping. The 25-hour quick-start text did not provide a verified separate archive; derive this subset from the linked release rather than assuming such an archive exists. The release landing page was reachable, but full archive download was not performed in planning. Verify access, checksums, metadata and release terms immediately.
+
+The released clips are documented as 20 kHz and five seconds, derived from ONC hydrophone recordings and AIS metadata. Verify actual headers and source fields. The provider states CC BY 4.0; retain the exact license and attribution. ONC partner material may have different terms. Do not distribute raw data until its applicable terms are confirmed.
+
+Freeze one official vessel-disjoint fold before examining performance. Divide its training source groups approximately 75/25 into acoustic-fit and policy-fit. Divide official validation groups evenly into development and calibration. Preserve official test. Approximate full-data shares are 60/20/5/5/10, or 10,800/3,600/900/900/1,800 clips before grouping and integrity exclusions. These are estimates; save actual counts.
+
+Use all recordings of each MMSI in one partition, including repeated passages and transformed copies. Group background by deployment/day. Audit parent recording IDs, overlapping timestamps and waveform hashes. Purge cross-partition overlap with a 60-second temporal guard. Use conservative grouping if fields conflict. Do not infer independent sources from filenames or invent missing identifiers. Cap per-vessel contribution. If metadata cannot establish source independence, stop the main evaluation and resolve this rather than reporting a random-window split.
+
+Train the acoustic classifier and retrieval bank only on acoustic-fit. Policy-fit is held out from classifier training and supplies controller supervision. Development tunes configurations; calibration fixes uncertainty/coverage thresholds; test is unlocked only after protocol freeze. Do not put AIS identity, source date, deployment code, test labels or reference explanations into model prompts. Maintain a separate evaluation manifest for these fields.
+
+Optional transfer: choose a held-out latest deployment with adequate class/source counts, exclude its vessels from all source training/calibration and retrain the shared models. Call it held-out deployment transfer within one region, not independent ocean-wide validation. Do only after the main study.
+
+Optional external data, with access and terms checked first:
+- DeepShip: https://github.com/irfankamboh/DeepShip . The repository exposes partial data; the full release requires a request. Do not assume a license or send email automatically.
+- ShipsEar: https://underwaternoise.atlanttic.uvigo.es/ ; https://doi.org/10.1016/j.apacoust.2016.06.008 . Access is by request; evaluate label mapping and recording dependence before use.
+- Oceanship: https://github.com/lizeyujack/oceanship . Potential ONC source overlap; not automatically independent.
+- QiandaoEar22: https://github.com/xiaoyangdu22/QiandaoEar22 ; https://doi.org/10.1186/s13634-024-01181-9 . Different lake targets and conditions; verify dataset license separately from article license.
+- UA-Bench: https://huggingface.co/datasets/zhesun12/water_all and https://huggingface.co/datasets/zhesun12/water . Full card was CC BY-NC 4.0; evaluation-subset license was not separately stated. Optional modeled-propagation/synthetic stress test only.
+
+If the primary real release is inaccessible, report the concrete blocker and evaluate another legally accessible real dataset with an adequate grouped protocol. Do not silently replace the primary experiment with synthetic signals.
+
+3. BOUNDED REPORT TASK AND INDEPENDENT TRUTH
+
+Input: one five-second waveform and an analysis budget. Output a JSON report with five fixed slots plus a 60-100-word interpretation:
+1. Vessel class: one of five labels or abstain; optional alternative class. This is a statistical inference, scored against the dataset class.
+2. Dominant received energy band: 20-100, 100-500, 500-2,000 or 2,000-8,000 Hz; ties/uncertain allowed. No sound-pressure level claims from normalized samples.
+3. Persistent narrowband component: present/absent/uncertain in 20-2,000 Hz; if present, frequency interval and time span. Require persistence for at least half the clip. Initial match tolerance max(3 Hz, 3% of reference center).
+4. Envelope modulation: present/absent/uncertain within 2-80 Hz; optional rate interval and carrier band. Initial tolerance max(1 Hz, 10%). Do not interpret it as shaft rate, RPM or blade count.
+5. Received energy trend: increase/decrease/steady/uncertain, first versus last second, initial 3 dB threshold. Do not infer acceleration, approach or range.
+
+Each physical slot includes status, value/units where appropriate, time/frequency bounds, evidence_ids and an uncertainty flag. Class output includes a probability vector only when actually available; do not invent calibrated probabilities from words. Include limitations and a short rationale. Require concise supporting interpretation, not hidden chain-of-thought. Keep every method's output contract the same.
+
+Build an independent reference set of 600 clips: 240 policy-fit, 60 development, 60 calibration, 240 test. Balance classes and sample source/quality diversity. Prefer distinct groups, at most three clips per source with at least ten-minute separation where possible. Report independent group counts, especially for rare passenger sources.
+
+Two reviewers independently inspect anonymized audio, waveforms, spectrograms, a multitaper PSD/reference estimator and envelope autocorrelation. Hide class labels, model outputs, proposed tool cards and policy decisions. At least one reviewer should be competent in acoustic analysis. Run a 20-clip training exercise. Annotate each physical field, support interval, tolerance, ambiguity and identifiability. Use a separate implementation from the agent's Welch/Hilbert tools. Adjudicate disagreements blind to model outputs; retain ambiguous references rather than forcing labels. Report kappa/alpha and interval disagreement. Agreement between two algorithms alone is not human ground truth.
+
+Estimated human work: 40 person-hours for 600 clips x two reviewers x two minutes, plus adjudication and report auditing, about 50-60 person-hours total. Supply annotation forms and a local review interface. Do not fabricate human labels or continue to a claimed complete evidence-grounding paper if they remain missing. A one-reviewer study must be explicitly labeled and its claims weakened.
+
+Audit at least 120 final reports, sampled across principal methods, plus flagged disagreements. Check each rationale sentence for unsupported causes or details beyond its cited fields. Use independent structured scoring as the main endpoint, human prose review as a supplement, and an LLM judge only as optional secondary analysis.
+
+Run the full generative baseline/ablation matrix on the 240 annotated test clips. Evaluate the acoustic classifier on the full held-out test set. Extra generator classification and numerical checks on the remaining clips are optional within budget; call non-human physical checks proxy measurements, not independently verified explanation quality. Do not multiply every generative baseline across all 1,800 test clips by default.
+
+4. MODEL AND TOOL IMPLEMENTATION
+
+Acoustic classifier:
+- torchvision.models.swin_v2_t with Swin_V2_T_Weights.IMAGENET1K_V1.
+- Official API: https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.swin_v2_t.html
+- Native 20 kHz waveform, 128-bin log-mel, 20-8,000 Hz, FFT/window 1,024, hop 256, fixed 90 dB relative dynamic range, resize to 256 x 256, replicate to three channels. Never use image flips or arbitrary pitch shifts. Document mono/channel handling.
+- Cross-entropy, AdamW, batch 32 or equivalent accumulation, at most 30 epochs, patience five on development macro-F1. Tune backbone LR {1e-6,1e-5,3e-5} on seed 17 only, head LR 1e-3, weight decay .01; then run seeds 17,29,43. Document normalization and augmentation.
+- Use seed 17 as the shared frozen anchor for all principal generative comparisons. Report the three classifier runs separately. Optional second full anchor only within remaining budget.
+- Fit the anchor's probability temperature on development before caching controller states. Reserve calibration for final report thresholds; do not use test labels for probability calibration.
+
+Frozen terminal generator:
+- Qwen/Qwen2.5-Omni-7B, https://huggingface.co/Qwen/Qwen2.5-Omni-7B . Preserve actual model revision and license. Use original audio through the supported processor plus selected evidence and shared classifier prior where specified. Disable talker/audio output.
+- Greedy decoding, initial max_new_tokens=768, one terminal generator call per report; no hidden generative repair. If the pilot exposes truncation, choose one larger common cap before freezing all comparisons. Allow one deterministic JSON cleanup and retain raw text.
+- Same precision/checkpoint/prompt for all principal methods. Use BF16 on preferred 48 GB hardware if supported; if quantization is necessary, pin the same configuration across comparisons.
+- Evidence cap 1,024 tokens with 256 preallocated per tool family; unused tool capacity does not enlarge selected cards. Fixed serialization order; total text prompt cap 4,096 plus model-native audio tokens. Log actual token counts and truncation.
+- Create anti-aliased 16 kHz inputs only if the model front end requires them; preserve native waveform for DSP/reference work.
+
+Text planner comparator: Qwen/Qwen2.5-7B-Instruct, https://huggingface.co/Qwen/Qwen2.5-7B-Instruct . The final generator stays the same Omni model. Count every planner call separately.
+
+Optional representation baseline: frozen BEATs_iter3_plus_AS2M.pt plus linear probe, obtain checkpoint through https://github.com/microsoft/unilm/tree/master/beats . Verify its current download and terms.
+
+Four actions:
+A, spectrum: Welch PSD and STFT with one-second windows/.25-second hop; four integrated bands, narrowband candidates, persistence/time intervals.
+B, modulation: band-pass 100-1,000 and 1,000-8,000 Hz, Hilbert envelope, detrend, 2-80 Hz envelope spectrum, candidate rates and quality. No mechanical-source interpretation.
+C, temporal: .25-second RMS, first/last-second energy ratio, clipping/dropouts and change intervals.
+D, retrieval: k=5 nearest cosine embedding examples from acoustic-fit, each from a distinct vessel/background-day group; anonymous exemplar IDs, training labels, distances and training-only evidence summaries. Exclude query group. No test retrieval or private metadata.
+
+Evidence schema: record hash, evidence ID, tool/version, parameters, time span, frequency band, value, units, quality/uncertainty and anonymous source where relevant. Keep the complete machine record and a compact generator card. A retrieved training label does not prove a physical feature of the query; a tone does not prove a vessel class.
+
+All methods may cite raw-audio item W0 for a qualitative audible observation localized in time. Credit it only when independent review supports the observation in that interval. A precise frequency or band-power measurement requires a compatible measured card. An arbitrary whole-recording W0 citation is insufficient. A valid evidence ID is not proof that its numeric contents are true.
+
+The shared checker validates schema, existing IDs and claim/tool compatibility. It is not an independent semantic verifier. Score raw and postprocessed outputs; a corrupted but valid card may pass the checker and still be wrong against reference truth.
+
+5. LEARNED EVIDENCE ACQUISITION
+
+Initial state: 32 PCA components of the acoustic embedding (PCA fitted on acoustic-fit), five calibrated class probabilities, entropy, simple signal quality, selected-action mask, and only observed tool numeric fields. Train feature normalization on training data. Truly mask unavailable values. No test-reference information or unrequested cached tool result may enter the state.
+
+For each of 240 annotated policy-fit clips, generate the frozen terminal response for all 16 subsets S of the four tools. Similarly cache up to 16 subsets for each of 60 development and 60 calibration clips. Initial total is 3,840 + 960 + 960 = 5,760 reports. Preserve raw JSON/text, parsing status, tool versions and full cache keys: waveform hash, model revision, precision, prompt hash and subset. Evaluate against independent annotations, never against the tool's own output alone.
+
+For an identifiable physical slot j:
+  loss_j = 0 if correct and supported;
+           1 if incorrect or unsupported;
+           rho=.25 for abstention/omission.
+For an independently ambiguous physical reference:
+  loss_j = 0 for explicit uncertainty;
+           rho for omission;
+           1 for a categorical assertion.
+For vessel class: 0 correct, 1 incorrect, rho abstain.
+
+Define:
+  L(S) = .5 * loss_class(S) + .5 * mean_j(loss_physical_j(S))
+  Delta(S,a) = L(S) - L(S union {a})
+
+This intervenes on available evidence, not on an ocean source. Rationale errors are separately audited, so do not claim the scalar loss evaluates all prose. A correct uncertain response is appropriate abstention and is not a positive physical fact in coverage metrics.
+
+Train a three-member source-group bootstrap ensemble of MLPs with hidden widths 64 and 32, dropout .1, predicting terminal L(S) and four candidate deltas. Mask already observed actions in the delta loss. Use Huber regression, AdamW LR 1e-3, weight decay 1e-4, max 100 epochs and patience ten on development. All subset rows for a clip remain together. Bootstrap source groups rather than subset rows. Run independent controller ensembles with seeds 17,29,43; derive member seeds deterministically. These are not three independent end-to-end generator studies.
+
+Choose the next available action maximizing:
+  score(a) = mean_delta(a) - beta * sd_delta(a) - lambda * cost(a)
+
+Initial beta=.5, lambda=.02; select beta in {0,.5,1}, lambda in {0,.02,.05} on development only. Primary cost(a)=1 counts tool calls. A secondary cost model can use pilot-measured latency. Ensemble spread is a heuristic, not a proven confidence bound.
+
+Primary maximum budget B=2; B=1 and B=3 are sensitivity runs. Stop acquisition if no available action has positive adjusted gain or budget is exhausted. Update state using the acquired result before selecting another action. This observation-dependent second decision is the agent behavior that must be tested.
+
+For offline evaluation, generate exactly one terminal report for every clip and save its predicted terminal risk before rejection. This permits fair coverage curves with no missing high-risk outputs. Fit a rejection threshold on calibration targeting 70% report coverage, and report actual test coverage. Separately report descriptive fixed-coverage test curves. Deployment can skip the generator above the threshold, but do not confuse this projected saving with measured offline costs. Give matched selectors the same risk head, structural checker and calibration opportunity.
+
+Pseudocode:
+  state = initial_state(audio)
+  selected = {}
+  while len(selected) < B:
+      risk, mean_delta, spread = controller(state)
+      action = best_available_adjusted_gain(mean_delta, spread)
+      if action is none or adjusted_gain(action) <= 0: break
+      evidence = execute(action, audio, acoustic_fit_bank)
+      selected.add(action)
+      state = update_observed_state(state, evidence)
+  report_risk = shared_risk_head(state)
+  raw_report = frozen_generator_once(audio, prior, selected_evidence)
+  save_raw_and_checked_report(raw_report, report_risk)
+  report = apply_calibration_threshold(raw_report, report_risk)
+
+DSP tools may cost much less than one generative pass. Do not claim GPU savings merely from fewer DSP calls. Measure evidence/context efficiency, planner overhead and actual latency separately.
+
+6. ESSENTIAL COMPARISONS AND ABLATIONS
+
+Use the same test clips, generator revision, precision, output schema and evidence-card caps. Matched selectors receive the same initial state, four available tools and retrieval bank. The selected information can differ because selection is the intervention; extra hidden model calls cannot be ignored.
+
+B0: Swin classifier without generation, seeds 17,29,43; classification metrics only.
+B1: Omni raw audio without classifier prior or analytical tools.
+B2: Omni audio plus shared classifier prior, no tools.
+B3: Best fixed pair out of all six pairs, chosen on development, budget two.
+B4: Retrieval only and fixed retrieval plus best development-selected DSP action.
+B5: All four tools, full-evidence reference, explicitly unmatched tool budget.
+B6: Prompt-planner adaptation of Audio-Mind/BAEA using the same four actions and at most two; count planner calls/tokens plus the same terminal generator. Do not label it a full reproduction of those papers.
+B7: Identical learned controller trained on classification loss only; isolates claim-risk supervision.
+B8: Deterministic template report from tools and classifier, testing whether generation adds anything useful. Use the same selected tools when isolating generator effects.
+B9: Cheap entropy-to-tool heuristic: fixed entropy bins use development-selected pairs, no test fitting.
+P: Proposed claim-risk acquisition.
+A1: Proposed controller without acquired values informing the next decision; choose actions in one shot, isolating adaptation.
+A2: beta=0, same targets; uncertainty-penalty ablation.
+A3: Disable acquisition stopping and always use B actions; separately show report rejection effects.
+
+Lock the strongest fixed/heuristic comparator on development before test. Primary contrast P versus that locked comparator, B=2. Require comparisons to B7 and A1 for the methodological argument. B1 or B5 alone cannot establish that the selector works.
+
+Optional only after essentials: second encoder/Omni anchor or generator, BEATs probe, held-out deployment, external dataset, modeled-propagation benchmark. Do not expand the study until the core result and budget are understood.
+
+7. METRICS, STATISTICS AND CONTROLS
+
+For physical claims, N clips each request four slots. A counts definite assertions, G counts definite claims independently correct AND supported, U counts unsupported definite assertions.
+  supported_coverage = G / (4*N)
+  assertion_coverage = A / (4*N)
+  unsupported_claim_rate = U / A, NA when A=0
+Do not count uncertainty statements in G. Report reference identifiability and appropriate abstention separately so ambiguous clips are visible. Report fact error independently of citation support. Define multi-citation and interval-matching rules before test.
+
+Primary endpoint: supported coverage on retained reports at 70% report coverage and B=2, with unsupported rate as a mandatory guardrail. Also report whole-test useful coverage using all requested slots in its denominator. Use descriptive curves at 50%,70%,90% and area under risk-coverage; distinguish test-ranked diagnostic curves from calibration-locked deployable thresholds and their actual coverage.
+
+Secondary: class accuracy, macro-F1, balanced accuracy, per-class recall; citation support precision (supported cited assertions/assertions with citations); citation completeness (supported cited assertions/independently correct assertions); frequency MAE with matched-claim coverage; appropriate uncertainty; schema validity; class Brier/ECE where genuine scores exist; ten equal-frequency ECE bins; tools, total model calls, tokens, seconds/clip, allocated GPU-hours and peak VRAM. State denominators. Evidence metrics are not applicable to the bare classifier.
+
+Use paired source-cluster bootstrap with 2,000 resamples and 95% intervals. Resample MMSI and background deployment/day groups, preserving method pairing and every waveform variant. Report source counts and per-class limitations. Do not bootstrap windows as independent records. Report controller-seed variability separately from classifier-seed variability. Greedy cached generations are not independent repeats. Use Holm correction for the small planned family of confirmatory contrasts; mark other analyses exploratory. Predefine a fixed 100-clip test subset for two prompt paraphrases without tuning on test.
+
+Noise controls: add white/colored noise at 20,10,0 dB relative to observed recording power; low-pass 2 kHz; gain, clipping and missing tools. These are artificial transformations, not calibrated ocean SNR or physically validated propagation. Reannotate a paired subset of at least 60 transformed test clips when physical attributes can change. Do not copy clean references after removing a tone/modulation.
+
+Evidence controls: remove a cited card; remove an uncited card as control; swap a card with another source; change a numeric value with a still-valid evidence ID; corrupt retrieved exemplar labels. Freeze severities/seeds before test. Evaluate appropriate uncertainty, action changes and resistance to false statements. A generic answer change is not automatically success.
+
+Create 500 disjoint-seed synthetic five-second tone/AM/chirp/noise fixtures for tool unit validation and about 100 controlled evidence interventions. Their frequencies and construction are known. They are not primary training data, real ship examples, or validated ocean propagation. Optional UA-Bench results must remain a separately labeled synthetic study.
+
+8. PILOT AND SUCCESS/FAILURE GATES
+
+Before large runs, freeze a protocol file recording data hashes, split rules, all metrics, baseline selection, hyperparameter grids, seeds and test unlock policy. Perform meaningful tests for leakage, tool accuracy on known signals, evidence compatibility, masking, grouped resampling and checkpoint resumption.
+
+Small end-to-end pilot: at most four allocated GPU-hours and approximately $10, always subject to the user's smaller approved cap. Use 100-200 real clips for pipeline integrity without exposing test labels. Use 40-60 reviewed policy/development clips for all-subset feasibility. Require:
+- accessible real audio/metadata with valid grouping and licenses;
+- at least 98% parse-valid reports, or an explicit documented corrective pass on development;
+- verified memory, throughput and interrupted-job resumption;
+- evidence of complementary tools: a development-only subset oracle improves supported coverage by roughly five percentage points or meaningfully lowers risk relative to the best fixed pair.
+The oracle is a feasibility diagnostic, never a deployable test method.
+
+After pilot, update actual GPU-hour and dollar projections before scaling. If tool complementarity is absent, do not spend the full budget pursuing an unsupported adaptive-selection story. Check annotation reliability and independent group counts; use development-based uncertainty/power estimates to decide whether more test groups are needed BEFORE test unlock. A 240-clip test subset may be underpowered; report broad intervals honestly.
+
+Full-study target, not a promised result: at least five percentage points higher supported coverage at 70% report coverage/B=2 than the locked fixed/heuristic comparator, paired 95% CI excluding zero, unsupported rate no worse (preferably at least 25% relatively lower), and class macro-F1 within two points. Claim the new learning objective and sequential adaptation only if B7 and A1 contrasts support them.
+
+If fixed/all-tools wins, report that adaptive selection was not useful for these tools/data. If deterministic reports dominate, report that generation added errors or no measurable benefit. A rigorous negative study or narrower real-data evidence audit is a possible fallback, subject to defensible novelty. Do not invent positive results, conceal failed runs, repeatedly tune against test, or replace the real-data primary study with synthetic success.
+
+9. RUNPOD CONFIGURATION, BUDGET AND PRESERVATION
+
+Official references:
+https://www.runpod.io/pricing
+https://docs.runpod.io/pods/configuration/use-ssh
+https://docs.runpod.io/pods/storage/types
+https://docs.runpod.io/storage/network-volumes
+
+Preferred: one RTX 6000 Ada or L40S with 48 GB VRAM, at least 64 GB host RAM, 8-16 CPU cores, about 50 GB container disk and 150 GB persistent storage. Minimum: 24 GB RTX 4090/3090, at least 32 GB host RAM; load models sequentially and use a consistent documented quantization if needed. Initial VRAM estimates are 6-12 GB for Swin training, under 1 GB for controller, about 20-30 GB for short BF16 Omni inference or 10-16 GB quantized. These are estimates, not measured capacity guarantees. Disable audio generation.
+
+Planning prices checked November 15, 2026: RTX 4090 $0.89/hour; RTX 6000 Ada or L40S $1.09/hour. Availability, instance RAM, disk charges and future prices vary; verify the actual Pod. At 40-80 allocated GPU-hours this is approximately $36-$71 or $44-$87 GPU cost. A 150 GB network volume at $0.07/GB/month is about $10.50/month before other costs. An A40 48 GB was advertised at $0.59/hour but may be slower; compare measured throughput rather than price alone.
+
+Proposed staged estimate: pilot up to four hours; acoustic training/tuning 12-24; evidence caches and core inference 16-32; robustness/analysis 8-20. Upper total about 80 hours. A suggested overall ceiling is $120 including margin/storage, but only the explicitly supplied budget authorizes spending. Hard limit is the smaller of approved dollars and hours. Stop new jobs before that limit. GPU-hours include allocated idle time.
+
+RunPod basic proxied SSH does not support SCP/SFTP. Prefer existing full SSH/public mapped port for rsync/scp, or validate another supported authenticated transfer. Inspect nvidia-smi, drivers, CUDA, torch, RAM, free disk and mount identities before model downloads. Pin environment and model revisions after a smoke test. Never print credentials.
+
+Verify persistence, do not assume /workspace is safe just from its name. Container storage is ephemeral; volume disks survive stopping but not termination; network volumes persist independently. Preserve source, manifests, annotations, checkpoints, result shards and logs on the actual persistent mount and copy critical artifacts back regularly.
+
+Use tmux or a supervised runner. Write checkpoints atomically with model/optimizer/scheduler/RNG state. Append prediction JSONL and use resumable content-hash shards with explicit success/failure status. Prevent duplicate charging from rerunning completed shards. Record wall time, start/end, hardware, peak VRAM, token counts and cost assumptions per run. Test interruption and resume during pilot.
+
+Measure actual epochs/hour, seconds/report and peak memory. Compute remaining report counts including subset caches, baseline repeats and corruption runs. Batch only after verifying outputs remain comparable. Sequentially load large models on the minimum configuration. Avoid GPU idle time while awaiting human annotations or writing prose. If stopping is authorized, checkpoint, verify copies, then stop the designated Pod; otherwise report it remains running. Never terminate a Pod holding the only copy.
+
+10. REPOSITORY AND REPRODUCIBLE COMMANDS
+
+Create a clean repository with descriptive names, type annotations where useful, explicit configuration and modular data/model/evaluation code. Suggested structure:
+
+README.md
+pyproject.toml
+requirements.lock or uv.lock
+LICENSE and THIRD_PARTY_NOTICES.md
+configs/data.yaml, models.yaml, acquisition.yaml, experiments.yaml
+protocol/preregistered_plan.md
+protocol/data_access_and_licenses.md
+protocol/annotation_guide.md
+protocol/test_unlock_log.json
+data/manifests/ and data/splits/ (hashes and permitted metadata only)
+src/underwater_reasoning/data/
+src/underwater_reasoning/acoustic_model/
+src/underwater_reasoning/tools/
+src/underwater_reasoning/evidence/
+src/underwater_reasoning/generation/
+src/underwater_reasoning/acquisition/
+src/underwater_reasoning/evaluation/
+src/underwater_reasoning/annotation/
+scripts/prepare_data.py
+scripts/audit_splits.py
+scripts/create_annotation_pack.py
+scripts/train_acoustic.py
+scripts/cache_evidence.py
+scripts/cache_subset_reports.py
+scripts/train_controller.py
+scripts/run_experiments.py
+scripts/analyze_results.py
+scripts/build_figures.py
+tests/
+results/manifests/, tables/, figures/, logs/, cost_ledger.csv
+manuscript/manuscript.docx, manuscript.pdf, references.bib
+
+Adapt structure if justified, but keep responsibilities clear. Do not commit audio, weights, secrets, absolute private paths or prohibited metadata. Provide exact commands for each stage, plus a small smoke-run configuration. Archive prompts, model revision hashes, tool versions, selected hyperparameters, split hashes and result lineage. A table entry must be traceable to saved predictions and a scoring version.
+
+11. MANUSCRIPT AND COMPLETION
+
+Target eight total pages including references. Suggested allocation: .5 title/abstract/keywords; 1 introduction/closest work; 1.75 method; 1 data/protocol; 1.75 results; .75 discussion/limitations/conclusion; 1.25 references. Adjust for readability while preserving the official format.
+
+Figures: compact acquisition architecture; risk/coverage and cost curves with intervals; two actual real-recording examples with spectrograms, selected evidence and correct uncertainty/failure behavior. Tables: nearest-method/data distinction; main baselines; targeted ablations/corruptions. Use real results, readable vector figures and verified citations. Full prompts, extra tables and data manifests belong in the repository; do not assume supplementary pages escape the limit.
+
+Write plain, intuitive prose. Explain why the selected evidence supports a bounded claim, why a more specific conclusion would be unjustified, and what the learned controller contributes. Do not equate long fluent explanations with reasoning. Include limitations about civilian labels, weak AIS associations, geographic dependence, five-second clips, small human reference set, calibration under shift and low DSP cost.
+
+Completion means:
+- data access, licenses, split integrity and model revisions documented;
+- required human reference labels complete, or clearly identified as a blocker;
+- essential experiments and meaningful checks completed within authorized budget;
+- raw predictions, checkpoints, run failures, confidence intervals and cost ledger preserved;
+- baseline fairness and no test tuning demonstrable;
+- conclusions reflect actual positive, negative or inconclusive findings;
+- reproducible code, exact commands and artifact manifest provided;
+- official-template editable manuscript and visually verified PDF at most eight total pages;
+- references checked, figures legible, no fabricated results or placeholder values presented as findings;
+- results copied off ephemeral storage and Pod state reported accurately.
+
+If a dependency prevents completion, finish all independent authorized work and clearly state what remains. Do not claim experiments, human reviews or manuscript validation that did not occur. Do not submit or publish automatically.
+
+Start by inspecting the repository and available SSH/data configuration, rechecking the conference and key releases, writing the frozen protocol draft, and implementing the data-integrity and annotation preparation stages. Proceed to the small GPU pilot only when connection, spending authorization and required reference inputs are available.

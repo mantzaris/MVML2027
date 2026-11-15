@@ -1,0 +1,829 @@
+[
+  {
+    "id": "mvml_home",
+    "url": "https://mvml.org/",
+    "accessed_at": "2026-11-15T20:24:15.315188+00:00",
+    "http_status": 200,
+    "resolved_url": "https://mvml.org/",
+    "bytes": 854558,
+    "sha256": "2f97422d340f5e969f080eb533e03092dbbb80c1b8b755ba79e1718bc4d25eb5",
+    "title": "Machine Vision & Machine Learning Conference",
+    "citation_metadata": {},
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "mvml_guidelines",
+    "url": "https://mvml.org/author-guidelines/",
+    "accessed_at": "2026-11-15T20:24:15.315610+00:00",
+    "http_status": 200,
+    "resolved_url": "https://mvml.org/author-guidelines/",
+    "bytes": 183687,
+    "sha256": "2aeb54feb0cb51e453e31aa0c3829e52659c72de3e77fe1f1b40e7edf3ac2021",
+    "title": "Author Guidelines MVML 2027",
+    "citation_metadata": {},
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "mvml_dates",
+    "url": "https://mvml.org/important-dates/",
+    "accessed_at": "2026-11-15T20:24:15.315846+00:00",
+    "http_status": 200,
+    "resolved_url": "https://mvml.org/important-dates/",
+    "bytes": 140819,
+    "sha256": "90c8adb7c5ae420489118e41d12705c9dd571a422fb61e548eef367d72d1aacd",
+    "title": "Important Dates MVML 2027",
+    "citation_metadata": {},
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "mvml_template",
+    "url": "https://mvml.org/documents/MVML27_Paper_Template.docx",
+    "accessed_at": "2026-11-15T20:24:15.316036+00:00",
+    "http_status": 200,
+    "resolved_url": "https://mvml.org/documents/MVML27_Paper_Template.docx",
+    "bytes": 45588,
+    "sha256": "86364438af0f7090bc905442437f88c8f72412770d040e885415402eb2c19a35",
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "uniqueship_release",
+    "url": "https://uniqueshipdata.org/",
+    "accessed_at": "2026-11-15T20:24:15.316240+00:00",
+    "http_status": 200,
+    "resolved_url": "https://uniqueshipdata.org/",
+    "bytes": 38982,
+    "sha256": "00c34e0425b95dd85abfb47bdee0f6b69fc4790aec0df39305785a2444a97d5a",
+    "title": "MARINA Dataset",
+    "citation_metadata": {},
+    "drive_links": [
+      "https://drive.google.com/drive/folders/1U3JvuzKK39Im__VbJkN7DRLdNAV2fUlN?usp=drive_link",
+      "https://drive.google.com/drive/folders/1G0e-2Nhi6CWKuBRStlR8GTtcGyYiT2h6?usp=drive_link",
+      "https://drive.google.com/drive/folders/1a6wLqfuBh3PMqSlZfy-IVjTfrJMtqo11?usp=sharing",
+      "https://drive.google.com/drive/folders/1HxV8AGh8ckZS3JehAU_gY2fuCnscX-eV?usp=drive_link",
+      "https://drive.google.com/drive/folders/1xOXX4dUmtSET7Utb4gfscZp1dlPoT76e?usp=drive_link"
+    ],
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "onc_policy",
+    "url": "https://www.oceannetworks.ca/data/data-policy/",
+    "accessed_at": "2026-11-15T20:24:15.672648+00:00",
+    "http_status": 200,
+    "resolved_url": "https://www.oceannetworks.ca/data/data-policy/",
+    "bytes": 139884,
+    "sha256": "c46afff7e7f8ccb33e1a248bf46e3c04b21db46e5cf31c6a53d26e51901020bf",
+    "title": "Data Policy",
+    "citation_metadata": {},
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "uniqueship_drive",
+    "url": "https://drive.google.com/drive/folders/1HxV8AGh8ckZS3JehAU_gY2fuCnscX-eV",
+    "accessed_at": "2026-11-15T20:24:15.720311+00:00",
+    "http_status": 200,
+    "resolved_url": "https://drive.google.com/drive/folders/1HxV8AGh8ckZS3JehAU_gY2fuCnscX-eV",
+    "bytes": 330490,
+    "sha256": "e84cd6d626189a45ffd3e5758a9c7b32e74d02618d374d4b63ee09ae25a1b985",
+    "title": "allclass_balanced_5hours_audio - Google Drive",
+    "citation_metadata": {},
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "autagent",
+    "url": "https://proceedings.mlr.press/v306/tong26l.html",
+    "accessed_at": "2026-11-15T20:24:15.917102+00:00",
+    "http_status": 200,
+    "resolved_url": "https://proceedings.mlr.press/v306/tong26l.html",
+    "bytes": 16667,
+    "sha256": "4ad65a65b96a118bd14717902d36c6869658f0570172bdf3a6578fcf3037ae22",
+    "title": "AuTAgent: A Reinforcement Learning Framework for Tool-Augmented Audio Reasoning",
+    "citation_metadata": {
+      "citation_publisher": [
+        "PMLR"
+      ],
+      "citation_title": [
+        "AuTAgent: A Reinforcement Learning Framework for Tool-Augmented Audio Reasoning"
+      ],
+      "citation_language": [
+        "en"
+      ],
+      "citation_abstract_html_url": [
+        "https://proceedings.mlr.press/v306/tong26l.html"
+      ],
+      "citation_pdf_url": [
+        "https://raw.githubusercontent.com/mlresearch/v306/main/assets/tong26l/tong26l.pdf"
+      ],
+      "citation_firstpage": [
+        "121743"
+      ],
+      "citation_lastpage": [
+        "121756"
+      ],
+      "citation_author": [
+        "Siqian Tong",
+        "Li Xuan",
+        "Yiwei Wang",
+        "Baolong Bi",
+        "Yujun Cai",
+        "Shenghua Liu",
+        "Yuchen He",
+        "Hao Chengpeng"
+      ],
+      "citation_publication_date": [
+        "2026/09/29"
+      ],
+      "citation_inbook_title": [
+        "International Conference on Machine Learning"
+      ],
+      "citation_conference_title": [
+        "International Conference on Machine Learning"
+      ],
+      "citation_issn": [
+        "2640-3498"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "autagent_project",
+    "url": "https://tongsiqian.github.io/AuTAgent/",
+    "accessed_at": "2026-11-15T20:24:16.155907+00:00",
+    "http_status": 200,
+    "resolved_url": "https://tongsiqian.github.io/AuTAgent/",
+    "bytes": 9602,
+    "sha256": "fdacdb48fbd7d6af08ee3693d086bbea211cd76a5d963b59d64c348e3aacf1ed",
+    "title": "AuTAgent: A RL Framework for Tool-Augmented Audio Reasoning",
+    "citation_metadata": {},
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "signals1",
+    "url": "https://arxiv.org/abs/2610.22064",
+    "accessed_at": "2026-11-15T20:24:16.188544+00:00",
+    "http_status": 200,
+    "resolved_url": "https://arxiv.org/abs/2610.22064",
+    "bytes": 44069,
+    "sha256": "2fc7f90fe4342cc537c661829cd61aeabcce67d313d3fcd3c4b81107c6afd4e6",
+    "title": "[2610.22064] From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part I: Framework and Recognition",
+    "citation_metadata": {
+      "citation_title": [
+        "From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part I: Framework and Recognition"
+      ],
+      "citation_author": [
+        "Zhang, Yuge",
+        "Chen, Jie",
+        "Zhao, Zhengqiao",
+        "Yao, Xiling",
+        "Xu, Lingji",
+        "Chen, Jingdong",
+        "Yang, Yixin"
+      ],
+      "citation_date": [
+        "2026/10/15"
+      ],
+      "citation_online_date": [
+        "2026/10/15"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.22064"
+      ],
+      "citation_arxiv_id": [
+        "2610.22064"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "signals2",
+    "url": "https://arxiv.org/abs/2610.31346",
+    "accessed_at": "2026-11-15T20:24:16.196432+00:00",
+    "http_status": 200,
+    "resolved_url": "https://arxiv.org/abs/2610.31346",
+    "bytes": 43854,
+    "sha256": "334a69370f054a1b5a55d1a686decc7cea6916af27fa876fec051c7eb727b2a9",
+    "title": "[2610.31346] From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part II: Passive Detection",
+    "citation_metadata": {
+      "citation_title": [
+        "From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part II: Passive Detection"
+      ],
+      "citation_author": [
+        "Li, Zhiyuan",
+        "Zhang, Yuge",
+        "Chen, Jie",
+        "Su, Xiruo",
+        "Zhao, Zhengqiao",
+        "Yao, Xiling",
+        "Xu, Lingji",
+        "Chen, Jingdong",
+        "Yang, Yixin"
+      ],
+      "citation_date": [
+        "2026/10/22"
+      ],
+      "citation_online_date": [
+        "2026/10/22"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.31346"
+      ],
+      "citation_arxiv_id": [
+        "2610.31346"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "audio_mind",
+    "url": "https://arxiv.org/abs/2605.28480",
+    "accessed_at": "2026-11-15T20:24:16.308845+00:00",
+    "http_status": 200,
+    "resolved_url": "https://arxiv.org/abs/2605.28480",
+    "bytes": 41646,
+    "sha256": "61d049de864c3b82b6a535d8442f9f14f3523b747e5a294227e6a537494156a3",
+    "title": "[2605.28480] Audio-Mind: An Auditable Agentic Framework for Audio Understanding",
+    "citation_metadata": {
+      "citation_title": [
+        "Audio-Mind: An Auditable Agentic Framework for Audio Understanding"
+      ],
+      "citation_author": [
+        "Wang, Yucheng",
+        "Peng, Jing",
+        "Li, Hanqi",
+        "Wang, Chenghao",
+        "Tu, Wenming",
+        "Xi, Yu",
+        "Sun, Zhaokai",
+        "Yu, Kai",
+        "Wang, Shuai"
+      ],
+      "citation_date": [
+        "2026/05/27"
+      ],
+      "citation_online_date": [
+        "2026/05/27"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2605.28480"
+      ],
+      "citation_arxiv_id": [
+        "2605.28480"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "sear",
+    "url": "https://arxiv.org/abs/2609.39847",
+    "accessed_at": "2026-11-15T20:24:16.349829+00:00",
+    "http_status": 200,
+    "resolved_url": "https://arxiv.org/abs/2609.39847",
+    "bytes": 41308,
+    "sha256": "a30b2c35585b5b9258a49b9c86e7fa9c0b2f57d2a7b5796c559c366c6ccfd2e2",
+    "title": "[2609.39847] SEAR: Spoofing Evidence-Grounded Audio Reasoning Benchmark for Audio Language Models",
+    "citation_metadata": {
+      "citation_title": [
+        "SEAR: Spoofing Evidence-Grounded Audio Reasoning Benchmark for Audio Language Models"
+      ],
+      "citation_author": [
+        "Wan, Rong",
+        "Qin, Suliu",
+        "Li, Jiaxi",
+        "Xie, Wei",
+        "Wang, Wenwu",
+        "Han, Xiaolong",
+        "Yin, Lu",
+        "Wang, Xilu"
+      ],
+      "citation_date": [
+        "2026/09/30"
+      ],
+      "citation_online_date": [
+        "2026/09/30"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2609.39847"
+      ],
+      "citation_arxiv_id": [
+        "2609.39847"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "ace_cap",
+    "url": "https://arxiv.org/abs/2608.16162",
+    "accessed_at": "2026-11-15T20:24:16.413416+00:00",
+    "http_status": 200,
+    "resolved_url": "https://arxiv.org/abs/2608.16162",
+    "bytes": 43366,
+    "sha256": "13ccaeac2c7fc493c4ee4ebfb03ed64733c424bae5b156c1cdc600225bb4b524",
+    "title": "[2608.16162] ACE-Cap: Active Evidence Acquisition via Agentic Co-Evolution for Long-Paragraph Fine-Grained Audio Captioning",
+    "citation_metadata": {
+      "citation_title": [
+        "ACE-Cap: Active Evidence Acquisition via Agentic Co-Evolution for Long-Paragraph Fine-Grained Audio Captioning"
+      ],
+      "citation_author": [
+        "Ma, Fengji",
+        "Rong, Yan",
+        "Li, Xu",
+        "Xu, Xuenan",
+        "Zhang, Chen",
+        "Liu, Li"
+      ],
+      "citation_date": [
+        "2026/08/17"
+      ],
+      "citation_online_date": [
+        "2026/08/20"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2608.16162"
+      ],
+      "citation_arxiv_id": [
+        "2608.16162"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "ase_clap",
+    "url": "https://doi.org/10.1109/ICASSP55912.2026.11461966",
+    "accessed_at": "2026-11-15T20:24:16.437193+00:00",
+    "http_status": 202,
+    "resolved_url": "https://ieeexplore.ieee.org/document/11461966/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "title": null,
+    "citation_metadata": {},
+    "status": "access_incomplete",
+    "error": "Empty response; full text not retrieved"
+  },
+  {
+    "id": "uniqueship",
+    "url": "https://arxiv.org/abs/2609.13659",
+    "accessed_at": "2026-11-15T20:24:16.490755+00:00",
+    "http_status": 200,
+    "resolved_url": "https://arxiv.org/abs/2609.13659",
+    "bytes": 43293,
+    "sha256": "597e57029bf7e2776e4f134924ef07cebfdd5f7917f7d600392425531098c62c",
+    "title": "[2609.13659] UniqueShip: Mitigating Data Leakage in Acoustic Ship Classification Benchmark Datasets",
+    "citation_metadata": {
+      "citation_title": [
+        "UniqueShip: Mitigating Data Leakage in Acoustic Ship Classification Benchmark Datasets"
+      ],
+      "citation_author": [
+        "Hashemi, Connor",
+        "Stout, Trevor",
+        "Hoogs, Anthony",
+        "Parham, Jason"
+      ],
+      "citation_date": [
+        "2026/09/12"
+      ],
+      "citation_online_date": [
+        "2026/09/12"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2609.13659"
+      ],
+      "citation_arxiv_id": [
+        "2609.13659"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "ua_bench",
+    "url": "https://arxiv.org/abs/2610.16942",
+    "accessed_at": "2026-11-15T20:24:16.536408+00:00",
+    "http_status": 200,
+    "resolved_url": "https://arxiv.org/abs/2610.16942",
+    "bytes": 44228,
+    "sha256": "aec4da3f4b6c91ee6630f766315ce966a18b83c165e4ededb07dce31b4dffa74",
+    "title": "[2610.16942] UA-Bench: Benchmarking Large Audio-Language Models on Underwater Acoustic Recognition",
+    "citation_metadata": {
+      "citation_title": [
+        "UA-Bench: Benchmarking Large Audio-Language Models on Underwater Acoustic Recognition"
+      ],
+      "citation_author": [
+        "Sun, Zhe",
+        "An, Liang",
+        "Yao, Jiayu",
+        "Qian, Ronglai",
+        "Cai, Jianing",
+        "Huang, Ziwei",
+        "Fan, Qing",
+        "Yang, Zhiyuan",
+        "Cai, Yujun",
+        "Cao, Hongli",
+        "Wang, Yiwei",
+        "Wang, Xiaoyan"
+      ],
+      "citation_date": [
+        "2026/10/12"
+      ],
+      "citation_online_date": [
+        "2026/10/12"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.16942"
+      ],
+      "citation_arxiv_id": [
+        "2610.16942"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "wow_bench",
+    "url": "https://aclanthology.org/2026.findings-acl.1562/",
+    "accessed_at": "2026-11-15T20:24:16.611383+00:00",
+    "http_status": 200,
+    "resolved_url": "https://aclanthology.org/2026.findings-acl.1562/",
+    "bytes": 45336,
+    "sha256": "9dfb18fbf4facf8bb6d772bd56624d0eb286f61448e2bc64a1080ea9a438ff5b",
+    "title": "WoW-Bench: Evaluating Fine-Grained Acoustic Perception in Audio-Language Models via Marine Mammal Vocalizations - ACL Anthology",
+    "citation_metadata": {
+      "citation_title": [
+        "WoW-Bench: Evaluating Fine-Grained Acoustic Perception in Audio-Language Models via Marine Mammal Vocalizations"
+      ],
+      "citation_author": [
+        "Jaeyeon Kim",
+        "Heeseung Yun",
+        "Tony Woo",
+        "Chao-Han Huck Yang",
+        "Gunhee Kim"
+      ],
+      "citation_conference_title": [
+        "Findings of the Association for Computational Linguistics: ACL 2026"
+      ],
+      "citation_publication_date": [
+        "2026/7"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2026.findings-acl.1562.pdf"
+      ],
+      "citation_firstpage": [
+        "31208"
+      ],
+      "citation_lastpage": [
+        "31229"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2026.findings-acl.1562"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "self_rag",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/25f7be9694d7b32d5cc670927b8091e1-Abstract-Conference.html",
+    "accessed_at": "2026-11-15T20:24:16.649916+00:00",
+    "http_status": 200,
+    "resolved_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/25f7be9694d7b32d5cc670927b8091e1-Abstract-Conference.html",
+    "bytes": 9827,
+    "sha256": "c0189bf7fd563e04ee9bb8bfe2474ac1762f57a97d87d1439e9e236430392b24",
+    "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "citation_metadata": {
+      "citation_title": [
+        "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection"
+      ],
+      "citation_author": [
+        "Asai, Akari",
+        "Wu, Zeqiu",
+        "Wang, Yizhong",
+        "Sil, Avi",
+        "Hajishirzi, Hannaneh "
+      ],
+      "citation_journal_title": [
+        "International Conference on Learning Representations"
+      ],
+      "citation_volume": [
+        "2024"
+      ],
+      "citation_firstpage": [
+        "9112"
+      ],
+      "citation_lastpage": [
+        "9141"
+      ],
+      "citation_pdf_url": [
+        "https://proceedings.iclr.cc/paper_files/paper/2024/file/25f7be9694d7b32d5cc670927b8091e1-Paper-Conference.pdf"
+      ],
+      "citation_publication_date": [
+        "2024-05-31"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "alce",
+    "url": "https://aclanthology.org/2023.emnlp-main.398/",
+    "accessed_at": "2026-11-15T20:24:16.684536+00:00",
+    "http_status": 200,
+    "resolved_url": "https://aclanthology.org/2023.emnlp-main.398/",
+    "bytes": 43012,
+    "sha256": "8242f69104c7f48a624cb46302588787425c8b6171e31b5f65c17509596fd668",
+    "title": "Enabling Large Language Models to Generate Text with Citations - ACL Anthology",
+    "citation_metadata": {
+      "citation_title": [
+        "Enabling Large Language Models to Generate Text with Citations"
+      ],
+      "citation_author": [
+        "Tianyu Gao",
+        "Howard Yen",
+        "Jiatong Yu",
+        "Danqi Chen"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing"
+      ],
+      "citation_publication_date": [
+        "2023/12"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2023.emnlp-main.398.pdf"
+      ],
+      "citation_firstpage": [
+        "6465"
+      ],
+      "citation_lastpage": [
+        "6488"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2023.emnlp-main.398"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "conformal_factuality",
+    "url": "https://proceedings.mlr.press/v235/mohri24a.html",
+    "accessed_at": "2026-11-15T20:24:16.709121+00:00",
+    "http_status": 200,
+    "resolved_url": "https://proceedings.mlr.press/v235/mohri24a.html",
+    "bytes": 15239,
+    "sha256": "9c90c3892ccc5cf9ccad222972507214fbbc3a968f9cdb044363540699b20876",
+    "title": "Language Models with Conformal Factuality Guarantees",
+    "citation_metadata": {
+      "citation_publisher": [
+        "PMLR"
+      ],
+      "citation_title": [
+        "Language Models with Conformal Factuality Guarantees"
+      ],
+      "citation_language": [
+        "en"
+      ],
+      "citation_abstract_html_url": [
+        "https://proceedings.mlr.press/v235/mohri24a.html"
+      ],
+      "citation_pdf_url": [
+        "https://raw.githubusercontent.com/mlresearch/v235/main/assets/mohri24a/mohri24a.pdf"
+      ],
+      "citation_firstpage": [
+        "36029"
+      ],
+      "citation_lastpage": [
+        "36047"
+      ],
+      "citation_author": [
+        "Christopher Mohri",
+        "Tatsunori Hashimoto"
+      ],
+      "citation_publication_date": [
+        "2024/07/08"
+      ],
+      "citation_inbook_title": [
+        "International Conference on Machine Learning"
+      ],
+      "citation_conference_title": [
+        "International Conference on Machine Learning"
+      ],
+      "citation_issn": [
+        "2640-3498"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "cofact",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/bd074b828bbd782d4bece89306caff84-Abstract-Conference.html",
+    "accessed_at": "2026-11-15T20:24:16.818193+00:00",
+    "http_status": 200,
+    "resolved_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/bd074b828bbd782d4bece89306caff84-Abstract-Conference.html",
+    "bytes": 9860,
+    "sha256": "bdae5bfb18e59b8c496b5b13da17d5459aca2bd91b5eb9d6484d0f719947d109",
+    "title": "CoFact: Conformal Factuality Guarantees for Language Models under Covariate Shift",
+    "citation_metadata": {
+      "citation_title": [
+        "CoFact: Conformal Factuality Guarantees for Language Models under Covariate Shift"
+      ],
+      "citation_author": [
+        "Hu, Zirui",
+        "Zhang, Zheng",
+        "Wang, Yingjie",
+        "Rutkowski, Leszek",
+        "Tao, Dacheng"
+      ],
+      "citation_journal_title": [
+        "International Conference on Learning Representations"
+      ],
+      "citation_volume": [
+        "2026"
+      ],
+      "citation_firstpage": [
+        "116267"
+      ],
+      "citation_lastpage": [
+        "116297"
+      ],
+      "citation_pdf_url": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/file/bd074b828bbd782d4bece89306caff84-Paper-Conference.pdf"
+      ],
+      "citation_publication_date": [
+        "2026-04-20"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "aha",
+    "url": "https://arxiv.org/abs/2512.24052",
+    "accessed_at": "2026-11-15T20:24:16.891049+00:00",
+    "http_status": 200,
+    "resolved_url": "https://arxiv.org/abs/2512.24052",
+    "bytes": 43507,
+    "sha256": "782e78915ac1998e399f7c62edbc92cd4abb04ad580314708d5eb35e1637113f",
+    "title": "[2512.24052] AHA: Aligning Large Audio-Language Models for Reasoning Hallucinations via Counterfactual Hard Negatives",
+    "citation_metadata": {
+      "citation_title": [
+        "AHA: Aligning Large Audio-Language Models for Reasoning Hallucinations via Counterfactual Hard Negatives"
+      ],
+      "citation_author": [
+        "Chen, Yanxi",
+        "Zhu, Wenhui",
+        "Chen, Xiwen",
+        "Wang, Zhipeng",
+        "Li, Xin",
+        "Qiu, Peijie",
+        "Wang, Hao",
+        "Dong, Xuanzhao",
+        "Xiong, Yujian",
+        "Schneider, Anderson",
+        "Nevmyvaka, Yuriy",
+        "Wang, Yalin"
+      ],
+      "citation_date": [
+        "2025/12/30"
+      ],
+      "citation_online_date": [
+        "2026/01/04"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2512.24052"
+      ],
+      "citation_arxiv_id": [
+        "2512.24052"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "hallu_audio",
+    "url": "https://aclanthology.org/2026.acl-long.1797/",
+    "accessed_at": "2026-11-15T20:24:16.962789+00:00",
+    "http_status": 200,
+    "resolved_url": "https://aclanthology.org/2026.acl-long.1797/",
+    "bytes": 46204,
+    "sha256": "df79f27928cc2b315cea28a93b4607c32eb31af89c2982b6c52e7a60a8a60b01",
+    "title": "HalluAudio: A Comprehensive Benchmark for Hallucination Detection in Large Audio-Language Models - ACL Anthology",
+    "citation_metadata": {
+      "citation_title": [
+        "HalluAudio: A Comprehensive Benchmark for Hallucination Detection in Large Audio-Language Models"
+      ],
+      "citation_author": [
+        "Feiyu Zhao",
+        "Yiming Chen",
+        "Wenhuan Lu",
+        "Daipeng Zhang",
+        "Xianghu Yue",
+        "Jianguo Wei"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+      ],
+      "citation_publication_date": [
+        "2026/7"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2026.acl-long.1797.pdf"
+      ],
+      "citation_firstpage": [
+        "38797"
+      ],
+      "citation_lastpage": [
+        "38816"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2026.acl-long.1797"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "underwater_embeddings",
+    "url": "https://doi.org/10.1016/j.apacoust.2025.111103",
+    "accessed_at": "2026-11-15T20:24:16.980933+00:00",
+    "http_status": 200,
+    "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S0003682X25005754",
+    "bytes": 2727,
+    "sha256": "7b44fec0278913627a682666bf9852622de22bfc07134c7d87404d6607e7e314",
+    "title": "Redirecting",
+    "citation_metadata": {},
+    "status": "access_incomplete"
+  },
+  {
+    "id": "passive_contrastive",
+    "url": "https://doi.org/10.1371/journal.pcbi.1014005",
+    "accessed_at": "2026-11-15T20:24:17.026668+00:00",
+    "http_status": 200,
+    "resolved_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1014005",
+    "bytes": 253207,
+    "sha256": "d182dc6388520b899f0b0d8686d7e17379ed4eefa1dcea9f9fe4f20d05239b85",
+    "title": "Contrastive learning for passive acoustic monitoring: A framework for sound source discovery and cross-site comparison in marine soundscapes | PLOS Computational Biology",
+    "citation_metadata": {
+      "citation_doi": [
+        "10.1371/journal.pcbi.1014005"
+      ],
+      "citation_author": [
+        "Richard Acs",
+        "Ali Ibrahim",
+        "Hanqi Zhuang",
+        "Laurent M. Ch\u00e9rubin"
+      ],
+      "citation_title": [
+        "Contrastive learning for passive acoustic monitoring: A framework for sound source discovery and cross-site comparison in marine soundscapes"
+      ],
+      "citation_journal_title": [
+        "PLOS Computational Biology"
+      ],
+      "citation_journal_abbrev": [
+        "PLOS Computational Biology"
+      ],
+      "citation_date": [
+        "Mar 6, 2026"
+      ],
+      "citation_firstpage": [
+        "e1014005"
+      ],
+      "citation_issue": [
+        "3"
+      ],
+      "citation_volume": [
+        "22"
+      ],
+      "citation_issn": [
+        "1553-7358"
+      ],
+      "citation_publisher": [
+        "Public Library of Science"
+      ],
+      "citation_pdf_url": [
+        "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1014005&type=printable"
+      ],
+      "citation_article_type": [
+        "Research Article"
+      ]
+    },
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "omni_model",
+    "url": "https://huggingface.co/api/models/Qwen/Qwen2.5-Omni-7B",
+    "accessed_at": "2026-11-15T20:24:17.153315+00:00",
+    "http_status": 200,
+    "resolved_url": "https://huggingface.co/api/models/Qwen/Qwen2.5-Omni-7B",
+    "bytes": 7364,
+    "sha256": "a9e0ebe8c1aee6d3bcd31d17b881f66e5a8996042687f68af6fcea1d44a7bd6a",
+    "title": null,
+    "citation_metadata": {},
+    "model_revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+    "license": "other",
+    "status": "retrieved_requires_content_review"
+  },
+  {
+    "id": "planner_model",
+    "url": "https://huggingface.co/api/models/Qwen/Qwen2.5-7B-Instruct",
+    "accessed_at": "2026-11-15T20:24:17.319826+00:00",
+    "http_status": 200,
+    "resolved_url": "https://huggingface.co/api/models/Qwen/Qwen2.5-7B-Instruct",
+    "bytes": 7945,
+    "sha256": "a37e53b264d1fa15e318c01c6d132c556d8ced7245f31aa2898afa175b2d8835",
+    "title": null,
+    "citation_metadata": {},
+    "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "license": "apache-2.0",
+    "status": "retrieved_requires_content_review"
+  }
+]
