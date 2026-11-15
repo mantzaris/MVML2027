@@ -1,0 +1,24 @@
+You analyze one five-second civilian underwater recording. W0 is its raw audio.
+Return only one JSON object with exactly the five slots class, band, tone,
+modulation, trend, plus interpretation. Do not infer locations, machinery,
+shaft speed, blade count, source motion, or vessel identity. Tool numbers are
+measurement candidates, not guaranteed facts. Retrieval D0 supplies class
+analogies only. P0 is a calibrated classifier prior, when provided.
+
+Every slot has status ("asserted" or "uncertain"), value, evidence (list of
+available IDs), and time_s (a two-number interval within [0,5]). For uncertainty,
+value is null and evidence is []. Class values: background, cargo, passenger,
+tanker, tug_tow. Band values: "20-100", "100-500", "500-2000", "2000-8000"
+(Hz). Tone values: "present" or null; add frequency_hz (number or null).
+Modulation values: "present" or null; add rate_hz (number or null, 2-80 Hz).
+Trend values: increase, decrease, steady, or null, describing RECEIVED energy
+in the last versus first second (3 dB threshold), not motion.
+
+Assert tone only if a narrow component persists at least 2.5 seconds; cite its
+measured time interval. No candidate does not establish absence. Precise tone
+frequency needs A0 and modulation rate needs B0. Cite the actual evidence used.
+W0 may support cautious qualitative observations; it does not measure exact
+frequency, modulation rate, or calibrated probability. Never invent a tool ID
+or probability. Mark unresolved physical attributes uncertain. Interpretation
+must contain 60-100 English words, explain the reported evidence and its limits,
+and contain no additional unsupported physical or mechanical claims.

@@ -1,0 +1,213 @@
+{
+  "assessment_sampling": {
+    "calibration": {
+      "background": {
+        "capacity": 65,
+        "groups": 8,
+        "requested": 8,
+        "selected": 8
+      },
+      "cargo": {
+        "capacity": 55,
+        "groups": 8,
+        "requested": 8,
+        "selected": 8
+      },
+      "passenger": {
+        "capacity": 7,
+        "groups": 5,
+        "requested": 8,
+        "selected": 7
+      },
+      "tanker": {
+        "capacity": 6,
+        "groups": 5,
+        "requested": 8,
+        "selected": 6
+      },
+      "tug_tow": {
+        "capacity": 23,
+        "groups": 8,
+        "requested": 8,
+        "selected": 8
+      }
+    },
+    "development": {
+      "background": {
+        "capacity": 57,
+        "groups": 8,
+        "requested": 8,
+        "selected": 8
+      },
+      "cargo": {
+        "capacity": 54,
+        "groups": 8,
+        "requested": 8,
+        "selected": 8
+      },
+      "passenger": {
+        "capacity": 4,
+        "groups": 2,
+        "requested": 8,
+        "selected": 4
+      },
+      "tanker": {
+        "capacity": 5,
+        "groups": 5,
+        "requested": 8,
+        "selected": 5
+      },
+      "tug_tow": {
+        "capacity": 15,
+        "groups": 7,
+        "requested": 8,
+        "selected": 8
+      }
+    },
+    "policy_fit": {
+      "background": {
+        "capacity": 218,
+        "groups": 20,
+        "requested": 20,
+        "selected": 20
+      },
+      "cargo": {
+        "capacity": 225,
+        "groups": 20,
+        "requested": 20,
+        "selected": 20
+      },
+      "passenger": {
+        "capacity": 32,
+        "groups": 16,
+        "requested": 20,
+        "selected": 20
+      },
+      "tanker": {
+        "capacity": 44,
+        "groups": 20,
+        "requested": 20,
+        "selected": 20
+      },
+      "tug_tow": {
+        "capacity": 117,
+        "groups": 20,
+        "requested": 20,
+        "selected": 20
+      }
+    },
+    "test": {
+      "background": {
+        "capacity": 192,
+        "groups": 20,
+        "requested": 20,
+        "selected": 20
+      },
+      "cargo": {
+        "capacity": 312,
+        "groups": 20,
+        "requested": 20,
+        "selected": 20
+      },
+      "passenger": {
+        "capacity": 23,
+        "groups": 13,
+        "requested": 20,
+        "selected": 20
+      },
+      "tanker": {
+        "capacity": 46,
+        "groups": 20,
+        "requested": 20,
+        "selected": 20
+      },
+      "tug_tow": {
+        "capacity": 92,
+        "groups": 20,
+        "requested": 20,
+        "selected": 20
+      }
+    }
+  },
+  "counts": {
+    "acoustic_fit": {
+      "classes": {
+        "background": 611,
+        "cargo": 481,
+        "passenger": 468,
+        "tanker": 355,
+        "tug_tow": 544
+      },
+      "clips": 2459,
+      "groups": 658
+    },
+    "calibration": {
+      "classes": {
+        "background": 124,
+        "cargo": 76,
+        "passenger": 135,
+        "tanker": 65,
+        "tug_tow": 108
+      },
+      "clips": 508,
+      "groups": 103
+    },
+    "development": {
+      "classes": {
+        "background": 105,
+        "cargo": 80,
+        "passenger": 62,
+        "tanker": 65,
+        "tug_tow": 72
+      },
+      "clips": 384,
+      "groups": 91
+    },
+    "policy_fit": {
+      "classes": {
+        "background": 386,
+        "cargo": 337,
+        "passenger": 315,
+        "tanker": 409,
+        "tug_tow": 380
+      },
+      "clips": 1827,
+      "groups": 411
+    },
+    "test": {
+      "classes": {
+        "background": 355,
+        "cargo": 457,
+        "passenger": 432,
+        "tanker": 526,
+        "tug_tow": 470
+      },
+      "clips": 2240,
+      "groups": 479
+    }
+  },
+  "excluded_records": 10585,
+  "exclusion_reasons": {
+    "filename_metadata_date_disagreement": 42,
+    "not_five_seconds": 5,
+    "whole_utc_day_reserved_for_calibration": 924,
+    "whole_utc_day_reserved_for_development": 1000,
+    "whole_utc_day_reserved_for_policy_fit": 3217,
+    "whole_utc_day_reserved_for_test": 5397
+  },
+  "manifest_sha256": "567ebef47c8d0e74e39f7cbeb03a7d1d3f84b5528a0ae255a24fc43279d06d65",
+  "passed_checks": [
+    "vessel_disjoint",
+    "all_class_all_hydrophone_utc_day_disjoint",
+    "global_60_second_guard"
+  ],
+  "pending_checks": [
+    "decoded_waveform_hashes_after_download"
+  ],
+  "protocol": "vessel_and_whole_utc_day_separated_v1",
+  "test_model_outcomes_examined": false,
+  "unverifiable_original_fields": [
+    "parent_recording_id",
+    "deployment_id"
+  ]
+}

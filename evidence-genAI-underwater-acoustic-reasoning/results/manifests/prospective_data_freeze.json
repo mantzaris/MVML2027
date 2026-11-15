@@ -1,0 +1,8 @@
+{
+  "amendment_sha256": "56117bc0d200ef00d8a6a26e51d8a8c8aa8876fe33e186ec95eda62104183348",
+  "recorded_at_utc": "2026-11-15T21:29:41.805527+00:00",
+  "split_audit_sha256": "12db26fff9f6863816dafdce6197564e5017306bced8e12da0c1009b4fc7ee72",
+  "stage": "data_protocol_frozen_before_models; waveform audit still required",
+  "study_config_sha256": "787d9fdc9c4726dcb56747a72b33b488ad34f3549dd0a128448867b15574cbcb",
+  "test_model_outcomes_examined": false
+}
