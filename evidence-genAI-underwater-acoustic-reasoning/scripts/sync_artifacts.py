@@ -10,8 +10,11 @@ if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--host',required=True);p.add_argument('--ssh',required=True);p.add_argument('--once',action='store_true');a=p.parse_args()
     while True:
         result=subprocess.run(['rsync','-az','--update','--prune-empty-dirs','-e',a.ssh,
+            '--exclude=.writing-*','--exclude=checkpoints/checkpoint-*.pt',
             '--include=*/','--include=results/***','--include=checkpoints/***','--include=data/derived/classifier*.npz',
-            '--include=data/derived/evidence/***','--include=data/derived/references/***','--exclude=*',
+            '--include=data/derived/evidence/***','--include=data/derived/references/***',
+            '--include=data/derived/robustness_classifier.npz','--include=data/private/robustness_manifest.json',
+            '--include=data/raw/robustness/***','--exclude=*',
             f'{a.host}:/workspace/evidence-genAI-underwater-acoustic-reasoning/',str(ROOT)+'/'])
         print('artifact_sync_exit',result.returncode,flush=True)
         if a.once:break

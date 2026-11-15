@@ -1,0 +1,84 @@
+{
+  "caveat": "Blinded, correlated same-checkpoint AI proxy assessments; agreement is not accuracy or human validation.",
+  "checkpoint_shared_with_generator": true,
+  "counts": {
+    "output_tokens": 100751,
+    "requested": 540,
+    "truncated": 0,
+    "valid": 539
+  },
+  "human_reviewers": 0,
+  "partitions": {
+    "calibration": {
+      "requested": 74,
+      "valid": 74
+    },
+    "development": {
+      "requested": 66,
+      "valid": 66
+    },
+    "policy_fit": {
+      "requested": 200,
+      "valid": 200
+    },
+    "test": {
+      "requested": 200,
+      "valid": 199
+    }
+  },
+  "reviewer_roles": 2,
+  "slots": {
+    "band": {
+      "both_identifiable": 206,
+      "both_identifiable_value_agreement": 206,
+      "identifiability_agreement": 269,
+      "identifiability_kappa": 1.0,
+      "mean_interval_endpoint_difference_seconds": 0.0,
+      "paired_interval_count": 206,
+      "paired_numeric_count": 0,
+      "paired_numeric_median_absolute_difference_hz": null,
+      "paired_valid": 269,
+      "role0_identifiable": 206,
+      "role1_identifiable": 206
+    },
+    "modulation": {
+      "both_identifiable": 40,
+      "both_identifiable_value_agreement": 27,
+      "identifiability_agreement": 269,
+      "identifiability_kappa": 1.0,
+      "mean_interval_endpoint_difference_seconds": 0.0,
+      "paired_interval_count": 12,
+      "paired_numeric_count": 27,
+      "paired_numeric_median_absolute_difference_hz": 0.0,
+      "paired_valid": 269,
+      "role0_identifiable": 40,
+      "role1_identifiable": 40
+    },
+    "tone": {
+      "both_identifiable": 164,
+      "both_identifiable_value_agreement": 90,
+      "identifiability_agreement": 269,
+      "identifiability_kappa": 1.0,
+      "mean_interval_endpoint_difference_seconds": 0.0,
+      "paired_interval_count": 58,
+      "paired_numeric_count": 91,
+      "paired_numeric_median_absolute_difference_hz": 0.0,
+      "paired_valid": 269,
+      "role0_identifiable": 164,
+      "role1_identifiable": 164
+    },
+    "trend": {
+      "both_identifiable": 262,
+      "both_identifiable_value_agreement": 262,
+      "identifiability_agreement": 269,
+      "identifiability_kappa": 1.0,
+      "mean_interval_endpoint_difference_seconds": 0.0,
+      "paired_interval_count": 168,
+      "paired_numeric_count": 0,
+      "paired_numeric_median_absolute_difference_hz": null,
+      "paired_valid": 269,
+      "role0_identifiable": 262,
+      "role1_identifiable": 262
+    }
+  }
+}

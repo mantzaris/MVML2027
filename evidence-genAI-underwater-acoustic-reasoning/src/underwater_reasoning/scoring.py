@@ -7,7 +7,7 @@ from .reports import SLOTS,parse_report
 PHYSICAL=('band','tone','modulation','trend')
 
 def interval_covered(span,support,tolerance=.02):
-    return isinstance(span,list) and len(span)==2 and support[0]-tolerance<=span[0]<span[1]<=support[1]+tolerance
+    return isinstance(span,(list,tuple)) and isinstance(support,(list,tuple)) and len(span)==len(support)==2 and all(isinstance(x,(int,float)) for x in [*span,*support]) and support[0]-tolerance<=span[0]<span[1]<=support[1]+tolerance
 
 def close_number(a,b,absolute,relative):
     return isinstance(a,(int,float)) and isinstance(b,(int,float)) and abs(a-b)<=max(absolute,relative*abs(b))
@@ -31,6 +31,7 @@ def reviewer_agrees(slot,claim,reviews):
         if not review or not isinstance(review.get(slot),dict):return False
         value=review[slot]
         if value.get('identifiable') is not True or value.get('value')!=claim.get('value'):return False
+        if not interval_covered(claim.get('time_s'),value.get('time_s')):return False
         if slot=='tone' and not close_number(claim.get('frequency_hz'),value.get('frequency_hz'),3,.03):return False
         if slot=='modulation' and not close_number(claim.get('rate_hz'),value.get('rate_hz'),1,.10):return False
     return True
@@ -72,9 +73,13 @@ def score(report,label,reference,assets,mask,reviews=(),errors=()):
         correct=asserted and agrees(slot,claim,ref);cited=asserted and citation_support(slot,claim,assets,mask,reference,reviews)
         supported=bool(correct and cited);consensus=bool(supported and reviewer_agrees(slot,claim,reviews))
         loss=(0. if supported else 1.) if asserted else (.25 if ident else 0.)
+        numeric_error=None
+        if asserted and ident and slot in ('tone','modulation'):
+            key='frequency_hz' if slot=='tone' else 'rate_hz'
+            if isinstance(claim.get(key),(int,float)) and ref.get('candidates'):numeric_error=min(abs(claim[key]-v[key]) for v in ref['candidates'])
         records.append({'slot':slot,'asserted':asserted,'identifiable':ident,'correct':bool(correct),'citation_supported':bool(cited),
             'supported':supported,'consensus_supported':consensus,'factual_error':bool(asserted and ident and not correct),'loss':loss,
-            'appropriate_uncertainty':bool(not asserted and not ident)})
+            'appropriate_uncertainty':bool(not asserted and not ident),'numeric_absolute_error':numeric_error})
     physical_loss=float(np.mean([r['loss'] for r in records]));assertions=sum(r['asserted'] for r in records);supported=sum(r['supported'] for r in records)
     return {'loss':.5*class_loss+.5*physical_loss,'class_loss':class_loss,'physical_loss':physical_loss,'assertions':assertions,'supported':supported,
         'unsupported':assertions-supported,'consensus_supported':sum(r['consensus_supported'] for r in records),'factual_errors':sum(r['factual_error'] for r in records),

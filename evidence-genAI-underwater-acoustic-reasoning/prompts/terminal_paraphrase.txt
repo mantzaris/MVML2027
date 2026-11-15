@@ -1,0 +1,29 @@
+Assess the supplied five-second civilian underwater waveform. Its raw-audio
+identifier is W0. Produce a single JSON report covering class, dominant band,
+persistent tone, envelope modulation and received-energy trend, followed by
+an interpretation. Use measured evidence cautiously and say uncertain when
+an attribute is unresolved. Do not infer machinery, location, propulsion,
+source motion, or a particular vessel. Neighbor examples D0 inform class
+only, and P0 is a classifier estimate when it is available.
+
+Each of the five objects must contain status (asserted or uncertain), value,
+evidence (an array of supplied IDs), and time_s (an interval inside [0,5]).
+Uncertain fields use null values and an empty evidence array. Valid classes
+are background, cargo, passenger, tanker and tug_tow. Band values are 20-100,
+100-500, 500-2000 or 2000-8000 Hz. Tone and modulation values are present or
+null. Tone includes frequency_hz; modulation includes rate_hz, between 2
+and 80 Hz. Use null numeric fields for uncertainty. Trend values are
+increase, decrease or steady, comparing the last and first seconds at a
+3 dB threshold. A trend describes received energy, never movement.
+
+A tone needs at least 2.5 seconds of persistence and a measured interval.
+Exact tone frequency requires A0; exact modulation rate requires B0.
+Failure to detect a candidate is insufficient to establish absence. W0
+can justify cautious qualitative descriptions but supplies no precise
+frequency, modulation rate or calibrated probability. Cite only evidence
+actually used. Write 60-100 words of interpretation, aiming for 80, explaining
+findings and limitations without introducing additional unsupported facts.
+
+Use this exact JSON shape and replace values only when justified:
+{"class":{"status":"uncertain","value":null,"evidence":[],"time_s":[0,5]},"band":{"status":"uncertain","value":null,"evidence":[],"time_s":[0,5]},"tone":{"status":"uncertain","value":null,"frequency_hz":null,"evidence":[],"time_s":[0,5]},"modulation":{"status":"uncertain","value":null,"rate_hz":null,"evidence":[],"time_s":[0,5]},"trend":{"status":"uncertain","value":null,"evidence":[],"time_s":[0,5]},"interpretation":"Write your 60-100 word interpretation here."}
+Return only JSON. Preserve the slot objects rather than replacing them with strings.

@@ -1,0 +1,15 @@
+{
+  "batch_size": 16,
+  "mode": "review",
+  "new_reports": 0,
+  "partitions": [
+    "policy_fit",
+    "development",
+    "calibration",
+    "test"
+  ],
+  "prompt_sha256": "546ed6231c2a7cc46fdcb592d81d1343417dff6228032724c2a767234724b8e3",
+  "reviewer_human_count": 0,
+  "seconds": 0.10648946277797222,
+  "tag": "main"
+}

@@ -7,6 +7,7 @@ from underwater_reasoning.omni import Omni,REVISION
 from underwater_reasoning.reports import parse_report
 from underwater_reasoning.io import atomic_json,canonical_hash,file_hash
 from underwater_reasoning.runtime import budget_check
+from underwater_reasoning.report_schema import terminal_schema
 ROOT=Path(__file__).resolve().parents[1]
 
 def serialize_evidence(runner,assets,mask):
@@ -52,7 +53,8 @@ def main():
                     text='You are an AI acoustic reviewer, not a human. '+role+'\n'+review_contract()+'\nIndependent diagnostics:\n'+json.dumps(assets['reference'],separators=(',',':'))
                     extra={'reviewer_role':condition,'reference_sha256':canonical_hash(assets['reference'])}
                 key={'waveform_sha256':assets['waveform_sha256'],'model':'Qwen/Qwen2.5-Omni-7B','revision':REVISION,'precision':'bfloat16','attention':'sdpa',
-                    'prompt_sha256':canonical_hash(text),'mode':a.mode,'condition':condition,'decoding':{'greedy':True,'max_new_tokens':768,'eos_token_id':151645},'batch_size':a.batch_size,**extra}
+                    'prompt_sha256':canonical_hash(text),'mode':a.mode,'condition':condition,'decoding':{'greedy':True,'max_new_tokens':1024 if a.mode=='terminal' else 768,'eos_token_id':151645},'batch_size':a.batch_size,**extra}
+                if a.mode=='terminal':key['format_schema_sha256']=canonical_hash(terminal_schema());key['format_enforcer']='xgrammar==0.2.9'
                 out=ROOT/f'results/raw/{a.mode}/{a.tag}/{part}/{uid}_{condition}.json'
                 if out.exists():
                     old=json.loads(out.read_text())
@@ -62,7 +64,7 @@ def main():
     for start in range(0,len(jobs),a.batch_size):
         budget_check();batch=jobs[start:start+a.batch_size]
         for job in batch:job['audio'],job['sample_rate']=sf.read(ROOT/lookup[job['id']]['audio_path'],dtype='float32')
-        results=runner.generate(batch)
+        results=runner.generate(batch,report_schema=a.mode=='terminal')
         for job,result in zip(batch,results):
             if a.mode=='terminal':parsed,errors=parse_report(result['raw'])
             else:

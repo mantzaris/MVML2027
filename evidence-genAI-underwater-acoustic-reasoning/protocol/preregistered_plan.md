@@ -1,8 +1,8 @@
-# Protocol draft — NOT frozen or registered
+# Historical preparation protocol draft
 
 Working title: **Evidence-Grounded Generative AI for Underwater Acoustic Reasoning**.
 
-This document records prospective decisions from the supplied execution prompt. There are no model outcomes. `test_unlock_log.json` remains locked; calling this file a preregistration plan does not imply registration with an external service. Freeze a content hash only after the following data and annotation amendments are resolved.
+This is the preserved preparation-stage design. Its pending-input statements describe that stage, not the current execution. The [execution amendment](execution_amendment.md), [automated scoring rules](automated_scoring.md), [decoding amendment](decoding_amendment.md), [statistical analysis](statistical_analysis.md), and [robustness plan](robustness_plan.md) specify the implemented study. Consult `test_unlock_log.json` for the actual freeze and unlock record. These are internal prospective records, not an external preregistration.
 
 **User amendment, 2026-11-15:** use AI reviewers instead of humans; maximum approximately 10 GPU-hours on the existing service; keep Git small. This supersedes the supplied documents' human-review requirement. No human-review recruitment or claims will be made. AI reviewer judgments and independent signal-processing estimates are automated proxies. Consequently, the study cannot claim human-validated evidence grounding, hypothetical-human agreement, or the originally proposed independent-human-supervision novelty. The scientific question and endpoint are narrowed to *automated evidence-consistency risk*. The working title is unchanged.
 

@@ -1,0 +1,38 @@
+{
+  "all_expected_hashes_match": true,
+  "files": [
+    {
+      "bytes": 110847521,
+      "path": "checkpoints/search17_lr1e-05_best.pt",
+      "sha256": "2e481567d60d39cea6a2faedf1546ccdb9060d8dbb367336b9618bbcf08bdb56"
+    },
+    {
+      "bytes": 22291513,
+      "path": "data/derived/classifier_seed17.npz",
+      "sha256": "f03e762bf4b1d6357b737d12fa903aa012e95411fb255ad751329bcda2af6715"
+    },
+    {
+      "bytes": 110847521,
+      "path": "checkpoints/seed29_lr1e-05_best.pt",
+      "sha256": "03d80417d7f47268e70e9ac803d18accfbafcc3041550443eed7ae22dd19fc69"
+    },
+    {
+      "bytes": 22280457,
+      "path": "data/derived/classifier_seed29.npz",
+      "sha256": "728477e233c98d5619bd809e180e24294bab6c16c122388bcac40ae271b056d0"
+    },
+    {
+      "bytes": 110847521,
+      "path": "checkpoints/seed43_lr1e-05_best.pt",
+      "sha256": "a5cefe832c71c352b2b3f3432d8f87b51e1b63a6b24553f6ffdaa693100b0a8b"
+    },
+    {
+      "bytes": 22289858,
+      "path": "data/derived/classifier_seed43.npz",
+      "sha256": "f641f15da8b55e6deca244503708860c5f00b6e42bd5d945ebec859c29255695"
+    }
+  ],
+  "public_pretrained_weights": "Pinned revisions remain cached on the Pod; not copied locally or committed.",
+  "storage": "local repository filesystem; files excluded from Git",
+  "verified_at_utc": "2026-11-15T22:11:26.952221+00:00"
+}

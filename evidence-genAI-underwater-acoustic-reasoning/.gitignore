@@ -3,6 +3,7 @@
 *.log
 results/logs/
 results/raw/
+results/manifests/jobs/
 sources/raw/
 *.z[0-9][0-9]
 __pycache__/

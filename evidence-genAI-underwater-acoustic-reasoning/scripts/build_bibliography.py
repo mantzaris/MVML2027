@@ -49,6 +49,11 @@ for name in ("ase_clap", "underwater_embeddings"):
               "note": "Crossref metadata verified; full method not independently reviewed in this preparation stage"}
     bib.append("@" + kind + "{" + name + ",\n" + ",\n".join("  " + k + " = {" + str(v) + "}" for k, v in fields.items()) + "\n}\n")
     bibliography.append({"key": name, "type": kind, "fields": fields, "verification": "crossref_metadata"})
+model_sources=ROOT/'sources/model_bibliography.json'
+if model_sources.exists():
+    for record in json.loads(model_sources.read_text()):
+        if record['key'] in {r['key'] for r in bibliography}:continue
+        fields=record['fields'];bib.append('@'+record['type']+'{'+record['key']+',\n'+',\n'.join('  '+k+' = {'+str(v)+'}' for k,v in fields.items())+'\n}\n');bibliography.append(record)
 (ROOT / "manuscript").mkdir(exist_ok=True)
 (ROOT / "manuscript/references.bib").write_text("% Verified metadata, not a claim of full-text review of every entry.\n\n" + "\n".join(bib))
 (ROOT / "sources/bibliography.json").write_text(json.dumps(bibliography, indent=2, ensure_ascii=False) + "\n")

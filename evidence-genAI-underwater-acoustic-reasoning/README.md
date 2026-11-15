@@ -1,89 +1,69 @@
 # Evidence-Grounded Generative AI for Underwater Acoustic Reasoning
 
-Research preparation for Alexander V. Mantzaris's MVML 2027 project. All session work is contained in this directory. Commit on **main only**; the owner performs pushes manually.
+Alexander V. Mantzaris’s MVML 2027 research project. All work is contained here. Commit on **main only**; the owner performs pushes manually.
 
-## Current status
+## Execution status
 
-**Preparation stage; no classifier/controller training, generator experiments, AI review runs, or completed conference paper.** The user has explicitly requested AI reviewers in place of humans and approved a 10-hour GPU ceiling. Read the supplied execution prompt and 22-page specification alongside [the amended protocol draft](protocol/preregistered_plan.md). The supplied documents remain unchanged; subsequent user instructions take precedence.
+Real GPU experiments are running on the authorized existing RunPod. Classifier training is complete for seeds 17/29/43; all 7,418 selected recordings passed acquisition checks and decoded-waveform duplicate checks. Both blinded AI reviewer roles have run on all 270 assessment clips (539/540 valid responses). The corrected development comparison is running; test terminal outcomes remain locked until policy settings, calibration thresholds and analysis rules are frozen.
 
-Completed here: live source and conference checks; a CRC-checked partial UniqueShip release acquisition (fold-1 metadata and five training waveform samples); grouped-data audits and annotation feasibility checks; CPU analysis tools; independent review views and local annotation forms; policy-state/scoring primitives; meaningful tests; an incomplete manuscript layout using the official Word template.
+The user’s constraints are a hard ten-hour research window, approximately 50 GB remote storage, no human reviewers, a small Git repository, and **leave the Pod running when work finishes**. Dollar rate and earlier billed allocation are unknown. No additional service, paid API, repository push, submission or publication is part of this execution.
 
-The release check changed the preparation assumptions:
+## Study design and limitations
 
-- The actual sampled WAV files are **32 kHz mono PCM_32**, while the landing page says 20 kHz. Native audio is preserved; a future classifier pipeline must explicitly derive anti-aliased 20 kHz audio.
-- Fold 1 supplies 14,372 training, 1,381 validation, and 2,250 test clips for the five selected classes, before exclusions. Five selected-class clips are shorter than five seconds.
-- Parent recording IDs and deployment IDs are absent; all 3,600 background clips lack hydrophone IDs. Date-only background groups and vessel IDs are disjoint across the official fold, but that does not complete the stronger provenance/overlap audit.
-- No official fold supports 48 passenger test annotations with at most three clips per vessel: test passenger vessel counts range from 5 to 13. The annotation design needs a documented amendment before test outcomes.
-- RunPod `/workspace` is on `overlay`; persistent storage has not been verified. The research GPU ceiling is 10 hours; actual hourly rate and prior allocated time are unknown. **Leave the Pod running when finished**, as explicitly requested. No human reviewers will be used. Automated references and AI judgments must be reported as proxy assessments, never human validation.
+The original execution prompt and specification are preserved unchanged. The implemented design is defined by the [prospective execution amendment](protocol/execution_amendment.md), [automated scoring rules](protocol/automated_scoring.md), [development decoding correction](protocol/decoding_amendment.md), [statistical analysis](protocol/statistical_analysis.md), and [robustness plan](protocol/robustness_plan.md). The earlier [preparation protocol](protocol/preregistered_plan.md) is historical. These timestamped internal records are not an external preregistration.
 
-See [the acquisition audit](protocol/data_access_and_licenses.md), [machine-readable findings](sources/grouping_audit.json), and [fold feasibility](sources/fold_annotation_feasibility.json). Large raw archives, audio, identity metadata, review keys, and model weights are excluded from Git. No test model outcomes have been generated or examined.
+UniqueShip fold 1 supplies five civilian classes. Recorded vessels/background days, whole UTC days, a 60-second boundary guard and decoded-waveform hashes are separated across partitions. Parent-recording/deployment identifiers are unavailable, and background device identifiers are missing; conservative recorded-group separation does not establish complete physical independence. Native audio is 32 kHz. Explicit anti-aliased derivatives feed the 20 kHz classifier and 16 kHz generator.
 
-## Reproduce CPU preparation
+| Partition | Eligible recordings | Assessment clips |
+|---|---:|---:|
+| Acoustic-fit | 2,459 | — |
+| Policy-fit | 1,827 | 100 |
+| Development | 384 | 33 |
+| Calibration | 508 | 37 |
+| Test | 2,240 | 100 |
 
-From the repository root:
+Assessment sampling permits at most three clips per recorded source, at least ten minutes apart. The test assessment has 93 source groups and only 13 passenger vessels. These limits replace the infeasible original 600-reference design before model outcomes.
+
+Independent numerical estimators and two blinded roles of the pinned Omni model provide **automated proxies**, not human validation or measured hypothetical-human performance. Shared model ancestry and diagnostic anchoring limit reviewer independence. Swapped or internally consistent evidence can still be wrong against the separate reference. No submarine-specific, localization, source-motion, mechanical-speed or calibrated sound-pressure conclusion is supported.
+
+## Reproduction
+
+CPU tooling uses Python 3.10 and `requirements.lock`:
 
 ```bash
-cd evidence-genAI-underwater-acoustic-reasoning
 python3.10 -m venv .venv
 .venv/bin/python -m pip install -r requirements.lock
 .venv/bin/python -m pip install --no-deps -e .
 .venv/bin/python -m pytest -q
 .venv/bin/python scripts/validate_synthetic.py
-.venv/bin/python scripts/check_readiness.py
 ```
 
-`check_readiness.py` deliberately exits 2 while required inputs are pending. The lock describes the tested **CPU preparation** environment, Python 3.10.18/Linux x86_64. It is not a GPU training lock. Synthetic checks cover 500 known-signal fixtures and 100 structural evidence interventions; they do not evaluate a language model or establish real-data grounding quality.
+The remote environment uses Python 3.12, torch 2.8.0+cu128, torchvision 0.23.0+cu128 and the pinned packages in [setup_remote.sh](scripts/setup_remote.sh). The GPU is an RTX PRO 4500 Blackwell with approximately 32 GB VRAM. The CPU lock is not a GPU environment lock. The exact deadline in `configs/execution.json` is an execution safeguard; a new run needs its own authorized accounting window.
 
-Public-source rechecks (network access, no paid API):
+The execution sequence is:
 
-```bash
-.venv/bin/python scripts/inspect_sources.py
-.venv/bin/python scripts/probe_release.py
-.venv/bin/python scripts/audit_release_metadata.py
-.venv/bin/python scripts/build_bibliography.py
-```
+1. Probe the public release, build the conservative split with `prepare_experiment.py`, and acquire selected members with `download_experiment.py`. Keep private manifests and audio outside Git.
+2. Train the anchor/search/seeds using `train_classifier.py`; compute independent references and cards with `prepare_evidence.py`.
+3. Validate AI reviewer controls and the development terminal pilot. The corrected terminal decoder uses XGrammar 0.2.9, a common schema and a 1,024-token cap. Original failed pilot outputs remain in ignored raw artifacts.
+4. `run_core_after_training.sh` builds the policy/development/calibration subset matrices, runs the bounded planner, and fits the controllers. Content keys prevent incompatible cache reuse.
+5. Inspect `pilot_gate.json` and `controller_training.json`; `freeze_test.py --unlock` verifies the complete pre-test caches and freezes software, protocol, prompt, split, reference and reviewer hashes.
+6. `run_test_and_stress.sh` executes the clean test matrix, frozen analyses, 360 waveform transformations, evidence interventions, prompt paraphrases and blinded prose audits. Every job is deadline guarded.
+7. `make_figures.py` and `build_manuscript.py` render actual aggregate results. Convert the DOCX to PDF with LibreOffice and inspect all pages before finalization.
 
-The probe reads only byte ranges needed for archive metadata and five training samples. It verifies response ranges, ZIP entry counts, member sizes, and CRCs. This is explicitly **not a full archive download or full audio-integrity audit**. `sources/` records metadata hashes and findings; downloaded identities/audio and cached source HTML remain ignored locally.
+Inspect [check_readiness.py](scripts/check_readiness.py) for current completion checks. The trained checkpoints, original data and detailed outputs are copied to this local directory and ignored by Git. Model download revisions are pinned; pretrained weight caches remain on the worker. The remote overlay is ephemeral, so it is not the sole artifact copy.
 
-After a verified release-to-canonical mapping supplies the missing identities and full audio is acquired:
-
-```bash
-.venv/bin/python scripts/prepare_data.py \
-  --manifest data/private/canonical_fold1.csv \
-  --audio-root data/raw/uniqueship \
-  --output data/private/prepared
-.venv/bin/python scripts/audit_splits.py data/private/prepared/manifest.json \
-  --output data/private/prepared/independent_audit.json
-.venv/bin/python scripts/create_annotation_pack.py \
-  --manifest data/private/prepared/manifest.json \
-  --audio-root data/raw/uniqueship \
-  --output annotations/packs/review_v1 \
-  --private-key annotations/private/review_v1_key.json
-```
-
-These commands reject missing provenance, unexpected native headers, source overlap, and infeasible annotation counts. The current public release cannot yet satisfy those gates. Do not fabricate the missing columns. The current 600-clip balanced request intentionally fails rather than silently raising the per-source cap.
-
-To inspect the review interface without representing a human study:
-
-```bash
-.venv/bin/python scripts/create_demo_pack.py
-.venv/bin/python -m http.server 8765 --bind 127.0.0.1 --directory .cache/annotation_demo
-```
-
-Open `http://127.0.0.1:8765`. The demo contains one synthetic AM tone; it is not part of the 600-clip study. The creation command refuses to overwrite an existing pack. Keep exported reviewer JSONs and the identity key separate, following [the annotation guide](protocol/annotation_guide.md).
-
-## Layout and implementation limits
+## Artifact layout
 
 | Location | Contents |
 |---|---|
-| `configs/` | Explicit draft study and execution inputs; unknown values remain null |
-| `protocol/` | Protocol, amendments, annotation instructions, and locked test status |
-| `sources/` | Verified bibliographic metadata, access checks, and aggregate release audits |
-| `src/underwater_reasoning/` | Data guards, DSP candidates, distinct-source retrieval, blinded review views, metrics, observed-state masks, immutable result shards |
-| `tests/` | Leakage, known-signal, masking, scoring, retrieval, and resume checks |
-| `results/manifests/` | Actual CPU validation results and artifact lineage |
-| `manuscript/` | Verified bibliography and explicitly incomplete official-template draft |
+| `protocol/` | Prospective amendments, evaluation rules and test freeze |
+| `configs/` | Execution limits, label mapping and locked controller choices |
+| `src/underwater_reasoning/` | DSP, separate references, generation, scoring and controller |
+| `scripts/` | Acquisition, actual training/evaluation, analysis and document builders |
+| `results/manifests/` | Compact integrity, training, pilot and execution summaries |
+| `results/tables/`, `results/figures/` | Aggregate empirical outputs |
+| `manuscript/` | Official template, verified references and manuscript artifacts |
+| `sources/` | Verified bibliography and public-access/release audits |
+| `data/`, `checkpoints/`, `results/raw/` | Local private/large artifacts excluded from Git |
 
-The acoustic training loop, frozen Omni wrapper, learned controller fitting, full baseline matrix, automated-reference semantic evaluator, AI-review inference, cost instrumentation, and empirical result figures remain unimplemented. They are not replaced by placeholder result tables. The current structural checker only checks citation compatibility; a valid but numerically false card can pass. Separate reference estimation and AI prose review must be validated on known signals and reported with their limitations. The review interface is optional inspection tooling, not a request for human reviewers.
-
-Next stage: resolve provenance and passenger sampling; configure the AI reviewers and verified artifact preservation; then freeze the amended protocol and implement/smoke-test the GPU pipeline within the 10-hour ceiling. A usable draft layout is not a submission-ready manuscript. No repository push, external message, submission, or publication was made. Git contains compact summaries only; detailed logs, per-fixture records, audio, caches, and weights stay ignored.
+The historical `preparation_artifacts.json` and initial draft describe preparation only; they are not evidence of completed experiments. The final artifact manifest will identify the finished deliverables. Author affiliation/contact details were not supplied; they must be added before any eventual submission. The official DOCX’s embedded horizontal margins differ from its prose guidance, as recorded in the conference audit; its working geometry is preserved.

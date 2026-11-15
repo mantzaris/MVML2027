@@ -1,0 +1,18 @@
+{
+  "checkpoint": "checkpoints/search17_lr1e-06_last.pt",
+  "checkpoint_sha256": "6775d6a7dc68d8a7d8ac8d604ddb8cff28151d0ce2ff8adeb9e8d2fa177b2293",
+  "completed_epoch": 19,
+  "expected_next_epoch": 20,
+  "kind": "controlled_process_termination_for_resume_test",
+  "observed_resume_log": "RESUME search17_lr1e-06 next_epoch 20 optimizer_states 209",
+  "optimizer_states": 209,
+  "recorded_at_utc": "2026-11-15T21:59:04.481237+00:00",
+  "resume_verified": true,
+  "rng_fields": [
+    "python",
+    "numpy",
+    "torch",
+    "cuda"
+  ],
+  "subsequent_epoch_completed": true
+}

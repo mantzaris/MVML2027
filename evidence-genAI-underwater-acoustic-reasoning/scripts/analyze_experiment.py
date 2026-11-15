@@ -29,7 +29,14 @@ def metrics(records):
     y=[r['label_index'] for r in kept];pred=[r['prediction'] for r in kept]
     claims=[s for r in kept for s in r['score']['physical']]
     ambiguous=[c for c in claims if not c['identifiable']]
-    return {'total_reports':len(records),'retained_reports':n,'report_coverage':ratio(n,len(records)),'supported_coverage':ratio(g,4*n),
+    extra={}
+    for slot in ('tone','modulation'):
+        chosen=[c for c in claims if c['slot']==slot and c['asserted']];matched=[c for c in chosen if c['correct'] and c.get('numeric_absolute_error') is not None]
+        measured=[c for c in chosen if c.get('numeric_absolute_error') is not None]
+        extra.update({slot+'_assertions':len(chosen),slot+'_matched_assertions':len(matched),slot+'_match_coverage':ratio(len(matched),len(chosen)),
+            slot+'_matched_mae_hz':float(np.mean([c['numeric_absolute_error'] for c in matched])) if matched else None,
+            slot+'_reference_available_assertions':len(measured),slot+'_nearest_reference_mae_hz':float(np.mean([c['numeric_absolute_error'] for c in measured])) if measured else None})
+    return {**extra,'total_reports':len(records),'retained_reports':n,'report_coverage':ratio(n,len(records)),'supported_coverage':ratio(g,4*n),
         'whole_test_useful_coverage':ratio(g,4*len(records)),'assertion_coverage':ratio(a,4*n),'unsupported_rate':ratio(u,a),
         'assertions':a,'supported_assertions':g,'wrong_or_unsupported_assertions':u,'consensus_supported_coverage':ratio(sum(r['score']['consensus_supported'] for r in kept),4*n),
         'mean_loss':float(np.mean([r['score']['loss'] for r in kept])) if kept else None,
@@ -38,6 +45,7 @@ def metrics(records):
         'class_abstention_rate':ratio(sum(not r['score']['class_asserted'] for r in kept),n),
         'factual_error_rate_on_assertions':ratio(sum(r['score']['factual_errors'] for r in kept),a),
         'citation_fidelity_on_assertions':ratio(sum(c['citation_supported'] for c in claims),a),
+        'citation_completeness_on_correct_assertions':ratio(sum(c['correct'] and c['citation_supported'] for c in claims),sum(c['correct'] for c in claims)),
         'reference_identifiability':ratio(sum(r['score']['identifiable'] for r in kept),4*n),
         'appropriate_uncertainty_on_ambiguous':ratio(sum(c['appropriate_uncertainty'] for c in ambiguous),len(ambiguous)),
         'schema_validity_all':ratio(sum(r['score']['valid'] for r in records),len(records)),
@@ -63,18 +71,23 @@ def rows_for(method,items,settings,ensemble,class_ensemble,labels,threshold=None
             'reconstructed_seconds':terminal_seconds+sum(item['asset']['tool_seconds']['ABCD'[a]] for a in trace)})
     return out
 
-def cluster_contrast(left,right,field='source_group',resamples=2000,seed=17):
+def cluster_contrast(left,right,field='source_group',resamples=2000,seed=17,metric='supported_coverage'):
     if [r['id'] for r in left]!=[r['id'] for r in right]:raise ValueError('Unpaired test records')
     groups=sorted({r[field] for r in left});index={g:np.array([i for i,r in enumerate(left) if r[field]==g]) for g in groups}
-    l=np.array([[r['score']['supported'] if r['retained'] else 0,4*int(r['retained'])] for r in left],dtype=float)
-    r=np.array([[v['score']['supported'] if v['retained'] else 0,4*int(v['retained'])] for v in right],dtype=float)
+    def cells(v):
+        if metric=='supported_coverage':return [v['score']['supported'] if v['retained'] else 0,4*int(v['retained'])]
+        if metric=='unsupported_rate':return [v['score']['unsupported'] if v['retained'] else 0,v['score']['assertions'] if v['retained'] else 0]
+        if metric=='whole_test_useful_coverage':return [v['score']['supported'] if v['retained'] else 0,4]
+        raise ValueError(metric)
+    l=np.array([cells(v) for v in left],dtype=float);r=np.array([cells(v) for v in right],dtype=float)
     def stat(a):return a[:,0].sum()/a[:,1].sum() if a[:,1].sum() else np.nan
     observed=stat(l)-stat(r);rng=np.random.default_rng(seed);values=[]
     for _ in range(resamples):
         chosen=rng.choice(groups,len(groups),replace=True);idx=np.concatenate([index[g] for g in chosen]);values.append(stat(l[idx])-stat(r[idx]))
     values=np.array(values);values=values[np.isfinite(values)]
+    if not np.isfinite(observed) or not len(values):return {'difference':None,'ci95':None,'p_two_sided_centered_bootstrap':None,'clusters':len(groups),'cluster_field':field,'resamples':len(values),'seed':seed,'metric':metric}
     p=(1+np.sum(np.abs(values-observed)>=abs(observed)))/(len(values)+1)
-    return {'difference':float(observed),'ci95':np.quantile(values,[.025,.975]).tolist(),'p_two_sided_centered_bootstrap':float(p),'clusters':len(groups),'cluster_field':field,'resamples':len(values),'seed':seed}
+    return {'difference':float(observed),'ci95':np.quantile(values,[.025,.975]).tolist(),'p_two_sided_centered_bootstrap':float(p),'clusters':len(groups),'cluster_field':field,'resamples':len(values),'seed':seed,'metric':metric}
 
 def main():
     if not json.loads((ROOT/'protocol/test_unlock_log.json').read_text()).get('unlocked'):raise ValueError('Test analysis is locked')
@@ -92,11 +105,16 @@ def main():
             value=metrics(selected);curve.append({'coverage':n/len(rows),'supported_coverage':value['supported_coverage'],'unsupported_rate':value['unsupported_rate'],'loss':value['mean_loss']})
         curves[method]=curve
     contrast_names=[settings['locked_comparator'],'B7_class_only','A1_one_shot'];contrasts={name:cluster_contrast(method_rows['P'],method_rows[name]) for name in contrast_names}
-    adjusted=holm_adjust([contrasts[n]['p_two_sided_centered_bootstrap'] for n in contrast_names])
-    for n,p in zip(contrast_names,adjusted):contrasts[n]['p_holm']=p;contrasts[n]['utc_day_sensitivity']=cluster_contrast(method_rows['P'],method_rows[n],'date')
+    adjusted=holm_adjust([contrasts[n]['p_two_sided_centered_bootstrap'] if contrasts[n]['p_two_sided_centered_bootstrap'] is not None else 1. for n in contrast_names])
+    for n,p in zip(contrast_names,adjusted):
+        contrasts[n]['p_holm']=p if contrasts[n]['p_two_sided_centered_bootstrap'] is not None else None;contrasts[n]['utc_day_sensitivity']=cluster_contrast(method_rows['P'],method_rows[n],'date')
+        contrasts[n]['unsupported_rate_difference']=cluster_contrast(method_rows['P'],method_rows[n],metric='unsupported_rate')
+        contrasts[n]['whole_test_useful_difference']=cluster_contrast(method_rows['P'],method_rows[n],metric='whole_test_useful_coverage')
     classifier={};all_rows=manifest['records'];test_index=[i for i,r in enumerate(all_rows) if r['partition']=='test'];y=np.array([all_rows[i]['label_index'] for i in test_index])
     for seed in (17,29,43):
-        pred=np.load(ROOT/f'data/derived/classifier_seed{seed}.npz');classifier[str(seed)]=classifier_metrics(y,pred['logits'][test_index],float(pred['temperature']))
+        pred=np.load(ROOT/f'data/derived/classifier_seed{seed}.npz')
+        if list(pred['ids'])!=[r['id'] for r in all_rows]:raise ValueError('Classifier cache order differs from manifest')
+        classifier[str(seed)]=classifier_metrics(y,pred['logits'][test_index],float(pred['temperature']))
     seed_results={};budget_results={}
     for seed in (17,29,43):
         ens=Ensemble(torch.load(ROOT/f'checkpoints/controller_loss_{seed}.pt',weights_only=False))
@@ -106,7 +124,7 @@ def main():
         cal=rows_for('P',data['calibration'],settings,ensemble,class_ensemble,labels,budget=budget);threshold=float(np.sort([r['risk'] for r in cal])[int(np.ceil(.7*len(cal)))-1])
         budget_results[str(budget)]=metrics(rows_for('P',data['test'],settings,ensemble,class_ensemble,labels,threshold,budget))
     p=table['P'];base=table[settings['locked_comparator']];primary=contrasts[settings['locked_comparator']]
-    success=bool(primary['difference']>=.05 and primary['ci95'][0]>0 and p['unsupported_rate'] is not None and base['unsupported_rate'] is not None and p['unsupported_rate']<=base['unsupported_rate'] and p['class_macro_f1']>=base['class_macro_f1']-.02 and all(v['difference']>0 and v['p_holm']<.05 for v in contrasts.values()))
+    success=bool(primary['difference'] is not None and primary['difference']>=.05 and primary['ci95'][0]>0 and p['unsupported_rate'] is not None and base['unsupported_rate'] is not None and p['unsupported_rate']<=base['unsupported_rate'] and p['class_macro_f1']>=base['class_macro_f1']-.02 and all(v['difference'] is not None and v['difference']>0 and v['p_holm'] is not None and v['p_holm']<.05 for v in contrasts.values()))
     summary={'labels':labels,'assessment_clips':len(data['test']),'assessment_source_groups':len({i['row']['source_group'] for i in data['test']}),
         'assessment_utc_days':len({i['row']['date'] for i in data['test']}),'locked_comparator':settings['locked_comparator'],'methods':table,'primary_contrasts':contrasts,
         'classifier_all_test':classifier,'controller_seeds':seed_results,'tool_budget_sensitivity':budget_results,'preregistered_success_criteria_met':success,

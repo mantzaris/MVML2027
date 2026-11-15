@@ -9,7 +9,10 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--name',required=True);parser.add_argument('command',nargs=argparse.REMAINDER);a=parser.parse_args()
     if not a.command:raise ValueError('A concrete command is required')
     left=budget_check();start=datetime.now(timezone.utc);t=time.monotonic();path=ROOT/f'results/manifests/jobs/{a.name}.json'
-    state={'name':a.name,'command':a.command,'started_utc':start.isoformat(),'deadline_utc':DEADLINE.isoformat(),'pod_stop_requested':False,'status':'running'};atomic_json(path,state)
+    attempt=1
+    while path.exists():
+        attempt+=1;path=ROOT/f'results/manifests/jobs/{a.name}_attempt{attempt}.json'
+    state={'name':a.name,'attempt':attempt,'command':a.command,'started_utc':start.isoformat(),'deadline_utc':DEADLINE.isoformat(),'pod_stop_requested':False,'status':'running'};atomic_json(path,state)
     process=subprocess.Popen(a.command,cwd=ROOT,start_new_session=True)
     try:code=process.wait(timeout=max(1,left-180))
     except subprocess.TimeoutExpired:

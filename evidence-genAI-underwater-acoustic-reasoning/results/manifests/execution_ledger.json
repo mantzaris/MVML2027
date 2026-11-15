@@ -1,0 +1,271 @@
+{
+  "actual_pod_billing_hours": null,
+  "actual_usd_cost": null,
+  "authorized_ceiling_hours": 10,
+  "conservative_research_elapsed_hours": 1.9257475811111113,
+  "counting_note": "Counts cover saved individual inference records; smoke batches and planner calls may use separate aggregate files. Guarded elapsed times include loading and CPU stages, not measured GPU utilization.",
+  "finished": false,
+  "guarded_stages": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--mode",
+        "review",
+        "--partition",
+        "all"
+      ],
+      "elapsed_seconds": 470.98354783002287,
+      "ended_utc": "2026-11-15T22:15:11.184163+00:00",
+      "name": "ai_reviews",
+      "record": "ai_reviews.json",
+      "returncode": 0,
+      "sha256": "9fac0514d6c7e00082dd565b1a502c492b9ce3280aee3fee538cdc30728dac39",
+      "started_utc": "2026-11-15T22:07:20.200647+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 2,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--mode",
+        "review",
+        "--partition",
+        "all"
+      ],
+      "elapsed_seconds": 8.747225200757384,
+      "ended_utc": "2026-11-15T22:33:59.506609+00:00",
+      "name": "ai_reviews",
+      "record": "ai_reviews_attempt2.json",
+      "returncode": 0,
+      "sha256": "4596b19c58ee4189b749d163fa8b3a10740a9c2e6b571804a682ee25e23bccfb",
+      "started_utc": "2026-11-15T22:33:50.759404+00:00",
+      "status": "complete"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/train_classifier.py"
+      ],
+      "elapsed_seconds": 52.31682428019121,
+      "ended_utc": "2026-11-15T21:55:20.139327+00:00",
+      "name": "classifier",
+      "record": "classifier.json",
+      "returncode": 1,
+      "sha256": "88d1a067fc1e6cf8b681045972c2373a2631e7b151647c2cd6fe04b073226279",
+      "started_utc": "2026-11-15T21:54:27.822531+00:00",
+      "status": "failed_or_deadline"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/train_classifier.py"
+      ],
+      "elapsed_seconds": 410.5774160763249,
+      "ended_utc": "2026-11-15T22:05:58.830880+00:00",
+      "name": "classifier_resume",
+      "record": "classifier_resume.json",
+      "returncode": 0,
+      "sha256": "07060d8ef1f72fb285e11f0bd9bc7019e60fa8122249791581f7aa2541238238",
+      "started_utc": "2026-11-15T21:59:08.253489+00:00",
+      "status": "complete"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/train_classifier.py"
+      ],
+      "elapsed_seconds": 155.82203206932172,
+      "ended_utc": "2026-11-15T21:59:03.293438+00:00",
+      "name": "classifier_retry1",
+      "record": "classifier_retry1.json",
+      "returncode": -15,
+      "sha256": "fb806d8d1825f8bf58705c8498673180b386d295f0eab8d43247fcb4d0127c04",
+      "started_utc": "2026-11-15T21:56:27.471434+00:00",
+      "status": "failed_or_deadline"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "development",
+        "--mode",
+        "review"
+      ],
+      "elapsed_seconds": 73.89688395801932,
+      "ended_utc": "2026-11-15T21:47:35.339539+00:00",
+      "name": "development_review",
+      "record": "development_review.json",
+      "returncode": 0,
+      "sha256": "215e7fa1f1b7f72b06b7d46d1bde38f2db667c1311fa42cfe47868331304bbe5",
+      "started_utc": "2026-11-15T21:46:21.442682+00:00",
+      "status": "complete"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "development"
+      ],
+      "elapsed_seconds": 255.60170667013153,
+      "ended_utc": "2026-11-15T22:19:26.957837+00:00",
+      "name": "development_terminal",
+      "record": "development_terminal.json",
+      "returncode": -15,
+      "sha256": "0ec63428747fd901053986efe0080a463ff65a9e5524f437830b97822d2da5a9",
+      "started_utc": "2026-11-15T22:15:11.356157+00:00",
+      "status": "failed_or_deadline"
+    },
+    {
+      "attempt": 2,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "development"
+      ],
+      "name": "development_terminal",
+      "record": "development_terminal_attempt2.json",
+      "sha256": "98aa4d9ecddea5a6a5e8773fd2c0b3cd800e7573a8528b2cf20425c3cdc5742f",
+      "started_utc": "2026-11-15T22:33:59.679260+00:00",
+      "status": "running"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/download_experiment.py"
+      ],
+      "elapsed_seconds": 863.2617124831304,
+      "ended_utc": "2026-11-15T21:54:27.673406+00:00",
+      "name": "download_remote",
+      "record": "download_remote.json",
+      "returncode": 0,
+      "sha256": "b0461da5d9c682fdb78ce5803443b44b4d44509c9415a354a8bffb3ab4b04293",
+      "started_utc": "2026-11-15T21:40:04.411720+00:00",
+      "status": "complete"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/prepare_evidence.py",
+        "--stage",
+        "cards"
+      ],
+      "elapsed_seconds": 76.43881524680182,
+      "ended_utc": "2026-11-15T22:33:50.597406+00:00",
+      "name": "evidence_cards",
+      "record": "evidence_cards.json",
+      "returncode": 0,
+      "sha256": "bdf7e678a79d0a88bcaad9a319c4fe0ffa96132dc2c9abfd2f6c3501df4e5304",
+      "started_utc": "2026-11-15T22:32:34.158617+00:00",
+      "status": "complete"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "development",
+        "--limit",
+        "2",
+        "--masks",
+        "0,1,2,4,8,7,15,-1",
+        "--tag",
+        "grammar_pilot"
+      ],
+      "elapsed_seconds": 373.41200494999066,
+      "ended_utc": "2026-11-15T22:29:40.211448+00:00",
+      "name": "grammar_pilot",
+      "record": "grammar_pilot.json",
+      "returncode": -15,
+      "sha256": "43dd07528f4a347f99b4383915e2c5778c9bb3bf40198b686ed587bc78552db1",
+      "started_utc": "2026-11-15T22:23:26.799471+00:00",
+      "status": "failed_or_deadline"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_reviewer_controls.py"
+      ],
+      "elapsed_seconds": 73.44667959306389,
+      "ended_utc": "2026-11-15T21:45:02.292543+00:00",
+      "name": "reviewer_controls",
+      "record": "reviewer_controls.json",
+      "returncode": 0,
+      "sha256": "1fc69a0eba9de0de45eb9bfdfb40bfa07100f1f7a531eef848cf9852acdf62ef",
+      "started_utc": "2026-11-15T21:43:48.845892+00:00",
+      "status": "complete"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "development",
+        "--limit",
+        "2",
+        "--masks",
+        "0,1,2,4,8,7,15,-1",
+        "--tag",
+        "xgrammar_pilot"
+      ],
+      "elapsed_seconds": 10.400527036283165,
+      "ended_utc": "2026-11-15T22:30:53.463306+00:00",
+      "name": "xgrammar_pilot",
+      "record": "xgrammar_pilot.json",
+      "returncode": 1,
+      "sha256": "389ff6545a5737612c0e507e09c81083a223bcf6bcbd1eba46e74eee838eb963",
+      "started_utc": "2026-11-15T22:30:43.062798+00:00",
+      "status": "failed_or_deadline"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "development",
+        "--limit",
+        "2",
+        "--masks",
+        "0,1,2,4,8,7,15,-1",
+        "--tag",
+        "xgrammar_pilot"
+      ],
+      "elapsed_seconds": 29.441842200234532,
+      "ended_utc": "2026-11-15T22:31:54.391107+00:00",
+      "name": "xgrammar_pilot_retry",
+      "record": "xgrammar_pilot_retry.json",
+      "returncode": 0,
+      "sha256": "4d04e2101f18aa329a27349add669e51eb35c9754430f5fb269aed010a2729bd",
+      "started_utc": "2026-11-15T22:31:24.949284+00:00",
+      "status": "complete"
+    }
+  ],
+  "output_limit_hits": {
+    "review/main": 0,
+    "terminal/free_greedy_pilot": 0,
+    "terminal/main": 0,
+    "terminal/xgrammar_pilot": 0
+  },
+  "pod_finish_instruction": "leave_running",
+  "pod_stop_requested": false,
+  "raw_record_bytes_excluded_from_git": 2379565,
+  "recorded_at_utc": "2026-11-15T22:36:29.691292+00:00",
+  "research_accounting_start_utc": "2026-11-15T20:40:57+00:00",
+  "saved_inference_records": {
+    "review/main": 540,
+    "terminal/free_greedy_pilot": 176,
+    "terminal/main": 112,
+    "terminal/xgrammar_pilot": 16
+  },
+  "saved_output_tokens": {
+    "review/main": 100751,
+    "terminal/free_greedy_pilot": 39398,
+    "terminal/main": 25443,
+    "terminal/xgrammar_pilot": 3599
+  },
+  "within_authorized_window": true
+}

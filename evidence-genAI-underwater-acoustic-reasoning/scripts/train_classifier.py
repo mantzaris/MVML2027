@@ -24,11 +24,12 @@ from underwater_reasoning.io import atomic_json,file_hash,canonical_hash
 from underwater_reasoning.runtime import budget_check,seed_all,rng_state,restore_rng,atomic_torch
 
 ROOT=Path(__file__).resolve().parents[1]
+os.environ.setdefault('TORCH_HOME',str(ROOT/'.cache/torch'))
 torch.set_num_threads(8)
 torch.set_float32_matmul_precision('high')
 
-def features(rows):
-    path=ROOT/'data/derived/mel_images.npy';ids=ROOT/'data/derived/mel_ids.json'
+def features(rows,cache_name='mel'):
+    path=ROOT/f'data/derived/{cache_name}_images.npy';ids=ROOT/f'data/derived/{cache_name}_ids.json'
     if path.exists():
         if json.loads(ids.read_text())!=[r['id'] for r in rows]:raise ValueError('Feature ID mismatch')
         return path
@@ -81,6 +82,7 @@ def fit(name,seed,lr,path,rows,max_epochs):
     if last.exists():
         cp=torch.load(last,weights_only=False,map_location='cpu');model.load_state_dict(cp['model']);opt.load_state_dict(cp['optimizer']);restore_rng(cp['rng'])
         start=cp['epoch']+1;history=cp['history'];best_f=cp['best_f'];bad=cp['bad'];restore_check=cp.get('restore_check')
+        print('RESUME',name,'next_epoch',start+1,'optimizer_states',len(opt.state),flush=True)
     t=time.monotonic()
     for epoch in range(start,max_epochs):
         budget_check(reserve_seconds=600);model.train();loss_sum=0;count=0
@@ -108,7 +110,7 @@ def fit(name,seed,lr,path,rows,max_epochs):
         if bad>=5:break
     result={'name':name,'seed':seed,'backbone_lr':lr,'head_lr':.001,'weight_decay':.01,'batch_size':32,'max_epochs':max_epochs,'patience':5,
         'history':history,'best_dev_macro_f1':best_f,'checkpoint':str(best.relative_to(ROOT)),'checkpoint_sha256':file_hash(best),
-        'restore_check':restore_check,'peak_vram_bytes':torch.cuda.max_memory_allocated(),'elapsed_seconds':time.monotonic()-t}
+        'restore_check':restore_check,'resumed_from_epoch':start,'peak_vram_bytes':torch.cuda.max_memory_allocated(),'elapsed_seconds':time.monotonic()-t}
     atomic_json(complete,result);del model,opt;torch.cuda.empty_cache();return result
 
 def main():
