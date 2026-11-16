@@ -4,7 +4,9 @@ An anonymous MVML 2027 research manuscript and its reproducibility project. All 
 
 ## Identification study and eight-page paper
 
-The active manuscript addresses a practical acoustic-assistance question: **which vessel category is present, when should the system refer the recording for review, and does a generative answer preserve the identification?** It uses the full conference allowance of **eight pages, including references**: [PDF](manuscript/manuscript.pdf), [editable DOCX](manuscript/manuscript.docx), [plain text](manuscript/manuscript.txt).
+The active manuscript develops an evidence-centred application of agentic and generative AI to underwater acoustic assistance: **what evidence should the assistant inspect, which vessel category should it report, and when should it refer a recording for review?** Two linked studies make evidence selection, category identification and generated answers separately testable on real recordings. It uses the full conference allowance of **eight pages, including references**: [PDF](manuscript/manuscript.pdf), [editable DOCX](manuscript/manuscript.docx), [plain text](manuscript/manuscript.txt).
+
+The methodological contribution connects inspectable evidence choices to correct, incorrect and withheld information. Its findings support concrete design priorities: retain useful information when reducing errors, preserve numeric category decisions during explanation, and check recording quality before trusting confidence. Effects on operator performance remain to be tested.
 
 The proposed method combines a frozen acoustic representation, measured spectral/modulation features and source-balanced training prototypes. Its fresh evaluation contains 235 recordings from 218 previously unused source groups, six transformations of each recording, 705 generative category answers and a supplementary 72-recording challenge from untrained vessel categories. Models and thresholds were frozen before fresh test inference. The supplementary challenge was added after the primary results were known and has its own pre-inference freeze.
 

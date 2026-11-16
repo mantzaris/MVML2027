@@ -6,7 +6,7 @@ The verified [author guidelines](https://mvml.org/author-guidelines/) impose an 
 
 The DOCX is US Letter, with left/right margins 11.994 mm and top/bottom 25.4 mm. Its prose instead prescribes 25 mm margins on all sides. The working document preserves the downloaded section geometry. The organizer must resolve that conflict before submission. Body text uses Times New Roman 11 pt and headings Arial; tables/captions/references use 10 pt, following the template. Fonts and every rendered page are checked in the final inspection record.
 
-The current identification-focused manuscript contains **exactly eight total pages, including references**, and a 186-word abstract. This uses the maximum allowance requested by the user. All pages were visually inspected; the final inspection record pins the PDF and DOCX hashes. The prior report-support paper remains in Git history and an ignored local archive. To rebuild the current paper from the saved completed outputs:
+The current identification-focused manuscript contains **exactly eight total pages, including references**, and a 242-word abstract. This uses the maximum allowance requested by the user. All pages were visually inspected; the final inspection record pins the PDF and DOCX hashes. The prior report-support paper remains in Git history and an ignored local archive. To rebuild the current paper from the saved completed outputs:
 
 ```bash
 .venv/bin/python scripts/make_identification_figures.py
@@ -22,3 +22,5 @@ Inspect every page after substantive edits. `results/manifests/manuscript_inspec
 Figure 3 now shows the implemented agentic acquisition loop, the earlier reporting controls, and the separate fresh-cohort generative outcomes. Its cached query counts do not imply measured runtime savings. It replaces the illustrative spectrogram figure and consolidates the previous generative table; those examples and all numerical results remain in the artifact bundle. No scientific model, protocol, threshold or test outcome changed.
 
 The organizer's [FAQ](https://www.international-aset.com/FAQ/) requires all authors to be listed in references instead of `et al.`. The current builder lists every author from the verified bibliography, using initials and surnames; the source records retain the full names. This requirement was checked on November 16, 2026.
+
+The editorial revision foregrounds the application-specific evidence-selection methodology, concrete identification findings and implications for acoustic assistance. Technical terms are explained for a general machine-learning audience, and adverse outcomes are presented as design findings with their measured tradeoffs. The experimental results and prospective primary criteria are unchanged.

@@ -1,5 +1,5 @@
 {
-  "abstract_words": 186,
+  "abstract_words": 242,
   "actual_pod_billing_hours": null,
   "actual_usd_cost": null,
   "authorized_deadline_utc": "2026-11-16T06:40:57+00:00",
@@ -261,7 +261,7 @@
     }
   ],
   "recorded_stage_elapsed_seconds_sum": 382.99543529516086,
-  "recorded_utc": "2026-11-16T09:48:10.844445+00:00",
+  "recorded_utc": "2026-11-16T15:19:53.327557+00:00",
   "research_accounting_start_utc": "2026-11-15T20:40:57+00:00",
   "stage": "completed_identification_followup",
   "submission_formatting_item": "Official template geometry and its prose specify different horizontal margins; organizer resolution remains necessary before submission.",

@@ -1,5 +1,5 @@
 {
-  "abstract_words": 186,
+  "abstract_words": 242,
   "affiliation_and_contact_omitted": true,
   "agentic_figure": {
     "aggregate_values_sha256": "a6bce6e00811eb48109e0b2df487edc1e9614bf85fb7d24edf42104b28296fa2",
@@ -14,13 +14,14 @@
   "author_line": "Anonymous author",
   "author_metadata": "Anonymous",
   "clipped_text_observed": false,
-  "docx_sha256": "c5663e468050026bcae76ebdec783d23eacef8c1f38d238781dfea0701356998",
+  "docx_sha256": "4849df2a0f64540613967fb29f4c8f411944ef477dc220cdd293b7e1399390c2",
+  "editorial_revision": "Accessible abstract, introduction, methods and conclusions foreground the distinctive application methodology and measured design findings; exploratory gains and primary null result remain explicit.",
   "figure_count": 3,
   "figures_and_tables_legible": true,
   "font_note": "Times New Roman body and tables, Arial headings; embedded Tinos/Nimbus Roman fallback glyphs in equations and Unicode notation.",
   "geometry_note": "Official template section geometry retained; horizontal-margin discrepancy with template prose remains documented for any future submission.",
-  "inspected_at_utc": "2026-11-16T09:48:10.750137+00:00",
-  "manuscript_focus": "vessel-category identification, referral and generative overrides",
+  "inspected_at_utc": "2026-11-16T15:19:53.228615+00:00",
+  "manuscript_focus": "application-specific agentic evidence selection, vessel-category identification and generated answer preservation",
   "maximum_conference_pages": 8,
   "pages": 8,
   "pages_reviewed": [
@@ -40,10 +41,11 @@
     "EAAAAA+Tinos                         TrueType          WinAnsi          yes yes yes     39  0",
     "FAAAAA+NimbusRomanRegular            Type 1            Builtin          yes yes yes     59  0"
   ],
-  "pdf_sha256": "abccf00b1abfe1e40ecd351b9e7a36e2b7e8645b1a81eb94a1341161815a081f",
+  "pdf_sha256": "730cb20bbfed432fa3fbbcb96315936c39c938e812348eb9113c4447ce7dd950",
   "reference_authors_all_listed": true,
   "repeated_table_headers_verified": true,
-  "review_method": "Visual inspection of all eight final PDF pages rendered at 1600-pixel height, the new agentic diagram/table/bar chart at publication scale, PDF font/metadata checks, DOCX table-header inspection and reference-author verification.",
+  "review_method": "Visual inspection of all eight final PDF pages rendered at 1600-pixel height after editorial revision; abstract/result consistency review, PDF font/metadata checks, DOCX table-header inspection and complete reference-list verification.",
+  "scientific_results_changed": false,
   "submission_or_publication_performed": false,
   "table_count": 3,
   "title_exact": true
