@@ -1,0 +1,20 @@
+{
+  "version": "identification-followup-v1",
+  "seed": 1729,
+  "labels": ["background", "cargo", "passenger", "tanker", "tug_tow"],
+  "fresh_test_requested_per_class": 50,
+  "fresh_test_max_per_source": 3,
+  "fresh_test_min_spacing_seconds": 600,
+  "primary_report_coverage": 0.7,
+  "regularization_C": [0.001, 0.01, 0.1, 1.0, 10.0],
+  "disagreement_penalties": [0.0, 0.25, 0.5, 1.0],
+  "stress_conditions": ["noise_20", "noise_10", "noise_0", "lowpass_2000", "gain_025", "clipping"],
+  "bootstrap_repetitions": 2000,
+  "primary_endpoint": "five-class macro-F1 without rejection on the fresh cohort",
+  "primary_comparator": "development-best of anchor, three-seed ensemble, and matched acoustic-only refit",
+  "primary_success": "macro-F1 gain at least 0.03 and positive paired source-bootstrap 95% lower bound",
+  "secondary_endpoints": ["accuracy", "per-class recall", "incorrect issued labels per 100 clips", "correct issued labels per 100 clips", "referral fraction", "conditional accuracy", "vessel/background balanced accuracy"],
+  "human_reviewers": 0,
+  "test_use": "new recordings and source groups; never optimize on the original or fresh test outcomes",
+  "budget": "existing configs/execution.json deadline; no new GPU allocation; leave Pod running"
+}

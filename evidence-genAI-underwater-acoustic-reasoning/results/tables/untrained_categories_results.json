@@ -1,0 +1,992 @@
+{
+  "clips": 72,
+  "completed_utc": "2026-11-16T04:45:58.335216+00:00",
+  "exploratory_after_primary_results": true,
+  "methods": {
+    "acoustic_refit": {
+      "by_untrained_category": {
+        "dredger": {
+          "broad_vessel_recognition": 0.7777777777777778,
+          "issued_background_labels": 1,
+          "issued_label_counts": [
+            1,
+            0,
+            1,
+            0,
+            4
+          ],
+          "n": 9,
+          "referred": 3,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 6
+        },
+        "fishing": {
+          "broad_vessel_recognition": 0.8666666666666667,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            4,
+            0,
+            4
+          ],
+          "n": 15,
+          "referred": 7,
+          "trained_category_issue_rate": 0.5333333333333333,
+          "trained_category_issued": 8
+        },
+        "pilotvessel": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 3,
+          "referred": 2,
+          "trained_category_issue_rate": 0.3333333333333333,
+          "trained_category_issued": 1
+        },
+        "pleasurecraft": {
+          "broad_vessel_recognition": 0.6,
+          "issued_background_labels": 3,
+          "issued_label_counts": [
+            3,
+            0,
+            1,
+            0,
+            4
+          ],
+          "n": 15,
+          "referred": 7,
+          "trained_category_issue_rate": 0.5333333333333333,
+          "trained_category_issued": 8
+        },
+        "rescue": {
+          "broad_vessel_recognition": 0.6,
+          "issued_background_labels": 4,
+          "issued_label_counts": [
+            4,
+            0,
+            1,
+            0,
+            3
+          ],
+          "n": 15,
+          "referred": 7,
+          "trained_category_issue_rate": 0.5333333333333333,
+          "trained_category_issued": 8
+        },
+        "sailing": {
+          "broad_vessel_recognition": 0.5333333333333333,
+          "issued_background_labels": 5,
+          "issued_label_counts": [
+            5,
+            0,
+            3,
+            0,
+            3
+          ],
+          "n": 15,
+          "referred": 4,
+          "trained_category_issue_rate": 0.7333333333333333,
+          "trained_category_issued": 11
+        }
+      },
+      "overall": {
+        "broad_vessel_recognition": 0.6666666666666666,
+        "issued_background_labels": 13,
+        "issued_label_counts": [
+          13,
+          0,
+          10,
+          0,
+          19
+        ],
+        "n": 72,
+        "referred": 30,
+        "trained_category_issue_rate": 0.5833333333333334,
+        "trained_category_issued": 42
+      }
+    },
+    "anchor": {
+      "by_untrained_category": {
+        "dredger": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 1,
+          "issued_label_counts": [
+            1,
+            0,
+            1,
+            0,
+            4
+          ],
+          "n": 9,
+          "referred": 3,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 6
+        },
+        "fishing": {
+          "broad_vessel_recognition": 0.8,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            1,
+            0,
+            4
+          ],
+          "n": 15,
+          "referred": 10,
+          "trained_category_issue_rate": 0.3333333333333333,
+          "trained_category_issued": 5
+        },
+        "pilotvessel": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          "n": 3,
+          "referred": 0,
+          "trained_category_issue_rate": 1.0,
+          "trained_category_issued": 3
+        },
+        "pleasurecraft": {
+          "broad_vessel_recognition": 0.4666666666666667,
+          "issued_background_labels": 4,
+          "issued_label_counts": [
+            4,
+            0,
+            1,
+            0,
+            2
+          ],
+          "n": 15,
+          "referred": 8,
+          "trained_category_issue_rate": 0.4666666666666667,
+          "trained_category_issued": 7
+        },
+        "rescue": {
+          "broad_vessel_recognition": 0.5333333333333333,
+          "issued_background_labels": 5,
+          "issued_label_counts": [
+            5,
+            0,
+            0,
+            0,
+            3
+          ],
+          "n": 15,
+          "referred": 7,
+          "trained_category_issue_rate": 0.5333333333333333,
+          "trained_category_issued": 8
+        },
+        "sailing": {
+          "broad_vessel_recognition": 0.4666666666666667,
+          "issued_background_labels": 6,
+          "issued_label_counts": [
+            6,
+            0,
+            1,
+            0,
+            3
+          ],
+          "n": 15,
+          "referred": 5,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 10
+        }
+      },
+      "overall": {
+        "broad_vessel_recognition": 0.5833333333333334,
+        "issued_background_labels": 16,
+        "issued_label_counts": [
+          16,
+          0,
+          4,
+          0,
+          19
+        ],
+        "n": 72,
+        "referred": 33,
+        "trained_category_issue_rate": 0.5416666666666666,
+        "trained_category_issued": 39
+      }
+    },
+    "ensemble": {
+      "by_untrained_category": {
+        "dredger": {
+          "broad_vessel_recognition": 0.7777777777777778,
+          "issued_background_labels": 1,
+          "issued_label_counts": [
+            1,
+            0,
+            0,
+            0,
+            5
+          ],
+          "n": 9,
+          "referred": 3,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 6
+        },
+        "fishing": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 1,
+          "issued_label_counts": [
+            1,
+            0,
+            0,
+            0,
+            5
+          ],
+          "n": 15,
+          "referred": 9,
+          "trained_category_issue_rate": 0.4,
+          "trained_category_issued": 6
+        },
+        "pilotvessel": {
+          "broad_vessel_recognition": 0.0,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 3,
+          "referred": 2,
+          "trained_category_issue_rate": 0.3333333333333333,
+          "trained_category_issued": 1
+        },
+        "pleasurecraft": {
+          "broad_vessel_recognition": 0.3333333333333333,
+          "issued_background_labels": 3,
+          "issued_label_counts": [
+            3,
+            0,
+            2,
+            0,
+            1
+          ],
+          "n": 15,
+          "referred": 9,
+          "trained_category_issue_rate": 0.4,
+          "trained_category_issued": 6
+        },
+        "rescue": {
+          "broad_vessel_recognition": 0.4666666666666667,
+          "issued_background_labels": 4,
+          "issued_label_counts": [
+            4,
+            0,
+            2,
+            0,
+            4
+          ],
+          "n": 15,
+          "referred": 5,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 10
+        },
+        "sailing": {
+          "broad_vessel_recognition": 0.4666666666666667,
+          "issued_background_labels": 6,
+          "issued_label_counts": [
+            6,
+            0,
+            1,
+            0,
+            3
+          ],
+          "n": 15,
+          "referred": 5,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 10
+        }
+      },
+      "overall": {
+        "broad_vessel_recognition": 0.5,
+        "issued_background_labels": 15,
+        "issued_label_counts": [
+          15,
+          0,
+          5,
+          0,
+          19
+        ],
+        "n": 72,
+        "referred": 33,
+        "trained_category_issue_rate": 0.5416666666666666,
+        "trained_category_issued": 39
+      }
+    },
+    "fusion": {
+      "by_untrained_category": {
+        "dredger": {
+          "broad_vessel_recognition": 0.7777777777777778,
+          "issued_background_labels": 1,
+          "issued_label_counts": [
+            1,
+            0,
+            0,
+            0,
+            5
+          ],
+          "n": 9,
+          "referred": 3,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 6
+        },
+        "fishing": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          "n": 15,
+          "referred": 10,
+          "trained_category_issue_rate": 0.3333333333333333,
+          "trained_category_issued": 5
+        },
+        "pilotvessel": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "n": 3,
+          "referred": 1,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 2
+        },
+        "pleasurecraft": {
+          "broad_vessel_recognition": 0.4666666666666667,
+          "issued_background_labels": 4,
+          "issued_label_counts": [
+            4,
+            0,
+            1,
+            0,
+            2
+          ],
+          "n": 15,
+          "referred": 8,
+          "trained_category_issue_rate": 0.4666666666666667,
+          "trained_category_issued": 7
+        },
+        "rescue": {
+          "broad_vessel_recognition": 0.5333333333333333,
+          "issued_background_labels": 3,
+          "issued_label_counts": [
+            3,
+            0,
+            2,
+            0,
+            1
+          ],
+          "n": 15,
+          "referred": 9,
+          "trained_category_issue_rate": 0.4,
+          "trained_category_issued": 6
+        },
+        "sailing": {
+          "broad_vessel_recognition": 0.26666666666666666,
+          "issued_background_labels": 5,
+          "issued_label_counts": [
+            5,
+            0,
+            0,
+            1,
+            3
+          ],
+          "n": 15,
+          "referred": 6,
+          "trained_category_issue_rate": 0.6,
+          "trained_category_issued": 9
+        }
+      },
+      "overall": {
+        "broad_vessel_recognition": 0.5277777777777778,
+        "issued_background_labels": 13,
+        "issued_label_counts": [
+          13,
+          0,
+          3,
+          1,
+          18
+        ],
+        "n": 72,
+        "referred": 37,
+        "trained_category_issue_rate": 0.4861111111111111,
+        "trained_category_issued": 35
+      }
+    },
+    "fusion_maxprob": {
+      "by_untrained_category": {
+        "dredger": {
+          "broad_vessel_recognition": 0.7777777777777778,
+          "issued_background_labels": 1,
+          "issued_label_counts": [
+            1,
+            0,
+            0,
+            0,
+            5
+          ],
+          "n": 9,
+          "referred": 3,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 6
+        },
+        "fishing": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "n": 15,
+          "referred": 9,
+          "trained_category_issue_rate": 0.4,
+          "trained_category_issued": 6
+        },
+        "pilotvessel": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "n": 3,
+          "referred": 1,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 2
+        },
+        "pleasurecraft": {
+          "broad_vessel_recognition": 0.4666666666666667,
+          "issued_background_labels": 4,
+          "issued_label_counts": [
+            4,
+            0,
+            2,
+            0,
+            2
+          ],
+          "n": 15,
+          "referred": 7,
+          "trained_category_issue_rate": 0.5333333333333333,
+          "trained_category_issued": 8
+        },
+        "rescue": {
+          "broad_vessel_recognition": 0.5333333333333333,
+          "issued_background_labels": 3,
+          "issued_label_counts": [
+            3,
+            0,
+            2,
+            0,
+            1
+          ],
+          "n": 15,
+          "referred": 9,
+          "trained_category_issue_rate": 0.4,
+          "trained_category_issued": 6
+        },
+        "sailing": {
+          "broad_vessel_recognition": 0.26666666666666666,
+          "issued_background_labels": 5,
+          "issued_label_counts": [
+            5,
+            0,
+            0,
+            1,
+            3
+          ],
+          "n": 15,
+          "referred": 6,
+          "trained_category_issue_rate": 0.6,
+          "trained_category_issued": 9
+        }
+      },
+      "overall": {
+        "broad_vessel_recognition": 0.5277777777777778,
+        "issued_background_labels": 13,
+        "issued_label_counts": [
+          13,
+          0,
+          4,
+          1,
+          19
+        ],
+        "n": 72,
+        "referred": 35,
+        "trained_category_issue_rate": 0.5138888888888888,
+        "trained_category_issued": 37
+      }
+    },
+    "no_physical": {
+      "by_untrained_category": {
+        "dredger": {
+          "broad_vessel_recognition": 0.7777777777777778,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            1,
+            0,
+            3
+          ],
+          "n": 9,
+          "referred": 5,
+          "trained_category_issue_rate": 0.4444444444444444,
+          "trained_category_issued": 4
+        },
+        "fishing": {
+          "broad_vessel_recognition": 0.9333333333333333,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            4,
+            0,
+            3
+          ],
+          "n": 15,
+          "referred": 8,
+          "trained_category_issue_rate": 0.4666666666666667,
+          "trained_category_issued": 7
+        },
+        "pilotvessel": {
+          "broad_vessel_recognition": 1.0,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 3,
+          "referred": 2,
+          "trained_category_issue_rate": 0.3333333333333333,
+          "trained_category_issued": 1
+        },
+        "pleasurecraft": {
+          "broad_vessel_recognition": 0.6,
+          "issued_background_labels": 3,
+          "issued_label_counts": [
+            3,
+            0,
+            1,
+            0,
+            4
+          ],
+          "n": 15,
+          "referred": 7,
+          "trained_category_issue_rate": 0.5333333333333333,
+          "trained_category_issued": 8
+        },
+        "rescue": {
+          "broad_vessel_recognition": 0.6,
+          "issued_background_labels": 3,
+          "issued_label_counts": [
+            3,
+            0,
+            1,
+            0,
+            3
+          ],
+          "n": 15,
+          "referred": 8,
+          "trained_category_issue_rate": 0.4666666666666667,
+          "trained_category_issued": 7
+        },
+        "sailing": {
+          "broad_vessel_recognition": 0.6,
+          "issued_background_labels": 5,
+          "issued_label_counts": [
+            5,
+            0,
+            3,
+            0,
+            2
+          ],
+          "n": 15,
+          "referred": 5,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 10
+        }
+      },
+      "overall": {
+        "broad_vessel_recognition": 0.7083333333333334,
+        "issued_background_labels": 11,
+        "issued_label_counts": [
+          11,
+          0,
+          10,
+          0,
+          16
+        ],
+        "n": 72,
+        "referred": 35,
+        "trained_category_issue_rate": 0.5138888888888888,
+        "trained_category_issued": 37
+      }
+    },
+    "no_prototypes": {
+      "by_untrained_category": {
+        "dredger": {
+          "broad_vessel_recognition": 0.7777777777777778,
+          "issued_background_labels": 1,
+          "issued_label_counts": [
+            1,
+            0,
+            0,
+            0,
+            5
+          ],
+          "n": 9,
+          "referred": 3,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 6
+        },
+        "fishing": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          "n": 15,
+          "referred": 10,
+          "trained_category_issue_rate": 0.3333333333333333,
+          "trained_category_issued": 5
+        },
+        "pilotvessel": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "n": 3,
+          "referred": 1,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 2
+        },
+        "pleasurecraft": {
+          "broad_vessel_recognition": 0.5333333333333333,
+          "issued_background_labels": 4,
+          "issued_label_counts": [
+            4,
+            0,
+            1,
+            0,
+            2
+          ],
+          "n": 15,
+          "referred": 8,
+          "trained_category_issue_rate": 0.4666666666666667,
+          "trained_category_issued": 7
+        },
+        "rescue": {
+          "broad_vessel_recognition": 0.6,
+          "issued_background_labels": 4,
+          "issued_label_counts": [
+            4,
+            0,
+            2,
+            0,
+            1
+          ],
+          "n": 15,
+          "referred": 8,
+          "trained_category_issue_rate": 0.4666666666666667,
+          "trained_category_issued": 7
+        },
+        "sailing": {
+          "broad_vessel_recognition": 0.3333333333333333,
+          "issued_background_labels": 5,
+          "issued_label_counts": [
+            5,
+            0,
+            1,
+            0,
+            2
+          ],
+          "n": 15,
+          "referred": 7,
+          "trained_category_issue_rate": 0.5333333333333333,
+          "trained_category_issued": 8
+        }
+      },
+      "overall": {
+        "broad_vessel_recognition": 0.5694444444444444,
+        "issued_background_labels": 14,
+        "issued_label_counts": [
+          14,
+          0,
+          4,
+          0,
+          17
+        ],
+        "n": 72,
+        "referred": 37,
+        "trained_category_issue_rate": 0.4861111111111111,
+        "trained_category_issued": 35
+      }
+    },
+    "physical_only": {
+      "by_untrained_category": {
+        "dredger": {
+          "broad_vessel_recognition": 0.7777777777777778,
+          "issued_background_labels": 1,
+          "issued_label_counts": [
+            1,
+            0,
+            0,
+            0,
+            5
+          ],
+          "n": 9,
+          "referred": 3,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 6
+        },
+        "fishing": {
+          "broad_vessel_recognition": 0.3333333333333333,
+          "issued_background_labels": 2,
+          "issued_label_counts": [
+            2,
+            0,
+            1,
+            0,
+            4
+          ],
+          "n": 15,
+          "referred": 8,
+          "trained_category_issue_rate": 0.4666666666666667,
+          "trained_category_issued": 7
+        },
+        "pilotvessel": {
+          "broad_vessel_recognition": 1.0,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            1,
+            0,
+            2
+          ],
+          "n": 3,
+          "referred": 0,
+          "trained_category_issue_rate": 1.0,
+          "trained_category_issued": 3
+        },
+        "pleasurecraft": {
+          "broad_vessel_recognition": 0.4,
+          "issued_background_labels": 5,
+          "issued_label_counts": [
+            5,
+            0,
+            3,
+            0,
+            2
+          ],
+          "n": 15,
+          "referred": 5,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 10
+        },
+        "rescue": {
+          "broad_vessel_recognition": 0.26666666666666666,
+          "issued_background_labels": 6,
+          "issued_label_counts": [
+            6,
+            0,
+            1,
+            0,
+            0
+          ],
+          "n": 15,
+          "referred": 8,
+          "trained_category_issue_rate": 0.4666666666666667,
+          "trained_category_issued": 7
+        },
+        "sailing": {
+          "broad_vessel_recognition": 0.26666666666666666,
+          "issued_background_labels": 6,
+          "issued_label_counts": [
+            6,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 15,
+          "referred": 8,
+          "trained_category_issue_rate": 0.4666666666666667,
+          "trained_category_issued": 7
+        }
+      },
+      "overall": {
+        "broad_vessel_recognition": 0.4027777777777778,
+        "issued_background_labels": 20,
+        "issued_label_counts": [
+          20,
+          0,
+          6,
+          0,
+          14
+        ],
+        "n": 72,
+        "referred": 32,
+        "trained_category_issue_rate": 0.5555555555555556,
+        "trained_category_issued": 40
+      }
+    },
+    "prototype_vote": {
+      "by_untrained_category": {
+        "dredger": {
+          "broad_vessel_recognition": 0.8888888888888888,
+          "issued_background_labels": 1,
+          "issued_label_counts": [
+            1,
+            0,
+            0,
+            0,
+            2
+          ],
+          "n": 9,
+          "referred": 6,
+          "trained_category_issue_rate": 0.3333333333333333,
+          "trained_category_issued": 3
+        },
+        "fishing": {
+          "broad_vessel_recognition": 0.9333333333333333,
+          "issued_background_labels": 0,
+          "issued_label_counts": [
+            0,
+            0,
+            1,
+            0,
+            4
+          ],
+          "n": 15,
+          "referred": 10,
+          "trained_category_issue_rate": 0.3333333333333333,
+          "trained_category_issued": 5
+        },
+        "pilotvessel": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 1,
+          "issued_label_counts": [
+            1,
+            0,
+            0,
+            0,
+            2
+          ],
+          "n": 3,
+          "referred": 0,
+          "trained_category_issue_rate": 1.0,
+          "trained_category_issued": 3
+        },
+        "pleasurecraft": {
+          "broad_vessel_recognition": 0.6666666666666666,
+          "issued_background_labels": 4,
+          "issued_label_counts": [
+            4,
+            0,
+            1,
+            0,
+            4
+          ],
+          "n": 15,
+          "referred": 6,
+          "trained_category_issue_rate": 0.6,
+          "trained_category_issued": 9
+        },
+        "rescue": {
+          "broad_vessel_recognition": 0.7333333333333333,
+          "issued_background_labels": 4,
+          "issued_label_counts": [
+            4,
+            0,
+            0,
+            0,
+            3
+          ],
+          "n": 15,
+          "referred": 8,
+          "trained_category_issue_rate": 0.4666666666666667,
+          "trained_category_issued": 7
+        },
+        "sailing": {
+          "broad_vessel_recognition": 0.6,
+          "issued_background_labels": 6,
+          "issued_label_counts": [
+            6,
+            1,
+            0,
+            0,
+            3
+          ],
+          "n": 15,
+          "referred": 5,
+          "trained_category_issue_rate": 0.6666666666666666,
+          "trained_category_issued": 10
+        }
+      },
+      "overall": {
+        "broad_vessel_recognition": 0.75,
+        "issued_background_labels": 16,
+        "issued_label_counts": [
+          16,
+          1,
+          2,
+          0,
+          18
+        ],
+        "n": 72,
+        "referred": 35,
+        "trained_category_issue_rate": 0.5138888888888888,
+        "trained_category_issued": 37
+      }
+    }
+  },
+  "no_refitting_or_threshold_change": true,
+  "predictions_sha256": "46c32e8be499e61eef988f1d4d3c0a820b95b60a9ffe3fb7f3f0e7ec0912dcbf",
+  "primary_success_unchanged": true,
+  "source_groups": 65
+}

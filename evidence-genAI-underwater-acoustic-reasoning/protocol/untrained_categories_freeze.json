@@ -1,0 +1,14 @@
+{
+  "files": {
+    "data/private/untrained_categories_manifest.json": "a2f45caf3c0ac80985d071a46e1d172f16d6ad40a60d25b694ea4bac4207ae88",
+    "data/private/untrained_categories_waveform_hashes.json": "27e357280865bd791040a7efb7103ddf0a2340c6b100bad41407686d758c1138",
+    "protocol/identification_freeze.json": "7eeb37ce60b20a789bb121d767527a80abb18423421c7cff2499a89648066b89",
+    "protocol/untrained_categories_followup.md": "0cd5b9b1951f8fd72cd781cf0c70b0d0eed59cb7091dba5072fdd93333b42a63",
+    "results/manifests/untrained_categories_cohort.json": "1da5d48129944c4873931206c6aa16a2f05016a9410897b4e0339a7a801b3fd8",
+    "scripts/evaluate_untrained_categories.py": "214d0b4807e448fdeae494f99b1d64190bb8fc8c0a4aeb133d74096befe1af0e",
+    "scripts/prepare_untrained_categories.py": "f7a2cc9c1327f95f5880f0f5b38950409dc03f3b8d5b6b1558a0aceb3a6a37f3"
+  },
+  "frozen_utc": "2026-11-16T04:41:54.123997+00:00",
+  "primary_results_already_known": true,
+  "supplementary_outcomes_examined": false
+}

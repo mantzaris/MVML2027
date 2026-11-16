@@ -1,0 +1,47 @@
+[
+  {
+    "key": "selectivenet",
+    "type": "inproceedings",
+    "fields": {
+      "author": "Yonatan Geifman and Ran El-Yaniv",
+      "title": "SelectiveNet: A Deep Neural Network with an Integrated Reject Option",
+      "booktitle": "Proceedings of the 36th International Conference on Machine Learning",
+      "volume": "97",
+      "pages": "2151--2159",
+      "year": "2019",
+      "url": "https://proceedings.mlr.press/v97/geifman19a.html"
+    },
+    "verified_utc": "2026-11-16",
+    "method_relevance": "Integrated classification and rejection already exist; our post-hoc threshold and disagreement score do not reproduce SelectiveNet or inherit its theoretical guarantees."
+  },
+  {
+    "key": "underwater_feature_fusion",
+    "type": "article",
+    "fields": {
+      "author": "Xingmei Wang and Anhua Liu and Yu Zhang and Fuzhao Xue",
+      "title": "Underwater Acoustic Target Recognition: A Combination of Multi-Dimensional Fusion Features and Modified Deep Neural Network",
+      "journal": "Remote Sensing",
+      "volume": "11",
+      "number": "16",
+      "pages": "1888",
+      "year": "2019",
+      "doi": "10.3390/rs11161888",
+      "url": "https://www.mdpi.com/2072-4292/11/16/1888"
+    },
+    "verified_utc": "2026-11-16",
+    "method_relevance": "Underwater feature fusion predates this study; this primary paper combines GFCC/MEMD features and a GMM-modified DNN. We do not claim feature fusion itself is novel."
+  },
+  {
+    "key": "pamguard_workflow",
+    "type": "misc",
+    "fields": {
+      "author": "PAMGuard",
+      "title": "Core PAMGuard Modules",
+      "year": "2026",
+      "url": "https://www.pamguard.org/coremodules.html",
+      "note": "Official software documentation, accessed 2026-11-16; access year is not a publication-year claim"
+    },
+    "verified_utc": "2026-11-16",
+    "method_relevance": "Workflow context only: acoustic displays, detection, classification and review. This documentation is not evidence that our system reduces operator workload."
+  }
+]

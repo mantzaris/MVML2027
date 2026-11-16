@@ -1,0 +1,194 @@
+{
+  "additional_paired_contrasts": {
+    "acoustic_refit": {
+      "accuracy": {
+        "ci95": [
+          -0.00854700854700852,
+          0.09565217391304348
+        ],
+        "difference": 0.04255319148936165
+      },
+      "cluster_field": "source_group",
+      "clusters": 218,
+      "comparator": "acoustic_refit",
+      "macro_f1": {
+        "ci95": [
+          -0.013882728549381402,
+          0.08915514124229573
+        ],
+        "difference": 0.037066335960903474
+      },
+      "repetitions": 2000
+    },
+    "anchor": {
+      "accuracy": {
+        "ci95": [
+          -0.01694915254237284,
+          0.12228414923772311
+        ],
+        "difference": 0.051063829787234005
+      },
+      "cluster_field": "source_group",
+      "clusters": 218,
+      "comparator": "anchor",
+      "macro_f1": {
+        "ci95": [
+          -0.006812469536323512,
+          0.13152336748483132
+        ],
+        "difference": 0.06034747760446635
+      },
+      "repetitions": 2000
+    },
+    "no_physical": {
+      "accuracy": {
+        "ci95": [
+          0.012820512820512775,
+          0.13080675473992592
+        ],
+        "difference": 0.07234042553191489
+      },
+      "cluster_field": "source_group",
+      "clusters": 218,
+      "comparator": "no_physical",
+      "macro_f1": {
+        "ci95": [
+          0.006900772588547724,
+          0.12508962075795022
+        ],
+        "difference": 0.06613650926692949
+      },
+      "repetitions": 2000
+    },
+    "no_prototypes": {
+      "accuracy": {
+        "ci95": [
+          -0.016950955643707237,
+          0.026434641924291527
+        ],
+        "difference": 0.004255319148936176
+      },
+      "cluster_field": "source_group",
+      "clusters": 218,
+      "comparator": "no_prototypes",
+      "macro_f1": {
+        "ci95": [
+          -0.019897899830030895,
+          0.02429125496261701
+        ],
+        "difference": 0.0013688669831886102
+      },
+      "repetitions": 2000
+    }
+  },
+  "analysis_status": "exploratory descriptive follow-up; primary criterion unchanged",
+  "class_recall_contrasts": {
+    "acoustic_refit": {
+      "background": {
+        "ci95": [
+          0.02,
+          0.2
+        ],
+        "recall_difference": 0.1,
+        "source_groups": 50
+      },
+      "cargo": {
+        "ci95": [
+          -0.16,
+          0.12
+        ],
+        "recall_difference": -0.02,
+        "source_groups": 50
+      },
+      "passenger": {
+        "ci95": [
+          -0.10533428165007111,
+          0.11764705882352941
+        ],
+        "recall_difference": 0.0,
+        "source_groups": 25
+      },
+      "tanker": {
+        "ci95": [
+          -0.1,
+          0.1
+        ],
+        "recall_difference": 0.0,
+        "source_groups": 50
+      },
+      "tug_tow": {
+        "ci95": [
+          0.019230769230769232,
+          0.23404255319148937
+        ],
+        "recall_difference": 0.12,
+        "source_groups": 43
+      }
+    },
+    "ensemble": {
+      "background": {
+        "ci95": [
+          -0.18,
+          0.0004999999999972715
+        ],
+        "recall_difference": -0.08,
+        "source_groups": 50
+      },
+      "cargo": {
+        "ci95": [
+          -0.48,
+          -0.12
+        ],
+        "recall_difference": -0.3,
+        "source_groups": 50
+      },
+      "passenger": {
+        "ci95": [
+          -0.3226043643263757,
+          0.05003205128205111
+        ],
+        "recall_difference": -0.14285714285714285,
+        "source_groups": 25
+      },
+      "tanker": {
+        "ci95": [
+          0.28,
+          0.6
+        ],
+        "recall_difference": 0.44,
+        "source_groups": 50
+      },
+      "tug_tow": {
+        "ci95": [
+          -0.16666666666666666,
+          0.0909948542024009
+        ],
+        "recall_difference": -0.04,
+        "source_groups": 43
+      }
+    }
+  },
+  "generator_overrides": {
+    "acoustic_prior": {
+      "generator_correct": 99,
+      "generator_issued": 167,
+      "matched_count_is_test_ranked_descriptive": true,
+      "numeric_correct_at_same_number_issued": 107,
+      "numeric_correct_on_same_generator_issued_records": 98,
+      "numeric_correct_to_withheld": 32,
+      "numeric_correct_to_wrong_label": 3,
+      "numeric_wrong_corrected": 4
+    },
+    "fused_evidence": {
+      "generator_correct": 99,
+      "generator_issued": 143,
+      "matched_count_is_test_ranked_descriptive": true,
+      "numeric_correct_at_same_number_issued": 103,
+      "numeric_correct_on_same_generator_issued_records": 103,
+      "numeric_correct_to_withheld": 39,
+      "numeric_correct_to_wrong_label": 7,
+      "numeric_wrong_corrected": 3
+    }
+  },
+  "intervals_are_pointwise_not_simultaneous": true
+}

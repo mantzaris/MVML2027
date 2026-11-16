@@ -1,0 +1,17 @@
+{
+  "active_compute_processes": [],
+  "gpu_csv": "NVIDIA RTX PRO 4500 Blackwell, 32623, 2, 0",
+  "gpu_csv_fields": [
+    "name",
+    "memory_total_mib",
+    "memory_used_mib",
+    "utilization_percent"
+  ],
+  "gpu_idle_at_observation": true,
+  "pod_finish_instruction": "leave_running",
+  "pod_running": true,
+  "pod_stop_requested": false,
+  "recorded_utc": "2026-11-16T05:10:19.916393+00:00",
+  "workspace_free_bytes": 5474066432,
+  "workspace_total_bytes": 53687091200
+}

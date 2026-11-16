@@ -1,0 +1,291 @@
+{
+  "abstract_words": 186,
+  "actual_pod_billing_hours": null,
+  "actual_usd_cost": null,
+  "authorized_deadline_utc": "2026-11-16T06:40:57+00:00",
+  "conservative_window_through_last_worker_job_hours": 8.083940029722223,
+  "followup_audit_passed": true,
+  "fresh_clips": 235,
+  "fresh_source_groups": 218,
+  "generative_development_calls": 20,
+  "generative_test_calls": 705,
+  "human_reviewers": 0,
+  "identification_targets": "released dataset categories, not AI or human-review labels",
+  "large_artifacts_excluded_from_git": true,
+  "last_followup_job_ended_utc": "2026-11-16T04:45:59.184107+00:00",
+  "local_preservation": {
+    "followup": {
+      "all_match": true,
+      "bytes": 1121547644,
+      "files": 2465,
+      "index_sha256": "c718b36a0736605f099928d6734e0aa9c97f1c5da0ee29325fa00a9b42ba5a40",
+      "large_artifacts_excluded_from_git": true,
+      "mismatches": [],
+      "regenerable_mel_image_caches_included": false,
+      "scope": "fresh and stress audio, numerical arrays, raw generation, trained follow-up model, execution records",
+      "verified_utc": "2026-11-16T05:08:39.266399+00:00"
+    },
+    "original_study": {
+      "all_match": true,
+      "bytes": 7316031140,
+      "categories": {
+        "audio": {
+          "bytes": 4981475412,
+          "files": 7783
+        },
+        "checkpoints": {
+          "bytes": 2213645042,
+          "files": 16
+        },
+        "classifier_caches": {
+          "bytes": 66869041,
+          "files": 4
+        },
+        "evidence": {
+          "bytes": 5528159,
+          "files": 630
+        },
+        "job_records": {
+          "bytes": 16790,
+          "files": 40
+        },
+        "locked_protocol": {
+          "bytes": 13327,
+          "files": 2
+        },
+        "predictions_and_audits": {
+          "bytes": 40373467,
+          "files": 8881
+        },
+        "private_manifests": {
+          "bytes": 6738927,
+          "files": 4
+        },
+        "references": {
+          "bytes": 1210689,
+          "files": 1170
+        },
+        "worker_logs": {
+          "bytes": 160286,
+          "files": 51
+        }
+      },
+      "content_digest": "0d5efa9dc4bab6715f41dbcca563fe7229f9fd4e402edb0149bece3f81725e8c",
+      "excluded_recomputable_assets": [
+        "pretrained model download caches",
+        "mel-image feature caches",
+        "Python environments"
+      ],
+      "files": 18581,
+      "mismatch_count": 0,
+      "private_mismatch_record": null,
+      "trained_checkpoints": [
+        {
+          "bytes": 121101,
+          "category": "checkpoints",
+          "path": "checkpoints/controller_class_loss_17.pt",
+          "sha256": "1f53aff528d732d47a9a1e0486f607bb430375f0845b771ecc9985ddb7b89578"
+        },
+        {
+          "bytes": 121357,
+          "category": "checkpoints",
+          "path": "checkpoints/controller_class_loss_29.pt",
+          "sha256": "8e426b0006ae6341e027e46aeee462b1f6ba3e02fe0693ed75fb111fa4a9d929"
+        },
+        {
+          "bytes": 121165,
+          "category": "checkpoints",
+          "path": "checkpoints/controller_class_loss_43.pt",
+          "sha256": "1a1e0a987f75231c67f56bb5e90feaad9de969eba036aa887d7c7f4d5b0814d9"
+        },
+        {
+          "bytes": 121165,
+          "category": "checkpoints",
+          "path": "checkpoints/controller_loss_17.pt",
+          "sha256": "1a5ecec6f30aa64e54c2d30c302d0f1acbdf9aacb3636d221f2f19552d9cae69"
+        },
+        {
+          "bytes": 121229,
+          "category": "checkpoints",
+          "path": "checkpoints/controller_loss_29.pt",
+          "sha256": "7a094120249b6d4c8a0197169454bfe54c9a1066ba83de1a6e59637cab629f8b"
+        },
+        {
+          "bytes": 121293,
+          "category": "checkpoints",
+          "path": "checkpoints/controller_loss_43.pt",
+          "sha256": "92a8ba983b8c5f36b4c13a19bfdd3f82b82ec918464c6bf7c1bf77b3abbcbdca"
+        },
+        {
+          "bytes": 110847521,
+          "category": "checkpoints",
+          "path": "checkpoints/search17_lr1e-05_best.pt",
+          "sha256": "2e481567d60d39cea6a2faedf1546ccdb9060d8dbb367336b9618bbcf08bdb56"
+        },
+        {
+          "bytes": 331735603,
+          "category": "checkpoints",
+          "path": "checkpoints/search17_lr1e-05_last.pt",
+          "sha256": "287f852f1322e154ba668e1d0c4634eee0b0ee5842a20e7c6ed2d02f4a9fd07c"
+        },
+        {
+          "bytes": 110847521,
+          "category": "checkpoints",
+          "path": "checkpoints/search17_lr1e-06_best.pt",
+          "sha256": "476a4045f3f846e3eab7de94b3b19ca43756cf5412314313d80261c22d2e533f"
+        },
+        {
+          "bytes": 331736883,
+          "category": "checkpoints",
+          "path": "checkpoints/search17_lr1e-06_last.pt",
+          "sha256": "3827cb0cf7845da134641eb25c6cdd6156343886d550c8acc0639c0b732c4db7"
+        },
+        {
+          "bytes": 110847521,
+          "category": "checkpoints",
+          "path": "checkpoints/search17_lr3e-05_best.pt",
+          "sha256": "b01f84bcdb20f94b5940b8ef62442b948fd9bd8f2867e00087fd3e181059c0af"
+        },
+        {
+          "bytes": 331735795,
+          "category": "checkpoints",
+          "path": "checkpoints/search17_lr3e-05_last.pt",
+          "sha256": "f56b8aecda0c6790fd7096f46b8e81bdbb6441838bf0d9bd46c44d81f6a7ed1e"
+        },
+        {
+          "bytes": 110847521,
+          "category": "checkpoints",
+          "path": "checkpoints/seed29_lr1e-05_best.pt",
+          "sha256": "03d80417d7f47268e70e9ac803d18accfbafcc3041550443eed7ae22dd19fc69"
+        },
+        {
+          "bytes": 331735923,
+          "category": "checkpoints",
+          "path": "checkpoints/seed29_lr1e-05_last.pt",
+          "sha256": "e3a31d2f9d0d2184248de9b7ddb14f7238254997b7d7bbd0d3591ee3246ac733"
+        },
+        {
+          "bytes": 110847521,
+          "category": "checkpoints",
+          "path": "checkpoints/seed43_lr1e-05_best.pt",
+          "sha256": "a5cefe832c71c352b2b3f3432d8f87b51e1b63a6b24553f6ffdaa693100b0a8b"
+        },
+        {
+          "bytes": 331735923,
+          "category": "checkpoints",
+          "path": "checkpoints/seed43_lr1e-05_last.pt",
+          "sha256": "8a8fc16926fcecd610c42ea4d98fa29785d98d7bd51204ca12aa3e459660fb4c"
+        }
+      ],
+      "verified_at_utc": "2026-11-16T01:33:38.221618+00:00",
+      "worker_index_sha256": "7ad3f8f805176908a64d37fe6904384ff89764cd9dd18ca1a8466a72158e255e"
+    }
+  },
+  "manuscript_authorship": "anonymous by user instruction",
+  "maximum_conference_pages": 8,
+  "no_push_or_submission_performed": true,
+  "original_scientific_artifacts_unchanged": true,
+  "pdf_pages": 8,
+  "portable_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 62,
+    "skipped": 1,
+    "tests": 63
+  },
+  "primary_comparator": "ensemble",
+  "primary_macro_f1_contrast": {
+    "ci95": [
+      -0.07343725083669932,
+      0.06569774996721087
+    ],
+    "difference": -0.0030744226301920863
+  },
+  "primary_success": false,
+  "recorded_guarded_worker_stages": [
+    {
+      "elapsed_seconds": 3.234087523072958,
+      "ended_utc": "2026-11-16T04:32:54.149889+00:00",
+      "name": "identification_analysis",
+      "record_sha256": "9103d40db60914f8e46e32d6ff843e11aa92689963dfded211ac3a539d35051a",
+      "started_utc": "2026-11-16T04:32:50.915824+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 16.1613638298586,
+      "ended_utc": "2026-11-16T04:27:11.678953+00:00",
+      "name": "identification_features",
+      "record_sha256": "44caad6fe3f494acbb98a2ef68deb08efa96c2be9b751a39ea1547fcc0156402",
+      "started_utc": "2026-11-16T04:26:55.517616+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 21.918868890032172,
+      "ended_utc": "2026-11-16T04:27:33.766629+00:00",
+      "name": "identification_inference",
+      "record_sha256": "e498014ba583d908f06820c680c18e4a3533736b21a949c05353baaab9b5b233",
+      "started_utc": "2026-11-16T04:27:11.847788+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 315.5015787589364,
+      "ended_utc": "2026-11-16T04:32:50.737897+00:00",
+      "name": "identification_omni",
+      "record_sha256": "790a328582150a5b16c4394b84d3da1c0e1c5cf2ac3069e12aeb2172ebc00cfe",
+      "started_utc": "2026-11-16T04:27:35.236347+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 15.653572557959706,
+      "ended_utc": "2026-11-16T04:21:52.869061+00:00",
+      "name": "identification_omni_pilot",
+      "record_sha256": "587416787f7f15e62514c037571ad67282a31ccd9e82bbf4ee79944142f5d407",
+      "started_utc": "2026-11-16T04:21:37.215546+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 1.1287838043645024,
+      "ended_utc": "2026-11-16T04:27:35.065266+00:00",
+      "name": "identification_predictions",
+      "record_sha256": "738f6d340db74090079cd083f2d31e9eb69c0d080d053e0d35bb704b555299c3",
+      "started_utc": "2026-11-16T04:27:33.936496+00:00",
+      "status": "complete"
+    },
+    {
+      "elapsed_seconds": 9.397179930936545,
+      "ended_utc": "2026-11-16T04:45:59.184107+00:00",
+      "name": "untrained_categories",
+      "record_sha256": "b7e43612a68c7b116be789165b1cda88268106fe30dd959f7f4a8916dd9055e2",
+      "started_utc": "2026-11-16T04:45:49.786953+00:00",
+      "status": "complete"
+    }
+  ],
+  "recorded_stage_elapsed_seconds_sum": 382.99543529516086,
+  "recorded_utc": "2026-11-16T05:11:18.610899+00:00",
+  "research_accounting_start_utc": "2026-11-15T20:40:57+00:00",
+  "stage": "completed_identification_followup",
+  "submission_formatting_item": "Official template geometry and its prose specify different horizontal margins; organizer resolution remains necessary before submission.",
+  "test_report_sha256": "a773e1feb27deb345f0a41e44888a7aaa5d74a067c1feb8d87345e0a8ee48b52",
+  "timing_scope": "Wall time through the last recorded follow-up worker job, not GPU utilization or billed allocation. Fitting summaries precede the prospective freeze; these seven guarded stages cover the pilot and fresh evaluations.",
+  "transformed_clips": 1410,
+  "untrained_category_clips": 72,
+  "untrained_category_source_groups": 65,
+  "within_original_ten_hour_window": true,
+  "worker_status": {
+    "active_compute_processes": [],
+    "gpu_csv": "NVIDIA RTX PRO 4500 Blackwell, 32623, 2, 0",
+    "gpu_csv_fields": [
+      "name",
+      "memory_total_mib",
+      "memory_used_mib",
+      "utilization_percent"
+    ],
+    "gpu_idle_at_observation": true,
+    "pod_finish_instruction": "leave_running",
+    "pod_running": true,
+    "pod_stop_requested": false,
+    "recorded_utc": "2026-11-16T05:10:19.916393+00:00",
+    "workspace_free_bytes": 5474066432,
+    "workspace_total_bytes": 53687091200
+  }
+}

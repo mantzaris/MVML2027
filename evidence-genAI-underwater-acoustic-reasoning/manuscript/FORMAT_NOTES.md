@@ -6,15 +6,14 @@ The verified [author guidelines](https://mvml.org/author-guidelines/) impose an 
 
 The DOCX is US Letter, with left/right margins 11.994 mm and top/bottom 25.4 mm. Its prose instead prescribes 25 mm margins on all sides. The working document preserves the downloaded section geometry. The organizer must resolve that conflict before submission. Body text uses Times New Roman 11 pt and headings Arial; tables/captions/references use 10 pt, following the template. Fonts and every rendered page are checked in the final inspection record.
 
-The completed manuscript contains eight total pages, including references, and a 175-word abstract. All pages were visually inspected; the final inspection record pins the PDF and DOCX hashes. To rebuild from the saved completed outputs:
+The current identification-focused manuscript contains **exactly eight total pages, including references**, and a 186-word abstract. This uses the maximum allowance requested by the user. All pages were visually inspected; the final inspection record pins the PDF and DOCX hashes. The prior report-support paper remains in Git history and an ignored local archive. To rebuild the current paper from the saved completed outputs:
 
 ```bash
-.venv/bin/python scripts/make_figures.py
-.venv/bin/python scripts/make_real_examples.py
-.venv/bin/python scripts/build_manuscript.py
-libreoffice -env:UserInstallation=file:///tmp/mvml2027-lo-profile --headless --convert-to pdf --outdir manuscript manuscript/manuscript.docx
+.venv/bin/python scripts/make_identification_figures.py
+.venv/bin/python scripts/build_identification_manuscript.py
+libreoffice -env:UserInstallation=file:///tmp/mvml2027-identification-lo-profile --headless --convert-to pdf --outdir manuscript manuscript/manuscript.docx
 pdfinfo manuscript/manuscript.pdf
 pdffonts manuscript/manuscript.pdf
 ```
 
-Inspect every page after substantive edits. `results/manifests/manuscript_inspection.json` records the final PDF hash and visual inspection once completed. The initial two-page preparation draft has been superseded and moved to an ignored local archive; Git retains its history.
+Inspect every page after substantive edits. `results/manifests/manuscript_inspection.json` records the final PDF hash and visual inspection once completed. The original `build_manuscript.py` builds the superseded report-support paper and should not be used for the active manuscript. The initial preparation draft and prior completed paper are retained in Git history and ignored local archives.

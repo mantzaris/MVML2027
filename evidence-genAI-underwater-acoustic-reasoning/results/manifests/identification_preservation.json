@@ -1,0 +1,11 @@
+{
+  "all_match": true,
+  "bytes": 1121547644,
+  "files": 2465,
+  "index_sha256": "c718b36a0736605f099928d6734e0aa9c97f1c5da0ee29325fa00a9b42ba5a40",
+  "large_artifacts_excluded_from_git": true,
+  "mismatches": [],
+  "regenerable_mel_image_caches_included": false,
+  "scope": "fresh and stress audio, numerical arrays, raw generation, trained follow-up model, execution records",
+  "verified_utc": "2026-11-16T05:08:39.266399+00:00"
+}

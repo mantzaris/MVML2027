@@ -1,0 +1,19 @@
+{
+  "examples": [
+    {
+      "anonymous_example_id": "c1d59562f3",
+      "audio_sha256": "86959a2389d956673344e31cb64a2f8f6c7bb1f6d6b60c138314a977af2668c9",
+      "comparator": "Cargo vessel",
+      "dataset_category": "Tanker",
+      "fusion": "Tanker"
+    },
+    {
+      "anonymous_example_id": "b663844db3",
+      "audio_sha256": "06ca15a4a03ef70c1add06b2c05e21a57c6f6a0d2f0a60c6bd6291dafa2c46cd",
+      "comparator": "Cargo vessel",
+      "dataset_category": "Cargo vessel",
+      "fusion": "Passenger vessel"
+    }
+  ],
+  "selection": "post-hoc opposing outcomes; fixed hash ordering within each group"
+}

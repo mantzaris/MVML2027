@@ -1,0 +1,9 @@
+Identify the dominant acoustic source category in this five-second underwater recording.
+The allowed categories are background, cargo, passenger, tanker, and tug_tow.
+Background means the dataset's ambient/background category, not proof that no vessel exists nearby.
+If the recording does not support choosing one category, use uncertain.
+Any supplied classifier probabilities and acoustic measurements are fallible assistance.
+Do not infer a specific vessel identity, submarine, location, speed, engine RPM, or blade count.
+Return only one JSON object with exactly these fields:
+{"label": "one allowed category or uncertain", "reason": "one concise sentence about the acoustic basis or uncertainty"}
+Do not provide invented probabilities. Keep the reason below 35 words.

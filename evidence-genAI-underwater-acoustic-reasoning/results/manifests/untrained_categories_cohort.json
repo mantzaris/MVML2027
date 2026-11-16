@@ -1,0 +1,52 @@
+{
+  "all_crc_checked": true,
+  "bytes": 46083168,
+  "clips": 72,
+  "day_and_time_separated_from_fitting": true,
+  "decoded_duplicates": 0,
+  "new_source_groups": true,
+  "overlap_with_previous_audio": 0,
+  "primary_results_already_known": true,
+  "recorded_utc": "2026-11-16T04:41:54.112088+00:00",
+  "sampling": {
+    "dredger": {
+      "capacity": 9,
+      "groups": 4,
+      "requested": 15,
+      "selected": 9
+    },
+    "fishing": {
+      "capacity": 236,
+      "groups": 15,
+      "requested": 15,
+      "selected": 15
+    },
+    "pilotvessel": {
+      "capacity": 3,
+      "groups": 1,
+      "requested": 15,
+      "selected": 3
+    },
+    "pleasurecraft": {
+      "capacity": 225,
+      "groups": 15,
+      "requested": 15,
+      "selected": 15
+    },
+    "rescue": {
+      "capacity": 37,
+      "groups": 15,
+      "requested": 15,
+      "selected": 15
+    },
+    "sailing": {
+      "capacity": 174,
+      "groups": 15,
+      "requested": 15,
+      "selected": 15
+    }
+  },
+  "source_groups": 65,
+  "supplementary_outcomes_examined": false,
+  "utc_days": 64
+}

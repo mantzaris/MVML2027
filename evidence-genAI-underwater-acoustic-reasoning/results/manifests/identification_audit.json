@@ -1,0 +1,23 @@
+{
+  "all_passed": true,
+  "audited_utc": "2026-11-16T05:11:18.510311+00:00",
+  "checks": [
+    "protocol/identification_freeze.json all hashes match",
+    "protocol/untrained_categories_freeze.json all hashes match",
+    "fresh and untrained sources disjoint; fitting day/time boundaries pass",
+    "decoded hashes unique across original, fresh and untrained cohorts",
+    "all 63 classifier/condition cells match saved predictions and denominators",
+    "primary criterion and all 705 raw generated category outcomes independently reconciled",
+    "untrained-category outcomes match saved predictions with their own 72-clip denominator",
+    "every follow-up worker stage completed before the original deadline",
+    "worker artifacts match independently verified local copies"
+  ],
+  "fresh_test_clips": 235,
+  "generative_pilot_calls": 20,
+  "generative_test_calls": 705,
+  "human_reviewers": 0,
+  "original_study_unchanged": true,
+  "primary_success": false,
+  "transformed_clips": 1410,
+  "untrained_category_clips": 72
+}

@@ -1,0 +1,56 @@
+{
+  "all_crc_checked": true,
+  "audio_bytes": 150410340,
+  "candidate_clips": 4175,
+  "created_utc": "2026-11-16T04:13:41.266804+00:00",
+  "day_disjoint_from_fitting_selection_calibration": true,
+  "decoded_duplicates": 0,
+  "global_60_second_guard": true,
+  "manifest_sha256": "76e4e7dfdee1bdcd29c94d3f718fa71106333ad4752806b592591f90ba3f8a4b",
+  "missing_parent_provenance": true,
+  "model_outcomes_examined": false,
+  "new_source_groups": true,
+  "not_official_test_split": true,
+  "official_split_counts": {
+    "train": 216,
+    "validation": 19
+  },
+  "old_test_days_overlap": 185,
+  "original_audio_overlap": 0,
+  "sampling": {
+    "background": {
+      "capacity": 587,
+      "groups": 50,
+      "requested": 50,
+      "selected": 50
+    },
+    "cargo": {
+      "capacity": 830,
+      "groups": 50,
+      "requested": 50,
+      "selected": 50
+    },
+    "passenger": {
+      "capacity": 35,
+      "groups": 25,
+      "requested": 50,
+      "selected": 35
+    },
+    "tanker": {
+      "capacity": 82,
+      "groups": 50,
+      "requested": 50,
+      "selected": 50
+    },
+    "tug_tow": {
+      "capacity": 71,
+      "groups": 43,
+      "requested": 50,
+      "selected": 50
+    }
+  },
+  "source_groups": 218,
+  "test_clips": 235,
+  "utc_days": 185,
+  "waveform_hash_manifest_sha256": "65c39301c8bf440547070b1e2d27d0ecc1fc26321a74313f04a1de24cd75d900"
+}

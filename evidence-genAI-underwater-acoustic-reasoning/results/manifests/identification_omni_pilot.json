@@ -1,0 +1,15 @@
+{
+  "amortized_generation_seconds": 4.678134775720537,
+  "format_gate_passed": true,
+  "input_tokens_including_audio": 6360,
+  "max_new_tokens": 128,
+  "mode": "pilot",
+  "model_revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+  "output_limit_hits": 0,
+  "output_tokens": 535,
+  "prompt_sha256": "372d7cc6fb0d174cd7f6599fd20dd50777402129e9705af894e082f4fe34baa5",
+  "recorded_utc": "2026-11-16T04:21:52.028191+00:00",
+  "requested": 20,
+  "saved": 20,
+  "valid": 20
+}

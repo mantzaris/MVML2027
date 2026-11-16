@@ -1,15 +1,18 @@
 {
-  "abstract_words": 175,
+  "abstract_words": 186,
   "affiliation_and_contact_omitted": true,
   "all_pages_reviewed": true,
   "author_line": "Anonymous author",
   "author_metadata": "Anonymous",
   "clipped_text_observed": false,
-  "docx_sha256": "4fb4f043a0dd653a78c7f7898c125c821ca1b61e943f785d87990dfdf6255664",
+  "docx_sha256": "ac6ab8e8aa32e6f9f90096e95b3b6c90283eb7b7d5ba7cd69aadf286801b33c8",
+  "figure_count": 3,
   "figures_and_tables_legible": true,
   "font_note": "Times New Roman body and tables, Arial headings; embedded Tinos/Nimbus Roman fallback glyphs in equations and Unicode notation.",
   "geometry_note": "Official template section geometry retained; horizontal-margin discrepancy with template prose remains documented for any future submission.",
-  "inspected_at_utc": "2026-11-16T01:39:45.647106+00:00",
+  "inspected_at_utc": "2026-11-16T05:10:18.803860+00:00",
+  "manuscript_focus": "vessel-category identification, referral and generative overrides",
+  "maximum_conference_pages": 8,
   "pages": 8,
   "pages_reviewed": [
     1,
@@ -22,15 +25,16 @@
     8
   ],
   "pdf_font_report": [
-    "BAAAAA+TimesNewRomanPSMT             TrueType          WinAnsi          yes yes yes     54  0",
-    "CAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes     59  0",
-    "DAAAAA+TimesNewRomanPS-BoldMT        TrueType          WinAnsi          yes yes yes     49  0",
-    "EAAAAA+Tinos                         TrueType          WinAnsi          yes yes yes     44  0",
-    "FAAAAA+NimbusRomanRegular            Type 1            Builtin          yes yes yes     64  0"
+    "BAAAAA+TimesNewRomanPSMT             TrueType          WinAnsi          yes yes yes     49  0",
+    "CAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes     54  0",
+    "DAAAAA+TimesNewRomanPS-BoldMT        TrueType          WinAnsi          yes yes yes     44  0",
+    "EAAAAA+Tinos                         TrueType          WinAnsi          yes yes yes     39  0",
+    "FAAAAA+NimbusRomanRegular            Type 1            Builtin          yes yes yes     59  0"
   ],
-  "pdf_sha256": "9784b597d0c63c46dcf3e09564d271362d92bc6e08ece139d197f82c3797b03a",
+  "pdf_sha256": "78ead089fc094c87a680ccc5df1bbb02d4c3fe6aa91c2eea1e1d03b75213e007",
   "repeated_table_headers_verified": true,
-  "review_method": "Visual inspection of all eight PDF pages rendered at 1600-pixel height, plus extracted-text, PDF metadata and DOCX package checks.",
+  "review_method": "Visual inspection of all eight pages at 1600-pixel height and the three scientific figures, extracted text, PDF metadata and DOCX package. After the final resource-description edit, pages 1\u20137 were verified pixel-identical and page 8 was visually re-inspected.",
   "submission_or_publication_performed": false,
+  "table_count": 4,
   "title_exact": true
 }
