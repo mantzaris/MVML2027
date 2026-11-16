@@ -1,0 +1,141 @@
+{
+  "categories": [
+    {
+      "category": "background",
+      "correct": 286,
+      "label": "Background",
+      "most_common_error_count": 50,
+      "most_common_error_fraction_of_category": 0.14084507042253522,
+      "most_common_wrong_label": "Tug / tow",
+      "recall": 0.8056338028169014,
+      "recordings": 355
+    },
+    {
+      "category": "cargo",
+      "correct": 281,
+      "label": "Cargo ship",
+      "most_common_error_count": 82,
+      "most_common_error_fraction_of_category": 0.17943107221006566,
+      "most_common_wrong_label": "Tanker",
+      "recall": 0.6148796498905909,
+      "recordings": 457
+    },
+    {
+      "category": "passenger",
+      "correct": 128,
+      "label": "Passenger vessel",
+      "most_common_error_count": 154,
+      "most_common_error_fraction_of_category": 0.35648148148148145,
+      "most_common_wrong_label": "Tug / tow",
+      "recall": 0.2962962962962963,
+      "recordings": 432
+    },
+    {
+      "category": "tanker",
+      "correct": 143,
+      "label": "Tanker",
+      "most_common_error_count": 272,
+      "most_common_error_fraction_of_category": 0.5171102661596958,
+      "most_common_wrong_label": "Cargo ship",
+      "recall": 0.2718631178707224,
+      "recordings": 526
+    },
+    {
+      "category": "tug_tow",
+      "correct": 281,
+      "label": "Tug / tow",
+      "most_common_error_count": 88,
+      "most_common_error_fraction_of_category": 0.18723404255319148,
+      "most_common_wrong_label": "Passenger vessel",
+      "recall": 0.597872340425532,
+      "recordings": 470
+    }
+  ],
+  "classifier_accuracy": 0.49955357142857143,
+  "classifier_overall_correct": 1119,
+  "classifier_recordings": 2240,
+  "classifier_seed": 17,
+  "definitions": {
+    "category_percentage": "Recall: correct labels / all recordings in that dataset category.",
+    "comparison": "Calibrated systems on the same 100 requested clips, with different retained subsets and tool choices; not an isolated generator effect.",
+    "confusion_percentage": "Most frequent wrong label / all recordings in that dataset category, not only errors.",
+    "intervals": "Previously computed source-bootstrap whole-test useful-coverage intervals, multiplied by 400 for display.",
+    "supported_detail": "An asserted physical slot passing the frozen numerical-reference and citation-support checks.",
+    "wrong_or_unsupported_detail": "An asserted physical slot that is incorrect or lacks required support."
+  },
+  "learned_minus_locked_heuristic_counts": {
+    "supported_details": -16,
+    "tool_calls": -99,
+    "wrong_or_unsupported_details": -8
+  },
+  "presentation_only": true,
+  "reporting": [
+    {
+      "clips": 100,
+      "label": "Heuristic + AI",
+      "method": "B9_entropy",
+      "reports_returned": 68,
+      "requested_physical_details": 400,
+      "supported_details": 53,
+      "supported_details_ci95_scaled_to_400_requests": [
+        41.74348745554167,
+        65.42567172897193
+      ],
+      "tool_calls": 200,
+      "uncertain_details_in_returned_reports": 210,
+      "withheld_details": 128,
+      "wrong_or_unsupported_details": 9
+    },
+    {
+      "clips": 100,
+      "label": "Learned selector + AI",
+      "method": "P",
+      "reports_returned": 71,
+      "requested_physical_details": 400,
+      "supported_details": 37,
+      "supported_details_ci95_scaled_to_400_requests": [
+        26.729250052664845,
+        47.474747474747474
+      ],
+      "tool_calls": 101,
+      "uncertain_details_in_returned_reports": 246,
+      "withheld_details": 116,
+      "wrong_or_unsupported_details": 1
+    },
+    {
+      "clips": 100,
+      "label": "Fixed template",
+      "method": "B8_deterministic",
+      "reports_returned": 65,
+      "requested_physical_details": 400,
+      "supported_details": 143,
+      "supported_details_ci95_scaled_to_400_requests": [
+        119.3828592042878,
+        165.34653465346534
+      ],
+      "tool_calls": 200,
+      "uncertain_details_in_returned_reports": 93,
+      "withheld_details": 140,
+      "wrong_or_unsupported_details": 24
+    }
+  ],
+  "source": "results/tables/main_results.json",
+  "source_sha256": "a27446a0e640a4f3edd874fc5ce4a86a24f31528b9385bb73a7bca1717d5729a",
+  "template_minus_locked_heuristic_counts": {
+    "supported_details": 90,
+    "wrong_or_unsupported_details": 15
+  },
+  "whole_test_useful_difference": {
+    "ci95": [
+      -0.07398653768438068,
+      -0.007009345794392524
+    ],
+    "cluster_field": "source_group",
+    "clusters": 93,
+    "difference": -0.04000000000000001,
+    "metric": "whole_test_useful_coverage",
+    "p_two_sided_centered_bootstrap": 0.021989005497251374,
+    "resamples": 2000,
+    "seed": 17
+  }
+}

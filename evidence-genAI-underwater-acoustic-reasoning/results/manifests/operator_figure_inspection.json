@@ -1,0 +1,37 @@
+{
+  "category_denominator": 2240,
+  "category_metric": "within-category recall, explicitly distinguished from overall accuracy",
+  "clipped_or_overlapping_labels_observed": false,
+  "denominator_and_count_checks_passed": true,
+  "files": {
+    "results/figures/operator_context.pdf": {
+      "bytes": 29683,
+      "sha256": "7fe741ec59f8fc25883d87ec673afd77e0e4484b4f5ce0e51a6e7ca7f086fb33"
+    },
+    "results/figures/operator_context.png": {
+      "bytes": 765501,
+      "sha256": "d1664751eb7ebdf1fddcf7da8979089f5a8acbe223c7f502418daad2b1fe659f"
+    },
+    "results/figures/operator_context_caption.txt": {
+      "bytes": 1269,
+      "sha256": "d8cff20d1cfa2cec63d414486ec7c221fc16013e887878d588218bb93378eb06"
+    },
+    "results/tables/operator_context.json": {
+      "bytes": 4655,
+      "sha256": "fb35a96debf7fdef3ee5c41faef66605f48cfa7e9d2532324477384587b1e602"
+    },
+    "scripts/make_operator_figure.py": {
+      "bytes": 13990,
+      "sha256": "c0c44e1ef59e90f51d56e76493796f5957c498ca93e7882069e38f4bbf826a1b"
+    }
+  },
+  "human_or_operator_validation": false,
+  "inspected_at_utc": "2026-11-16T03:48:19.638201+00:00",
+  "pdf_fonts_embedded": true,
+  "pdf_pages": 1,
+  "physical_detail_denominator": 400,
+  "reporting_clips": 100,
+  "scope": "Additional presentation of frozen aggregate results; no new inference, scoring changes, or manuscript edits.",
+  "source_sha256": "a27446a0e640a4f3edd874fc5ce4a86a24f31528b9385bb73a7bca1717d5729a",
+  "visual_review_complete": true
+}

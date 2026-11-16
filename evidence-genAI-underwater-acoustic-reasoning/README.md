@@ -22,6 +22,12 @@ The scientific source, models, thresholds and main references match the prospect
 
 The user’s constraints are a hard ten-hour research window, approximately 50 GB remote storage, no human reviewers, a small Git repository, and **leave the Pod running when work finishes**. Dollar rate and earlier billed allocation are unknown. No additional service, paid API, repository push, submission or publication is part of this execution.
 
+## Figure for an operator audience
+
+[View the figure (PNG)](results/figures/operator_context.png) or [download the vector PDF](results/figures/operator_context.pdf). It shows full vessel-category names, correct classification percentages, sample counts and common confusions. A separate panel translates report quality into supported and wrong/unsupported details across the same 100 clips, with the observed tool-call and completeness trade-offs. Category percentages are recall within each dataset category; they are distinct from the overall 50.0% classifier accuracy.
+
+The [caption](results/figures/operator_context_caption.txt) and [underlying values](results/tables/operator_context.json) specify denominators and limitations. This additional figure uses the saved frozen results and automated reference checks; it is not an operator-performance study. Rebuild it locally with `.venv/bin/python scripts/make_operator_figure.py`.
+
 ## Study design and limitations
 
 The original execution prompt and specification are preserved unchanged. The implemented design is defined by the [prospective execution amendment](protocol/execution_amendment.md), [automated scoring rules](protocol/automated_scoring.md), [development decoding correction](protocol/decoding_amendment.md), [reference correction](protocol/reference_correction.md), [statistical analysis](protocol/statistical_analysis.md), and [robustness plan](protocol/robustness_plan.md). The earlier [preparation protocol](protocol/preregistered_plan.md) is historical. These timestamped internal records are not an external preregistration.
