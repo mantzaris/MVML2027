@@ -18,6 +18,7 @@ gates={
     'ai_reference_assessments':config.get('ai_reviewer_assessments_complete') is True,
     'development_gate':read('results/manifests/pilot_gate.json').get('passed') is True,
     'prospective_test_freeze':unlock.get('unlocked') is True and unlock.get('test_outcomes_examined_at_freeze') is False,
+    'frozen_method_integrity':read('results/manifests/freeze_integrity.json').get('method_files_and_models_match') is True,
     'clean_test_analysis':main.get('assessment_clips')==100,
     'waveform_stress_analysis':read('results/tables/robustness_results.json').get('transformed_clips')==360,
     'report_audits':bool(read('results/tables/report_audits.json')),

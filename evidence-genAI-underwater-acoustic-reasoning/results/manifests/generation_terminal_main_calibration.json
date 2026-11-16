@@ -1,0 +1,12 @@
+{
+  "batch_size": 16,
+  "mode": "terminal",
+  "new_reports": 629,
+  "partitions": [
+    "calibration"
+  ],
+  "prompt_sha256": "546ed6231c2a7cc46fdcb592d81d1343417dff6228032724c2a767234724b8e3",
+  "reviewer_human_count": 0,
+  "seconds": 838.7191554051824,
+  "tag": "main"
+}

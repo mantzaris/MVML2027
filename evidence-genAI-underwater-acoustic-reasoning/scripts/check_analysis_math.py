@@ -1,7 +1,7 @@
 """Known-answer checks of the actual paired conditional-metric implementation."""
 from pathlib import Path
 import numpy as np
-from analyze_experiment import cluster_contrast,classifier_metrics
+from analyze_experiment import cluster_contrast,classifier_metrics,metric_intervals
 from underwater_reasoning.io import atomic_json
 
 def row(uid,group,retained,supported,assertions):
@@ -27,8 +27,11 @@ else:raise AssertionError('Unpaired reports were accepted')
 prob=classifier_metrics(np.arange(5),np.zeros((5,5)),1.)
 assert np.isclose(prob['brier'],.8) and np.isclose(prob['accuracy'],.2)
 assert np.isclose(prob['ece_equal_frequency_10'],.32)
+single=metric_intervals(left)
+assert single['supported_coverage_ci95']==[.5,.5]
+assert np.allclose(single['unsupported_rate_ci95'],[1/3,1/3])
 root=Path(__file__).resolve().parents[1]
-atomic_json(root/'results/manifests/analysis_math_checks.json',{'checks_passed':8,
-    'scope':['conditional denominators','whole-test denominator','unsupported ratio','paired identical methods','empty retention','pairing rejection','genuine-score Brier','equal-frequency ECE'],
+atomic_json(root/'results/manifests/analysis_math_checks.json',{'checks_passed':10,
+    'scope':['conditional denominators','whole-test denominator','unsupported ratio','paired identical methods','empty retention','pairing rejection','genuine-score Brier','equal-frequency ECE','single-method support interval','single-method unsupported interval'],
     'test_outcomes_used':False,'small_sample_ece_caveat':'With five records and ten requested bins, the implementation uses five singleton nonempty bins.'})
-print('Eight known-answer analysis checks passed')
+print('Ten known-answer analysis checks passed')

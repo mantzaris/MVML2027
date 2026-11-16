@@ -1,0 +1,35 @@
+{
+  "beta": 0,
+  "class_beta": 0,
+  "class_lambda": 0.02,
+  "deterministic_mask": 5,
+  "entropy_edges": [
+    0.7636531988779703,
+    0.9727952082951864
+  ],
+  "entropy_masks": [
+    12,
+    9,
+    9
+  ],
+  "fixed_mask": 12,
+  "lambda": 0.05,
+  "locked_comparator": "B9_entropy",
+  "retrieval_dsp_mask": 12,
+  "thresholds": {
+    "A1_one_shot": 0.22932644188404083,
+    "A2_no_penalty": 0.23944252729415894,
+    "A3_no_stop": 0.22850818932056427,
+    "B1_raw": 0.26789727807044983,
+    "B2_prior": 0.26789727807044983,
+    "B3_fixed": 0.2334606647491455,
+    "B4_retrieval": 0.28064629435539246,
+    "B4_retrieval_dsp": 0.2334606647491455,
+    "B5_all": 0.26683294773101807,
+    "B6_planner": 0.2779627740383148,
+    "B7_class_only": 0.22932644188404083,
+    "B8_deterministic": 0.22850818932056427,
+    "B9_entropy": 0.24129320681095123,
+    "P": 0.23944252729415894
+  }
+}

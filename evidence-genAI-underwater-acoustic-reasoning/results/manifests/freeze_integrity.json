@@ -1,0 +1,9 @@
+{
+  "changed_method_artifacts": [],
+  "checked_files_and_models": 88,
+  "editorial_files_changed_after_freeze": [],
+  "frozen_at_utc": "2026-11-16T00:06:30.031812+00:00",
+  "main_references_and_reviews_match": true,
+  "method_files_and_models_match": true,
+  "scope": "Scientific source, prompts, configuration, protocol, controller weights, anchor cache, split and main references/reviews. Editorial rendering changes are listed separately."
+}

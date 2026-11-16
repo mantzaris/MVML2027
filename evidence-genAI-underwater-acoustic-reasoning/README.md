@@ -4,7 +4,7 @@ Alexander V. Mantzaris’s MVML 2027 research project. All work is contained her
 
 ## Execution status
 
-Real GPU experiments are running on the authorized existing RunPod. Classifier training is complete for seeds 17/29/43; all 7,418 selected recordings passed acquisition checks and decoded-waveform duplicate checks. The corrected development generation passed its feasibility gate. Constructed-signal checks exposed modulation-reference boundary and aliasing errors. The documented correction passed its controls, and all 540 main AI assessments were recomputed before policy fitting. Test terminal outcomes remain locked until policy settings, calibration thresholds and analysis rules are frozen.
+Real GPU experiments are running on the authorized existing RunPod. Classifier training is complete for seeds 17/29/43; all 7,418 selected recordings passed acquisition and decoded-waveform duplicate checks. The corrected development generation passed its feasibility gate. All 540 main AI assessments and 2,890 pre-test terminal reports are saved; four terminal truncations remain as penalized failures. The controller, calibration thresholds and analysis were frozen at **2026-11-16 00:06:30 UTC**, before test generation, with the entropy heuristic as the locked comparator. Held-out test and stress evaluation are now running.
 
 The user’s constraints are a hard ten-hour research window, approximately 50 GB remote storage, no human reviewers, a small Git repository, and **leave the Pod running when work finishes**. Dollar rate and earlier billed allocation are unknown. No additional service, paid API, repository push, submission or publication is part of this execution.
 
@@ -46,11 +46,42 @@ The execution sequence is:
 2. Train the anchor/search/seeds using `train_classifier.py`; compute independent references and cards with `prepare_evidence.py`.
 3. Validate AI reviewer controls and the development terminal pilot. The corrected terminal decoder uses XGrammar 0.2.9, a common schema and a 1,024-token cap. Original failed pilot outputs remain in ignored raw artifacts.
 4. `run_core_after_training.sh` builds the policy/development/calibration subset matrices, runs the bounded planner, and fits the controllers. Content keys prevent incompatible cache reuse.
-5. Inspect `pilot_gate.json` and `controller_training.json`; `freeze_test.py --unlock` verifies the complete pre-test caches and freezes software, protocol, prompt, split, reference and reviewer hashes.
+5. Inspect `pilot_gate.json`, `controller_training.json` and `pretest_design_audit.json`. Run `audit_repeat.py` on the completed grammar smoke; then `freeze_test.py --unlock` verifies the pre-test caches and freezes software, protocol, prompt, split, model, reference and reviewer hashes. `audit_freeze_integrity.py` checks them again after evaluation.
 6. `run_test_and_stress.sh` executes the clean test matrix, frozen analyses, 360 waveform transformations, evidence interventions, prompt paraphrases and blinded prose audits. Every job is deadline guarded.
-7. `make_figures.py` and `build_manuscript.py` render actual aggregate results. Convert the DOCX to PDF with LibreOffice and inspect all pages before finalization.
+7. Run `audit_cached_outputs.py`, `make_figures.py`, `make_real_examples.py`, and `build_manuscript.py` on completed results. Convert the DOCX to PDF with LibreOffice and inspect all pages before finalization.
 
 Inspect [check_readiness.py](scripts/check_readiness.py) for current completion checks. The trained checkpoints, original data and detailed outputs are copied to this local directory and ignored by Git. Model download revisions are pinned; pretrained weight caches remain on the worker. The remote overlay is ephemeral, so it is not the sole artifact copy.
+
+For a fresh authorized worker run, the concrete commands below reproduce the
+stages from the project directory. Use a separate artifact copy with a new
+authorized deadline and an initially locked test record; preserve this run's
+frozen record and outputs. The shell runners expect the documented worker path.
+
+```bash
+bash scripts/setup_remote.sh
+.venv/bin/python scripts/probe_release.py
+.venv/bin/python scripts/audit_release_metadata.py
+.venv/bin/python scripts/prepare_experiment.py
+.venv/bin/python scripts/download_experiment.py
+.venv/bin/python scripts/download_models.py omni
+.venv/bin/python scripts/download_models.py planner
+OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/run_guarded.py --name classifier .venv/bin/python scripts/train_classifier.py
+.venv/bin/python scripts/prepare_evidence.py --stage references
+.venv/bin/python scripts/run_reviewer_controls.py
+bash scripts/run_core_after_training.sh
+.venv/bin/python scripts/audit_repeat.py
+.venv/bin/python scripts/freeze_test.py --unlock
+bash scripts/run_test_and_stress.sh
+.venv/bin/python scripts/audit_cached_outputs.py
+.venv/bin/python scripts/audit_freeze_integrity.py
+```
+
+With this run's saved predictions and checkpoints, `analyze_experiment.py`
+recomputes the tables in the worker environment without new model generation.
+Figures and DOCX construction use the local CPU environment; see
+[manuscript build commands](manuscript/FORMAT_NOTES.md). The guarded runners
+enforce the configured deadline; direct helper commands do not grant a new
+compute allowance.
 
 ## Artifact layout
 

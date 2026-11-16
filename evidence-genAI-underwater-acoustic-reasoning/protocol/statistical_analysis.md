@@ -49,6 +49,10 @@ ranked prefixes (uniform increments from 1/n through 1). Citation support
 precision uses assertions with at least one citation as its denominator;
 also give the stricter numerator requiring independent correctness. These
 diagnostics do not change controller targets or the confirmatory endpoint.
+Single-method intervals at calibrated points and budget-sensitivity points use
+the same source-cluster resampling and conditional numerator/denominator rules.
+Risk-coverage curves remain descriptive; the displayed intervals apply only to
+their calibrated dots, not to a simultaneous confidence band over the curve.
 
 Success requires a >=.05 supported-coverage gain over the locked comparator,
 a positive paired lower confidence bound, no higher wrong/unsupported rate,

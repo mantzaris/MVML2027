@@ -1,0 +1,71 @@
+{
+  "all_five_slots_exact": true,
+  "comparison": "Three copies of each training probe within one 15-item BF16 greedy batch; not independent generator replications.",
+  "groups": [
+    {
+      "exact_fields": {
+        "band": true,
+        "class": true,
+        "interpretation": false,
+        "modulation": true,
+        "tone": true,
+        "trend": true
+      },
+      "repeats": 3,
+      "training_probe": "sample_background.wav"
+    },
+    {
+      "exact_fields": {
+        "band": true,
+        "class": true,
+        "interpretation": true,
+        "modulation": true,
+        "tone": true,
+        "trend": true
+      },
+      "repeats": 3,
+      "training_probe": "sample_cargo.wav"
+    },
+    {
+      "exact_fields": {
+        "band": true,
+        "class": true,
+        "interpretation": false,
+        "modulation": true,
+        "tone": true,
+        "trend": true
+      },
+      "repeats": 3,
+      "training_probe": "sample_passengership.wav"
+    },
+    {
+      "exact_fields": {
+        "band": true,
+        "class": true,
+        "interpretation": false,
+        "modulation": true,
+        "tone": true,
+        "trend": true
+      },
+      "repeats": 3,
+      "training_probe": "sample_tanker.wav"
+    },
+    {
+      "exact_fields": {
+        "band": true,
+        "class": true,
+        "interpretation": false,
+        "modulation": true,
+        "tone": true,
+        "trend": true
+      },
+      "repeats": 3,
+      "training_probe": "sample_tug.wav"
+    }
+  ],
+  "interpretation": "Structured observations agree on these probes, while wording can vary with batch position. This does not guarantee bitwise reproducibility or stability on every test clip.",
+  "prose_exact_groups": 1,
+  "raw_probe_sha256": "3d3b7b92ecb6583cea3d02923177403e90690e94c863ad2b949a678dacbf18ec",
+  "reports": 15,
+  "unique_training_probes": 5
+}

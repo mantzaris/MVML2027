@@ -10,6 +10,8 @@ audits=read('results/tables/report_audits.json');reviews=read('results/tables/re
 ledger=read('results/manifests/execution_ledger.json');validation=read('results/manifests/software_validation.json')
 inspection=read('results/manifests/manuscript_inspection.json');preservation=read('results/manifests/final_preservation.json')
 unlock=read('protocol/test_unlock_log.json')
+freeze_audit=read('results/manifests/freeze_integrity.json')
+assert freeze_audit['method_files_and_models_match'] and freeze_audit['main_references_and_reviews_match']
 assert main['assessment_clips']==100 and stress['transformed_clips']==360
 assert audits['paraphrase']['n']==100 and audits['paraphrase_2']['n']==100
 intervention_count=sum(v['n'] for v in audits['evidence_interventions'].values())

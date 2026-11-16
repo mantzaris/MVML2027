@@ -1,0 +1,35 @@
+{
+  "decision": "Retain the prospectively capped 100-clip test assessment and report its actual intervals, including inconclusive or negative outcomes. Do not increase sample size after seeing test results.",
+  "development_clips": 33,
+  "development_groups": 30,
+  "development_mean_source_difference_before_rejection": -0.0638888888888889,
+  "development_source_difference_sd": 0.17464157785360837,
+  "invalid_reports_retained_as_failures": true,
+  "locked_comparator": "B9_entropy",
+  "planned_test_groups": 93,
+  "pretest_format_by_partition": {
+    "calibration": {
+      "format_valid": 627,
+      "output_limit_hits": 2,
+      "reports": 629,
+      "schema_valid": 627
+    },
+    "development": {
+      "format_valid": 561,
+      "output_limit_hits": 0,
+      "reports": 561,
+      "schema_valid": 561
+    },
+    "policy_fit": {
+      "format_valid": 1698,
+      "output_limit_hits": 2,
+      "reports": 1700,
+      "schema_valid": 1698
+    }
+  },
+  "recorded_at_utc": "2026-11-16T00:05:38.540208+00:00",
+  "rough_unfiltered_80pct_power_effect_at_test_group_count": 0.050706566435194514,
+  "rough_unfiltered_95pct_half_width_at_test_group_count": 0.03549459650463616,
+  "scope": "Optimistic normal-approximation planning diagnostic from development group means before rejection. It is not power for the calibrated conditional endpoint or Holm family; tuning on development and source/day dependence can invalidate transfer.",
+  "test_terminal_outcomes_examined": false
+}

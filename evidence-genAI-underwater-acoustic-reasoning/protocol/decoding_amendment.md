@@ -28,3 +28,18 @@ one terminal generation call and no generative repair or repeated selection of
 preferred answers. Existing independent AI reviews remain unconstrained at
 their original 768-token limit. The corrected development pilot must pass the
 same schema/feasibility gate before expansion, and all test choices remain locked.
+
+The full policy-fit matrix retained two 1,024-token truncations among 1,700
+reports; calibration also exposed this rare failure. An unclosed interpretation
+string can repeat comma-joined text without completing the constrained object.
+The format grammar does not guarantee termination. These outputs are retained,
+not repaired or selectively regenerated, and receive the predefined malformed-
+report loss. The final pre-test audit reports complete partition denominators.
+
+The repeated-input smoke used five training probes, each copied three times
+within one BF16 greedy batch. All five structured slots agreed for every probe;
+interpretation wording differed across copies for four of the five probes.
+This supports slot comparability on those probes, not bitwise reproducibility
+or universal batch invariance. Each subset's original saved output is shared
+across selectors, and generator-seed or independent-generation replication is
+not claimed. `repeat_stability.json` preserves the exact comparison scope.

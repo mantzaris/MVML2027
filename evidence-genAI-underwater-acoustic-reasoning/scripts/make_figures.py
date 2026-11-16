@@ -39,9 +39,28 @@ def main():
         point=result['methods'][method]
         if point['supported_coverage'] is not None:axes[0].scatter(point['report_coverage'],point['supported_coverage'],color=color,s=22,zorder=5)
         if point['unsupported_rate'] is not None:axes[1].scatter(point['report_coverage'],point['unsupported_rate'],color=color,s=22,zorder=5)
+        for ax,metric in zip(axes,('supported_coverage','unsupported_rate')):
+            if point.get(metric+'_ci95') is not None:ax.vlines(point['report_coverage'],*point[metric+'_ci95'],color=color,lw=1,zorder=4)
     for ax in axes:ax.set(xlim=(.09,1.01),ylim=(-.02,1.02),xlabel='Fraction of reports retained');ax.grid(alpha=.2)
     axes[0].set_ylabel('Proxy supported physical coverage');axes[1].set_ylabel('Wrong / unsupported assertion rate')
     axes[0].legend(fontsize=7,loc='best');fig.tight_layout();save(fig,'risk_coverage')
+    fig,axes=plt.subplots(1,2,figsize=(7.3,2.9));budgets=result['tool_budget_sensitivity']
+    for ax,xfield,yfield in [(axes[0],'mean_tools_all','supported_coverage'),(axes[1],'mean_evidence_tokens_all','whole_test_useful_coverage')]:
+        values=[budgets[str(b)] for b in (1,2,3)]
+        ax.plot([v[xfield] for v in values],[np.nan if v[yfield] is None else v[yfield] for v in values],marker='o',color=COLORS[0],label='Sequential; budgets 1, 2, 3')
+        for budget,value in zip((1,2,3),values):
+            if value[yfield] is not None:
+                ax.annotate(str(budget),(value[xfield],value[yfield]),xytext=(4,5),textcoords='offset points',fontsize=8)
+                if value.get(yfield+'_ci95') is not None:ax.vlines(value[xfield],*value[yfield+'_ci95'],color=COLORS[0],lw=1)
+        for color,method in zip(COLORS[1:],(base,'B5_all','B8_deterministic')):
+            value=result['methods'][method]
+            if value[yfield] is None:continue
+            ax.scatter(value[xfield],value[yfield],marker='s',color=color,label=NAMES[method],s=25)
+            if value.get(yfield+'_ci95') is not None:ax.vlines(value[xfield],*value[yfield+'_ci95'],color=color,lw=1)
+        ax.set_ylim(-.02,1.02);ax.grid(alpha=.2)
+    axes[0].set(xlabel='Mean tool calls across all clips',ylabel='Supported coverage among retained reports')
+    axes[1].set(xlabel='Mean evidence tokens across all clips',ylabel='Useful coverage across all requested slots')
+    axes[0].legend(fontsize=6.7,loc='best');fig.tight_layout();save(fig,'evidence_cost')
     fig,ax=plt.subplots(figsize=(7.3,2.6));names=[base,'B7_class_only','A1_one_shot'];d=result['primary_contrasts'];y=np.arange(3)
     for i,name in enumerate(names):
         if d[name]['difference'] is None:

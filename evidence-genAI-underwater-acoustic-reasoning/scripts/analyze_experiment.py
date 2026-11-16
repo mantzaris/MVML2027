@@ -105,6 +105,13 @@ def cluster_contrast(left,right,field='source_group',resamples=2000,seed=17,metr
     p=(1+np.sum(np.abs(values-observed)>=abs(observed)))/(len(values)+1)
     return {'difference':float(observed),'ci95':np.quantile(values,[.025,.975]).tolist(),'p_two_sided_centered_bootstrap':float(p),'clusters':len(groups),'cluster_field':field,'resamples':len(values),'seed':seed,'metric':metric}
 
+def metric_intervals(records):
+    # A zero numerator with the identical denominator/retention gives a one-method
+    # percentile interval using exactly the same cluster resampling machinery.
+    zero=[{**r,'score':{**r['score'],'supported':0,'unsupported':0}} for r in records]
+    return {metric+'_ci95':cluster_contrast(records,zero,metric=metric)['ci95'] for metric in
+        ('supported_coverage','unsupported_rate','whole_test_useful_coverage')}
+
 def main():
     if not json.loads((ROOT/'protocol/test_unlock_log.json').read_text()).get('unlocked'):raise ValueError('Test analysis is locked')
     manifest,data=load_study(ROOT,['calibration','test']);settings=json.loads((ROOT/'configs/locked_controller.json').read_text());labels=manifest['labels']
@@ -114,7 +121,7 @@ def main():
     method_rows={};table={};curves={}
     for method in METHODS:
         threshold=settings['thresholds'][method]
-        rows=rows_for(method,data['test'],settings,ensemble,class_ensemble,labels,threshold);method_rows[method]=rows;table[method]=metrics(rows)
+        rows=rows_for(method,data['test'],settings,ensemble,class_ensemble,labels,threshold);method_rows[method]=rows;table[method]={**metrics(rows),**metric_intervals(rows)}
         ordered=sorted(rows,key=lambda r:(r['risk'],r['id']));curve=[]
         for percent in range(10,101,5):
             n=max(1,int(np.ceil(percent*len(rows)/100)));selected=[{**r,'retained':True} for r in ordered[:n]]
@@ -142,7 +149,8 @@ def main():
         seed_results[str(seed)]=metrics(rows_for('P',data['test'],settings,ens,class_ensemble,labels,threshold))
     for budget in (1,2,3):
         cal=rows_for('P',data['calibration'],settings,ensemble,class_ensemble,labels,budget=budget);threshold=float(np.sort([r['risk'] for r in cal])[int(np.ceil(.7*len(cal)))-1])
-        budget_results[str(budget)]=metrics(rows_for('P',data['test'],settings,ensemble,class_ensemble,labels,threshold,budget))
+        rows=rows_for('P',data['test'],settings,ensemble,class_ensemble,labels,threshold,budget)
+        budget_results[str(budget)]={**metrics(rows),**metric_intervals(rows)}
     p=table['P'];base=table[settings['locked_comparator']];primary=contrasts[settings['locked_comparator']]
     success=bool(primary['difference'] is not None and primary['difference']>=.05 and primary['ci95'][0]>0 and p['unsupported_rate'] is not None and base['unsupported_rate'] is not None and p['unsupported_rate']<=base['unsupported_rate'] and p['class_macro_f1']>=base['class_macro_f1']-.02 and all(v['difference'] is not None and v['difference']>0 and v['p_holm'] is not None and v['p_holm']<.05 for v in contrasts.values()))
     decision_diagnostics={'no_tool_reports':sum(r['mask']==0 for r in method_rows['P']),

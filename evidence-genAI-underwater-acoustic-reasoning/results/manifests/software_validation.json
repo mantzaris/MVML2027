@@ -1,6 +1,6 @@
 {
   "analysis_math": {
-    "checks_passed": 8,
+    "checks_passed": 10,
     "scope": [
       "conditional denominators",
       "whole-test denominator",
@@ -9,7 +9,9 @@
       "empty retention",
       "pairing rejection",
       "genuine-score Brier",
-      "equal-frequency ECE"
+      "equal-frequency ECE",
+      "single-method support interval",
+      "single-method unsupported interval"
     ],
     "small_sample_ece_caveat": "With five records and ten requested bins, the implementation uses five singleton nonempty bins.",
     "test_outcomes_used": false

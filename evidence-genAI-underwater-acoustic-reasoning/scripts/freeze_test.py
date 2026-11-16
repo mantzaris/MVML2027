@@ -18,7 +18,13 @@ def main():
     if not pilot['passed']:raise ValueError('Development gate did not pass')
     repeat=json.loads((ROOT/'results/manifests/grammar_repeat.json').read_text())
     if repeat['schema_valid']!=repeat['reports'] or repeat['format_valid']!=repeat['reports']:raise ValueError('Structured repeat smoke test contains invalid reports')
+    stability=json.loads((ROOT/'results/manifests/repeat_stability.json').read_text())
+    if not stability['all_five_slots_exact']:raise ValueError('Repeated-input smoke has unstable structured slots')
     settings=json.loads((ROOT/'configs/locked_controller.json').read_text())
+    training=json.loads((ROOT/'results/manifests/controller_training.json').read_text())
+    checkpoint_hashes={f'checkpoints/{name}':digest for name,digest in training['checkpoint_hashes'].items()}
+    for relative,digest in checkpoint_hashes.items():
+        if file_hash(ROOT/relative)!=digest:raise ValueError('Controller checkpoint differs from its training record')
     design=json.loads((ROOT/'results/manifests/pretest_design_audit.json').read_text())
     if design['test_terminal_outcomes_examined'] or design['locked_comparator']!=settings['locked_comparator']:raise ValueError('Pre-test precision audit does not match the locked design')
     manifest=json.loads((ROOT/'data/private/experiment_manifest.json').read_text())
@@ -52,12 +58,15 @@ def main():
         'test_outcomes_examined_at_freeze':False,'locked_comparator':settings['locked_comparator'],
         'confirmatory_contrasts':['P vs '+settings['locked_comparator'],'P vs B7_class_only','P vs A1_one_shot'],
         'split_manifest_sha256':file_hash(ROOT/'data/private/experiment_manifest.json'),
+        'controller_checkpoint_hashes':checkpoint_hashes,
+        'anchor_classifier_cache_sha256':file_hash(ROOT/'data/derived/classifier_seed17.npz'),
         'waveform_audit_sha256':file_hash(ROOT/'data/private/waveform_hashes.json'),
         'reference_digest':canonical_hash(references),'ai_review_digest':canonical_hash(reviews),
         'pretest_terminal_cache_digest':canonical_hash(keys),'pretest_terminal_counts':cache_counts,
         'pilot_gate_sha256':file_hash(ROOT/'results/manifests/pilot_gate.json'),
         'pretest_design_audit_sha256':file_hash(ROOT/'results/manifests/pretest_design_audit.json'),
         'structured_repeat_audit_sha256':file_hash(ROOT/'results/manifests/grammar_repeat.json'),
+        'repeat_stability_sha256':file_hash(ROOT/'results/manifests/repeat_stability.json'),
         'software_and_protocol_hashes':hashes,'format_schema_sha256':schema_hash,
         'human_reviewers':0,'endpoint':'automated proxy supported coverage',
         'previous_preparation_record':previous}
