@@ -1,0 +1,40 @@
+{
+  "deterministic_interpretation_sha256": "991094f6ec4199c937a34ebe1c15209694daec9e9b3153c51e284495f5060eb2",
+  "deterministic_reports_audited": 30,
+  "diagnostic_interpretation": "The fixed deterministic prose explicitly disclaims mechanical inference and the structured slots contain no mechanical-speed, machinery or motion claims. The auditor frequently justifies mechanical flags by criticizing vessel-class assertions, indicating category confusion. Do not use these unvalidated flags as a prose-quality ranking.",
+  "hash_ordered_note_examples": [
+    {
+      "note": "The report's assertion of a vessel class is unsupported by the provided data.",
+      "path": "results/raw/report_audits/prose/07dac61fe559be727f61dc43_B8_deterministic.json",
+      "sha256": "110e82bad8dd0c443eb4ea9718509133cba0b1acce5b26769abe183ecd81ef8b"
+    },
+    {
+      "note": "The report asserts vessel class and band without sufficient evidence, and the trend is steady but not enough to establish motion.",
+      "path": "results/raw/report_audits/prose/0ac669fd229351c974a803fb_B8_deterministic.json",
+      "sha256": "333b6763fefcb83590dd042962068ec78a8c12616fbb811c2d0bb0604a5a198a"
+    }
+  ],
+  "identical_deterministic_interpretations": 1,
+  "mechanical_claim_flags": 29,
+  "mechanical_flags_with_class_literal": 29,
+  "notes_containing_class_literal": 29,
+  "paraphrases": {
+    "paraphrase": {
+      "all_five_slots_uncertain": 100,
+      "example_sha256": "f9bd469755ca245617b8590615935e6b2edd54c52831f73d64d2729975a50869",
+      "hash_ordered_example_path": "results/raw/report_audits/paraphrase/0246265f847cd4a3ecc242b6_9.json",
+      "interpretation": "Zero structured assertion coverage does not establish absence of physical claims in prose. This example contains numerical physical details despite all-uncertain slots. The fixed 120-report prose audit covers original-prompt reports, not these paraphrases.",
+      "interpretation_excerpt": "The audio from W0 shows a dominant band around 20-100 Hz with a tone at 1014 Hz.",
+      "reports": 100
+    },
+    "paraphrase_2": {
+      "all_five_slots_uncertain": 100,
+      "example_sha256": "0e647b2c2d6a52136b0808699dcbcff318ae75332db4bc90b79abe1c0bbeab42",
+      "hash_ordered_example_path": "results/raw/report_audits/paraphrase_2/0246265f847cd4a3ecc242b6_9.json",
+      "interpretation": "Zero structured assertion coverage does not establish absence of physical claims in prose. This example contains numerical physical details despite all-uncertain slots. The fixed 120-report prose audit covers original-prompt reports, not these paraphrases.",
+      "interpretation_excerpt": "The audio excerpt has a dominant band around 20 Hz to 100 Hz, with a frequency of 1014 Hz.",
+      "reports": 100
+    }
+  },
+  "scope": "Post hoc AI diagnostic inspection of saved outputs; no scores, prompts, or outputs changed. Not independent human validation."
+}

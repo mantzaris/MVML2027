@@ -11,17 +11,23 @@ ledger=read('results/manifests/execution_ledger.json');validation=read('results/
 inspection=read('results/manifests/manuscript_inspection.json');preservation=read('results/manifests/final_preservation.json')
 unlock=read('protocol/test_unlock_log.json')
 freeze_audit=read('results/manifests/freeze_integrity.json')
+extended=read('results/manifests/extended_cache_audit.json')
+assert extended['saved_parse_matches_current_parser'] and extended['failed_reports_retained']
 assert freeze_audit['method_files_and_models_match'] and freeze_audit['main_references_and_reviews_match']
 assert main['assessment_clips']==100 and stress['transformed_clips']==360
 assert audits['paraphrase']['n']==100 and audits['paraphrase_2']['n']==100
 intervention_count=sum(v['n'] for v in audits['evidence_interventions'].values())
 assert 125<=intervention_count<=175
+assert extended['groups']['evidence_interventions']['reports']==intervention_count
+assert extended['groups']['paraphrase']['reports']==100 and extended['groups']['paraphrase_2']['reports']==100
 assert all(audits['evidence_interventions'][k]['n']==25 for k in ('missing_A','missing_B','swapped_A','false_A','corrupt_D_labels'))
 assert sum(v['requested'] for v in audits['prose'].values())==120 and reviews['counts']['requested']==540
 assert ledger['finished'] and ledger['within_authorized_window'] and preservation['all_match']
 assert unlock['unlocked'] and not unlock['test_outcomes_examined_at_freeze']
 assert inspection['all_pages_reviewed'] and not inspection['clipped_text_observed']
 pdf=ROOT/'manuscript/manuscript.pdf';info=subprocess.check_output(['pdfinfo',str(pdf)],text=True)
+assert inspection['pdf_sha256']==file_hash(pdf)
+assert inspection['docx_sha256']==file_hash(ROOT/'manuscript/manuscript.docx')
 pages=int(next(line.split(':',1)[1] for line in info.splitlines() if line.startswith('Pages:')))
 assert 1<=pages<=8 and inspection['pages']==pages
 text=(ROOT/'manuscript/manuscript.txt').read_text();abstract=text.split('Abstract — ',1)[1].split('\n\nKeywords:',1)[0]
@@ -30,7 +36,7 @@ destination=ROOT/'results/manifests/research_artifacts.json'
 paths=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','-z','.'],cwd=ROOT).decode().split('\0')
 files=sorted({p for p in paths if p and (ROOT/p).is_file() and ROOT/p!=destination})
 for path in files:
-    assert not any(part in ('raw','private','checkpoints','.venv','.cache') for part in Path(path).parts),path
+    assert not any(part in ('raw','private','checkpoints','logs','.venv','.cache') for part in Path(path).parts),path
     assert (ROOT/path).stat().st_size<5_000_000,(path,'unexpected large Git artifact')
 records=[{'path':p,'bytes':(ROOT/p).stat().st_size,'sha256':file_hash(ROOT/p)} for p in files]
 record={'stage':'completed_real_recording_research_with_automated_proxy_assessment','recorded_at_utc':datetime.now(timezone.utc).isoformat(),

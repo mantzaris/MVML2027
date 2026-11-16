@@ -1,0 +1,1626 @@
+{
+  "A1_one_shot": [
+    {
+      "coverage": 0.1,
+      "loss": 0.15625,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.19375,
+      "supported_coverage": 0.11666666666666667,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.2140625,
+      "supported_coverage": 0.125,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.19,
+      "supported_coverage": 0.15,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.19166666666666668,
+      "supported_coverage": 0.14166666666666666,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.20357142857142857,
+      "supported_coverage": 0.1357142857142857,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.20703125,
+      "supported_coverage": 0.1375,
+      "unsupported_rate": 0.043478260869565216
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.20902777777777778,
+      "supported_coverage": 0.13333333333333333,
+      "unsupported_rate": 0.07692307692307693
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.20375,
+      "supported_coverage": 0.135,
+      "unsupported_rate": 0.06896551724137931
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.19943181818181818,
+      "supported_coverage": 0.12727272727272726,
+      "unsupported_rate": 0.06666666666666667
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.19635416666666666,
+      "supported_coverage": 0.12083333333333333,
+      "unsupported_rate": 0.09375
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.1918269230769231,
+      "supported_coverage": 0.13076923076923078,
+      "unsupported_rate": 0.08108108108108109
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.19285714285714287,
+      "supported_coverage": 0.12857142857142856,
+      "unsupported_rate": 0.07692307692307693
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.20125,
+      "supported_coverage": 0.12666666666666668,
+      "unsupported_rate": 0.07317073170731707
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.209765625,
+      "supported_coverage": 0.128125,
+      "unsupported_rate": 0.06818181818181818
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.20772058823529413,
+      "supported_coverage": 0.1264705882352941,
+      "unsupported_rate": 0.0851063829787234
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.20590277777777777,
+      "supported_coverage": 0.125,
+      "unsupported_rate": 0.08163265306122448
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.2042763157894737,
+      "supported_coverage": 0.12105263157894737,
+      "unsupported_rate": 0.08
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.208125,
+      "supported_coverage": 0.1175,
+      "unsupported_rate": 0.0784313725490196
+    }
+  ],
+  "A2_no_penalty": [
+    {
+      "coverage": 0.1,
+      "loss": 0.15,
+      "supported_coverage": 0.15,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.20208333333333334,
+      "supported_coverage": 0.15,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.2,
+      "supported_coverage": 0.175,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.1875,
+      "supported_coverage": 0.17,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.190625,
+      "supported_coverage": 0.15833333333333333,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.2017857142857143,
+      "supported_coverage": 0.14285714285714285,
+      "unsupported_rate": 0.047619047619047616
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.20234375,
+      "supported_coverage": 0.1375,
+      "unsupported_rate": 0.043478260869565216
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.20069444444444445,
+      "supported_coverage": 0.13333333333333333,
+      "unsupported_rate": 0.04
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.195,
+      "supported_coverage": 0.125,
+      "unsupported_rate": 0.038461538461538464
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.18806818181818183,
+      "supported_coverage": 0.12272727272727273,
+      "unsupported_rate": 0.03571428571428571
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.184375,
+      "supported_coverage": 0.12083333333333333,
+      "unsupported_rate": 0.03333333333333333
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.1841346153846154,
+      "supported_coverage": 0.12692307692307692,
+      "unsupported_rate": 0.029411764705882353
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.190625,
+      "supported_coverage": 0.12857142857142856,
+      "unsupported_rate": 0.02702702702702703
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.2,
+      "supported_coverage": 0.12666666666666668,
+      "unsupported_rate": 0.02564102564102564
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.203515625,
+      "supported_coverage": 0.125,
+      "unsupported_rate": 0.024390243902439025
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.20036764705882354,
+      "supported_coverage": 0.12058823529411765,
+      "unsupported_rate": 0.023809523809523808
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.20416666666666666,
+      "supported_coverage": 0.11944444444444445,
+      "unsupported_rate": 0.022727272727272728
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.2026315789473684,
+      "supported_coverage": 0.11578947368421053,
+      "unsupported_rate": 0.022222222222222223
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.2053125,
+      "supported_coverage": 0.11,
+      "unsupported_rate": 0.022222222222222223
+    }
+  ],
+  "A3_no_stop": [
+    {
+      "coverage": 0.1,
+      "loss": 0.215625,
+      "supported_coverage": 0.225,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.16875,
+      "supported_coverage": 0.25,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.215625,
+      "supported_coverage": 0.2875,
+      "unsupported_rate": 0.08
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.19625,
+      "supported_coverage": 0.26,
+      "unsupported_rate": 0.10344827586206896
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.209375,
+      "supported_coverage": 0.25,
+      "unsupported_rate": 0.11764705882352941
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.20089285714285715,
+      "supported_coverage": 0.25,
+      "unsupported_rate": 0.10256410256410256
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.1921875,
+      "supported_coverage": 0.24375,
+      "unsupported_rate": 0.11363636363636363
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.20347222222222222,
+      "supported_coverage": 0.2388888888888889,
+      "unsupported_rate": 0.14
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.2025,
+      "supported_coverage": 0.225,
+      "unsupported_rate": 0.1346153846153846
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.19715909090909092,
+      "supported_coverage": 0.22272727272727272,
+      "unsupported_rate": 0.15517241379310345
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.19322916666666667,
+      "supported_coverage": 0.20833333333333334,
+      "unsupported_rate": 0.15254237288135594
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.19375,
+      "supported_coverage": 0.2076923076923077,
+      "unsupported_rate": 0.15625
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.19151785714285716,
+      "supported_coverage": 0.21428571428571427,
+      "unsupported_rate": 0.14285714285714285
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.19166666666666668,
+      "supported_coverage": 0.2,
+      "unsupported_rate": 0.14285714285714285
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.19609375,
+      "supported_coverage": 0.2,
+      "unsupported_rate": 0.13513513513513514
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.19411764705882353,
+      "supported_coverage": 0.2088235294117647,
+      "unsupported_rate": 0.13414634146341464
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.19722222222222222,
+      "supported_coverage": 0.2111111111111111,
+      "unsupported_rate": 0.12643678160919541
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.19835526315789473,
+      "supported_coverage": 0.21842105263157896,
+      "unsupported_rate": 0.11702127659574468
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.198125,
+      "supported_coverage": 0.225,
+      "unsupported_rate": 0.10891089108910891
+    }
+  ],
+  "B1_raw": [
+    {
+      "coverage": 0.1,
+      "loss": 0.19375,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.19583333333333333,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.1984375,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.2025,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.20416666666666666,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.20625,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.203125,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.20347222222222222,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.2025,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.20170454545454544,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.20260416666666667,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.20240384615384616,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.20044642857142858,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.20125,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.201171875,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.20073529411764707,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.20069444444444445,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.20032894736842105,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.2003125,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    }
+  ],
+  "B2_prior": [
+    {
+      "coverage": 0.1,
+      "loss": 0.18125,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.17083333333333334,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.2109375,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.2225,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.24166666666666667,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.24553571428571427,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.25,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.26180555555555557,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.275,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.28806818181818183,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.29010416666666666,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.28701923076923075,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.2897321428571429,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.29125,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.287109375,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.2875,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.2951388888888889,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.3055921052631579,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.3053125,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    }
+  ],
+  "B3_fixed": [
+    {
+      "coverage": 0.1,
+      "loss": 0.165625,
+      "supported_coverage": 0.075,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.14166666666666666,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.2125,
+      "supported_coverage": 0.1125,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.20375,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.09090909090909091
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.21458333333333332,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.14285714285714285
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.20625,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.125
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.2015625,
+      "supported_coverage": 0.09375,
+      "unsupported_rate": 0.11764705882352941
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.2013888888888889,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.1
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.20125,
+      "supported_coverage": 0.095,
+      "unsupported_rate": 0.13636363636363635
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.20795454545454545,
+      "supported_coverage": 0.09090909090909091,
+      "unsupported_rate": 0.13043478260869565
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.2078125,
+      "supported_coverage": 0.09583333333333334,
+      "unsupported_rate": 0.11538461538461539
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.20384615384615384,
+      "supported_coverage": 0.09230769230769231,
+      "unsupported_rate": 0.14285714285714285
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.20267857142857143,
+      "supported_coverage": 0.08571428571428572,
+      "unsupported_rate": 0.14285714285714285
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.20166666666666666,
+      "supported_coverage": 0.08333333333333333,
+      "unsupported_rate": 0.13793103448275862
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.2046875,
+      "supported_coverage": 0.084375,
+      "unsupported_rate": 0.12903225806451613
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.2036764705882353,
+      "supported_coverage": 0.08823529411764706,
+      "unsupported_rate": 0.11764705882352941
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.20451388888888888,
+      "supported_coverage": 0.09166666666666666,
+      "unsupported_rate": 0.10810810810810811
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.2042763157894737,
+      "supported_coverage": 0.09473684210526316,
+      "unsupported_rate": 0.1
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.2053125,
+      "supported_coverage": 0.095,
+      "unsupported_rate": 0.09523809523809523
+    }
+  ],
+  "B4_retrieval": [
+    {
+      "coverage": 0.1,
+      "loss": 0.1375,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.17708333333333334,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.2234375,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.22625,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.23229166666666667,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.22053571428571428,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.22734375,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.22291666666666668,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.23375,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.225,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.22447916666666667,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.22451923076923078,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.22053571428571428,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.21833333333333332,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.2234375,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.23051470588235295,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.22777777777777777,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.2299342105263158,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.2240625,
+      "supported_coverage": 0.0,
+      "unsupported_rate": null
+    }
+  ],
+  "B4_retrieval_dsp": [
+    {
+      "coverage": 0.1,
+      "loss": 0.165625,
+      "supported_coverage": 0.075,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.14166666666666666,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.2125,
+      "supported_coverage": 0.1125,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.20375,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.09090909090909091
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.21458333333333332,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.14285714285714285
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.20625,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.125
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.2015625,
+      "supported_coverage": 0.09375,
+      "unsupported_rate": 0.11764705882352941
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.2013888888888889,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.1
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.20125,
+      "supported_coverage": 0.095,
+      "unsupported_rate": 0.13636363636363635
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.20795454545454545,
+      "supported_coverage": 0.09090909090909091,
+      "unsupported_rate": 0.13043478260869565
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.2078125,
+      "supported_coverage": 0.09583333333333334,
+      "unsupported_rate": 0.11538461538461539
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.20384615384615384,
+      "supported_coverage": 0.09230769230769231,
+      "unsupported_rate": 0.14285714285714285
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.20267857142857143,
+      "supported_coverage": 0.08571428571428572,
+      "unsupported_rate": 0.14285714285714285
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.20166666666666666,
+      "supported_coverage": 0.08333333333333333,
+      "unsupported_rate": 0.13793103448275862
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.2046875,
+      "supported_coverage": 0.084375,
+      "unsupported_rate": 0.12903225806451613
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.2036764705882353,
+      "supported_coverage": 0.08823529411764706,
+      "unsupported_rate": 0.11764705882352941
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.20451388888888888,
+      "supported_coverage": 0.09166666666666666,
+      "unsupported_rate": 0.10810810810810811
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.2042763157894737,
+      "supported_coverage": 0.09473684210526316,
+      "unsupported_rate": 0.1
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.2053125,
+      "supported_coverage": 0.095,
+      "unsupported_rate": 0.09523809523809523
+    }
+  ],
+  "B5_all": [
+    {
+      "coverage": 0.1,
+      "loss": 0.24375,
+      "supported_coverage": 0.25,
+      "unsupported_rate": 0.47368421052631576
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.225,
+      "supported_coverage": 0.25,
+      "unsupported_rate": 0.4827586206896552
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.2375,
+      "supported_coverage": 0.2625,
+      "unsupported_rate": 0.4
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.2825,
+      "supported_coverage": 0.28,
+      "unsupported_rate": 0.37777777777777777
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.27291666666666664,
+      "supported_coverage": 0.2916666666666667,
+      "unsupported_rate": 0.35185185185185186
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.2794642857142857,
+      "supported_coverage": 0.2857142857142857,
+      "unsupported_rate": 0.38461538461538464
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.26640625,
+      "supported_coverage": 0.25625,
+      "unsupported_rate": 0.3880597014925373
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.2548611111111111,
+      "supported_coverage": 0.2611111111111111,
+      "unsupported_rate": 0.37333333333333335
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.25,
+      "supported_coverage": 0.26,
+      "unsupported_rate": 0.37349397590361444
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.24772727272727274,
+      "supported_coverage": 0.2590909090909091,
+      "unsupported_rate": 0.36666666666666664
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.2526041666666667,
+      "supported_coverage": 0.26666666666666666,
+      "unsupported_rate": 0.37254901960784315
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.25048076923076923,
+      "supported_coverage": 0.25,
+      "unsupported_rate": 0.3925233644859813
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.26339285714285715,
+      "supported_coverage": 0.2571428571428571,
+      "unsupported_rate": 0.4098360655737705
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.25375,
+      "supported_coverage": 0.27,
+      "unsupported_rate": 0.39097744360902253
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.251171875,
+      "supported_coverage": 0.278125,
+      "unsupported_rate": 0.3776223776223776
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.25073529411764706,
+      "supported_coverage": 0.2676470588235294,
+      "unsupported_rate": 0.3933333333333333
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.2517361111111111,
+      "supported_coverage": 0.26944444444444443,
+      "unsupported_rate": 0.3821656050955414
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.2523026315789474,
+      "supported_coverage": 0.2657894736842105,
+      "unsupported_rate": 0.3878787878787879
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.2521875,
+      "supported_coverage": 0.27,
+      "unsupported_rate": 0.38285714285714284
+    }
+  ],
+  "B6_planner": [
+    {
+      "coverage": 0.1,
+      "loss": 0.18125,
+      "supported_coverage": 0.225,
+      "unsupported_rate": 0.1
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.22291666666666668,
+      "supported_coverage": 0.23333333333333334,
+      "unsupported_rate": 0.17647058823529413
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.209375,
+      "supported_coverage": 0.2125,
+      "unsupported_rate": 0.2608695652173913
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.2275,
+      "supported_coverage": 0.2,
+      "unsupported_rate": 0.3333333333333333
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.21875,
+      "supported_coverage": 0.19166666666666668,
+      "unsupported_rate": 0.34285714285714286
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.21875,
+      "supported_coverage": 0.17142857142857143,
+      "unsupported_rate": 0.35135135135135137
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.21796875,
+      "supported_coverage": 0.1625,
+      "unsupported_rate": 0.36585365853658536
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.22430555555555556,
+      "supported_coverage": 0.16111111111111112,
+      "unsupported_rate": 0.3695652173913043
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.22375,
+      "supported_coverage": 0.15,
+      "unsupported_rate": 0.375
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.22386363636363638,
+      "supported_coverage": 0.14545454545454545,
+      "unsupported_rate": 0.38461538461538464
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.21666666666666667,
+      "supported_coverage": 0.15,
+      "unsupported_rate": 0.35714285714285715
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.2221153846153846,
+      "supported_coverage": 0.1576923076923077,
+      "unsupported_rate": 0.3387096774193548
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.22544642857142858,
+      "supported_coverage": 0.16785714285714284,
+      "unsupported_rate": 0.32857142857142857
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.23458333333333334,
+      "supported_coverage": 0.16666666666666666,
+      "unsupported_rate": 0.3333333333333333
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.2390625,
+      "supported_coverage": 0.16875,
+      "unsupported_rate": 0.3333333333333333
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.23823529411764705,
+      "supported_coverage": 0.1676470588235294,
+      "unsupported_rate": 0.32142857142857145
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.2482638888888889,
+      "supported_coverage": 0.17222222222222222,
+      "unsupported_rate": 0.3333333333333333
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.2569078947368421,
+      "supported_coverage": 0.17105263157894737,
+      "unsupported_rate": 0.3434343434343434
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.265,
+      "supported_coverage": 0.1725,
+      "unsupported_rate": 0.3611111111111111
+    }
+  ],
+  "B7_class_only": [
+    {
+      "coverage": 0.1,
+      "loss": 0.121875,
+      "supported_coverage": 0.175,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.15833333333333333,
+      "supported_coverage": 0.16666666666666666,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.1890625,
+      "supported_coverage": 0.15,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.20625,
+      "supported_coverage": 0.17,
+      "unsupported_rate": 0.05555555555555555
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.21354166666666666,
+      "supported_coverage": 0.15833333333333333,
+      "unsupported_rate": 0.13636363636363635
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.2080357142857143,
+      "supported_coverage": 0.15714285714285714,
+      "unsupported_rate": 0.12
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.19921875,
+      "supported_coverage": 0.16875,
+      "unsupported_rate": 0.1
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.19305555555555556,
+      "supported_coverage": 0.16111111111111112,
+      "unsupported_rate": 0.09375
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.20125,
+      "supported_coverage": 0.155,
+      "unsupported_rate": 0.11428571428571428
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.20113636363636364,
+      "supported_coverage": 0.14545454545454545,
+      "unsupported_rate": 0.1111111111111111
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.19635416666666666,
+      "supported_coverage": 0.15,
+      "unsupported_rate": 0.1
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.19375,
+      "supported_coverage": 0.1423076923076923,
+      "unsupported_rate": 0.11904761904761904
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.190625,
+      "supported_coverage": 0.1392857142857143,
+      "unsupported_rate": 0.11363636363636363
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.19166666666666668,
+      "supported_coverage": 0.13,
+      "unsupported_rate": 0.11363636363636363
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.192578125,
+      "supported_coverage": 0.125,
+      "unsupported_rate": 0.1111111111111111
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.19669117647058823,
+      "supported_coverage": 0.12352941176470589,
+      "unsupported_rate": 0.10638297872340426
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.20173611111111112,
+      "supported_coverage": 0.12777777777777777,
+      "unsupported_rate": 0.11538461538461539
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.2049342105263158,
+      "supported_coverage": 0.12631578947368421,
+      "unsupported_rate": 0.1111111111111111
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.205625,
+      "supported_coverage": 0.12,
+      "unsupported_rate": 0.12727272727272726
+    }
+  ],
+  "B8_deterministic": [
+    {
+      "coverage": 0.1,
+      "loss": 0.23125,
+      "supported_coverage": 0.625,
+      "unsupported_rate": 0.07407407407407407
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.2375,
+      "supported_coverage": 0.6166666666666667,
+      "unsupported_rate": 0.0975609756097561
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.2671875,
+      "supported_coverage": 0.6125,
+      "unsupported_rate": 0.10909090909090909
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.23875,
+      "supported_coverage": 0.61,
+      "unsupported_rate": 0.10294117647058823
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.259375,
+      "supported_coverage": 0.5833333333333334,
+      "unsupported_rate": 0.11392405063291139
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.28035714285714286,
+      "supported_coverage": 0.6,
+      "unsupported_rate": 0.0967741935483871
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.303125,
+      "supported_coverage": 0.59375,
+      "unsupported_rate": 0.10377358490566038
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.3020833333333333,
+      "supported_coverage": 0.5833333333333334,
+      "unsupported_rate": 0.11764705882352941
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.305,
+      "supported_coverage": 0.56,
+      "unsupported_rate": 0.1450381679389313
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.3119318181818182,
+      "supported_coverage": 0.5454545454545454,
+      "unsupported_rate": 0.15492957746478872
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.28802083333333334,
+      "supported_coverage": 0.55,
+      "unsupported_rate": 0.14838709677419354
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.2759615384615385,
+      "supported_coverage": 0.55,
+      "unsupported_rate": 0.1437125748502994
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.28169642857142857,
+      "supported_coverage": 0.5464285714285714,
+      "unsupported_rate": 0.1452513966480447
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.28625,
+      "supported_coverage": 0.55,
+      "unsupported_rate": 0.14507772020725387
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.276171875,
+      "supported_coverage": 0.553125,
+      "unsupported_rate": 0.1407766990291262
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.2716911764705882,
+      "supported_coverage": 0.5529411764705883,
+      "unsupported_rate": 0.1336405529953917
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.2677083333333333,
+      "supported_coverage": 0.5611111111111111,
+      "unsupported_rate": 0.12554112554112554
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.2588815789473684,
+      "supported_coverage": 0.5631578947368421,
+      "unsupported_rate": 0.11934156378600823
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.2596875,
+      "supported_coverage": 0.56,
+      "unsupported_rate": 0.125
+    }
+  ],
+  "B9_entropy": [
+    {
+      "coverage": 0.1,
+      "loss": 0.11875,
+      "supported_coverage": 0.225,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.13125,
+      "supported_coverage": 0.21666666666666667,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.159375,
+      "supported_coverage": 0.2125,
+      "unsupported_rate": 0.05555555555555555
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.19875,
+      "supported_coverage": 0.2,
+      "unsupported_rate": 0.09090909090909091
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.19375,
+      "supported_coverage": 0.225,
+      "unsupported_rate": 0.06896551724137931
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.2017857142857143,
+      "supported_coverage": 0.21428571428571427,
+      "unsupported_rate": 0.09090909090909091
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.20859375,
+      "supported_coverage": 0.20625,
+      "unsupported_rate": 0.10810810810810811
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.20902777777777778,
+      "supported_coverage": 0.18888888888888888,
+      "unsupported_rate": 0.10526315789473684
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.203125,
+      "supported_coverage": 0.185,
+      "unsupported_rate": 0.13953488372093023
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.20113636363636364,
+      "supported_coverage": 0.18181818181818182,
+      "unsupported_rate": 0.16666666666666666
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.20729166666666668,
+      "supported_coverage": 0.19583333333333333,
+      "unsupported_rate": 0.14545454545454545
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.20528846153846153,
+      "supported_coverage": 0.19230769230769232,
+      "unsupported_rate": 0.15254237288135594
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.20044642857142858,
+      "supported_coverage": 0.19642857142857142,
+      "unsupported_rate": 0.140625
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.20291666666666666,
+      "supported_coverage": 0.19333333333333333,
+      "unsupported_rate": 0.14705882352941177
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.204296875,
+      "supported_coverage": 0.19375,
+      "unsupported_rate": 0.1388888888888889
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.20073529411764707,
+      "supported_coverage": 0.19411764705882353,
+      "unsupported_rate": 0.14285714285714285
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.2013888888888889,
+      "supported_coverage": 0.19166666666666668,
+      "unsupported_rate": 0.15853658536585366
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.19769736842105262,
+      "supported_coverage": 0.19473684210526315,
+      "unsupported_rate": 0.14942528735632185
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.1984375,
+      "supported_coverage": 0.1975,
+      "unsupported_rate": 0.15053763440860216
+    }
+  ],
+  "P": [
+    {
+      "coverage": 0.1,
+      "loss": 0.15,
+      "supported_coverage": 0.15,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.15,
+      "loss": 0.20208333333333334,
+      "supported_coverage": 0.15,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.2,
+      "loss": 0.2,
+      "supported_coverage": 0.175,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.25,
+      "loss": 0.1875,
+      "supported_coverage": 0.17,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.3,
+      "loss": 0.190625,
+      "supported_coverage": 0.15833333333333333,
+      "unsupported_rate": 0.0
+    },
+    {
+      "coverage": 0.35,
+      "loss": 0.2017857142857143,
+      "supported_coverage": 0.14285714285714285,
+      "unsupported_rate": 0.047619047619047616
+    },
+    {
+      "coverage": 0.4,
+      "loss": 0.20234375,
+      "supported_coverage": 0.1375,
+      "unsupported_rate": 0.043478260869565216
+    },
+    {
+      "coverage": 0.45,
+      "loss": 0.20069444444444445,
+      "supported_coverage": 0.13333333333333333,
+      "unsupported_rate": 0.04
+    },
+    {
+      "coverage": 0.5,
+      "loss": 0.195,
+      "supported_coverage": 0.125,
+      "unsupported_rate": 0.038461538461538464
+    },
+    {
+      "coverage": 0.55,
+      "loss": 0.18806818181818183,
+      "supported_coverage": 0.12272727272727273,
+      "unsupported_rate": 0.03571428571428571
+    },
+    {
+      "coverage": 0.6,
+      "loss": 0.184375,
+      "supported_coverage": 0.12083333333333333,
+      "unsupported_rate": 0.03333333333333333
+    },
+    {
+      "coverage": 0.65,
+      "loss": 0.1841346153846154,
+      "supported_coverage": 0.12692307692307692,
+      "unsupported_rate": 0.029411764705882353
+    },
+    {
+      "coverage": 0.7,
+      "loss": 0.190625,
+      "supported_coverage": 0.12857142857142856,
+      "unsupported_rate": 0.02702702702702703
+    },
+    {
+      "coverage": 0.75,
+      "loss": 0.2,
+      "supported_coverage": 0.12666666666666668,
+      "unsupported_rate": 0.02564102564102564
+    },
+    {
+      "coverage": 0.8,
+      "loss": 0.203515625,
+      "supported_coverage": 0.125,
+      "unsupported_rate": 0.024390243902439025
+    },
+    {
+      "coverage": 0.85,
+      "loss": 0.20036764705882354,
+      "supported_coverage": 0.12058823529411765,
+      "unsupported_rate": 0.023809523809523808
+    },
+    {
+      "coverage": 0.9,
+      "loss": 0.20416666666666666,
+      "supported_coverage": 0.11944444444444445,
+      "unsupported_rate": 0.022727272727272728
+    },
+    {
+      "coverage": 0.95,
+      "loss": 0.2026315789473684,
+      "supported_coverage": 0.11578947368421053,
+      "unsupported_rate": 0.022222222222222223
+    },
+    {
+      "coverage": 1.0,
+      "loss": 0.2053125,
+      "supported_coverage": 0.11,
+      "unsupported_rate": 0.022222222222222223
+    }
+  ]
+}

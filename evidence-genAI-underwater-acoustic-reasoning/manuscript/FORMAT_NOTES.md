@@ -6,7 +6,7 @@ The verified [author guidelines](https://mvml.org/author-guidelines/) impose an 
 
 The DOCX is US Letter, with left/right margins 11.994 mm and top/bottom 25.4 mm. Its prose instead prescribes 25 mm margins on all sides. The working document preserves the downloaded section geometry. The organizer must resolve that conflict before submission. Body text uses Times New Roman 11 pt and headings Arial; tables/captions/references use 10 pt, following the template. Fonts and every rendered page are checked in the final inspection record.
 
-After the clean analysis, stress tests and report audits finish:
+The completed manuscript contains eight total pages, including references, and a 175-word abstract. All pages were visually inspected; the final inspection record pins the PDF and DOCX hashes. To rebuild from the saved completed outputs:
 
 ```bash
 .venv/bin/python scripts/make_figures.py
@@ -17,4 +17,4 @@ pdfinfo manuscript/manuscript.pdf
 pdffonts manuscript/manuscript.pdf
 ```
 
-Inspect every page after substantive edits. `results/manifests/manuscript_inspection.json` records the final PDF hash and visual inspection once completed. The initial two-page preparation draft is historical and will be removed from the working tree when the empirical manuscript is verified; Git retains its history.
+Inspect every page after substantive edits. `results/manifests/manuscript_inspection.json` records the final PDF hash and visual inspection once completed. The initial two-page preparation draft has been superseded and moved to an ignored local archive; Git retains its history.

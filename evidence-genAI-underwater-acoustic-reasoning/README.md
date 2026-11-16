@@ -1,10 +1,24 @@
 # Evidence-Grounded Generative AI for Underwater Acoustic Reasoning
 
-Alexander V. Mantzaris’s MVML 2027 research project. All work is contained here. Commit on **main only**; the owner performs pushes manually.
+An anonymous MVML 2027 research manuscript and its reproducibility project. All work is contained here. Commit on **main only**; the owner performs pushes manually.
 
 ## Execution status
 
-Real GPU experiments are running on the authorized existing RunPod. Classifier training is complete for seeds 17/29/43; all 7,418 selected recordings passed acquisition and decoded-waveform duplicate checks. The corrected development generation passed its feasibility gate. All 540 main AI assessments and 2,890 pre-test terminal reports are saved; four terminal truncations remain as penalized failures. The controller, calibration thresholds and analysis were frozen at **2026-11-16 00:06:30 UTC**, before test generation, with the entropy heuristic as the locked comparator. Held-out test and stress evaluation are now running.
+The real-recording experiments and anonymous eight-page manuscript are complete:
+[PDF](manuscript/manuscript.pdf), [editable DOCX](manuscript/manuscript.docx), and [plain text](manuscript/manuscript.txt).
+The predefined adaptive-selection success criteria were **not met**. On 100 held-out assessment clips from 93 recorded source groups, the learned policy achieved 13.03% supported physical coverage versus 19.49% for the development-locked entropy comparator: **−6.46 percentage points**, paired source-bootstrap 95% interval **[−11.05, −1.96]**, Holm-adjusted p=0.018.
+
+| Method | Reports retained | Supported coverage | Wrong/unsupported assertions | Whole-test useful coverage |
+|---|---:|---:|---:|---:|
+| Learned sequential policy | 71% | 13.03% | 2.63% | 9.25% |
+| Locked entropy comparator | 68% | 19.49% | 14.52% | 13.25% |
+| Deterministic renderer | 65% | 55.00% | 14.37% | 35.75% |
+
+These are automated consistency proxies, with different realized retention rates. Lower composite loss and fewer assertions did not establish greater useful information. The full [main results](results/tables/main_results.json) include every baseline, ablation, classifier seed, confidence interval and cost measure.
+
+Completed work includes three classifier seeds on 2,240 test recordings, 4,590 main terminal reports, 360 transformed clips with 720 fresh AI assessments, 200 paraphrase reports, 175 evidence interventions and 120 AI prose audits. Clean-calibration rejection changes sharply under waveform shifts. Both paraphrases collapse to all-uncertain slots, while saved prose examples still contain physical details. The AI prose auditor confuses vessel-class assertions with mechanical claims in deterministic reports; its flags are retained as unvalidated diagnostics, not a method ranking. See [stress results](results/tables/robustness_results.json), [report audits](results/tables/report_audits.json), and [audit limitations](results/manifests/prose_audit_diagnostics.json).
+
+The scientific source, models, thresholds and main references match the prospective **2026-11-16 00:06:30 UTC** test freeze. Verification passed for 56 portable tests, 58 worker tests, 500 tool fixtures and 100 structural interventions. All 18,581 indexed worker artifacts (7.32 GB), including audio, predictions, failures and 16 checkpoints, match their local copies. They remain outside Git. The [execution ledger](results/manifests/execution_ledger.json) records a conservative 4.98-hour research window within the ten-hour ceiling; this is not a measurement of prior billed allocation. The Pod was left running and idle after the jobs finished. **No push or submission was performed.**
 
 The user’s constraints are a hard ten-hour research window, approximately 50 GB remote storage, no human reviewers, a small Git repository, and **leave the Pod running when work finishes**. Dollar rate and earlier billed allocation are unknown. No additional service, paid API, repository push, submission or publication is part of this execution.
 
@@ -38,7 +52,7 @@ python3.10 -m venv .venv
 .venv/bin/python scripts/validate_synthetic.py
 ```
 
-The remote environment uses Python 3.12, torch 2.8.0+cu128, torchvision 0.23.0+cu128 and the pinned packages in [setup_remote.sh](scripts/setup_remote.sh). The GPU is an RTX PRO 4500 Blackwell with approximately 32 GB VRAM. The CPU lock is not a GPU environment lock. The exact deadline in `configs/execution.json` is an execution safeguard; a new run needs its own authorized accounting window.
+The remote environment uses Python 3.12, torch 2.8.0+cu128, torchvision 0.23.0+cu128 and torchaudio 2.8.0+cu128. These base packages must already be installed because setup inherits system packages. Additional versions are pinned in [setup_remote.sh](scripts/setup_remote.sh). The GPU is an RTX PRO 4500 Blackwell with approximately 32 GB VRAM. The CPU lock is not a GPU environment lock. The exact deadline in `configs/execution.json` is an execution safeguard; a new run needs its own authorized accounting window.
 
 The execution sequence is:
 
@@ -48,7 +62,7 @@ The execution sequence is:
 4. `run_core_after_training.sh` builds the policy/development/calibration subset matrices, runs the bounded planner, and fits the controllers. Content keys prevent incompatible cache reuse.
 5. Inspect `pilot_gate.json`, `controller_training.json` and `pretest_design_audit.json`. Run `audit_repeat.py` on the completed grammar smoke; then `freeze_test.py --unlock` verifies the pre-test caches and freezes software, protocol, prompt, split, model, reference and reviewer hashes. `audit_freeze_integrity.py` checks them again after evaluation.
 6. `run_test_and_stress.sh` executes the clean test matrix, frozen analyses, 360 waveform transformations, evidence interventions, prompt paraphrases and blinded prose audits. Every job is deadline guarded.
-7. Run `audit_cached_outputs.py`, `make_figures.py`, `make_real_examples.py`, and `build_manuscript.py` on completed results. Convert the DOCX to PDF with LibreOffice and inspect all pages before finalization.
+7. Run `audit_cached_outputs.py` and `audit_extended_outputs.py`. On the idle worker, run `collect_worker_finish.py` and `verify_preservation.py --write-worker-index`; sync artifacts locally, then run `verify_preservation.py --verify-local`. Build the figures and manuscript, convert with LibreOffice, and inspect every page. Finish with `summarize_execution.py --finished`, `audit_freeze_integrity.py`, `build_artifact_manifest.py` and `check_readiness.py` after recording the actual manuscript inspection.
 
 Inspect [check_readiness.py](scripts/check_readiness.py) for current completion checks. The trained checkpoints, original data and detailed outputs are copied to this local directory and ignored by Git. Model download revisions are pinned; pretrained weight caches remain on the worker. The remote overlay is ephemeral, so it is not the sole artifact copy.
 
@@ -97,4 +111,4 @@ compute allowance.
 | `sources/` | Verified bibliography and public-access/release audits |
 | `data/`, `checkpoints/`, `results/raw/` | Local private/large artifacts excluded from Git |
 
-The historical `preparation_artifacts.json` and initial draft describe preparation only; they are not evidence of completed experiments. The final artifact manifest will identify the finished deliverables. The manuscript is anonymous by the user’s instruction; author affiliation and contact details are omitted. The official DOCX’s embedded horizontal margins differ from its prose guidance, as recorded in the conference audit; its working geometry is preserved.
+The historical `preparation_artifacts.json` describes preparation only. The superseded draft remains in Git history and an ignored local archive. The [completed artifact manifest](results/manifests/research_artifacts.json) identifies the finished deliverables; [preservation](results/manifests/final_preservation.json) and [manuscript inspection](results/manifests/manuscript_inspection.json) record the final checks. The manuscript is anonymous by the user’s instruction; author affiliation and contact details are omitted. The official DOCX’s embedded horizontal margins differ from its prose guidance, as recorded in the conference audit; its working geometry is preserved.

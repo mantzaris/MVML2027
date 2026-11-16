@@ -1,0 +1,323 @@
+{
+  "caveat": "The AI auditor shares the generator checkpoint. Swapped-card provenance is retained privately but is not visible as a source hash in the bounded prompt.",
+  "evidence_interventions": {
+    "corrupt_D_labels": {
+      "appropriate_uncertainty_count": 36,
+      "assertion_coverage": 0.21,
+      "citation_fidelity_on_assertions": 0.6190476190476191,
+      "class_accuracy": 0.04,
+      "clean_appropriate_uncertainty_count": 35,
+      "clean_assertion_coverage": 0.3,
+      "clean_class_accuracy": 0.28,
+      "clean_supported_coverage": 0.21,
+      "clean_unsupported_rate": 0.3,
+      "mean_loss_change": 0.015,
+      "n": 25,
+      "paired_source_supported_difference": {
+        "ci95": [
+          -0.1875,
+          -0.029971153846154
+        ],
+        "cluster_field": "source_group",
+        "clusters": 24,
+        "difference": -0.09999999999999999,
+        "metric": "supported_coverage",
+        "p_two_sided_centered_bootstrap": 0.014992503748125937,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "schema_validity": 1.0,
+      "supported_coverage": 0.11,
+      "unsupported_rate": 0.47619047619047616
+    },
+    "false_A": {
+      "appropriate_uncertainty_count": 38,
+      "assertion_coverage": 0.17,
+      "citation_fidelity_on_assertions": 1.0,
+      "class_accuracy": 0.04,
+      "clean_appropriate_uncertainty_count": 37,
+      "clean_assertion_coverage": 0.23,
+      "clean_class_accuracy": 0.04,
+      "clean_supported_coverage": 0.19,
+      "clean_unsupported_rate": 0.17391304347826086,
+      "mean_loss_change": 0.02125,
+      "n": 25,
+      "paired_source_supported_difference": {
+        "ci95": [
+          -0.18999999999999997,
+          -0.06
+        ],
+        "cluster_field": "source_group",
+        "clusters": 24,
+        "difference": -0.12,
+        "metric": "supported_coverage",
+        "p_two_sided_centered_bootstrap": 0.0004997501249375312,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "schema_validity": 1.0,
+      "supported_coverage": 0.07,
+      "unsupported_rate": 0.5882352941176471
+    },
+    "missing_A": {
+      "appropriate_uncertainty_count": 40,
+      "assertion_coverage": 0.01,
+      "citation_fidelity_on_assertions": 1.0,
+      "class_accuracy": 0.04,
+      "clean_appropriate_uncertainty_count": 37,
+      "clean_assertion_coverage": 0.23,
+      "clean_class_accuracy": 0.04,
+      "clean_supported_coverage": 0.19,
+      "clean_unsupported_rate": 0.17391304347826086,
+      "mean_loss_change": -0.02625,
+      "n": 25,
+      "paired_source_supported_difference": {
+        "ci95": [
+          -0.2604166666666667,
+          -0.1041087962962966
+        ],
+        "cluster_field": "source_group",
+        "clusters": 24,
+        "difference": -0.18,
+        "metric": "supported_coverage",
+        "p_two_sided_centered_bootstrap": 0.0004997501249375312,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "schema_validity": 1.0,
+      "supported_coverage": 0.01,
+      "unsupported_rate": 0.0
+    },
+    "missing_B": {
+      "appropriate_uncertainty_count": 38,
+      "assertion_coverage": 0.06,
+      "citation_fidelity_on_assertions": 0.8333333333333334,
+      "class_accuracy": 0.04,
+      "clean_appropriate_uncertainty_count": 37,
+      "clean_assertion_coverage": 0.23,
+      "clean_class_accuracy": 0.04,
+      "clean_supported_coverage": 0.19,
+      "clean_unsupported_rate": 0.17391304347826086,
+      "mean_loss_change": 0.02,
+      "n": 25,
+      "paired_source_supported_difference": {
+        "ci95": [
+          -0.22002884615384619,
+          -0.0673076923076923
+        ],
+        "cluster_field": "source_group",
+        "clusters": 24,
+        "difference": -0.14,
+        "metric": "supported_coverage",
+        "p_two_sided_centered_bootstrap": 0.001999000499750125,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "schema_validity": 0.96,
+      "supported_coverage": 0.05,
+      "unsupported_rate": 0.16666666666666666
+    },
+    "remove_cited": {
+      "appropriate_uncertainty_count": 34,
+      "assertion_coverage": 0.06,
+      "citation_fidelity_on_assertions": 0.6666666666666666,
+      "class_accuracy": 0.12,
+      "clean_appropriate_uncertainty_count": 24,
+      "clean_assertion_coverage": 0.53,
+      "clean_class_accuracy": 0.24,
+      "clean_supported_coverage": 0.41,
+      "clean_unsupported_rate": 0.22641509433962265,
+      "mean_loss_change": -0.00375,
+      "n": 25,
+      "paired_source_supported_difference": {
+        "ci95": [
+          -0.4423076923076923,
+          -0.29343297101449295
+        ],
+        "cluster_field": "source_group",
+        "clusters": 23,
+        "difference": -0.37,
+        "metric": "supported_coverage",
+        "p_two_sided_centered_bootstrap": 0.0004997501249375312,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "schema_validity": 1.0,
+      "supported_coverage": 0.04,
+      "unsupported_rate": 0.3333333333333333
+    },
+    "remove_uncited": {
+      "appropriate_uncertainty_count": 32,
+      "assertion_coverage": 0.18,
+      "citation_fidelity_on_assertions": 0.7777777777777778,
+      "class_accuracy": 0.16,
+      "clean_appropriate_uncertainty_count": 27,
+      "clean_assertion_coverage": 0.46,
+      "clean_class_accuracy": 0.28,
+      "clean_supported_coverage": 0.24,
+      "clean_unsupported_rate": 0.4782608695652174,
+      "mean_loss_change": 0.00375,
+      "n": 25,
+      "paired_source_supported_difference": {
+        "ci95": [
+          -0.22918750000000002,
+          -0.052031250000000265
+        ],
+        "cluster_field": "source_group",
+        "clusters": 24,
+        "difference": -0.13999999999999999,
+        "metric": "supported_coverage",
+        "p_two_sided_centered_bootstrap": 0.0024987506246876563,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "schema_validity": 0.96,
+      "supported_coverage": 0.1,
+      "unsupported_rate": 0.4444444444444444
+    },
+    "swapped_A": {
+      "appropriate_uncertainty_count": 30,
+      "assertion_coverage": 0.29,
+      "citation_fidelity_on_assertions": 0.5172413793103449,
+      "class_accuracy": 0.08,
+      "clean_appropriate_uncertainty_count": 37,
+      "clean_assertion_coverage": 0.23,
+      "clean_class_accuracy": 0.04,
+      "clean_supported_coverage": 0.19,
+      "clean_unsupported_rate": 0.17391304347826086,
+      "mean_loss_change": 0.08125,
+      "n": 25,
+      "paired_source_supported_difference": {
+        "ci95": [
+          -0.18281250000000002,
+          0.02083333333333333
+        ],
+        "cluster_field": "source_group",
+        "clusters": 24,
+        "difference": -0.08,
+        "metric": "supported_coverage",
+        "p_two_sided_centered_bootstrap": 0.14192903548225888,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "schema_validity": 1.0,
+      "supported_coverage": 0.11,
+      "unsupported_rate": 0.6206896551724138
+    }
+  },
+  "exploratory": true,
+  "human_reviewers": 0,
+  "intervention_scope": "Fixed acquired evidence; no post-corruption policy rerun or action-change claim.",
+  "new_calls": 495,
+  "paraphrase": {
+    "appropriate_uncertainty_count": 159,
+    "assertion_coverage": 0.0,
+    "citation_fidelity_on_assertions": null,
+    "class_accuracy": 0.0,
+    "clean_appropriate_uncertainty_count": 158,
+    "clean_assertion_coverage": 0.1125,
+    "clean_class_accuracy": 0.19,
+    "clean_supported_coverage": 0.11,
+    "clean_unsupported_rate": 0.022222222222222223,
+    "mean_loss_change": -0.005,
+    "n": 100,
+    "paired_source_supported_difference": {
+      "ci95": [
+        -0.13592773719119483,
+        -0.08333333333333333
+      ],
+      "cluster_field": "source_group",
+      "clusters": 93,
+      "difference": -0.11,
+      "metric": "supported_coverage",
+      "p_two_sided_centered_bootstrap": 0.0004997501249375312,
+      "resamples": 2000,
+      "seed": 17
+    },
+    "schema_validity": 1.0,
+    "supported_coverage": 0.0,
+    "unsupported_rate": null
+  },
+  "paraphrase_2": {
+    "appropriate_uncertainty_count": 159,
+    "assertion_coverage": 0.0,
+    "citation_fidelity_on_assertions": null,
+    "class_accuracy": 0.0,
+    "clean_appropriate_uncertainty_count": 158,
+    "clean_assertion_coverage": 0.1125,
+    "clean_class_accuracy": 0.19,
+    "clean_supported_coverage": 0.11,
+    "clean_unsupported_rate": 0.022222222222222223,
+    "mean_loss_change": -0.005,
+    "n": 100,
+    "paired_source_supported_difference": {
+      "ci95": [
+        -0.13592773719119483,
+        -0.08333333333333333
+      ],
+      "cluster_field": "source_group",
+      "clusters": 93,
+      "difference": -0.11,
+      "metric": "supported_coverage",
+      "p_two_sided_centered_bootstrap": 0.0004997501249375312,
+      "resamples": 2000,
+      "seed": 17
+    },
+    "schema_validity": 1.0,
+    "supported_coverage": 0.0,
+    "unsupported_rate": null
+  },
+  "prose": {
+    "B5_all": {
+      "flag_rates": {
+        "new_unsupported_physical_claim": 0.06666666666666667,
+        "overstated_certainty": 0.03333333333333333,
+        "slot_rationale_inconsistency": 0.03333333333333333,
+        "unsupported_mechanical_claim": 0.06666666666666667
+      },
+      "requested": 30,
+      "valid_audits": 30
+    },
+    "B8_deterministic": {
+      "flag_rates": {
+        "new_unsupported_physical_claim": 0.9666666666666667,
+        "overstated_certainty": 0.6,
+        "slot_rationale_inconsistency": 0.13333333333333333,
+        "unsupported_mechanical_claim": 0.9666666666666667
+      },
+      "requested": 30,
+      "valid_audits": 30
+    },
+    "B9_entropy": {
+      "flag_rates": {
+        "new_unsupported_physical_claim": 0.13333333333333333,
+        "overstated_certainty": 0.13333333333333333,
+        "slot_rationale_inconsistency": 0.13333333333333333,
+        "unsupported_mechanical_claim": 0.13333333333333333
+      },
+      "requested": 30,
+      "valid_audits": 30
+    },
+    "P": {
+      "flag_rates": {
+        "new_unsupported_physical_claim": 0.2,
+        "overstated_certainty": 0.1,
+        "slot_rationale_inconsistency": 0.1,
+        "unsupported_mechanical_claim": 0.2
+      },
+      "requested": 30,
+      "valid_audits": 30
+    }
+  },
+  "removal_eligibility": {
+    "remove_cited": {
+      "eligible_clips": 58,
+      "selected_clips": 25
+    },
+    "remove_uncited": {
+      "eligible_clips": 97,
+      "selected_clips": 25
+    }
+  },
+  "seconds": 726.8362491102889
+}

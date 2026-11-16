@@ -1,0 +1,1973 @@
+{
+  "assessment_clips": 100,
+  "assessment_source_groups": 93,
+  "assessment_utc_days": 96,
+  "classifier_all_test": {
+    "17": {
+      "accuracy": 0.49955357142857143,
+      "balanced_accuracy": 0.5173090414600086,
+      "brier": 0.6074456824911588,
+      "confusion_matrix": [
+        [
+          286,
+          0,
+          18,
+          1,
+          50
+        ],
+        [
+          6,
+          281,
+          59,
+          82,
+          29
+        ],
+        [
+          121,
+          28,
+          128,
+          1,
+          154
+        ],
+        [
+          14,
+          272,
+          74,
+          143,
+          23
+        ],
+        [
+          77,
+          24,
+          88,
+          0,
+          281
+        ]
+      ],
+      "ece_equal_frequency_10": 0.060834603650229316,
+      "macro_f1": 0.4906777403624078,
+      "n": 2240,
+      "per_class_recall": [
+        0.8056338028169014,
+        0.6148796498905909,
+        0.2962962962962963,
+        0.2718631178707224,
+        0.597872340425532
+      ],
+      "temperature": 1.1645967491557134
+    },
+    "29": {
+      "accuracy": 0.5540178571428571,
+      "balanced_accuracy": 0.570566899657634,
+      "brier": 0.5674928421484692,
+      "confusion_matrix": [
+        [
+          307,
+          1,
+          9,
+          1,
+          37
+        ],
+        [
+          3,
+          296,
+          22,
+          101,
+          35
+        ],
+        [
+          89,
+          43,
+          118,
+          4,
+          178
+        ],
+        [
+          6,
+          282,
+          31,
+          173,
+          34
+        ],
+        [
+          46,
+          22,
+          50,
+          5,
+          347
+        ]
+      ],
+      "ece_equal_frequency_10": 0.05185583276408059,
+      "macro_f1": 0.5426943254176427,
+      "n": 2240,
+      "per_class_recall": [
+        0.8647887323943662,
+        0.6477024070021882,
+        0.27314814814814814,
+        0.3288973384030418,
+        0.7382978723404255
+      ],
+      "temperature": 2.132915001219786
+    },
+    "43": {
+      "accuracy": 0.5459821428571429,
+      "balanced_accuracy": 0.5665069533842721,
+      "brier": 0.5723342281178757,
+      "confusion_matrix": [
+        [
+          302,
+          1,
+          16,
+          1,
+          35
+        ],
+        [
+          5,
+          353,
+          19,
+          60,
+          20
+        ],
+        [
+          106,
+          50,
+          150,
+          3,
+          123
+        ],
+        [
+          4,
+          340,
+          45,
+          120,
+          17
+        ],
+        [
+          56,
+          29,
+          83,
+          4,
+          298
+        ]
+      ],
+      "ece_equal_frequency_10": 0.05779575152056556,
+      "macro_f1": 0.5322341259031994,
+      "n": 2240,
+      "per_class_recall": [
+        0.8507042253521127,
+        0.7724288840262582,
+        0.3472222222222222,
+        0.22813688212927757,
+        0.6340425531914894
+      ],
+      "temperature": 1.99160382023444
+    }
+  },
+  "controller_seeds": {
+    "17": {
+      "appropriate_uncertainty_on_ambiguous": 0.990990990990991,
+      "assertion_coverage": 0.13380281690140844,
+      "assertions": 38,
+      "assertions_with_citations": 38,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 1.0,
+      "citation_support_precision": 1.0,
+      "class_abstention_rate": 0.7464788732394366,
+      "class_accuracy": 0.18309859154929578,
+      "class_balanced_accuracy": 0.16111111111111112,
+      "class_macro_f1": 0.205,
+      "class_per_class_recall": [
+        0.5555555555555556,
+        0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consensus_supported_coverage": 0.08098591549295775,
+      "factual_error_rate_on_assertions": 0.0,
+      "factual_error_rate_on_identifiable_assertions": 0.0,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.9736842105263158,
+      "mean_evidence_tokens_all": 116.58,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.19014084507042253,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.214779104323825,
+      "mean_terminal_input_text_tokens_all": 773.95,
+      "mean_terminal_output_tokens_all": 220.27,
+      "mean_tools_all": 1.01,
+      "mean_total_output_tokens_all": 220.27,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6091549295774648,
+      "report_coverage": 0.71,
+      "retained_reports": 71,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 37,
+      "supported_coverage": 0.13028169014084506,
+      "tone_assertions": 3,
+      "tone_match_coverage": 1.0,
+      "tone_matched_assertions": 3,
+      "tone_matched_mae_hz": 0.20000000000002652,
+      "tone_nearest_reference_mae_hz": 0.20000000000002652,
+      "tone_reference_available_assertions": 3,
+      "total_reports": 100,
+      "unsupported_rate": 0.02631578947368421,
+      "whole_test_useful_coverage": 0.0925,
+      "wrong_or_unsupported_assertions": 1
+    },
+    "29": {
+      "appropriate_uncertainty_on_ambiguous": 0.9924812030075187,
+      "assertion_coverage": 0.1,
+      "assertions": 34,
+      "assertions_with_citations": 34,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 0.9705882352941176,
+      "citation_support_precision": 0.9705882352941176,
+      "class_abstention_rate": 0.6470588235294118,
+      "class_accuracy": 0.2235294117647059,
+      "class_balanced_accuracy": 0.22222222222222224,
+      "class_macro_f1": 0.2715854194115064,
+      "class_per_class_recall": [
+        0.5555555555555556,
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.2222222222222222
+      ],
+      "consensus_supported_coverage": 0.047058823529411764,
+      "factual_error_rate_on_assertions": 0.029411764705882353,
+      "factual_error_rate_on_identifiable_assertions": 0.030303030303030304,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.9411764705882353,
+      "mean_evidence_tokens_all": 91.44,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.2125,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.2591310921293917,
+      "mean_terminal_input_text_tokens_all": 748.82,
+      "mean_terminal_output_tokens_all": 225.98,
+      "mean_tools_all": 0.79,
+      "mean_total_output_tokens_all": 225.98,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6088235294117647,
+      "report_coverage": 0.85,
+      "retained_reports": 85,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 32,
+      "supported_coverage": 0.09411764705882353,
+      "tone_assertions": 13,
+      "tone_match_coverage": 0.9230769230769231,
+      "tone_matched_assertions": 12,
+      "tone_matched_mae_hz": 0.31666666666667415,
+      "tone_nearest_reference_mae_hz": 0.31666666666667415,
+      "tone_reference_available_assertions": 12,
+      "total_reports": 100,
+      "unsupported_rate": 0.058823529411764705,
+      "whole_test_useful_coverage": 0.08,
+      "wrong_or_unsupported_assertions": 2
+    },
+    "43": {
+      "appropriate_uncertainty_on_ambiguous": 0.9891304347826086,
+      "assertion_coverage": 0.13934426229508196,
+      "assertions": 34,
+      "assertions_with_citations": 34,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 0.9705882352941176,
+      "citation_support_precision": 0.9705882352941176,
+      "class_abstention_rate": 0.7540983606557377,
+      "class_accuracy": 0.09836065573770492,
+      "class_balanced_accuracy": 0.10909090909090909,
+      "class_macro_f1": 0.10909090909090909,
+      "class_per_class_recall": [
+        0.5454545454545454,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consensus_supported_coverage": 0.06967213114754098,
+      "factual_error_rate_on_assertions": 0.058823529411764705,
+      "factual_error_rate_on_identifiable_assertions": 0.06060606060606061,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.9117647058823529,
+      "mean_evidence_tokens_all": 102.9,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.2351434426229508,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.1846000817223103,
+      "mean_terminal_input_text_tokens_all": 760.32,
+      "mean_terminal_output_tokens_all": 223.9,
+      "mean_tools_all": 0.94,
+      "mean_total_output_tokens_all": 223.9,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6229508196721312,
+      "report_coverage": 0.61,
+      "retained_reports": 61,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 31,
+      "supported_coverage": 0.12704918032786885,
+      "tone_assertions": 8,
+      "tone_match_coverage": 0.875,
+      "tone_matched_assertions": 7,
+      "tone_matched_mae_hz": 0.4000000000000047,
+      "tone_nearest_reference_mae_hz": 0.4000000000000039,
+      "tone_reference_available_assertions": 8,
+      "total_reports": 100,
+      "unsupported_rate": 0.08823529411764706,
+      "whole_test_useful_coverage": 0.0775,
+      "wrong_or_unsupported_assertions": 3
+    }
+  },
+  "endpoint": "automated proxy supported coverage",
+  "human_reviewers": 0,
+  "labels": [
+    "background",
+    "cargo",
+    "passenger",
+    "tanker",
+    "tug_tow"
+  ],
+  "latency_excludes_shared_classifier_and_model_loading": true,
+  "latency_is_reconstructed_not_online_benchmark": true,
+  "locked_comparator": "B9_entropy",
+  "methods": {
+    "A1_one_shot": {
+      "appropriate_uncertainty_on_ambiguous": 0.9711538461538461,
+      "assertion_coverage": 0.14393939393939395,
+      "assertions": 38,
+      "assertions_with_citations": 38,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 1.0,
+      "citation_support_precision": 1.0,
+      "class_abstention_rate": 0.7121212121212122,
+      "class_accuracy": 0.21212121212121213,
+      "class_balanced_accuracy": 0.17777777777777776,
+      "class_macro_f1": 0.225,
+      "class_per_class_recall": [
+        0.5555555555555556,
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consensus_supported_coverage": 0.07196969696969698,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.20375,
+          "supported_coverage": 0.135,
+          "unsupported_rate": 0.06896551724137931
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.19285714285714287,
+          "supported_coverage": 0.12857142857142856,
+          "unsupported_rate": 0.07692307692307693
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.20590277777777777,
+          "supported_coverage": 0.125,
+          "unsupported_rate": 0.08163265306122448
+        }
+      },
+      "descriptive_risk_coverage_area": 0.195202405591969,
+      "factual_error_rate_on_assertions": 0.0,
+      "factual_error_rate_on_identifiable_assertions": 0.0,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.9210526315789473,
+      "mean_evidence_tokens_all": 143.61,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.19176136363636365,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.230216760764597,
+      "mean_terminal_input_text_tokens_all": 801.01,
+      "mean_terminal_output_tokens_all": 223.24,
+      "mean_tools_all": 1.25,
+      "mean_total_output_tokens_all": 223.24,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6060606060606061,
+      "report_coverage": 0.66,
+      "retained_reports": 66,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 35,
+      "supported_coverage": 0.13257575757575757,
+      "supported_coverage_ci95": [
+        0.09782608695652174,
+        0.16949952030700347
+      ],
+      "tone_assertions": 4,
+      "tone_match_coverage": 1.0,
+      "tone_matched_assertions": 4,
+      "tone_matched_mae_hz": 0.2500000000000213,
+      "tone_nearest_reference_mae_hz": 0.2500000000000213,
+      "tone_reference_available_assertions": 4,
+      "total_reports": 100,
+      "unsupported_rate": 0.07894736842105263,
+      "unsupported_rate_ci95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "whole_test_useful_coverage": 0.0875,
+      "whole_test_useful_coverage_ci95": [
+        0.061274509803921566,
+        0.11650485436893204
+      ],
+      "wrong_or_unsupported_assertions": 3
+    },
+    "A2_no_penalty": {
+      "appropriate_uncertainty_on_ambiguous": 0.990990990990991,
+      "assertion_coverage": 0.13380281690140844,
+      "assertions": 38,
+      "assertions_with_citations": 38,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 1.0,
+      "citation_support_precision": 1.0,
+      "class_abstention_rate": 0.7464788732394366,
+      "class_accuracy": 0.18309859154929578,
+      "class_balanced_accuracy": 0.16111111111111112,
+      "class_macro_f1": 0.205,
+      "class_per_class_recall": [
+        0.5555555555555556,
+        0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consensus_supported_coverage": 0.08098591549295775,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.195,
+          "supported_coverage": 0.125,
+          "unsupported_rate": 0.038461538461538464
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.190625,
+          "supported_coverage": 0.12857142857142856,
+          "unsupported_rate": 0.02702702702702703
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.20416666666666666,
+          "supported_coverage": 0.11944444444444445,
+          "unsupported_rate": 0.022727272727272728
+        }
+      },
+      "descriptive_risk_coverage_area": 0.19312996218584425,
+      "factual_error_rate_on_assertions": 0.0,
+      "factual_error_rate_on_identifiable_assertions": 0.0,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.9736842105263158,
+      "mean_evidence_tokens_all": 116.58,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.19014084507042253,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.214779104323825,
+      "mean_terminal_input_text_tokens_all": 773.95,
+      "mean_terminal_output_tokens_all": 220.27,
+      "mean_tools_all": 1.01,
+      "mean_total_output_tokens_all": 220.27,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6091549295774648,
+      "report_coverage": 0.71,
+      "retained_reports": 71,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 37,
+      "supported_coverage": 0.13028169014084506,
+      "supported_coverage_ci95": [
+        0.1,
+        0.16287878787878787
+      ],
+      "tone_assertions": 3,
+      "tone_match_coverage": 1.0,
+      "tone_matched_assertions": 3,
+      "tone_matched_mae_hz": 0.20000000000002652,
+      "tone_nearest_reference_mae_hz": 0.20000000000002652,
+      "tone_reference_available_assertions": 3,
+      "total_reports": 100,
+      "unsupported_rate": 0.02631578947368421,
+      "unsupported_rate_ci95": [
+        0.0,
+        0.08888888888888889
+      ],
+      "whole_test_useful_coverage": 0.0925,
+      "whole_test_useful_coverage_ci95": [
+        0.06682312513166211,
+        0.11868686868686869
+      ],
+      "wrong_or_unsupported_assertions": 1
+    },
+    "A3_no_stop": {
+      "appropriate_uncertainty_on_ambiguous": 0.9537037037037037,
+      "assertion_coverage": 0.2536764705882353,
+      "assertions": 69,
+      "assertions_with_citations": 69,
+      "citation_completeness_on_correct_assertions": 0.9672131147540983,
+      "citation_fidelity_on_assertions": 0.9420289855072463,
+      "citation_support_precision": 0.9420289855072463,
+      "class_abstention_rate": 0.7205882352941176,
+      "class_accuracy": 0.20588235294117646,
+      "class_balanced_accuracy": 0.18929292929292932,
+      "class_macro_f1": 0.2506410256410257,
+      "class_per_class_recall": [
+        0.5555555555555556,
+        0.3,
+        0.0,
+        0.09090909090909091,
+        0.0
+      ],
+      "consensus_supported_coverage": 0.11029411764705882,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.2025,
+          "supported_coverage": 0.225,
+          "unsupported_rate": 0.1346153846153846
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.19151785714285716,
+          "supported_coverage": 0.21428571428571427,
+          "unsupported_rate": 0.14285714285714285
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.19722222222222222,
+          "supported_coverage": 0.2111111111111111,
+          "unsupported_rate": 0.12643678160919541
+        }
+      },
+      "descriptive_risk_coverage_area": 0.19669234145357156,
+      "factual_error_rate_on_assertions": 0.043478260869565216,
+      "factual_error_rate_on_identifiable_assertions": 0.046875,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.855072463768116,
+      "mean_evidence_tokens_all": 215.89,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.19117647058823528,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.3316144704294857,
+      "mean_terminal_input_text_tokens_all": 873.45,
+      "mean_terminal_output_tokens_all": 229.56,
+      "mean_tools_all": 2.0,
+      "mean_total_output_tokens_all": 229.56,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6029411764705882,
+      "report_coverage": 0.68,
+      "retained_reports": 68,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 59,
+      "supported_coverage": 0.21691176470588236,
+      "supported_coverage_ci95": [
+        0.16538306451612902,
+        0.2683892120280948
+      ],
+      "tone_assertions": 20,
+      "tone_match_coverage": 0.85,
+      "tone_matched_assertions": 17,
+      "tone_matched_mae_hz": 0.29411764705882604,
+      "tone_nearest_reference_mae_hz": 0.29473684210526513,
+      "tone_reference_available_assertions": 19,
+      "total_reports": 100,
+      "unsupported_rate": 0.14492753623188406,
+      "unsupported_rate_ci95": [
+        0.07142857142857142,
+        0.2222222222222222
+      ],
+      "whole_test_useful_coverage": 0.1475,
+      "whole_test_useful_coverage_ci95": [
+        0.10890276527652765,
+        0.18947368421052632
+      ],
+      "wrong_or_unsupported_assertions": 10
+    },
+    "B1_raw": {
+      "appropriate_uncertainty_on_ambiguous": 1.0,
+      "assertion_coverage": 0.0,
+      "assertions": 0,
+      "assertions_with_citations": 0,
+      "citation_completeness_on_correct_assertions": null,
+      "citation_fidelity_on_assertions": null,
+      "citation_support_precision": null,
+      "class_abstention_rate": 1.0,
+      "class_accuracy": 0.0,
+      "class_balanced_accuracy": 0.0,
+      "class_macro_f1": 0.0,
+      "class_per_class_recall": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consensus_supported_coverage": 0.0,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.2025,
+          "supported_coverage": 0.0,
+          "unsupported_rate": null
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.20044642857142858,
+          "supported_coverage": 0.0,
+          "unsupported_rate": null
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.20069444444444445,
+          "supported_coverage": 0.0,
+          "unsupported_rate": null
+        }
+      },
+      "descriptive_risk_coverage_area": 0.2008963338840537,
+      "factual_error_rate_on_assertions": null,
+      "factual_error_rate_on_identifiable_assertions": null,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": null,
+      "mean_evidence_tokens_all": 0.0,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.20287698412698413,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.1493023941942375,
+      "mean_terminal_input_text_tokens_all": 593.0,
+      "mean_terminal_output_tokens_all": 214.39,
+      "mean_tools_all": 0.0,
+      "mean_total_output_tokens_all": 214.39,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.623015873015873,
+      "report_coverage": 0.63,
+      "retained_reports": 63,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 0,
+      "supported_coverage": 0.0,
+      "supported_coverage_ci95": [
+        0.0,
+        0.0
+      ],
+      "tone_assertions": 0,
+      "tone_match_coverage": null,
+      "tone_matched_assertions": 0,
+      "tone_matched_mae_hz": null,
+      "tone_nearest_reference_mae_hz": null,
+      "tone_reference_available_assertions": 0,
+      "total_reports": 100,
+      "unsupported_rate": null,
+      "unsupported_rate_ci95": null,
+      "whole_test_useful_coverage": 0.0,
+      "whole_test_useful_coverage_ci95": [
+        0.0,
+        0.0
+      ],
+      "wrong_or_unsupported_assertions": 0
+    },
+    "B2_prior": {
+      "appropriate_uncertainty_on_ambiguous": 1.0,
+      "assertion_coverage": 0.0,
+      "assertions": 0,
+      "assertions_with_citations": 0,
+      "citation_completeness_on_correct_assertions": null,
+      "citation_fidelity_on_assertions": null,
+      "citation_support_precision": null,
+      "class_abstention_rate": 0.42857142857142855,
+      "class_accuracy": 0.25396825396825395,
+      "class_balanced_accuracy": 0.21153846153846154,
+      "class_macro_f1": 0.18666666666666668,
+      "class_per_class_recall": [
+        0.75,
+        0.0,
+        0.0,
+        0.0,
+        0.3076923076923077
+      ],
+      "consensus_supported_coverage": 0.0,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.275,
+          "supported_coverage": 0.0,
+          "unsupported_rate": null
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.2897321428571429,
+          "supported_coverage": 0.0,
+          "unsupported_rate": null
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.2951388888888889,
+          "supported_coverage": 0.0,
+          "unsupported_rate": null
+        }
+      },
+      "descriptive_risk_coverage_area": 0.252603326135416,
+      "factual_error_rate_on_assertions": null,
+      "factual_error_rate_on_identifiable_assertions": null,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": null,
+      "mean_evidence_tokens_all": 0.0,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.29017857142857145,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.1711549783690134,
+      "mean_terminal_input_text_tokens_all": 657.34,
+      "mean_terminal_output_tokens_all": 222.16,
+      "mean_tools_all": 0.0,
+      "mean_total_output_tokens_all": 222.16,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.623015873015873,
+      "report_coverage": 0.63,
+      "retained_reports": 63,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 0,
+      "supported_coverage": 0.0,
+      "supported_coverage_ci95": [
+        0.0,
+        0.0
+      ],
+      "tone_assertions": 0,
+      "tone_match_coverage": null,
+      "tone_matched_assertions": 0,
+      "tone_matched_mae_hz": null,
+      "tone_nearest_reference_mae_hz": null,
+      "tone_reference_available_assertions": 0,
+      "total_reports": 100,
+      "unsupported_rate": null,
+      "unsupported_rate_ci95": null,
+      "whole_test_useful_coverage": 0.0,
+      "whole_test_useful_coverage_ci95": [
+        0.0,
+        0.0
+      ],
+      "wrong_or_unsupported_assertions": 0
+    },
+    "B3_fixed": {
+      "appropriate_uncertainty_on_ambiguous": 0.9829059829059829,
+      "assertion_coverage": 0.09666666666666666,
+      "assertions": 29,
+      "assertions_with_citations": 29,
+      "citation_completeness_on_correct_assertions": 0.9259259259259259,
+      "citation_fidelity_on_assertions": 0.9310344827586207,
+      "citation_support_precision": 0.9310344827586207,
+      "class_abstention_rate": 0.6666666666666666,
+      "class_accuracy": 0.24,
+      "class_balanced_accuracy": 0.2396062271062271,
+      "class_macro_f1": 0.3127093596059113,
+      "class_per_class_recall": [
+        0.5625,
+        0.3333333333333333,
+        0.0,
+        0.07142857142857142,
+        0.23076923076923078
+      ],
+      "consensus_supported_coverage": 0.04666666666666667,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.20125,
+          "supported_coverage": 0.095,
+          "unsupported_rate": 0.13636363636363635
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.20267857142857143,
+          "supported_coverage": 0.08571428571428572,
+          "unsupported_rate": 0.14285714285714285
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.20451388888888888,
+          "supported_coverage": 0.09166666666666666,
+          "unsupported_rate": 0.10810810810810811
+        }
+      },
+      "descriptive_risk_coverage_area": 0.19833271407658778,
+      "factual_error_rate_on_assertions": 0.0,
+      "factual_error_rate_on_identifiable_assertions": 0.0,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.8620689655172413,
+      "mean_evidence_tokens_all": 247.44,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.20166666666666666,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.2712336222900193,
+      "mean_terminal_input_text_tokens_all": 904.78,
+      "mean_terminal_output_tokens_all": 219.57,
+      "mean_tools_all": 2.0,
+      "mean_total_output_tokens_all": 219.57,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.61,
+      "report_coverage": 0.75,
+      "retained_reports": 75,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 25,
+      "supported_coverage": 0.08333333333333333,
+      "supported_coverage_ci95": [
+        0.057692307692307696,
+        0.11030462184873943
+      ],
+      "tone_assertions": 0,
+      "tone_match_coverage": null,
+      "tone_matched_assertions": 0,
+      "tone_matched_mae_hz": null,
+      "tone_nearest_reference_mae_hz": null,
+      "tone_reference_available_assertions": 0,
+      "total_reports": 100,
+      "unsupported_rate": 0.13793103448275862,
+      "unsupported_rate_ci95": [
+        0.03125,
+        0.2727272727272727
+      ],
+      "whole_test_useful_coverage": 0.0625,
+      "whole_test_useful_coverage_ci95": [
+        0.0425,
+        0.0841352103960396
+      ],
+      "wrong_or_unsupported_assertions": 4
+    },
+    "B4_retrieval": {
+      "appropriate_uncertainty_on_ambiguous": 1.0,
+      "assertion_coverage": 0.0,
+      "assertions": 0,
+      "assertions_with_citations": 0,
+      "citation_completeness_on_correct_assertions": null,
+      "citation_fidelity_on_assertions": null,
+      "citation_support_precision": null,
+      "class_abstention_rate": 0.5764705882352941,
+      "class_accuracy": 0.25882352941176473,
+      "class_balanced_accuracy": 0.2552287581699346,
+      "class_macro_f1": 0.29566666666666663,
+      "class_per_class_recall": [
+        0.5555555555555556,
+        0.47058823529411764,
+        0.0,
+        0.0,
+        0.25
+      ],
+      "consensus_supported_coverage": 0.0,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.23375,
+          "supported_coverage": 0.0,
+          "unsupported_rate": null
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.22053571428571428,
+          "supported_coverage": 0.0,
+          "unsupported_rate": null
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.22777777777777777,
+          "supported_coverage": 0.0,
+          "unsupported_rate": null
+        }
+      },
+      "descriptive_risk_coverage_area": 0.21315286889949317,
+      "factual_error_rate_on_assertions": null,
+      "factual_error_rate_on_identifiable_assertions": null,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": null,
+      "mean_evidence_tokens_all": 141.45,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.23051470588235295,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.2740782841260079,
+      "mean_terminal_input_text_tokens_all": 798.79,
+      "mean_terminal_output_tokens_all": 220.0,
+      "mean_tools_all": 1.0,
+      "mean_total_output_tokens_all": 220.0,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6088235294117647,
+      "report_coverage": 0.85,
+      "retained_reports": 85,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 0,
+      "supported_coverage": 0.0,
+      "supported_coverage_ci95": [
+        0.0,
+        0.0
+      ],
+      "tone_assertions": 0,
+      "tone_match_coverage": null,
+      "tone_matched_assertions": 0,
+      "tone_matched_mae_hz": null,
+      "tone_nearest_reference_mae_hz": null,
+      "tone_reference_available_assertions": 0,
+      "total_reports": 100,
+      "unsupported_rate": null,
+      "unsupported_rate_ci95": null,
+      "whole_test_useful_coverage": 0.0,
+      "whole_test_useful_coverage_ci95": [
+        0.0,
+        0.0
+      ],
+      "wrong_or_unsupported_assertions": 0
+    },
+    "B4_retrieval_dsp": {
+      "appropriate_uncertainty_on_ambiguous": 0.9829059829059829,
+      "assertion_coverage": 0.09666666666666666,
+      "assertions": 29,
+      "assertions_with_citations": 29,
+      "citation_completeness_on_correct_assertions": 0.9259259259259259,
+      "citation_fidelity_on_assertions": 0.9310344827586207,
+      "citation_support_precision": 0.9310344827586207,
+      "class_abstention_rate": 0.6666666666666666,
+      "class_accuracy": 0.24,
+      "class_balanced_accuracy": 0.2396062271062271,
+      "class_macro_f1": 0.3127093596059113,
+      "class_per_class_recall": [
+        0.5625,
+        0.3333333333333333,
+        0.0,
+        0.07142857142857142,
+        0.23076923076923078
+      ],
+      "consensus_supported_coverage": 0.04666666666666667,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.20125,
+          "supported_coverage": 0.095,
+          "unsupported_rate": 0.13636363636363635
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.20267857142857143,
+          "supported_coverage": 0.08571428571428572,
+          "unsupported_rate": 0.14285714285714285
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.20451388888888888,
+          "supported_coverage": 0.09166666666666666,
+          "unsupported_rate": 0.10810810810810811
+        }
+      },
+      "descriptive_risk_coverage_area": 0.19833271407658778,
+      "factual_error_rate_on_assertions": 0.0,
+      "factual_error_rate_on_identifiable_assertions": 0.0,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.8620689655172413,
+      "mean_evidence_tokens_all": 247.44,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.20166666666666666,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.2712336222900193,
+      "mean_terminal_input_text_tokens_all": 904.78,
+      "mean_terminal_output_tokens_all": 219.57,
+      "mean_tools_all": 2.0,
+      "mean_total_output_tokens_all": 219.57,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.61,
+      "report_coverage": 0.75,
+      "retained_reports": 75,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 25,
+      "supported_coverage": 0.08333333333333333,
+      "supported_coverage_ci95": [
+        0.057692307692307696,
+        0.11030462184873943
+      ],
+      "tone_assertions": 0,
+      "tone_match_coverage": null,
+      "tone_matched_assertions": 0,
+      "tone_matched_mae_hz": null,
+      "tone_nearest_reference_mae_hz": null,
+      "tone_reference_available_assertions": 0,
+      "total_reports": 100,
+      "unsupported_rate": 0.13793103448275862,
+      "unsupported_rate_ci95": [
+        0.03125,
+        0.2727272727272727
+      ],
+      "whole_test_useful_coverage": 0.0625,
+      "whole_test_useful_coverage_ci95": [
+        0.0425,
+        0.0841352103960396
+      ],
+      "wrong_or_unsupported_assertions": 4
+    },
+    "B5_all": {
+      "appropriate_uncertainty_on_ambiguous": 0.7899159663865546,
+      "assertion_coverage": 0.44333333333333336,
+      "assertions": 133,
+      "assertions_with_citations": 133,
+      "citation_completeness_on_correct_assertions": 0.7788461538461539,
+      "citation_fidelity_on_assertions": 0.706766917293233,
+      "citation_support_precision": 0.706766917293233,
+      "class_abstention_rate": 0.5866666666666667,
+      "class_accuracy": 0.30666666666666664,
+      "class_balanced_accuracy": 0.29474969474969476,
+      "class_macro_f1": 0.36536796536796534,
+      "class_per_class_recall": [
+        0.6111111111111112,
+        0.5,
+        0.0,
+        0.07692307692307693,
+        0.2857142857142857
+      ],
+      "consensus_supported_coverage": 0.14333333333333334,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.25,
+          "supported_coverage": 0.26,
+          "unsupported_rate": 0.37349397590361444
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.26339285714285715,
+          "supported_coverage": 0.2571428571428571,
+          "unsupported_rate": 0.4098360655737705
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.2517361111111111,
+          "supported_coverage": 0.26944444444444443,
+          "unsupported_rate": 0.3821656050955414
+        }
+      },
+      "descriptive_risk_coverage_area": 0.2562015319849349,
+      "factual_error_rate_on_assertions": 0.03007518796992481,
+      "factual_error_rate_on_identifiable_assertions": 0.037037037037037035,
+      "full_format_validity_all": 0.99,
+      "independently_supported_citation_precision": 0.6090225563909775,
+      "mean_evidence_tokens_all": 376.3,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.25375,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.4468296307956916,
+      "mean_terminal_input_text_tokens_all": 1034.08,
+      "mean_terminal_output_tokens_all": 249.51,
+      "mean_tools_all": 4.0,
+      "mean_total_output_tokens_all": 249.51,
+      "modulation_assertions": 11,
+      "modulation_match_coverage": 0.0,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6,
+      "report_coverage": 0.75,
+      "retained_reports": 75,
+      "schema_validity_all": 0.99,
+      "supported_assertions": 81,
+      "supported_coverage": 0.27,
+      "supported_coverage_ci95": [
+        0.20393796992481203,
+        0.33226425438596474
+      ],
+      "tone_assertions": 41,
+      "tone_match_coverage": 0.8292682926829268,
+      "tone_matched_assertions": 34,
+      "tone_matched_mae_hz": 0.2882352941176498,
+      "tone_nearest_reference_mae_hz": 0.2888888888888913,
+      "tone_reference_available_assertions": 36,
+      "total_reports": 100,
+      "unsupported_rate": 0.39097744360902253,
+      "unsupported_rate_ci95": [
+        0.2796514735074057,
+        0.5038790697674419
+      ],
+      "whole_test_useful_coverage": 0.2025,
+      "whole_test_useful_coverage_ci95": [
+        0.14805825242718446,
+        0.2575038265306122
+      ],
+      "wrong_or_unsupported_assertions": 52
+    },
+    "B6_planner": {
+      "appropriate_uncertainty_on_ambiguous": 0.8163265306122449,
+      "assertion_coverage": 0.23387096774193547,
+      "assertions": 58,
+      "assertions_with_citations": 58,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 0.9482758620689655,
+      "citation_support_precision": 0.9482758620689655,
+      "class_abstention_rate": 0.7741935483870968,
+      "class_accuracy": 0.1774193548387097,
+      "class_balanced_accuracy": 0.13303167420814482,
+      "class_macro_f1": 0.1645977011494253,
+      "class_per_class_recall": [
+        0.5882352941176471,
+        0.0,
+        0.0,
+        0.0,
+        0.07692307692307693
+      ],
+      "consensus_supported_coverage": 0.04838709677419355,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.22375,
+          "supported_coverage": 0.15,
+          "unsupported_rate": 0.375
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.22544642857142858,
+          "supported_coverage": 0.16785714285714284,
+          "unsupported_rate": 0.32857142857142857
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.2482638888888889,
+          "supported_coverage": 0.17222222222222222,
+          "unsupported_rate": 0.3333333333333333
+        }
+      },
+      "descriptive_risk_coverage_area": 0.22369801693283872,
+      "factual_error_rate_on_assertions": 0.05172413793103448,
+      "factual_error_rate_on_identifiable_assertions": 0.075,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.6379310344827587,
+      "mean_evidence_tokens_all": 129.13,
+      "mean_generator_calls_all": 3.0,
+      "mean_loss": 0.21875,
+      "mean_planner_output_tokens_all": 12.0,
+      "mean_reconstructed_seconds_all": 1.5979028253661818,
+      "mean_terminal_input_text_tokens_all": 786.9,
+      "mean_terminal_output_tokens_all": 239.27,
+      "mean_tools_all": 2.0,
+      "mean_total_output_tokens_all": 251.27,
+      "modulation_assertions": 7,
+      "modulation_match_coverage": 0.0,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6048387096774194,
+      "report_coverage": 0.62,
+      "retained_reports": 62,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 37,
+      "supported_coverage": 0.14919354838709678,
+      "supported_coverage_ci95": [
+        0.11474541539316477,
+        0.18442622950819673
+      ],
+      "tone_assertions": 36,
+      "tone_match_coverage": 0.8333333333333334,
+      "tone_matched_assertions": 30,
+      "tone_matched_mae_hz": 0.3133333333333355,
+      "tone_nearest_reference_mae_hz": 0.3125000000000019,
+      "tone_reference_available_assertions": 32,
+      "total_reports": 100,
+      "unsupported_rate": 0.3620689655172414,
+      "unsupported_rate_ci95": [
+        0.2641509433962264,
+        0.46003846153846134
+      ],
+      "whole_test_useful_coverage": 0.0925,
+      "whole_test_useful_coverage_ci95": [
+        0.06818181818181818,
+        0.11855670103092783
+      ],
+      "wrong_or_unsupported_assertions": 21
+    },
+    "B7_class_only": {
+      "appropriate_uncertainty_on_ambiguous": 0.9821428571428571,
+      "assertion_coverage": 0.1527777777777778,
+      "assertions": 44,
+      "assertions_with_citations": 44,
+      "citation_completeness_on_correct_assertions": 0.9512195121951219,
+      "citation_fidelity_on_assertions": 0.9318181818181818,
+      "citation_support_precision": 0.9318181818181818,
+      "class_abstention_rate": 0.7222222222222222,
+      "class_accuracy": 0.20833333333333334,
+      "class_balanced_accuracy": 0.1984162895927602,
+      "class_macro_f1": 0.26427035330261134,
+      "class_per_class_recall": [
+        0.5882352941176471,
+        0.25,
+        0.0,
+        0.07692307692307693,
+        0.07692307692307693
+      ],
+      "consensus_supported_coverage": 0.0763888888888889,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.20125,
+          "supported_coverage": 0.155,
+          "unsupported_rate": 0.11428571428571428
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.190625,
+          "supported_coverage": 0.1392857142857143,
+          "unsupported_rate": 0.11363636363636363
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.20173611111111112,
+          "supported_coverage": 0.12777777777777777,
+          "unsupported_rate": 0.11538461538461539
+        }
+      },
+      "descriptive_risk_coverage_area": 0.1888000220064841,
+      "factual_error_rate_on_assertions": 0.022727272727272728,
+      "factual_error_rate_on_identifiable_assertions": 0.023809523809523808,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.8863636363636364,
+      "mean_evidence_tokens_all": 195.26,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.1918402777777778,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.2137274493894075,
+      "mean_terminal_input_text_tokens_all": 852.61,
+      "mean_terminal_output_tokens_all": 222.65,
+      "mean_tools_all": 1.68,
+      "mean_total_output_tokens_all": 222.65,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6111111111111112,
+      "report_coverage": 0.72,
+      "retained_reports": 72,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 39,
+      "supported_coverage": 0.13541666666666666,
+      "supported_coverage_ci95": [
+        0.09926470588235294,
+        0.17647058823529413
+      ],
+      "tone_assertions": 5,
+      "tone_match_coverage": 1.0,
+      "tone_matched_assertions": 5,
+      "tone_matched_mae_hz": 0.23999999999999772,
+      "tone_nearest_reference_mae_hz": 0.23999999999999772,
+      "tone_reference_available_assertions": 5,
+      "total_reports": 100,
+      "unsupported_rate": 0.11363636363636363,
+      "unsupported_rate_ci95": [
+        0.02631578947368421,
+        0.2127659574468085
+      ],
+      "whole_test_useful_coverage": 0.0975,
+      "whole_test_useful_coverage_ci95": [
+        0.06958762886597938,
+        0.12990196078431374
+      ],
+      "wrong_or_unsupported_assertions": 5
+    },
+    "B8_deterministic": {
+      "appropriate_uncertainty_on_ambiguous": 0.7821782178217822,
+      "assertion_coverage": 0.6423076923076924,
+      "assertions": 167,
+      "assertions_with_citations": 167,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 1.0,
+      "citation_support_precision": 1.0,
+      "class_abstention_rate": 0.0,
+      "class_accuracy": 0.5538461538461539,
+      "class_balanced_accuracy": 0.5345471521942109,
+      "class_macro_f1": 0.5434121920964026,
+      "class_per_class_recall": [
+        0.8235294117647058,
+        0.4444444444444444,
+        0.3333333333333333,
+        0.5,
+        0.5714285714285714
+      ],
+      "consensus_supported_coverage": 0.35,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.305,
+          "supported_coverage": 0.56,
+          "unsupported_rate": 0.1450381679389313
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.28169642857142857,
+          "supported_coverage": 0.5464285714285714,
+          "unsupported_rate": 0.1452513966480447
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.2677083333333333,
+          "supported_coverage": 0.5611111111111111,
+          "unsupported_rate": 0.12554112554112554
+        }
+      },
+      "descriptive_risk_coverage_area": 0.2772397266757999,
+      "factual_error_rate_on_assertions": 0.011976047904191617,
+      "factual_error_rate_on_identifiable_assertions": 0.013793103448275862,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.8562874251497006,
+      "mean_evidence_tokens_all": 0.0,
+      "mean_generator_calls_all": 0.0,
+      "mean_loss": 0.2759615384615385,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 0.13041434673592447,
+      "mean_terminal_input_text_tokens_all": 0.0,
+      "mean_terminal_output_tokens_all": 0.0,
+      "mean_tools_all": 2.0,
+      "mean_total_output_tokens_all": 0.0,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6115384615384616,
+      "report_coverage": 0.65,
+      "retained_reports": 65,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 143,
+      "supported_coverage": 0.55,
+      "supported_coverage_ci95": [
+        0.5079365079365079,
+        0.5902777777777778
+      ],
+      "tone_assertions": 37,
+      "tone_match_coverage": 0.8378378378378378,
+      "tone_matched_assertions": 31,
+      "tone_matched_mae_hz": 0.30967741935483867,
+      "tone_nearest_reference_mae_hz": 0.30909090909090886,
+      "tone_reference_available_assertions": 33,
+      "total_reports": 100,
+      "unsupported_rate": 0.1437125748502994,
+      "unsupported_rate_ci95": [
+        0.0972202380952381,
+        0.19460394356620767
+      ],
+      "whole_test_useful_coverage": 0.3575,
+      "whole_test_useful_coverage_ci95": [
+        0.2984571480107195,
+        0.41336633663366334
+      ],
+      "wrong_or_unsupported_assertions": 24
+    },
+    "B9_entropy": {
+      "appropriate_uncertainty_on_ambiguous": 0.9611650485436893,
+      "assertion_coverage": 0.22794117647058823,
+      "assertions": 62,
+      "assertions_with_citations": 62,
+      "citation_completeness_on_correct_assertions": 0.9814814814814815,
+      "citation_fidelity_on_assertions": 0.9354838709677419,
+      "citation_support_precision": 0.9354838709677419,
+      "class_abstention_rate": 0.6029411764705882,
+      "class_accuracy": 0.27941176470588236,
+      "class_balanced_accuracy": 0.26857142857142857,
+      "class_macro_f1": 0.3424242424242424,
+      "class_per_class_recall": [
+        0.6,
+        0.35714285714285715,
+        0.0,
+        0.1,
+        0.2857142857142857
+      ],
+      "consensus_supported_coverage": 0.07720588235294118,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.203125,
+          "supported_coverage": 0.185,
+          "unsupported_rate": 0.13953488372093023
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.20044642857142858,
+          "supported_coverage": 0.19642857142857142,
+          "unsupported_rate": 0.140625
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.2013888888888889,
+          "supported_coverage": 0.19166666666666668,
+          "unsupported_rate": 0.15853658536585366
+        }
+      },
+      "descriptive_risk_coverage_area": 0.18702019214749258,
+      "factual_error_rate_on_assertions": 0.06451612903225806,
+      "factual_error_rate_on_identifiable_assertions": 0.06896551724137931,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.8548387096774194,
+      "mean_evidence_tokens_all": 235.25,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.20174632352941177,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.3740888049051865,
+      "mean_terminal_input_text_tokens_all": 892.9,
+      "mean_terminal_output_tokens_all": 231.58,
+      "mean_tools_all": 2.0,
+      "mean_total_output_tokens_all": 231.58,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6213235294117647,
+      "report_coverage": 0.68,
+      "retained_reports": 68,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 53,
+      "supported_coverage": 0.1948529411764706,
+      "supported_coverage_ci95": [
+        0.1590909090909091,
+        0.22826086956521738
+      ],
+      "tone_assertions": 32,
+      "tone_match_coverage": 0.90625,
+      "tone_matched_assertions": 29,
+      "tone_matched_mae_hz": 0.31034482758620774,
+      "tone_nearest_reference_mae_hz": 0.31333333333333413,
+      "tone_reference_available_assertions": 30,
+      "total_reports": 100,
+      "unsupported_rate": 0.14516129032258066,
+      "unsupported_rate_ci95": [
+        0.06449897048730267,
+        0.23531454248366002
+      ],
+      "whole_test_useful_coverage": 0.1325,
+      "whole_test_useful_coverage_ci95": [
+        0.10435871863885417,
+        0.16356417932242984
+      ],
+      "wrong_or_unsupported_assertions": 9
+    },
+    "P": {
+      "appropriate_uncertainty_on_ambiguous": 0.990990990990991,
+      "assertion_coverage": 0.13380281690140844,
+      "assertions": 38,
+      "assertions_with_citations": 38,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 1.0,
+      "citation_support_precision": 1.0,
+      "class_abstention_rate": 0.7464788732394366,
+      "class_accuracy": 0.18309859154929578,
+      "class_balanced_accuracy": 0.16111111111111112,
+      "class_macro_f1": 0.205,
+      "class_per_class_recall": [
+        0.5555555555555556,
+        0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consensus_supported_coverage": 0.08098591549295775,
+      "descriptive_fixed_coverage": {
+        "50": {
+          "coverage": 0.5,
+          "loss": 0.195,
+          "supported_coverage": 0.125,
+          "unsupported_rate": 0.038461538461538464
+        },
+        "70": {
+          "coverage": 0.7,
+          "loss": 0.190625,
+          "supported_coverage": 0.12857142857142856,
+          "unsupported_rate": 0.02702702702702703
+        },
+        "90": {
+          "coverage": 0.9,
+          "loss": 0.20416666666666666,
+          "supported_coverage": 0.11944444444444445,
+          "unsupported_rate": 0.022727272727272728
+        }
+      },
+      "descriptive_risk_coverage_area": 0.19312996218584425,
+      "factual_error_rate_on_assertions": 0.0,
+      "factual_error_rate_on_identifiable_assertions": 0.0,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.9736842105263158,
+      "mean_evidence_tokens_all": 116.58,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.19014084507042253,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.214779104323825,
+      "mean_terminal_input_text_tokens_all": 773.95,
+      "mean_terminal_output_tokens_all": 220.27,
+      "mean_tools_all": 1.01,
+      "mean_total_output_tokens_all": 220.27,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6091549295774648,
+      "report_coverage": 0.71,
+      "retained_reports": 71,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 37,
+      "supported_coverage": 0.13028169014084506,
+      "supported_coverage_ci95": [
+        0.1,
+        0.16287878787878787
+      ],
+      "tone_assertions": 3,
+      "tone_match_coverage": 1.0,
+      "tone_matched_assertions": 3,
+      "tone_matched_mae_hz": 0.20000000000002652,
+      "tone_nearest_reference_mae_hz": 0.20000000000002652,
+      "tone_reference_available_assertions": 3,
+      "total_reports": 100,
+      "unsupported_rate": 0.02631578947368421,
+      "unsupported_rate_ci95": [
+        0.0,
+        0.08888888888888889
+      ],
+      "whole_test_useful_coverage": 0.0925,
+      "whole_test_useful_coverage_ci95": [
+        0.06682312513166211,
+        0.11868686868686869
+      ],
+      "wrong_or_unsupported_assertions": 1
+    }
+  },
+  "policy_decisions": {
+    "different_mask_from_one_shot": 28,
+    "first_actions": {
+      "A": 3,
+      "B": 0,
+      "C": 59,
+      "D": 31
+    },
+    "no_tool_reports": 7,
+    "one_tool_reports": 85,
+    "second_actions": {
+      "A": 6,
+      "B": 0,
+      "C": 1,
+      "D": 1
+    },
+    "two_tool_reports": 8
+  },
+  "preregistered_success_criteria_met": false,
+  "primary_contrasts": {
+    "A1_one_shot": {
+      "ci95": [
+        -0.032787205892799334,
+        0.024999999999999994
+      ],
+      "cluster_field": "source_group",
+      "clusters": 93,
+      "difference": -0.0022940674349125056,
+      "metric": "supported_coverage",
+      "p_holm": 1.0,
+      "p_two_sided_centered_bootstrap": 0.8755622188905547,
+      "resamples": 2000,
+      "seed": 17,
+      "unsupported_rate_difference": {
+        "ci95": [
+          -0.12903225806451613,
+          0.0
+        ],
+        "cluster_field": "source_group",
+        "clusters": 93,
+        "difference": -0.05263157894736842,
+        "metric": "unsupported_rate",
+        "p_two_sided_centered_bootstrap": 0.12043978010994502,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "utc_day_sensitivity": {
+        "ci95": [
+          -0.03219958356128838,
+          0.025862250644962025
+        ],
+        "cluster_field": "date",
+        "clusters": 96,
+        "difference": -0.0022940674349125056,
+        "metric": "supported_coverage",
+        "p_two_sided_centered_bootstrap": 0.8775612193903048,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "whole_test_useful_difference": {
+        "ci95": [
+          -0.019245049504950495,
+          0.027234529702970255
+        ],
+        "cluster_field": "source_group",
+        "clusters": 93,
+        "difference": 0.0050000000000000044,
+        "metric": "whole_test_useful_coverage",
+        "p_two_sided_centered_bootstrap": 0.7031484257871065,
+        "resamples": 2000,
+        "seed": 17
+      }
+    },
+    "B7_class_only": {
+      "ci95": [
+        -0.04680223703331099,
+        0.035472618318607284
+      ],
+      "cluster_field": "source_group",
+      "clusters": 93,
+      "difference": -0.005134976525821594,
+      "metric": "supported_coverage",
+      "p_holm": 1.0,
+      "p_two_sided_centered_bootstrap": 0.8340829585207397,
+      "resamples": 2000,
+      "seed": 17,
+      "unsupported_rate_difference": {
+        "ci95": [
+          -0.17500281531531534,
+          -0.006709780734171107
+        ],
+        "cluster_field": "source_group",
+        "clusters": 93,
+        "difference": -0.08732057416267942,
+        "metric": "unsupported_rate",
+        "p_two_sided_centered_bootstrap": 0.044977511244377814,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "utc_day_sensitivity": {
+        "ci95": [
+          -0.04637945595641408,
+          0.03368215441153371
+        ],
+        "cluster_field": "date",
+        "clusters": 96,
+        "difference": -0.005134976525821594,
+        "metric": "supported_coverage",
+        "p_two_sided_centered_bootstrap": 0.7996001999000499,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "whole_test_useful_difference": {
+        "ci95": [
+          -0.0353625541125541,
+          0.023590521114106
+        ],
+        "cluster_field": "source_group",
+        "clusters": 93,
+        "difference": -0.0050000000000000044,
+        "metric": "whole_test_useful_coverage",
+        "p_two_sided_centered_bootstrap": 0.7936031984007996,
+        "resamples": 2000,
+        "seed": 17
+      }
+    },
+    "B9_entropy": {
+      "ci95": [
+        -0.11047296328855084,
+        -0.019638798701298737
+      ],
+      "cluster_field": "source_group",
+      "clusters": 93,
+      "difference": -0.06457125103562553,
+      "metric": "supported_coverage",
+      "p_holm": 0.017991004497751123,
+      "p_two_sided_centered_bootstrap": 0.005997001499250375,
+      "resamples": 2000,
+      "seed": 17,
+      "unsupported_rate_difference": {
+        "ci95": [
+          -0.2222222222222222,
+          -0.013490010946907504
+        ],
+        "cluster_field": "source_group",
+        "clusters": 93,
+        "difference": -0.11884550084889645,
+        "metric": "unsupported_rate",
+        "p_two_sided_centered_bootstrap": 0.026986506746626688,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "utc_day_sensitivity": {
+        "ci95": [
+          -0.10951472631777287,
+          -0.02075049777433994
+        ],
+        "cluster_field": "date",
+        "clusters": 96,
+        "difference": -0.06457125103562553,
+        "metric": "supported_coverage",
+        "p_two_sided_centered_bootstrap": 0.005497251374312844,
+        "resamples": 2000,
+        "seed": 17
+      },
+      "whole_test_useful_difference": {
+        "ci95": [
+          -0.07398653768438068,
+          -0.007009345794392524
+        ],
+        "cluster_field": "source_group",
+        "clusters": 93,
+        "difference": -0.04000000000000001,
+        "metric": "whole_test_useful_coverage",
+        "p_two_sided_centered_bootstrap": 0.021989005497251374,
+        "resamples": 2000,
+        "seed": 17
+      }
+    }
+  },
+  "tool_budget_sensitivity": {
+    "1": {
+      "appropriate_uncertainty_on_ambiguous": 0.990990990990991,
+      "assertion_coverage": 0.1267605633802817,
+      "assertions": 36,
+      "assertions_with_citations": 36,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 1.0,
+      "citation_support_precision": 1.0,
+      "class_abstention_rate": 0.7464788732394366,
+      "class_accuracy": 0.18309859154929578,
+      "class_balanced_accuracy": 0.16111111111111112,
+      "class_macro_f1": 0.205,
+      "class_per_class_recall": [
+        0.5555555555555556,
+        0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consensus_supported_coverage": 0.08450704225352113,
+      "factual_error_rate_on_assertions": 0.0,
+      "factual_error_rate_on_identifiable_assertions": 0.0,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.9722222222222222,
+      "mean_evidence_tokens_all": 107.5,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.19102112676056338,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.2062206156819593,
+      "mean_terminal_input_text_tokens_all": 764.87,
+      "mean_terminal_output_tokens_all": 220.2,
+      "mean_tools_all": 0.93,
+      "mean_total_output_tokens_all": 220.2,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6091549295774648,
+      "report_coverage": 0.71,
+      "retained_reports": 71,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 35,
+      "supported_coverage": 0.12323943661971831,
+      "supported_coverage_ci95": [
+        0.09468461791831358,
+        0.15260191197691195
+      ],
+      "tone_assertions": 0,
+      "tone_match_coverage": null,
+      "tone_matched_assertions": 0,
+      "tone_matched_mae_hz": null,
+      "tone_nearest_reference_mae_hz": null,
+      "tone_reference_available_assertions": 0,
+      "total_reports": 100,
+      "unsupported_rate": 0.027777777777777776,
+      "unsupported_rate_ci95": [
+        0.0,
+        0.09375
+      ],
+      "whole_test_useful_coverage": 0.0875,
+      "whole_test_useful_coverage_ci95": [
+        0.06311553030303031,
+        0.11215191684150294
+      ],
+      "wrong_or_unsupported_assertions": 1
+    },
+    "2": {
+      "appropriate_uncertainty_on_ambiguous": 0.990990990990991,
+      "assertion_coverage": 0.13380281690140844,
+      "assertions": 38,
+      "assertions_with_citations": 38,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 1.0,
+      "citation_support_precision": 1.0,
+      "class_abstention_rate": 0.7464788732394366,
+      "class_accuracy": 0.18309859154929578,
+      "class_balanced_accuracy": 0.16111111111111112,
+      "class_macro_f1": 0.205,
+      "class_per_class_recall": [
+        0.5555555555555556,
+        0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consensus_supported_coverage": 0.08098591549295775,
+      "factual_error_rate_on_assertions": 0.0,
+      "factual_error_rate_on_identifiable_assertions": 0.0,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.9736842105263158,
+      "mean_evidence_tokens_all": 116.58,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.19014084507042253,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.214779104323825,
+      "mean_terminal_input_text_tokens_all": 773.95,
+      "mean_terminal_output_tokens_all": 220.27,
+      "mean_tools_all": 1.01,
+      "mean_total_output_tokens_all": 220.27,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6091549295774648,
+      "report_coverage": 0.71,
+      "retained_reports": 71,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 37,
+      "supported_coverage": 0.13028169014084506,
+      "supported_coverage_ci95": [
+        0.1,
+        0.16287878787878787
+      ],
+      "tone_assertions": 3,
+      "tone_match_coverage": 1.0,
+      "tone_matched_assertions": 3,
+      "tone_matched_mae_hz": 0.20000000000002652,
+      "tone_nearest_reference_mae_hz": 0.20000000000002652,
+      "tone_reference_available_assertions": 3,
+      "total_reports": 100,
+      "unsupported_rate": 0.02631578947368421,
+      "unsupported_rate_ci95": [
+        0.0,
+        0.08888888888888889
+      ],
+      "whole_test_useful_coverage": 0.0925,
+      "whole_test_useful_coverage_ci95": [
+        0.06682312513166211,
+        0.11868686868686869
+      ],
+      "wrong_or_unsupported_assertions": 1
+    },
+    "3": {
+      "appropriate_uncertainty_on_ambiguous": 0.990990990990991,
+      "assertion_coverage": 0.13380281690140844,
+      "assertions": 38,
+      "assertions_with_citations": 38,
+      "citation_completeness_on_correct_assertions": 1.0,
+      "citation_fidelity_on_assertions": 1.0,
+      "citation_support_precision": 1.0,
+      "class_abstention_rate": 0.7464788732394366,
+      "class_accuracy": 0.18309859154929578,
+      "class_balanced_accuracy": 0.16111111111111112,
+      "class_macro_f1": 0.205,
+      "class_per_class_recall": [
+        0.5555555555555556,
+        0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "consensus_supported_coverage": 0.08098591549295775,
+      "factual_error_rate_on_assertions": 0.0,
+      "factual_error_rate_on_identifiable_assertions": 0.0,
+      "full_format_validity_all": 1.0,
+      "independently_supported_citation_precision": 0.9736842105263158,
+      "mean_evidence_tokens_all": 116.58,
+      "mean_generator_calls_all": 1.0,
+      "mean_loss": 0.19014084507042253,
+      "mean_planner_output_tokens_all": 0.0,
+      "mean_reconstructed_seconds_all": 1.214779104323825,
+      "mean_terminal_input_text_tokens_all": 773.95,
+      "mean_terminal_output_tokens_all": 220.27,
+      "mean_tools_all": 1.01,
+      "mean_total_output_tokens_all": 220.27,
+      "modulation_assertions": 0,
+      "modulation_match_coverage": null,
+      "modulation_matched_assertions": 0,
+      "modulation_matched_mae_hz": null,
+      "modulation_nearest_reference_mae_hz": null,
+      "modulation_reference_available_assertions": 0,
+      "reference_identifiability": 0.6091549295774648,
+      "report_coverage": 0.71,
+      "retained_reports": 71,
+      "schema_validity_all": 1.0,
+      "supported_assertions": 37,
+      "supported_coverage": 0.13028169014084506,
+      "supported_coverage_ci95": [
+        0.1,
+        0.16287878787878787
+      ],
+      "tone_assertions": 3,
+      "tone_match_coverage": 1.0,
+      "tone_matched_assertions": 3,
+      "tone_matched_mae_hz": 0.20000000000002652,
+      "tone_nearest_reference_mae_hz": 0.20000000000002652,
+      "tone_reference_available_assertions": 3,
+      "total_reports": 100,
+      "unsupported_rate": 0.02631578947368421,
+      "unsupported_rate_ci95": [
+        0.0,
+        0.08888888888888889
+      ],
+      "whole_test_useful_coverage": 0.0925,
+      "whole_test_useful_coverage_ci95": [
+        0.06682312513166211,
+        0.11868686868686869
+      ],
+      "wrong_or_unsupported_assertions": 1
+    }
+  }
+}

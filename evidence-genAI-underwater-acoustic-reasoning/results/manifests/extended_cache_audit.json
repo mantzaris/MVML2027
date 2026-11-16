@@ -1,0 +1,42 @@
+{
+  "failed_reports_retained": true,
+  "groups": {
+    "evidence_interventions": {
+      "cache_digest": "7c2cb5f7eb4071cd4f863d54f98b50f1aac7676a52072a82cc7926817c07b98a",
+      "errors": {
+        "json_parse": 2
+      },
+      "format_valid": 173,
+      "output_limit_hits": 2,
+      "reports": 175,
+      "schema_valid": 173
+    },
+    "paraphrase": {
+      "cache_digest": "4fb7922281806f10c1c6a1887fbcdb5736f90ae7df0921822b060ed667a16e0f",
+      "errors": {},
+      "format_valid": 100,
+      "output_limit_hits": 0,
+      "reports": 100,
+      "schema_valid": 100
+    },
+    "paraphrase_2": {
+      "cache_digest": "77cfe7494a7180e8d7832202042fb384a32e48ecc550d33a5bfd91878a3e3345",
+      "errors": {},
+      "format_valid": 100,
+      "output_limit_hits": 0,
+      "reports": 100,
+      "schema_valid": 100
+    },
+    "waveform_stress": {
+      "cache_digest": "39b3aa54b90cc2c2651488e811d52f25d3bbcf3190b76cc104715455d1b26c76",
+      "errors": {},
+      "format_valid": 1074,
+      "output_limit_hits": 0,
+      "reports": 1074,
+      "schema_valid": 1074
+    }
+  },
+  "saved_parse_matches_current_parser": true,
+  "schema_hash": "a8569a583f0ccc3497f3ecdf19055e91fbe55ab6105a0e348f46b78d5274fb5a",
+  "scope": "Post-generation format and cache integrity audit; no semantic scores or selection rules changed."
+}

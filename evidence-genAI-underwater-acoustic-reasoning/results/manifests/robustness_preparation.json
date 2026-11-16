@@ -1,0 +1,16 @@
+{
+  "new_references": true,
+  "retrained_models": false,
+  "seconds": 104.48035821085796,
+  "source_clips": 60,
+  "source_groups": 57,
+  "transformed_clips": 360,
+  "variants": [
+    "noise_20",
+    "noise_10",
+    "noise_0",
+    "lowpass_2000",
+    "gain_025",
+    "clipping"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "abstract_words": 175,
+  "affiliation_and_contact_omitted": true,
+  "all_pages_reviewed": true,
+  "author_line": "Anonymous author",
+  "author_metadata": "Anonymous",
+  "clipped_text_observed": false,
+  "docx_sha256": "4fb4f043a0dd653a78c7f7898c125c821ca1b61e943f785d87990dfdf6255664",
+  "figures_and_tables_legible": true,
+  "font_note": "Times New Roman body and tables, Arial headings; embedded Tinos/Nimbus Roman fallback glyphs in equations and Unicode notation.",
+  "geometry_note": "Official template section geometry retained; horizontal-margin discrepancy with template prose remains documented for any future submission.",
+  "inspected_at_utc": "2026-11-16T01:39:45.647106+00:00",
+  "pages": 8,
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "pdf_font_report": [
+    "BAAAAA+TimesNewRomanPSMT             TrueType          WinAnsi          yes yes yes     54  0",
+    "CAAAAA+Arial-BoldMT                  TrueType          WinAnsi          yes yes yes     59  0",
+    "DAAAAA+TimesNewRomanPS-BoldMT        TrueType          WinAnsi          yes yes yes     49  0",
+    "EAAAAA+Tinos                         TrueType          WinAnsi          yes yes yes     44  0",
+    "FAAAAA+NimbusRomanRegular            Type 1            Builtin          yes yes yes     64  0"
+  ],
+  "pdf_sha256": "9784b597d0c63c46dcf3e09564d271362d92bc6e08ece139d197f82c3797b03a",
+  "repeated_table_headers_verified": true,
+  "review_method": "Visual inspection of all eight PDF pages rendered at 1600-pixel height, plus extracted-text, PDF metadata and DOCX package checks.",
+  "submission_or_publication_performed": false,
+  "title_exact": true
+}

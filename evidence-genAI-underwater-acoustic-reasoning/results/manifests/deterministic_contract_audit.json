@@ -1,0 +1,27 @@
+{
+  "deterministic_mask": 5,
+  "errors": {},
+  "partitions": {
+    "calibration": {
+      "full_contract_valid": 37,
+      "reports": 37
+    },
+    "development": {
+      "full_contract_valid": 33,
+      "reports": 33
+    },
+    "policy_fit": {
+      "full_contract_valid": 100,
+      "reports": 100
+    },
+    "robustness": {
+      "full_contract_valid": 360,
+      "reports": 360
+    },
+    "test": {
+      "full_contract_valid": 100,
+      "reports": 100
+    }
+  },
+  "scope": "Format validation only, using the same parser as generated reports; no semantic score is inferred."
+}

@@ -1,0 +1,24 @@
+{
+  "detailed_logs_preserved_outside_git": 51,
+  "disk_free_bytes": 6834065408,
+  "disk_total_bytes": 53687091200,
+  "finish_instruction": "leave_running",
+  "gpu_compute_processes": 0,
+  "gpu_snapshot": "NVIDIA RTX PRO 4500 Blackwell, 32623 MiB, 2 MiB, 0 %",
+  "observed_at_utc": "2026-11-16T01:32:48.807168+00:00",
+  "package_versions": {
+    "apache-tvm-ffi": "0.1.16",
+    "numpy": "1.26.4",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "soundfile": "0.13.1",
+    "torch": "2.8.0+cu128",
+    "torchaudio": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "transformers": "4.57.1",
+    "xgrammar": "0.2.9"
+  },
+  "pod_accessible_over_ssh": true,
+  "pod_stop_requested": false,
+  "pod_termination_requested": false
+}

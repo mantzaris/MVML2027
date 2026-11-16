@@ -1,0 +1,184 @@
+Evidence-Grounded Generative AI for Underwater Acoustic Reasoning
+
+Anonymous author
+
+Abstract — We evaluate whether a small learned controller can acquire acoustic evidence that improves a frozen audio-language model’s bounded reports. A conservative UniqueShip split separates recorded vessels and entire UTC days, retaining 2,459 classifier-training and 2,240 test recordings. The generative assessment uses 100 test clips from 93 recorded source groups. Four actions provide spectrum, modulation, received-energy or training-exemplar evidence; the primary action budget is two. Independent numerical estimators define automated physical-consistency proxies, supplemented by two blinded AI reviewer roles and no human reviewers. At a calibration-targeted 70% report coverage, the sequential risk policy obtained 13.0% supported physical coverage versus 19.5% for the development-locked comparator, a difference of -6.5 percentage points (paired source-bootstrap 95% interval -11.0 to -2.0). Actual report coverage was 71.0% and 68.0%, respectively. Deterministic reporting reached 55.0% support at 65.0% report coverage. The learned selector did not improve supported coverage over the locked heuristic, and the predefined success criteria were not met. The study characterizes measured-evidence reporting under a fixed compute budget; missing parent-recording provenance and shared-model automated assessment limit physical and perceptual conclusions.
+
+Keywords: underwater acoustics; generative audio; evidence acquisition; uncertainty; automated evaluation
+
+1. Introduction and Related Work
+
+A vessel-class prediction and a defensible physical description are different outputs. A five-second hydrophone excerpt may support a broad energy band while leaving tones or modulation unresolved. A generator can also repeat an unsupported number. On public civilian recordings, we measure evidence acquisition, operational acoustic correctness and citation fidelity separately.
+
+Learned audio-tool selection is already central to AuTAgent [1]. Audio-Mind emphasizes auditable acquisition [2], SEAR studies evidence-grounded audio reasoning [3], and ACE-Cap introduces active evidence acquisition for detailed audio captions [4]. These systems make a generic combination of an audio model and analytical tools an insufficient novelty claim. Underwater recognition benchmarks such as UniqueShip [5] and UA-Bench [6], and fine-grained marine perception in WoW-Bench [7], further motivate domain-specific checks. Our question is narrower: does supervision from bounded claim-consistency risk improve a small sequential selector over fixed, class-only, one-shot and prompt-planned acquisition under the same terminal generator?
+
+From Signals to Evidence Parts I and II [8,9] already combine physics-aware features with generative underwater interpretation on simulated targets. Our real-recording assessment and controlled claim-risk selection objective are distinct experimental choices, not evidence of a superior sensing system. Audio-Mind, SEAR, ACE-Cap and these two underwater reports are preprints in the verified source record; their results are not treated as established physical ground truth.
+
+Citation evaluation distinguishes the presence of a citation from its support for a statement [10]. We retain that distinction and a separate numerical correctness test. With no human reviewers, our endpoint is an automated proxy; AI agreement supplies no independent perceptual ground truth.
+
+2. Data and Prospective Amendments
+
+We use the public UniqueShip v1.0 five-hour-per-class release, fold 1, retaining background, cargo, passenger, tanker and tug/tow labels. The selected metadata initially contain 18,003 clips. Actual WAV headers are mono PCM at 32 kHz; native DSP and references preserve this rate, while anti-aliased derivatives feed the 20 kHz classifier and 16 kHz generator. We exclude five non-five-second files and 42 filename/metadata date disagreements. Each acquired ZIP member passes an exact-range size and CRC check. The 7,418 retained recordings have no duplicate decoded waveform hashes.
+
+Recorded vessels and background-day groups are allocated from official training approximately 75:25 to acoustic-fit/policy-fit, and from official validation 50:50 to development/calibration, using deterministic seed-17 hash ordering. A whole UTC day across all labels and hydrophones belongs to one partition, prioritized test, calibration, development, policy-fit, acoustic-fit. A global 60-second guard protects cross-partition boundaries. Non-test source counts are capped at 100; the cap removes no further records in this release. This conservative procedure discards many otherwise eligible training clips. Parent-recording and deployment identifiers are unavailable, and background hydrophone fields are absent; disjoint recorded groups do not establish full physical independence.
+
+Table 1. Retained data and assessment subsets. Groups are recorded vessel IDs or background UTC days.
+
+Table 1. Retained data and assessment subsets. Groups are recorded vessel IDs or background UTC days.
+Partition | All clips | All groups | Assessed clips | Assessed groups
+Acoustic-fit | 2459 | 658 | 0 | 0
+Policy-fit | 1827 | 411 | 100 | 96
+Development | 384 | 91 | 33 | 30
+Calibration | 508 | 103 | 37 | 34
+Test | 2240 | 479 | 100 | 93
+
+Assessment sampling allows at most three clips per recorded source, at least ten minutes apart. Development and calibration class shortfalls are preserved. The test subset contains 20 clips per class and 93 source groups, including only 13 passenger vessels. The initial 240-clip balanced proposal was infeasible under this source cap; the smaller design, provenance exclusions and AI-only assessment were documented before model outcomes. Test terminal outcomes remained locked until selection rules, thresholds and the statistical family were fixed. These are timestamped prospective protocol records, not an external preregistration.
+
+3. Bounded Evidence Acquisition
+
+The acoustic anchor is an ImageNet-initialized Swin V2 Tiny [11] on 128-bin log-mel inputs (20–8,000 Hz, FFT/window 1,024, hop 256, 90 dB relative range), resized to 256×256 with three replicated channels and ImageNet normalization. AdamW uses batch 32, head learning rate 0.001, weight decay 0.01, at most 30 epochs and patience five. Seed-17 development macro-F1 selects the backbone rate from 10⁻⁶, 10⁻⁵ and 3×10⁻⁵; the selected rate is 10⁻⁵. Three final seeds are 17, 29 and 43. The seed-17 model supplies matched generator priors. Temperature is fit on development; a 32-dimensional PCA is fit only on acoustic-fit embeddings.
+
+The frozen Qwen2.5-Omni-7B Thinker [12] runs BF16 with SDPA and its Talker disabled. Every terminal report uses one greedy call, at most 1,024 generated tokens, explicit end-of-turn stopping, and no generative repair. A development-only corrective pass added one shared XGrammar 0.2.9 JSON schema after unrestricted generation yielded 85.8% valid slots in 176 reports. The grammar constrains status/value types and the 60–100-word length, but contains no query measurements, true labels or permitted evidence IDs. Formatting constraints can influence semantic output; the failed pilot is excluded from the corrected cache and retained in the audit record. The same prompt requests class, dominant band, persistent tone, modulation and received-energy trend, plus a 60–100-word interpretation. Slots retain status, cited evidence IDs and time intervals; tone/rate assertions require measured numerical evidence. Raw audio can support cautious qualitative statements. An empty candidate list leaves presence unresolved. Ground-truth query labels, source identifiers and reference diagnostics never enter the terminal prompt.
+
+Action A computes Welch/STFT band powers and persistent narrowband candidates. B measures band-filtered Hilbert-envelope modulation from 2–80 Hz. C reports digital waveform quality and the first/last-second received-energy change at a 3 dB boundary. D retrieves five distinct-source, acoustic-fit-only cosine neighbors with class labels and distances, excluding the query source. D cannot support physical attributes. Each serialized family is limited to 256 tokens, all families to 1,024 and the text prompt to 4,096. Candidate lists are shortened deterministically when needed. Unused family capacity is not transferred.
+
+Fig. 1. Matched terminal generation and sequential evidence acquisition. Numerical reference estimates and AI assessments remain outside the policy’s observed state.
+
+The initial policy state contains the classifier probabilities, entropy, margin, PCA coordinates and basic digital quality values. Four observation indicators and four masked 16-value tool summaries produce a 110-dimensional state; unselected summaries are never read into it. Three source-bootstrap MLPs (64/32 hidden units, dropout 0.1) predict current terminal risk and four marginal changes. Their Huber objective uses AdamW at 0.001 with 10⁻⁴ decay, at most 100 epochs and patience ten, with unavailable action targets masked.
+
+For subset S, L(S) = 0.5 ℓclass + 0.125 Σj ℓj. Correct, independently identifiable and citation-supported physical assertions have loss zero; wrong or unsupported assertions have loss one. Uncertainty costs 0.25 on identifiable attributes and zero on ambiguous references. Class loss is zero for a correct label, one for a wrong label and 0.25 for abstention. Malformed reports incur failure loss. The action target is Δa(S) = L(S) − L(S∪{a}). Acquisition maximizes mean predicted Δ minus β times ensemble spread minus λ per action, stopping when no positive score remains or two tools have been acquired. Spread is a heuristic, not a confidence guarantee.
+
+All 16 subsets are cached for the 100/33/37 policy/development/calibration clips; an additional raw-audio report omits the classifier prior. The development pilot obtained 100.0% slot-schema validity. Its best fixed-pair loss was 0.154, versus 0.113 for a retrospective per-clip best pair. This oracle gap is a feasibility diagnostic, not a deployable result. Development selects β from {0,0.5,1} and λ from {0,0.02,0.05}; the chosen β=0 and λ=0.05. Controller seeds are evaluated separately from classifier seeds.
+
+4. Automated Assessment and Comparisons
+
+Primary physical proxies use separately implemented full-window DPSS spectra, non-overlapping-frame persistence and squared-envelope autocorrelation. A dominant band needs a 1 dB margin. A tone needs 12 dB full-window contrast and at least three consecutive one-second frames at 9 dB local contrast. Modulation requires a prominent autocorrelation peak and a repeated period. A known-signal development check exposed lost boundary peaks and half-rate errors in the initial proxy. Before controller fitting or test reports, version 1.2 increased envelope sampling to 1 kHz, interpolated boundary peaks, required at least 1% of waveform energy in the carrier passband and rejected later-period aliases; all references and AI assessments were regenerated, with original artifacts retained. The energy-trend reference recomputes the same operational first/last statistic, marking values within 0.5 dB of the ±3 dB boundaries ambiguous. Independent code does not make this shared operational definition independent physical truth. Tone tolerance is max(3 Hz,3%) and modulation tolerance max(1 Hz,10%); claimed intervals must also be supported.
+
+Two blinded Omni reviewer roles inspect anonymous original audio and independent numerical diagnostics, with no class, source, generated report, proposed card or policy decision. Disagreement is retained. Numerical consistency is primary; an agreement sensitivity requires both AI roles to concur. On 20 constructed controls (40 calls), 39 responses passed the minimal review parser; attribute agreement ranged from 90.0% to 97.5%. The main assessment produced 540 minimally parseable responses from 540 calls. This parser checks four slot objects and boolean identifiability; missing numerical or interval fields still fail the relevant agreement and support checks. Across slots, identifiability kappa ranges from 1.000 to 1.000. Only 87/165 tone and 9/18 modulation pairs agree within numerical tolerances. In the intermediate control pilot, both roles repeated a false modulation estimate for an unmodulated 60 Hz tone. That reference artefact was corrected before test evaluation. This observed failure illustrates shared diagnostic anchoring. These correlated roles share the terminal checkpoint and diagnostic anchors. A valid citation ID alone receives no support credit: the query provenance, attribute, stated number and interval must match the supplied card, and independent correctness is evaluated separately. Rationale length failures are reported separately from slot-schema failures.
+
+Baselines comprise classifier-only B0; raw audio B1; audio plus prior B2; development-selected fixed pair B3; retrieval alone and retrieval plus one DSP action B4; all four tools B5; a two-call Qwen2.5-7B-Instruct prompt-planner adaptation B6 [13]; class-only learned acquisition B7; deterministic rendering B8; and a three-bin entropy selector B9. A1 chooses actions once from the initial state, A2 removes the spread penalty and A3 forces the full budget. The prompt planner is a bounded comparator, not a reproduction of external audio agents. All applicable selectors share cached terminal reports, the full-risk rejection head and calibration opportunity. B5 has a larger tool budget; B8 makes no terminal LLM call.
+
+Each method’s calibration threshold is the upper order statistic at ceil(0.70 n), with ties retained. Actual test coverage is reported. Among N retained reports, G correct-and-supported physical assertions yield supported coverage G/(4N); A assertions and U wrong/unsupported assertions yield U/A, or NA if A=0. Whole-test useful coverage uses the denominator 4×100, preventing rejection from disappearing from the accounting. Five-class macro-F1 counts abstentions as errors. Brier and equal-frequency ten-bin ECE are computed only for genuine classifier probabilities. Token/call costs include every generated report before rejection; latency reconstructed from cached tool times and batched inference is not an online speedup benchmark.
+
+The three confirmatory contrasts compare P with the development-locked B3/B9 method, B7 and A1. Two thousand paired source-cluster bootstrap resamples retain both methods and all clips from each sampled recorded group; calibration thresholds remain fixed. Percentile 95% intervals accompany centered-bootstrap approximate two-sided p-values, adjusted by Holm across the three contrasts. UTC-day clustering is a dependence sensitivity. Test-ranked coverage curves are descriptive. Success requires at least a five-percentage-point primary gain, positive lower interval, no higher U/A, class macro-F1 within two points, and supportive B7/A1 contrasts.
+
+5. Results
+
+Table 2. Classifier B0 on all 2,240 eligible test recordings; genuine calibrated scores only.
+
+Table 2. Classifier B0 on all 2,240 eligible test recordings; genuine calibrated scores only.
+Seed | Accuracy % | Macro-F1 | Balanced acc. % | Brier | ECE
+17 | 50.0 | 0.491 | 51.7 | 0.607 | 0.061
+29 | 55.4 | 0.543 | 57.1 | 0.567 | 0.052
+43 | 54.6 | 0.532 | 56.7 | 0.572 | 0.058
+
+The development-locked comparator is B9 Entropy heuristic. At the frozen calibration thresholds, P retains 71 reports and the comparator retains 68. Their supported coverage is 13.0% and 19.5%, while wrong/unsupported rates are 2.6% and 14.5%. Whole-test useful coverage is 9.2% versus 13.2%. Different realized retention rates constrain an interpretation as an exact matched-coverage comparison; Fig. 2 separately shows descriptive common-coverage curves.
+
+Table 3. Clean assessment results at calibration-locked operating points. Coverage and support are percentages; U/A is wrong/unsupported assertions. Tools and generative calls are means over all 100 clips.
+
+Table 3. Clean assessment results at calibration-locked operating points. Coverage and support are percentages; U/A is wrong/unsupported assertions. Tools and generative calls are means over all 100 clips.
+Method | Cov. | Support | U/A | Class F1 | Tools | Gen. calls
+B1 Raw audio | 63.0 | 0.0 | NA | 0.000 | 0.00 | 1.00
+B2 + prior | 63.0 | 0.0 | NA | 0.187 | 0.00 | 1.00
+B3 Fixed pair | 75.0 | 8.3 | 13.8 | 0.313 | 2.00 | 1.00
+B4 Retrieval | 85.0 | 0.0 | NA | 0.296 | 1.00 | 1.00
+B4 Retrieval + DSP | 75.0 | 8.3 | 13.8 | 0.313 | 2.00 | 1.00
+B5 All tools | 75.0 | 27.0 | 39.1 | 0.365 | 4.00 | 1.00
+B6 Prompt planner | 62.0 | 14.9 | 36.2 | 0.165 | 2.00 | 3.00
+B7 Class-only policy | 72.0 | 13.5 | 11.4 | 0.264 | 1.68 | 1.00
+B8 Deterministic | 65.0 | 55.0 | 14.4 | 0.543 | 2.00 | 0.00
+B9 Entropy heuristic | 68.0 | 19.5 | 14.5 | 0.342 | 2.00 | 1.00
+P Sequential risk | 71.0 | 13.0 | 2.6 | 0.205 | 1.01 | 1.00
+A1 One-shot | 66.0 | 13.3 | 7.9 | 0.225 | 1.25 | 1.00
+A2 No SD penalty | 71.0 | 13.0 | 2.6 | 0.205 | 1.01 | 1.00
+A3 Forced budget | 68.0 | 21.7 | 14.5 | 0.251 | 2.00 | 1.00
+
+Fig. 2. Descriptive test-ranked coverage curves. Dots and vertical source-bootstrap 95% intervals identify separately calibrated operating points; they do not imply exact 70% test coverage. All-tools uses four actions.
+
+Table 4. Confirmatory paired source-cluster contrasts in supported coverage, P minus comparator. Intervals are percentage points; p-values use Holm correction.
+
+Table 4. Confirmatory paired source-cluster contrasts in supported coverage, P minus comparator. Intervals are percentage points; p-values use Holm correction.
+Comparator | Difference | 95% interval | Holm p
+B9 Entropy heuristic | -6.5 | -11.0 to -2.0 | 0.018
+B7 Class-only policy | -0.5 | -4.7 to 3.5 | 1.000
+A1 One-shot | -0.2 | -3.3 to 2.5 | 1.000
+
+The learned selector did not improve supported coverage over the locked heuristic, and the predefined success criteria were not met. The primary difference is -6.5 percentage points, with interval -11.0 to -2.0 and Holm-adjusted p=0.018. UTC-day clustering gives interval -11.0 to -2.1. The mean number of tools selected by P is 1.01. The deterministic and all-tools rows remain visible because improved prose or selective reporting cannot be inferred from outperforming raw audio alone. Across controller seeds, supported coverage ranges from 9.4% to 13.0%; these runs reuse the same greedy terminal cache and are not independent generator replications.
+
+Across methods, slot-schema validity ranges from 99.0% to 100.0%; full format compliance, including interpretation length, ranges from 99.0% to 100.0%. Length violations remain in the record and receive no hidden repair. For P, matched tone error is 0.200 Hz with 3 of 3 tone assertions matched; matched modulation error is NA Hz with 0 of 0 assertions matched. Conditional numerical errors must be read with these coverage counts and the unmatched assertions.
+
+P makes 38 physical assertions among its retained reports, of which 37 are supported; the entropy comparator makes 62, of which 53 are supported. Class macro-F1 is 0.205 versus 0.342. The deterministic renderer reaches 55.0% supported coverage, with 14.4% wrong/unsupported assertions and no terminal model call. P stops after zero or one tool on 92 clips; only 8 use two tools. Raising the maximum budget to three leaves its results unchanged. Forcing two acquisitions yields 21.7% support and 14.5% wrong/unsupported assertions. Thus early stopping accompanies a tradeoff between sparse low-error output and useful coverage. At these operating points, mean composite loss is 0.190 versus 0.202. Because abstention has a smaller assigned cost than error, a lower loss does not by itself establish greater useful information. The selected β=0 makes A2 identical to P; this run supplies no evidence for a benefit from the ensemble-spread penalty.
+
+Fig. 3. Evidence-cost diagnostics for budgets 1, 2 and 3, calibrated separately. Vertical bars are source-bootstrap 95% intervals. Tool calls and terminal-prompt evidence tokens are measured across all requested reports; the deterministic method has no generator prompt. Lower DSP cost alone does not establish GPU savings.
+
+6. Stress Tests, Interpretation and Limits
+
+We apply six fixed waveform transformations to 60 source-respecting test clips: Gaussian noise at 20/10/0 dB SNR, 2 kHz low-pass filtering, amplitude gain 0.25 and RMS-scaled digital clipping. All 360 transformed clips receive new model features, analytical cards, numerical references and two AI assessments; clean reference attributes are never reused as transformed truth. The original model parameters and calibration thresholds remain fixed. 719 of 720 transformed AI assessments pass that minimal parser. These artificial transformations probe sensitivity rather than realistic deployment prevalence.
+
+Across the six transformations, P’s realized report coverage ranges from 0.0% to 98.3%; supported coverage among nonempty retained sets ranges from 6.9% to 15.9%. Condition-specific classifier results, paired contrasts and a separate stress figure remain in the reproducibility bundle. The drift in retention must be considered alongside conditional support.
+
+Digital clipping causes all four evaluated methods to reject every report, making conditional support unestimable and whole-test useful coverage zero. At 0 dB added-noise SNR, P retains 98.3% of reports while the classifier’s macro-F1 is 0.098. Retention can therefore rise while classification deteriorates; clean calibration supplies no coverage guarantee under these shifts. P’s point estimate remains below the entropy comparator in all five conditions with retained reports. These stress comparisons are exploratory.
+
+Two fixed prompt paraphrases are evaluated on all 100 clean clips using P’s selected evidence. Supported coverage changes from 11.0% to 0.0% and 0.0% before rejection; paired source intervals for the changes are -13.6 to -8.3 and -13.6 to -8.3 percentage points. A further 175 reports test missing A/B evidence, swapped or fabricated spectral cards, corrupted retrieval labels and separate cited/uncited-card removals. Internal card consistency is reported separately from independent correctness. Swapped provenance remains private to the evaluator; the model cannot authenticate an invisible identifier. These fixed-evidence interventions do not rerun the acquisition policy.
+
+Both paraphrases produce uncertainty in every structured slot on all 100 clips. Zero structured assertion coverage does not imply claim-free prose: hash-ordered saved examples still contain numerical physical details. This response-pattern change exposes prompt sensitivity and a gap between the slot endpoint and free text; the 120-report prose audit below covers original-prompt outputs only.
+
+Table 5. Evidence interventions before rejection, with up to 25 clips per condition. Clean support is the matched unmodified subset report.
+
+Table 5. Evidence interventions before rejection, with up to 25 clips per condition. Clean support is the matched unmodified subset report.
+Intervention | n | Clean support % | Changed support % | Changed U/A %
+Missing spectrum | 25 | 19.0 | 1.0 | 0.0
+Swapped spectrum | 25 | 19.0 | 11.0 | 62.1
+Fabricated spectrum | 25 | 19.0 | 7.0 | 58.8
+Missing modulation | 25 | 19.0 | 5.0 | 16.7
+Corrupt retrieval labels | 25 | 21.0 | 11.0 | 47.6
+Remove cited card | 25 | 41.0 | 4.0 | 33.3
+Remove uncited card | 25 | 24.0 | 10.0 | 44.4
+
+Fig. 4. Two illustrative real recordings selected by fixed hash-ordered rules: a supported report with appropriate uncertainty and a report containing an error, when eligible. Spectrograms show relative power over 20–2,000 Hz, not calibrated sound pressure. Full reports, references and provenance hashes accompany the figures.
+
+A blinded AI prose audit covers 120 reports from 30 clips and four methods; 120 audits parse successfully. The audit flags mechanical claims, new unsupported physical claims, slot/rationale inconsistencies and overstated certainty. Per-method rates and missing-audit denominators accompany the artifact tables. Because this auditor shares the generator checkpoint, its judgments are secondary diagnostics with potential self-evaluation bias. No human participants, acoustic experts or hypothetical-human performance measurements are represented.
+
+The prose auditor flags mechanical claims in 29 of 30 deterministic reports, although their fixed interpretation explicitly disclaims mechanical inference and their slots contain no such claims. All 29 flagged notes mention class, indicating category confusion between a vessel-class assertion and a mechanical claim. These automated flags cannot be treated as validated prose-error rates or used to rank methods. The unchanged audit outputs and diagnostic examples are preserved.
+
+Several limitations prevent broad claims. Missing parent-recording/deployment provenance survives the conservative vessel/day/time/hash audit. Only 13 passenger test vessels and small development/calibration source counts constrain precision, model selection and coverage transfer. AIS-associated class labels, one regional corpus and five-second excerpts do not establish generalization across oceans or sensors. Tone and modulation proxies can err; band and energy-trend targets are operational definitions, with partial overlap between tool and reference mathematics. Shared-model reviewers are correlated and may reproduce the supplied diagnostics. In a single-batch smoke test, three copies of each of five training probes produced identical structured slots, while prose differed for four probes. This limited check does not establish bitwise reproducibility or universal batch invariance. Cached subset evaluation measures a bounded selection problem, and reconstructed timings establish no measured online GPU saving.
+
+The study supports conclusions about automated consistency of bounded acoustic reports. Vessel identity, source position, propulsion parameters, submarine-specific recognition, calibrated sound pressure and source motion remain unmeasured. At its own calibrated operating point, deterministic reporting supplied the most supported physical information among the tested methods, while retaining a nonzero unsupported-assertion rate. The raw-audio condition abstained on every class and physical slot across all 100 clips. That is a result of this fixed input, prompt and decoding setup, not a general estimate of the foundation model’s audio capabilities.
+
+7. Reproducibility and Conclusion
+
+The complete policy/development/calibration/test cache contains 4590 terminal reports. Of these, 8 reached the output ceiling and 8 failed the slot schema. Format constraints do not guarantee termination; every failure remains in its original subset and receives the specified penalty.
+
+Among 1074 distinct stress terminal reports, 0 fail the slot schema. The two paraphrases and evidence interventions contain 375 reports, of which 2 fail. These failures remain in the reported denominators and losses.
+
+The bundle records protocols, hashes, model revisions, prompts, code, tables and figures. Audio, full predictions, logs and 16 checkpoints remain outside Git; 18,581 worker artifacts (7.3 GB) match their local copies. All 56 portable tests and 58 worker tests pass, including compiled-decoder checks. Validation also covers 500 synthetic tool fixtures, 100 structural interventions and training resumption from epoch 19 with optimizer and random state restored. Failed pilots and checkpoint attempts remain archived. One 32 GB RTX PRO 4500 Blackwell completed the experiments within the ten-hour research ceiling; the service’s dollar rate is unknown.
+
+The learned selector did not improve supported coverage over the locked heuristic, and the predefined success criteria were not met. Evidence acquisition should be justified against fixed, deterministic and classification-only alternatives, with uncertainty retained and claim support distinguished from fluent wording. The present AI-only assessment provides reproducible automated proxies, while independent physical and perceptual validation remains a separate research requirement.
+
+References
+
+[1] Siqian Tong; Li Xuan; Yiwei Wang et al., “AuTAgent: A Reinforcement Learning Framework for Tool-Augmented Audio Reasoning,” International Conference on Machine Learning, 2026. https://proceedings.mlr.press/v306/tong26l.html
+
+[2] Wang, Yucheng; Peng, Jing; Li, Hanqi et al., “Audio-Mind: An Auditable Agentic Framework for Audio Understanding,” arXiv:2605.28480, 2026. https://arxiv.org/abs/2605.28480
+
+[3] Wan, Rong; Qin, Suliu; Li, Jiaxi et al., “SEAR: Spoofing Evidence-Grounded Audio Reasoning Benchmark for Audio Language Models,” arXiv:2609.39847, 2026. https://arxiv.org/abs/2609.39847
+
+[4] Ma, Fengji; Rong, Yan; Li, Xu et al., “ACE-Cap: Active Evidence Acquisition via Agentic Co-Evolution for Long-Paragraph Fine-Grained Audio Captioning,” arXiv:2608.16162, 2026. https://arxiv.org/abs/2608.16162
+
+[5] Hashemi, Connor; Stout, Trevor; Hoogs, Anthony et al., “UniqueShip: Mitigating Data Leakage in Acoustic Ship Classification Benchmark Datasets,” arXiv:2609.13659, 2026. https://arxiv.org/abs/2609.13659
+
+[6] Sun, Zhe; An, Liang; Yao, Jiayu et al., “UA-Bench: Benchmarking Large Audio-Language Models on Underwater Acoustic Recognition,” arXiv:2610.16942, 2026. https://arxiv.org/abs/2610.16942
+
+[7] Jaeyeon Kim; Heeseung Yun; Tony Woo et al., “WoW-Bench: Evaluating Fine-Grained Acoustic Perception in Audio-Language Models via Marine Mammal Vocalizations,” Findings of the Association for Computational Linguistics: ACL 2026, 2026. https://aclanthology.org/2026.findings-acl.1562/
+
+[8] Zhang, Yuge; Chen, Jie; Zhao, Zhengqiao et al., “From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part I: Framework and Recognition,” arXiv:2610.22064, 2026. https://arxiv.org/abs/2610.22064
+
+[9] Li, Zhiyuan; Zhang, Yuge; Chen, Jie et al., “From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part II: Passive Detection,” arXiv:2610.31346, 2026. https://arxiv.org/abs/2610.31346
+
+[10] Tianyu Gao; Howard Yen; Jiatong Yu et al., “Enabling Large Language Models to Generate Text with Citations,” Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, 2023. https://aclanthology.org/2023.emnlp-main.398/
+
+[11] Ze Liu; Han Hu; Yutong Lin et al., “Swin Transformer V2: Scaling Up Capacity and Resolution,” IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022. https://arxiv.org/abs/2111.09883
+
+[12] Jin Xu; Zhifang Guo; Jinzheng He et al., “Qwen2.5-Omni Technical Report,” arXiv:2503.20215, 2025. https://arxiv.org/abs/2503.20215
+
+[13] Qwen; others, “Qwen2.5 Technical Report,” arXiv:2412.15115, 2024. https://arxiv.org/abs/2412.15115

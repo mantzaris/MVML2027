@@ -1,0 +1,55 @@
+{
+  "failed_reports_retained": true,
+  "format_schema_sha256": "a8569a583f0ccc3497f3ecdf19055e91fbe55ab6105a0e348f46b78d5274fb5a",
+  "independent_semantic_correctness_is_separate": true,
+  "partitions": {
+    "calibration": {
+      "clips": 37,
+      "errors": {
+        "json_parse": 2
+      },
+      "format_valid": 627,
+      "output_limit_hits": 2,
+      "output_tokens": 147645,
+      "peak_vram_bytes": 25698826752,
+      "reports": 629,
+      "schema_valid": 627
+    },
+    "development": {
+      "clips": 33,
+      "errors": {},
+      "format_valid": 561,
+      "output_limit_hits": 0,
+      "output_tokens": 128177,
+      "peak_vram_bytes": 25499792896,
+      "reports": 561,
+      "schema_valid": 561
+    },
+    "policy_fit": {
+      "clips": 100,
+      "errors": {
+        "json_parse": 2
+      },
+      "format_valid": 1698,
+      "output_limit_hits": 2,
+      "output_tokens": 393188,
+      "peak_vram_bytes": 25872629760,
+      "reports": 1700,
+      "schema_valid": 1698
+    },
+    "test": {
+      "clips": 100,
+      "errors": {
+        "json_parse": 4
+      },
+      "format_valid": 1696,
+      "output_limit_hits": 4,
+      "output_tokens": 395281,
+      "peak_vram_bytes": 25674707456,
+      "reports": 1700,
+      "schema_valid": 1696
+    }
+  },
+  "terminal_cache_digest": "e9f6ac6d7e6526735460deef080a857384619f453c27ac8f8f2a9926d35565a5",
+  "terminal_reports": 4590
+}

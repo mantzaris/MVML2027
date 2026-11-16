@@ -1,7 +1,13 @@
 {
   "changed_method_artifacts": [],
   "checked_files_and_models": 88,
-  "editorial_files_changed_after_freeze": [],
+  "editorial_files_changed_after_freeze": [
+    "scripts/build_artifact_manifest.py",
+    "scripts/build_manuscript.py",
+    "scripts/make_figures.py",
+    "scripts/make_real_examples.py",
+    "scripts/summarize_execution.py"
+  ],
   "frozen_at_utc": "2026-11-16T00:06:30.031812+00:00",
   "main_references_and_reviews_match": true,
   "method_files_and_models_match": true,

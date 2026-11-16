@@ -1,10 +1,24 @@
 {
   "actual_pod_billing_hours": null,
   "actual_usd_cost": null,
+  "amortized_generation_seconds": {
+    "report_audits/intervention": 283.8738178333733,
+    "report_audits/paraphrase": 87.81977445504162,
+    "report_audits/paraphrase_2": 87.81977445504162,
+    "report_audits/prose": 35.73034409340471,
+    "review/main": 463.61786390887573,
+    "review/reference_v1": 472.7796275932341,
+    "review/reference_v11": 472.9545958726667,
+    "review/robustness": 529.2091124975123,
+    "terminal/free_greedy_pilot": 228.03292206535116,
+    "terminal/main": 5216.676537813151,
+    "terminal/robustness": 1141.938840773888,
+    "terminal/xgrammar_pilot": 17.32133629405871
+  },
   "authorized_ceiling_hours": 10,
-  "conservative_research_elapsed_hours": 1.9257475811111113,
-  "counting_note": "Counts cover saved individual inference records; smoke batches and planner calls may use separate aggregate files. Guarded elapsed times include loading and CPU stages, not measured GPU utilization.",
-  "finished": false,
+  "conservative_research_elapsed_hours": 4.980198584166667,
+  "counting_note": "Inference-family counts cover saved individual records, including archived pilots; planner calls are counted separately. Aggregate smoke/control batches and interrupted batches are not included in these inference counts. Amortized generation seconds divide batch elapsed time among reports and exclude loading/preprocessing. Peak memory is the process CUDA allocator high-water mark, not total device memory or a per-report increment. Guarded elapsed times include loading and CPU stages, not measured GPU utilization.",
+  "finished": true,
   "guarded_stages": [
     {
       "command": [
@@ -41,6 +55,61 @@
       "returncode": 0,
       "sha256": "4596b19c58ee4189b749d163fa8b3a10740a9c2e6b571804a682ee25e23bccfb",
       "started_utc": "2026-11-15T22:33:50.759404+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--mode",
+        "review",
+        "--partition",
+        "all"
+      ],
+      "elapsed_seconds": 534.5480403020047,
+      "ended_utc": "2026-11-15T23:10:14.067239+00:00",
+      "name": "ai_reviews_v11",
+      "record": "ai_reviews_v11.json",
+      "returncode": 0,
+      "sha256": "064c4feca6cca369e626f8a2dad9b30f5409ee102bcccbe0fc25c1156229ca62",
+      "started_utc": "2026-11-15T23:01:19.519226+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--mode",
+        "review",
+        "--partition",
+        "all"
+      ],
+      "elapsed_seconds": 524.7537726778537,
+      "ended_utc": "2026-11-15T23:28:23.982973+00:00",
+      "name": "ai_reviews_v12",
+      "record": "ai_reviews_v12.json",
+      "returncode": 0,
+      "sha256": "f85c16b61ff3632978c4d461a3828357f239f58da7db11ff151c37c60e522cf0",
+      "started_utc": "2026-11-15T23:19:39.229220+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "calibration"
+      ],
+      "elapsed_seconds": 847.8800726979971,
+      "ended_utc": "2026-11-16T00:03:14.860233+00:00",
+      "name": "calibration_terminal",
+      "record": "calibration_terminal.json",
+      "returncode": 0,
+      "sha256": "09b04bb07e1ddca24a8b0560bc1799ca31a0758831f4f3baedf8b93c0bef4bb9",
+      "started_utc": "2026-11-15T23:49:06.980190+00:00",
       "status": "complete"
     },
     {
@@ -86,6 +155,36 @@
       "status": "failed_or_deadline"
     },
     {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/analyze_experiment.py"
+      ],
+      "elapsed_seconds": 18.005804433953017,
+      "ended_utc": "2026-11-16T00:44:54.678560+00:00",
+      "name": "clean_analysis",
+      "record": "clean_analysis.json",
+      "returncode": 0,
+      "sha256": "b69638ccd622deec2a020b59e70a0716c543e5110d2eef0c554cfb04a3379493",
+      "started_utc": "2026-11-16T00:44:36.672785+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/train_controller.py"
+      ],
+      "elapsed_seconds": 9.249184099957347,
+      "ended_utc": "2026-11-16T00:04:02.417897+00:00",
+      "name": "controller",
+      "record": "controller.json",
+      "returncode": 0,
+      "sha256": "9aa47b812cf571a7f5956e4c049dc78890d91ec143c23626b350e0c01b84beec",
+      "started_utc": "2026-11-16T00:03:53.168745+00:00",
+      "status": "complete"
+    },
+    {
       "command": [
         ".venv/bin/python",
         "scripts/run_generation.py",
@@ -127,11 +226,14 @@
         "--partition",
         "development"
       ],
+      "elapsed_seconds": 644.8928454290144,
+      "ended_utc": "2026-11-15T22:44:44.572043+00:00",
       "name": "development_terminal",
       "record": "development_terminal_attempt2.json",
-      "sha256": "98aa4d9ecddea5a6a5e8773fd2c0b3cd800e7573a8528b2cf20425c3cdc5742f",
+      "returncode": 0,
+      "sha256": "4d138b3afedf537fac7f2541ca973977ff8adc525dbca237143606631f6e27fa",
       "started_utc": "2026-11-15T22:33:59.679260+00:00",
-      "status": "running"
+      "status": "complete"
     },
     {
       "command": [
@@ -186,6 +288,222 @@
       "status": "failed_or_deadline"
     },
     {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/smoke_omni.py",
+        "--name",
+        "grammar_repeat",
+        "--repeat",
+        "3",
+        "--report-schema"
+      ],
+      "elapsed_seconds": 20.47047872794792,
+      "ended_utc": "2026-11-16T00:04:23.059475+00:00",
+      "name": "grammar_repeat",
+      "record": "grammar_repeat.json",
+      "returncode": 0,
+      "sha256": "c803489bee57a67f218de3b4f72300a1a330781c3fc70bb3d130422378db2f28",
+      "started_utc": "2026-11-16T00:04:02.589026+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_pilot.py"
+      ],
+      "elapsed_seconds": 1.881129799876362,
+      "ended_utc": "2026-11-15T22:44:46.626614+00:00",
+      "name": "pilot_gate",
+      "record": "pilot_gate.json",
+      "returncode": 0,
+      "sha256": "b1f677130d826a22db3df27caa94df080edd88868b9d8e97aaeafdd56ff445b0",
+      "started_utc": "2026-11-15T22:44:44.745511+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_pilot.py"
+      ],
+      "elapsed_seconds": 1.8803338590078056,
+      "ended_utc": "2026-11-15T23:10:16.558963+00:00",
+      "name": "pilot_gate_v11",
+      "record": "pilot_gate_v11.json",
+      "returncode": 0,
+      "sha256": "5e35747ba01f1d910abffb19d8d2d741f7c3d0bd6854d00fecb7781edb8bbd72",
+      "started_utc": "2026-11-15T23:10:14.678657+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_pilot.py"
+      ],
+      "elapsed_seconds": 1.8809763020835817,
+      "ended_utc": "2026-11-15T23:28:26.467960+00:00",
+      "name": "pilot_gate_v12",
+      "record": "pilot_gate_v12.json",
+      "returncode": 0,
+      "sha256": "67f41eb31f70a1ee33c663a4007899f9b5161901aa3bf2a663c2c78ac85ac249",
+      "started_utc": "2026-11-15T23:28:24.587011+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_planner.py",
+        "--partition",
+        "calibration"
+      ],
+      "elapsed_seconds": 18.866778841242194,
+      "ended_utc": "2026-11-16T00:03:52.993166+00:00",
+      "name": "planner_calibration",
+      "record": "planner_calibration.json",
+      "returncode": 0,
+      "sha256": "691c96d5488d26496b80908ce717f74c7a627c3647c47591e7e0b742bd58d59a",
+      "started_utc": "2026-11-16T00:03:34.126424+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_planner.py",
+        "--partition",
+        "development"
+      ],
+      "elapsed_seconds": 18.919046313967556,
+      "ended_utc": "2026-11-16T00:03:33.950926+00:00",
+      "name": "planner_development",
+      "record": "planner_development.json",
+      "returncode": 0,
+      "sha256": "40fe8d26261936b837528ed7ed8b57ebf32de93ba72d2c40bcc74a45b9b49f1a",
+      "started_utc": "2026-11-16T00:03:15.031907+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_planner.py",
+        "--partition",
+        "test"
+      ],
+      "elapsed_seconds": 36.01245637005195,
+      "ended_utc": "2026-11-16T00:07:32.440440+00:00",
+      "name": "planner_test",
+      "record": "planner_test.json",
+      "returncode": 0,
+      "sha256": "ff94edd6ef131b70c15af6ac3310505bf8524e9cff0e5a27a3b20d9019acb69e",
+      "started_utc": "2026-11-16T00:06:56.428013+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "policy_fit"
+      ],
+      "elapsed_seconds": 674.2293053627945,
+      "ended_utc": "2026-11-15T22:56:01.030232+00:00",
+      "name": "policy_terminal",
+      "record": "policy_terminal.json",
+      "returncode": -15,
+      "sha256": "c92d2016d56a67575e420d5af50e37a9a2d704ddb4473a0a909da156791e1b93",
+      "started_utc": "2026-11-15T22:44:46.800956+00:00",
+      "status": "failed_or_deadline"
+    },
+    {
+      "attempt": 2,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "policy_fit"
+      ],
+      "elapsed_seconds": 252.05717190587893,
+      "ended_utc": "2026-11-15T23:14:28.777153+00:00",
+      "name": "policy_terminal",
+      "record": "policy_terminal_attempt2.json",
+      "returncode": -15,
+      "sha256": "9c9bd5f70f37a7ea3c168016c66f1c997fb289561ae2f9297a23de038ccb02ba",
+      "started_utc": "2026-11-15T23:10:16.720004+00:00",
+      "status": "failed_or_deadline"
+    },
+    {
+      "attempt": 3,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "policy_fit"
+      ],
+      "elapsed_seconds": 1240.1649403930642,
+      "ended_utc": "2026-11-15T23:49:06.807164+00:00",
+      "name": "policy_terminal",
+      "record": "policy_terminal_attempt3.json",
+      "returncode": 0,
+      "sha256": "088a0779b3d48423fecf403f8236e58e23b931272b729de972e9127f910141e3",
+      "started_utc": "2026-11-15T23:28:26.642251+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/prepare_evidence.py",
+        "--stage",
+        "references"
+      ],
+      "elapsed_seconds": 24.08233155310154,
+      "ended_utc": "2026-11-15T23:00:06.105445+00:00",
+      "name": "references_v11",
+      "record": "references_v11.json",
+      "returncode": 0,
+      "sha256": "80e315dd6d8f03a6b552bcc1f7023223832990b4efee32c724d7ea373a109dc0",
+      "started_utc": "2026-11-15T22:59:42.023141+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/prepare_evidence.py",
+        "--stage",
+        "references"
+      ],
+      "elapsed_seconds": 19.470865338109434,
+      "ended_utc": "2026-11-15T23:18:41.143867+00:00",
+      "name": "references_v12",
+      "record": "references_v12.json",
+      "returncode": 0,
+      "sha256": "2095a9ff9e6f2ffd447e7663719239e58cc4ccf00db6975b2501fc28dd73c98e",
+      "started_utc": "2026-11-15T23:18:21.673023+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_report_audits.py"
+      ],
+      "elapsed_seconds": 732.6040716161951,
+      "ended_utc": "2026-11-16T01:32:02.095563+00:00",
+      "name": "report_audits",
+      "record": "report_audits.json",
+      "returncode": 0,
+      "sha256": "79920a1b0d51d5eb51c1a9a6994d341abf11ed914ca836f35d8b577fde80e7dc",
+      "started_utc": "2026-11-16T01:19:49.491516+00:00",
+      "status": "complete"
+    },
+    {
       "command": [
         ".venv/bin/python",
         "scripts/run_reviewer_controls.py"
@@ -197,6 +515,128 @@
       "returncode": 0,
       "sha256": "1fc69a0eba9de0de45eb9bfdfb40bfa07100f1f7a531eef848cf9852acdf62ef",
       "started_utc": "2026-11-15T21:43:48.845892+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_reviewer_controls.py"
+      ],
+      "elapsed_seconds": 73.07533258991316,
+      "ended_utc": "2026-11-15T23:01:19.343893+00:00",
+      "name": "reviewer_controls_v11",
+      "record": "reviewer_controls_v11.json",
+      "returncode": 0,
+      "sha256": "421caf9bfd99b59c427e8ec27390b76039a2e665ee0ae6b566a5d41b963b0300",
+      "started_utc": "2026-11-15T23:00:06.268590+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_reviewer_controls.py"
+      ],
+      "elapsed_seconds": 57.754396392032504,
+      "ended_utc": "2026-11-15T23:19:39.055960+00:00",
+      "name": "reviewer_controls_v12",
+      "record": "reviewer_controls_v12.json",
+      "returncode": 0,
+      "sha256": "3d61d31e67298cbb190d6e7191ec5c7990b35bed63cc50c033f3972b38e45195",
+      "started_utc": "2026-11-15T23:18:41.301591+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/summarize_reviewers.py"
+      ],
+      "elapsed_seconds": 0.2692832928150892,
+      "ended_utc": "2026-11-16T01:32:02.535195+00:00",
+      "name": "reviewer_summary",
+      "record": "reviewer_summary.json",
+      "returncode": 0,
+      "sha256": "34b32b6ee631e3d2244ca18c29d35a0aa548e56f9d47d908d13a80c36d79b639",
+      "started_utc": "2026-11-16T01:32:02.265935+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/summarize_reviewers.py"
+      ],
+      "elapsed_seconds": 0.2689079977571964,
+      "ended_utc": "2026-11-15T23:10:14.513726+00:00",
+      "name": "reviewer_summary_v11",
+      "record": "reviewer_summary_v11.json",
+      "returncode": 0,
+      "sha256": "5c9874bccf4938e7c267a10a56b9a29bc3d174116eb8089730ea4a976c49251c",
+      "started_utc": "2026-11-15T23:10:14.244831+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/summarize_reviewers.py"
+      ],
+      "elapsed_seconds": 0.27782545192167163,
+      "ended_utc": "2026-11-15T23:28:24.425337+00:00",
+      "name": "reviewer_summary_v12",
+      "record": "reviewer_summary_v12.json",
+      "returncode": 0,
+      "sha256": "fbf4b43085b7748c64a3ec0380961f60fb520b4033702320c87a03b88dc35182",
+      "started_utc": "2026-11-15T23:28:24.147529+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_robustness.py"
+      ],
+      "elapsed_seconds": 1985.5141569222324,
+      "ended_utc": "2026-11-16T01:19:49.331381+00:00",
+      "name": "robustness_generation",
+      "record": "robustness_generation.json",
+      "returncode": 0,
+      "sha256": "26d784a57e0d00812491875d71c8c4ba2ab1fecc626fb723b446f50bfe35f0fd",
+      "started_utc": "2026-11-16T00:46:43.817245+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/prepare_robustness.py"
+      ],
+      "elapsed_seconds": 108.7942134346813,
+      "ended_utc": "2026-11-16T00:46:43.649277+00:00",
+      "name": "robustness_preparation",
+      "record": "robustness_preparation.json",
+      "returncode": 0,
+      "sha256": "06a80410444a58fc4fac4ba0ea0a36b61ad5a9c7be01880ebb95238c68e5afb2",
+      "started_utc": "2026-11-16T00:44:54.855102+00:00",
+      "status": "complete"
+    },
+    {
+      "attempt": 1,
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_generation.py",
+        "--partition",
+        "test"
+      ],
+      "elapsed_seconds": 2223.895985374227,
+      "ended_utc": "2026-11-16T00:44:36.510239+00:00",
+      "name": "test_terminal",
+      "record": "test_terminal.json",
+      "returncode": 0,
+      "sha256": "ed70578e8d9ac88831b594358fb243ea97d840ef390892bc14b7a2e323b8163a",
+      "started_utc": "2026-11-16T00:07:32.614281+00:00",
       "status": "complete"
     },
     {
@@ -245,27 +685,88 @@
     }
   ],
   "output_limit_hits": {
+    "report_audits/intervention": 2,
+    "report_audits/paraphrase": 0,
+    "report_audits/paraphrase_2": 0,
+    "report_audits/prose": 0,
     "review/main": 0,
+    "review/reference_v1": 0,
+    "review/reference_v11": 0,
+    "review/robustness": 0,
     "terminal/free_greedy_pilot": 0,
-    "terminal/main": 0,
+    "terminal/main": 8,
+    "terminal/robustness": 0,
     "terminal/xgrammar_pilot": 0
+  },
+  "peak_torch_allocated_bytes_by_family": {
+    "report_audits/intervention": 25590096384,
+    "report_audits/paraphrase": 25313374208,
+    "report_audits/paraphrase_2": 25313374208,
+    "report_audits/prose": 25590096384,
+    "review/main": 23012654080,
+    "review/reference_v1": 23012654080,
+    "review/reference_v11": 23012654080,
+    "review/robustness": 22980275200,
+    "terminal/free_greedy_pilot": 25409590784,
+    "terminal/main": 25872629760,
+    "terminal/robustness": 25704890880,
+    "terminal/xgrammar_pilot": 25381785088
   },
   "pod_finish_instruction": "leave_running",
   "pod_stop_requested": false,
-  "raw_record_bytes_excluded_from_git": 2379565,
-  "recorded_at_utc": "2026-11-15T22:36:29.691292+00:00",
+  "raw_record_bytes_excluded_from_git": 28878367,
+  "recorded_at_utc": "2026-11-16T01:39:45.714903+00:00",
   "research_accounting_start_utc": "2026-11-15T20:40:57+00:00",
   "saved_inference_records": {
+    "report_audits/intervention": 175,
+    "report_audits/paraphrase": 100,
+    "report_audits/paraphrase_2": 100,
+    "report_audits/prose": 120,
     "review/main": 540,
+    "review/reference_v1": 540,
+    "review/reference_v11": 540,
+    "review/robustness": 720,
     "terminal/free_greedy_pilot": 176,
-    "terminal/main": 112,
+    "terminal/main": 4590,
+    "terminal/robustness": 1074,
     "terminal/xgrammar_pilot": 16
   },
+  "saved_input_tokens_including_audio": {
+    "report_audits/intervention": 192419,
+    "report_audits/paraphrase": 91795,
+    "report_audits/paraphrase_2": 89195,
+    "report_audits/prose": 86120,
+    "review/main": 322164,
+    "review/reference_v1": 325418,
+    "review/reference_v11": 327166,
+    "review/robustness": 416842,
+    "terminal/free_greedy_pilot": 174837,
+    "terminal/main": 4615928,
+    "terminal/robustness": 1141439,
+    "terminal/xgrammar_pilot": 15076
+  },
   "saved_output_tokens": {
-    "review/main": 100751,
+    "report_audits/intervention": 42622,
+    "report_audits/paraphrase": 21618,
+    "report_audits/paraphrase_2": 21937,
+    "report_audits/prose": 7187,
+    "review/main": 98877,
+    "review/reference_v1": 100751,
+    "review/reference_v11": 101265,
+    "review/robustness": 124043,
     "terminal/free_greedy_pilot": 39398,
-    "terminal/main": 25443,
+    "terminal/main": 1064291,
+    "terminal/robustness": 247924,
     "terminal/xgrammar_pilot": 3599
+  },
+  "saved_planner_execution": {
+    "amortized_generation_seconds": 47.29117757221684,
+    "calls": 340,
+    "input_tokens": 343467,
+    "output_limit_hits": 0,
+    "output_tokens": 2040,
+    "peak_torch_allocated_bytes": 18788009984,
+    "reports": 170
   },
   "within_authorized_window": true
 }

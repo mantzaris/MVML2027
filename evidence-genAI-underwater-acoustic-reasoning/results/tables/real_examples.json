@@ -1,0 +1,407 @@
+{
+  "error_eligible": 1,
+  "examples": [
+    {
+      "dataset_class": "passenger",
+      "example_id": "Ecd12d93d",
+      "independent_reference": {
+        "band": {
+          "identifiable": true,
+          "margin_db": 1.4873751888381532,
+          "time_s": [
+            0,
+            5
+          ],
+          "value": "100-500"
+        },
+        "is_human_label": false,
+        "modulation": {
+          "candidates": [],
+          "identifiable": false,
+          "value": null
+        },
+        "sample_rate": 32000,
+        "seconds": 5.0,
+        "tone": {
+          "candidates": [
+            {
+              "contrast_db": 19.04345409023979,
+              "frequency_hz": 149.8,
+              "time_s": [
+                0,
+                5
+              ]
+            },
+            {
+              "contrast_db": 19.38661385087617,
+              "frequency_hz": 442.0,
+              "time_s": [
+                0,
+                5
+              ]
+            },
+            {
+              "contrast_db": 17.553052976891557,
+              "frequency_hz": 450.0,
+              "time_s": [
+                0,
+                5
+              ]
+            },
+            {
+              "contrast_db": 13.57256918240191,
+              "frequency_hz": 1010.4000000000001,
+              "time_s": [
+                0,
+                3
+              ]
+            },
+            {
+              "contrast_db": 18.31223041339579,
+              "frequency_hz": 24.200000000000003,
+              "time_s": [
+                0,
+                5
+              ]
+            }
+          ],
+          "identifiable": true,
+          "value": "present"
+        },
+        "trend": {
+          "change_db": -0.1733377801094799,
+          "identifiable": true,
+          "time_s": [
+            0,
+            5
+          ],
+          "value": "steady"
+        },
+        "version": "independent-proxy-1.2"
+      },
+      "prediction_path": "results/raw/terminal/main/test/9f21c267474a7e9f537c5a7f_4.json",
+      "prediction_sha256": "eee595289a355b1e4fee19cbc7c740f250d7eff17d7b2f5bd4bddce72222fe94",
+      "report": {
+        "band": {
+          "evidence": [],
+          "status": "uncertain",
+          "time_s": [
+            0,
+            5
+          ],
+          "value": null
+        },
+        "class": {
+          "evidence": [
+            "P0"
+          ],
+          "status": "asserted",
+          "time_s": [
+            0,
+            5
+          ],
+          "value": "tug_tow"
+        },
+        "interpretation": "The audio is likely from a tugboat or tow vessel, as the class probability for tug_tow is the highest. The trend is steady, indicating no significant change in received energy over the five seconds. However, the band, tone, and modulation values are uncertain due to lack of specific evidence in the raw audio. The interpretation is based on the given evidence and limitations.",
+        "modulation": {
+          "evidence": [],
+          "rate_hz": null,
+          "status": "uncertain",
+          "time_s": [
+            0,
+            5
+          ],
+          "value": null
+        },
+        "tone": {
+          "evidence": [],
+          "frequency_hz": null,
+          "status": "uncertain",
+          "time_s": [
+            0,
+            5
+          ],
+          "value": null
+        },
+        "trend": {
+          "evidence": [
+            "C0"
+          ],
+          "status": "asserted",
+          "time_s": [
+            0,
+            5
+          ],
+          "value": "steady"
+        }
+      },
+      "retained": true,
+      "score": {
+        "assertions": 1,
+        "class_asserted": true,
+        "class_correct": false,
+        "class_loss": 1.0,
+        "consensus_supported": 1,
+        "factual_errors": 0,
+        "format_valid": true,
+        "identifiable": 3,
+        "loss": 0.5625,
+        "physical": [
+          {
+            "appropriate_uncertainty": false,
+            "asserted": false,
+            "citation_supported": false,
+            "consensus_supported": false,
+            "correct": false,
+            "factual_error": false,
+            "has_citation": false,
+            "identifiable": true,
+            "loss": 0.25,
+            "numeric_absolute_error": null,
+            "numeric_matched_absolute_error": null,
+            "slot": "band",
+            "supported": false
+          },
+          {
+            "appropriate_uncertainty": false,
+            "asserted": false,
+            "citation_supported": false,
+            "consensus_supported": false,
+            "correct": false,
+            "factual_error": false,
+            "has_citation": false,
+            "identifiable": true,
+            "loss": 0.25,
+            "numeric_absolute_error": null,
+            "numeric_matched_absolute_error": null,
+            "slot": "tone",
+            "supported": false
+          },
+          {
+            "appropriate_uncertainty": true,
+            "asserted": false,
+            "citation_supported": false,
+            "consensus_supported": false,
+            "correct": false,
+            "factual_error": false,
+            "has_citation": false,
+            "identifiable": false,
+            "loss": 0.0,
+            "numeric_absolute_error": null,
+            "numeric_matched_absolute_error": null,
+            "slot": "modulation",
+            "supported": false
+          },
+          {
+            "appropriate_uncertainty": false,
+            "asserted": true,
+            "citation_supported": true,
+            "consensus_supported": true,
+            "correct": true,
+            "factual_error": false,
+            "has_citation": true,
+            "identifiable": true,
+            "loss": 0.0,
+            "numeric_absolute_error": null,
+            "numeric_matched_absolute_error": null,
+            "slot": "trend",
+            "supported": true
+          }
+        ],
+        "physical_loss": 0.125,
+        "supported": 1,
+        "unsupported": 0,
+        "valid": true
+      },
+      "selected_actions": [
+        2
+      ],
+      "selected_mask": 4,
+      "selection": "first seed-17 hash-ordered qualifying example",
+      "source_clip_id": "9f21c267474a7e9f537c5a7f",
+      "waveform_sha256": "5315e4dcf14aa24b514d884da4982d10d3676bdfa741d86cc25b8656a8c73b04"
+    },
+    {
+      "dataset_class": "tanker",
+      "example_id": "E6b2fda96",
+      "independent_reference": {
+        "band": {
+          "identifiable": true,
+          "margin_db": 6.072442440577551,
+          "time_s": [
+            0,
+            5
+          ],
+          "value": "20-100"
+        },
+        "is_human_label": false,
+        "modulation": {
+          "candidates": [],
+          "identifiable": false,
+          "value": null
+        },
+        "sample_rate": 32000,
+        "seconds": 5.0,
+        "tone": {
+          "candidates": [],
+          "identifiable": false,
+          "value": null
+        },
+        "trend": {
+          "change_db": -3.145342371543757,
+          "identifiable": false,
+          "time_s": [
+            0,
+            5
+          ],
+          "value": null
+        },
+        "version": "independent-proxy-1.2"
+      },
+      "prediction_path": "results/raw/terminal/main/test/ca078d50f8dd5e993ac01279_12.json",
+      "prediction_sha256": "726bcf6c4e9c3c8ae1684d875c0b796aaec816c04f5e9f7b379d08ae017300f4",
+      "report": {
+        "band": {
+          "evidence": [],
+          "status": "uncertain",
+          "time_s": [
+            0,
+            5
+          ],
+          "value": null
+        },
+        "class": {
+          "evidence": [],
+          "status": "uncertain",
+          "time_s": [
+            0,
+            5
+          ],
+          "value": null
+        },
+        "interpretation": "The audio shows a decrease in received energy over the first versus last second, with a 3 dB threshold. However, the class, band, tone, and modulation are uncertain as there's not enough evidence to assert their values. The trend suggests a possible change in the underwater environment or activity, but further analysis is needed to confirm the nature of this change.",
+        "modulation": {
+          "evidence": [],
+          "rate_hz": null,
+          "status": "uncertain",
+          "time_s": [
+            0,
+            5
+          ],
+          "value": null
+        },
+        "tone": {
+          "evidence": [],
+          "frequency_hz": null,
+          "status": "uncertain",
+          "time_s": [
+            0,
+            5
+          ],
+          "value": null
+        },
+        "trend": {
+          "evidence": [
+            "C0"
+          ],
+          "status": "asserted",
+          "time_s": [
+            0,
+            5
+          ],
+          "value": "decrease"
+        }
+      },
+      "retained": true,
+      "score": {
+        "assertions": 1,
+        "class_asserted": false,
+        "class_correct": false,
+        "class_loss": 0.25,
+        "consensus_supported": 0,
+        "factual_errors": 0,
+        "format_valid": true,
+        "identifiable": 1,
+        "loss": 0.28125,
+        "physical": [
+          {
+            "appropriate_uncertainty": false,
+            "asserted": false,
+            "citation_supported": false,
+            "consensus_supported": false,
+            "correct": false,
+            "factual_error": false,
+            "has_citation": false,
+            "identifiable": true,
+            "loss": 0.25,
+            "numeric_absolute_error": null,
+            "numeric_matched_absolute_error": null,
+            "slot": "band",
+            "supported": false
+          },
+          {
+            "appropriate_uncertainty": true,
+            "asserted": false,
+            "citation_supported": false,
+            "consensus_supported": false,
+            "correct": false,
+            "factual_error": false,
+            "has_citation": false,
+            "identifiable": false,
+            "loss": 0.0,
+            "numeric_absolute_error": null,
+            "numeric_matched_absolute_error": null,
+            "slot": "tone",
+            "supported": false
+          },
+          {
+            "appropriate_uncertainty": true,
+            "asserted": false,
+            "citation_supported": false,
+            "consensus_supported": false,
+            "correct": false,
+            "factual_error": false,
+            "has_citation": false,
+            "identifiable": false,
+            "loss": 0.0,
+            "numeric_absolute_error": null,
+            "numeric_matched_absolute_error": null,
+            "slot": "modulation",
+            "supported": false
+          },
+          {
+            "appropriate_uncertainty": false,
+            "asserted": true,
+            "citation_supported": true,
+            "consensus_supported": false,
+            "correct": false,
+            "factual_error": false,
+            "has_citation": true,
+            "identifiable": false,
+            "loss": 1.0,
+            "numeric_absolute_error": null,
+            "numeric_matched_absolute_error": null,
+            "slot": "trend",
+            "supported": false
+          }
+        ],
+        "physical_loss": 0.3125,
+        "supported": 0,
+        "unsupported": 1,
+        "valid": true
+      },
+      "selected_actions": [
+        2,
+        3
+      ],
+      "selected_mask": 12,
+      "selection": "first seed-17 hash-ordered qualifying example",
+      "source_clip_id": "ca078d50f8dd5e993ac01279",
+      "waveform_sha256": "ff3dbe5a930ece2dadc65de3c622a7116196b3c06d5d66f86f5ebf3ead0c3749"
+    }
+  ],
+  "illustrative_not_representative": true,
+  "positive_eligible": 41,
+  "rules": "First hash-ordered P report with supported>=1, unsupported=0 and appropriate uncertainty; first distinct report with unsupported>0. Fall back to distinct hash-ordered records if a category is empty.",
+  "spectrogram": "Native-rate 1 s Hann STFT, 0.25 s hop, 20-2000 Hz, per-example relative power -75 to 0 dB; not calibrated sound pressure."
+}
