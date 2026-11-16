@@ -10,6 +10,7 @@ The current identification-focused manuscript contains **exactly eight total pag
 
 ```bash
 .venv/bin/python scripts/make_identification_figures.py
+.venv/bin/python scripts/make_agentic_figure.py
 .venv/bin/python scripts/build_identification_manuscript.py
 libreoffice -env:UserInstallation=file:///tmp/mvml2027-identification-lo-profile --headless --convert-to pdf --outdir manuscript manuscript/manuscript.docx
 pdfinfo manuscript/manuscript.pdf
@@ -17,3 +18,7 @@ pdffonts manuscript/manuscript.pdf
 ```
 
 Inspect every page after substantive edits. `results/manifests/manuscript_inspection.json` records the final PDF hash and visual inspection once completed. The original `build_manuscript.py` builds the superseded report-support paper and should not be used for the active manuscript. The initial preparation draft and prior completed paper are retained in Git history and ignored local archives.
+
+Figure 3 now shows the implemented agentic acquisition loop, the earlier reporting controls, and the separate fresh-cohort generative outcomes. Its cached query counts do not imply measured runtime savings. It replaces the illustrative spectrogram figure and consolidates the previous generative table; those examples and all numerical results remain in the artifact bundle. No scientific model, protocol, threshold or test outcome changed.
+
+The organizer's [FAQ](https://www.international-aset.com/FAQ/) requires all authors to be listed in references instead of `et al.`. The current builder lists every author from the verified bibliography, using initials and surnames; the source records retain the full names. This requirement was checked on November 16, 2026.

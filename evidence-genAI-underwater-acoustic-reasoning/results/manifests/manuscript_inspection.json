@@ -1,16 +1,25 @@
 {
   "abstract_words": 186,
   "affiliation_and_contact_omitted": true,
+  "agentic_figure": {
+    "aggregate_values_sha256": "a6bce6e00811eb48109e0b2df487edc1e9614bf85fb7d24edf42104b28296fa2",
+    "benefits_and_information_losses_shown": true,
+    "cached_logical_query_scope_explicit": true,
+    "cohorts_kept_separate": true,
+    "new_model_calls": 0,
+    "pdf_sha256": "b5db6696bde950ee94c353b14620ce3a2660b8d84aee9178d44389de5dc6a74f",
+    "png_sha256": "912d50739e3ca38ca10ed7f631248e2d9bd76beff86f1c6adbba26759024dc16"
+  },
   "all_pages_reviewed": true,
   "author_line": "Anonymous author",
   "author_metadata": "Anonymous",
   "clipped_text_observed": false,
-  "docx_sha256": "ac6ab8e8aa32e6f9f90096e95b3b6c90283eb7b7d5ba7cd69aadf286801b33c8",
+  "docx_sha256": "c5663e468050026bcae76ebdec783d23eacef8c1f38d238781dfea0701356998",
   "figure_count": 3,
   "figures_and_tables_legible": true,
   "font_note": "Times New Roman body and tables, Arial headings; embedded Tinos/Nimbus Roman fallback glyphs in equations and Unicode notation.",
   "geometry_note": "Official template section geometry retained; horizontal-margin discrepancy with template prose remains documented for any future submission.",
-  "inspected_at_utc": "2026-11-16T05:10:18.803860+00:00",
+  "inspected_at_utc": "2026-11-16T09:48:10.750137+00:00",
   "manuscript_focus": "vessel-category identification, referral and generative overrides",
   "maximum_conference_pages": 8,
   "pages": 8,
@@ -31,10 +40,11 @@
     "EAAAAA+Tinos                         TrueType          WinAnsi          yes yes yes     39  0",
     "FAAAAA+NimbusRomanRegular            Type 1            Builtin          yes yes yes     59  0"
   ],
-  "pdf_sha256": "78ead089fc094c87a680ccc5df1bbb02d4c3fe6aa91c2eea1e1d03b75213e007",
+  "pdf_sha256": "abccf00b1abfe1e40ecd351b9e7a36e2b7e8645b1a81eb94a1341161815a081f",
+  "reference_authors_all_listed": true,
   "repeated_table_headers_verified": true,
-  "review_method": "Visual inspection of all eight pages at 1600-pixel height and the three scientific figures, extracted text, PDF metadata and DOCX package. After the final resource-description edit, pages 1\u20137 were verified pixel-identical and page 8 was visually re-inspected.",
+  "review_method": "Visual inspection of all eight final PDF pages rendered at 1600-pixel height, the new agentic diagram/table/bar chart at publication scale, PDF font/metadata checks, DOCX table-header inspection and reference-author verification.",
   "submission_or_publication_performed": false,
-  "table_count": 4,
+  "table_count": 3,
   "title_exact": true
 }

@@ -10,9 +10,7 @@ Keywords: underwater acoustics; vessel identification; evidence fusion; selectiv
 
 For an acoustic operator, identifying the source category is an immediate practical question: does a recording resemble background, a cargo vessel, a passenger vessel, a tanker or a tug? A useful automated answer must also indicate when that category is unresolved. Spectrograms, detections, classification and review are established parts of passive-acoustic software workflows [1]. A readable explanation adds little if it changes a correct category into a wrong one, or if apparent reliability is obtained by withholding nearly every useful answer. We therefore evaluate identification and referral outcomes directly, rather than treating fluent acoustic prose as the principal result.
 
-Here identification assigns a civilian dataset category to a five-second recording. The background label does not prove that no vessel is nearby. The output separates a provisional category and probabilities, an issue-or-review decision, and inspectable acoustic measurements. A spectral peak describes received sound; it does not by itself prove a vessel type. Individual hull identity, contact counts and source location are outside this task.
-
-The proposed method fuses a frozen neural acoustic representation with source-balanced prototype evidence and explicit spectral/modulation measurements. Its review score penalizes disagreement between those evidence sources. We test the full method against an acoustic-only refit with the same additional labeled data, a stronger three-model ensemble, feature ablations and generative category predictions. The contribution is a controlled assessment of this identification and referral design on fresh recorded sources, including the effect of allowing a generator to change category decisions. It is an incremental design and evaluation contribution, not a claim that evidence fusion or rejection is new.
+Identification assigns a civilian dataset category to a five-second recording; background does not prove vessel absence. The proposed method fuses a frozen neural representation, source-balanced prototypes and measured acoustic features, with a disagreement score for referral. Controls include a matched acoustic-only refit, a three-model ensemble, feature ablations and generative predictions. The contribution is this controlled identification/referral assessment and explicit accounting of generated overrides. Individual hull identity, contact counts and location are outside its scope.
 
 Underwater feature fusion is established: Wang et al. combine multiple acoustic feature families with a modified neural classifier [2]. SelectiveNet jointly learns classification and rejection [3]; our post-hoc confidence/disagreement thresholds are a different, simpler construction and carry no imported risk guarantee. UniqueShip emphasizes source separation in ship-classification evaluation [4]. These works motivate both strong classification baselines and explicit accounting for recordings withheld from automatic reporting.
 
@@ -20,13 +18,12 @@ Audio-agent systems already acquire evidence and use analytical tools. AuTAgent 
 
 2. Motivation, Data and the Fresh Evaluation
 
-An earlier frozen experiment on the same collection motivated this follow-up. On 100 assessed clips, a learned evidence selector retained 71 reports and produced 37 supported physical assertions and one wrong/unsupported assertion; a heuristic retained 68 and produced 53 and nine. Deterministic rendering produced 143 supported and 24 wrong/unsupported assertions in 65 reports. The learned selector failed its original success criterion. These automated consistency proxies at different retention points did not demonstrate improved operator decisions, motivating a direct identification endpoint.
+An earlier frozen report-support experiment motivated this follow-up. A learned neural controller selects spectral, modulation, temporal/quality or retrieval evidence, updates its observed state, and stops after at most two queries for Omni to generate a cited report. Unqueried tool results are hidden. Evaluation replays cached tool cards and terminal generations; query counts measure logical acquisition, not online runtime or billed savings. On 100 clips, it makes 101 queries versus the heuristic’s 200, returning 37 supported details versus 53; wrong/unsupported details fall from nine to one. Figure 3A–B includes LLM-planner and deterministic controls. The original success criterion failed; these automated proxies and different reporting thresholds motivated a category-identification endpoint.
 
 We use UniqueShip v1.0, fold 1 of the five-hour-per-class release, retaining background, cargo, passenger, tanker and tug/tow. The original acquired recordings are mono PCM at 32 kHz and five seconds long. Five duration mismatches and 42 filename/metadata date conflicts were excluded. Original partitions separate recorded vessels, background UTC-day groups and entire UTC days across all classes/hydrophones, with a global 60-second gap between clips in different partitions. The acoustic backbone and prototype bank use acoustic-fit only; the follow-up heads use policy-fit; development selects settings and calibration fixes final reporting thresholds.
 
 Table 1. Original fitting partitions and fresh category-identification cohort. Source groups are recorded vessel IDs or background days.
 
-Table 1. Original fitting partitions and fresh category-identification cohort. Source groups are recorded vessel IDs or background days.
 Partition | Clips | Source groups | Role
 Acoustic-fit | 2,459 | 658 | Backbone, PCA, prototype bank
 Policy-fit | 1,827 | 411 | Identification refits
@@ -43,13 +40,13 @@ Each new WAV member passes archive size and CRC checks; decoded waveform hashes 
 
 3. Evidence-Based Category Identification
 
-The fixed acoustic anchor is the original seed-17 Swin V2 Tiny [12]. A 20 kHz anti-aliased waveform supplies 128 log-mel bands over 20–8,000 Hz, using a 1,024-sample window/FFT and 256-sample hop. A 90 dB relative range is resized to 256×256 and replicated across three channels with ImageNet normalization. The original training uses AdamW, batch 32, head rate 0.001, weight decay 0.01, at most 30 epochs and development patience five. A seed-17 search over backbone rates 10⁻⁶, 10⁻⁵ and 3×10⁻⁵ selected 10⁻⁵. Independently fitted seeds 29 and 43 supply the probability-ensemble comparator. No backbone is fine-tuned on the fresh cohort.
+The fixed seed-17 Swin V2 Tiny [12] receives anti-aliased 20 kHz audio as 128 log-mel bands over 20–8,000 Hz (1,024-sample window/FFT, 256-sample hop). A 90 dB relative range is resized to 256×256, replicated across three channels and ImageNet-normalized. Original AdamW training uses batch 32, head rate 0.001, weight decay 0.01, up to 30 epochs and patience five. Development selects backbone rate 10⁻⁵ from {10⁻⁶,10⁻⁵,3×10⁻⁵}; independent seeds 29 and 43 complete the ensemble. Fresh recordings never fine-tune a backbone.
 
 For the acoustic-only refit, the input contains 32 PCA coordinates of the anchor embedding and five log class probabilities. PCA is fitted on acoustic-fit embeddings only. The reference ensemble averages the separately temperature-calibrated probability vectors from the three original seeds. It requires three backbone evaluations; the proposed fusion uses the single seed-17 representation plus numerical measurements. This architectural difference is reported without converting cached batch timings into a claimed online speedup.
 
 Numerical evidence comprises 62 values. A native-rate Welch spectrum with an 8,192-sample window and 4,096-sample overlap supplies 32 logarithmically spaced relative band powers over 20–8,000 Hz, four broad-band energy fractions, normalized centroid and spread, spectral entropy, flatness, top-five-bin concentration and waveform crest factor. Four quality/temporal values describe first/last-second relative energy change, quarter-second RMS variability, exact-zero fraction and digital full-scale fraction. None is calibrated sound pressure. Sixteen modulation features are relative envelope-spectrum energies in eight intervals between 2 and 80 Hz for each of two carrier bands.
 
-For modulation extraction, anti-aliased downsampling gives 8 kHz audio; fourth-order filters select 100–1,000 and 1,000–3,500 Hz. Hilbert-envelope edges of 0.25 s are removed and the envelope is resampled to 400 Hz before spectral analysis. Features describe received amplitude modulation, not shaft speed or blade count. Relative energy features avoid dependence on ordinary gain changes, while clipping and zero-sample fractions retain useful digital-quality information. The source code fixes floors, normalization and band boundaries, and synthetic checks verify gain invariance and known-band concentration.
+Modulation extraction downsamples to 8 kHz with anti-aliasing, filters 100–1,000 and 1,000–3,500 Hz with fourth-order filters, removes 0.25 s Hilbert-envelope edges and resamples envelopes to 400 Hz. These are received modulation features, not shaft speed or blade count. Relative energies remove ordinary gain dependence; clipping and zero fractions retain digital-quality information. Synthetic checks verify gain invariance and known-band concentration.
 
 The exemplar bank contains one normalized mean embedding per acoustic-fit source. For each of five classes, we compute maximum cosine similarity and mean similarity to its three closest distinct-source prototypes. The maxima and means are centered across classes; a softmax of the five means with temperature 0.1 supplies five further values, giving 15 exemplar features. A repeated long recording therefore cannot contribute many separate prototype votes. Query-source prototypes are excluded. These are statistical class analogies, not a claim that the query shares the exemplars’ physical mechanism or identity.
 
@@ -77,7 +74,6 @@ The full fusion correctly identifies 142/235 recordings (60.4%), compared with 1
 
 Table 2. All 235 fresh recordings. Accuracy and macro-F1 precede rejection; final columns count outcomes at separately frozen reporting thresholds.
 
-Table 2. All 235 fresh recordings. Accuracy and macro-F1 precede rejection; final columns count outcomes at separately frozen reporting thresholds.
 Method | Accuracy % | Macro-F1 | Correct issued | Wrong issued | Referred
 Single acoustic model | 55.3 | 0.523 | 107 | 61 | 67
 Three-model ensemble | 62.1 | 0.586 | 102 | 51 | 82
@@ -111,7 +107,6 @@ After the primary results were available, we added a supplementary challenge usi
 
 Table 3. Supplementary untrained-category challenge. Issued trained labels are out-of-vocabulary assignments under the release taxonomy; broad vessel recognition is a separate outcome.
 
-Table 3. Supplementary untrained-category challenge. Issued trained labels are out-of-vocabulary assignments under the release taxonomy; broad vessel recognition is a separate outcome.
 Method | Assigned trained label | Referred | Recognized broadly as vessel %
 Single acoustic model | 39 | 33 | 58.3
 Three-model ensemble | 39 | 33 | 50.0
@@ -121,62 +116,54 @@ Fusion: confidence only | 37 | 35 | 52.8
 
 Fusion assigns trained-category labels to 35/72 untrained-category clips (48.6%), including 13 background labels, and refers 37. The ensemble assigns 39 and refers 33. Fusion recognizes only 52.8% of these clips broadly as vessel. Referral of uncertain known classes is therefore not an adequate substitute for explicit unknown-category modeling. These taxonomy-based outcomes do not imply that the excluded categories have acoustically unique signatures or establish open-world detection performance.
 
-7. Does Generation Preserve the Identification?
+7. Agentic Decisions and Evidence-Conditioned Generation
 
-Table 4. Generative category decisions on the same 235 fresh clean clips. All 705 outputs parse; withheld labels still count as missed identifications in full-cohort macro-F1.
+Figure 3 separates the implemented adaptive acquisition loop from the fresh identification experiment, which supplies fixed evidence in one generator call. Against the earlier LLM planner, the learned controller preserves 37 supported details with 99 fewer queries and 20 fewer wrong/unsupported details; report retention differs. Against the locked heuristic it also loses 16 supported details. These are descriptive system tradeoffs, not isolated proof of superior reasoning or an identification gain.
 
-Table 4. Generative category decisions on the same 235 fresh clean clips. All 705 outputs parse; withheld labels still count as missed identifications in full-cohort macro-F1.
-Generative input | Correct | Wrong | Withheld | Macro-F1
-Audio only | 0 | 0 | 235 | 0.000
-Audio + acoustic prior | 99 | 68 | 68 | 0.411
-Audio + fused evidence | 99 | 44 | 92 | 0.456
+On the fresh cohort, all 705 generated outputs parse. Audio-only prompting withholds all 235 categories; this describes the fixed prompt/decoder, not general model competence. Acoustic-prior and fused-evidence prompting each identify 99/235 correctly (42.1%), while wrong labels fall from 68 to 44 and withheld labels rise from 68 to 92. Macro-F1 is 0, 0.411 and 0.456 for the three conditions, counting withheld labels as missed identifications. Both the supplied posterior and measured evidence change, so the comparison does not isolate the measurements’ effect.
 
-The audio-only condition explicitly withholds every category. This is behavior under the fixed short-clip prompt and decoder, not a general estimate of the foundation model’s audio competence. Probability-assisted conditions each correctly identify 99/235 recordings. With the acoustic prior, generation issues 167 labels, including 68 wrong; with fused evidence, it issues 143, including 44 wrong. Full-cohort accuracy is therefore 42.1% for both, while accuracy among issued labels differs. Valid JSON output and a plausible sentence do not establish correct object identification.
+Fig. 3. Agentic acquisition and generative outcomes. A–B: earlier 100-clip cohort, logical queries in cached replay, automated support proxies and separately calibrated retention. C: separate 235-clip cohort with fixed inputs. Fewer queries and errors accompany reduced supported information or increased withholding; human benefit is unmeasured.
 
 A descriptive decomposition separates changed errors from cautious withholding. With fused evidence, the generator changes 7 correct numeric identifications into wrong labels, withholds 39 additional correct identifications, and corrects 3 prior errors. On the same 143 records that it labels, the numeric fusion classifier is correct on 103 versus the generator’s 99. Ranking numeric fusion to issue exactly 143 labels also gives 103 correct, a descriptive comparison with equal output counts. With the acoustic prior, generation changes three correct labels to errors, withholds 32 correct labels and corrects four prior errors. Thus withholding explains most of the reduction in full-cohort yield; direct harmful overrides are a distinct, smaller failure mode.
 
-Fig. 3. Two real recordings selected after evaluation by opposing fusion/ensemble outcomes, using fixed hash order within each outcome group. They illustrate both a gain and a loss; they are not representative-case performance estimates.
-
-The operator-facing design therefore keeps the numeric category, probabilities, referral state and measured evidence in separate fields. Generated prose has no authority to replace the category. This boundary preserves the classifier’s outputs by construction and must not be advertised as a learned accuracy improvement. A deployment study would still need to establish whether the presentation helps an operator inspect, correct or reject a decision. The present experiments establish neither user-interface usability nor human review time savings.
+The operator-facing design keeps the numeric category, probabilities, referral state and measured evidence separate. Generated prose cannot replace the category. This preserves numeric decisions by construction, without establishing a learned accuracy gain, interface usability or human time savings. The artifact bundle also retains two post-hoc, hash-ordered spectrogram examples with opposing fusion/ensemble outcomes; they are illustrations, not representative performance estimates.
 
 8. Discussion, Reproducibility and Conclusion
 
-The results answer three practical questions: which categories improve or deteriorate, how much correct information survives referral, and whether generation preserves the numeric identification. Tanker gains coexist with cargo losses; lower wrong-label counts accompany fewer issued labels; and noise can increase confidence while reducing correctness. Additional withholding and incorrect generative overrides are distinct outcomes that should be assessed before assigning final identification authority to a language model.
+The physical-feature ablation motivates further study but does not replace the failed primary comparison. The matched refit controls extra labels and fitting procedure; source weighting and representation effects are not fully isolated. Prototype corruption shows dependence without proving benefit. Future tests should address unfamiliar-category training, recording-quality shift and longer context on new deployments, without tuning these observed test outcomes.
 
-The physical-feature ablation supports further study of measured cues, but the full method does not improve the prespecified primary comparison. The experiment does not isolate every effect of source weighting, extra policy-fit labels and the representation; the matched acoustic refit controls the latter labels and fit procedure, while the available ablations test feature families. Prototype corruption demonstrates dependence without establishing a beneficial mechanism. Future work should test explicit unfamiliar-category training, recording-quality shift detection and longer contiguous context on new deployments, using new held-out recordings rather than tuning these observed test outcomes.
-
-Several limits matter to interpretation. The fresh cohorts share a collection and recording days with the earlier evaluation, although their recorded sources are new and their dates are separate from fitting, selection and calibration. Missing parent/deployment provenance prevents a complete physical-independence claim. Category labels are dataset annotations associated with the acquisition process; they are not independently verified expert judgments for each audible event. Passenger and some untrained-category source counts are small. Five-second inputs omit contact history, overlapping event structure and realistic traffic prevalence. Artificial noise preserves nominal labels without proving that a listener could still recognize them.
+The fresh cohorts have new sources but share the earlier test’s collection and recording days; fitting/selection/calibration dates remain disjoint. Missing parent/deployment provenance prevents complete physical-independence claims. Dataset labels are not expert judgments for every audible event. Passenger and some untrained-category source counts are small. Five-second clips omit contact history and overlapping events, and artificial noise does not establish perceptual recognizability. The sampled category mix does not represent operational traffic.
 
 Identification uses dataset labels and no human reviewers. The earlier report-support experiment used numerical proxies and two correlated AI reviewer roles; those roles are not identification ground truth here. New generated reasons lack independent validation, and record parsing is not a factuality score. This civilian, single-region experiment does not support propulsion-parameter or submarine-specific recognition claims.
 
-The reproducibility bundle retains the original study and both follow-up freezes, exact prompts, fitting searches, selected models, calibration thresholds, category confusion matrices, source-cluster intervals, every degradation condition and the untrained-category challenge. The core follow-up evaluates 235 clean plus 1,410 transformed recordings through three frozen backbones and generates 705 test classifications plus 20 development format checks. The supplementary challenge adds 72 recordings. Large audio, prediction arrays, model files and logs remain outside Git with local copies; compact code, aggregate evidence and publication figures are versioned. Portable tests cover weighting, prototype construction, accounting, threshold ties and known-signal feature behavior. Inference uses an RTX PRO 4500 Blackwell GPU with 32 GB memory; stage timings and file hashes are retained.
+The reproducibility bundle retains all freezes, prompts, fitting searches, model/threshold hashes, confusion matrices, intervals and degradation results. Follow-up inference covers 235 clean and 1,410 transformed clips through three backbones, 705 generative classifications, 20 format checks and 72 untrained-category clips. Audio, models and detailed outputs have local copies outside Git. Portable checks cover weighting, prototypes, accounting, threshold ties and known-signal behavior. Stage timings are retained for the 32 GB RTX PRO 4500 Blackwell worker.
 
-Evidence-based identification is a practical research target when success is defined by correct source categories, explicit errors and useful review decisions. In this experiment the full fusion changes category-specific performance and improves over its no-physical-feature ablation, but does not outperform the locked ensemble on the primary endpoint. Clean calibration does not protect against severe noise or untrained categories. Generative category answers require explicit override accounting. These findings support a measurable design agenda for acoustic assistance while leaving improved human operator performance as an untested question.
+The study makes agentic acquisition and evidence-conditioned generation testable through observable actions and outcomes. Fusion improves over its no-physical-feature ablation but fails the primary ensemble comparison. Clean calibration fails under severe noise and untrained categories. Fewer queries or more cautious AI answers therefore remain distinct from improved identification; measured human benefit remains an open question.
 
 References
 
 [1] PAMGuard, “Core PAMGuard Modules,” official software documentation, accessed Nov. 16, 2026. https://www.pamguard.org/coremodules.html
 
-[2] Xingmei Wang; Anhua Liu; Yu Zhang et al., “Underwater Acoustic Target Recognition: A Combination of Multi-Dimensional Fusion Features and Modified Deep Neural Network,” Remote Sensing 11, art. 1888, 2019. https://www.mdpi.com/2072-4292/11/16/1888
+[2] X. Wang, A. Liu, Y. Zhang, F. Xue, “Underwater Acoustic Target Recognition: A Combination of Multi-Dimensional Fusion Features and Modified Deep Neural Network,” Remote Sensing 11, art. 1888, 2019. https://www.mdpi.com/2072-4292/11/16/1888
 
-[3] Yonatan Geifman; Ran El-Yaniv, “SelectiveNet: A Deep Neural Network with an Integrated Reject Option,” Proceedings of the 36th International Conference on Machine Learning 97, pp. 2151–2159, 2019. https://proceedings.mlr.press/v97/geifman19a.html
+[3] Y. Geifman, R. El-Yaniv, “SelectiveNet: A Deep Neural Network with an Integrated Reject Option,” Proceedings of the 36th International Conference on Machine Learning 97, pp. 2151–2159, 2019. https://proceedings.mlr.press/v97/geifman19a.html
 
-[4] Hashemi, Connor; Stout, Trevor; Hoogs, Anthony et al., “UniqueShip: Mitigating Data Leakage in Acoustic Ship Classification Benchmark Datasets,” arXiv:2609.13659, 2026. https://arxiv.org/abs/2609.13659
+[4] C. Hashemi, T. Stout, A. Hoogs, J. Parham, “UniqueShip: Mitigating Data Leakage in Acoustic Ship Classification Benchmark Datasets,” arXiv:2609.13659, 2026. https://arxiv.org/abs/2609.13659
 
-[5] Siqian Tong; Li Xuan; Yiwei Wang et al., “AuTAgent: A Reinforcement Learning Framework for Tool-Augmented Audio Reasoning,” International Conference on Machine Learning, pp. 121743–121756, 2026. https://proceedings.mlr.press/v306/tong26l.html
+[5] S. Tong, L. Xuan, Y. Wang, B. Bi, Y. Cai, S. Liu, Y. He, H. Chengpeng, “AuTAgent: A Reinforcement Learning Framework for Tool-Augmented Audio Reasoning,” International Conference on Machine Learning, pp. 121743–121756, 2026. https://proceedings.mlr.press/v306/tong26l.html
 
-[6] Wang, Yucheng; Peng, Jing; Li, Hanqi et al., “Audio-Mind: An Auditable Agentic Framework for Audio Understanding,” arXiv:2605.28480, 2026. https://arxiv.org/abs/2605.28480
+[6] Y. Wang, J. Peng, H. Li, C. Wang, W. Tu, Y. Xi, Z. Sun, K. Yu, S. Wang, “Audio-Mind: An Auditable Agentic Framework for Audio Understanding,” arXiv:2605.28480, 2026. https://arxiv.org/abs/2605.28480
 
-[7] Wan, Rong; Qin, Suliu; Li, Jiaxi et al., “SEAR: Spoofing Evidence-Grounded Audio Reasoning Benchmark for Audio Language Models,” arXiv:2609.39847, 2026. https://arxiv.org/abs/2609.39847
+[7] R. Wan, S. Qin, J. Li, W. Xie, W. Wang, X. Han, L. Yin, X. Wang, “SEAR: Spoofing Evidence-Grounded Audio Reasoning Benchmark for Audio Language Models,” arXiv:2609.39847, 2026. https://arxiv.org/abs/2609.39847
 
-[8] Ma, Fengji; Rong, Yan; Li, Xu et al., “ACE-Cap: Active Evidence Acquisition via Agentic Co-Evolution for Long-Paragraph Fine-Grained Audio Captioning,” arXiv:2608.16162, 2026. https://arxiv.org/abs/2608.16162
+[8] F. Ma, Y. Rong, X. Li, X. Xu, C. Zhang, L. Liu, “ACE-Cap: Active Evidence Acquisition via Agentic Co-Evolution for Long-Paragraph Fine-Grained Audio Captioning,” arXiv:2608.16162, 2026. https://arxiv.org/abs/2608.16162
 
-[9] Zhang, Yuge; Chen, Jie; Zhao, Zhengqiao et al., “From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part I: Framework and Recognition,” arXiv:2610.22064, 2026. https://arxiv.org/abs/2610.22064
+[9] Y. Zhang, J. Chen, Z. Zhao, X. Yao, L. Xu, J. Chen, Y. Yang, “From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part I: Framework and Recognition,” arXiv:2610.22064, 2026. https://arxiv.org/abs/2610.22064
 
-[10] Li, Zhiyuan; Zhang, Yuge; Chen, Jie et al., “From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part II: Passive Detection,” arXiv:2610.31346, 2026. https://arxiv.org/abs/2610.31346
+[10] Z. Li, Y. Zhang, J. Chen, X. Su, Z. Zhao, X. Yao, L. Xu, J. Chen, Y. Yang, “From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part II: Passive Detection,” arXiv:2610.31346, 2026. https://arxiv.org/abs/2610.31346
 
-[11] Tianyu Gao; Howard Yen; Jiatong Yu et al., “Enabling Large Language Models to Generate Text with Citations,” Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, pp. 6465–6488, 2023. https://aclanthology.org/2023.emnlp-main.398/
+[11] T. Gao, H. Yen, J. Yu, D. Chen, “Enabling Large Language Models to Generate Text with Citations,” Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, pp. 6465–6488, 2023. https://aclanthology.org/2023.emnlp-main.398/
 
-[12] Ze Liu; Han Hu; Yutong Lin et al., “Swin Transformer V2: Scaling Up Capacity and Resolution,” IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022. https://arxiv.org/abs/2111.09883
+[12] Z. Liu, H. Hu, Y. Lin, Z. Yao, Z. Xie, Y. Wei, J. Ning, Y. Cao, Z. Zhang, L. Dong, F. Wei, B. Guo, “Swin Transformer V2: Scaling Up Capacity and Resolution,” IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022. https://arxiv.org/abs/2111.09883
 
-[13] Jin Xu; Zhifang Guo; Jinzheng He et al., “Qwen2.5-Omni Technical Report,” arXiv:2503.20215, 2025. https://arxiv.org/abs/2503.20215
+[13] J. Xu, Z. Guo, J. He, H. Hu, T. He, S. Bai, K. Chen, J. Wang, Y. Fan, K. Dang, B. Zhang, X. Wang, Y. Chu, J. Lin, “Qwen2.5-Omni Technical Report,” arXiv:2503.20215, 2025. https://arxiv.org/abs/2503.20215

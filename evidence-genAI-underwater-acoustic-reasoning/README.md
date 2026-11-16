@@ -25,7 +25,11 @@ The fresh cohorts share the original collection and test recording days, while e
 
 ### Figures for an operator audience
 
-The [operator overview (PNG)](results/figures/identification_operator_results.png) and [vector PDF](results/figures/identification_operator_results.pdf) show named categories, correct-category percentages, sample counts, and correct/wrong/referred outcomes per 100 recordings. The manuscript additionally includes [category comparisons](results/figures/identification_class_accuracy.pdf), [recording-degradation results](results/figures/identification_robustness.pdf), and [two opposing real examples](results/figures/identification_examples.pdf). The examples were selected after evaluation and are illustrative, not representative estimates.
+The [operator overview (PNG)](results/figures/identification_operator_results.png) and [vector PDF](results/figures/identification_operator_results.pdf) show named categories, correct-category percentages, sample counts, and correct/wrong/referred outcomes per 100 recordings. The manuscript includes [category comparisons](results/figures/identification_class_accuracy.pdf), [recording-degradation results](results/figures/identification_robustness.pdf), and the new [agentic contribution figure (PNG)](results/figures/agentic_reasoning_contribution.png) / [vector PDF](results/figures/agentic_reasoning_contribution.pdf).
+
+The agentic figure shows the implemented **observe → select a tool → update evidence → query again or stop → generate a cited report** loop. The earlier learned controller makes 101 logical queries versus the heuristic's 200, with one wrong/unsupported detail versus nine, but only 37 supported details versus 53. Its LLM-planner and deterministic controls are also shown. These are acquisitions in cached replay, not measured runtime savings. A separate panel shows the fresh fixed-input generative experiment: fused evidence yields 24 fewer wrong labels and 24 more withheld answers than the acoustic prior, with 99 correct in both. The two cohorts are kept separate; the conventional fusion classifier is not relabeled as an adaptive agent. See the [caption](results/figures/agentic_reasoning_contribution_caption.txt) and [auditable aggregate values](results/tables/agentic_reasoning_contribution.json). Rebuild with `.venv/bin/python scripts/make_agentic_figure.py`; it makes no model calls.
+
+The [two opposing real spectrogram examples](results/figures/identification_examples.pdf) remain in the artifact bundle. They were selected after evaluation and are illustrative, not representative estimates; the agentic figure replaces them in the eight-page manuscript.
 
 ### Reproducing the follow-up
 
@@ -46,7 +50,7 @@ bash scripts/run_identification_followup.sh
 .venv/bin/python scripts/run_guarded.py --name untrained_categories .venv/bin/python scripts/evaluate_untrained_categories.py
 ```
 
-`summarize_identification_diagnostics.py` computes explicitly post-hoc comparisons from saved outputs. `make_identification_figures.py` and `build_identification_manuscript.py` rebuild the active paper; see [format and conversion instructions](manuscript/FORMAT_NOTES.md). The original `build_manuscript.py` rebuilds the **superseded report-support manuscript**, so use the identification builder for the current paper.
+`summarize_identification_diagnostics.py` computes explicitly post-hoc comparisons from saved outputs. `make_identification_figures.py`, `make_agentic_figure.py` and `build_identification_manuscript.py` rebuild the active paper; see [format and conversion instructions](manuscript/FORMAT_NOTES.md). The original `build_manuscript.py` rebuilds the **superseded report-support manuscript**, so use the identification builder for the current paper.
 
 The [follow-up audit](results/manifests/identification_audit.json) checks source boundaries, frozen hashes, raw prediction accounting and preservation. The [completion record](results/manifests/identification_completion.json) records final validation and timing. Original and new audio, checkpoints, detailed outputs and logs are preserved locally outside Git. The ten-hour deadline applies to this existing research window; earlier billed allocation and dollar cost are unknown. The Pod is left running by instruction, and no push or submission is performed.
 

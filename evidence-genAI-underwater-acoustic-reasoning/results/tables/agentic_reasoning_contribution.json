@@ -1,0 +1,90 @@
+{
+  "cohorts_combined_for_scoring": false,
+  "earlier_report_study": {
+    "agent_vs_heuristic": {
+      "fewer_supported_details": 16,
+      "fewer_wrong_details": 8,
+      "tool_call_reduction_percent": 49.5
+    },
+    "clips": 100,
+    "methods": [
+      {
+        "label": "Fixed template",
+        "method": "B8_deterministic",
+        "reports_returned": 65,
+        "supported_details": 143,
+        "tool_calls": 200,
+        "wrong_or_unsupported_details": 24
+      },
+      {
+        "label": "Heuristic + Omni",
+        "method": "B9_entropy",
+        "reports_returned": 68,
+        "supported_details": 53,
+        "tool_calls": 200,
+        "wrong_or_unsupported_details": 9
+      },
+      {
+        "label": "LLM planner + Omni",
+        "method": "B6_planner",
+        "reports_returned": 62,
+        "supported_details": 37,
+        "tool_calls": 200,
+        "wrong_or_unsupported_details": 21
+      },
+      {
+        "label": "Learned agent + Omni",
+        "method": "P",
+        "reports_returned": 71,
+        "supported_details": 37,
+        "tool_calls": 101,
+        "wrong_or_unsupported_details": 1
+      }
+    ],
+    "physical_details_requested": 400
+  },
+  "fresh_identification_study": {
+    "clips": 235,
+    "fused_vs_acoustic_prior": {
+      "additional_correct": 0,
+      "fewer_wrong": 24,
+      "more_withheld": 24
+    },
+    "methods": [
+      {
+        "correct": 0,
+        "label": "Audio only",
+        "macro_f1": 0.0,
+        "method": "raw",
+        "withheld": 235,
+        "wrong": 0
+      },
+      {
+        "correct": 99,
+        "label": "Audio + acoustic prior",
+        "macro_f1": 0.41121614490324304,
+        "method": "acoustic_prior",
+        "withheld": 68,
+        "wrong": 68
+      },
+      {
+        "correct": 99,
+        "label": "Audio + fused evidence",
+        "macro_f1": 0.45609504394328154,
+        "method": "fused_evidence",
+        "withheld": 92,
+        "wrong": 44
+      }
+    ]
+  },
+  "interpretation": "Agentic decisions and observed effects. A\u2013B depict the earlier frozen report-support study: a learned controller queries acoustic tools using only acquired evidence, or stops for Omni generation; four methods are shown on the same 100 requested clips. Details use automated support proxies and report-retention thresholds differ. Queries count logical acquisitions in cached replay, not measured end-to-end runtime or billed GPU time. C shows three fixed-input Omni conditions on a separate cohort of 235 recordings. Evidence changes both class probabilities and measured inputs; the bars do not isolate a physical-feature effect or demonstrate an autonomous reasoning process. Fewer tool calls and fewer errors accompany losses of supported information or increased withholding. No human benefit or primary identification improvement is claimed. All counts use saved frozen outcomes.",
+  "new_model_calls": 0,
+  "presentation_only": true,
+  "source_sha256": {
+    "results/tables/identification_results.json": "3373152ac30c5a63dcec0695dbdc079080074eba95ade066e686fc5b76fa56d6",
+    "results/tables/main_results.json": "a27446a0e640a4f3edd874fc5ce4a86a24f31528b9385bb73a7bca1717d5729a",
+    "src/underwater_reasoning/acquisition.py": "a61af39a625b4148a339ca4e1138682b965b02fead9704b828734bd8730580f5",
+    "src/underwater_reasoning/controller.py": "9296cc7ac513e8074e5f1111cef49263e9f2235c2326bb374f1390ddf885041b",
+    "src/underwater_reasoning/dsp.py": "1b7e70a2923c12f5715b0bd9beb09f7ba4166fcf71f411acf1c32b9fe61c4fd5"
+  }
+}
