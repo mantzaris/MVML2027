@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "name": "Alexander V. Mantzaris",
+      "affiliation": 1,
+      "email": "alexander.mantzaris@ucf.edu"
+    },
+    {
+      "name": "James H. Korris",
+      "affiliation": 2,
+      "email": "james.korris@cretecinc.com"
+    }
+  ],
+  "affiliations": [
+    {
+      "name": "UCF, Dr. Yvette Kanouff School of Data, Mathematical, and Statistical Sciences",
+      "address": "4000 University Blvd, Orlando, FL 32817, USA"
+    },
+    {
+      "name": "Creative Technologies Inc.",
+      "address": ""
+    }
+  ],
+  "contact_email": "alexander.mantzaris@ucf.edu",
+  "paper_code": null,
+  "repository": "https://github.com/mantzaris/MVML2027"
+}

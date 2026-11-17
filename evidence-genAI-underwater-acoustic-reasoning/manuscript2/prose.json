@@ -1,0 +1,448 @@
+{
+  "template_sha256": "4849df2a0f64540613967fb29f4c8f411944ef477dc220cdd293b7e1399390c2",
+  "replacements": [
+    {
+      "slot": 2,
+      "kind": "preserve",
+      "original_text_sha256": "4d2595b9eb6b634764dc8f5edd3e4c18e6d02375a061edd090e0d75d5718f9e7",
+      "paragraphs": [
+        "Abstract — Generative AI could turn underwater recordings into explanations that people can inspect and question. Its value depends on whether those explanations remain connected to what the sound supports. A plausible account can still contain a wrong vessel category, an unsupported detail, or too little useful information. We present an evidence-grounded approach that makes these outcomes separately measurable. Two linked studies on real recordings examine how an assistant chooses acoustic analyses, combines measurements with learned sound patterns, and turns evidence into an answer. The approach traces where useful information is gained, lost or changed. On 235 previously unused recordings, measured features contribute to identification, although the full system does not establish superiority to a three-model ensemble. Fused-evidence prompting produces 24 fewer wrong labels than acoustic-prior prompting, but no additional correct answers. More labels are withheld. Added noise also makes the classifier more willing to answer as its answers become less reliable. These findings give future acoustic assistants concrete design priorities. They need to evaluate completeness alongside errors, preserve useful category decisions during explanation, and check recording quality before relying on confidence. The study supplies a reproducible evaluation approach and empirical design lessons for underwater acoustic reasoning. Benefits to human operators remain to be evaluated."
+      ]
+    },
+    {
+      "slot": 4,
+      "kind": "preserve",
+      "original_text_sha256": "29254167d0a265b83698d5385bd42e1611b834f154e6cfc9b0843930c3d57514",
+      "paragraphs": [
+        "1. Introduction and Related Work"
+      ]
+    },
+    {
+      "slot": 5,
+      "kind": "preserve",
+      "original_text_sha256": "cd702342ba42e40903d776a8d4738c7b3a6d44e69dc4eb4f7e9e4fd050979f59",
+      "paragraphs": [
+        "An underwater acoustic reviewer needs more than a category label. They also need to know which features support it, what remains uncertain, and whether another analysis would help. PAMGuard already supports acoustic displays, classification and review [1]. Generative AI could connect these activities by describing measured patterns, relating them to provisional categories and explaining why a recording needs closer inspection."
+      ]
+    },
+    {
+      "slot": 6,
+      "kind": "preserve",
+      "original_text_sha256": "492a4994a749076d7d3cdc7b3b6fc847f48f2c09334550c99529bf0587f061e7",
+      "paragraphs": [
+        "The difficulty is keeping explanations accountable to the recording. An amplitude pattern is measurable, whereas its interpretation as evidence of a vessel category is an inference. A fluent generator can blur that distinction. We examine whether an agent can choose useful analyses and whether explicit evidence improves identification and generated answers. Evidence grounding here means exposing measurements and checking the correct, incorrect and withheld information in the resulting answer."
+      ]
+    },
+    {
+      "slot": 7,
+      "kind": "preserve",
+      "original_text_sha256": "16570a9b436eb67885201d4139cd94b0d7c913e01ce2c907731846ca47076980",
+      "paragraphs": [
+        "Underwater feature fusion combines complementary descriptions of sound [2]. We examine its value when a system must also decide whether to answer and generate a response. SelectiveNet learns classification and rejection together [3]. We test a simpler, separately calibrated referral rule under changing recording conditions. Following UniqueShip's concern with source leakage [4], we separate recorded source groups in fitting and evaluation."
+      ]
+    },
+    {
+      "slot": 8,
+      "kind": "preserve",
+      "original_text_sha256": "b69d2314675e0145afe478a07ed47ec8ebf8ede3fb61187271d3cb49b4c2da69",
+      "paragraphs": [
+        "AuTAgent learns which tools to invoke [5]. Audio-Mind makes evidence gathering auditable and examines preserving an initial judgment [6]. SEAR tests support for generated reasoning under misleading evidence [7], while ACE-Cap studies active evidence gathering and caption omissions [8]. We extend these questions to underwater recordings, counting tool requests, supported attributes and category changes across learned selection, LLM planning and deterministic reporting.",
+        "From Signals to Evidence Parts I and II study language-based recognition and detection using simulated underwater sources and propagation [9,10]. We complement them with real civilian recordings, unused source groups, noise and unfamiliar categories. Following citation-evaluation work [11], we distinguish correctness, support and completeness. The linked studies reveal how evidence choices affect information delivered. Works [6–10] are preprints in our source record."
+      ]
+    },
+    {
+      "slot": 9,
+      "kind": "preserve",
+      "original_text_sha256": "c09b4ab6376c400cf588370614f5690b2081dd5f77ad74548fd711b77e4ae317",
+      "paragraphs": [
+        "2. Study Design and Real Recording Data"
+      ]
+    },
+    {
+      "slot": 10,
+      "kind": "preserve",
+      "original_text_sha256": "3d89422542b171db0125676ffd418d5945ad6477a2245c620dee2a5377725c29",
+      "paragraphs": [
+        "The earlier study tests selective evidence gathering. A learned controller queries spectrum, modulation, temporal/quality measures or similar training recordings, observing each result before another query or stopping. At most two queries precede a frozen generator's category and four cited attributes. Training rewards report-loss improvements and penalizes category errors and wrong/unsupported physical claims against separate numerical estimators. Cached replay compares selectors on the same reports. Its 100-clip test motivates the identification follow-up. Query counts measure logical acquisitions, not runtime savings."
+      ]
+    },
+    {
+      "slot": 11,
+      "kind": "preserve",
+      "original_text_sha256": "c9599947bbd6711743951187c1bd43412807a6f7ec83cec1cd8779cf539c7047",
+      "paragraphs": [
+        "We use UniqueShip v1.0, fold 1 of the five-hour-per-class release, with background, cargo, passenger, tanker and tug/tow categories. Clips are five-second mono audio at 32 kHz. We exclude five duration mismatches and 42 date conflicts. Original partitions separate vessel IDs, background-day groups and whole UTC days across classes and hydrophones, with a 60-second cross-partition gap. Table 1 separates fitting, selection, calibration and evaluation."
+      ]
+    },
+    {
+      "slot": 12,
+      "kind": "preserve",
+      "original_text_sha256": "c0b70e7b9881b51e22208504b48a79af34194d29816ae495baa57d21549ce726",
+      "paragraphs": [
+        "Table 1. Data roles keep model fitting, setting selection and evaluation separate. Source groups are recorded vessel IDs or background days."
+      ]
+    },
+    {
+      "slot": 13,
+      "kind": "preserve",
+      "original_text_sha256": "95cf65ca4c4b92c553af1b704121ba1f464a5f8dbc4c2693c9e349f92ec520cc",
+      "paragraphs": [
+        "The fresh cohort uses sources absent from all 7,418 original records. Sampling allows at most three clips per source, ten minutes apart. A target of 50 per category yields 235 clips from 218 sources because passenger capacity is 35 clips from 25 sources. Fresh days are absent from fitting, development and calibration, with starts at least 65 seconds from original non-test starts."
+      ]
+    },
+    {
+      "slot": 14,
+      "kind": "preserve",
+      "original_text_sha256": "a54ab5de68f6a327d9a941bc4f7ad5b24e6df2edfd98832c9c0d1f54a07d9150",
+      "paragraphs": [
+        "The custom extension draws 216 unused records from release training metadata and 19 from validation metadata. None entered fitting. All 185 fresh days overlap earlier test days, whose results motivated the follow-up. This tests unused sources within the same collection, not independent deployments or the official fold test set."
+      ]
+    },
+    {
+      "slot": 15,
+      "kind": "preserve",
+      "original_text_sha256": "aa022a3ef15fffdb8b42c7d2ca57ed0bbbaaa7cfd735c4f68b1a673a4b5f67ce",
+      "paragraphs": [
+        "Archive size/CRC checks verify downloads, and decoded hashes exclude duplicates within the fresh cohort and against original data. Prediction inputs exclude identities, dates, hydrophones and labels. Source IDs support splitting, weighting, prototypes and resampling. Identification uses released labels without human reviewers and concerns a supplied clip's category, not an individual hull, location or continuous event. The category mix does not estimate traffic prevalence."
+      ]
+    },
+    {
+      "slot": 16,
+      "kind": "preserve",
+      "original_text_sha256": "0de2cdd847fd60ed451d124548ad49c0bc47cd065000d41a3da7c2f6fe13da99",
+      "paragraphs": [
+        "3. Combining Learned Recognition with Measured Evidence"
+      ]
+    },
+    {
+      "slot": 17,
+      "kind": "preserve",
+      "original_text_sha256": "3ab1950e27abb8ab4ac4fc6d8082f45df331be448e92305e6929cfe8d1a376c3",
+      "paragraphs": [
+        "A frozen Swin V2 Tiny [12] supplies learned sound patterns. Anti-aliased 20 kHz audio yields 128 log-mel bands over 20–8,000 Hz using a 1,024-sample window and 256-sample hop. A 90 dB range becomes a 256×256, three-channel, ImageNet-normalized image. Development selects training settings, with seeds 17, 29 and 43 for the ensemble. Full settings are in the repository."
+      ]
+    },
+    {
+      "slot": 18,
+      "kind": "preserve",
+      "original_text_sha256": "4e4919e4bc58e2a7f755d0990231cb1c30cacc37fddf7ccd7ad0e9a89df59d9e",
+      "paragraphs": [
+        "A matched acoustic-only refit separates added evidence from added fitting. It uses 32 principal components learned on acoustic-fit and five log category probabilities. The stronger ensemble averages three separately calibrated acoustic models. Fusion instead uses one acoustic model, measurements and training-source comparisons. Online runtime is not compared."
+      ]
+    },
+    {
+      "slot": 19,
+      "kind": "preserve",
+      "original_text_sha256": "07220b9abda63207fe3ebd224a6908a1028a12cbb8e09216793e3eacf2f9cc3f",
+      "paragraphs": [
+        "The 62 measured features describe energy distribution, repeating amplitude, level changes and digital quality. An 8,192-sample Welch window with 4,096 overlap gives 32 relative band powers, four broad-band fractions and six shape/peak descriptors. Four values describe energy change, level variation, zeros and clipping. Sixteen modulation energies cover eight intervals from 2 to 80 Hz in two carrier bands. These describe received sound, not proven vessel categories or propulsion mechanisms."
+      ]
+    },
+    {
+      "slot": 20,
+      "kind": "preserve",
+      "original_text_sha256": "1abfc3c779a4599494bd4f77f4a0c2658862898b7a6cd413e19c0a3cc5f88442",
+      "paragraphs": [
+        "Modulation uses anti-aliased 8 kHz audio, fourth-order filters over 100–1,000 and 1,000–3,500 Hz, Hilbert envelopes, 0.25 s edge removal and 400 Hz resampling. Known-signal checks verify relative-energy gain invariance and expected band concentration. The repository specifies all feature definitions."
+      ]
+    },
+    {
+      "slot": 21,
+      "kind": "preserve",
+      "original_text_sha256": "b12492d177d99e9dcbc7a56d36b65c6c8e903deba48a5cf1c8295cbe3d942ed1",
+      "paragraphs": [
+        "Each acoustic-fit source contributes one normalized mean representation, or prototype, avoiding repeated-clip dominance. Category features comprise maximum cosine similarity and mean similarity to the three nearest sources, centred across categories, plus five softmax values at temperature 0.1. Query-source prototypes are excluded. These 15 features describe resemblance to training sources, whose value is tested separately from measurements."
+      ]
+    },
+    {
+      "slot": 22,
+      "kind": "preserve",
+      "original_text_sha256": "7f654b5165523e156327d6e173deada82ca5c7bbc8a281da3eadb9d30395e539",
+      "paragraphs": [
+        "Fusion fits multinomial logistic regression to 37 acoustic, 62 measured and 15 prototype values. Standardization and fitting use policy-fit only. Classes receive equal total weight and sources within each class receive equal weight through",
+        "[[equation:weights]]",
+        "Here G_c counts sources in class c and n_g counts clips from source g. We normalize weights to mean one. All refits share C ∈ {0.001, 0.01, 0.1, 1, 10}, 2,000 maximum iterations and development macro-F1 selection. Temperature calibration minimizes development negative log-likelihood."
+      ]
+    },
+    {
+      "slot": 23,
+      "kind": "preserve",
+      "original_text_sha256": "08b49a07615da572f44313b8528c903b1b4097a8206c6cb4b3082f93df9b49d9",
+      "paragraphs": [
+        "Fusion selects C=0.01. Component-removal controls share labels, weighting and selection procedures. Confidence-only referral keeps fusion predictions fixed. Pre-freeze refit/ensemble mixtures at weights 0, 0.25, 0.5, 0.75 and 1 did not improve development macro-F1 and were not adopted."
+      ]
+    },
+    {
+      "slot": 24,
+      "kind": "preserve",
+      "original_text_sha256": "ab9304c6ba64cfa596a822aadf517ca0a876c801901ca665a3a4dbee5c0cadaa",
+      "paragraphs": [
+        "4. Deciding When to Answer and How to Evaluate It"
+      ]
+    },
+    {
+      "slot": 25,
+      "kind": "preserve",
+      "original_text_sha256": "8787860c47d1cc884438d9e352e08b7a1ffebfcf44a31f3af2c929aa3f577a12",
+      "paragraphs": [
+        "To decide when to answer, we reduce the strongest fused category probability when the measured-feature and prototype models disagree with it,",
+        "[[equation:score]]",
+        "Here p, pᴹ and pᴿ denote their distributions. Jensen–Shannon divergence (JSD) measures disagreement on a 0–1 scale. Development selects γ=0.25 from {0, 0.25, 0.5, 1} by accuracy among the top 70% ranked clips. Setting γ=0 tests confidence alone."
+      ]
+    },
+    {
+      "slot": 26,
+      "kind": "preserve",
+      "original_text_sha256": "caf702b322ef29ddcbe99e74bd13c2019debb13912540819d1e34e4d666bede1",
+      "paragraphs": [
+        "Each reporting threshold is the 356th highest score among 508 calibration clips, targeting 70% reporting with ties retained. Correct labels, wrong labels and referrals retain every requested clip in the denominator. Referrals earn no identification credit. Equal-count test rankings are descriptive, not deployment thresholds. Broad vessel/background classification separately sums vessel probabilities with a development-selected threshold."
+      ]
+    },
+    {
+      "slot": 27,
+      "kind": "preserve",
+      "original_text_sha256": "81145cce7fea38d52f45acfd63c2a68d51944be4b4068512f726cf3f0915ae7a",
+      "paragraphs": [
+        "Frozen Qwen2.5-Omni-7B Thinker [13] receives audio alone, audio plus original acoustic probabilities, or audio plus fused probabilities and compact evidence. Evidence covers band energies, energy change, clipping and prototype analogies. All conditions use anti-aliased 16 kHz audio, the same category-only prompt, greedy decoding and one 128-token call. The response gives a category or uncertainty and one reason, without query labels or metadata. A development pilot returns 20/20 valid outputs."
+      ]
+    },
+    {
+      "slot": 28,
+      "kind": "preserve",
+      "original_text_sha256": "3799ac69ae6102fc6f1d29cd0d4b3e387f825ec67ad70cca63b06650e40c1ef6",
+      "paragraphs": [
+        "The fresh cohort produces 705 requested answers. One deterministic JSON extraction is allowed without content repair or repeated generation. Malformed, truncated or uncertain outputs count as withheld/failed identifications. Comparing generated answers with supplied numeric decisions separates harmful overrides, correct decisions withheld and errors corrected. The proposed operator record retains the numeric category separately from interpretation. Experiments allow unrestricted generator decisions to expose these changes."
+      ]
+    },
+    {
+      "slot": 29,
+      "kind": "preserve",
+      "original_text_sha256": "02076f0666e3cc80759f6e82f8b3d8e3b5f013378ca1667f074ebacfebadf9fd",
+      "paragraphs": [
+        "Cohort, code, models, prompts and thresholds were frozen before fresh inference on November 16, 2026. This internal prospective record is not external preregistration. The development-selected ensemble is the primary comparator. Success requires at least 0.03 higher macro-F1 before referral, with a positive lower bound on the paired source-bootstrap 95% interval."
+      ]
+    },
+    {
+      "slot": 30,
+      "kind": "preserve",
+      "original_text_sha256": "e344850e4de11ac93e72a65598658de9ca97fa2cfaf37cda1d4f28ee1184c215",
+      "paragraphs": [
+        "We resample source groups 2,000 times, retaining their clips and pairing methods with fitted parameters fixed. A UTC-day analysis checks shared-day dependence. Other comparisons are exploratory. Six transformations test Gaussian noise at 20, 10 and 0 dB SNR, 2 kHz low-pass filtering, gain 0.25 and RMS-scaled clipping. Features and predictions are recomputed without retraining. Labels remain nominal because severe-distortion recognizability is unannotated. Code, protocols and result records are available at https://github.com/mantzaris/MVML2027. Large audio and model artifacts are stored separately."
+      ]
+    },
+    {
+      "slot": 31,
+      "kind": "preserve",
+      "original_text_sha256": "4e3055b41500993706261c3f448d7776ce324882925f52901777cc9704b64098",
+      "paragraphs": [
+        "5. What the Evidence Adds to Identification"
+      ]
+    },
+    {
+      "slot": 32,
+      "kind": "preserve",
+      "original_text_sha256": "56e6e3a642d58d35f81c210d0f4a14e5d150c63744d8f507f33f92a7b92040ee",
+      "paragraphs": [
+        "Measurements help within the tested design, but fusion does not surpass the ensemble (Table 2). Its primary macro-F1 difference is −0.3 points, with a source-bootstrap 95% interval of −7.3 to 6.6 and a UTC-day interval of −7.9 to 7.1. The success criterion was not met, and equivalence is not established."
+      ]
+    },
+    {
+      "slot": 33,
+      "kind": "preserve",
+      "original_text_sha256": "2972894dd4de4b6e7702ddc7176e580aeceec137c858082965efa4b1432f0679",
+      "paragraphs": [
+        "Table 2. Identification and referral answer different questions. Accuracy and macro-F1 score all 235 clips. The final columns count outcomes at each method's frozen reporting threshold."
+      ]
+    },
+    {
+      "slot": 34,
+      "kind": "preserve",
+      "original_text_sha256": "895b34ec1b0f49213ea46f6a92751efd2d7140859c53a6ccb93bdf5e9751b265",
+      "paragraphs": [
+        "Similar overall scores hide category tradeoffs (Fig. 1). Fusion recognizes 31/50 tankers versus the ensemble's 9, but 25/50 cargo vessels versus 40. Exploratory recall changes are +44.0 points for tankers (pointwise 95% interval +28.0 to +60.0) and −30.0 for cargo (−48.0 to −12.0). The matched refit also identifies 31 tankers, so that gain cannot be attributed to measurements."
+      ]
+    },
+    {
+      "slot": 35,
+      "kind": "preserve",
+      "original_text_sha256": "eb78c9c67e624818858a4c547c378e95d022ddc86dce08c40ce4e98d1379027d",
+      "paragraphs": [
+        "Removing measurements lowers macro-F1 from 0.583 to 0.517, an exploratory fusion advantage of 6.6 points (pointwise interval 0.7 to 12.5). Its advantage over the matched refit is 3.7 points (−1.4 to 8.9). Removing prototypes leaves 0.582. Measurements contribute within this design, while prototypes add little after refitting."
+      ]
+    },
+    {
+      "slot": 37,
+      "kind": "preserve",
+      "original_text_sha256": "c5a0e846f11bc690b1b361b717ec8cba52419345be3bd7b37e036e77c6bc9ed6",
+      "paragraphs": [
+        "Fig. 1. Category recall before referral. Similar overall scores conceal different category strengths. The matched refit shows which gains already arise without added measurements or prototypes."
+      ]
+    },
+    {
+      "slot": 38,
+      "kind": "preserve",
+      "original_text_sha256": "d6fa0b32e7ab158a66ae12f5fcadf2c942056bf7c8f8b31a29a878023f5da3cd",
+      "paragraphs": [
+        "Referral reduces mistakes and useful answers together. Fusion's issued-label accuracy exceeds the ensemble's (72.7% versus 66.7%), but fewer correct answers reach the user (Table 2). At an equal descriptive count of 165 labels, fusion gives 115 correct and 50 wrong versus 110 and 55 for the ensemble. Confidence-only fusion also gives 115 and 50, so disagreement adds no benefit there."
+      ]
+    },
+    {
+      "slot": 39,
+      "kind": "preserve",
+      "original_text_sha256": "aea1a8f248cc791cf839bb5de8c4d2ff40f3c6cdd1a42a92feef959373badd94",
+      "paragraphs": [
+        "Reliance differs from benefit. Permuting prototype class channels changes 101 labels, turning 55 correct decisions into errors and correcting 28. Accuracy falls to 48.9%, yet removing prototypes and refitting barely changes macro-F1. Evidence sensitivity does not establish incremental value. Broad vessel/background balanced accuracy is 92.5% for fusion and 93.5% for the ensemble, separate from five-category identification."
+      ]
+    },
+    {
+      "slot": 40,
+      "kind": "preserve",
+      "original_text_sha256": "a4a354efc27d8ef884c37a22c5164f9ae6d81cb7d6131fd8d1a1001b59c2f75f",
+      "paragraphs": [
+        "6. When Recording Conditions Undermine Confidence"
+      ]
+    },
+    {
+      "slot": 41,
+      "kind": "preserve",
+      "original_text_sha256": "93b7c4586606be62b9174e8a1bff516c0fe216b70052fcc36db716ca13bbae21",
+      "paragraphs": [
+        "Degradation reveals which information matters (Fig. 2). Noise lowers every method's accuracy. Gain 0.25 leaves predictions unchanged. Low-pass filtering reduces fusion below the ensemble and measured features alone to 22.1%, showing dependence on retained frequencies. Clipping changes accuracy little here without establishing general distortion tolerance."
+      ]
+    },
+    {
+      "slot": 42,
+      "kind": "preserve",
+      "original_text_sha256": "ffa23d9ab5dd7779fbe52bc258635a5b632207eed8877751c3078448ac49e841",
+      "paragraphs": [
+        "Referral fails more sharply. Fusion's reporting rate rises from 56.2% on clean clips to 87.2% at 0 dB SNR, where signal and added noise have equal power. Only 50 of 205 issued labels are correct (24.4%). Thus, clean-calibrated confidence makes the system more willing to answer as reliability falls. This motivates recording-quality checks alongside confidence and testing referral under degradation, without yet validating a safeguard."
+      ]
+    },
+    {
+      "slot": 44,
+      "kind": "preserve",
+      "original_text_sha256": "fad6c3d5750892cef9f73edbcefc1b943b9555fbe23800b92ce30bd2ec63c275",
+      "paragraphs": [
+        "Fig. 2. Correct nominal category across all 235 recordings in each condition. The changes isolate sensitivity to particular distortions with models and thresholds held fixed."
+      ]
+    },
+    {
+      "slot": 45,
+      "kind": "preserve",
+      "original_text_sha256": "76b8b7bee5625963ee7cc4349fdc027b776172ac4f027d36ccd8532ef1b6d177",
+      "paragraphs": [
+        "A separately frozen challenge adds 72 unused clips from 65 sources after primary results. It covers pilot vessel (3 clips/1 source), rescue, sailing, pleasure craft and fishing (15 clips/15 sources each), and dredger (9 clips/4 sources). These categories were never fitted, and the ambiguous catch-all was excluded. Source/hash checks exclude both earlier cohorts, with fitting/selection/calibration day boundaries retained. Models and thresholds stay fixed."
+      ]
+    },
+    {
+      "slot": 46,
+      "kind": "preserve",
+      "original_text_sha256": "d5c1055b14b29eb7f9fc2deba934929218145276cbb125c84979565f37bb223f",
+      "paragraphs": [
+        "Table 3. Untrained-category challenge. Assigning a trained label and recognizing the recording broadly as a vessel are separate outcomes. Neither substitutes for identifying an unfamiliar category."
+      ]
+    },
+    {
+      "slot": 47,
+      "kind": "preserve",
+      "original_text_sha256": "c6a69abf3a13c55e392f7936881fa5d3a1a680252184f0dded5d17a2d3b2d996",
+      "paragraphs": [
+        "Fusion assigns trained labels to 35/72 unfamiliar-category clips, including 13 background labels, and refers 37 (Table 3). Only 52.8% are recognized broadly as vessels. Familiar-category confidence is therefore insufficient for detecting an incomplete vocabulary. This small, same-collection challenge motivates separate unknown-category evaluation. Pilot-vessel and dredger source counts are especially limited, and taxonomy differences need not imply unique acoustic signatures."
+      ]
+    },
+    {
+      "slot": 48,
+      "kind": "preserve",
+      "original_text_sha256": "cabf2db10d08bc8b4f24cf93684a5d7314fadd15ea6be435b971e5eb1d6d06fe",
+      "paragraphs": [
+        "7. What Tool Selection and Generation Preserve"
+      ]
+    },
+    {
+      "slot": 49,
+      "kind": "preserve",
+      "original_text_sha256": "65af3670f9541e9656eb4f98beb4ae81bdfd337a72d37e9f75afef4deea0a646",
+      "paragraphs": [
+        "The earlier learned selector uses 101 logical queries versus the heuristic's 200, with one wrong/unsupported detail versus nine but only 37 supported details versus 53 (Fig. 3A–B). The LLM planner returns 37 supported details with 200 queries and 21 wrong/unsupported details. Retention thresholds differ and the original success criterion was not met. Useful information must be evaluated alongside query cost and errors."
+      ]
+    },
+    {
+      "slot": 50,
+      "kind": "preserve",
+      "original_text_sha256": "2307dc259dc13ffda1930df1d02e5babba7d73646e55598951d91c1da2e212cd",
+      "paragraphs": [
+        "Fresh-cohort generation uses fixed inputs (Fig. 3C). All 705 outputs parse. Audio-only prompting withholds every category, specific to this prompt/decoder. Fused evidence yields 24 fewer wrong labels and 24 more withheld answers than prior-assisted prompting, with 99 correct in both. Macro-F1 is 0, 0.411 and 0.456, counting withholding as missed identification. Both probabilities and measured inputs change, so their effects are not isolated."
+      ]
+    },
+    {
+      "slot": 52,
+      "kind": "preserve",
+      "original_text_sha256": "383cbc0a2111fcf47b1b7111c07a3f3f9c9964172c3d32eb2340298f38795161",
+      "paragraphs": [
+        "Fig. 3. Earlier adaptive acquisition on 100 clips (A–B) and fixed-evidence generation on 235 fresh clips (C). Fewer errors need not mean more useful information."
+      ]
+    },
+    {
+      "slot": 53,
+      "kind": "preserve",
+      "original_text_sha256": "5a2f95797a203c3699ed4f81581ea184a3697074a64d95449faac222b3a93f34",
+      "paragraphs": [
+        "Fused-evidence generation changes seven correct numeric decisions into errors, withholds 39 and corrects three errors. On its 143 issued records, numeric fusion gets 103 correct versus generation's 99. Numeric fusion also gets 103 correct when ranked to issue 143 labels. Prior-assisted prompting changes three correct decisions to errors, withholds 32 and corrects four. These descriptive comparisons show that most lost correct identifications arise through withholding."
+      ]
+    },
+    {
+      "slot": 54,
+      "kind": "preserve",
+      "original_text_sha256": "e81942a2445c56a030aba65267885399732617432fe6f34b9f7181f4e6725997",
+      "paragraphs": [
+        "The results support displaying numeric categories, measurements, generated interpretation and review flags separately. Preserving categories would be an interface rule, not improved recognition. Benefits to reviewers remain untested."
+      ]
+    },
+    {
+      "slot": 55,
+      "kind": "preserve",
+      "original_text_sha256": "23bc03fddbfb5c711e903b2eea9c4354c0e552a868d2521c09c1f4acef55001a",
+      "paragraphs": [
+        "8. Scope and Limitations"
+      ]
+    },
+    {
+      "slot": 56,
+      "kind": "preserve",
+      "original_text_sha256": "cdf9b58d4964db0bee795588d6bfbed7551dbe2d17923aa618ceab051f49ce83",
+      "paragraphs": []
+    },
+    {
+      "slot": 57,
+      "kind": "preserve",
+      "original_text_sha256": "7a04aa428490b6f77795527cf7372bd05b69df692157f80addffe6306bae333f",
+      "paragraphs": [
+        "Missing parent/deployment identifiers and some hydrophone metadata prevent complete physical-independence claims. Dataset labels do not describe every audible event. Five-second clips lack contact history and overlapping-event models. Passenger and some unfamiliar-category groups are small. Distorted clips lack recognizability annotations, and source-weighting and representation effects are not fully isolated."
+      ]
+    },
+    {
+      "slot": 58,
+      "kind": "preserve",
+      "original_text_sha256": "9da242b808bd82040cc3676d463efdad484a9bbb716a4a429a45ea4e3f3616da",
+      "paragraphs": [
+        "Earlier report checks use numerical proxies and correlated AI reviewers, not human validation. Generated reasons lack independent factuality assessment. This civilian, single-region study needs external deployment and operator evaluation."
+      ]
+    },
+    {
+      "slot": 59,
+      "kind": "heading",
+      "original_text_sha256": "4a688e4b0aa9beab93c4a0dbf7a94be7c46162803c05106379b7ed9689cb1793",
+      "paragraphs": [
+        "9. Conclusion"
+      ]
+    },
+    {
+      "slot": 60,
+      "kind": "preserve",
+      "original_text_sha256": "31ea9206fa79866bff43af15c220329db2bd69d1a949c136f457a177fe50c17f",
+      "paragraphs": [
+        "Our approach combines learned sound patterns with acoustic measurements and checks what the resulting evidence adds to an answer. Testing tool choices, identification and generation separately shows where useful information is gained or lost. Measurements help the combined model, although it does not outperform the strongest baseline. With combined evidence, the generator produces 24 fewer wrong labels than with the original model scores, but no more correct answers. It withholds more. Under added noise, the classifier answers more often even as its accuracy falls. These findings point to an acoustic assistant that keeps the classifier's estimate visible, shows the supporting measurements, and uses generated text to explain the evidence. Checks for poor recordings and unfamiliar sounds could highlight cases needing further analysis. This could help analysts judge what a recording supports and what to investigate next. The benefit still needs testing."
+      ]
+    }
+  ]
+}
