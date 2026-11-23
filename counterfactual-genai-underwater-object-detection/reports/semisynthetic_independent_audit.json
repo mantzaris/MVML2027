@@ -1,0 +1,247 @@
+{
+  "aggregate_rows": 27,
+  "arithmetic_note": "Independent IoU must form each interval length before summing union, matching frozen arithmetic. Flattened subtraction changes last-bit equal-length-event ties; initial seed17/SNR-10/IoU0.3 audit0.3278030264 vs report0.3286552991 resolved when using declared interval-length arithmetic. Original metrics unchanged.",
+  "audited_utc": "2026-11-23T19:53:29.668439+00:00",
+  "base_scenes": 330,
+  "condition_scenes": 990,
+  "conditions": 9,
+  "day_rows": 135,
+  "experimental_code_modified": false,
+  "freeze_sha256": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+  "gpu_used": false,
+  "limitations": [
+    "Known insertion of whole noisy AIS-positive excerpts, not real acoustic-event truth.",
+    "Frozen synthetic CNN transfer; no Qwen/flow-benefit inference.",
+    "ThreeSNR and three model seeds share330base scenes;5days form one dependence component."
+  ],
+  "max_absolute_metric_discrepancy": 8.881784197001252e-16,
+  "prediction_shards_hashed": 54,
+  "raw_waveforms_accessed": false,
+  "recomputed_metrics": [
+    {
+      "component_snr_db": 0,
+      "event_f1": 0.3484735666418466,
+      "iou": 0.3,
+      "presence_ap": 0.9511681716588366,
+      "seed": 17,
+      "temporal_ap": 0.6189539172201471
+    },
+    {
+      "component_snr_db": 0,
+      "event_f1": 0.22338049143708116,
+      "iou": 0.5,
+      "presence_ap": 0.9511681716588366,
+      "seed": 17,
+      "temporal_ap": 0.2838996320599539
+    },
+    {
+      "component_snr_db": 0,
+      "event_f1": 0.15785554728220402,
+      "iou": 0.7,
+      "presence_ap": 0.9511681716588366,
+      "seed": 17,
+      "temporal_ap": 0.1689344320264148
+    },
+    {
+      "component_snr_db": 10,
+      "event_f1": 0.3976411120471778,
+      "iou": 0.3,
+      "presence_ap": 0.987718218217942,
+      "seed": 17,
+      "temporal_ap": 0.7648397627621645
+    },
+    {
+      "component_snr_db": 10,
+      "event_f1": 0.35046335299073295,
+      "iou": 0.5,
+      "presence_ap": 0.987718218217942,
+      "seed": 17,
+      "temporal_ap": 0.6815930230870263
+    },
+    {
+      "component_snr_db": 10,
+      "event_f1": 0.2914911541701769,
+      "iou": 0.7,
+      "presence_ap": 0.987718218217942,
+      "seed": 17,
+      "temporal_ap": 0.523996204923002
+    },
+    {
+      "component_snr_db": -10,
+      "event_f1": 0.27851458885941643,
+      "iou": 0.3,
+      "presence_ap": 0.7396619913091376,
+      "seed": 17,
+      "temporal_ap": 0.32865529905396046
+    },
+    {
+      "component_snr_db": -10,
+      "event_f1": 0.10477453580901856,
+      "iou": 0.5,
+      "presence_ap": 0.7396619913091376,
+      "seed": 17,
+      "temporal_ap": 0.03251404167249654
+    },
+    {
+      "component_snr_db": -10,
+      "event_f1": 0.03713527851458886,
+      "iou": 0.7,
+      "presence_ap": 0.7396619913091376,
+      "seed": 17,
+      "temporal_ap": 0.0039002208742823364
+    },
+    {
+      "component_snr_db": 0,
+      "event_f1": 0.3252032520325203,
+      "iou": 0.3,
+      "presence_ap": 0.9450321005638023,
+      "seed": 29,
+      "temporal_ap": 0.7156721332058585
+    },
+    {
+      "component_snr_db": 0,
+      "event_f1": 0.2696476964769648,
+      "iou": 0.5,
+      "presence_ap": 0.9450321005638023,
+      "seed": 29,
+      "temporal_ap": 0.5827064336318865
+    },
+    {
+      "component_snr_db": 0,
+      "event_f1": 0.2222222222222222,
+      "iou": 0.7,
+      "presence_ap": 0.9450321005638023,
+      "seed": 29,
+      "temporal_ap": 0.4621690229346219
+    },
+    {
+      "component_snr_db": 10,
+      "event_f1": 0.3684210526315789,
+      "iou": 0.3,
+      "presence_ap": 0.9924381610924627,
+      "seed": 29,
+      "temporal_ap": 0.9004066070804333
+    },
+    {
+      "component_snr_db": 10,
+      "event_f1": 0.3609022556390977,
+      "iou": 0.5,
+      "presence_ap": 0.9924381610924627,
+      "seed": 29,
+      "temporal_ap": 0.8837260535140194
+    },
+    {
+      "component_snr_db": 10,
+      "event_f1": 0.3368421052631579,
+      "iou": 0.7,
+      "presence_ap": 0.9924381610924627,
+      "seed": 29,
+      "temporal_ap": 0.8138619227923004
+    },
+    {
+      "component_snr_db": -10,
+      "event_f1": 0.17408906882591094,
+      "iou": 0.3,
+      "presence_ap": 0.7097579584111514,
+      "seed": 29,
+      "temporal_ap": 0.15168765886591562
+    },
+    {
+      "component_snr_db": -10,
+      "event_f1": 0.1082995951417004,
+      "iou": 0.5,
+      "presence_ap": 0.7097579584111514,
+      "seed": 29,
+      "temporal_ap": 0.04340682081093061
+    },
+    {
+      "component_snr_db": -10,
+      "event_f1": 0.058704453441295545,
+      "iou": 0.7,
+      "presence_ap": 0.7097579584111514,
+      "seed": 29,
+      "temporal_ap": 0.012689500578788414
+    },
+    {
+      "component_snr_db": 0,
+      "event_f1": 0.3842364532019704,
+      "iou": 0.3,
+      "presence_ap": 0.9351333605725431,
+      "seed": 43,
+      "temporal_ap": 0.5948341490042665
+    },
+    {
+      "component_snr_db": 0,
+      "event_f1": 0.24958949096880131,
+      "iou": 0.5,
+      "presence_ap": 0.9351333605725431,
+      "seed": 43,
+      "temporal_ap": 0.27105626947223077
+    },
+    {
+      "component_snr_db": 0,
+      "event_f1": 0.19704433497536947,
+      "iou": 0.7,
+      "presence_ap": 0.9351333605725431,
+      "seed": 43,
+      "temporal_ap": 0.18099524430440525
+    },
+    {
+      "component_snr_db": 10,
+      "event_f1": 0.44064748201438847,
+      "iou": 0.3,
+      "presence_ap": 0.9807118536291476,
+      "seed": 43,
+      "temporal_ap": 0.7066845411852097
+    },
+    {
+      "component_snr_db": 10,
+      "event_f1": 0.3920863309352518,
+      "iou": 0.5,
+      "presence_ap": 0.9807118536291476,
+      "seed": 43,
+      "temporal_ap": 0.6248858992688205
+    },
+    {
+      "component_snr_db": 10,
+      "event_f1": 0.3597122302158273,
+      "iou": 0.7,
+      "presence_ap": 0.9807118536291476,
+      "seed": 43,
+      "temporal_ap": 0.5407889549010034
+    },
+    {
+      "component_snr_db": -10,
+      "event_f1": 0.42042042042042044,
+      "iou": 0.3,
+      "presence_ap": 0.761261421486353,
+      "seed": 43,
+      "temporal_ap": 0.4764385123465198
+    },
+    {
+      "component_snr_db": -10,
+      "event_f1": 0.13413413413413414,
+      "iou": 0.5,
+      "presence_ap": 0.761261421486353,
+      "seed": 43,
+      "temporal_ap": 0.04297321765513295
+    },
+    {
+      "component_snr_db": -10,
+      "event_f1": 0.04604604604604605,
+      "iou": 0.7,
+      "presence_ap": 0.761261421486353,
+      "seed": 43,
+      "temporal_ap": 0.0047055522505253
+    }
+  ],
+  "recorded_max_outside_insertion_error": 0.0,
+  "recorded_max_snr_error_db": 1.9073486328125e-06,
+  "source_report_sha256": "a96abe8d7e766c06e9e81faf378ed484a3dea932729d17157fe93e1e0f170884",
+  "status": "passed",
+  "two_source_nonoverlapping_scenes": 31,
+  "two_source_overlapping_scenes": 79,
+  "union_events_per_condition": 251,
+  "unique_native_parents": 660,
+  "zero_insertion_repeat_max_probability_difference": 0.0
+}

@@ -1,0 +1,899 @@
+{
+  "config": {
+    "acquisition_work": "Compute fullprimary152 initially and recompute fullprimary152 for clips requesting a new view; only acquired views affect predictions",
+    "batch_size": 32,
+    "cohort_ids": [
+      "a2edee0ae52546117a79b772",
+      "a3eb1bd5a97cdcc09b32c059",
+      "a46de988838f9c0c27ff2302",
+      "a47a11590762a7085aecd39b",
+      "a5dbd2e036110306587fcdc7",
+      "a63b31fb40b0a0084a438c16",
+      "a6575078617f5e5f52ace59e",
+      "a755d5f82bb49a33895b4fd8",
+      "a780a857f180b0e9c2bbc383",
+      "a783a9c86e227bd0aaac2f36",
+      "a7fae88b1375d223da381e0d",
+      "a85ecb326b772485141a200d",
+      "aa5664f4d9c2e5bc641148e7",
+      "ab07e8bba6c159afce59a597",
+      "ab84c453c5d70129e69294ed",
+      "ab8958a628f41ffded40aabf",
+      "ac091b8da21696b4120b0908",
+      "accc277eaad544d5f86bba5f",
+      "ad3dea29c09bd1e6077719de",
+      "ad6165337b94d0869f6d9a0a",
+      "ad6ce04b3790997c44641113",
+      "ad7527bb449256c6a8092eec",
+      "ad84a857a7a539a3e9d0a56d",
+      "ad8e0b85d2b00ff528c26898",
+      "ad946baefe83fba0c1404623",
+      "ada08991b4ee1518acb8a580",
+      "ae12aa855055d4baf8b127d8",
+      "ae8cb7fe3e61a7d5a1a573c4",
+      "af5795b74d44be8474891c10",
+      "afe9f384eb315115c87e2ebd",
+      "b06583456f02be1d4261e737",
+      "b09be1bcca74a85589cf6e1c"
+    ],
+    "cohort_selection": "Hash-select one complete production batch32 from canonical calibration manifest order; no outcome selection",
+    "cohort_start": 384,
+    "counterfactual_samples": 4,
+    "flow_batch_size": 8,
+    "flow_rng": "Preserve complete canonical8 microbatches and seed namespace+canonical_start",
+    "flow_seed_namespace": 7100000,
+    "flow_steps": 8,
+    "groups": [
+      "fourier",
+      "stft",
+      "wavelet"
+    ],
+    "heuristic_rule": "abs(sigmoid(raw_STFT_logit)-0.5)<0.3; query canonical verification blocks only for uncertain clips; main base if uncertain, STFT base otherwise; no Qwen",
+    "initial_view": "stft",
+    "max_actions": 3,
+    "max_verifications": 1,
+    "methods": [
+      "main",
+      "fixed_verification",
+      "heuristic_verification",
+      "proposed_agent",
+      "agent_no_generation"
+    ],
+    "peak_memory_scope": "Maximum allocated CUDA memory including method-resident detector bank and required flow/controller; all loaded detector heads retained and charged",
+    "planned_manifest_sha256": "be62767fad35a8dc782f9f6c64a2f2ba372974b7170012e7a18ce37049456ced",
+    "probe_seconds": [
+      0.75,
+      2.25
+    ],
+    "repetitions": 3,
+    "reporting_scope": "32 calibration clips, seed17, batch-throughput milliseconds per clip; not single-request latency or test-set accuracy",
+    "resample": {
+      "beta": 14.769656459379492,
+      "device": "cuda",
+      "lowpass_filter_width": 64,
+      "method": "sinc_interp_kaiser",
+      "rolloff": 0.9475937167399596
+    },
+    "sample_rate": 16000,
+    "schema_version": 2,
+    "scope_amendment": "Add prespecified heuristic_verification cost after real development results existed, before runtime or test outcomes; preserve four-method v1 configuration",
+    "seed": 17,
+    "split": "calibration",
+    "storage_scope": "Warm OS file cache allowed; no feature/intervention/policy cache serves timed evidence; no cold-disk claim",
+    "taper_samples": 160,
+    "timing_scope": "Wall time including verified raw-WAV I/O/decode, H2D transfer, CUDA resample/transforms/generation, tokenization, actual Qwen, scoring, calibration and final D2H output; excludes model loading and receipt commits",
+    "verification_work": "Generate all8 canonical companions on first verify in their block; cache only within this live batch; charge companion overhead",
+    "warmup_passes_per_method_per_process": 1
+  },
+  "limitations": [
+    "Warm OS file cache, no cold-storage latency claim.",
+    "32 calibration clips and one detector seed; no population runtime interval.",
+    "Batch-throughput cost, not individual-request response time.",
+    "All primary transforms computed and charged; no adaptive transform-savings claim.",
+    "Unqueried canonical flow companions are generated to preserve random draws, with their full overhead charged.",
+    "CUDA allocated memory includes resident per-method detector bank; reserved allocator memory separately saved per pass.",
+    "Every timed pass recomputes waveform evidence and runs the controller; no cached evidence is timed as live execution."
+  ],
+  "receipts": [
+    {
+      "bytes": 3925,
+      "completed_utc": "2026-11-23T18:45:40.932580+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/main-repeat0.json",
+      "sha256": "823e8a67bfdd4ac17622b88e919c00f093dd3aecc78f220762f3eec96005c2a1"
+    },
+    {
+      "bytes": 3922,
+      "completed_utc": "2026-11-23T18:45:41.338997+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/main-repeat1.json",
+      "sha256": "7142aaf54a1ce1091fc68ed1c2a4952ce77426f6a6eb739ce55d74ef41ca12c9"
+    },
+    {
+      "bytes": 3924,
+      "completed_utc": "2026-11-23T18:45:41.745935+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/main-repeat2.json",
+      "sha256": "c3c17982b70b453ed537941dd08dded7e4c0ecac2e4c7591462fe837b6fbe8ca"
+    },
+    {
+      "bytes": 5039,
+      "completed_utc": "2026-11-23T18:45:45.420124+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/fixed_verification-repeat0.json",
+      "sha256": "16bc0fde5ca4000da6444126fa227e3f1367c87dbe2545dd473c8b27fcecc464"
+    },
+    {
+      "bytes": 5037,
+      "completed_utc": "2026-11-23T18:45:47.116040+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/fixed_verification-repeat1.json",
+      "sha256": "df3027553932274d936fb8e3a70023395551827251e2bd6ac41df4c03dca62d3"
+    },
+    {
+      "bytes": 5036,
+      "completed_utc": "2026-11-23T18:45:48.760444+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/fixed_verification-repeat2.json",
+      "sha256": "51b822f347c08c9948d4250ac54e31bbf9bc0320b6004114af12bb570976a1e2"
+    },
+    {
+      "bytes": 4319,
+      "completed_utc": "2026-11-23T18:45:51.626918+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/heuristic_verification-repeat0.json",
+      "sha256": "14661468456cbf4159fc491163857ec6589e248e4c4246b35464208fe68e7740"
+    },
+    {
+      "bytes": 4317,
+      "completed_utc": "2026-11-23T18:45:53.047168+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/heuristic_verification-repeat1.json",
+      "sha256": "a3bc07cf71f22b593a382cd78232c3011e14854d4d8751a2f01d2c0a7842c938"
+    },
+    {
+      "bytes": 4322,
+      "completed_utc": "2026-11-23T18:45:54.356689+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/heuristic_verification-repeat2.json",
+      "sha256": "d406954b24579030e5ce00d6c120a106393c236c331d5761ec6cc5ad75792c79"
+    },
+    {
+      "bytes": 191995,
+      "completed_utc": "2026-11-23T18:46:23.383553+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/proposed_agent-repeat0.json",
+      "sha256": "994592f708807c2d144250f1e6b13e46487f789ef9d0e0c5fdd7189a32642f7c"
+    },
+    {
+      "bytes": 192088,
+      "completed_utc": "2026-11-23T18:46:34.623665+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/proposed_agent-repeat1.json",
+      "sha256": "71a61b570d3bb5d99efe2f1fd5e0096d2ddefee4b070c934ccd8d3aa58362fb4"
+    },
+    {
+      "bytes": 192155,
+      "completed_utc": "2026-11-23T18:46:45.930113+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/proposed_agent-repeat2.json",
+      "sha256": "2e2b416ba0eca582284961af279dbf58ef7d51409e2dd43c19cc422c63c6bdab"
+    },
+    {
+      "bytes": 179373,
+      "completed_utc": "2026-11-23T18:47:09.837918+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/agent_no_generation-repeat0.json",
+      "sha256": "a640a10c182ef90e778299d29c4e908411865f753a450149e3c26c2738b48cb3"
+    },
+    {
+      "bytes": 179371,
+      "completed_utc": "2026-11-23T18:47:19.617409+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/agent_no_generation-repeat1.json",
+      "sha256": "bfafc2bdb12ec17961029c14ca60f541a6fbc1324a6cbf42d699b065076ddded"
+    },
+    {
+      "bytes": 179372,
+      "completed_utc": "2026-11-23T18:47:29.396916+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "path": "results/raw/runtime_benchmark/agent_no_generation-repeat2.json",
+      "sha256": "b76d201de8a37331d253d2e88fe187715cba21f3b19eb7af6c13640d7b5761ec"
+    }
+  ],
+  "records": [
+    {
+      "canonical_policy_parity": [
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": false,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 0.0,
+          "max_calibrated_probability_abs_error": 1.1920928955078125e-07,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        },
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": false,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 0.0,
+          "max_calibrated_probability_abs_error": 1.1920928955078125e-07,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        },
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": false,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 0.0,
+          "max_calibrated_probability_abs_error": 1.1920928955078125e-07,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        }
+      ],
+      "clips_per_repetition": 32,
+      "generation_executed_clips": [
+        0,
+        0,
+        0
+      ],
+      "generation_queried_clips": [
+        0,
+        0,
+        0
+      ],
+      "measurement_kind": "warm_batch32_throughput",
+      "method": "main",
+      "milliseconds_per_clip": 7.12370252083853,
+      "milliseconds_per_clip_max": 7.261486781260373,
+      "milliseconds_per_clip_min": 7.033561875005034,
+      "milliseconds_per_clip_sd": 0.12120179962013163,
+      "mode": "live",
+      "peak_memory_mib": 526.98779296875,
+      "repetitions": 3,
+      "seed": 17,
+      "stage_seconds_mean": {
+        "final_detection_frozen_calibration_output_transfer": 0.0016006233333124935,
+        "initial_full_primary_features": 0.02397331666664589,
+        "raw_checksum_decode_transfer_cuda_resample": 0.20229439699990812
+      }
+    },
+    {
+      "canonical_policy_parity": [
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": false,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 0.0,
+          "max_calibrated_probability_abs_error": 1.1920928955078125e-07,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        },
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": false,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 0.0,
+          "max_calibrated_probability_abs_error": 1.1920928955078125e-07,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        },
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": false,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 0.0,
+          "max_calibrated_probability_abs_error": 1.1920928955078125e-07,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        }
+      ],
+      "clips_per_repetition": 32,
+      "generation_executed_clips": [
+        32,
+        32,
+        32
+      ],
+      "generation_queried_clips": [
+        32,
+        32,
+        32
+      ],
+      "measurement_kind": "warm_batch32_throughput",
+      "method": "fixed_verification",
+      "milliseconds_per_clip": 49.419770416667085,
+      "milliseconds_per_clip_max": 49.923451093775384,
+      "milliseconds_per_clip_min": 48.9865132812497,
+      "milliseconds_per_clip_sd": 0.47242218677081954,
+      "mode": "live",
+      "peak_memory_mib": 535.2236328125,
+      "repetitions": 3,
+      "seed": 17,
+      "stage_seconds_mean": {
+        "final_detection_frozen_calibration_output_transfer": 0.0020132573323886995,
+        "generator_sham_transforms_and_verification_heads": 1.360762264666846,
+        "initial_full_primary_features": 0.023700090666655644,
+        "raw_checksum_decode_transfer_cuda_resample": 0.19475291499960198
+      }
+    },
+    {
+      "canonical_policy_parity": [
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": false,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 0.0,
+          "max_calibrated_probability_abs_error": 1.1920928955078125e-07,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        },
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": false,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 0.0,
+          "max_calibrated_probability_abs_error": 1.1920928955078125e-07,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        },
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": false,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 0.0,
+          "max_calibrated_probability_abs_error": 1.1920928955078125e-07,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        }
+      ],
+      "clips_per_repetition": 32,
+      "generation_executed_clips": [
+        24,
+        24,
+        24
+      ],
+      "generation_queried_clips": [
+        7,
+        7,
+        7
+      ],
+      "measurement_kind": "warm_batch32_throughput",
+      "method": "heuristic_verification",
+      "milliseconds_per_clip": 38.988949885435886,
+      "milliseconds_per_clip_max": 39.6643744687708,
+      "milliseconds_per_clip_min": 38.389106937529505,
+      "milliseconds_per_clip_sd": 0.6409845994796657,
+      "mode": "live",
+      "peak_memory_mib": 535.2236328125,
+      "repetitions": 3,
+      "seed": 17,
+      "stage_seconds_mean": {
+        "final_detection_frozen_calibration_output_transfer": 0.0035590403337361445,
+        "generator_sham_transforms_and_verification_heads": 1.023344687334126,
+        "heuristic_query_detector_and_rule": 0.0010306870002144326,
+        "initial_full_primary_features": 0.023371165667413152,
+        "raw_checksum_decode_transfer_cuda_resample": 0.19612599733348665
+      }
+    },
+    {
+      "canonical_policy_parity": [
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": true,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 1.1324882507324219e-06,
+          "max_calibrated_probability_abs_error": 5.960464477539063e-08,
+          "max_delta_abs_error": 2.384185791015625e-06,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/policies/calibration/agent_seed17/all.json": "ed3d78e0051bbc6fad4fbc299ef4e1cecc0d9ee92c5bacc7dd4be929d27fd385",
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        },
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": true,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 1.1324882507324219e-06,
+          "max_calibrated_probability_abs_error": 5.960464477539063e-08,
+          "max_delta_abs_error": 2.384185791015625e-06,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/policies/calibration/agent_seed17/all.json": "ed3d78e0051bbc6fad4fbc299ef4e1cecc0d9ee92c5bacc7dd4be929d27fd385",
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        },
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": true,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 1.1324882507324219e-06,
+          "max_calibrated_probability_abs_error": 5.960464477539063e-08,
+          "max_delta_abs_error": 2.384185791015625e-06,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/policies/calibration/agent_seed17/all.json": "ed3d78e0051bbc6fad4fbc299ef4e1cecc0d9ee92c5bacc7dd4be929d27fd385",
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        }
+      ],
+      "clips_per_repetition": 32,
+      "generation_executed_clips": [
+        32,
+        32,
+        32
+      ],
+      "generation_queried_clips": [
+        32,
+        32,
+        32
+      ],
+      "measurement_kind": "warm_batch32_throughput",
+      "method": "proposed_agent",
+      "milliseconds_per_clip": 346.8691991979161,
+      "milliseconds_per_clip_max": 346.94701059373756,
+      "milliseconds_per_clip_min": 346.7398992812605,
+      "milliseconds_per_clip_sd": 0.11274783710680937,
+      "mode": "live",
+      "peak_memory_mib": 11644.19873046875,
+      "repetitions": 3,
+      "seed": 17,
+      "stage_seconds_mean": {
+        "acquired_view_full_feature_recomputation": 0.04709829533324713,
+        "controller_tokenization_generation_parse": 9.356320147332857,
+        "detector_state_and_final_record_construction": 0.10902571433265014,
+        "final_detection_frozen_calibration_output_transfer": 0.009838100000706618,
+        "generator_sham_transforms_and_verification_heads": 1.357769591334242,
+        "initial_full_primary_features": 0.02357472766683107,
+        "raw_checksum_decode_transfer_cuda_resample": 0.1955999386664189
+      }
+    },
+    {
+      "canonical_policy_parity": [
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": true,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 1.1324882507324219e-06,
+          "max_calibrated_probability_abs_error": 5.960464477539063e-08,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/policies/calibration/agent_no_generation_seed17/all.json": "57ed2bee930526883442eff7c13353308fb032573b38c98bcaaec591f214235e",
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        },
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": true,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 1.1324882507324219e-06,
+          "max_calibrated_probability_abs_error": 5.960464477539063e-08,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/policies/calibration/agent_no_generation_seed17/all.json": "57ed2bee930526883442eff7c13353308fb032573b38c98bcaaec591f214235e",
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        },
+        {
+          "absolute_tolerances": {
+            "base_logit_absolute": 0.0001,
+            "calibrated_probability_absolute": 1e-05,
+            "penalty_absolute": 1e-06,
+            "verification_delta_absolute": 0.0001
+          },
+          "action_difference_ids": [],
+          "action_evidence_audit_applicable": true,
+          "decision_difference_ids": [],
+          "interpretation": "Untimed comparison of actual live outputs with archived calibration; differences remain visible and do not alter measured timing",
+          "max_base_logit_abs_error": 1.1324882507324219e-06,
+          "max_calibrated_probability_abs_error": 5.960464477539063e-08,
+          "max_delta_abs_error": 0.0,
+          "max_penalty_abs_error": 0.0,
+          "reference_sha256": {
+            "results/raw/policies/calibration/agent_no_generation_seed17/all.json": "57ed2bee930526883442eff7c13353308fb032573b38c98bcaaec591f214235e",
+            "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+          },
+          "status": "matched",
+          "validity_difference_ids": []
+        }
+      ],
+      "clips_per_repetition": 32,
+      "generation_executed_clips": [
+        0,
+        0,
+        0
+      ],
+      "generation_queried_clips": [
+        0,
+        0,
+        0
+      ],
+      "measurement_kind": "warm_batch32_throughput",
+      "method": "agent_no_generation",
+      "milliseconds_per_clip": 299.37696470832026,
+      "milliseconds_per_clip_max": 299.59389681249604,
+      "milliseconds_per_clip_min": 299.07825631249807,
+      "milliseconds_per_clip_sd": 0.2673701604819107,
+      "mode": "live",
+      "peak_memory_mib": 11620.87255859375,
+      "repetitions": 3,
+      "seed": 17,
+      "stage_seconds_mean": {
+        "acquired_view_full_feature_recomputation": 0.048346694999660635,
+        "controller_tokenization_generation_parse": 9.2418864646667,
+        "detector_state_and_final_record_construction": 0.07430612900013027,
+        "final_detection_frozen_calibration_output_transfer": 0.0029450326661996464,
+        "initial_full_primary_features": 0.023743286333531916,
+        "raw_checksum_decode_transfer_cuda_resample": 0.18840057866691495
+      }
+    }
+  ],
+  "settings": {
+    "cohort_audio_sha256": {
+      "a2edee0ae52546117a79b772": "ef0444e064d6a6ce41a3d445407c77b9b40a8c683e18b4812eb4eb5f16081208",
+      "a3eb1bd5a97cdcc09b32c059": "5d342fc1927206bca6a8914732a0e149685cb6c258adab5d75ab926b996c6121",
+      "a46de988838f9c0c27ff2302": "9b68c43c3e2506b4826ebd20eb45f4205181a491f8589cb608da0b9b35855e8b",
+      "a47a11590762a7085aecd39b": "95831affa8d50c8b1bb99f3a6c56ad64371388db435b1e71e9a9d77b9e87823d",
+      "a5dbd2e036110306587fcdc7": "1ccb8616f104202cb0c2ceec5843341b99ce4e4110332f2d03452319c4431c89",
+      "a63b31fb40b0a0084a438c16": "3078b1b0fe961caa4edb4fa8ced8866e75b74a63aa4da9cdc96cd63816006f91",
+      "a6575078617f5e5f52ace59e": "7fe28bced07deddb09547a2fa7c7994e8052b00a3f822c1b87704943c037b702",
+      "a755d5f82bb49a33895b4fd8": "53bc35c52806941f5b127848c7e67592563b44cb6ca00a40b55637a98000bdba",
+      "a780a857f180b0e9c2bbc383": "18eccc84306352e1f4ceffce4d4ec7f7a19fa75bb29d1fb21b3223121b459c4b",
+      "a783a9c86e227bd0aaac2f36": "d2d87fe9ce7817e577f93be9ea9be3dbb8406a15ecace33ecd5b4a47767f7db4",
+      "a7fae88b1375d223da381e0d": "cb26abf2ef3cf5f7dea64494dddaf660a22440ca4bf6ed9923f2743436996f5f",
+      "a85ecb326b772485141a200d": "17683f2adf72db305810cb190c887472ea1ea797d54c16bed8105bab619c9de4",
+      "aa5664f4d9c2e5bc641148e7": "fc84cb101289b5c6abd8b4f56aa765fd8423c7286018b0e5bd22eaf89d75e457",
+      "ab07e8bba6c159afce59a597": "6da4fc5f254cec48103d53ff4695176742028a0e666ce0d112b9b86e41fd8e87",
+      "ab84c453c5d70129e69294ed": "c9a1d410b0c5ec468e505331a3d9b2d1d97d26d0d2d0bca5dff3300617d1e22b",
+      "ab8958a628f41ffded40aabf": "4ee1efe0906e74fa9be01804894f6d800aa94cc9028ecf9690efcb3338876ece",
+      "ac091b8da21696b4120b0908": "dc8fe730807a6606585093fa5830bf3c2953d8d7d53baf2d9203ef25f936008a",
+      "accc277eaad544d5f86bba5f": "efc0b50b8a726c042d56dffab685147ce66d547c2103bdb6632d5ba518fc9dd6",
+      "ad3dea29c09bd1e6077719de": "6a82fc5aa329ea8e831ee403b1d2640fd4d3f900a86a2632d671eb8a6e7b7624",
+      "ad6165337b94d0869f6d9a0a": "cc6d759a3d8d2be9ca8831365ebe7ad2068a18ee1d71e7902004fa93b4c5abc5",
+      "ad6ce04b3790997c44641113": "6d7bce3567e5f4f457b71de4b3538591da650f7efb630af82d2ea734e6cddc1c",
+      "ad7527bb449256c6a8092eec": "43ead654f390573658aafcf685132f8bdd983bc8fc85bd2158f99908635449d5",
+      "ad84a857a7a539a3e9d0a56d": "e7decdc92d35a766734f618e86d188a27f70cdeba2a213a00751a954ca5f13bd",
+      "ad8e0b85d2b00ff528c26898": "33426c0e844226c91c0b8f3feb00f60f5a5d29f983649094965d0e5b81d3a11d",
+      "ad946baefe83fba0c1404623": "6c67b7f294b205d39e437eca99b1e388457ffe49ff30584da2228f096e3b07e5",
+      "ada08991b4ee1518acb8a580": "57e8aa9461422eae08ccb688459bf691c5356e90ee64d4c4ba602da58e4ead1a",
+      "ae12aa855055d4baf8b127d8": "f0b1e1375ad6adf496b645e937a93b8dd5cea3c8821c24a38211dd58a0a78aa5",
+      "ae8cb7fe3e61a7d5a1a573c4": "cfb9705e8bdcfd686c4e85470d865248944c8252a10aca2a63d70252c5fffd5b",
+      "af5795b74d44be8474891c10": "6d75b3f43fa7a905a7ad3a0af06643c94b6ba369cbaf3b7f98276d59f3b35979",
+      "afe9f384eb315115c87e2ebd": "f4fed7bfdaf332ae64ee3cafaaaaab24c94280104c0cfdc95541f3afc62675b3",
+      "b06583456f02be1d4261e737": "9fd22843c90c0ce0930f43320a8e3e86859e3aeb3584e0f9062279fc558f21dc",
+      "b09be1bcca74a85589cf6e1c": "2ddabe61e066ffcd3f272d4cdc1bcdec6e871687b18c8c68a96cbccb76b38731"
+    },
+    "config": {
+      "acquisition_work": "Compute fullprimary152 initially and recompute fullprimary152 for clips requesting a new view; only acquired views affect predictions",
+      "batch_size": 32,
+      "cohort_ids": [
+        "a2edee0ae52546117a79b772",
+        "a3eb1bd5a97cdcc09b32c059",
+        "a46de988838f9c0c27ff2302",
+        "a47a11590762a7085aecd39b",
+        "a5dbd2e036110306587fcdc7",
+        "a63b31fb40b0a0084a438c16",
+        "a6575078617f5e5f52ace59e",
+        "a755d5f82bb49a33895b4fd8",
+        "a780a857f180b0e9c2bbc383",
+        "a783a9c86e227bd0aaac2f36",
+        "a7fae88b1375d223da381e0d",
+        "a85ecb326b772485141a200d",
+        "aa5664f4d9c2e5bc641148e7",
+        "ab07e8bba6c159afce59a597",
+        "ab84c453c5d70129e69294ed",
+        "ab8958a628f41ffded40aabf",
+        "ac091b8da21696b4120b0908",
+        "accc277eaad544d5f86bba5f",
+        "ad3dea29c09bd1e6077719de",
+        "ad6165337b94d0869f6d9a0a",
+        "ad6ce04b3790997c44641113",
+        "ad7527bb449256c6a8092eec",
+        "ad84a857a7a539a3e9d0a56d",
+        "ad8e0b85d2b00ff528c26898",
+        "ad946baefe83fba0c1404623",
+        "ada08991b4ee1518acb8a580",
+        "ae12aa855055d4baf8b127d8",
+        "ae8cb7fe3e61a7d5a1a573c4",
+        "af5795b74d44be8474891c10",
+        "afe9f384eb315115c87e2ebd",
+        "b06583456f02be1d4261e737",
+        "b09be1bcca74a85589cf6e1c"
+      ],
+      "cohort_selection": "Hash-select one complete production batch32 from canonical calibration manifest order; no outcome selection",
+      "cohort_start": 384,
+      "counterfactual_samples": 4,
+      "flow_batch_size": 8,
+      "flow_rng": "Preserve complete canonical8 microbatches and seed namespace+canonical_start",
+      "flow_seed_namespace": 7100000,
+      "flow_steps": 8,
+      "groups": [
+        "fourier",
+        "stft",
+        "wavelet"
+      ],
+      "heuristic_rule": "abs(sigmoid(raw_STFT_logit)-0.5)<0.3; query canonical verification blocks only for uncertain clips; main base if uncertain, STFT base otherwise; no Qwen",
+      "initial_view": "stft",
+      "max_actions": 3,
+      "max_verifications": 1,
+      "methods": [
+        "main",
+        "fixed_verification",
+        "heuristic_verification",
+        "proposed_agent",
+        "agent_no_generation"
+      ],
+      "peak_memory_scope": "Maximum allocated CUDA memory including method-resident detector bank and required flow/controller; all loaded detector heads retained and charged",
+      "planned_manifest_sha256": "be62767fad35a8dc782f9f6c64a2f2ba372974b7170012e7a18ce37049456ced",
+      "probe_seconds": [
+        0.75,
+        2.25
+      ],
+      "repetitions": 3,
+      "reporting_scope": "32 calibration clips, seed17, batch-throughput milliseconds per clip; not single-request latency or test-set accuracy",
+      "resample": {
+        "beta": 14.769656459379492,
+        "device": "cuda",
+        "lowpass_filter_width": 64,
+        "method": "sinc_interp_kaiser",
+        "rolloff": 0.9475937167399596
+      },
+      "sample_rate": 16000,
+      "schema_version": 2,
+      "scope_amendment": "Add prespecified heuristic_verification cost after real development results existed, before runtime or test outcomes; preserve four-method v1 configuration",
+      "seed": 17,
+      "split": "calibration",
+      "storage_scope": "Warm OS file cache allowed; no feature/intervention/policy cache serves timed evidence; no cold-disk claim",
+      "taper_samples": 160,
+      "timing_scope": "Wall time including verified raw-WAV I/O/decode, H2D transfer, CUDA resample/transforms/generation, tokenization, actual Qwen, scoring, calibration and final D2H output; excludes model loading and receipt commits",
+      "verification_work": "Generate all8 canonical companions on first verify in their block; cache only within this live batch; charge companion overhead",
+      "warmup_passes_per_method_per_process": 1
+    },
+    "controller_file_sha256": {
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/README.md": "8e3dd0c3b5b11897cc71092ccfe517bb7a9783479baa3665aad73c8d1a2041cd",
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/config.json": "5beea1a4a34c62782bfb2f911c606741a3bab8f92d80a118fa053c28af12e8ba",
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/generation_config.json": "835fffe355c9438e7a25be099b3fccaa98350b83451f9fd2d99512e74f1ade48",
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/model-00001-of-00003.safetensors": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6",
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/model-00002-of-00003.safetensors": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1",
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/model-00003-of-00003.safetensors": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d",
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/model.safetensors.index.json": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c",
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/tokenizer_config.json": "a62ff0a2472a0fa1b8eaabcb57c59b58afa42a22831dc141400b6e0cf2b65ce3",
+      "checkpoints/pretrained/Qwen--Qwen3-4B-Instruct-2507/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "cuda_version": "12.8",
+    "gpu": {
+      "excluded_gpu": "Quadro T2000 (4096 MiB)",
+      "execution_location": "local external GPU; no remote connection",
+      "gpu_name": "NVIDIA RTX 5000 Ada Generation",
+      "gpu_uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+      "host_link": "Authorized Sonnet Thunderbolt 3 connection; boltctl observed 40 Gb/s on 2026-11-23",
+      "minimum_memory_mib": 30000,
+      "observed_driver": "590.48.01",
+      "observed_memory_mib": 32760,
+      "observed_physical_index": 1,
+      "policy": "Pin the exact UUID, fail on identity or memory mismatch, and prohibit CPU fallback for research tensor computation. Physical device indices are informational only."
+    },
+    "model_sha256": {
+      "checkpoints/background_flow/final.pt": "e85c969fee9ddf3f3c70e837c1c03ce8a2c70d23fdec3e5006628a444a21e0c7",
+      "manifests/calibration.json": "4dbdd181afa3b405337f486b84ecd8d68b00a0e583246b24b09256f64cb29245",
+      "manifests/detector_index.json": "6dd624d165eb16ecb7a82168c2416a9af37df7f02f081b22e7fa6d27da3a4219",
+      "manifests/model_lock.json": "f9edfbb86b3d574af6f894e6118e1e488f395954a117de865899df1b5aca9e98"
+    },
+    "parity_reference_sha256": {
+      "results/raw/policies/calibration/agent_no_generation_seed17/all.json": "57ed2bee930526883442eff7c13353308fb032573b38c98bcaaec591f214235e",
+      "results/raw/policies/calibration/agent_no_generation_seed17/index.json": "ee979aa7e6974a7928a2652b43a2c676d19f671733898899acfc0389c36e5b11",
+      "results/raw/policies/calibration/agent_seed17/all.json": "ed3d78e0051bbc6fad4fbc299ef4e1cecc0d9ee92c5bacc7dd4be929d27fd385",
+      "results/raw/policies/calibration/agent_seed17/index.json": "30595aa64d06947325460e2c5c1f53fd575211bc6e3779d1d1d7be29bc8c7863",
+      "results/raw/real_predictions_calibration_seed17.pt": "55bf67311e04bc06d73412c84836e09938deda371f4d781c7ddf0a62316b6163"
+    },
+    "production_geometry": {
+      "calibration_intervention_index_sha256": "c5e7cc3133052d8f68f450ee75387e3ad033ea38e78eaa528caabae7272cce8f",
+      "canonical_flow_microbatch_size": 8,
+      "counterfactual_samples": 4,
+      "flow_steps": 8
+    },
+    "source_fingerprint": "e940f4ae0347e74b62779a08c91ae6e0fe2d9fe3ca8387a216b91972124ab0ef",
+    "torch_version": "2.9.0+cu128"
+  },
+  "setup_observations": [
+    {
+      "completed_utc": "2026-11-23T18:47:00.091506+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "method": "agent_no_generation",
+      "model_loading_seconds_excluded": 4.284820240000045,
+      "resident_allocated_mib_after_warmup": 7707.5595703125,
+      "warmup_seconds_excluded": 9.579425146001086
+    },
+    {
+      "completed_utc": "2026-11-23T18:45:43.731460+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "method": "fixed_verification",
+      "model_loading_seconds_excluded": 0.10462599499987846,
+      "resident_allocated_mib_after_warmup": 42.7978515625,
+      "warmup_seconds_excluded": 1.7230055319996609
+    },
+    {
+      "completed_utc": "2026-11-23T18:45:50.220514+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "method": "heuristic_verification",
+      "model_loading_seconds_excluded": 0.09878526700049406,
+      "resident_allocated_mib_after_warmup": 42.7978515625,
+      "warmup_seconds_excluded": 1.2249694239999371
+    },
+    {
+      "completed_utc": "2026-11-23T18:45:40.542793+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "method": "main",
+      "model_loading_seconds_excluded": 0.16320218100008788,
+      "resident_allocated_mib_after_warmup": 35.16748046875,
+      "warmup_seconds_excluded": 0.651781051999933
+    },
+    {
+      "completed_utc": "2026-11-23T18:46:12.087380+00:00",
+      "config_hash": "bee5497b2906b946f360f077abc89447c323f733e2d3360a6b91229b7b80691f",
+      "method": "proposed_agent",
+      "model_loading_seconds_excluded": 6.468621175999942,
+      "resident_allocated_mib_after_warmup": 7715.56494140625,
+      "warmup_seconds_excluded": 11.127233417000753
+    }
+  ],
+  "status": "complete"
+}

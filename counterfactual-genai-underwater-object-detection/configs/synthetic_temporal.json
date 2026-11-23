@@ -1,0 +1,58 @@
+{
+  "batch_size": 16,
+  "checkpoint_seconds": 120,
+  "checkpoint_steps": 100,
+  "data_namespaces": {
+    "development": 21000000,
+    "test": 31000000,
+    "train": 11000000
+  },
+  "development_scenes": 2000,
+  "epochs": 3,
+  "event_definition": "connected components of the exact union of received source masks",
+  "event_f1_score_threshold": 0.5,
+  "frame_grid": "equal-duration bins covering the full scene; occupancy-fraction targets",
+  "frame_loss_weight": 0.5,
+  "heldout_claim": "joint background/source/propagation shift, not an isolated causal family ablation",
+  "learning_rate": 0.0003,
+  "origin": "fully_synthetic",
+  "proposal_min_seconds": 0.128,
+  "proposal_nms_iou": 0.5,
+  "proposal_thresholds": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "sample_rate": 16000,
+  "schema_version": 1,
+  "seconds": 10,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "selection": "minimum development clip BCE plus 0.5 frame BCE; all three epochs",
+  "snr_definition": "per-source received RMS SNR over its own support, not total mixture SNR",
+  "source_claim": "harmonic/AM/chirp acoustic-like sources, not real vessel classes",
+  "temporal_iou_thresholds": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "test_families": [
+    "train",
+    "heldout"
+  ],
+  "test_scenes": 2000,
+  "test_snr_db": [
+    -15,
+    -10,
+    -5,
+    0,
+    5,
+    10,
+    20
+  ],
+  "train_scenes": 20000,
+  "weight_decay": 0.001
+}

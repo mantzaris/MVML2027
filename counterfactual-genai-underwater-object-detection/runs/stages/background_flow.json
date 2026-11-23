@@ -1,0 +1,55 @@
+{
+  "adopted_verified_existing_artifacts": true,
+  "command_hash": "cca90b3fdb87700ff9f2699e084773087882229d84cb0cfed765adc911cc5049",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/train_flow.py"
+    ]
+  ],
+  "completed_utc": "2026-11-23T17:17:22.827206+00:00",
+  "input_hash": "6cbcb29af032487f2962a93a19340f6ddf9783da79e06f218c0814d87d5b1c4f",
+  "inputs": {
+    "config_fields:configs/research.json:generator": "2d66860c3d2a5baac5d0ba359b58a30655dc0ceeaa910924dc24e7f183533b42",
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "scripts/train_flow.py": "8a343295d7fdda28c82de4550b3207a37792364e5909408561eedbb19a15737d",
+    "src/uac/models.py": "a714436319bd7edeb921fe8cd48e09b36abfdd702ad5f27ab6236f594ba32f37",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5",
+    "src/uac/synthetic.py": "52e06fc052bf53199bdc53ab92e291ddb80f656356e7ebb8edbf69c99e1e764d",
+    "src/uac/training.py": "b9fb622a9f6e8b7effe474d848c49d201529d313d12edfb7b2bfa41111def435"
+  },
+  "migration": {
+    "evidence": {
+      "basis": "native completion artifacts revalidated",
+      "evidence_sha256": {
+        "checkpoints/background_flow/resume/generation-1795452440357435754-38f68131.json": "a8a35dfb1c28915b26a4e85c3886ba2888d374a7a24e023ed0a8f2c0c461111b",
+        "runs/background_flow_complete.json": "c3a5261b0202f83cbd171129324321e816ba2b3d86c607894c7f45368d84edfa"
+      },
+      "expanded_dependencies": "first pinned at migration/adoption; no retrospective source-hash claim",
+      "historical_scope": "native recorded core configuration/code/data only",
+      "native_receipts": [
+        "runs/background_flow_complete.json"
+      ],
+      "verified_checkpoint_metadata": [
+        "checkpoints/background_flow/resume/generation-1795452440357435754-38f68131.json"
+      ]
+    },
+    "migrated_utc": "2026-11-23T17:29:10.881241+00:00",
+    "original_receipt": "runs/stages/migration_originals/background_flow.280a36caad1fe55e95d99c221286f33c0500e4b53210ad88e41b584eddef96b7.json",
+    "original_receipt_sha256": "280a36caad1fe55e95d99c221286f33c0500e4b53210ad88e41b584eddef96b7",
+    "reason": "Legacy receipt had output and command hashes but no stage input signature"
+  },
+  "outputs": {
+    "checkpoints/background_flow/final.pt": "e85c969fee9ddf3f3c70e837c1c03ce8a2c70d23fdec3e5006628a444a21e0c7",
+    "manifests/background_flow_validation.json": "cad89b7a9762fb87310e9d16a12c0e1a72d24fc127c12398738149c48f1e7f18"
+  },
+  "schema_version": 2,
+  "stage": "background_flow",
+  "supervisor_sha256": "cf61372f4957f942357fb01734029d61567b5ade9fe13c208d37aa6accb71c09"
+}

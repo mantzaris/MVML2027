@@ -1,0 +1,1837 @@
+{
+  "data_fingerprint": "be62767fad35a8dc782f9f6c64a2f2ba372974b7170012e7a18ce37049456ced",
+  "dispersion": 0.5,
+  "fit_split": "calibration",
+  "invalid_or_unqueried_verification": "return calibrated acquired-subset base detector",
+  "operating_fpr_target": 0.01,
+  "penalty": 0.1,
+  "seeds": {
+    "17": {
+      "base": {
+        "augmentation": {
+          "bce": 0.6855032444000244,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": 0.0016320336144417524,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.6900445818901062
+          ],
+          "scale": [
+            4.3645501136779785
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.25157052278518677
+          ]
+        },
+        "classical_energy": {
+          "bce": 0.6778303980827332,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": 0.0008527317550033331,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -9.713804244995117
+          ],
+          "scale": [
+            1.3172813653945923
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.35604286193847656
+          ]
+        },
+        "cnn": {
+          "bce": 0.6859578490257263,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.0007747789495624602,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.36373642086982727
+          ],
+          "scale": [
+            1.6716430187225342
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.2415255755186081
+          ]
+        },
+        "foundation": {
+          "bce": 0.6813315153121948,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.00014174012176226825,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.18649402260780334
+          ],
+          "scale": [
+            1.0096358060836792
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.3109906017780304
+          ]
+        },
+        "fourier": {
+          "bce": 0.6467495560646057,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.014765575528144836,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -1.2269480228424072
+          ],
+          "scale": [
+            3.703294515609741
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.6564934253692627
+          ]
+        },
+        "fourier_stft": {
+          "bce": 0.6663453578948975,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.004886757582426071,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.5924828052520752
+          ],
+          "scale": [
+            3.027445077896118
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.48067614436149597
+          ]
+        },
+        "fourier_wavelet": {
+          "bce": 0.6501283645629883,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.013022352941334248,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.8957028388977051
+          ],
+          "scale": [
+            2.8699886798858643
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.6261595487594604
+          ]
+        },
+        "hht_exploratory": {
+          "bce": 0.6697612404823303,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.004325798712670803,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.371945858001709
+          ],
+          "scale": [
+            2.909534215927124
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.4447019100189209
+          ]
+        },
+        "main": {
+          "bce": 0.6612246632575989,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.006616262719035149,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.7298118472099304
+          ],
+          "scale": [
+            3.00801682472229
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5262636542320251
+          ]
+        },
+        "stft": {
+          "bce": 0.6750391721725464,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.003680434776470065,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.31774866580963135
+          ],
+          "scale": [
+            2.770440101623535
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.3896457850933075
+          ]
+        },
+        "stft_wavelet": {
+          "bce": 0.6692802309989929,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.003109664423391223,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.5731983184814453
+          ],
+          "scale": [
+            3.185831308364868
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.4498786926269531
+          ]
+        },
+        "wavelet": {
+          "bce": 0.6637431979179382,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.005939512047916651,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -1.0310546159744263
+          ],
+          "scale": [
+            2.76316499710083
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5036048293113708
+          ]
+        }
+      },
+      "thresholds": {
+        "agent_no_generation": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6714026331901551
+        },
+        "agent_validity_only": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7166742682456971
+        },
+        "augmentation": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6616908311843873
+        },
+        "classical_energy": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6904550194740297
+        },
+        "cnn": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.5817860364913942
+        },
+        "fixed_validity_only": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7166742682456971
+        },
+        "fixed_verification": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7165218591690065
+        },
+        "foundation": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6438828110694886
+        },
+        "fourier": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6912895441055299
+        },
+        "fourier_stft": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6549878716468812
+        },
+        "fourier_wavelet": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6806917190551759
+        },
+        "full_record_null": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6689819097518922
+        },
+        "heuristic_verification": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7696399688720704
+        },
+        "hht_exploratory": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6449663043022157
+        },
+        "main": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6714026331901551
+        },
+        "no_dispersion": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7172689437866212
+        },
+        "no_null_adjustment": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7201138734817506
+        },
+        "no_penalty": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7158052921295167
+        },
+        "proposed_agent": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7165218591690065
+        },
+        "stft": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6253620386123658
+        },
+        "stft_wavelet": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.646655023097992
+        },
+        "wavelet": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6687996387481691
+        }
+      },
+      "verification": {
+        "agent_validity_only": {
+          "bce": 0.6405435800552368,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.3928675055503845,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.12717489898204803,
+            0.0
+          ],
+          "scale": [
+            2.7783701419830322,
+            9.999999974752427e-07
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5593909621238708,
+            0.04596647247672081
+          ]
+        },
+        "fixed_validity_only": {
+          "bce": 0.6405435800552368,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.3928675055503845,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.12717491388320923,
+            0.0
+          ],
+          "scale": [
+            2.7783701419830322,
+            9.999999974752427e-07
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5593909621238708,
+            0.04596647247672081
+          ]
+        },
+        "fixed_verification": {
+          "bce": 0.640268862247467,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.3935631513595581,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.12717491388320923,
+            0.2230709195137024
+          ],
+          "scale": [
+            2.7783701419830322,
+            1.182382345199585
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.4768379330635071,
+            0.10370128601789474
+          ]
+        },
+        "full_record_null": {
+          "bce": 0.6615874171257019,
+          "calibration_rows": 600,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": -0.005912505090236664,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.7298118472099304,
+            -1.0067510604858398
+          ],
+          "scale": [
+            3.00801682472229,
+            1.7561254501342773
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.4955099821090698,
+            0.04708287864923477
+          ]
+        },
+        "heuristic_verification": {
+          "bce": 0.576400101184845,
+          "calibration_rows": 98,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.9981800317764282,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.02938600443303585,
+            0.13562820851802826
+          ],
+          "scale": [
+            1.3824740648269653,
+            0.8655736446380615
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.35347768664360046,
+            0.039047446101903915
+          ]
+        },
+        "no_dispersion": {
+          "bce": 0.6406885981559753,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.3933030664920807,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.12717491388320923,
+            0.37302595376968384
+          ],
+          "scale": [
+            2.7783701419830322,
+            1.1621993780136108
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5022069811820984,
+            0.07137810438871384
+          ]
+        },
+        "no_null_adjustment": {
+          "bce": 0.6413565278053284,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.3925955295562744,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.12717491388320923,
+            -0.1526435911655426
+          ],
+          "scale": [
+            2.7783701419830322,
+            2.174329996109009
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5348035097122192,
+            0.026298660784959793
+          ]
+        },
+        "no_penalty": {
+          "bce": 0.6401405334472656,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.393669068813324,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.12717491388320923,
+            0.2501823604106903
+          ],
+          "scale": [
+            2.7783701419830322,
+            1.186623215675354
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.46835482120513916,
+            0.11407779157161713
+          ]
+        },
+        "proposed_agent": {
+          "bce": 0.640268862247467,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.3935631513595581,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.12717489898204803,
+            0.2230709195137024
+          ],
+          "scale": [
+            2.7783701419830322,
+            1.182382345199585
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.47683799266815186,
+            0.10370127111673355
+          ]
+        }
+      }
+    },
+    "29": {
+      "base": {
+        "augmentation": {
+          "bce": 0.6879404783248901,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": 0.0008026270661503077,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.11971453577280045
+          ],
+          "scale": [
+            3.2057368755340576
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.20618225634098053
+          ]
+        },
+        "classical_energy": {
+          "bce": 0.6778303980827332,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": 0.0008527317550033331,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -9.713804244995117
+          ],
+          "scale": [
+            1.3172813653945923
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.35604286193847656
+          ]
+        },
+        "cnn": {
+          "bce": 0.6805949807167053,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.0003486309142317623,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.13594229519367218
+          ],
+          "scale": [
+            2.5443222522735596
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.32056576013565063
+          ]
+        },
+        "foundation": {
+          "bce": 0.6885780096054077,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": 6.395277159754187e-05,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.25699955224990845
+          ],
+          "scale": [
+            0.8877102136611938
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.19195522367954254
+          ]
+        },
+        "fourier": {
+          "bce": 0.6611951589584351,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.005671266932040453,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.6676434874534607
+          ],
+          "scale": [
+            2.982919931411743
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5280521512031555
+          ]
+        },
+        "fourier_stft": {
+          "bce": 0.667104184627533,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.0018510648515075445,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.9076938033103943
+          ],
+          "scale": [
+            2.691807508468628
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.4699503183364868
+          ]
+        },
+        "fourier_wavelet": {
+          "bce": 0.6422524452209473,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.011234854348003864,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.9641098976135254
+          ],
+          "scale": [
+            3.3153250217437744
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.6824005842208862
+          ]
+        },
+        "hht_exploratory": {
+          "bce": 0.6650007367134094,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.006994717754423618,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.3325294852256775
+          ],
+          "scale": [
+            3.4867501258850098
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.4921042323112488
+          ]
+        },
+        "main": {
+          "bce": 0.6584675908088684,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.003637396264821291,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.640277624130249
+          ],
+          "scale": [
+            2.6559932231903076
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5486641526222229
+          ]
+        },
+        "stft": {
+          "bce": 0.660640299320221,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.004020296037197113,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.9838613867759705
+          ],
+          "scale": [
+            3.0959060192108154
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5304358005523682
+          ]
+        },
+        "stft_wavelet": {
+          "bce": 0.6522032022476196,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.005148386117070913,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.9287191033363342
+          ],
+          "scale": [
+            3.2230043411254883
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.6024439334869385
+          ]
+        },
+        "wavelet": {
+          "bce": 0.6526557803153992,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.004800362978130579,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -1.1094690561294556
+          ],
+          "scale": [
+            2.6059398651123047
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5980247259140015
+          ]
+        }
+      },
+      "thresholds": {
+        "agent_no_generation": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.681563436985016
+        },
+        "agent_validity_only": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6874447464942933
+        },
+        "augmentation": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6454226374626161
+        },
+        "classical_energy": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6904550194740297
+        },
+        "cnn": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6341103911399842
+        },
+        "fixed_validity_only": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6874446868896485
+        },
+        "fixed_verification": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.71335107088089
+        },
+        "foundation": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.5927186012268068
+        },
+        "fourier": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6704557538032533
+        },
+        "fourier_stft": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6783615946769715
+        },
+        "fourier_wavelet": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7265544533729554
+        },
+        "full_record_null": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6928262114524842
+        },
+        "heuristic_verification": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6961759924888612
+        },
+        "hht_exploratory": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6466402411460878
+        },
+        "main": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.681563436985016
+        },
+        "no_dispersion": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7093014121055604
+        },
+        "no_null_adjustment": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6847450733184816
+        },
+        "no_penalty": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7143877148628236
+        },
+        "proposed_agent": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.71335107088089
+        },
+        "stft": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6961759924888612
+        },
+        "stft_wavelet": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6933405399322511
+        },
+        "wavelet": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7070322036743165
+        }
+      },
+      "verification": {
+        "agent_validity_only": {
+          "bce": 0.653964638710022,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.38691383600234985,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.6303940415382385,
+            0.0
+          ],
+          "scale": [
+            2.6088383197784424,
+            9.999999974752427e-07
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.4307044446468353,
+            0.04596647247672081
+          ]
+        },
+        "fixed_validity_only": {
+          "bce": 0.653964638710022,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.38691383600234985,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.6303940415382385,
+            0.0
+          ],
+          "scale": [
+            2.6088383197784424,
+            9.999999974752427e-07
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.4307044446468353,
+            0.04596647247672081
+          ]
+        },
+        "fixed_verification": {
+          "bce": 0.6500741243362427,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.38855981826782227,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.6303940415382385,
+            0.08786940574645996
+          ],
+          "scale": [
+            2.6088383197784424,
+            1.3543262481689453
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.15721197426319122,
+            0.3290492296218872
+          ]
+        },
+        "full_record_null": {
+          "bce": 0.6588659286499023,
+          "calibration_rows": 600,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": -0.002438789000734687,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.640277624130249,
+            -1.3938242197036743
+          ],
+          "scale": [
+            2.6559932231903076,
+            1.9701440334320068
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5030025839805603,
+            0.05545799434185028
+          ]
+        },
+        "heuristic_verification": {
+          "bce": 0.6585245132446289,
+          "calibration_rows": 66,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.5597439408302307,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.21652810275554657,
+            -0.13703668117523193
+          ],
+          "scale": [
+            0.9441801309585571,
+            0.8982212543487549
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.017893629148602486,
+            0.019631370902061462
+          ]
+        },
+        "no_dispersion": {
+          "bce": 0.6515359282493591,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.38821715116500854,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.6303940415382385,
+            0.2599634826183319
+          ],
+          "scale": [
+            2.6088383197784424,
+            1.3004318475723267
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.20827557146549225,
+            0.26498860120773315
+          ]
+        },
+        "no_null_adjustment": {
+          "bce": 0.6537710428237915,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.38590413331985474,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.6303940415382385,
+            -0.14769916236400604
+          ],
+          "scale": [
+            2.6088383197784424,
+            2.072706460952759
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.29221296310424805,
+            0.1508503258228302
+          ]
+        },
+        "no_penalty": {
+          "bce": 0.649587869644165,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.38880062103271484,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.6303940415382385,
+            0.11498083919286728
+          ],
+          "scale": [
+            2.6088383197784424,
+            1.358404278755188
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.14284154772758484,
+            0.3473889231681824
+          ]
+        },
+        "proposed_agent": {
+          "bce": 0.6500741243362427,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.38855981826782227,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.6303940415382385,
+            0.08786940574645996
+          ],
+          "scale": [
+            2.6088383197784424,
+            1.3543262481689453
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.15721192955970764,
+            0.329049289226532
+          ]
+        }
+      }
+    },
+    "43": {
+      "base": {
+        "augmentation": {
+          "bce": 0.6892068386077881,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": 0.0007108749123290181,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.27271145582199097
+          ],
+          "scale": [
+            3.0003662109375
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.17955173552036285
+          ]
+        },
+        "classical_energy": {
+          "bce": 0.6778303980827332,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": 0.0008527317550033331,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -9.713804244995117
+          ],
+          "scale": [
+            1.3172813653945923
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.35604286193847656
+          ]
+        },
+        "cnn": {
+          "bce": 0.684057354927063,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.000445701734861359,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.6790284514427185
+          ],
+          "scale": [
+            2.5032143592834473
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.27157267928123474
+          ]
+        },
+        "foundation": {
+          "bce": 0.690628707408905,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -2.52358822763199e-05,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.1225835308432579
+          ],
+          "scale": [
+            0.7899169921875
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.14228929579257965
+          ]
+        },
+        "fourier": {
+          "bce": 0.6540060639381409,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.00487926509231329,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.9196504950523376
+          ],
+          "scale": [
+            4.583988666534424
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5910511016845703
+          ]
+        },
+        "fourier_stft": {
+          "bce": 0.6813966631889343,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.0015358886448666453,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.4305230677127838
+          ],
+          "scale": [
+            2.495331287384033
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.31096985936164856
+          ]
+        },
+        "fourier_wavelet": {
+          "bce": 0.6470966339111328,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.007653188891708851,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.8751201629638672
+          ],
+          "scale": [
+            2.8738601207733154
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.6440941095352173
+          ]
+        },
+        "hht_exploratory": {
+          "bce": 0.6765415072441101,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.0026811426505446434,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.4274124205112457
+          ],
+          "scale": [
+            3.0173723697662354
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.3716493546962738
+          ]
+        },
+        "main": {
+          "bce": 0.6795559525489807,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.0021469853818416595,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.5720674991607666
+          ],
+          "scale": [
+            2.2245960235595703
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.335511177778244
+          ]
+        },
+        "stft": {
+          "bce": 0.6601875424385071,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.00585571676492691,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -1.425077199935913
+          ],
+          "scale": [
+            4.3915934562683105
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5339367985725403
+          ]
+        },
+        "stft_wavelet": {
+          "bce": 0.6825225353240967,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.0016935563180595636,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.49385595321655273
+          ],
+          "scale": [
+            2.3990461826324463
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.29556769132614136
+          ]
+        },
+        "wavelet": {
+          "bce": 0.6566985845565796,
+          "calibration_rows": 600,
+          "feature_count": 1,
+          "fit_device": "cuda",
+          "intercept": -0.007845520041882992,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -1.1483471393585205
+          ],
+          "scale": [
+            2.4100725650787354
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.5649987459182739
+          ]
+        }
+      },
+      "thresholds": {
+        "agent_no_generation": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6181027293205262
+        },
+        "agent_validity_only": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6591905355453492
+        },
+        "augmentation": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6315264701843263
+        },
+        "classical_energy": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6904550194740297
+        },
+        "cnn": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6031374335289003
+        },
+        "fixed_validity_only": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.659190595149994
+        },
+        "fixed_verification": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7073973417282106
+        },
+        "foundation": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.5670549869537355
+        },
+        "fourier": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6882673501968385
+        },
+        "fourier_stft": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.600908935070038
+        },
+        "fourier_wavelet": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6980435252189637
+        },
+        "full_record_null": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6388010382652284
+        },
+        "heuristic_verification": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.709059774875641
+        },
+        "hht_exploratory": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6204362511634828
+        },
+        "main": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6181027293205262
+        },
+        "no_dispersion": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7182180285453797
+        },
+        "no_null_adjustment": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6875461339950563
+        },
+        "no_penalty": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7092037796974183
+        },
+        "proposed_agent": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.7073973417282106
+        },
+        "stft": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6614099144935609
+        },
+        "stft_wavelet": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6029070019721986
+        },
+        "wavelet": {
+          "calibration_fpr": 0.01,
+          "calibration_negative_count": 300,
+          "population_guarantee": false,
+          "target_fpr": 0.01,
+          "threshold": 0.6811455488204957
+        }
+      },
+      "verification": {
+        "agent_validity_only": {
+          "bce": 0.6690976619720459,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.37873005867004395,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.1849667876958847,
+            0.0
+          ],
+          "scale": [
+            2.0447311401367188,
+            9.999999974752427e-07
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.23653538525104523,
+            0.04596647247672081
+          ]
+        },
+        "fixed_validity_only": {
+          "bce": 0.6690976619720459,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.37873005867004395,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.18496675789356232,
+            0.0
+          ],
+          "scale": [
+            2.0447311401367188,
+            9.999999974752427e-07
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.23653538525104523,
+            0.04596647247672081
+          ]
+        },
+        "fixed_verification": {
+          "bce": 0.6589522361755371,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.3838750720024109,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.18496675789356232,
+            0.11064396798610687
+          ],
+          "scale": [
+            2.0447311401367188,
+            1.3395864963531494
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.04168323799967766,
+            0.3541901707649231
+          ]
+        },
+        "full_record_null": {
+          "bce": 0.6790676116943359,
+          "calibration_rows": 600,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": -0.00105240975972265,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            -0.5720674991607666,
+            -0.8953975439071655
+          ],
+          "scale": [
+            2.2245960235595703,
+            2.1171300411224365
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.25850656628608704,
+            0.10818127542734146
+          ]
+        },
+        "heuristic_verification": {
+          "bce": 0.64084392786026,
+          "calibration_rows": 65,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.6164016723632812,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.08771650493144989,
+            0.10023137181997299
+          ],
+          "scale": [
+            0.8978577852249146,
+            0.7919374704360962
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.012310526333749294,
+            0.31825166940689087
+          ]
+        },
+        "no_dispersion": {
+          "bce": 0.6581191420555115,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.3854692876338959,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.18496675789356232,
+            0.37926387786865234
+          ],
+          "scale": [
+            2.0447311401367188,
+            1.3471949100494385
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.03950939327478409,
+            0.36558854579925537
+          ]
+        },
+        "no_null_adjustment": {
+          "bce": 0.6614576578140259,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.38158920407295227,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.18496675789356232,
+            -0.4293249845504761
+          ],
+          "scale": [
+            2.0447311401367188,
+            2.8810343742370605
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.043275170028209686,
+            0.3164856731891632
+          ]
+        },
+        "no_penalty": {
+          "bce": 0.6583505272865295,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.384196937084198,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.18496675789356232,
+            0.13775542378425598
+          ],
+          "scale": [
+            2.0447311401367188,
+            1.3427131175994873
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.03993699327111244,
+            0.3626996576786041
+          ]
+        },
+        "proposed_agent": {
+          "bce": 0.6589522361755371,
+          "calibration_rows": 270,
+          "feature_count": 2,
+          "fit_device": "cuda",
+          "intercept": 0.3838750720024109,
+          "l2": 0.0001,
+          "learning_rate": 0.03,
+          "mean": [
+            0.1849667876958847,
+            0.11064396798610687
+          ],
+          "scale": [
+            2.0447311401367188,
+            1.3395864963531494
+          ],
+          "steps": 600,
+          "type": "positive_logistic_v1",
+          "weights": [
+            0.04168323427438736,
+            0.3541901707649231
+          ]
+        }
+      }
+    }
+  }
+}

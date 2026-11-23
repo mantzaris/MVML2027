@@ -1,0 +1,43 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "bb363902f6a8fd651455c9f1aea097487ebd7676a2ff7350340ee520c4bb24f2",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/generate_interventions.py",
+      "--split",
+      "test",
+      "--probe",
+      "central"
+    ]
+  ],
+  "completed_utc": "2026-11-23T18:51:38.555956+00:00",
+  "input_hash": "611b7d77c1afe635f03833a6332c040ab5892e07f452b41c2f8bfb17dd81b90c",
+  "inputs": {
+    "checkpoints/background_flow/final.pt": "e85c969fee9ddf3f3c70e837c1c03ce8a2c70d23fdec3e5006628a444a21e0c7",
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "configs/research.json": "a7654d700844e87b6edecb92eca8ce6d0afd4568c79f9dd1f4e277534b660f1b",
+    "data/features/real/test/index.json": "c2092d90ff88683b88a573aa9e75f4e6b23d0e6f1d7b53ab30f683e0ad9a1882",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "runs/test_freeze.json": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+    "scripts/generate_interventions.py": "07e695fd40d78b09a4fdbe40c9eaa659911f6455507bbe0f7c94e15d1746e105",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "src/uac/dsp.py": "92df06b143300987e08cc0d28c3b5e127b36aca69e72f33498d211fa47f160f1",
+    "src/uac/models.py": "a714436319bd7edeb921fe8cd48e09b36abfdd702ad5f27ab6236f594ba32f37",
+    "src/uac/protocol.py": "a8b0e163fbcd370c0c1ba7840b2a570ef215a13bf54d5dc81d9073f544522c38",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5",
+    "src/uac/training.py": "b9fb622a9f6e8b7effe474d848c49d201529d313d12edfb7b2bfa41111def435",
+    "src/uac/verification.py": "3720ca8efa561fcf78a2ad23347eeab6141f6c4fc42b698cbbf06acce4302645"
+  },
+  "outputs": {
+    "data/interventions/test/index.json": "184743d66eb7f25ddfc65ab4e317cb1e8fb357f0b78b1b1b97918679e944c4a7"
+  },
+  "schema_version": 2,
+  "stage": "interventions_test_central",
+  "supervisor_sha256": "dab0b3d5173fe277fdfd4a590dddbf8f62149bacea5f96849b547361eabf2b78"
+}

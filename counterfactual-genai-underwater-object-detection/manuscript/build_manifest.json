@@ -1,0 +1,332 @@
+{
+  "development_policy_description": {
+    "description": "All 2,205 development clip-seed decisions followed wavelet then fourier then verify. The observed controller therefore behaved as a fixed acquisition sequence; these traces do not establish evidence-dependent adaptation or a reasoning benefit.",
+    "n": 2205,
+    "path_counts": [
+      {
+        "actions": [
+          "wavelet",
+          "fourier",
+          "verify"
+        ],
+        "n": 2205
+      }
+    ],
+    "source_sha256": {
+      "results/raw/policies/development/agent_seed17/all.json": "4e082431db8daf471c1de75bf7d2e04208ed6e8eefd1d69b308e0ece2c428e28",
+      "results/raw/policies/development/agent_seed29/all.json": "64e1650f83da21e26a895e25518a650264853c10fe720899f14250ef081420a8",
+      "results/raw/policies/development/agent_seed43/all.json": "a389fba48ae3ba90929580e96df385ea57ac50d12da0f58bd0fd2eb22b00eb20"
+    }
+  },
+  "independent_test_audit": {
+    "methods": {
+      "agent_no_generation": {
+        "ensemble_ap": 0.619527213517946,
+        "mean_seed_ap": 0.6159209746671324,
+        "method": "agent_no_generation",
+        "per_seed_ap": {
+          "17": 0.6402415411287045,
+          "29": 0.5816817781081958,
+          "43": 0.6258396047644967
+        }
+      },
+      "agent_validity_only": {
+        "ensemble_ap": 0.5995088472748016,
+        "mean_seed_ap": 0.5945473710971095,
+        "method": "agent_validity_only",
+        "per_seed_ap": {
+          "17": 0.6244125631544295,
+          "29": 0.5716198944704947,
+          "43": 0.5876096556664046
+        }
+      },
+      "augmentation": {
+        "ensemble_ap": 0.6189232394962609,
+        "mean_seed_ap": 0.6133440491621115,
+        "method": "augmentation",
+        "per_seed_ap": {
+          "17": 0.6390367780773396,
+          "29": 0.6150344576502322,
+          "43": 0.5859609117587626
+        }
+      },
+      "classical_energy": {
+        "ensemble_ap": 0.6258392603050749,
+        "mean_seed_ap": 0.6258392603050751,
+        "method": "classical_energy",
+        "per_seed_ap": {
+          "17": 0.6258392603050751,
+          "29": 0.6258392603050751,
+          "43": 0.6258392603050751
+        }
+      },
+      "cnn": {
+        "ensemble_ap": 0.669191200709769,
+        "mean_seed_ap": 0.6653542149747768,
+        "method": "cnn",
+        "per_seed_ap": {
+          "17": 0.6772500682748661,
+          "29": 0.657106853887107,
+          "43": 0.6617057227623572
+        }
+      },
+      "fixed_validity_only": {
+        "ensemble_ap": 0.5995088472748016,
+        "mean_seed_ap": 0.5945481697989823,
+        "method": "fixed_validity_only",
+        "per_seed_ap": {
+          "17": 0.6244149592600475,
+          "29": 0.5716198944704947,
+          "43": 0.5876096556664046
+        }
+      },
+      "fixed_verification": {
+        "ensemble_ap": 0.5737876266794422,
+        "mean_seed_ap": 0.5728592211198748,
+        "method": "fixed_verification",
+        "per_seed_ap": {
+          "17": 0.6170359542813042,
+          "29": 0.5504763998780038,
+          "43": 0.5510653092003164
+        }
+      },
+      "foundation": {
+        "ensemble_ap": 0.5695970946822314,
+        "mean_seed_ap": 0.5655003547149738,
+        "method": "foundation",
+        "per_seed_ap": {
+          "17": 0.5770487995780962,
+          "29": 0.5513689924631814,
+          "43": 0.568083272103644
+        }
+      },
+      "fourier": {
+        "ensemble_ap": 0.6018133611121268,
+        "mean_seed_ap": 0.6006917141697704,
+        "method": "fourier",
+        "per_seed_ap": {
+          "17": 0.5899599665274221,
+          "29": 0.5903583608808312,
+          "43": 0.6217568151010581
+        }
+      },
+      "fourier_stft": {
+        "ensemble_ap": 0.6155386215248235,
+        "mean_seed_ap": 0.613555033182862,
+        "method": "fourier_stft",
+        "per_seed_ap": {
+          "17": 0.6326837804582122,
+          "29": 0.5946865507791173,
+          "43": 0.6132947683112564
+        }
+      },
+      "fourier_wavelet": {
+        "ensemble_ap": 0.6024443027607165,
+        "mean_seed_ap": 0.5994235894448402,
+        "method": "fourier_wavelet",
+        "per_seed_ap": {
+          "17": 0.6271346488046624,
+          "29": 0.5968028892765804,
+          "43": 0.5743332302532778
+        }
+      },
+      "full_record_null": {
+        "ensemble_ap": 0.6207103767681327,
+        "mean_seed_ap": 0.6169306288277332,
+        "method": "full_record_null",
+        "per_seed_ap": {
+          "17": 0.6396575043544737,
+          "29": 0.582692520039919,
+          "43": 0.6284418620888068
+        }
+      },
+      "heuristic_verification": {
+        "ensemble_ap": 0.5695985194463642,
+        "mean_seed_ap": 0.57501694961819,
+        "method": "heuristic_verification",
+        "per_seed_ap": {
+          "17": 0.5594127996838033,
+          "29": 0.5648420833126263,
+          "43": 0.6007959658581407
+        }
+      },
+      "hht_exploratory": {
+        "ensemble_ap": 0.694880432021683,
+        "mean_seed_ap": 0.6929013142394017,
+        "method": "hht_exploratory",
+        "per_seed_ap": {
+          "17": 0.69655196283048,
+          "29": 0.6717713592608314,
+          "43": 0.7103806206268936
+        }
+      },
+      "main": {
+        "ensemble_ap": 0.619818517021206,
+        "mean_seed_ap": 0.6160455027671085,
+        "method": "main",
+        "per_seed_ap": {
+          "17": 0.6406151254286327,
+          "29": 0.5816817781081958,
+          "43": 0.6258396047644967
+        }
+      },
+      "no_dispersion": {
+        "ensemble_ap": 0.5775394719361886,
+        "mean_seed_ap": 0.5754221590828447,
+        "method": "no_dispersion",
+        "per_seed_ap": {
+          "17": 0.6202399672818434,
+          "29": 0.5519952568877544,
+          "43": 0.5540312530789361
+        }
+      },
+      "no_null_adjustment": {
+        "ensemble_ap": 0.5896320659925226,
+        "mean_seed_ap": 0.586256744016547,
+        "method": "no_null_adjustment",
+        "per_seed_ap": {
+          "17": 0.623377467562034,
+          "29": 0.5676120816951158,
+          "43": 0.5677806827924912
+        }
+      },
+      "no_penalty": {
+        "ensemble_ap": 0.5728847653608458,
+        "mean_seed_ap": 0.5720288701994273,
+        "method": "no_penalty",
+        "per_seed_ap": {
+          "17": 0.6152294207456259,
+          "29": 0.5492548786548975,
+          "43": 0.5516023111977584
+        }
+      },
+      "proposed_agent": {
+        "ensemble_ap": 0.5737876266794422,
+        "mean_seed_ap": 0.5728581396466753,
+        "method": "proposed_agent",
+        "per_seed_ap": {
+          "17": 0.6170327098617058,
+          "29": 0.5504763998780038,
+          "43": 0.5510653092003164
+        }
+      },
+      "stft": {
+        "ensemble_ap": 0.614298998220286,
+        "mean_seed_ap": 0.6127278720018453,
+        "method": "stft",
+        "per_seed_ap": {
+          "17": 0.6270355699402292,
+          "29": 0.5805743564757415,
+          "43": 0.6305736895895651
+        }
+      },
+      "stft_wavelet": {
+        "ensemble_ap": 0.6172692619028463,
+        "mean_seed_ap": 0.6193877996765543,
+        "method": "stft_wavelet",
+        "per_seed_ap": {
+          "17": 0.6310401944341927,
+          "29": 0.5932158886207957,
+          "43": 0.6339073159746749
+        }
+      },
+      "wavelet": {
+        "ensemble_ap": 0.5906101516678453,
+        "mean_seed_ap": 0.5897508608023446,
+        "method": "wavelet",
+        "per_seed_ap": {
+          "17": 0.5953658969741559,
+          "29": 0.5763954024108229,
+          "43": 0.5974912830220553
+        }
+      }
+    },
+    "proposed_vs_fixed": {
+      "ensemble_ap_difference": 0.0,
+      "maximum_ensemble_probability_abs_difference": 1.1920928955078125e-07,
+      "per_seed": {
+        "17": {
+          "ap_difference": -3.244419598313897e-06,
+          "max_probability_abs_difference": 1.1920928955078125e-07
+        },
+        "29": {
+          "ap_difference": 0.0,
+          "max_probability_abs_difference": 1.1920928955078125e-07
+        },
+        "43": {
+          "ap_difference": 0.0,
+          "max_probability_abs_difference": 8.940696716308594e-08
+        }
+      }
+    },
+    "source_sha256": {
+      "manifests/calibration.json": "4dbdd181afa3b405337f486b84ecd8d68b00a0e583246b24b09256f64cb29245",
+      "manifests/final_development_selection.json": "92e27249445d668a9dca51d29a6e6c9aec38ef3ac76f6c9ca3aabcfbdb5f2e49",
+      "manifests/real_test_independent_audit.json": "45599b915d08fa3493d7b3ece6f1bcd79a2d96794e1c474123de4d1e119ba985",
+      "results/raw/policies/test/agent_no_generation_seed17/all.json": "49574e386844d0b1d370628de39f0df172d54425ee54156d10806a0e5deee474",
+      "results/raw/policies/test/agent_no_generation_seed29/all.json": "f34f60919719b0c53d0bd40fa99f90961581746b8648a0d84b5b9f084a1e7a4f",
+      "results/raw/policies/test/agent_no_generation_seed43/all.json": "76a721f9acc6203f5b6182617a943004c5a31e2091cb051c48f044f063c01354",
+      "results/raw/policies/test/agent_seed17/all.json": "8ebeed770619b6c17bffa88bd04deac157054a2c58ad757000777c9f5acd55d8",
+      "results/raw/policies/test/agent_seed29/all.json": "3e36ddd1252b5fcbc4ff70cf7b392d5db033626e8148e9ce24693d37b2f7b7bf",
+      "results/raw/policies/test/agent_seed43/all.json": "90f5421991383d29fd1c4c2d688b3861b506b057c4b7f51c0728d1474bfd8785",
+      "results/raw/real_predictions_test_seed17.pt": "1fd8b8013478aeabc2d8991b6935c4caa7f4452c51814564d2562799ac781012",
+      "results/raw/real_predictions_test_seed29.pt": "6af14f9771589780fbc6a26d6b8569ce25939d648b7f7b816c294421b80d0804",
+      "results/raw/real_predictions_test_seed43.pt": "6de86f3276dc5adf7e51105881f788e70df3fce4ed6a32e590d713d21ba2c237",
+      "results/tables/real_results.json": "0d415b55f96822a6c2c4ebc059e0c65bd80f535c1e909d6cdfe5c57b11b02775",
+      "runs/test_freeze.json": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b"
+    }
+  },
+  "input_sha256": {
+    "configs/research.json": "a7654d700844e87b6edecb92eca8ce6d0afd4568c79f9dd1f4e277534b660f1b",
+    "data/manifests/split_audit.json": "b2a544e6f0f46f1ab23e9a0552932793a1a6709c8178a6ce5ee1309293e7ebf4",
+    "manifests/agent_constrained_validation.json": "01750a6f674a264dec005bd33c39c064de2cdc1d767ebb47f674877e9aba1323",
+    "manifests/agent_unconstrained_development_failure.json": "8e983424f28b157d8d4470600448246fec44dbb439065d3007e197fc30f6a9e8",
+    "manifests/dsp_validation.json": "413b3ff1c2997bd7b88acf6b6f61c967a7b0057bd9a0b4699b899734f716649d",
+    "reports/synthetic_results.json": "9987efd6a42e4439559caa09684a042179a67e66461300a5fbb8ef62d12ede1d",
+    "results/tables/final_real_results.json": "6723b5eb6036a49469a6d91d1035410523ffb3c929785a58816f4cff0c27e4ee",
+    "results/tables/semisynthetic_results.json": "a96abe8d7e766c06e9e81faf378ed484a3dea932729d17157fe93e1e0f170884",
+    "results/tables/supplemental_views.json": "9631edfaf4e5d86eb28c28df2fe923d9900ced850e34832f2acf0dd66ab94e7c"
+  },
+  "outputs": {
+    "manuscript/main_paper.pdf": "f06576740738d9a29497baa235e5b704713ca75a8695be99994a667133744b31",
+    "manuscript/supplement.pdf": "4d50fa38eb608f8ad8278bc773703f71122916ea4a2c6e6bc19a483aedfe6eb0"
+  },
+  "page_counts": {
+    "main_paper.pdf": 8,
+    "supplement.pdf": 4
+  },
+  "report_builder_sha256": "a7ebc65d0ad009b76fd4f63bf11a6d98682e0073025fcaa044cbca4c88f7fbbd",
+  "report_only_revision": 3,
+  "scope": "Anonymous drafts; figures reflect supplied measured artifacts, not promised gains.",
+  "status": "rendered_and_visually_reviewed",
+  "test_policy_description": {
+    "all_three_views_and_verification": true,
+    "description": "All 3,600 held-out test clip-seed decisions acquired all three views and requested verification. Every audited path was wavelet, Fourier, then verify. Verification was the final action, so generated evidence informed no subsequent tool choice. The observed test policy did not perform adaptive tool selection.",
+    "n": 3600,
+    "path_counts": [
+      {
+        "actions": [
+          "wavelet",
+          "fourier",
+          "verify"
+        ],
+        "n": 3600
+      }
+    ],
+    "short_description": "All 3,600 test clip-seed paths were wavelet, Fourier, then verify; generation informed no later action and did not demonstrate adaptive selection.",
+    "source_sha256": {
+      "reports/test_agent_behavior_audit.json": "9af24dab750c5f7ffc27b9fbafb000bbab99555287ecf9dc7ed348a2563e47ea",
+      "results/raw/policies/test/agent_seed17/all.json": "8ebeed770619b6c17bffa88bd04deac157054a2c58ad757000777c9f5acd55d8",
+      "results/raw/policies/test/agent_seed29/all.json": "3e36ddd1252b5fcbc4ff70cf7b392d5db033626e8148e9ce24693d37b2f7b7bf",
+      "results/raw/policies/test/agent_seed43/all.json": "90f5421991383d29fd1c4c2d688b3861b506b057c4b7f51c0728d1474bfd8785"
+    },
+    "verification_last_for_all": true
+  },
+  "visual_inspection_complete": true,
+  "visual_review_receipts": {
+    "reports/main_figures_visual_review.json": "60947429c160e46e0e44967cdcdc5b8fdff26ee7a371cfbb0fdbe9354c49f436",
+    "reports/main_pdf_visual_review.json": "85c9f55e5c4028ad0937c05630a2528eec260fee0b0f21a94a46645ae6893b63",
+    "reports/supplement_pdf_visual_review.json": "829d02132278934f3adb29f30e8508a192ace62604b2740917a3b80101e3977a"
+  },
+  "visual_review_utc": "2026-11-23T20:25:01.024039+00:00"
+}

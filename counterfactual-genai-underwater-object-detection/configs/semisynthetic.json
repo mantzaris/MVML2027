@@ -1,0 +1,48 @@
+{
+  "background_crossfade": "complementary linear weights; same three-second parent repeated; no normalization",
+  "background_crossfade_seconds": 0.1,
+  "background_loop_hop_seconds": 2.9,
+  "base_scenes_per_day": 66,
+  "batch_size": 16,
+  "component_snr_db": [
+    -10,
+    0,
+    10
+  ],
+  "expected_test_days": 5,
+  "family": "PORTIA_same_day_real_excerpt_insertion",
+  "independence": "group all derived scenes by original UTC collection day; repeated SNR/seeds and vessels are dependent; five days form one connected day-vessel component; no independent-component confidence interval",
+  "model_training": "fully synthetic temporal CNN; no semi-synthetic fitting, threshold selection or test-driven modification",
+  "native_excerpt_seconds": 3,
+  "origin": "semi_synthetic",
+  "parent_selection": "hash-sorted metadata; unique background and source windows within day/base-scene set; two-source scenes use distinct vessel identities",
+  "prediction_decoding": "exactly frozen synthetic_temporal.json proposal thresholds, NMS and approximate 128ms grid",
+  "real_feature_index": "data/features/real/test/index.json",
+  "sample_rate": 16000,
+  "scene_pairing": "same parents, offsets and taper across component-SNR conditions and detector seeds; zero-insertion controls repeat unchanged across SNR",
+  "schema_version": 1,
+  "seconds": 10,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "selection_seed": 20261123,
+  "shard_size": 64,
+  "source_count_cycle": [
+    0,
+    1,
+    2
+  ],
+  "source_onset_range_seconds": [
+    0.25,
+    6.75
+  ],
+  "source_snr_definition": "whole noisy tapered excerpt RMS divided by constructed-background RMS over its insertion support; overlapping components each scaled separately",
+  "source_taper": "sin-squared, half-sample-centered edges; positive over all inserted samples",
+  "source_taper_seconds": 0.05,
+  "split": "test",
+  "test_parent_manifest": "data/manifests/real_test.jsonl",
+  "total_condition_scenes": 990,
+  "truth_definition": "union of insertion supports; not natural event truth or isolated vessel audibility"
+}

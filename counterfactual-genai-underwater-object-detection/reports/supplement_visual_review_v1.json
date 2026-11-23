@@ -1,0 +1,49 @@
+{
+  "frozen_artifacts_modified": false,
+  "issue": {
+    "finding": "Raw overlapping_sources key still appears as display text; frozen grouping selects two sources without requiring overlap.",
+    "page": 3,
+    "requested_display": "two-source scenes; explain overlapping or nonoverlapping supports",
+    "table": "S2"
+  },
+  "page_count": 4,
+  "pages": [
+    {
+      "clipping_or_overlap": false,
+      "individually_viewed": true,
+      "legible": true,
+      "page": 1,
+      "path": "manuscript/renders/supplement-1.png",
+      "sha256": "8216bf6bd8197d7e89ee787fb660fb76dbfa9659e28a0868c10028229ca02636"
+    },
+    {
+      "clipping_or_overlap": false,
+      "individually_viewed": true,
+      "legible": true,
+      "page": 2,
+      "path": "manuscript/renders/supplement-2.png",
+      "sha256": "d492fde17f160ebd9396e16814b6bd7776af644e394779c8e1bdaa562c17c2e1"
+    },
+    {
+      "clipping_or_overlap": false,
+      "individually_viewed": true,
+      "legible": true,
+      "page": 3,
+      "path": "manuscript/renders/supplement-3.png",
+      "sha256": "3700ccc3cbe226dec05ee571a5cc02514ccb5927d3eba13e1d470ee0c6aded54"
+    },
+    {
+      "clipping_or_overlap": false,
+      "individually_viewed": true,
+      "legible": true,
+      "page": 4,
+      "path": "manuscript/renders/supplement-4.png",
+      "sha256": "425c107995b193fded9bde076b931ae4001799ee90c5c989b7b7c84c31fd2a02"
+    }
+  ],
+  "pdf": "manuscript/supplement.pdf",
+  "pdf_sha256": "2bb069ab7a1da335f1468e113903eb7af2ead21a23cbe9d1bd5eaa7a7c81a000",
+  "reviewed_utc": "2026-11-23T19:55:15.279522+00:00",
+  "status": "layout_pass_presentation_label_correction_pending",
+  "suggestion": "Display family train as in-family test to distinguish held-out evaluation from model-fitting data."
+}

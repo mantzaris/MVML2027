@@ -1,0 +1,10 @@
+{
+  "artifact": "tmp/supervisor_signal_fixture/checkpoint.json",
+  "grandchild_checkpoint_saved": true,
+  "scope": "CPU control-plane signaling only; no ML/GPU computation",
+  "sha256": "75c7f149fb4fece3e76cf198fa8e57e3dc9436a3e7e2c13984e154e82f7c90a9",
+  "source_sha256": "ba1b39d74f79192d9e312c32322c23ba5973858dcd583a631a1693455b97d31a",
+  "status": "passed",
+  "supervisor_sha256": "e297ae2cc039a2c359f4961d64980500d19378f0894af8e096b7d7b6ae2a275d",
+  "wrapper_exit": -15
+}

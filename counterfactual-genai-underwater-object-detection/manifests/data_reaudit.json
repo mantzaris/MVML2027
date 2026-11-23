@@ -1,0 +1,11 @@
+{
+  "audit_receipt_sha256": "bb61030d9edbea4deb0ead1c543889fb79713efcddb65a29a462bed45dc1135c",
+  "completed_utc": "2026-11-23T18:02:49.439888+00:00",
+  "gpu_used": false,
+  "native_files_hash_verified": 6270,
+  "real_manifest_sha256": "cc75a15446bb560bb4647196883c7d2f1dd7b25f4d35239de4e59da4e9463d8b",
+  "repeat_audit_byte_identical": true,
+  "status": "passed",
+  "test_manifest_sha256": "36803e65e9367e94612c4cf99b2749c991d1adee448a894eec399ccd52b92279",
+  "test_model_outputs_examined": false
+}

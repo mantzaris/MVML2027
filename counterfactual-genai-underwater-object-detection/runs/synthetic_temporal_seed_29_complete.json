@@ -1,0 +1,39 @@
+{
+  "artifacts": {
+    "checkpoints/synthetic_temporal/seed_29/best.pt": {
+      "bytes": 1461513,
+      "sha256": "a381d854931c90e11d09e5ae34e7916c20c7630ba53c2d20323d31ff0faf5271"
+    },
+    "checkpoints/synthetic_temporal/seed_29/training.json": {
+      "bytes": 575,
+      "sha256": "5916006f5faa0b85238e442803ba4acf511476cef1c1eaa0031d8f69eabb625f"
+    }
+  },
+  "completed_utc": "2026-11-23T16:55:04.196333+00:00",
+  "config_hash": "b538039b235b8d8735d98a781564d517d03fb3a975904e5bdb3e91d709293741",
+  "data_fingerprint": "69f21302b8982e2447354a1b1a72a9375330afb754336cd7fab9420238fa5b66",
+  "details": {
+    "elapsed_seconds": 136.1054882600015,
+    "history": [
+      {
+        "development_loss": 0.20746558371186258,
+        "epoch": 1,
+        "training_loss": 0.3233640524983406
+      },
+      {
+        "development_loss": 0.1854308412373066,
+        "epoch": 2,
+        "training_loss": 0.20669559332728385
+      },
+      {
+        "development_loss": 0.14731813895702361,
+        "epoch": 3,
+        "training_loss": 0.1755536213696003
+      }
+    ],
+    "seed": 29
+  },
+  "stage": "synthetic_temporal_training",
+  "status": "complete",
+  "version": 1
+}

@@ -1,0 +1,18 @@
+{
+  "adopted_verified_existing_artifacts": true,
+  "command_hash": "436953511300895dfe18caee33e53c531ff61ddc9b6515c62838cc77fdddda7b",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/verify_cuda.py"
+    ]
+  ],
+  "completed_utc": "2026-11-23T17:17:22.771198+00:00",
+  "outputs": {
+    "manifests/gpu_verification.json": "2f55ceeda90ec16c6784afb9832a9c5892a5a797887d2bff7968090c7890dd7f"
+  },
+  "stage": "gpu_identity"
+}

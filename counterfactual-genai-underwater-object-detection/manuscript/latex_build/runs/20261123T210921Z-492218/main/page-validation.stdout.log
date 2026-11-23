@@ -1,0 +1,15 @@
+{
+  "document": "main",
+  "pages": 8,
+  "page_count_bounds": [
+    1,
+    8
+  ],
+  "sha256": {
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/latex_build/runs/20261123T210921Z-492218/main/main.pdf": "2b35071e20b111d11e82f67dc67c8cdfdf7508d6a5e18ec82c6f8edcdae76979",
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/main.tex": "c9524952ffa3b60ecaf3761633e71dcc058d347ae613a979006a8466428b6fa1",
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/main.bib": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd"
+  },
+  "visual_inspection_complete": false,
+  "scope": "Compilation and arithmetic checks only; rendered pages still require visual review."
+}

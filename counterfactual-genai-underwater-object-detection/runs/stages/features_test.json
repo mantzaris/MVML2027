@@ -1,0 +1,38 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "5be93866f5de06921a21eebfdb03170930dd238ce6d61fb66decaa0eedd44bd8",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/extract_real_features.py",
+      "--split",
+      "test",
+      "--allow-test-features"
+    ]
+  ],
+  "completed_utc": "2026-11-23T18:50:05.316936+00:00",
+  "input_hash": "18bbd575653c8323e1f39acf5a38c767645a04deb0364f7d266637615a9c9ec9",
+  "inputs": {
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "data/manifests/planned_real.jsonl": "be62767fad35a8dc782f9f6c64a2f2ba372974b7170012e7a18ce37049456ced",
+    "data/manifests/real_test.jsonl": "36803e65e9367e94612c4cf99b2749c991d1adee448a894eec399ccd52b92279",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "runs/test_freeze.json": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+    "scripts/extract_real_features.py": "c1858acaa92c4a9bf8fa90327f3c2320d71737200958e5144e96eec3a178c8ae",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "src/uac/data.py": "268aecf7ae63df52c9a7efb59a128bb079299e9ef29c475aeb47291b527d3a0d",
+    "src/uac/dsp.py": "92df06b143300987e08cc0d28c3b5e127b36aca69e72f33498d211fa47f160f1",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5"
+  },
+  "outputs": {
+    "data/features/real/test/index.json": "c2092d90ff88683b88a573aa9e75f4e6b23d0e6f1d7b53ab30f683e0ad9a1882"
+  },
+  "schema_version": 2,
+  "stage": "features_test",
+  "supervisor_sha256": "dab0b3d5173fe277fdfd4a590dddbf8f62149bacea5f96849b547361eabf2b78"
+}

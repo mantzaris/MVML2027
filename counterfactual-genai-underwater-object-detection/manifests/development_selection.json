@@ -1,0 +1,159 @@
+{
+  "data_fingerprint": "be62767fad35a8dc782f9f6c64a2f2ba372974b7170012e7a18ce37049456ced",
+  "incomplete_methods": [],
+  "locked_comparator": null,
+  "note": "Development ranking only. Final parent freeze must consider all primary-eligible detector-index records.",
+  "provisional_best_method": "stft",
+  "ranked_complete_methods": [
+    {
+      "method": "stft",
+      "per_seed_ap": {
+        "17": 0.7312384635311364,
+        "29": 0.7204559555441272,
+        "43": 0.6989385223493119
+      },
+      "seed_mean_development_ap": 0.7168776471415251,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "method": "wavelet",
+      "per_seed_ap": {
+        "17": 0.7294831955259471,
+        "29": 0.7076689598296582,
+        "43": 0.7128091256024349
+      },
+      "seed_mean_development_ap": 0.7166537603193467,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "method": "stft_wavelet",
+      "per_seed_ap": {
+        "17": 0.7091111616057694,
+        "29": 0.7129677875235997,
+        "43": 0.7157067105307163
+      },
+      "seed_mean_development_ap": 0.712595219886695,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "method": "main",
+      "per_seed_ap": {
+        "17": 0.713633085480223,
+        "29": 0.6969212969040324,
+        "43": 0.7166514126521404
+      },
+      "seed_mean_development_ap": 0.7090685983454653,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "method": "fourier_stft",
+      "per_seed_ap": {
+        "17": 0.7112013439078677,
+        "29": 0.7171800550757856,
+        "43": 0.694369501729667
+      },
+      "seed_mean_development_ap": 0.7075836335711068,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "method": "fourier",
+      "per_seed_ap": {
+        "17": 0.7034752506913233,
+        "29": 0.7130352815342677,
+        "43": 0.704672954560169
+      },
+      "seed_mean_development_ap": 0.70706116226192,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "method": "fourier_wavelet",
+      "per_seed_ap": {
+        "17": 0.7026089066744333,
+        "29": 0.711997552559904,
+        "43": 0.7055942813854872
+      },
+      "seed_mean_development_ap": 0.7067335802066083,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "method": "cnn",
+      "per_seed_ap": {
+        "17": 0.7142037495382992,
+        "29": 0.705237541904584,
+        "43": 0.6760290209903872
+      },
+      "seed_mean_development_ap": 0.6984901041444235,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "method": "augmentation",
+      "per_seed_ap": {
+        "17": 0.6965994698249056,
+        "29": 0.6641566532626481,
+        "43": 0.677159313219055
+      },
+      "seed_mean_development_ap": 0.6793051454355362,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    },
+    {
+      "method": "foundation",
+      "per_seed_ap": {
+        "17": 0.6112570301526894,
+        "29": 0.6161523004031408,
+        "43": 0.6233087754674917
+      },
+      "seed_mean_development_ap": 0.6169060353411073,
+      "seeds": [
+        17,
+        29,
+        43
+      ]
+    }
+  ],
+  "requested_seeds": [
+    17,
+    29,
+    43
+  ],
+  "schema_version": 1,
+  "selection_basis": "highest seed-mean real-development AP including synthetic augmentation; exploratory HHT excluded; lexical tie break",
+  "status": "development_complete",
+  "test_examined": false,
+  "updated_utc": "2026-11-23T17:42:45.801488+00:00"
+}

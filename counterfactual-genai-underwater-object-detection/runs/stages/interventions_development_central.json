@@ -1,0 +1,42 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "605d2c3e7600024529579f98fe804a69b08a22821ba03c94700ae3dd85291873",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/generate_interventions.py",
+      "--split",
+      "development",
+      "--probe",
+      "central"
+    ]
+  ],
+  "completed_utc": "2026-11-23T17:43:23.237823+00:00",
+  "input_hash": "1f76503f6abeb4338bf72b374a8b166d162ce871fbae5d627ac6e97813ee7f50",
+  "inputs": {
+    "checkpoints/background_flow/final.pt": "e85c969fee9ddf3f3c70e837c1c03ce8a2c70d23fdec3e5006628a444a21e0c7",
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "configs/research.json": "a7654d700844e87b6edecb92eca8ce6d0afd4568c79f9dd1f4e277534b660f1b",
+    "data/features/real/development/index.json": "9b665d865588f9a51f6c6e764819105b1702f007ee6357711319d25303445820",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "scripts/generate_interventions.py": "07e695fd40d78b09a4fdbe40c9eaa659911f6455507bbe0f7c94e15d1746e105",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "src/uac/dsp.py": "92df06b143300987e08cc0d28c3b5e127b36aca69e72f33498d211fa47f160f1",
+    "src/uac/models.py": "a714436319bd7edeb921fe8cd48e09b36abfdd702ad5f27ab6236f594ba32f37",
+    "src/uac/protocol.py": "a8b0e163fbcd370c0c1ba7840b2a570ef215a13bf54d5dc81d9073f544522c38",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5",
+    "src/uac/training.py": "b9fb622a9f6e8b7effe474d848c49d201529d313d12edfb7b2bfa41111def435",
+    "src/uac/verification.py": "3720ca8efa561fcf78a2ad23347eeab6141f6c4fc42b698cbbf06acce4302645"
+  },
+  "outputs": {
+    "data/interventions/development/index.json": "3b032f79908d3d1553d62b0d8424579119dd156d59e90d6f5f67cb7907626c83"
+  },
+  "schema_version": 2,
+  "stage": "interventions_development_central",
+  "supervisor_sha256": "baf5c3db2d122ac189a8860608f95f902d8e61f60ae4a04eb8d364c6dba25171"
+}

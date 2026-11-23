@@ -1,0 +1,19 @@
+{
+  "description": "All 2,205 development clip-seed decisions followed wavelet then fourier then verify. The observed controller therefore behaved as a fixed acquisition sequence; these traces do not establish evidence-dependent adaptation or a reasoning benefit.",
+  "n": 2205,
+  "path_counts": [
+    {
+      "actions": [
+        "wavelet",
+        "fourier",
+        "verify"
+      ],
+      "n": 2205
+    }
+  ],
+  "source_sha256": {
+    "results/raw/policies/development/agent_seed17/all.json": "4e082431db8daf471c1de75bf7d2e04208ed6e8eefd1d69b308e0ece2c428e28",
+    "results/raw/policies/development/agent_seed29/all.json": "64e1650f83da21e26a895e25518a650264853c10fe720899f14250ef081420a8",
+    "results/raw/policies/development/agent_seed43/all.json": "a389fba48ae3ba90929580e96df385ea57ac50d12da0f58bd0fd2eb22b00eb20"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "abstract": "We introduce a GPU framework for selecting acoustic representations and testing the value of generative AI in underwater detection. Its methodological contribution combines a cross-view verification score, approximately matched editing controls, score-removal comparisons and measured computing cost. A bounded language-model agent chooses tools from numerical detector summaries. In a harbour recording, Fourier spectra expose tones, spectrograms show their timing, and wavelets describe changes across scales. Generated background replacement is compared with a control edit; score-removal tests preserve acquisition and calibration procedures. On 1,200 balanced PORTIA clips with vessel-tracking labels, the study identified a higher-scoring spectrogram-CNN configuration: ensemble average precision (AP) 0.6692 versus 0.5906 for the development-selected wavelet detector. A separate temporal CNN achieved mean AP 0.847 at IoU 0.5 for constructed activity in in-family synthetic scenes, averaging seeds and declared noise conditions. The controls identified a lower-cost option: fixed verification retained the agent's observed ensemble AP 0.5738, while the agent used 7.02 times the warm batch-processing time and followed a fixed tool sequence. Real-data comparisons are descriptive because vessels connect the test days; the bounded Hilbert-Huang approximation remains exploratory. The study delivers effective reference configurations and a reproducible method for determining which representations and generative AI components justify their computational cost.",
+  "abstract_words": 201,
+  "applied_utc": "2026-11-23T21:42:28.478789+00:00",
+  "archive": "manuscript/revisions/latex_v2_before_success_framing",
+  "conclusion_paragraphs": [
+    "This work successfully delivers a reproducible GPU framework for comparing acoustic representations and measuring the value of generative verification and agent control. Its distinctive contribution combines a cross-view replacement/control score, score-removal comparisons that preserve acquisition and calibration procedures, recorded tool decisions and measured compute. These components make claims about additional AI evidence directly testable.",
+    "The experiments identified a higher-scoring spectrogram-CNN configuration on the balanced real cohort: ensemble AP 0.6692 versus 0.5906 for the development-selected wavelet detector. A separate temporal CNN reached mean AP 0.847 at IoU 0.5 for constructed activity in in-family synthetic scenes, averaging seeds and declared noise conditions. The controls identified avoidable overhead: fixed verification achieved the agent's observed ensemble AP 0.5738, while the agent required 7.02 times as much warm batch-processing time. Its tool sequence resembled a fixed checklist, and the continuous score lowered AP by 0.0257 against its matched zero-score control.",
+    "These are successes in representation benchmarking and component diagnosis. The agent itself did not improve detection. Vessel-tracking proxies, one connected test component and exploratory bounded HHT limit generalization. The practical outcome is a tested reference workflow for selecting acoustic representations and checking whether new AI steps earn their computational cost."
+  ],
+  "conclusion_words": 195,
+  "created_utc": "2026-11-23T21:40:40.451540+00:00",
+  "layout_refinement": "Led with methodological contribution and condensed the abstract to keep the method figure on page1; figures and fonts unchanged",
+  "positive_metric_sources": [
+    "manifests/real_test_independent_audit.json",
+    "reports/synthetic_results.json",
+    "results/tables/supplemental_views.json"
+  ],
+  "revision": 3,
+  "scientific_scope_review": "Independent literature agent passed after restricting dependence caveat to real-data results",
+  "scope": "Success-led novelty/value framing using existing verified findings; no new experiments, gain or priority claim",
+  "supplement_closing_paragraph": "The controlled study successfully quantified representation performance across signal families and missing-input conditions. Across three detector seeds, STFT reached mean presence AP 0.995 on in-family test scenes and 0.880 on the held-out generated family, making sensitivity to changed conditions measurable. Numerical checks also prevented a high-scoring but unstable bounded HHT approximation from entering the primary analysis: accurate reconstruction did not imply converged components. These outcomes provide tested baselines and repeatable checks for developing acoustic representations. They concern constructed labels and do not establish natural-event accuracy or a reasoning-agent benefit. Interpretation remains bounded by vessel-tracking labels, artificial class balance, a fixed generator seed, one deployment and one connected test component; AP, precision and calibration remain cohort-specific.",
+  "supplement_closing_words": 115
+}

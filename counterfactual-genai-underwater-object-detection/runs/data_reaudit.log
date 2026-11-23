@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "counts": {
+    "train": {
+      "clips": 3735,
+      "labels": {
+        "0": 2000,
+        "1": 1735
+      },
+      "days": 8,
+      "vessel_ids": 30,
+      "background_days": 7
+    },
+    "development": {
+      "clips": 735,
+      "labels": {
+        "0": 335,
+        "1": 400
+      },
+      "days": 3,
+      "vessel_ids": 16,
+      "background_days": 3
+    },
+    "calibration": {
+      "clips": 600,
+      "labels": {
+        "0": 300,
+        "1": 300
+      },
+      "days": 2,
+      "vessel_ids": 11,
+      "background_days": 2
+    },
+    "test": {
+      "clips": 1200,
+      "labels": {
+        "1": 600,
+        "0": 600
+      },
+      "days": 5,
+      "vessel_ids": 42,
+      "background_days": 5
+    }
+  },
+  "guarantees": [
+    "whole_UTC_day_disjoint",
+    "primary_vessel_disjoint",
+    "single_AIS_vessel_only",
+    "no_shared_audio_windows"
+  ],
+  "limitations": [
+    "only 19 collection days in full binary metadata",
+    "AIS labels do not certify audible presence/absence",
+    "unknown original continuous parent recording IDs",
+    "single deployment; no deployment generalization",
+    "untracked acoustic sources may occur",
+    "five test days give weak population uncertainty estimation"
+  ],
+  "manifest_sha256": "cc75a15446bb560bb4647196883c7d2f1dd7b25f4d35239de4e59da4e9463d8b",
+  "audio_bytes": 9630995880,
+  "all_headers_verified": true,
+  "all_member_crcs_verified": true,
+  "decoded_channel_duplicates": 0,
+  "complete": true,
+  "completed_utc": "2026-11-23T18:01:50.649739+00:00",
+  "archive_integrity_scope": "selected ZIP members only; full archive MD5 not claimed",
+  "release_url": "https://zenodo.org/records/21409381"
+}

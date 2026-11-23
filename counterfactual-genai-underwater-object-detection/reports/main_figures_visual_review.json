@@ -1,0 +1,40 @@
+{
+  "checks": [
+    "no clipping or overlapping labels",
+    "all five main figures present",
+    "four empirical figures use saved measured data",
+    "zero retained for operating-point rates",
+    "detector-seed ranges not presented as confidence intervals",
+    "coincident fixed/agent robustness curves remain visible",
+    "live throughput log-scale and GPU memory units explicit"
+  ],
+  "figures": {
+    "figure1_method": {
+      "pdf": "d0b50567cb48012fbbecf181ce19c207dbbec7f00fd97340f9601909ed670553",
+      "png": "b4f90ae4b52006e9410f34a11ad8b4ab2379ec774cd88dbe6268a49edfa6bd15"
+    },
+    "figure2_real_detection": {
+      "pdf": "77e37f0b61498189d1bcf77a638b06f76b2ae0d245ae1cfeb8f09e85fd839048",
+      "png": "310bda7487ce4b12a11bf2f4449ebfa462cafca7cfe64e9dc808cbd351a120d9"
+    },
+    "figure3_robustness": {
+      "pdf": "f550aed50dea41486c9dbb3d75a68ddeaba7f7d333a9b929e4473ecb8ee2186a",
+      "png": "d2807360c37947ce0ba1abbf5062cae725b48b5161e98c7c7ee50a353fa14367"
+    },
+    "figure4_mechanism_ablation": {
+      "pdf": "9616310010c136eeac2413edaa389fbc2897d869dc7e85c0445681a6d01a71f4",
+      "png": "e0f8be3e01000a9e1cbee579480478bcc192fc29790801ff79717954d774653d"
+    },
+    "figure5_accuracy_compute": {
+      "pdf": "181d92db555564f7a5bdf1eb0da1cc09bd0fd10bdc951d96a56e80c8a852a86c",
+      "png": "ca85c1acd99ae6990028eba06068323894be0908e64f7d71b277ebd5d7f9cb98"
+    }
+  },
+  "previous_review": "manuscript/revisions/v2_before_representation_title/reports/main_figures_visual_review.json",
+  "reviewed_utc": "2026-11-23T19:51:09.028173+00:00",
+  "reviewer": "root",
+  "revision_verification_utc": "2026-11-23T20:25:01.024039+00:00",
+  "scope": "Each of five final main figure PNGs visually inspected individually at original resolution; layout/readability and scientific axes/labels checked against measured results",
+  "status": "passed",
+  "unchanged_pngs_verified_after_report_revision": true
+}

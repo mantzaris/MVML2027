@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-11-23T17:46:29.170692+00:00",
+  "development_outcomes_already_exist": true,
+  "gpu_execution_performed": false,
+  "interpretation": "Cost comparison covers the five explicitly measured methods; not a global frontier over every trained detector",
+  "methods": [
+    "main",
+    "fixed_verification",
+    "heuristic_verification",
+    "proposed_agent",
+    "agent_no_generation"
+  ],
+  "previous_config_path": "configs/archive/runtime_benchmark.v1_four_methods.json",
+  "previous_config_sha256": "e351abd88b2eafd95609930bfe2c36bcf04d14bbf208610b5420341cc7ff7b97",
+  "reason": "Include the already prespecified/calibrated rule-based heuristic in actual live cost comparison",
+  "runtime_outcomes_seen": false,
+  "status": "prospective_cost_scope_amendment",
+  "test_outcomes_seen": false,
+  "timed_pass_count": 15,
+  "updated_config_sha256": "0dfe683d807fed0dec5cd5118a87da7b330d5da5e31c169d31f3c27a48763983"
+}

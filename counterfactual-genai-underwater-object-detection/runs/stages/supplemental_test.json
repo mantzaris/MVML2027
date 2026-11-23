@@ -1,0 +1,59 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "6fc13013c2d459860d54bc8636013bfb6ebaaa2d091bd90190c50aa4f8855999",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/supplemental_views.py",
+      "--stage",
+      "evaluate"
+    ]
+  ],
+  "completed_utc": "2026-11-23T19:48:01.538964+00:00",
+  "input_hash": "6a0b56a9ff2d0c01c4b5afd46832b677d47bd93efeeec570ff6efee026737f32",
+  "inputs": {
+    "checkpoints/supplemental/all_seed17/best.pt": "18fae5336c80f9481f027d09d3c95cf9077c3534f7fb67977c2b33ae7648038e",
+    "checkpoints/supplemental/all_seed29/best.pt": "7dc9212a03d31600409debd0e60eac06e9a20f43e131919cf154654796a21f99",
+    "checkpoints/supplemental/all_seed43/best.pt": "a9c112e44353b07e10c8bbeec9a17fa148bf7332db92f8a897f2cd5ef6687956",
+    "checkpoints/supplemental/stft_hht_seed17/best.pt": "c9056596bbe19fe7cee836d7d0eec30cbd81a4eba1287bf423df2d599e07f59e",
+    "checkpoints/supplemental/stft_hht_seed29/best.pt": "9c2c7786994735956ad8cb4881f6e653ac04f2454b04e1ea3ac1097792056f5f",
+    "checkpoints/supplemental/stft_hht_seed43/best.pt": "b2c81f42483f1f4a31542eca77d6734878cd901511dd56c4e4a02c227e97763f",
+    "checkpoints/supplemental/stft_seed17/best.pt": "89b4a96edb10c5615694388000b9364a511408e4427f1442a85804123fab7083",
+    "checkpoints/supplemental/stft_seed29/best.pt": "c2144fa740063a81268ac82203d4301f37d0bcdb3415e745a6ad8352730e71b8",
+    "checkpoints/supplemental/stft_seed43/best.pt": "c2f2750d680ccfde88f7d775325e7e94401ee21dc78d6931e473cc91422625ee",
+    "checkpoints/supplemental/stft_wavelet_seed17/best.pt": "7b71f48a2f54d35cd073999aff7603f8abb24e08ca1b167a427f626d520e8e6e",
+    "checkpoints/supplemental/stft_wavelet_seed29/best.pt": "0edaed7d04c8ff8fdfa5d9a72f29917543f8e735ddc93d6c90038506bec82adf",
+    "checkpoints/supplemental/stft_wavelet_seed43/best.pt": "2087d603dd18055ae13c2d495083cf81eda8d04d3e037e254f73f28c4691ffbb",
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "configs/supplemental.json": "135222874043daf720e6c3f91fe2b78c324fe511a06159474db1b4a8e3f6753b",
+    "configs/synthetic_features.json": "ec7801ef3100c4890cc9d3a5b5bac33d71f363784e5f89a7c7b7c2e7c8698be1",
+    "data/features/synthetic/heldout_test/index.json": "b65643d7748c283efb95bdb113e27a18dd33f99e0b09920898151f0ab87aeca7",
+    "data/features/synthetic/test/index.json": "d5519135ec31ad19899122cb34171ac18f9c65927b1f687fe1ba83c0e1cac18c",
+    "manifests/supplemental_feature_cost.json": "ff6cdf79f27d8ebec27b6db9e230e3972c3df791214f36a73ac6a4fa505f234f",
+    "manifests/supplemental_model_index.json": "1aec1241caa3a8711ece6444f8706243b17c441c1047c2df6e93c72237889399",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "runs/test_freeze.json": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+    "scripts/extract_foundation.py": "ab274732f99d8f8dc9062ca6477cad7da55f5b350416f5e57651f8f0396afebb",
+    "scripts/extract_real_features.py": "c1858acaa92c4a9bf8fa90327f3c2320d71737200958e5144e96eec3a178c8ae",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "scripts/supplemental_views.py": "33a64b3d1a2e8939dbad9b43a41747d7fa98ec567e7dd8382c420a512a877fe4",
+    "src/uac/data.py": "268aecf7ae63df52c9a7efb59a128bb079299e9ef29c475aeb47291b527d3a0d",
+    "src/uac/dsp.py": "92df06b143300987e08cc0d28c3b5e127b36aca69e72f33498d211fa47f160f1",
+    "src/uac/metrics.py": "5a4ec0826a12a841d2e7880fdec1861cbf70cadafcb974cfcccb3142986b247f",
+    "src/uac/models.py": "a714436319bd7edeb921fe8cd48e09b36abfdd702ad5f27ab6236f594ba32f37",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5",
+    "src/uac/synthetic.py": "52e06fc052bf53199bdc53ab92e291ddb80f656356e7ebb8edbf69c99e1e764d",
+    "src/uac/training.py": "b9fb622a9f6e8b7effe474d848c49d201529d313d12edfb7b2bfa41111def435"
+  },
+  "outputs": {
+    "results/tables/supplemental_views.json": "9631edfaf4e5d86eb28c28df2fe923d9900ced850e34832f2acf0dd66ab94e7c"
+  },
+  "schema_version": 2,
+  "stage": "supplemental_test",
+  "supervisor_sha256": "dab0b3d5173fe277fdfd4a590dddbf8f62149bacea5f96849b547361eabf2b78"
+}

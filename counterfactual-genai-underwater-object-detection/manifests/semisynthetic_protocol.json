@@ -1,0 +1,8 @@
+{
+  "gpu_used": false,
+  "parent_manifest_to_pin": "data/manifests/real_test.jsonl",
+  "required_parent_hash_field": "semisynthetic_parent_manifest_sha256",
+  "semisynthetic_code_fingerprint": "ce30a53916e9d4c57fa35f657948327fe4e1e77499921a398da38d97983ecb84",
+  "semisynthetic_config_sha256": "2567c4112ae06f8a1911bbd839cee4e91d3dc906dc0f0273608b8c2d72baa6c6",
+  "test_accessed": false
+}

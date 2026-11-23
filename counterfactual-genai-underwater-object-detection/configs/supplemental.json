@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "title": "When Do Hilbert-Huang and Wavelet Evidence Improve Controlled Underwater Acoustic Detection?",
+  "scope": "Fully synthetic clip-presence study; no temporal or real-field detection claim",
+  "cache_root": "data/features/synthetic",
+  "cache_config": "configs/synthetic_features.json",
+  "training_split": "train",
+  "development_split": "development",
+  "evaluation_splits": ["test", "heldout_test"],
+  "expected_scene_counts": {"train": 20000, "development": 2000, "test": 2000, "heldout_test": 2000},
+  "sample_rate": 16000,
+  "num_samples": 48000,
+  "seeds": [17, 29, 43],
+  "epochs": 150,
+  "patience": 15,
+  "batch_size": 256,
+  "learning_rate": 0.001,
+  "model_width": 128,
+  "methods": {
+    "stft": ["stft"],
+    "stft_wavelet": ["stft", "wavelet"],
+    "stft_hht": ["stft", "hht"],
+    "all": ["fourier", "stft", "wavelet", "hht"]
+  },
+  "missing_view_policy": "Replace one acquired view by its train-fitted feature mean, with no retraining; diagnostic distribution shift",
+  "regimes": {
+    "harmonic_am": "single active type-0 source: amplitude-modulated harmonics with bounded frequency variation",
+    "chirp_dominant": "single active type-1 source: swept tone plus 0.3 times harmonic component",
+    "decaying_am": "single active type-2 source: harmonic/AM signal with exponential event envelope; not an impulse or real vessel class",
+    "overlapping_sources": "two active synthetic sources, any type"
+  },
+  "regime_negatives": "Reuse all background-only scenes from the same evaluation partition in each regime; report each denominator and do not pool regimes",
+  "feature_timing": {"batch_size": 8, "warmup_calls": 3, "measured_calls": 10, "seed": 970001, "family": "train", "scope": "GPU-resident transform extraction only, including synchronization; excludes waveform transfer, classifier and generation"},
+  "paired_bootstrap_replicates": 500,
+  "paired_bootstrap_seed": 1729,
+  "hht_status": "Exploratory bounded piecewise-linear EMD approximation; six modes, ten sifts; high noisy-scene nonconvergence is reported",
+  "freeze_requirement": "Before evaluation, runs/test_freeze.json must contain synthetic_features_config_sha256 and artifacts SHA256 entries for this config, script, supplemental model index and every model checkpoint."
+}

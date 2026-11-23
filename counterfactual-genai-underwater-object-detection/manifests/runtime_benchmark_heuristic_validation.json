@@ -1,0 +1,11 @@
+{
+  "benchmark_source_sha256": "dccd9993575011a7fc180271fb3e798f34a479556d1ccde3123afaaf60f5f39e",
+  "checked_utc": "2026-11-23T17:46:56.175660+00:00",
+  "config_sha256": "0dfe683d807fed0dec5cd5118a87da7b330d5da5e31c169d31f3c27a48763983",
+  "gpu_execution_performed": false,
+  "heuristic_fixture": "Exact uncertain-mask, main/STFT base selection, invalid-query fallback and unqueried-companion exclusion",
+  "method_count": 5,
+  "status": "passed",
+  "timed_pass_count": 15,
+  "unit_tests_passed": 9
+}

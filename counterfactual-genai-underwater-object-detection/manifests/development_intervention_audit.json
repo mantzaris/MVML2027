@@ -1,0 +1,21 @@
+{
+  "decision": "Retain original thresholds and mandatory base-score fallback; report matched-control limitation, no outcome-driven threshold relaxation",
+  "index_sha256": "3b032f79908d3d1553d62b0d8424579119dd156d59e90d6f5f67cb7907626c83",
+  "maximum_draw_band_error_quantiles": [
+    0.020941514521837234,
+    0.06958483755588535,
+    0.24469304084777832,
+    0.48471140265464785,
+    0.748958945274353
+  ],
+  "n": 735,
+  "rejection_fractions": {
+    "exterior_change": 0.0,
+    "nonfinite_or_extreme_draw": 0.0,
+    "perturbation_energy": 0.0,
+    "post_mask_band_power_mismatch": 0.582312925170068,
+    "rms_ratio": 0.0
+  },
+  "scope": "Development-only descriptive numerical/control eligibility; not final test or physical generator quality",
+  "valid_fraction": 0.41768707482993195
+}

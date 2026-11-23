@@ -1,0 +1,58 @@
+{
+  "checked_utc": "2026-11-23T18:22:19.002766+00:00",
+  "code_sha256": {
+    "scripts/freeze_protocol.py": "33fb3e1ea51ac0f2e98392276153513a89d59599db098b574aa1d225bc78f18b",
+    "scripts/stage_provenance.py": "21172f4230d6ee88d76afa4e44ee52705fb1978f95ce08b69e58f8518c4fdcf0"
+  },
+  "cpu_provenance_regression_tests": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_stage_provenance.py -v",
+    "failed": 0,
+    "passed": 4
+  },
+  "existing_stage_signatures_unchanged": [
+    "background_flow",
+    "features_development",
+    "features_train",
+    "foundation_development",
+    "foundation_train",
+    "gpu_identity",
+    "interventions_development_central",
+    "interventions_development_full",
+    "policies_development_agent",
+    "policies_development_agent_no_generation",
+    "real_training",
+    "supplemental_training",
+    "synthetic_train_features",
+    "synthetic_training"
+  ],
+  "global_manifest": "data/manifests/real.jsonl",
+  "global_sha256": "cc75a15446bb560bb4647196883c7d2f1dd7b25f4d35239de4e59da4e9463d8b",
+  "gpu_used": false,
+  "scope": "metadata-only global/split row equality and prior stage signature audit",
+  "splits": {
+    "calibration": {
+      "exact_global_content_and_order_match": true,
+      "rows": 600,
+      "sha256": "94768f054286a4fcbb3c8dfb4169ad78a2efae9405aecd73501dc0d7501d6bb1"
+    },
+    "development": {
+      "exact_global_content_and_order_match": true,
+      "rows": 735,
+      "sha256": "77940e3620018448e5e1142f1ad70d4ef4909b2aaf40030eb238a1b2413ccc98"
+    },
+    "test": {
+      "exact_global_content_and_order_match": true,
+      "rows": 1200,
+      "sha256": "36803e65e9367e94612c4cf99b2749c991d1adee448a894eec399ccd52b92279"
+    },
+    "train": {
+      "exact_global_content_and_order_match": true,
+      "rows": 3735,
+      "sha256": "77389cd7d157b025abf8b7a283b37e6b3a9204565340c40132021101f0cbeb36"
+    }
+  },
+  "status": "passed",
+  "test_freeze_created": false,
+  "test_waveforms_or_outcomes_accessed": false,
+  "total_rows": 6270
+}

@@ -1,0 +1,161 @@
+{
+  "status": "basic_numerics_passed_hht_limited",
+  "gpu": "NVIDIA RTX 5000 Ada Generation",
+  "gpu_uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+  "torch_version": "2.9.0+cu128",
+  "hht_method": "bounded piecewise-linear CUDA EMD approximation; 6 IMFs, <=10 sifts",
+  "thresholds": {
+    "reconstruction_relative_rms_max": 1e-05,
+    "pure_tone_if_relative_error_max": 0.05,
+    "wavelet_peak_relative_error_max": 0.15,
+    "synthetic_snr_db_absolute_error_max": 0.001
+  },
+  "benchmarks": [
+    {
+      "batch_size": 4,
+      "samples": 48000,
+      "representation": "fourier",
+      "feature_dimension": 32,
+      "seconds": 0.08213684900010776,
+      "milliseconds_per_clip": 20.53421225002694,
+      "peak_allocated_mib": 40.67626953125,
+      "finite": true
+    },
+    {
+      "batch_size": 4,
+      "samples": 48000,
+      "representation": "stft",
+      "feature_dimension": 64,
+      "seconds": 0.09720710400006283,
+      "milliseconds_per_clip": 24.301776000015707,
+      "peak_allocated_mib": 51.6962890625,
+      "finite": true
+    },
+    {
+      "batch_size": 4,
+      "samples": 48000,
+      "representation": "wavelet",
+      "feature_dimension": 56,
+      "seconds": 0.009294849000070826,
+      "milliseconds_per_clip": 2.3237122500177065,
+      "peak_allocated_mib": 103.38330078125,
+      "finite": true
+    },
+    {
+      "batch_size": 4,
+      "samples": 48000,
+      "representation": "hht",
+      "feature_dimension": 32,
+      "seconds": 0.11941262700020161,
+      "milliseconds_per_clip": 29.853156750050402,
+      "peak_allocated_mib": 86.82763671875,
+      "finite": true,
+      "mean_sifts": 9.833333969116211,
+      "unconverged_or_extrema_failed_fraction": 0.9583333730697632,
+      "maximum_reconstruction_relative_rms": 6.64425101604138e-08
+    },
+    {
+      "batch_size": 4,
+      "samples": 160000,
+      "representation": "fourier",
+      "feature_dimension": 32,
+      "seconds": 0.002001186000143207,
+      "milliseconds_per_clip": 0.5002965000358017,
+      "peak_allocated_mib": 55.59326171875,
+      "finite": true
+    },
+    {
+      "batch_size": 4,
+      "samples": 160000,
+      "representation": "stft",
+      "feature_dimension": 64,
+      "seconds": 0.004314088000228367,
+      "milliseconds_per_clip": 1.0785220000570916,
+      "peak_allocated_mib": 93.91455078125,
+      "finite": true
+    },
+    {
+      "batch_size": 4,
+      "samples": 160000,
+      "representation": "wavelet",
+      "feature_dimension": 56,
+      "seconds": 0.010939125000277272,
+      "milliseconds_per_clip": 2.734781250069318,
+      "peak_allocated_mib": 263.2578125,
+      "finite": true
+    },
+    {
+      "batch_size": 4,
+      "samples": 160000,
+      "representation": "hht",
+      "feature_dimension": 32,
+      "seconds": 0.11887454900033845,
+      "milliseconds_per_clip": 29.718637250084612,
+      "peak_allocated_mib": 209.87939453125,
+      "finite": true,
+      "mean_sifts": 10.0,
+      "unconverged_or_extrema_failed_fraction": 1.0,
+      "maximum_reconstruction_relative_rms": 6.63442065729214e-08
+    }
+  ],
+  "limitations": [
+    "Numerical fixtures do not validate real-world detection",
+    "Spline-EMD agreement is diagnostic, not equivalence",
+    "Timing is a pilot; no full workload throughput claim",
+    "Most noisy-scene modes reached bounded sifting without strict IMF convergence; HHT is exploratory and not validated classical decomposition"
+  ],
+  "known_tone": {
+    "true_hz": 440,
+    "imf0_mean_if_hz": 440.0002136230469,
+    "if_relative_error": 4.85506924715909e-07,
+    "wavelet_peak_hz": 412.5047302246094,
+    "wavelet_relative_error": 0.06248924948952415,
+    "reconstruction_relative_rms": 4.1547544071818265e-08,
+    "sift_counts": [
+      [
+        7,
+        2,
+        4,
+        7,
+        6,
+        8
+      ]
+    ],
+    "unconverged_or_extrema_failed": [
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ]
+  },
+  "classical_spline_reference": {
+    "fixture_samples": 4096,
+    "reference_device": "CPU small correctness fixture only",
+    "imf0_relative_rms_difference_interior": 0.040258992463350296,
+    "interpretation": "Approximation discrepancy; not a pass/fail equivalence test"
+  },
+  "synthetic_checks": {
+    "source_counts": [
+      0,
+      1,
+      2
+    ],
+    "exact_mixture_reconstruction": true,
+    "maximum_snr_db_error": 0.0,
+    "maximum_stem_value_outside_label_mask": 0.0
+  },
+  "checks": {
+    "tone_if": true,
+    "wavelet_frequency": true,
+    "reconstruction": true,
+    "synthetic_snr": true,
+    "synthetic_exact_mixture": true,
+    "synthetic_support": true,
+    "all_features_finite": true
+  },
+  "hht_readiness": "exploratory_approximation_only"
+}

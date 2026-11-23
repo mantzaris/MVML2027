@@ -1,0 +1,86 @@
+{
+  "created_utc": "2026-11-23T19:56:10.560092+00:00",
+  "files": {
+    "manuscript/build_manifest.json": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/build_manifest.json",
+      "sha256": "db91f0d8d752dfa40e6006d2d1d92d0e8e2f5462851b580c48e2f7f24132feea"
+    },
+    "manuscript/main_paper.pdf": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/main_paper.pdf",
+      "sha256": "0e61f28e1f872103be57aa058bfd373c8dabceb6085a8953aa5c0fc432a7daf6"
+    },
+    "manuscript/renders/main_paper-1.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/main_paper-1.png",
+      "sha256": "c5b0776aa7104a6700c32bc333a594a6a8c637e1f8657863684db250e51a8a72"
+    },
+    "manuscript/renders/main_paper-2.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/main_paper-2.png",
+      "sha256": "ca0e08200d3807e2a96fd59866c5efce1e4dfb39ad52f2af8b1ac28aa6bfe725"
+    },
+    "manuscript/renders/main_paper-3.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/main_paper-3.png",
+      "sha256": "cc41be2b00d3ac6ee40e0f7e9b2a1cfbfa15656f089b0904d5dabdec391e8d7b"
+    },
+    "manuscript/renders/main_paper-4.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/main_paper-4.png",
+      "sha256": "7f8a07be304af9e4e0a79a077a6a42923d50e8a4987e06f67ae7d419a7653246"
+    },
+    "manuscript/renders/main_paper-5.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/main_paper-5.png",
+      "sha256": "08a903be1ad51439b3ca0ee54bf2468a32055854c630e152e070e52cb0591273"
+    },
+    "manuscript/renders/main_paper-6.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/main_paper-6.png",
+      "sha256": "d2fc0d1fab3bd60ebab4c02beb5e859191787c75e7b9c5588cc9809eee8a1561"
+    },
+    "manuscript/renders/main_paper-7.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/main_paper-7.png",
+      "sha256": "640ba2c0f435986467d43216a166fc5d4b4ae276c29487b02fb1c9e70cafd6c9"
+    },
+    "manuscript/renders/main_paper-8.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/main_paper-8.png",
+      "sha256": "86d666db22cc94716da5653cd9a4f42335bfe2b8f753fc580655990d28897a0e"
+    },
+    "manuscript/renders/supplement-1.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/supplement-1.png",
+      "sha256": "8216bf6bd8197d7e89ee787fb660fb76dbfa9659e28a0868c10028229ca02636"
+    },
+    "manuscript/renders/supplement-2.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/supplement-2.png",
+      "sha256": "d492fde17f160ebd9396e16814b6bd7776af644e394779c8e1bdaa562c17c2e1"
+    },
+    "manuscript/renders/supplement-3.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/supplement-3.png",
+      "sha256": "3700ccc3cbe226dec05ee571a5cc02514ccb5927d3eba13e1d470ee0c6aded54"
+    },
+    "manuscript/renders/supplement-4.png": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/renders/supplement-4.png",
+      "sha256": "425c107995b193fded9bde076b931ae4001799ee90c5c989b7b7c84c31fd2a02"
+    },
+    "manuscript/supplement.pdf": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/manuscript/supplement.pdf",
+      "sha256": "2bb069ab7a1da335f1468e113903eb7af2ead21a23cbe9d1bd5eaa7a7c81a000"
+    },
+    "reports/final_integrity_audit.json": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/reports/final_integrity_audit.json",
+      "sha256": "09e0b2279ffeca4a5ed348b0eb1cf81afae76d12f3a1afdf33128528acccdb78"
+    },
+    "reports/main_figures_visual_review.json": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/reports/main_figures_visual_review.json",
+      "sha256": "fa4497810d688fc0370a0c2e4fed51b3b8fe75e337934ad59c023b898186ce6c"
+    },
+    "reports/main_pdf_visual_review.json": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/reports/main_pdf_visual_review.json",
+      "sha256": "5c2cbb1a3771284bd7a1c45d05b18f13dcd142833f8ecb034dd0b337ea3559d7"
+    },
+    "runs/stages/manuscript.json": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/runs/stages/manuscript.json",
+      "sha256": "24bd1f102cfe398c0e8d7672686b0b9364365872a59df56bd7dc475d5e2855ac"
+    },
+    "scripts/build_results_report.py": {
+      "preserved": "manuscript/revisions/v1_before_regime_label_correction/scripts/build_results_report.py",
+      "sha256": "7d9b7e434455f03257edebe1c210ca7dde0dea1742dac440d4cc03143da5a1f4"
+    }
+  },
+  "reason": "Presentation-only final supplement regime label correction; numerical results and frozen experiment remain unchanged"
+}

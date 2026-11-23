@@ -1,0 +1,127 @@
+{
+  "build_manifest_modified": false,
+  "build_manifest_sha256": "db91f0d8d752dfa40e6006d2d1d92d0e8e2f5462851b580c48e2f7f24132feea",
+  "checks": [
+    "No clipped or overlapping text, labels, equations or tables",
+    "Five figures legible at rendered resolution",
+    "Negative findings and universal acquisition disclosed",
+    "Primary AP of mean-seed probabilities distinguished from mean seed-specific AP",
+    "One dependence component and absent primary CI stated",
+    "Separate simulator/semi-synthetic temporalCNN scope stated",
+    "No placeholders leaked into empirical manuscript"
+  ],
+  "experimental_sources_modified": false,
+  "gpu_used": false,
+  "inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "issues": [],
+  "page_count": 8,
+  "pages": [
+    {
+      "height_pixels": 1210,
+      "individually_inspected_with": "view_image(detail=original)",
+      "layout_status": "passed",
+      "notes": "Title, abstract, keywords, workflow figure and caption are legible; no clipping. Abstract states negative primary difference and one connected test component.",
+      "page": 1,
+      "render_path": "manuscript/renders/main_paper-1.png",
+      "render_sha256": "c5b0776aa7104a6700c32bc333a594a6a8c637e1f8657863684db250e51a8a72",
+      "scientific_consistency_status": "passed",
+      "width_pixels": 935
+    },
+    {
+      "height_pixels": 1210,
+      "individually_inspected_with": "view_image(detail=original)",
+      "layout_status": "passed",
+      "notes": "All five equations and equation numbers are legible and separated from text; conditional/full-null distinction and HHT approximation are explicit.",
+      "page": 2,
+      "render_path": "manuscript/renders/main_paper-2.png",
+      "render_sha256": "ca0e08200d3807e2a96fd59866c5efce1e4dfb39ad52f2af8b1ac28aa6bfe725",
+      "scientific_consistency_status": "passed",
+      "width_pixels": 935
+    },
+    {
+      "height_pixels": 1210,
+      "individually_inspected_with": "view_image(detail=original)",
+      "layout_status": "passed",
+      "notes": "Cohort table and protocol text are legible; AIS proxy labels, class balance, finite-trie correction and nonconfirmatory day resampling are disclosed.",
+      "page": 3,
+      "render_path": "manuscript/renders/main_paper-3.png",
+      "render_sha256": "cc41be2b00d3ac6ee40e0f7e9b2a1cfbfa15656f089b0904d5dabdec391e8d7b",
+      "scientific_consistency_status": "passed",
+      "width_pixels": 935
+    },
+    {
+      "height_pixels": 1210,
+      "individually_inspected_with": "view_image(detail=original)",
+      "layout_status": "passed",
+      "notes": "Detection figure and ten-row comparison table fit cleanly. Ensemble AP0.5738 versus locked wavelet0.5906 is distinguished from mean seed AP; low recall/FPR units and sensitivity interval scope are clear.",
+      "page": 4,
+      "render_path": "manuscript/renders/main_paper-4.png",
+      "render_sha256": "7f8a07be304af9e4e0a79a077a6a42923d50e8a4987e06f67ae7d419a7653246",
+      "scientific_consistency_status": "passed",
+      "width_pixels": 935
+    },
+    {
+      "height_pixels": 1210,
+      "individually_inspected_with": "view_image(detail=original)",
+      "layout_status": "passed",
+      "notes": "Robustness figure and nine-row temporal table are legible without overlap. Synthetic and real-excerpt temporal CNN results are explicitly separated from agent benefit.",
+      "page": 5,
+      "render_path": "manuscript/renders/main_paper-5.png",
+      "render_sha256": "08a903be1ad51439b3ca0ee54bf2468a32055854c630e152e070e52cb0591273",
+      "scientific_consistency_status": "passed",
+      "width_pixels": 935
+    },
+    {
+      "height_pixels": 1210,
+      "individually_inspected_with": "view_image(detail=original)",
+      "layout_status": "passed",
+      "notes": "Component figure, negative V0 contrasts, universal acquisition paths and HHT failure text fit cleanly; seed ranges are not presented as confidence intervals.",
+      "page": 6,
+      "render_path": "manuscript/renders/main_paper-6.png",
+      "render_sha256": "d2fc0d1fab3bd60ebab4c02beb5e859191787c75e7b9c5588cc9809eee8a1561",
+      "scientific_consistency_status": "passed",
+      "width_pixels": 935
+    },
+    {
+      "height_pixels": 1210,
+      "individually_inspected_with": "view_image(detail=original)",
+      "layout_status": "passed",
+      "notes": "Compute figure, rotated method labels, caption and limitations are legible. Warm batch-throughput scope, charged work and measured7.02cost ratio are explicit; no cost frontier or adaptive savings claim.",
+      "page": 7,
+      "render_path": "manuscript/renders/main_paper-7.png",
+      "render_sha256": "640ba2c0f435986467d43216a166fc5d4b4ae276c29487b02fb1c9e70cafd6c9",
+      "scientific_consistency_status": "passed",
+      "width_pixels": 935
+    },
+    {
+      "height_pixels": 1210,
+      "individually_inspected_with": "view_image(detail=original)",
+      "layout_status": "passed",
+      "notes": "Conclusion accurately reports failure to improve detection/adaptive selection. References and page footer are fully visible; no placeholder or clipped citation.",
+      "page": 8,
+      "render_path": "manuscript/renders/main_paper-8.png",
+      "render_sha256": "86d666db22cc94716da5653cd9a4f42335bfe2b8f753fc580655990d28897a0e",
+      "scientific_consistency_status": "passed",
+      "width_pixels": 935
+    }
+  ],
+  "pdf": "manuscript/main_paper.pdf",
+  "pdf_sha256": "0e61f28e1f872103be57aa058bfd373c8dabceb6085a8953aa5c0fc432a7daf6",
+  "quantitative_source_audit": {
+    "path": "manifests/real_test_independent_audit.json",
+    "sha256": "45599b915d08fa3493d7b3ece6f1bcd79a2d96794e1c474123de4d1e119ba985"
+  },
+  "rendering": "Existing final-build pdftoppm110dpi PNGs; every page inspected individually, not a contact sheet",
+  "reviewed_utc": "2026-11-23T19:52:30.285118+00:00",
+  "reviewer": "independent_design_review_agent",
+  "status": "passed"
+}

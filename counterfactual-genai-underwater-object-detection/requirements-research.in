@@ -1,0 +1,16 @@
+torch==2.9.0+cu128
+torchaudio==2.9.0+cu128
+torchvision==0.24.0+cu128
+transformers==4.57.1
+accelerate==1.11.0
+huggingface-hub==0.36.0
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.2
+pandas==2.3.3
+soundfile==0.13.1
+matplotlib==3.10.7
+requests==2.32.5
+pytest==8.4.2
+reportlab==4.4.4
+pypdf==6.3.0

@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-23T21:42:28.458008+00:00",
+  "files": {
+    "EXECUTION_LOG.md": "059e7f1dbdb39240297161d3124bc5af4bcb5bac783ebf9228f580646230b5b7",
+    "RESEARCH_RESULTS.md": "9de303636dd967c838626341e81ff670ac708b38c430a763978f06813f73a650",
+    "manuscript/README.md": "63b0c4738a2d41ef12d28c1f3304c442d7eafd648530822bbef2c0dad5963f4e",
+    "manuscript/latex_build/main.pdf": "2a3bba549e92ab39a362288e3e74fa76b42fb01011e1bb0d7d67d1a6f51dfa82",
+    "manuscript/latex_build/main.validation.json": "0758edced9a7599af675c864da9d0817109934abd98c10629df568562ac2acc1",
+    "manuscript/latex_build/supplementary.pdf": "84b1a76b66178bebbff5d27e9b4138dfc05af28e4337c4666c2dcfa327c299f3",
+    "manuscript/latex_build/supplementary.validation.json": "58be6721e47a3277036c175c4cf35cf32e821aca8de9cf04624e0d5f0d5b1612",
+    "manuscript/latex_renders/main/page-1.png": "4c78eb9c5c56c48f7f33500fc967267f98b068888dcd863186182e4ea3c518f2",
+    "manuscript/latex_renders/main/page-2.png": "2f50f037bdc82f8e234ce1bc3d130a0f03de4d24de85c22cb3e264564f7b4963",
+    "manuscript/latex_renders/main/page-3.png": "4c5853fe3b6404c36140372629c2e72e27955ca367e01b0f61977132c6ad7b0e",
+    "manuscript/latex_renders/main/page-4.png": "928c4cdbb42f222cff0198c52bbf64dea286c63059eb126c1e1dc4f317b89ecd",
+    "manuscript/latex_renders/main/page-5.png": "8c09f718d9af7120db595ecd20899ede185e25be75c52b6ac74c7325ad6c9d1f",
+    "manuscript/latex_renders/main/page-6.png": "0f1a0a9a3ab2146dee7ebdccc7fc95997103516a7c487131778f5b73f45e4922",
+    "manuscript/latex_renders/main/page-7.png": "e9d581f325b70a2fd81861f9fc36e0e04b7b98522886796979498a4920ce7840",
+    "manuscript/latex_renders/main/page-8.png": "893acb19244c560af32c79e7caab86e80d26be4d672b0bbafb25e0223627399f",
+    "manuscript/latex_renders/supplementary/page-1.png": "f41d843cd0610ce646a02da0442716c185cadabb86ddf533a58bef8299aeab37",
+    "manuscript/latex_renders/supplementary/page-2.png": "3d0e34b243561c6463284325d124ba13163f94a9bf3822a922c4f949ba1f1026",
+    "manuscript/latex_renders/supplementary/page-3.png": "d5666c9de1a08f65fac1c283e269420c0052c94ef400af4a6ecb4e78a7e89aac",
+    "manuscript/latex_renders/supplementary/page-4.png": "62edc792e5e3a7c6aa213fecde2e2b2ebc3d131c0948f42b8f06be4415630917",
+    "manuscript/main.bib": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd",
+    "manuscript/main.tex": "64554e639684e4d323a05eb00d861f0e66d1b2c31d4f1b2cc313ad0dffd1c79f",
+    "manuscript/supplementary.bib": "62e880a8ff61728d49e373cc7eaca854ae7eec39b7bc67cc1d046f5d14f5e824",
+    "manuscript/supplementary.tex": "fc0f6064d20c16f92d65fdc6b908e69ff51618b18bc5a1c24944e72a2e98776d",
+    "reports/editorial_revision_2_review.json": "a1aab43ef5de03453f340d3196b2f194429603e0aab307187c6df8c6170ac9fd",
+    "reports/latex_conversion_audit.json": "6322912a051c9697a1e8f685673517201eeec8eeaa4cfd1c7a1a4281540777a4",
+    "runs/horizon_status.json": "ca0ff5dc4389c4c59efa8a40e4c99024b915ac1d1ccfb9fb2ce918449e7a0502",
+    "runs/research_complete.json": "0ce1323dba9c7f6ef9fc7b991e73bb26a6eae553a972393df618199a7967ddcb"
+  },
+  "reason": "Preserve reviewed revision2 before requested success-led abstract and conclusions"
+}

@@ -1,0 +1,240 @@
+{
+  "build_manifest_sha256_before_visual_signoff": "db91f0d8d752dfa40e6006d2d1d92d0e8e2f5462851b580c48e2f7f24132feea",
+  "checked_utc": "2026-11-23T19:53:25.752365+00:00",
+  "freeze_sha256": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+  "frozen_artifacts": 185,
+  "scope": "All38 completed stage command/input/output digests, all185 frozen artifacts, manuscript source/input/output and audit references, all15 live receipts and parity references; observational reporting audit only",
+  "stages": [
+    {
+      "inputs": 10,
+      "outputs": 2,
+      "receipt_sha256": "0edbf09a26110309cba48d24025119e43399d602873424be0fb7ee3f0d173ec4",
+      "stage": "background_flow"
+    },
+    {
+      "inputs": 66,
+      "outputs": 2,
+      "receipt_sha256": "b2577b8f096b0b798011a678ba17f52e89754aa5e6d6889fcdef24a62e48599a",
+      "stage": "calibration"
+    },
+    {
+      "inputs": 10,
+      "outputs": 1,
+      "receipt_sha256": "1d6f24812aa27932b874922917ff704d3c5314478803c46044c13d0daeb5a390",
+      "stage": "features_calibration"
+    },
+    {
+      "inputs": 10,
+      "outputs": 1,
+      "receipt_sha256": "d0a00a9088ef89e0e7e9927987ef0d7d6f50e0ed222586b554fca703b9a7464c",
+      "stage": "features_development"
+    },
+    {
+      "inputs": 11,
+      "outputs": 1,
+      "receipt_sha256": "75b12e42a58debb2cf4b7308a93536242997af1f3cc97913a208c08aef10378c",
+      "stage": "features_test"
+    },
+    {
+      "inputs": 10,
+      "outputs": 1,
+      "receipt_sha256": "06fb27d0eba4f79897ab3d3448ad9a72f3ff7851b053ea169d90ae197a412eb3",
+      "stage": "features_train"
+    },
+    {
+      "inputs": 12,
+      "outputs": 1,
+      "receipt_sha256": "a19861548b59fcf6e85a4ea291f9dc365ebf1978dd617ec6b2f6d14ce1f89620",
+      "stage": "final_assembly"
+    },
+    {
+      "inputs": 19,
+      "outputs": 1,
+      "receipt_sha256": "28129fc2442f78f78fd60357bab1069c17ad880f4b60fe11538b4f6e987e979b",
+      "stage": "foundation_calibration"
+    },
+    {
+      "inputs": 19,
+      "outputs": 1,
+      "receipt_sha256": "baaed4194b260beab0f665b05e23ae6d66e210a929a5da37fdfc91e70cb6d003",
+      "stage": "foundation_development"
+    },
+    {
+      "inputs": 20,
+      "outputs": 1,
+      "receipt_sha256": "67ad79f764fac2aac30f1e1458f2a65583c680628479f37026e357e8effa7296",
+      "stage": "foundation_test"
+    },
+    {
+      "inputs": 19,
+      "outputs": 1,
+      "receipt_sha256": "8d3c91f63034d6f783c880f8f57c5670ebc864a8380f00c158203c36ce1647bd",
+      "stage": "foundation_train"
+    },
+    {
+      "inputs": 159,
+      "outputs": 1,
+      "receipt_sha256": "8c5a9d697ec6c9afa7e1ca704ff6044903851ba186cbe7267ec861b5bacdb8fc",
+      "stage": "freeze"
+    },
+    {
+      "inputs": 5,
+      "outputs": 1,
+      "receipt_sha256": "efc233d2e452fd311ecb152f7a88b53c546faa6d19b2f7170418be713969c8de",
+      "stage": "gpu_identity"
+    },
+    {
+      "inputs": 14,
+      "outputs": 1,
+      "receipt_sha256": "500cab132c182fc6a61676252f24f7db1af6ce52ab088a3f726f4d09b26bfcff",
+      "stage": "interventions_calibration_central"
+    },
+    {
+      "inputs": 14,
+      "outputs": 1,
+      "receipt_sha256": "7b0ee5153c4a75b2cb870b545b548277c81df372b348aa3ccb8feff70a7cbc4c",
+      "stage": "interventions_calibration_full"
+    },
+    {
+      "inputs": 14,
+      "outputs": 1,
+      "receipt_sha256": "2f9c667c3998f77c00d9f880f0e8895c068d5551a44c9f43da0c7159f35de6a0",
+      "stage": "interventions_development_central"
+    },
+    {
+      "inputs": 14,
+      "outputs": 1,
+      "receipt_sha256": "8bf5ce5d2b59b2e94402234b8a1381d8f14b76ed807fce4f014f32567c30c978",
+      "stage": "interventions_development_full"
+    },
+    {
+      "inputs": 15,
+      "outputs": 1,
+      "receipt_sha256": "0ccf958825010949a31b7c56fa4be0ffd698670d97b105e7f97ef93d5983a798",
+      "stage": "interventions_test_central"
+    },
+    {
+      "inputs": 15,
+      "outputs": 1,
+      "receipt_sha256": "c26721732f5aeb328c8136423089e7490262ca55a2d1cbb2fb56f1cef68d6d97",
+      "stage": "interventions_test_full"
+    },
+    {
+      "inputs": 84,
+      "outputs": 1,
+      "receipt_sha256": "3e20aaafcdb8c1b3deb89819fc0374b441dc0ad6f6dd8c3097eb7c431a9d5c24",
+      "stage": "live_benchmark"
+    },
+    {
+      "inputs": 15,
+      "outputs": 2,
+      "receipt_sha256": "24bd1f102cfe398c0e8d7672686b0b9364365872a59df56bd7dc475d5e2855ac",
+      "stage": "manuscript"
+    },
+    {
+      "inputs": 62,
+      "outputs": 3,
+      "receipt_sha256": "e4e25962da8f733a0d1fe79580269cca1f9563f055ad09f6bdaa6e106ac5747d",
+      "stage": "policies_calibration_agent"
+    },
+    {
+      "inputs": 62,
+      "outputs": 3,
+      "receipt_sha256": "055c034c5aa82e6aa1ebc264643b9adcba38b635404eec76193d8d96f2ea8f5a",
+      "stage": "policies_calibration_agent_no_generation"
+    },
+    {
+      "inputs": 62,
+      "outputs": 3,
+      "receipt_sha256": "50a3eca4eb37a4f4ad5b36621fbb33169fb33c1e3857e366f011a634c6cdad2d",
+      "stage": "policies_development_agent"
+    },
+    {
+      "inputs": 62,
+      "outputs": 3,
+      "receipt_sha256": "af5a35cbc1840c80d0608bca0ff526fd903fd1b4c951dff73bc94c1f9f49cf85",
+      "stage": "policies_development_agent_no_generation"
+    },
+    {
+      "inputs": 63,
+      "outputs": 3,
+      "receipt_sha256": "f0d2730970f524aba60464b116bb73fecb5fb380ac1b44b38532608481df8b83",
+      "stage": "policies_test_agent"
+    },
+    {
+      "inputs": 63,
+      "outputs": 3,
+      "receipt_sha256": "8c87873abba377af09e4de4270199f7b7ea48b2faaaaf9b8270a787226dbe154",
+      "stage": "policies_test_agent_no_generation"
+    },
+    {
+      "inputs": 6,
+      "outputs": 5,
+      "receipt_sha256": "1f8e771fe413855d04281d3ca2c2a66415066d7e81fbfe9026f4f63874c68d48",
+      "stage": "raw_acquisition"
+    },
+    {
+      "inputs": 59,
+      "outputs": 1,
+      "receipt_sha256": "6a0b5d5d93a288ea056da35bb087060107a510d1a872189b136c5ff4a3e7226d",
+      "stage": "real_test"
+    },
+    {
+      "inputs": 20,
+      "outputs": 1,
+      "receipt_sha256": "fb2c477370d60729037ca25251750b67d6f41a1d94a7f9bfdf706a1c52a96698",
+      "stage": "real_training"
+    },
+    {
+      "inputs": 85,
+      "outputs": 1,
+      "receipt_sha256": "7b9074e71335f2bfa5f167e53ae70b7a391b618b1cfda6294a9e0a52a7291461",
+      "stage": "robustness"
+    },
+    {
+      "inputs": 24,
+      "outputs": 1,
+      "receipt_sha256": "c4cb108e067d68740f6983f25b0d6e82fa16713a18e43bbfcf442b0a1db6e80c",
+      "stage": "semisynthetic_test"
+    },
+    {
+      "inputs": 33,
+      "outputs": 1,
+      "receipt_sha256": "6a652ccd35e657a75b2268ffb1902656ca55d15df72f3aaf1a599e8bc5f8b7c0",
+      "stage": "supplemental_test"
+    },
+    {
+      "inputs": 18,
+      "outputs": 2,
+      "receipt_sha256": "d78667d74356059895e05c95584f3ae9163078910dd381e70e313327985abc10",
+      "stage": "supplemental_training"
+    },
+    {
+      "inputs": 17,
+      "outputs": 1,
+      "receipt_sha256": "1f446fabc754068b0b61b41dcc45bac122ec90e7777c94159ce48ef23d15a7d2",
+      "stage": "synthetic_test"
+    },
+    {
+      "inputs": 18,
+      "outputs": 2,
+      "receipt_sha256": "3b757e0b3bdcd17cd5c84b96baab69da1a2657f4f15879f0b03c4ef17dd6f5cd",
+      "stage": "synthetic_test_features"
+    },
+    {
+      "inputs": 17,
+      "outputs": 2,
+      "receipt_sha256": "f922dcd052d49dace8508678387524140d8068a855dac5ef623301fbc8e4214d",
+      "stage": "synthetic_train_features"
+    },
+    {
+      "inputs": 13,
+      "outputs": 3,
+      "receipt_sha256": "9d605fbb3a146fb68b8c9d3dc01c8fb8394f9785ce6d5a4b554bac6188d127f8",
+      "stage": "synthetic_training"
+    }
+  ],
+  "stages_verified": 38,
+  "status": "passed",
+  "unique_files_hashed": 273
+}

@@ -1,0 +1,28 @@
+{
+  "artifacts": {
+    "checkpoints/flow_pilot/final.pt": {
+      "bytes": 8019285,
+      "sha256": "dbf6c313b2cfc9c180324042c84ac3428f9aa16623b8f246c651b1548160e1ec"
+    },
+    "manifests/flow_pilot_validation.json": {
+      "bytes": 281,
+      "sha256": "562921dfe6114702897bd5aa325f5fd8cdf66b02055d261c97b25b89b4f87ac1"
+    }
+  },
+  "completed_utc": "2026-11-23T16:38:53.410840+00:00",
+  "config_hash": "464426e4075600cb0cbbe5e6ee1b9fa8b2b5da09f191b5890ad3cc5d9d7ee667",
+  "data_fingerprint": null,
+  "details": {
+    "finite": true,
+    "median_target_projection_after": 0.0061889756470918655,
+    "median_target_projection_before": 0.9983891248703003,
+    "outside_max_error": 7.450580596923828e-09,
+    "parameters": 1997121,
+    "peak_memory_mib": 676.966796875,
+    "pilot_only": true,
+    "steps": 64
+  },
+  "stage": "flow_pilot",
+  "status": "complete",
+  "version": 1
+}

@@ -1,0 +1,12 @@
+{
+  "gpu_uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+  "gpu_name": "NVIDIA RTX 5000 Ada Generation",
+  "minimum_memory_mib": 30000,
+  "observed_memory_mib": 32760,
+  "observed_driver": "590.48.01",
+  "observed_physical_index": 1,
+  "excluded_gpu": "Quadro T2000 (4096 MiB)",
+  "execution_location": "local external GPU; no remote connection",
+  "host_link": "Authorized Sonnet Thunderbolt 3 connection; boltctl observed 40 Gb/s on 2026-11-23",
+  "policy": "Pin the exact UUID, fail on identity or memory mismatch, and prohibit CPU fallback for research tensor computation. Physical device indices are informational only."
+}

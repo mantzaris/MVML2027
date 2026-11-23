@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-23T20:37:19.596812+00:00",
+  "files": {
+    "EXECUTION_LOG.md": "213da1b62f6c5fbb0d4b0a81f63d102de7c2ea7dee99ed2bdd87fd1829e18991",
+    "NEXT_STEPS.md": "139795969cb5b34edfc9797a84cc799086ef12fbaa2cf05bea9cbe2ab8bef7d8",
+    "README.md": "e772eb489c4786fe0e8e2a8bd08c0b6e8a528f1fbbad4c7511ee121079ba0311",
+    "RESEARCH_RESULTS.md": "4f8f7eee70af185edd03a8b1252900808622e4be6b2d51e523ebbafa4bf4605b",
+    "reports/final_integrity_audit.json": "8d31d5c17b5469565e8b063d34ee8e8e1ae3b3620aaf83a2d3bbe4c296f1c75b",
+    "runs/horizon_status.json": "8d908e72e3c5e7d04a6fde1571932c79b60673269354e0e3bd00fe3f16e70adb",
+    "runs/research_complete.json": "fb59f0c79988bd1f684a438e4cfe423c8800954e771725ad46d0801f6ef19065"
+  },
+  "prior_pdfs_unchanged": true,
+  "reason": "Preserve completed revision3 before adding requested single-file LaTeX manuscripts and separate bibliographies"
+}

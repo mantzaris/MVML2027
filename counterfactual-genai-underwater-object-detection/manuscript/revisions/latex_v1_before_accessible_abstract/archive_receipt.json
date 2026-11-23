@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-11-23T21:09:21.062930+00:00",
+  "files": {
+    "EXECUTION_LOG.md": "11b8aec9136bb7c436ed50b127d12bea0916d3c22a45065437413ea0b69a8a66",
+    "RESEARCH_RESULTS.md": "e3800e1d2863c98850b5ec54b94660b7c5efe8ac893b466ec0f5dd0fc7c72378",
+    "manuscript/README.md": "c50d482e937fa435b0d9c0d1dec83b9bd1c93fb17d01bb8b3527cfe8e1812baf",
+    "manuscript/latex_build/main.pdf": "e7e6f046414cd0dade858a12ad4602daf4d1f665fd27ec39624eeca3b05d0d28",
+    "manuscript/latex_build/main.validation.json": "c11c701254f9ae2b2847b2bb8278b220c8f832081a9730e458b384d2681504ea",
+    "manuscript/latex_build/supplementary.pdf": "52d29faa36e84218c5488b366a37483bd81faca91f385ba58a7eb628feeb9759",
+    "manuscript/latex_build/supplementary.validation.json": "8b504624781500f5100acd3bdb0b60106c89526f6edf6ea9b2f70c26e75bec8a",
+    "manuscript/latex_renders/main/page-1.png": "43ae1aacf85f8a33e4327e6d67dd9366af587cf2c4469ea53eddcfce835e1a47",
+    "manuscript/latex_renders/main/page-2.png": "2f50f037bdc82f8e234ce1bc3d130a0f03de4d24de85c22cb3e264564f7b4963",
+    "manuscript/latex_renders/main/page-3.png": "4c5853fe3b6404c36140372629c2e72e27955ca367e01b0f61977132c6ad7b0e",
+    "manuscript/latex_renders/main/page-4.png": "928c4cdbb42f222cff0198c52bbf64dea286c63059eb126c1e1dc4f317b89ecd",
+    "manuscript/latex_renders/main/page-5.png": "8c09f718d9af7120db595ecd20899ede185e25be75c52b6ac74c7325ad6c9d1f",
+    "manuscript/latex_renders/main/page-6.png": "0f1a0a9a3ab2146dee7ebdccc7fc95997103516a7c487131778f5b73f45e4922",
+    "manuscript/latex_renders/main/page-7.png": "e9d581f325b70a2fd81861f9fc36e0e04b7b98522886796979498a4920ce7840",
+    "manuscript/latex_renders/main/page-8.png": "ff4bd194c7e70e7a43b03916108f600ee9d3dbc2b115448c43656b85cfd16ceb",
+    "manuscript/latex_renders/supplementary/page-1.png": "f41d843cd0610ce646a02da0442716c185cadabb86ddf533a58bef8299aeab37",
+    "manuscript/latex_renders/supplementary/page-2.png": "3d0e34b243561c6463284325d124ba13163f94a9bf3822a922c4f949ba1f1026",
+    "manuscript/latex_renders/supplementary/page-3.png": "d5666c9de1a08f65fac1c283e269420c0052c94ef400af4a6ecb4e78a7e89aac",
+    "manuscript/latex_renders/supplementary/page-4.png": "920d2e0929ed9315df8861325da3ff69d77772b00650eaba72ccd8ec70ff16ce",
+    "manuscript/main.bib": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd",
+    "manuscript/main.tex": "29e39542a8f66f17a3ac3a5b324ecca07ea78638dbe4452d1dd0bd31e25c1aca",
+    "manuscript/supplementary.bib": "62e880a8ff61728d49e373cc7eaca854ae7eec39b7bc67cc1d046f5d14f5e824",
+    "manuscript/supplementary.tex": "639adb863ff5e1a740798ded75f55b3203f24a0fc47b0395a237eb4e1d634321",
+    "reports/latex_conversion_audit.json": "6322912a051c9697a1e8f685673517201eeec8eeaa4cfd1c7a1a4281540777a4",
+    "runs/horizon_status.json": "9498c8ef5c1d6d16044b67dba5cc62f27f3a003cd1e17b6efdb21c47e6a6ac6d",
+    "runs/research_complete.json": "1aace8506ff81f8d155399ae6986ed9f0633d48a5730409a80d0f7497c282687"
+  },
+  "reason": "User-requested intuitive abstract, stronger methodological contribution and practical conclusions"
+}

@@ -1,0 +1,46 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "93f51e975804eaed3c5454e5b0769ee9fe9138224d89071a1d6defb68b923434",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/generate_synthetic_features.py",
+      "--split",
+      "test",
+      "heldout_test"
+    ]
+  ],
+  "completed_utc": "2026-11-23T19:47:46.483540+00:00",
+  "input_hash": "d3aa4b2c4224a1b2eb1210b2b1aaca4301a56084407beeaccb1ca99ec7d09d00",
+  "inputs": {
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "configs/synthetic_features.json": "ec7801ef3100c4890cc9d3a5b5bac33d71f363784e5f89a7c7b7c2e7c8698be1",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "runs/test_freeze.json": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+    "scripts/evaluate_synthetic.py": "035ba46c7d4f306790f747fe64918e426c596de63a1065327d84ed240fcef3cf",
+    "scripts/extract_real_features.py": "c1858acaa92c4a9bf8fa90327f3c2320d71737200958e5144e96eec3a178c8ae",
+    "scripts/generate_synthetic_features.py": "5f1a4b8555b6d6ce045031118bc887a546ef5faa0f3500c050c83d9a4312625d",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "scripts/synthetic_common.py": "3ddac962ee0ad002a0fd1ba9f048cb64e7162719e468f60fb7e9baf5edb38cdf",
+    "scripts/train_synthetic_detector.py": "a47fd58dec12d9b2a8b17b69ed0982828b90e71cabbe950b76ce18d96179ac35",
+    "src/uac/data.py": "268aecf7ae63df52c9a7efb59a128bb079299e9ef29c475aeb47291b527d3a0d",
+    "src/uac/dsp.py": "92df06b143300987e08cc0d28c3b5e127b36aca69e72f33498d211fa47f160f1",
+    "src/uac/metrics.py": "5a4ec0826a12a841d2e7880fdec1861cbf70cadafcb974cfcccb3142986b247f",
+    "src/uac/models.py": "a714436319bd7edeb921fe8cd48e09b36abfdd702ad5f27ab6236f594ba32f37",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5",
+    "src/uac/synthetic.py": "52e06fc052bf53199bdc53ab92e291ddb80f656356e7ebb8edbf69c99e1e764d",
+    "src/uac/training.py": "b9fb622a9f6e8b7effe474d848c49d201529d313d12edfb7b2bfa41111def435"
+  },
+  "outputs": {
+    "data/features/synthetic/heldout_test/index.json": "b65643d7748c283efb95bdb113e27a18dd33f99e0b09920898151f0ab87aeca7",
+    "data/features/synthetic/test/index.json": "d5519135ec31ad19899122cb34171ac18f9c65927b1f687fe1ba83c0e1cac18c"
+  },
+  "schema_version": 2,
+  "stage": "synthetic_test_features",
+  "supervisor_sha256": "dab0b3d5173fe277fdfd4a590dddbf8f62149bacea5f96849b547361eabf2b78"
+}

@@ -1,0 +1,29 @@
+# Reporting consistency audit before final evaluation
+
+Audit date: 23 November 2026. Read-only review covered the report builder, prospective plan, executed amendments, data audit, implementation and metadata. No GPU computation, held-out prediction inspection or test unlocking occurred. New files in `protocol/conference_sources/` contain only public conference reference material and its local render.
+
+## Assessment
+
+No scientific blocker was found to the scheduled **descriptive** evaluations. Submission readiness remains separate: results are unfinished at this audit, authorship fields are placeholders, final layout must be inspected, and the supplement channel is unverified. The conference facts and source links are in [conference requirements](conference_requirements.md).
+
+## Corrections sent to the report owner
+
+1. State explicitly that synthetic temporal detection and semi-synthetic transfer use a separately trained spectral CNN, with no Qwen controller or generative verification at inference. These experiments assess controlled union activity and transfer, not a demonstrated agent localization benefit. Keep all three data origins separate. Table 3 averages across supplied SNR conditions, including the mixed-SNR condition; this is a descriptive condition average, not one pooled test-set AP or an estimate under a natural SNR distribution.
+2. Name the actual foundation comparator: frozen `facebook/wav2vec2-base-960h`, input normalization on CUDA, last-layer mean and population standard deviation pooled to 1,536 features. Cite [Baevski et al.](https://arxiv.org/abs/2006.11477) and the [official model card](https://huggingface.co/facebook/wav2vec2-base-960h). This checkpoint was pretrained and ASR fine-tuned on LibriSpeech; the underwater speech-transfer paper is motivation, not an implementation citation or reproduced baseline.
+3. Replace ambiguous “2,388 contradictory window memberships” with “2,388 window IDs with conflicting cross-task labels.” Both task memberships of every conflicting ID are excluded.
+4. Describe sham matching as approximate: post-mask perturbation-RMS mismatch must be below 0.05 and normalized eight-band power L1 mismatch below 0.2. These checks do not certify exact spectral equality or physical nuisance equivalence. The real primary probe is fixed centrally, not an adaptively localized real source.
+5. The original HHT and AGNet references support established EMD and wavelet machinery; they do not by themselves support the specific claim of prior underwater EMD detection. Narrow that sentence or add Wang, Chang and Lee (2006), DOI 10.1093/ietfec/e89-a.9.2415, pp. 2415–2421. Keep Qwen's non-thinking model scope explicit: observable bounded tool actions are studied, not validated hidden reasoning. Add body callouts to figures before final rendering.
+
+## Consistent scope that must be retained
+
+The PORTIA cohort is custom, CC-BY-4.0, channel-0 analysis of preserved native four-channel PCM32 windows. AIS co-occurrence is the label proxy; neither positives nor negatives are human audibility judgments. The sample is source-capped and approximately class-balanced, so AP/calibration are conditional on this selected cohort. Whole days and exposed vessel identities are disjoint across partitions, but all five test days are connected by recurrent vessels. One dependence component cannot support an independent-component interval. Day-bootstrap intervals are exploratory sensitivity only. The later dependence amendment supersedes earlier generic five-day uncertainty wording in the prospective/data notes.
+
+The 6,270 native files have completed checksum auditing; `manifests/data_reaudit.json` is the completion evidence. A full 74.7 GB archive MD5 is not claimed. No sibling data, trained weights or outcomes are reused, while unavailable sibling private identities prevent a claim of proven cross-corpus vessel-identity nonoverlap.
+
+Fully synthetic labels represent received union support under a bounded simulator, with approximately 128 ms decoding bins. Held-out families jointly change source/background/propagation, so changes cannot be attributed to one factor. Semi-synthetic labels represent insertion of whole noisy AIS-positive excerpts into looped same-day background; their component SNR is not clean-vessel SNR. Repeated SNR conditions, source identities and parent days remain dependent. Detection of added excerpt energy or noise can contribute. HHT stays exploratory after its convergence failure.
+
+Closest 2026 primary work already covers underwater LLM/physics fusion, generated acoustic descriptions, synthetic-source/real-background mixtures, generative augmentation and real-only testing. The candidate contribution is the specific paired intervention statistic and bounded acquisition policy, with measured ablations, not any unsupported first claim. The statistic uses familiar robust aggregation and reduces algebraically to sham versus replacement logits; it is a model sensitivity formulation, not proof of physical causality.
+
+## Execution note
+
+The synthetic evaluator's local gate currently checks the freeze file and its synthetic configuration/checkpoint hashes, but does not itself call `require_frozen_test` to validate global status and every artifact. The root owner confirmed that the canonical supervisor calls the global validator before locked stages and now repeats it immediately before invoking the historical synthetic evaluator; the final freeze globally pins this evaluator and other consumers revalidate. Use the canonical supervisor, rather than invoking this evaluator directly. This is a direct-entry limitation, not a blocker to that validated route. The evaluator participates in historical training fingerprints and was deliberately left unchanged. No pinned evaluator or supervisor was modified during this reporting audit.

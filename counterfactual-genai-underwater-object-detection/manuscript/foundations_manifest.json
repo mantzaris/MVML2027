@@ -1,0 +1,9 @@
+{
+  "figures": [
+    "figure1_method",
+    "figureS1_hht_numerics"
+  ],
+  "research_result_claims": false,
+  "source_sha256": "413b3ff1c2997bd7b88acf6b6f61c967a7b0057bd9a0b4699b899734f716649d",
+  "status": "method_and_numeric_fixture_figures_only"
+}

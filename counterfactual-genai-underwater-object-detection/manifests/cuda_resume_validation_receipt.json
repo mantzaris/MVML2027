@@ -1,0 +1,27 @@
+{
+  "artifacts": {
+    ".local/validation/cuda-resume-3bc7c706d883/checkpoints/generation-1795451650795472442-a4e16499.pt": {
+      "bytes": 21549,
+      "sha256": "87cf9f6265976177929a681e70d0d9fee629b108eef0e6401c5e4261adc82782"
+    },
+    ".local/validation/cuda-resume-3bc7c706d883/fallback_result.json": {
+      "bytes": 17847,
+      "sha256": "d60de35b0f029e608c23e2af17effea0610e5bf23a9d653e18817bc8703c406f"
+    },
+    ".local/validation/cuda-resume-3bc7c706d883/resumed_result.json": {
+      "bytes": 17857,
+      "sha256": "f45202dc16f33af4c25b73234cdff57e949943ba0ae8aad64edafc32319f1a9b"
+    },
+    "manifests/cuda_resume_validation.json": {
+      "bytes": 454,
+      "sha256": "469d951e893cb7c08cd40dc2d8de3e8141e327ef31d376ea9bf27b58bd4dd2d9"
+    }
+  },
+  "completed_utc": "2026-11-23T16:34:18.621946+00:00",
+  "config_hash": "c325230c7217c1f5228ccdd37c8d8c3ec38625149ff7b3b68c089d680eda6242",
+  "data_fingerprint": "synthetic-indexed-fixture-v1",
+  "details": {},
+  "stage": "cuda_resume_validation",
+  "status": "complete",
+  "version": 1
+}

@@ -1,0 +1,74 @@
+{
+  "central_intervention_indices": [
+    {
+      "path": "data/interventions/development/index.json",
+      "sha256": "3b032f79908d3d1553d62b0d8424579119dd156d59e90d6f5f67cb7907626c83",
+      "status": "complete"
+    },
+    {
+      "path": "data/interventions/calibration/index.json",
+      "sha256": "c5e7cc3133052d8f68f450ee75387e3ad033ea38e78eaa528caabae7272cce8f",
+      "status": "complete"
+    }
+  ],
+  "checked_utc": "2026-11-23T18:24:57.959506+00:00",
+  "completed_policy_summaries_checked": [
+    {
+      "code_and_intervention_bindings": "match_current",
+      "path": "results/raw/policies/development/agent_seed17/all.json",
+      "records": 735,
+      "sha256": "4e082431db8daf471c1de75bf7d2e04208ed6e8eefd1d69b308e0ece2c428e28"
+    },
+    {
+      "code_and_intervention_bindings": "match_current",
+      "path": "results/raw/policies/development/agent_no_generation_seed17/all.json",
+      "records": 735,
+      "sha256": "5db95d3c923f9a8c27300c9680a6c5fff80ab4b1e1fd8d1af35125cee6549b11"
+    },
+    {
+      "code_and_intervention_bindings": "match_current",
+      "path": "results/raw/policies/development/agent_seed29/all.json",
+      "records": 735,
+      "sha256": "64e1650f83da21e26a895e25518a650264853c10fe720899f14250ef081420a8"
+    },
+    {
+      "code_and_intervention_bindings": "match_current",
+      "path": "results/raw/policies/development/agent_no_generation_seed29/all.json",
+      "records": 735,
+      "sha256": "30736d0ff77a6808cde7c90a4a7450b43d38043ea9ebdf9afef51ab2df530b9a"
+    },
+    {
+      "code_and_intervention_bindings": "match_current",
+      "path": "results/raw/policies/development/agent_seed43/all.json",
+      "records": 735,
+      "sha256": "a389fba48ae3ba90929580e96df385ea57ac50d12da0f58bd0fd2eb22b00eb20"
+    },
+    {
+      "code_and_intervention_bindings": "match_current",
+      "path": "results/raw/policies/development/agent_no_generation_seed43/all.json",
+      "records": 735,
+      "sha256": "99f67d0a24aab1976b33f8bddab7f8a7172b33c76a0926950c24ebf831e4693c"
+    }
+  ],
+  "forbidden_test_artifacts_present": [],
+  "freeze_script_sha256": "49d849597f32720d6182bbb5f84c204717883e8258d3669c6f76d07ea09ac3f9",
+  "gpu_used": false,
+  "negative_fixtures": {
+    "changed_code_hash_rejected": true,
+    "changed_intervention_hash_rejected": true,
+    "partial_test_namespace_fixtures_detected": 7
+  },
+  "pending_policy_summaries": [
+    "results/raw/policies/calibration/agent_seed17/all.json",
+    "results/raw/policies/calibration/agent_no_generation_seed17/all.json",
+    "results/raw/policies/calibration/agent_seed29/all.json",
+    "results/raw/policies/calibration/agent_no_generation_seed29/all.json",
+    "results/raw/policies/calibration/agent_seed43/all.json",
+    "results/raw/policies/calibration/agent_no_generation_seed43/all.json"
+  ],
+  "policy_code_hash": "922bdae765aeb2c6aff2d14d3eab19332da3e720bb0dac2a817c6c202401957a",
+  "scope": "metadata-only first-freeze artifact and policy provenance guards",
+  "status": "passed",
+  "test_freeze_created": false,
+  "test_inference_executed": false
+}

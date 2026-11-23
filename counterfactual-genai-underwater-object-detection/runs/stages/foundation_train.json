@@ -1,0 +1,45 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "5a54f99171e57c9f0b3cc8ac63b02c8bfd8ba8547e376f06db18fdd8423df0d7",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/extract_foundation.py",
+      "--split",
+      "train"
+    ]
+  ],
+  "completed_utc": "2026-11-23T17:31:03.740290+00:00",
+  "input_hash": "45fa431e2a34d980476e59d1df001523c059e7fae20bd9cbed873eedbb5aba89",
+  "inputs": {
+    "checkpoints/pretrained/facebook--wav2vec2-base-960h/README.md": "fc52a0adfa64e446800f9944c6cf9b90da3127aba548860ea5714516ec8c18c7",
+    "checkpoints/pretrained/facebook--wav2vec2-base-960h/config.json": "d3ec255c063d9f95057b553b19c20135b259875834a4fe9deb218a6be25b4cf3",
+    "checkpoints/pretrained/facebook--wav2vec2-base-960h/feature_extractor_config.json": "d3de0c797bf9b65f90bc65c30cb7b303ebeda341f6fc80af33628c4b26b95632",
+    "checkpoints/pretrained/facebook--wav2vec2-base-960h/model.safetensors": "8aa76ab2243c81747a1f832954586bc566090c83a0ac167df6f31f0fa917d74a",
+    "checkpoints/pretrained/facebook--wav2vec2-base-960h/preprocessor_config.json": "b225d617c025463b9e157e06afea8b90dc7078fc70b013c533328423e0486b4a",
+    "checkpoints/pretrained/facebook--wav2vec2-base-960h/special_tokens_map.json": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+    "checkpoints/pretrained/facebook--wav2vec2-base-960h/tokenizer_config.json": "dc790594f5bc351a4311c6624f40acd95850d4aaf2a5cb3c656c9b610720b608",
+    "checkpoints/pretrained/facebook--wav2vec2-base-960h/vocab.json": "19727f8944fe6459fc3f240ae2c198395b740f6a029bd23e06656266b83bcf64",
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "data/features/real/train/index.json": "d3b603976cc1e6b3acd4f9dcc4632d91a2156e868dc5e1fa9680f41b6d13a6e4",
+    "manifests/model_lock.json": "f9edfbb86b3d574af6f894e6118e1e488f395954a117de865899df1b5aca9e98",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "scripts/extract_foundation.py": "ab274732f99d8f8dc9062ca6477cad7da55f5b350416f5e57651f8f0396afebb",
+    "scripts/extract_real_features.py": "c1858acaa92c4a9bf8fa90327f3c2320d71737200958e5144e96eec3a178c8ae",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "src/uac/data.py": "268aecf7ae63df52c9a7efb59a128bb079299e9ef29c475aeb47291b527d3a0d",
+    "src/uac/dsp.py": "92df06b143300987e08cc0d28c3b5e127b36aca69e72f33498d211fa47f160f1",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5"
+  },
+  "outputs": {
+    "data/features/foundation/train/index.json": "815b0c10e2917b901dc037054a33458ebcbb14cbf5aa932bd0d1e8d805a34518"
+  },
+  "schema_version": 2,
+  "stage": "foundation_train",
+  "supervisor_sha256": "cf61372f4957f942357fb01734029d61567b5ade9fe13c208d37aa6accb71c09"
+}

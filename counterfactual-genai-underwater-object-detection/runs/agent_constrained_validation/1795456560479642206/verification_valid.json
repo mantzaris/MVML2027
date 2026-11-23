@@ -1,0 +1,2579 @@
+{
+  "batch_size": 32,
+  "batch_wall_seconds": 3.33234854300008,
+  "calls": [
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.07944107055664062,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "b7873e8cbd2bde4e0dbc8d9fa388f9a62a0a423a003ea536f0ea94b3805a5a45",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.39548492431640625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "27526fc83d41308fada4aa44c32d3d71ca6712861f863df3764bad0fe70bdca1",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.5791168212890625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "70563843b974451de420b1d31d9f7f67f51719d952d62c91da655af76544badb",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.47478485107421875,
+      "input_tokens": 555,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "dd5064d47653f96c91ad56a70f760579a7a784b8d83fb736e87adc447ac6c045",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.038471221923828125,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "6d0f97e4231aa65d2457c01776264470ad5f4d6fd55475b4418ddc6e214d30ef",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.07944107055664062,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "b7873e8cbd2bde4e0dbc8d9fa388f9a62a0a423a003ea536f0ea94b3805a5a45",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.39548492431640625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "27526fc83d41308fada4aa44c32d3d71ca6712861f863df3764bad0fe70bdca1",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.5791168212890625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "70563843b974451de420b1d31d9f7f67f51719d952d62c91da655af76544badb",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.47478485107421875,
+      "input_tokens": 555,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "dd5064d47653f96c91ad56a70f760579a7a784b8d83fb736e87adc447ac6c045",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.038471221923828125,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "6d0f97e4231aa65d2457c01776264470ad5f4d6fd55475b4418ddc6e214d30ef",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.07944107055664062,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "b7873e8cbd2bde4e0dbc8d9fa388f9a62a0a423a003ea536f0ea94b3805a5a45",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.39548492431640625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "27526fc83d41308fada4aa44c32d3d71ca6712861f863df3764bad0fe70bdca1",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.5791168212890625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "70563843b974451de420b1d31d9f7f67f51719d952d62c91da655af76544badb",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.47478485107421875,
+      "input_tokens": 555,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "dd5064d47653f96c91ad56a70f760579a7a784b8d83fb736e87adc447ac6c045",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.038471221923828125,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "6d0f97e4231aa65d2457c01776264470ad5f4d6fd55475b4418ddc6e214d30ef",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.07944107055664062,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "b7873e8cbd2bde4e0dbc8d9fa388f9a62a0a423a003ea536f0ea94b3805a5a45",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.39548492431640625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "27526fc83d41308fada4aa44c32d3d71ca6712861f863df3764bad0fe70bdca1",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.5791168212890625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "70563843b974451de420b1d31d9f7f67f51719d952d62c91da655af76544badb",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.47478485107421875,
+      "input_tokens": 555,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "dd5064d47653f96c91ad56a70f760579a7a784b8d83fb736e87adc447ac6c045",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.038471221923828125,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "6d0f97e4231aa65d2457c01776264470ad5f4d6fd55475b4418ddc6e214d30ef",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.07944107055664062,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "b7873e8cbd2bde4e0dbc8d9fa388f9a62a0a423a003ea536f0ea94b3805a5a45",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.39548492431640625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "27526fc83d41308fada4aa44c32d3d71ca6712861f863df3764bad0fe70bdca1",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.5791168212890625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "70563843b974451de420b1d31d9f7f67f51719d952d62c91da655af76544badb",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.47478485107421875,
+      "input_tokens": 555,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "dd5064d47653f96c91ad56a70f760579a7a784b8d83fb736e87adc447ac6c045",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.038471221923828125,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "6d0f97e4231aa65d2457c01776264470ad5f4d6fd55475b4418ddc6e214d30ef",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.07944107055664062,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "b7873e8cbd2bde4e0dbc8d9fa388f9a62a0a423a003ea536f0ea94b3805a5a45",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.39548492431640625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "27526fc83d41308fada4aa44c32d3d71ca6712861f863df3764bad0fe70bdca1",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.5791168212890625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "70563843b974451de420b1d31d9f7f67f51719d952d62c91da655af76544badb",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.47478485107421875,
+      "input_tokens": 555,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "dd5064d47653f96c91ad56a70f760579a7a784b8d83fb736e87adc447ac6c045",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.038471221923828125,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "6d0f97e4231aa65d2457c01776264470ad5f4d6fd55475b4418ddc6e214d30ef",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.07944107055664062,
+      "input_tokens": 558,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"budget_exhausted\"}",
+      "reason_code": "budget_exhausted",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "b7873e8cbd2bde4e0dbc8d9fa388f9a62a0a423a003ea536f0ea94b3805a5a45",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    },
+    {
+      "action": "stop",
+      "amortized_seconds": 0.1041358919687525,
+      "batch_cuda_ms": 3201.936767578125,
+      "batch_cuda_scope": "model generation including prefix constraints; wall additionally includes tokenization, grammar construction, parsing and score logging",
+      "batch_size": 32,
+      "batch_wall_seconds": 3.33234854300008,
+      "candidate_id": null,
+      "constrained_decoding": "finite_legal_json_trie_v1",
+      "constrained_token_log_probability_sum": -0.39548492431640625,
+      "input_tokens": 540,
+      "largest_legal_completion_tokens_including_eos": 21,
+      "latency_seconds": 3.33234854300008,
+      "legal_completion_count": 12,
+      "log_probability_scope": "conditional token probabilities after legal-prefix masking; not detector or acoustic confidence",
+      "measurement_mode": "live_batched_model_call_with_finite_json_constraints",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "output_tokens": 19,
+      "peak_allocated_mib": 11578.78955078125,
+      "prompt_sha256": "a6a8950a1b0fddb0e3062ca510ad98ba028a03778711d4a8453dc3747fc8dc38",
+      "raw_text": "{\"action\":\"stop\",\"candidate_id\":null,\"reason_code\":\"sufficient_evidence\"}",
+      "reason_code": "sufficient_evidence",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "schema_validity_by_construction": true,
+      "state_sha256": "27526fc83d41308fada4aa44c32d3d71ca6712861f863df3764bad0fe70bdca1",
+      "terminal_eos_observed": true,
+      "valid": true,
+      "validation_error": null
+    }
+  ],
+  "checks": {
+    "all_marked_constrained": true,
+    "all_schema_valid": true,
+    "all_terminal_eos": true,
+    "independent_parser_agreement": true,
+    "within_output_budget": true
+  },
+  "max_input_tokens": 558,
+  "max_output_tokens": 19,
+  "peak_memory_mib": 11578.78955078125,
+  "states": [
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.05,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.09999999999999998
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.05
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.2,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.4
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.2
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.5,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 1.0
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.5
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.8,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.3999999999999999
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.8
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.95,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.10000000000000009
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.95
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.05,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.09999999999999998
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.05
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.2,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.4
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.2
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.5,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 1.0
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.5
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.8,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.3999999999999999
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.8
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.95,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.10000000000000009
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.95
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.05,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.09999999999999998
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.05
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.2,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.4
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.2
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.5,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 1.0
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.5
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.8,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.3999999999999999
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.8
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.95,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.10000000000000009
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.95
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.05,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.09999999999999998
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.05
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.2,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.4
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.2
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.5,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 1.0
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.5
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.8,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.3999999999999999
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.8
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.95,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.10000000000000009
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.95
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.05,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.09999999999999998
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.05
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.2,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.4
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.2
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.5,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 1.0
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.5
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.8,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.3999999999999999
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.8
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.95,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.10000000000000009
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.95
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.05,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.09999999999999998
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.05
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.2,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.4
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.2
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.5,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 1.0
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.5
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.8,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.3999999999999999
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.8
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.95,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.10000000000000009
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.95
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.05,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.09999999999999998
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.05
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    },
+    {
+      "available_tools": [
+        "fourier",
+        "stop"
+      ],
+      "candidates": [
+        {
+          "base_probability": 0.2,
+          "candidate_id": "candidate0",
+          "interval_seconds": [
+            0.75,
+            2.25
+          ],
+          "uncertainty": 0.4
+        }
+      ],
+      "history": [
+        {
+          "action": "wavelet",
+          "candidate_id": "candidate0",
+          "valid": true
+        },
+        {
+          "action": "verify",
+          "candidate_id": "candidate0",
+          "valid": true
+        }
+      ],
+      "observations": {
+        "candidate0": {
+          "stft": {
+            "detector_logit": -1.234567890123456,
+            "presence_probability": 0.2
+          },
+          "verify": {
+            "background_penalty": 0.12345678901234566,
+            "valid": true,
+            "view_delta_medians": {
+              "stft": -2.1234567890123457,
+              "wavelet": 3.234567890123457
+            }
+          },
+          "wavelet": {
+            "detector_logit": 3.234567890123456,
+            "presence_probability": 0.9621234567890123
+          }
+        }
+      },
+      "remaining_actions": 1,
+      "remaining_verifications": 0
+    }
+  ],
+  "variant": "verification_valid"
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-23",
+  "status": "research_plan_and_verified_gpu_connection",
+  "files_sha256": {
+    ".gitignore": "1eb66f89c854fc4fe02eb8399a2b6d8acdaa4df3117120c58fa354fc54358c08",
+    "AGENTS.md": "bca68be2f6f31db46f818b39197b066229f886aea111f832941dc88cf64177ce",
+    "README.md": "361c2f5afac560e8938d4e39bde121d0fbdba4d54aa23457d63e3887a4010ee0",
+    "RESEARCH_PLAN.md": "ba27fbdac081f3833192985d0c80ae84b09e1267a84a7930b4efdbc60df6d8c9",
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "manifests/gpu_verification.json": "2f55ceeda90ec16c6784afb9832a9c5892a5a797887d2bff7968090c7890dd7f",
+    "protocol/literature_and_novelty.md": "9e23c62841b379022a9aa741a098fbc70d21cc724f6148852b7255c7fbdb8968",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "scripts/verify_cuda.py": "599fd25094f903f705f5d2dee440d13c016f7077063f8830bebd49bcbd567daa",
+    "tests/test_gpu_guard.py": "9590b7c88e1eefea026addc75d61c49e2eb0e46ffe8e246860ef645712ce2d50"
+  },
+  "canonical_project_directory": "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection",
+  "location_policy": "All project work stays within this submission directory; no external staging or output copies."
+}

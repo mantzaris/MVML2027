@@ -1,0 +1,67 @@
+{
+  "batch_size": 8,
+  "boundary_penalty_coefficient": 0.1,
+  "clip_seconds": 3,
+  "conditions": [
+    {
+      "name": "clean",
+      "snr_db": null
+    },
+    {
+      "name": "white_noise_20dB",
+      "snr_db": 20
+    },
+    {
+      "name": "white_noise_10dB",
+      "snr_db": 10
+    },
+    {
+      "name": "white_noise_0dB",
+      "snr_db": 0
+    },
+    {
+      "name": "white_noise_minus5dB",
+      "snr_db": -5
+    }
+  ],
+  "counterfactual_samples": 4,
+  "dispersion": 0.5,
+  "expected_clips": 120,
+  "expected_days": 5,
+  "flow_seed_namespace": 8400000,
+  "flow_steps": 8,
+  "groups": [
+    "fourier",
+    "stft",
+    "wavelet"
+  ],
+  "independence": "same120 parents across conditions; five collection days form one connected day-vessel component; no independent-component confidence interval",
+  "max_actions": 3,
+  "max_verifications": 1,
+  "methods": [
+    "main",
+    "stft",
+    "fixed_verification",
+    "proposed_agent"
+  ],
+  "model_seed_scope": "seed17-only robustness for actual-controller compute budget; other studies report three detector seeds",
+  "model_seeds": [
+    17
+  ],
+  "noise_definition": "CUDA standard Gaussian draw, independently RMS-normalized per clip; same draw shared across SNR conditions and methods",
+  "noise_seed": 17,
+  "parent_manifest": "data/manifests/real_test.jsonl",
+  "per_day_per_label": 12,
+  "probe_seconds": [
+    0.75,
+    2.25
+  ],
+  "sample_rate": 16000,
+  "schema_version": 1,
+  "score_fitting": "reuse frozen natural-real calibration for every corruption, no refit or threshold search",
+  "selection": "hash-sort within UTC day and AIS label; first12 each; interleave background/positive in each day",
+  "selection_seed": 17,
+  "snr_definition": "whole recorded waveform RMS to added-noise RMS; not clean vessel-source SNR",
+  "test_feature_index": "data/features/real/test/index.json",
+  "timing_scope": "shared evidence work plus live batched controller/scoring; not an isolated per-method latency benchmark"
+}

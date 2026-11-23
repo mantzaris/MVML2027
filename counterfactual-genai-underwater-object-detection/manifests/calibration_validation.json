@@ -1,0 +1,39 @@
+{
+  "classification_separation": true,
+  "fixture": "tiny_positive_logistic_cuda",
+  "limitation": "Synthetic correctness fixture, not research performance.",
+  "model_device": "cuda",
+  "monotonic": true,
+  "probabilities": [
+    7.022453064564615e-05,
+    0.003842425299808383,
+    0.058475062251091,
+    0.9415250420570374,
+    0.9961575865745544,
+    0.9999297857284546
+  ],
+  "state": {
+    "bce": 0.02139154076576233,
+    "calibration_rows": 6,
+    "feature_count": 2,
+    "fit_device": "cuda",
+    "intercept": 1.240520987266791e-06,
+    "l2": 0.0001,
+    "learning_rate": 0.03,
+    "mean": [
+      0.0,
+      0.0
+    ],
+    "scale": [
+      2.1602468490600586,
+      1.3228756189346313
+    ],
+    "steps": 200,
+    "type": "positive_logistic_v1",
+    "weights": [
+      3.352407217025757,
+      3.246438980102539
+    ]
+  },
+  "status": "passed"
+}

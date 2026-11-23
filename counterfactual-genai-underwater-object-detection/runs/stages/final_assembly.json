@@ -1,0 +1,33 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "27937ebd118c5df28e5370b0cdfce0eb48dc45fa68af157fa50202abd497c9bb",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/assemble_results.py"
+    ]
+  ],
+  "completed_utc": "2026-11-23T19:48:59.464522+00:00",
+  "input_hash": "cd5aadb69d6592f04ddba5a18416180b3d82cc2acec6206611a83003076780a4",
+  "inputs": {
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "reports/synthetic_results.json": "9987efd6a42e4439559caa09684a042179a67e66461300a5fbb8ef62d12ede1d",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "results/tables/real_results.json": "0d415b55f96822a6c2c4ebc059e0c65bd80f535c1e909d6cdfe5c57b11b02775",
+    "results/tables/robustness.json": "4902576e4ad172dc93d647aafa026e2773e0837ca53044a0383ecda72d4d34c8",
+    "results/tables/runtime_benchmark.json": "c0722e8e7a5f7e101819fd1d93f65016e49df5c737dc9233a87d1a376494a539",
+    "results/tables/semisynthetic_results.json": "a96abe8d7e766c06e9e81faf378ed484a3dea932729d17157fe93e1e0f170884",
+    "results/tables/supplemental_views.json": "9631edfaf4e5d86eb28c28df2fe923d9900ced850e34832f2acf0dd66ab94e7c",
+    "scripts/assemble_results.py": "34187fa6bcd0c040d808c7fada9a4e93df8f1c7ac6a64beaa3801b7d96ffa16b",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "src/uac/protocol.py": "a8b0e163fbcd370c0c1ba7840b2a570ef215a13bf54d5dc81d9073f544522c38",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5"
+  },
+  "outputs": {
+    "results/tables/final_real_results.json": "6723b5eb6036a49469a6d91d1035410523ffb3c929785a58816f4cff0c27e4ee"
+  },
+  "schema_version": 2,
+  "stage": "final_assembly",
+  "supervisor_sha256": "dab0b3d5173fe277fdfd4a590dddbf8f62149bacea5f96849b547361eabf2b78"
+}

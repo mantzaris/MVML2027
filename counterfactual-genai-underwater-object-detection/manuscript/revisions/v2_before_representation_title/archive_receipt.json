@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-11-23T20:21:11.762730+00:00",
+  "files": {
+    "NEXT_STEPS.md": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/NEXT_STEPS.md",
+      "sha256": "139795969cb5b34edfc9797a84cc799086ef12fbaa2cf05bea9cbe2ab8bef7d8"
+    },
+    "README.md": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/README.md",
+      "sha256": "3713bd0a66f2db41eee3e7a250c8af686939969dea94881683195dece2671e8a"
+    },
+    "RESEARCH_RESULTS.md": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/RESEARCH_RESULTS.md",
+      "sha256": "12b85ac78c664592be99717c9bf267f974ede3d688301bbb29238b1339a14679"
+    },
+    "manuscript/build_manifest.json": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/build_manifest.json",
+      "sha256": "8b3d2fc8a98c095ccf3e579db7ec3b34901b046946ce02d937a556a92d64ec44"
+    },
+    "manuscript/main_paper.pdf": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/main_paper.pdf",
+      "sha256": "73950acffcde003113eae8ad40d50b7ff8583b33002a914777525b1c28db28a6"
+    },
+    "manuscript/renders/main_paper-1.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/main_paper-1.png",
+      "sha256": "c5b0776aa7104a6700c32bc333a594a6a8c637e1f8657863684db250e51a8a72"
+    },
+    "manuscript/renders/main_paper-2.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/main_paper-2.png",
+      "sha256": "ca0e08200d3807e2a96fd59866c5efce1e4dfb39ad52f2af8b1ac28aa6bfe725"
+    },
+    "manuscript/renders/main_paper-3.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/main_paper-3.png",
+      "sha256": "cc41be2b00d3ac6ee40e0f7e9b2a1cfbfa15656f089b0904d5dabdec391e8d7b"
+    },
+    "manuscript/renders/main_paper-4.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/main_paper-4.png",
+      "sha256": "7f8a07be304af9e4e0a79a077a6a42923d50e8a4987e06f67ae7d419a7653246"
+    },
+    "manuscript/renders/main_paper-5.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/main_paper-5.png",
+      "sha256": "08a903be1ad51439b3ca0ee54bf2468a32055854c630e152e070e52cb0591273"
+    },
+    "manuscript/renders/main_paper-6.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/main_paper-6.png",
+      "sha256": "d2fc0d1fab3bd60ebab4c02beb5e859191787c75e7b9c5588cc9809eee8a1561"
+    },
+    "manuscript/renders/main_paper-7.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/main_paper-7.png",
+      "sha256": "640ba2c0f435986467d43216a166fc5d4b4ae276c29487b02fb1c9e70cafd6c9"
+    },
+    "manuscript/renders/main_paper-8.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/main_paper-8.png",
+      "sha256": "86d666db22cc94716da5653cd9a4f42335bfe2b8f753fc580655990d28897a0e"
+    },
+    "manuscript/renders/supplement-1.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/supplement-1.png",
+      "sha256": "560eba148b667071f76bf1635413e71c00c73b6fe591066c0e5955de27694e28"
+    },
+    "manuscript/renders/supplement-2.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/supplement-2.png",
+      "sha256": "d492fde17f160ebd9396e16814b6bd7776af644e394779c8e1bdaa562c17c2e1"
+    },
+    "manuscript/renders/supplement-3.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/supplement-3.png",
+      "sha256": "101dd10fce3522d47629e2b8c348ece0eb52b3c348489becab3984390a02a7a9"
+    },
+    "manuscript/renders/supplement-4.png": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/renders/supplement-4.png",
+      "sha256": "425c107995b193fded9bde076b931ae4001799ee90c5c989b7b7c84c31fd2a02"
+    },
+    "manuscript/supplement.pdf": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/manuscript/supplement.pdf",
+      "sha256": "0ad430416267029a33fc934320fb42bcccacde7b64af6b00f315e393eb113463"
+    },
+    "reports/final_integrity_audit.json": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/reports/final_integrity_audit.json",
+      "sha256": "830667d2c66611c92f2da8f6c40e9d8c16df5bd358e040fa5a8f09cf96e45587"
+    },
+    "reports/main_figures_visual_review.json": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/reports/main_figures_visual_review.json",
+      "sha256": "46e68ef5208f8ad004b65b3bdff17e50bac205096f569f186a73809c45bb9136"
+    },
+    "reports/main_pdf_visual_review.json": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/reports/main_pdf_visual_review.json",
+      "sha256": "b608dbb3da6d7c81f56ad68fa5e79357ae1953dc86eaa6648a65aef5621b3992"
+    },
+    "reports/supplement_pdf_visual_review.json": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/reports/supplement_pdf_visual_review.json",
+      "sha256": "0b22f2f8893b3cb413fa654b3e71bb38e8bdbe5fefdde541355558d7aedda931"
+    },
+    "runs/horizon_status.json": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/runs/horizon_status.json",
+      "sha256": "b868fdaed26ad02d944034f5803076c248b4d16e604ad48e07f9dd55d366ec2a"
+    },
+    "runs/research_complete.json": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/runs/research_complete.json",
+      "sha256": "dfc95179db6f0c006cb00c6afdbd2a328f4a567f48e45803ac671119312ebe98"
+    },
+    "runs/stages/manuscript.json": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/runs/stages/manuscript.json",
+      "sha256": "aa68a62b4639f6e292ce0932e27262fb3984e8ad943e7907bd88abe358306863"
+    },
+    "scripts/build_results_report.py": {
+      "preserved": "manuscript/revisions/v2_before_representation_title/scripts/build_results_report.py",
+      "sha256": "941acd60828cc906b2915a005d1226177dc9090011d4529a9d07faeabe983d7a"
+    }
+  },
+  "reason": "User-requested representation-focused title and precise input-scope wording; frozen experiments unchanged"
+}

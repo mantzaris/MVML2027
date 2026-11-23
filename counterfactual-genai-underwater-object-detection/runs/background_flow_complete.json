@@ -1,0 +1,28 @@
+{
+  "artifacts": {
+    "checkpoints/background_flow/final.pt": {
+      "bytes": 8019285,
+      "sha256": "e85c969fee9ddf3f3c70e837c1c03ce8a2c70d23fdec3e5006628a444a21e0c7"
+    },
+    "manifests/background_flow_validation.json": {
+      "bytes": 285,
+      "sha256": "cad89b7a9762fb87310e9d16a12c0e1a72d24fc127c12398738149c48f1e7f18"
+    }
+  },
+  "completed_utc": "2026-11-23T16:47:21.054610+00:00",
+  "config_hash": "068dfd7fc5a0485a3cfc062dcdfe62623ea422fce244dc9a41dbfc4571f08afa",
+  "data_fingerprint": null,
+  "details": {
+    "finite": true,
+    "median_target_projection_after": 0.005483230110257864,
+    "median_target_projection_before": 0.9983891248703003,
+    "outside_max_error": 7.450580596923828e-09,
+    "parameters": 1997121,
+    "peak_memory_mib": 676.96728515625,
+    "pilot_only": false,
+    "steps": 5000
+  },
+  "stage": "background_flow",
+  "status": "complete",
+  "version": 1
+}

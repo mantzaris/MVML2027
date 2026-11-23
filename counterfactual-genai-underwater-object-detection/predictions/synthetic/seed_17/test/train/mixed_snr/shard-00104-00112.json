@@ -1,0 +1,21 @@
+{
+  "checkpoint_sha256": "101232fd3fceaa347924d57ef901eb85d766b2d1cf2fefef72af2d97274efd57",
+  "code_fingerprint": "f3e36bdf460bcf6671225b0337b35b9c94da9f34a900a57bc10be48c015e9c37",
+  "completed_utc": "2026-11-23T19:40:16.041941+00:00",
+  "condition": "mixed_snr",
+  "config_hash": "ab949ceade8dd170e482f5a0e3894b707945f84e76f64ddc66750f979ca40384",
+  "count": 128,
+  "data_fingerprint": "69f21302b8982e2447354a1b1a72a9375330afb754336cd7fab9420238fa5b66",
+  "family": "train",
+  "first_batch": 104,
+  "freeze_sha256": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+  "last_batch_exclusive": 112,
+  "payload": "predictions/synthetic/seed_17/test/train/mixed_snr/shard-00104-00112.jsonl",
+  "payload_bytes": 268076,
+  "payload_sha256": "6ccd2c641a220a25919d07df5ff97c7f9fa6c39e9e3f2d986f16a46ced3c5e37",
+  "schema_version": 1,
+  "seconds": 0.21780461799971818,
+  "seed": 17,
+  "snr_db": null,
+  "split": "test"
+}

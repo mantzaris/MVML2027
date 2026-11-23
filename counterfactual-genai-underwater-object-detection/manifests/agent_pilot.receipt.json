@@ -1,0 +1,18 @@
+{
+  "artifacts": {
+    "manifests/agent_pilot.json": {
+      "bytes": 23734,
+      "sha256": "fb428366975fdfd4057992d1c300d3cab8825f009aafb1ac4073f79f0092ab2a"
+    }
+  },
+  "completed_utc": "2026-11-23T16:43:55.408620+00:00",
+  "config_hash": "b90b8cc1ae2429cab7b2afe8202690a3a03171b33c0dc3cdb978810fc01b7b0a",
+  "data_fingerprint": null,
+  "details": {
+    "schema_valid_rate": 1.0,
+    "state_origin": "protocol_fixtures"
+  },
+  "stage": "agent_schema_pilot",
+  "status": "complete",
+  "version": 1
+}

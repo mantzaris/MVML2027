@@ -1,0 +1,84 @@
+{
+  "all_pages_individually_viewed": true,
+  "build_manifest_modified_by_reviewer": false,
+  "frozen_experiments_modified": false,
+  "metadata_erratum": {
+    "corrected_export": "reports/supplemental_comparisons_corrected.json",
+    "corrected_export_sha256": "522db47494ddecd6a89a3cae85735a82af5cbbf277191abf10a56cf2a704f639",
+    "note": "reports/supplemental_metadata_erratum.md",
+    "note_sha256": "710fe959742b930eedf038898c50d42bd598a73114a857115ca363ed4c6ca6b1",
+    "original_frozen_output_retained": true
+  },
+  "numerical_audits": {
+    "reports/robustness_independent_audit.json": "6daf64abf3e78fff16ff3347efeb593478c067ccaf6977340011efa4e0b0e465",
+    "reports/semisynthetic_independent_audit.json": "68eebb01170a52f9b9818a0681a6dc0e8384d38ba4fe305ef80aec6f2f1aa43e",
+    "reports/supplemental_independent_audit.json": "484df9c4553b4b245675bea83d0e1f25a10283c9ddce6ea69f41799187a0780a",
+    "reports/synthetic_independent_audit.json": "08f2f171926eabdb54e0eae1405856916009447d1f984706342cc377ffa5a43f"
+  },
+  "page_count": 4,
+  "pages": [
+    {
+      "clipping_or_overlap": false,
+      "freshly_viewed_in_revision2": true,
+      "individually_viewed": true,
+      "legible": true,
+      "page": 1,
+      "path": "manuscript/renders/supplement-1.png",
+      "review": "Family labels now explicitly distinguish in-family test from held-out test; table values match audited means; no clipping.",
+      "sha256": "560eba148b667071f76bf1635413e71c00c73b6fe591066c0e5955de27694e28",
+      "unchanged_from_revision1": false
+    },
+    {
+      "clipping_or_overlap": false,
+      "freshly_viewed_in_revision2": true,
+      "individually_viewed": true,
+      "legible": true,
+      "page": 2,
+      "path": "manuscript/renders/supplement-2.png",
+      "review": "HHT pilot diagnostics and limitations readable; exact PNG unchanged from v1 and freshly viewed again.",
+      "sha256": "d492fde17f160ebd9396e16814b6bd7776af644e394779c8e1bdaa562c17c2e1",
+      "unchanged_from_revision1": true
+    },
+    {
+      "clipping_or_overlap": false,
+      "freshly_viewed_in_revision2": true,
+      "individually_viewed": true,
+      "legible": true,
+      "page": 3,
+      "path": "manuscript/renders/supplement-3.png",
+      "review": "Table S2 now says two-source scenes, explains overlap is not required, and uses explicit test-family labels; plots/table are legible with no overlap.",
+      "sha256": "101dd10fce3522d47629e2b8c348ece0eb52b3c348489becab3984390a02a7a9",
+      "unchanged_from_revision1": false
+    },
+    {
+      "clipping_or_overlap": false,
+      "freshly_viewed_in_revision2": true,
+      "individually_viewed": true,
+      "legible": true,
+      "page": 4,
+      "path": "manuscript/renders/supplement-4.png",
+      "review": "Resource-scope limitations, fixed controller behavior, references and footer readable; exact PNG unchanged from v1 and freshly viewed again.",
+      "sha256": "425c107995b193fded9bde076b931ae4001799ee90c5c989b7b7c84c31fd2a02",
+      "unchanged_from_revision1": true
+    }
+  ],
+  "pdf_path": "manuscript/supplement.pdf",
+  "pdf_sha256": "0ad430416267029a33fc934320fb42bcccacde7b64af6b00f315e393eb113463",
+  "publication_or_submission_performed": false,
+  "resolved_findings": [
+    "Two-source regime display now matches frozen selection predicate.",
+    "Train-family test results no longer visually resemble training-set scores."
+  ],
+  "review_history": [
+    {
+      "path": "reports/supplement_visual_review_v1.json",
+      "pdf_sha256": "2bb069ab7a1da335f1468e113903eb7af2ead21a23cbe9d1bd5eaa7a7c81a000",
+      "sha256": "0181b79099d9400c2e514b1e0b330b63189cb22c313745f50295c5b9ddd0e05f",
+      "status": "layout_pass_presentation_label_correction_pending"
+    }
+  ],
+  "reviewed_utc": "2026-11-23T19:59:32.944167+00:00",
+  "reviewer": "literature_independent_agent",
+  "status": "passed",
+  "unresolved_visual_findings": []
+}

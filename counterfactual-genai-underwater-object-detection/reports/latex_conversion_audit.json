@@ -1,0 +1,201 @@
+{
+  "builder": "scripts/build_latex.sh",
+  "builder_sha256": "01ec44453d96a80050f275c7230e9c195fe6775e0eeca0c569c40730ba0a06e3",
+  "changed_prior_artifacts_only": [
+    "NEXT_STEPS.md",
+    "README.md",
+    "RESEARCH_RESULTS.md"
+  ],
+  "checked_utc": "2026-11-23T20:40:19.096487+00:00",
+  "documentation_correction": "Two figures are embedded in the supplement; a third supplemental figure remains separately exported. Previous summary incorrectly called all three embedded.",
+  "documents": {
+    "main": {
+      "bib": "manuscript/main.bib",
+      "bib_sha256": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd",
+      "bibliography_entries": 12,
+      "bibtex_log_sha256": "7ec046571f66bbf8fc910fe35d776ea1e9cd3b874ccd09563e04ec7dbeb1176c",
+      "compile_log": "manuscript/latex_build/runs/20261123T203552Z-444757/main/main.log",
+      "compile_log_sha256": "4f224fbe127d5f3d1942fd1ae27230914d94bf1407adaa693d87d1b48e0bfcbb",
+      "display_equations": 5,
+      "figures": [
+        "figure1_method",
+        "figure2_real_detection",
+        "figure3_robustness",
+        "figure4_mechanism_ablation",
+        "figure5_accuracy_compute"
+      ],
+      "page_count": 8,
+      "pages": [
+        {
+          "fresh_individual_view_of_final_render": false,
+          "page": 1,
+          "path": "manuscript/latex_renders/main/page-1.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/main.20261123T203552Z-444757.previous/page-1.png",
+          "review_transferred_by_exact_hash_equality": true,
+          "reviewer": "independent design_review agent",
+          "sha256": "43ae1aacf85f8a33e4327e6d67dd9366af587cf2c4469ea53eddcfce835e1a47",
+          "status": "passed"
+        },
+        {
+          "fresh_individual_view_of_final_render": true,
+          "page": 2,
+          "path": "manuscript/latex_renders/main/page-2.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/main.20261123T203552Z-444757.previous/page-2.png",
+          "review_transferred_by_exact_hash_equality": false,
+          "reviewer": "independent design_review agent",
+          "sha256": "2f50f037bdc82f8e234ce1bc3d130a0f03de4d24de85c22cb3e264564f7b4963",
+          "status": "passed"
+        },
+        {
+          "fresh_individual_view_of_final_render": true,
+          "page": 3,
+          "path": "manuscript/latex_renders/main/page-3.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/main.20261123T203552Z-444757.previous/page-3.png",
+          "review_transferred_by_exact_hash_equality": false,
+          "reviewer": "independent design_review agent",
+          "sha256": "4c5853fe3b6404c36140372629c2e72e27955ca367e01b0f61977132c6ad7b0e",
+          "status": "passed"
+        },
+        {
+          "fresh_individual_view_of_final_render": true,
+          "page": 4,
+          "path": "manuscript/latex_renders/main/page-4.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/main.20261123T203552Z-444757.previous/page-4.png",
+          "review_transferred_by_exact_hash_equality": false,
+          "reviewer": "independent design_review agent",
+          "sha256": "928c4cdbb42f222cff0198c52bbf64dea286c63059eb126c1e1dc4f317b89ecd",
+          "status": "passed"
+        },
+        {
+          "fresh_individual_view_of_final_render": false,
+          "page": 5,
+          "path": "manuscript/latex_renders/main/page-5.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/main.20261123T203552Z-444757.previous/page-5.png",
+          "review_transferred_by_exact_hash_equality": true,
+          "reviewer": "independent design_review agent",
+          "sha256": "8c09f718d9af7120db595ecd20899ede185e25be75c52b6ac74c7325ad6c9d1f",
+          "status": "passed"
+        },
+        {
+          "fresh_individual_view_of_final_render": true,
+          "page": 6,
+          "path": "manuscript/latex_renders/main/page-6.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/main.20261123T203552Z-444757.previous/page-6.png",
+          "review_transferred_by_exact_hash_equality": false,
+          "reviewer": "independent design_review agent",
+          "sha256": "0f1a0a9a3ab2146dee7ebdccc7fc95997103516a7c487131778f5b73f45e4922",
+          "status": "passed"
+        },
+        {
+          "fresh_individual_view_of_final_render": false,
+          "page": 7,
+          "path": "manuscript/latex_renders/main/page-7.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/main.20261123T203552Z-444757.previous/page-7.png",
+          "review_transferred_by_exact_hash_equality": true,
+          "reviewer": "independent design_review agent",
+          "sha256": "e9d581f325b70a2fd81861f9fc36e0e04b7b98522886796979498a4920ce7840",
+          "status": "passed"
+        },
+        {
+          "fresh_individual_view_of_final_render": true,
+          "page": 8,
+          "path": "manuscript/latex_renders/main/page-8.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/main.20261123T203552Z-444757.previous/page-8.png",
+          "review_transferred_by_exact_hash_equality": false,
+          "reviewer": "independent design_review agent",
+          "sha256": "ff4bd194c7e70e7a43b03916108f600ee9d3dbc2b115448c43656b85cfd16ceb",
+          "status": "passed"
+        }
+      ],
+      "pdf": "manuscript/latex_build/main.pdf",
+      "pdf_sha256": "e7e6f046414cd0dade858a12ad4602daf4d1f665fd27ec39624eeca3b05d0d28",
+      "source_and_visual_review": "passed",
+      "tables": 3,
+      "tex": "manuscript/main.tex",
+      "tex_sha256": "29e39542a8f66f17a3ac3a5b324ecca07ea78638dbe4452d1dd0bd31e25c1aca"
+    },
+    "supplementary": {
+      "bib": "manuscript/supplementary.bib",
+      "bib_sha256": "62e880a8ff61728d49e373cc7eaca854ae7eec39b7bc67cc1d046f5d14f5e824",
+      "bibliography_entries": 3,
+      "bibtex_log_sha256": "d3dc7374a88ec10cebecc61fe4d6b1a05a47cec4b4c8b7de0e31e69f22d64dc7",
+      "compile_log": "manuscript/latex_build/runs/20261123T203552Z-444757/supplementary/supplementary.log",
+      "compile_log_sha256": "7e2653337af9f94c4c6d5533c453ef9af0ee47594ac2e5c291e943ddad036794",
+      "display_equations": 0,
+      "figures": [
+        "figureS1_hht_numerics",
+        "figureS3_representation_study"
+      ],
+      "page_count": 4,
+      "pages": [
+        {
+          "fresh_individual_view_of_final_render": false,
+          "page": 1,
+          "path": "manuscript/latex_renders/supplementary/page-1.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/supplementary.20261123T203552Z-444757.previous/page-1.png",
+          "review_transferred_by_exact_hash_equality": true,
+          "reviewer": "root",
+          "sha256": "f41d843cd0610ce646a02da0442716c185cadabb86ddf533a58bef8299aeab37",
+          "status": "passed"
+        },
+        {
+          "fresh_individual_view_of_final_render": false,
+          "page": 2,
+          "path": "manuscript/latex_renders/supplementary/page-2.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/supplementary.20261123T203552Z-444757.previous/page-2.png",
+          "review_transferred_by_exact_hash_equality": true,
+          "reviewer": "root",
+          "sha256": "3d0e34b243561c6463284325d124ba13163f94a9bf3822a922c4f949ba1f1026",
+          "status": "passed"
+        },
+        {
+          "fresh_individual_view_of_final_render": false,
+          "page": 3,
+          "path": "manuscript/latex_renders/supplementary/page-3.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/supplementary.20261123T203552Z-444757.previous/page-3.png",
+          "review_transferred_by_exact_hash_equality": true,
+          "reviewer": "root",
+          "sha256": "d5666c9de1a08f65fac1c283e269420c0052c94ef400af4a6ecb4e78a7e89aac",
+          "status": "passed"
+        },
+        {
+          "fresh_individual_view_of_final_render": false,
+          "page": 4,
+          "path": "manuscript/latex_renders/supplementary/page-4.png",
+          "previous_individually_reviewed_render": "manuscript/latex_renders/history/supplementary.20261123T203552Z-444757.previous/page-4.png",
+          "review_transferred_by_exact_hash_equality": true,
+          "reviewer": "root",
+          "sha256": "920d2e0929ed9315df8861325da3ff69d77772b00650eaba72ccd8ec70ff16ce",
+          "status": "passed"
+        }
+      ],
+      "pdf": "manuscript/latex_build/supplementary.pdf",
+      "pdf_sha256": "52d29faa36e84218c5488b366a37483bd81faca91f385ba58a7eb628feeb9759",
+      "source_and_visual_review": "passed",
+      "tables": 4,
+      "tex": "manuscript/supplementary.tex",
+      "tex_sha256": "639adb863ff5e1a740798ded75f55b3203f24a0fc47b0395a237eb4e1d634321"
+    }
+  },
+  "experimental_changes": false,
+  "freeze_sha256": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+  "frozen_artifacts_verified": 185,
+  "old_report_pdfs_unchanged": true,
+  "prior_artifacts_verified": 292,
+  "prior_completion_receipt": "manuscript/revisions/v3_before_latex_sources/runs/research_complete.json",
+  "prior_completion_receipt_sha256": "fb59f0c79988bd1f684a438e4cfe423c8800954e771725ad46d0801f6ef19065",
+  "publication_or_submission_performed": false,
+  "scientific_content_checks": {
+    "five_equations_preserved": true,
+    "main_metric_table_matches_saved_results": true,
+    "main_nonbibliographic_paragraphs_preserved": 51,
+    "same_negative_findings_and_limitations": true,
+    "seven_tables_preserved": true,
+    "supplement_nonbibliographic_paragraphs_preserved": 20,
+    "supplement_representation_tables_match_saved_results": true
+  },
+  "scope": "Faithful conversion to one editable TeX file per document, each with separate BibTeX; no research rerun or result changes",
+  "source_capture": "manuscript/latex_migration/content.json",
+  "source_capture_sha256": "f6b449fba91a3838acf7c0475aa6a2255a49bb19c558c9254c0c8f47dd90db12",
+  "status": "passed"
+}

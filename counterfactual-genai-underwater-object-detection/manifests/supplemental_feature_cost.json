@@ -1,0 +1,65 @@
+{
+  "costs": {
+    "all": {
+      "feature_cost_ms": 12.621479124959478,
+      "measured_calls": 10,
+      "p10_ms": 12.281820274972688,
+      "p90_ms": 12.925292987540615,
+      "peak_cuda_allocated_mib": 181.47900390625
+    },
+    "stft": {
+      "feature_cost_ms": 0.33207181246552864,
+      "measured_calls": 10,
+      "p10_ms": 0.32898856247811636,
+      "p90_ms": 0.34752151254906494,
+      "peak_cuda_allocated_mib": 83.7919921875
+    },
+    "stft_hht": {
+      "feature_cost_ms": 11.611683500007075,
+      "measured_calls": 10,
+      "p10_ms": 11.478092849949917,
+      "p90_ms": 11.84225285002185,
+      "peak_cuda_allocated_mib": 154.162109375
+    },
+    "stft_wavelet": {
+      "feature_cost_ms": 0.9629041249468173,
+      "measured_calls": 10,
+      "p10_ms": 0.9452189624767016,
+      "p90_ms": 0.984012237506704,
+      "peak_cuda_allocated_mib": 181.47802734375
+    }
+  },
+  "fingerprint": "dcadeffa6d3e981b9c551984f696b0e4250b856884223ce1e65c99b1e35a81b5",
+  "methods": {
+    "all": [
+      "fourier",
+      "stft",
+      "wavelet",
+      "hht"
+    ],
+    "stft": [
+      "stft"
+    ],
+    "stft_hht": [
+      "stft",
+      "hht"
+    ],
+    "stft_wavelet": [
+      "stft",
+      "wavelet"
+    ]
+  },
+  "recorded_utc": "2026-11-23T17:10:20.746294+00:00",
+  "samples": 48000,
+  "schema_version": 1,
+  "scope": "GPU-resident transform extraction only, including synchronization; excludes waveform transfer, classifier and generation",
+  "settings": {
+    "batch_size": 8,
+    "family": "train",
+    "measured_calls": 10,
+    "scope": "GPU-resident transform extraction only, including synchronization; excludes waveform transfer, classifier and generation",
+    "seed": 970001,
+    "warmup_calls": 3
+  },
+  "source_fingerprint": "5cc1d756a9794be7758cdbb70dca6d843e2c1d5a28b88a1046059f8994fe76a3"
+}

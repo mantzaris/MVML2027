@@ -1,0 +1,39 @@
+{
+  "observed_date": "2026-11-23",
+  "location": "local Ubuntu host, outside the restricted device sandbox",
+  "status": "passed",
+  "selected_gpu_uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+  "selected_gpu_name": "NVIDIA RTX 5000 Ada Generation",
+  "nvidia_smi_total_memory_mib": 32760,
+  "nvidia_smi_free_memory_mib_at_inventory": 32220,
+  "driver_version": "590.48.01",
+  "kernel": "6.17.0-22-generic",
+  "pci_address_at_inventory": "09:00.0",
+  "thunderbolt": {
+    "enclosure": "Sonnet Technologies eGPU Breakaway Box 750ex",
+    "status": "authorized",
+    "reported_link_gbps": 40
+  },
+  "excluded_gpu": {
+    "name": "Quadro T2000",
+    "uuid": "GPU-3f5529e2-cb0a-d0ae-42ef-900bb3b35e04",
+    "total_memory_mib": 4096
+  },
+  "cuda_smoke": {
+    "status": "passed",
+    "gpu_name": "NVIDIA RTX 5000 Ada Generation",
+    "total_memory_mib": 32230,
+    "visible_cuda_devices": 1,
+    "torch_version": "2.9.0+cu128",
+    "torch_cuda_version": "12.8",
+    "checks": ["float32_matmul", "known_frequency_rfft", "complex_stft", "finite_cuda_outputs"],
+    "peak_allocated_mib": 8.66015625,
+    "interpreter": "/home/meow/Documents/repos/ExploreTinyRM/.venv/bin/python",
+    "source_of_receipt": "Observed successful run of scripts/run_on_ada.py launching scripts/verify_cuda.py"
+  },
+  "guard_unit_tests": {"passed": 5, "failed": 0},
+  "research_training_started": false,
+  "drivers_changed": false,
+  "reboot_performed": false,
+  "limits": "Device inventory and small CUDA checks only. No HHT implementation, generator, detector or throughput benchmark is validated."
+}

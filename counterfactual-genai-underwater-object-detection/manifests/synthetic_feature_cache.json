@@ -1,0 +1,16 @@
+{
+  "development": {
+    "data_fingerprint": "ec7801ef3100c4890cc9d3a5b5bac33d71f363784e5f89a7c7b7c2e7c8698be1",
+    "index": "data/features/synthetic/development/index.json",
+    "index_sha256": "db09471a5cf6cf09da819e3dc13fcbf896e1985d26ea7af3849f34b0ddca8356",
+    "rows": 2000,
+    "shards": 16
+  },
+  "train": {
+    "data_fingerprint": "ec7801ef3100c4890cc9d3a5b5bac33d71f363784e5f89a7c7b7c2e7c8698be1",
+    "index": "data/features/synthetic/train/index.json",
+    "index_sha256": "92b667fa8d6f3f614f538964bddd59c0a6c7bef7f1d22f28430fb5ca8d7dcabe",
+    "rows": 20000,
+    "shards": 157
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "benchmark_source_sha256": "04f631ef51ec61dcf4d8fa1315b1db36a23a950578aeaa3943465d8016689ea4",
+  "checked_utc": "2026-11-23T17:42:58.789583+00:00",
+  "expected_decisions": [
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      false
+    ]
+  ],
+  "fixture_scores": [
+    0.5,
+    1.0
+  ],
+  "gpu_execution_performed": false,
+  "metrics_source_changed": false,
+  "status": "passed",
+  "thresholds": "float64 nextafter(0.5,+infinity) and nextafter(1,+infinity)",
+  "unit_tests_passed": 8
+}

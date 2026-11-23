@@ -1,0 +1,10 @@
+{
+  "finite": true,
+  "median_target_projection_after": 0.0061889756470918655,
+  "median_target_projection_before": 0.9983891248703003,
+  "outside_max_error": 7.450580596923828e-09,
+  "parameters": 1997121,
+  "peak_memory_mib": 676.966796875,
+  "pilot_only": true,
+  "steps": 64
+}

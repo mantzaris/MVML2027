@@ -1,0 +1,61 @@
+{
+  "adopted_verified_existing_artifacts": true,
+  "command_hash": "1f2a9fae2d958236e731c644ee2320759d7cec985e845beadf1be36b67e6da3a",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/supplemental_views.py",
+      "--stage",
+      "train"
+    ]
+  ],
+  "completed_utc": "2026-11-23T17:17:22.919516+00:00",
+  "input_hash": "a220da8a4431fbe0ab84640ce38db413cfa5ba0b84a20eaf66666fb268a705a1",
+  "inputs": {
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "configs/supplemental.json": "135222874043daf720e6c3f91fe2b78c324fe511a06159474db1b4a8e3f6753b",
+    "configs/synthetic_features.json": "ec7801ef3100c4890cc9d3a5b5bac33d71f363784e5f89a7c7b7c2e7c8698be1",
+    "data/features/synthetic/development/index.json": "db09471a5cf6cf09da819e3dc13fcbf896e1985d26ea7af3849f34b0ddca8356",
+    "data/features/synthetic/train/index.json": "92b667fa8d6f3f614f538964bddd59c0a6c7bef7f1d22f28430fb5ca8d7dcabe",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "scripts/extract_foundation.py": "ab274732f99d8f8dc9062ca6477cad7da55f5b350416f5e57651f8f0396afebb",
+    "scripts/extract_real_features.py": "c1858acaa92c4a9bf8fa90327f3c2320d71737200958e5144e96eec3a178c8ae",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "scripts/supplemental_views.py": "33a64b3d1a2e8939dbad9b43a41747d7fa98ec567e7dd8382c420a512a877fe4",
+    "src/uac/data.py": "268aecf7ae63df52c9a7efb59a128bb079299e9ef29c475aeb47291b527d3a0d",
+    "src/uac/dsp.py": "92df06b143300987e08cc0d28c3b5e127b36aca69e72f33498d211fa47f160f1",
+    "src/uac/metrics.py": "5a4ec0826a12a841d2e7880fdec1861cbf70cadafcb974cfcccb3142986b247f",
+    "src/uac/models.py": "a714436319bd7edeb921fe8cd48e09b36abfdd702ad5f27ab6236f594ba32f37",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5",
+    "src/uac/synthetic.py": "52e06fc052bf53199bdc53ab92e291ddb80f656356e7ebb8edbf69c99e1e764d",
+    "src/uac/training.py": "b9fb622a9f6e8b7effe474d848c49d201529d313d12edfb7b2bfa41111def435"
+  },
+  "migration": {
+    "evidence": {
+      "basis": "native completion artifacts revalidated",
+      "evidence_sha256": {
+        "manifests/supplemental_model_index.json": "1aec1241caa3a8711ece6444f8706243b17c441c1047c2df6e93c72237889399"
+      },
+      "expanded_dependencies": "first pinned at migration/adoption; no retrospective source-hash claim",
+      "historical_scope": "native recorded core configuration/code/data only",
+      "native_indices": [
+        "manifests/supplemental_model_index.json"
+      ]
+    },
+    "migrated_utc": "2026-11-23T17:29:13.071170+00:00",
+    "original_receipt": "runs/stages/migration_originals/supplemental_training.043230eed897c40fd8e84a067721a78a29a6e41e4185a39901241e6a110bbbd1.json",
+    "original_receipt_sha256": "043230eed897c40fd8e84a067721a78a29a6e41e4185a39901241e6a110bbbd1",
+    "reason": "Legacy receipt had output and command hashes but no stage input signature"
+  },
+  "outputs": {
+    "manifests/supplemental_feature_cost.json": "ff6cdf79f27d8ebec27b6db9e230e3972c3df791214f36a73ac6a4fa505f234f",
+    "manifests/supplemental_model_index.json": "1aec1241caa3a8711ece6444f8706243b17c441c1047c2df6e93c72237889399"
+  },
+  "schema_version": 2,
+  "stage": "supplemental_training",
+  "supervisor_sha256": "cf61372f4957f942357fb01734029d61567b5ade9fe13c208d37aa6accb71c09"
+}

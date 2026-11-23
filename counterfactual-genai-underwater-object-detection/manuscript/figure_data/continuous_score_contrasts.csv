@@ -1,0 +1,3 @@
+ci,difference_a_minus_b,independent_components,method_a,method_b,metric,per_seed_differences,scope
+,-0.025721220595359418,1,fixed_verification,fixed_validity_only,ap_of_mean_seed_probability,"{'17': -0.007379004978743331, '29': -0.021143494592490875, '43': -0.03654434646608817}","Paired descriptive continuous-score contribution with identical queries, views, validity and calibration protocol"
+,-0.025721220595359418,1,proposed_agent,agent_validity_only,ap_of_mean_seed_probability,"{'17': -0.007379853292723726, '29': -0.021143494592490875, '43': -0.03654434646608817}","Paired descriptive continuous-score contribution with identical queries, views, validity and calibration protocol"

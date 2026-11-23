@@ -1,0 +1,25 @@
+{
+  "artifacts_sha256": {
+    "protocol/conference_sources/MVML27_Paper_Template.docx": "86364438af0f7090bc905442437f88c8f72412770d040e885415402eb2c19a35",
+    "protocol/conference_sources/rendered/MVML27_Paper_Template.pdf": "a16da9a4a809a351fcb59b1e28f3852e81792e80afd21fbeff718768966a1a7e",
+    "protocol/conference_sources/rendered/page-1.png": "91488026f4454080dba77570da8425c267b2644fc145b27ce0105e5d8367e9c6",
+    "protocol/conference_sources/rendered/page-2.png": "6f926f546d35ddaa99bda747597f095228ad2611d14e97bdb8e68d08f7a9b044",
+    "protocol/conference_sources/rendered/page-3.png": "e136aaf97f67c0428cc5df32e267d5118b3100d7f392ecbb7209b4378d0ccd7e"
+  },
+  "checked_date": "2026-11-23",
+  "gpu_used": false,
+  "sources": [
+    "https://mvml.org/author-guidelines/",
+    "https://mvml.org/important-dates/",
+    "https://mvml.org/ethics/",
+    "https://mvml.org/acss/login",
+    "https://mvml.org/documents/MVML27_Paper_Template.docx"
+  ],
+  "submission_performed": false,
+  "template_pages_visually_reviewed": [
+    1,
+    2,
+    3
+  ],
+  "test_unlocked": false
+}

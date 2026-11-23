@@ -1,0 +1,39 @@
+{
+  "artifacts": {
+    "checkpoints/synthetic_temporal/seed_17/best.pt": {
+      "bytes": 1461513,
+      "sha256": "101232fd3fceaa347924d57ef901eb85d766b2d1cf2fefef72af2d97274efd57"
+    },
+    "checkpoints/synthetic_temporal/seed_17/training.json": {
+      "bytes": 573,
+      "sha256": "c73b1c866c01b691b01e04793ea858fbc9110536dd87d73c3835104f295b7751"
+    }
+  },
+  "completed_utc": "2026-11-23T16:52:47.973855+00:00",
+  "config_hash": "2e578d54ab04ae41eff04b9b0fbb9e2aa41c124669527b849edb19304e8e3a16",
+  "data_fingerprint": "69f21302b8982e2447354a1b1a72a9375330afb754336cd7fab9420238fa5b66",
+  "details": {
+    "elapsed_seconds": 136.9894844389978,
+    "history": [
+      {
+        "development_loss": 0.23278189723193646,
+        "epoch": 1,
+        "training_loss": 0.3082352260887623
+      },
+      {
+        "development_loss": 0.1588808641731739,
+        "epoch": 2,
+        "training_loss": 0.19378103415519
+      },
+      {
+        "development_loss": 0.15187584960460662,
+        "epoch": 3,
+        "training_loss": 0.17183547727912665
+      }
+    ],
+    "seed": 17
+  },
+  "stage": "synthetic_temporal_training",
+  "status": "complete",
+  "version": 1
+}

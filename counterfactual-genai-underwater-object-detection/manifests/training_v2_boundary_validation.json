@@ -1,0 +1,39 @@
+{
+  "bug": "Original helper read local loss after an empty loop when saved cursor equals epoch length",
+  "original_training_sha256": "b9fb622a9f6e8b7effe474d848c49d201529d313d12edfb7b2bfa41111def435",
+  "original_training_unchanged": true,
+  "records": [
+    {
+      "checkpoint_cursor_before": 8,
+      "checkpoint_directory": "checkpoints/validation/training_v2_boundary_1795454334885215989_1",
+      "checks": {
+        "adamw_state_equal_after_boundary": true,
+        "loss_diagnostic_valid_or_explicit_null": true,
+        "model_equal_after_boundary": true,
+        "next_optimizer_step_bitwise_equal": true,
+        "resume_did_not_repeat_optimizer_update": true
+      },
+      "completed_global_step": 2,
+      "epoch_length": 8,
+      "loss_was_present": true
+    },
+    {
+      "checkpoint_cursor_before": 8,
+      "checkpoint_directory": "checkpoints/validation/training_v2_boundary_1795454335054703197_0",
+      "checks": {
+        "adamw_state_equal_after_boundary": true,
+        "loss_diagnostic_valid_or_explicit_null": true,
+        "model_equal_after_boundary": true,
+        "next_optimizer_step_bitwise_equal": true,
+        "resume_did_not_repeat_optimizer_update": true
+      },
+      "completed_global_step": 2,
+      "epoch_length": 8,
+      "loss_was_present": false
+    }
+  ],
+  "resolution": "Version2 persists last loss in checkpoint extra; unknown historical diagnostic remains null",
+  "scope": "two small CUDA optimizer fixtures, no research data",
+  "status": "passed",
+  "v2_training_sha256": "a7871f7caaca97177bcddd5f9bc6f1902304a2eb1cf2890e92028a4af97992d9"
+}

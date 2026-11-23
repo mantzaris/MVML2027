@@ -1,0 +1,21 @@
+{
+  "adopted_verified_existing_artifacts": true,
+  "command_hash": "1f2a9fae2d958236e731c644ee2320759d7cec985e845beadf1be36b67e6da3a",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/supplemental_views.py",
+      "--stage",
+      "train"
+    ]
+  ],
+  "completed_utc": "2026-11-23T17:17:22.919516+00:00",
+  "outputs": {
+    "manifests/supplemental_feature_cost.json": "ff6cdf79f27d8ebec27b6db9e230e3972c3df791214f36a73ac6a4fa505f234f",
+    "manifests/supplemental_model_index.json": "1aec1241caa3a8711ece6444f8706243b17c441c1047c2df6e93c72237889399"
+  },
+  "stage": "supplemental_training"
+}

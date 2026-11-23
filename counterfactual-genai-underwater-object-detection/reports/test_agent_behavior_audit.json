@@ -1,0 +1,53 @@
+{
+  "records": [
+    {
+      "n": 1200,
+      "paths": [
+        {
+          "actions": [
+            "wavelet",
+            "fourier",
+            "verify"
+          ],
+          "count": 1200
+        }
+      ],
+      "seed": 17,
+      "source": "results/raw/policies/test/agent_seed17/all.json",
+      "source_sha256": "8ebeed770619b6c17bffa88bd04deac157054a2c58ad757000777c9f5acd55d8"
+    },
+    {
+      "n": 1200,
+      "paths": [
+        {
+          "actions": [
+            "wavelet",
+            "fourier",
+            "verify"
+          ],
+          "count": 1200
+        }
+      ],
+      "seed": 29,
+      "source": "results/raw/policies/test/agent_seed29/all.json",
+      "source_sha256": "3e36ddd1252b5fcbc4ff70cf7b392d5db033626e8148e9ce24693d37b2f7b7bf"
+    },
+    {
+      "n": 1200,
+      "paths": [
+        {
+          "actions": [
+            "wavelet",
+            "fourier",
+            "verify"
+          ],
+          "count": 1200
+        }
+      ],
+      "seed": 43,
+      "source": "results/raw/policies/test/agent_seed43/all.json",
+      "source_sha256": "90f5421991383d29fd1c4c2d688b3861b506b057c4b7f51c0728d1474bfd8785"
+    }
+  ],
+  "scope": "Frozen held-out generative-agent action paths; no accuracy inference"
+}

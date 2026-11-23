@@ -1,0 +1,178 @@
+% Canonical editable LaTeX source. All prose, equations and tables are in this file.
+% Build from the submission directory: bash scripts/build_latex.sh
+% Bibliography is separate; figures are existing measured vector-PDF assets.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=25mm]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{amsmath}
+\usepackage{graphicx,booktabs,array,tabularx}
+\usepackage[table]{xcolor}
+\usepackage{caption,titlesec,fancyhdr,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cite}
+\graphicspath{{figures/}}
+\setlength{\parindent}{7mm}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{1em}
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+\setlength{\abovedisplayshortskip}{4pt}
+\setlength{\belowdisplayshortskip}{4pt}
+\titleformat{\section}{\sffamily\bfseries\fontsize{12}{14}\selectfont}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\sffamily\bfseries\fontsize{11}{13}\selectfont}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{7pt}{5pt}
+\titlespacing*{\subsection}{0pt}{6pt}{4pt}
+\DeclareCaptionFont{draftcaption}{\fontsize{9.5}{11}\selectfont}
+\captionsetup{font=draftcaption,labelfont=normalfont,labelsep=period,skip=4pt,hypcap=false}
+\captionsetup[figure]{name=Fig.}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\sffamily\fontsize{8}{10}\selectfont\color{gray}MVML 2027 | Anonymous research draft}
+\fancyfoot[R]{\sffamily\fontsize{8}{10}\selectfont\color{gray}\thepage}
+\setlength{\footskip}{25pt}
+\newcommand{\draftfigure}[4]{%
+  \par\noindent\begin{minipage}{\linewidth}\centering
+  \includegraphics[width=\linewidth,height=#2in,keepaspectratio]{#1.pdf}
+  \captionof{figure}{#3}\label{fig:#4}
+  \end{minipage}\par\vspace{3pt}}
+\newcommand{\drafttitle}[1]{\begin{center}\sffamily\bfseries\fontsize{16}{19}\selectfont #1\end{center}}
+\renewcommand{\refname}{References}
+
+
+\renewcommand{\thesection}{S\arabic{section}}
+
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+\renewcommand{\thetable}{S\arabic{table}}
+
+\renewcommand{\refname}{Supplement references}
+
+\begin{document}
+
+\fontsize{11}{13}\selectfont
+
+\nocite{portia,huang1998,flowmatching}
+
+\drafttitle{Supplementary Study}
+
+\begin{center}\sffamily\bfseries Hilbert-Huang and Wavelet Evidence for Underwater Acoustic Detection\end{center}
+
+\section{Controlled Representation Study}
+
+This companion study separates exact construction labels from unknown real-world audibility. Fully synthetic scenes comprise colored ambient noise and zero, one or two harmonic, amplitude-modulated or chirped sources. Received supports include bounded multipath delay. Overlapping source supports are merged into the union of activity for temporal scoring. A union-activity detector does not resolve overlapping physical objects. The separately trained temporal spectral CNN supplies the fully/semi-synthetic results; these do not test Qwen/flow benefit.\par
+
+The focused representation study uses three-second controlled clips and fixed detection heads for STFT, STFT plus wavelets, STFT plus bounded HHT, and all views. It separates training/development/test generation identities and a held-out signal family. Presence AP in this study is not temporal AP and does not directly establish a reasoning-agent benefit. HHT remains an explicitly exploratory approximation.\par
+
+\par\noindent\begin{minipage}{\linewidth}
+\captionof{table}{Recorded controlled representation results, grouped by family and method.}\label{tab:S1}
+\centering\fontsize{8.5}{10}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.22}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr0.220930\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.372093\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.151163\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.104651\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.151163\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{blue!5}
+\textbf{Family} & \textbf{Method} & \textbf{Mean AP} & \textbf{Seeds} & \textbf{Scenes} \\ \midrule
+held-out test & All four views & 0.888 & 3 & 2000 \\
+held-out test & STFT & 0.880 & 3 & 2000 \\
+held-out test & STFT + HHT & 0.923 & 3 & 2000 \\
+held-out test & STFT + wavelet & 0.880 & 3 & 2000 \\
+in-family test & All four views & 0.993 & 3 & 2000 \\
+in-family test & STFT & 0.995 & 3 & 2000 \\
+in-family test & STFT + HHT & 0.993 & 3 & 2000 \\
+in-family test & STFT + wavelet & 0.994 & 3 & 2000 \\
+\bottomrule\end{tabular}
+\end{minipage}\par\vspace{3pt}
+
+Temporal AP uses greedy confidence-ordered one-to-one matching with the monotone precision envelope. Duplicate predictions count as false positives; classes with no ground-truth events are excluded from mAP and their false positives remain reported. Thresholded event F1 and presence discrimination are additional outcomes, not replacements for a failed temporal endpoint.\par
+
+No human-verified real temporal intervals were available in this execution. Therefore this supplement makes no claim of real event-boundary accuracy, range/bearing localization, source identity or silent-object detection.\par
+
+\clearpage
+
+\section{HHT and Wavelet Numerical Validity}
+
+The bounded GPU EMD approximation uses up to six modes and ten sifts, piecewise-linear envelopes and masked instantaneous-frequency summaries. It is not relabeled as classical cubic-spline EMD. HHT remains exploratory because the noisy-scene convergence gate failed.\par
+
+\draftfigure{figureS1_hht_numerics}{3.2}{Measured numerical fixtures only. The 440 Hz frequency check and small reconstruction errors do not repair the noisy-scene mode failures. The combined flagged-mode fraction includes nonconvergence and extrema failures.}{S1}
+
+\par\noindent\begin{minipage}{\linewidth}
+\centering\fontsize{8.5}{10}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.22}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr0.375000\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.306818\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.318182\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{blue!5}
+\textbf{Diagnostic} & \textbf{Observed value} & \textbf{Interpretation} \\ \midrule
+Tone first-mode frequency & 440.000214 Hz & Simple fixture only \\
+Morlet peak & 412.5047 Hz & Discrete frequency-grid error \\
+Spline-reference discrepancy & 4.0\% & One 4,096-sample CPU reference \\
+HHT status & exploratory approximation only & Primary analysis excludes HHT \\
+\bottomrule\end{tabular}
+\end{minipage}\par\vspace{3pt}
+
+The FFT/Hilbert and wavelet calculations ran on the selected Ada GPU. The small independent spline reference ran on CPU solely as a correctness fixture. Edge effects, mode mixing and low-amplitude instantaneous-frequency instability remain relevant. Exact reconstruction tests summation consistency and cannot establish physically meaningful decomposition.\par
+
+\clearpage
+
+\section{Controlled Noise Sensitivity and Representation Scope}
+
+\draftfigure{figureS3_representation_study}{3.3}{Presence-detection AP for the focused representation study and missing-view tests. Points show available seeds; short horizontal markers are seed means. Missing-view curves retain each family separately. HHT remains exploratory after the numerical convergence failure.}{S2}
+
+\par\noindent\begin{minipage}{\linewidth}
+\captionof{table}{Mean AP by controlled source regime. Regimes are synthetic forms, not vessel classes. Two-source scenes include overlapping and nonoverlapping supports; interval overlap is not required.}\label{tab:S2}
+\centering\fontsize{8.5}{10}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.22}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr0.333333\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.166667\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.166667\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.166667\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.166667\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{blue!5}
+\textbf{Family / regime} & \textbf{All four views} & \textbf{STFT} & \textbf{STFT + HHT} & \textbf{STFT + wavelet} \\ \midrule
+in-family test / harmonic\_am & 0.924 & 0.941 & 0.927 & 0.937 \\
+in-family test / chirp\_dominant & 0.988 & 0.992 & 0.990 & 0.988 \\
+in-family test / decaying\_am & 0.954 & 0.964 & 0.955 & 0.960 \\
+in-family test / two-source scenes & 0.999 & 0.999 & 0.999 & 0.999 \\
+held-out test / harmonic\_am & 0.661 & 0.633 & 0.700 & 0.639 \\
+held-out test / chirp\_dominant & 0.667 & 0.699 & 0.713 & 0.693 \\
+held-out test / decaying\_am & 0.699 & 0.677 & 0.719 & 0.681 \\
+held-out test / two-source scenes & 0.860 & 0.842 & 0.912 & 0.841 \\
+\bottomrule\end{tabular}
+\end{minipage}\par\vspace{3pt}
+
+Generative replacement can erase all activity in the editable interval. A matched sham may preserve the original waveform additively while still masking it perceptually. Accordingly, detector changes are sensitivity measurements. Generator uncertainty, boundary distortion and invalid replacements must remain visible in the evaluation.\par
+
+\clearpage
+
+\section{Reproducibility and Resource Accounting}
+
+\par\noindent\begin{minipage}{\linewidth}
+\captionof{table}{Numerical pilot timing. These are single synchronized tensor-resident calls with unequal first-use overhead, not a warmed throughput comparison.}\label{tab:S3}
+\centering\fontsize{8.5}{10}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.22}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr0.156627\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.337349\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.240964\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.265060\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{blue!5}
+\textbf{Clip} & \textbf{View} & \textbf{ms / clip} & \textbf{Peak MiB} \\ \midrule
+3 s & fourier & 20.534 & 40.68 \\
+3 s & stft & 24.302 & 51.70 \\
+3 s & wavelet & 2.324 & 103.38 \\
+3 s & hht & 29.853 & 86.83 \\
+10 s & fourier & 0.500 & 55.59 \\
+10 s & stft & 1.079 & 93.91 \\
+10 s & wavelet & 2.735 & 263.26 \\
+10 s & hht & 29.719 & 209.88 \\
+\bottomrule\end{tabular}
+\end{minipage}\par\vspace{3pt}
+
+The unconstrained development replay had 50.0\% valid actions across 4,220 actions from 2,110 clip-seed records (including partial runs). It failed by proposing already observed STFT after wavelet acquisition. This engineering failure and its traces are preserved. Before test evaluation, the controller was amended to finite legal-JSON token-trie decoding, enforcing schema validity by construction and retaining the independent parser. EOS is required, observed tools are excluded, and no retries choose a favorable action. The 160-state GPU fixture checks integration, not reasoning competence. All 3,600 test clip-seed paths were wavelet, Fourier, then verify; generation informed no later action and did not demonstrate adaptive selection.\par
+
+Experiment recovery uses project-local atomic checkpoints, checksummed generation metadata, a hash-chained ledger and verified prediction shards. Restarting recomputes unfinished work and preserves completed outputs. Source/configuration/data fingerprints guard against accidental resume under a different experiment.\par
+
+All code, data, caches, models, figures, reports and restart artifacts remain inside the new MVML2027 submission directory. The earlier submission is unchanged. Large raw data and checkpoints remain outside version control; no publication or submission is performed by generating these drafts.\par
+
+The practical lesson is to test both what a representation predicts and whether its components remain numerically meaningful. A decomposition can reconstruct a recording accurately even when its extracted components fail convergence checks; the bounded HHT results show why reconstruction alone is insufficient. Controlled scenes provide repeatable tests of representation sensitivity and known activity intervals, while keeping construction labels distinct from natural acoustic events. These studies do not establish a reasoning-agent benefit. Interpretation remains bounded by vessel-tracking labels, artificial class balance, a fixed generator seed, one deployment and one connected test component. AP, precision and calibration are cohort-specific and do not estimate deployment performance. This combination of prediction tests and numerical checks offers a useful basis for developing more dependable acoustic representations.\par
+
+{\fontsize{9}{11}\selectfont
+
+\bibliographystyle{IEEEtran}
+
+\bibliography{supplementary}
+
+}
+
+\end{document}

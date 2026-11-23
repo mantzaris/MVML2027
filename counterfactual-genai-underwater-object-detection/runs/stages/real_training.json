@@ -1,0 +1,51 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "1c41fc608db77c00c201ceebf44e6247173a9d33af8f49ea40a5b6a558f276d9",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/train_detectors.py"
+    ],
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/train_augmented.py"
+    ]
+  ],
+  "completed_utc": "2026-11-23T17:42:46.851975+00:00",
+  "input_hash": "26a6a9b8902aabb7498bddd48b0173c35997b2ad96ed36512d27fe2bed53f2d2",
+  "inputs": {
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "configs/research.json": "a7654d700844e87b6edecb92eca8ce6d0afd4568c79f9dd1f4e277534b660f1b",
+    "configs/synthetic_features.json": "ec7801ef3100c4890cc9d3a5b5bac33d71f363784e5f89a7c7b7c2e7c8698be1",
+    "data/features/foundation/development/index.json": "09aad9298a8ec04f48d8adeb3735c95b99e2cacb0c861f8c923494018cfceea3",
+    "data/features/foundation/train/index.json": "815b0c10e2917b901dc037054a33458ebcbb14cbf5aa932bd0d1e8d805a34518",
+    "data/features/real/development/index.json": "9b665d865588f9a51f6c6e764819105b1702f007ee6357711319d25303445820",
+    "data/features/real/train/index.json": "d3b603976cc1e6b3acd4f9dcc4632d91a2156e868dc5e1fa9680f41b6d13a6e4",
+    "data/features/synthetic/train/index.json": "92b667fa8d6f3f614f538964bddd59c0a6c7bef7f1d22f28430fb5ca8d7dcabe",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "scripts/extract_foundation.py": "ab274732f99d8f8dc9062ca6477cad7da55f5b350416f5e57651f8f0396afebb",
+    "scripts/extract_real_features.py": "c1858acaa92c4a9bf8fa90327f3c2320d71737200958e5144e96eec3a178c8ae",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "scripts/train_augmented.py": "ac2c926e3b65f697636e833c7fbfd0425640bc3de462f135eafbef20dde3f019",
+    "scripts/train_detectors.py": "54284f65b66b14a982a6ff8d827a29d915d97116dc9109c781d0dae663c95f9d",
+    "src/uac/data.py": "268aecf7ae63df52c9a7efb59a128bb079299e9ef29c475aeb47291b527d3a0d",
+    "src/uac/dsp.py": "92df06b143300987e08cc0d28c3b5e127b36aca69e72f33498d211fa47f160f1",
+    "src/uac/models.py": "a714436319bd7edeb921fe8cd48e09b36abfdd702ad5f27ab6236f594ba32f37",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5",
+    "src/uac/training_v2.py": "a7871f7caaca97177bcddd5f9bc6f1902304a2eb1cf2890e92028a4af97992d9"
+  },
+  "outputs": {
+    "manifests/detector_index.json": "6dd624d165eb16ecb7a82168c2416a9af37df7f02f081b22e7fa6d27da3a4219"
+  },
+  "schema_version": 2,
+  "stage": "real_training",
+  "supervisor_sha256": "baf5c3db2d122ac189a8860608f95f902d8e61f60ae4a04eb8d364c6dba25171"
+}

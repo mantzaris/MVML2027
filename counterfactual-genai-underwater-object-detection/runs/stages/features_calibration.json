@@ -1,0 +1,36 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "d20b39cc00c06eaac5f5a063b866d7875efc0ff86b478eb29aa3b941678b207c",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/extract_real_features.py",
+      "--split",
+      "calibration"
+    ]
+  ],
+  "completed_utc": "2026-11-23T18:21:43.759704+00:00",
+  "input_hash": "bc6ae77ab39e4d6b387af8f22db129720e65b131359f2c79c3d6fae191718573",
+  "inputs": {
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "data/manifests/planned_real.jsonl": "be62767fad35a8dc782f9f6c64a2f2ba372974b7170012e7a18ce37049456ced",
+    "data/manifests/real_calibration.jsonl": "94768f054286a4fcbb3c8dfb4169ad78a2efae9405aecd73501dc0d7501d6bb1",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "scripts/extract_real_features.py": "c1858acaa92c4a9bf8fa90327f3c2320d71737200958e5144e96eec3a178c8ae",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "src/uac/data.py": "268aecf7ae63df52c9a7efb59a128bb079299e9ef29c475aeb47291b527d3a0d",
+    "src/uac/dsp.py": "92df06b143300987e08cc0d28c3b5e127b36aca69e72f33498d211fa47f160f1",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5"
+  },
+  "outputs": {
+    "data/features/real/calibration/index.json": "33eb0f3dc42adeaabf0635016199480420ca320f801b8964e069f6a6cdcd9a19"
+  },
+  "schema_version": 2,
+  "stage": "features_calibration",
+  "supervisor_sha256": "e297ae2cc039a2c359f4961d64980500d19378f0894af8e096b7d7b6ae2a275d"
+}

@@ -1,0 +1,240 @@
+Full Paper Title in Title Case
+Name Surname
+1
+, 
+Name 
+Surname
+2
+, Name 
+Surname
+2
+1
+My Institute/Company
+Address, City, Country
+First.Author@institution.org; Second.Author@institution.org
+2
+My Institute/Company
+Address, City, Country
+Third.Author@uottawa.ca 
+Abstract
+ 
+-
+ 
+In this paper, the formatting requirements for the International ASET Conference Proceedings are described. Some recommendations on writing for a worldwide readership are offered.  Please review this document to learn about the formatting of 
+text, 
+table captions, references, and the method to include the indexing information. 
+The conference proceedings will be published in an electronic format
+.
+ The full paper in MS Word file shall be written in compliance with these instructions. 
+At a l
+ater 
+stage, 
+it will be converted into Portable Document Format (PDF).
+ 
+An abstract not exceeding 
+3
+00 words
+, in one paragraph, and with no references,
+ should appear on the top of the first page, after the title of the paper 
+and the names of the authors 
+in 
+a section
+ titled 
+“
+A
+bstract
+”
+ (without 
+section
+ number)
+.
+The word “Abstract” must be Arial, Bold, Italic, and 10 pt. The abstract itself must be
+ 
+Times New Roman and
+ 10 pt.
+ The title of the paper must be Arial, Bold, and 16 pt. 
+Names and affiliations must be Times New Roman. Names must be Bold and 12 pt while affiliations must be 11 pt. 
+The title, names
+,
+ and affiliations must 
+all 
+be centralized. 
+K
+eywords
+: 
+4 - 8 keywords
+1. 
+I
+ntroduction
+It is expected that authors will submit carefully written and pro
+ofread material. Careful checking for s
+pelling and grammatical errors
+ should be performed. T
+he number of pages
+ of the paper should be from 4 to 8.
+Papers should clearly describe the background of the subject, the authors work, including the methods used, 
+results 
+and concluding discussion on the importance of the work. Papers are to be prepared in English and SI
+ 
+units 
+must be
+ used. 
+Technical terms should be explained unless they may be considered to be known to the 
+conference
+ community. 
+2. P
+aper 
+F
+ormat
+The uniform 
+appearance
+ will 
+assist
+ the reader to 
+read paper of the
+ proceedings. 
+It is therefore suggested to authors to
+ use 
+the example of 
+this file to construct their papers. 
+This particular 
+example 
+uses 
+an
+ American
+ 
+letter
+ format with 2
+5
+ mm margi
+ns left, right, top and bottom.
+All text paragraphs should be single spaced, with first line intended by 
+7
+ mm. Double spacing should 
+NOT be used anywhere in the manuscript
+. Position and style of headings and subheadings should follow this example. 
+One empty line (11 pt) should be left between every two 
+consecutive sections
+. Two empty lines should be left before and after the abstract.
+All headings and subheadings should be bold and Arial font. Major headings must be 12 pt and subheadings should be 11 pt.
+ No empty lines are required between the heading/subheading and the text.
+2.
+1. 
+Header, Footer, Page Numbering
+Authors are asked to replace the 
+“
+XXX
+”
+ number (with the 
+paper code that
+ 
+was
+ assigned 
+when
+ the 
+paper
+ was accepted) on the header of the first page and on the footer of other pages in order to set a unique page number in the Proceedings.
+2.
+2. 
+Fonts
+Papers should use 1
+1
+-point Times New Roman font. The styles available are bold, italic and underlined.
+ 
+It is recommended that 
+any 
+text in 
+the “
+figures
+”
+ 
+should 
+not
+ be
+ smaller than 10-point font size.
+2.
+3. 
+Tables and Figures
+Tables and figures should be placed close
+ to their first citation in the text
+. All figures and tables should be numbered. Table headings should be centred above the tables. Figure captions should be centred below the figures
+.
+ Refer to the figure below for a sample.
+Fig. 1:
+ Caption 
+for figure 
+goes at the bottom.
+Figure captions and table headings should be sufficient to explain the figure or table without needing to refer to the text. Figures and tables not cited in the text should not be presented. 
+ Refer to the tale below for a sample.
+Table
+ 1:
+ Caption 
+for table 
+goes at the 
+top
+.
+2.
+4. 
+Equations
+Each equation should be presented on a separate line from the text with a blank space above and below.
+ 
+Equations should be clear and expressions used should be explained in the text. The equations should be numbered consecutively at the outer ri
+ght margin, as shown in 
+Eqs
+. (1) -
+ (2) below. Here is one example.
+In this case, the governing system of equations can be written as follows
+:
+(1)
+(2)
+(3)
+3. Submitting the P
+aper
+The full paper has to be submitted electronically via the website of the conference (
+http://mvml.org
+) 
+by 
+the deadline (see website for details)
+.
+Paper number (in the format “XXX”) is assigned to each abstract after it was accepted and authors are kindly asked to place the paper number to the correct positions in the header and footer before submitting the final version. 
+4
+. C
+onclusion
+Conclusions should state concisely the most important propositions of the paper as well as the author’s views of the practical implications of the results.
+Acknowledgements
+A short acknowledgement section can be written between the conclusion and the references. Sponsorship and financial support acknowledgments should be included here. Acknowledging the contributions of other colleagues who are not included in the authorship of this paper is also added in this section. If no acknowledgement is necessary, this section should not appear in the paper.
+References
+The IEEE citation format is used. Books and book chapters should be referenced as [1] and [2] respectively. Patents are referenced based on [3] and a thesis can be referenced as [4]. Finally, conference presentations/papers and journal papers need to be reference based on [5] and [6] respectively.
+With the increasing availability of useful information that can be found on the internet, website references must also be reported
+ 
+based on [7]. Meanwhile, due to the dynamic nature of web pages and the fact that in most cases the
+ 
+information is not peer-reviewed, the use of published resources are very much preferred and advised over online references.
+The reference section at the end of the paper should be edited based on the following:
+[1] 
+B. Klaus and P. Horn, 
+Robot Vision
+. Cambridge, MA: MIT Press, 1986.
+[2] 
+L. Stein, “Random patterns,” in 
+Computers and You
+, J. S. Brake, Ed. New York: Wiley, 1994, pp. 55-70.
+[3] 
+J. P. Wilkinson, “Nonlinear resonant circuit devices,” U.S. Patent 3 624 125, July 16, 1990. 
+[4] 
+J. O. Williams, “Narrow-band 
+analyzer
+,” Ph.D. dissertation, Dept. Elect. Eng., Harvard Univ., Cambridge, MA.
+[5] 
+U. V. Koc and K. R. Liu, “Discrete-cosine/sine-transform based motion estimation,” in 
+Proceedings of the IEEE 
+International Conference on Image Processing
+, Austin, TX, 1994, vol. 3, pp. 771-775.
+[6] 
+R. E. Kalman, “New results in linear filtering and prediction theory,” 
+J. Basic Eng
+., vol. 83, no. 4, pp. 95-108,
+ 
+1961.
+[7] 
+K. Author. (2015, May 10). Facility Greenhouse Gas Reporting (2nd ed.) [Online]. Available: http://www.ec.gc.ca/ges-ghg/default.asp?lang=En&n=040E378D-1

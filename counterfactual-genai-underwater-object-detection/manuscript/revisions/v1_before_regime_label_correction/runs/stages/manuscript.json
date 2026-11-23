@@ -1,0 +1,39 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "38f3a9beb58cfd8d62188ced684d5af615d36c052e90a844dd6ff5461d08e206",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/build_results_report.py",
+      "--real",
+      "results/tables/final_real_results.json"
+    ]
+  ],
+  "completed_utc": "2026-11-23T19:49:12.456978+00:00",
+  "input_hash": "af9919f71b14624a6753f3ab8f1fa733f75ff43b210dc1fa988aad4800bef2e9",
+  "inputs": {
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "configs/research.json": "a7654d700844e87b6edecb92eca8ce6d0afd4568c79f9dd1f4e277534b660f1b",
+    "data/manifests/split_audit.json": "b2a544e6f0f46f1ab23e9a0552932793a1a6709c8178a6ce5ee1309293e7ebf4",
+    "manifests/dsp_validation.json": "413b3ff1c2997bd7b88acf6b6f61c967a7b0057bd9a0b4699b899734f716649d",
+    "reports/synthetic_results.json": "9987efd6a42e4439559caa09684a042179a67e66461300a5fbb8ef62d12ede1d",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "results/tables/final_real_results.json": "6723b5eb6036a49469a6d91d1035410523ffb3c929785a58816f4cff0c27e4ee",
+    "results/tables/real_results.json": "0d415b55f96822a6c2c4ebc059e0c65bd80f535c1e909d6cdfe5c57b11b02775",
+    "results/tables/robustness.json": "4902576e4ad172dc93d647aafa026e2773e0837ca53044a0383ecda72d4d34c8",
+    "results/tables/runtime_benchmark.json": "c0722e8e7a5f7e101819fd1d93f65016e49df5c737dc9233a87d1a376494a539",
+    "results/tables/semisynthetic_results.json": "a96abe8d7e766c06e9e81faf378ed484a3dea932729d17157fe93e1e0f170884",
+    "results/tables/supplemental_views.json": "9631edfaf4e5d86eb28c28df2fe923d9900ced850e34832f2acf0dd66ab94e7c",
+    "scripts/build_results_report.py": "7d9b7e434455f03257edebe1c210ca7dde0dea1742dac440d4cc03143da5a1f4",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5"
+  },
+  "outputs": {
+    "manuscript/main_paper.pdf": "0e61f28e1f872103be57aa058bfd373c8dabceb6085a8953aa5c0fc432a7daf6",
+    "manuscript/supplement.pdf": "2bb069ab7a1da335f1468e113903eb7af2ead21a23cbe9d1bd5eaa7a7c81a000"
+  },
+  "schema_version": 2,
+  "stage": "manuscript",
+  "supervisor_sha256": "dab0b3d5173fe277fdfd4a590dddbf8f62149bacea5f96849b547361eabf2b78"
+}

@@ -1,0 +1,44 @@
+{
+  "bootstrap_replicates": 2000,
+  "checkpoint_minutes": 5,
+  "cnn_epochs": 25,
+  "cnn_patience": 5,
+  "controller_model": "Qwen/Qwen3-4B-Instruct-2507",
+  "counterfactual_samples": 4,
+  "exploratory_groups": [
+    "hht"
+  ],
+  "feature_epochs": 150,
+  "feature_patience": 15,
+  "flow_sampling_steps": 8,
+  "foundation_model": "facebook/wav2vec2-base-960h",
+  "generator_base_channels": 32,
+  "generator_batch_size": 4,
+  "generator_checkpoint_every": 100,
+  "generator_steps": 5000,
+  "generator_validation_every": 200,
+  "max_planned_gpu_hours": 48,
+  "native_clip_seconds": 3,
+  "note": "Development defaults; PORTIA access and numerical gates amended before outcomes. HHT nonconvergence makes it exploratory. Freeze all final settings before test prediction.",
+  "pilot_seed": 17,
+  "policy_batch_size": 32,
+  "policy_max_actions": 3,
+  "primary_data": "PORTIA_v2_custom_single_vessel_and_background_cohort",
+  "primary_groups": [
+    "fourier",
+    "stft",
+    "wavelet"
+  ],
+  "primary_metric": "natural_real_binary_presence_average_precision",
+  "sample_rate": 16000,
+  "schema_version": 1,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "synthetic_development_scenes": 2000,
+  "synthetic_test_scenes": 2000,
+  "synthetic_training_scenes": 20000,
+  "test_locked": true
+}

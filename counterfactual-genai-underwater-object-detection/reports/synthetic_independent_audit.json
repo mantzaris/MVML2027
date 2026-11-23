@@ -1,0 +1,1659 @@
+{
+  "audited_utc": "2026-11-23T19:47:20.024052+00:00",
+  "condition_audits": [
+    {
+      "events": 1418,
+      "index_sha256": "698f0e4c618eb81998fcf9854d07f9f196cad8c6e09f75bd7d2d4e114e0e2551",
+      "path": "predictions/synthetic/seed_17/test/heldout/mixed_snr/index.json",
+      "predictions": 7013,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "d6cc3a33ffeeb876f6d154254168f2832cd42e55313f4c47fdb3606d2fe06f25",
+      "path": "predictions/synthetic/seed_17/test/heldout/snr_+00/index.json",
+      "predictions": 6592,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "1d3c66e1fe4d5c3e47f0d56d260f4e8db51307c892c23fa0a59054862831ba1d",
+      "path": "predictions/synthetic/seed_17/test/heldout/snr_+05/index.json",
+      "predictions": 6492,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "b57b84d77c73c5aad5a6363a53f6df1b8fbd4d058f22394a7e0e54dbdd9ff3e2",
+      "path": "predictions/synthetic/seed_17/test/heldout/snr_+10/index.json",
+      "predictions": 6584,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "0478fbfe2c9251cd7094063b39a7a3049b93b1418b028c78a4855eafe31d3564",
+      "path": "predictions/synthetic/seed_17/test/heldout/snr_+20/index.json",
+      "predictions": 6559,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "f52e7e2ef7002e3a561b5a401bb575df79d07327082b76604b293e12cca3bc11",
+      "path": "predictions/synthetic/seed_17/test/heldout/snr_-05/index.json",
+      "predictions": 6959,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "92e77bac727e966d30ade8531b6c5cb823cb5fbcd227cc69b4c5fe34ab3ca04e",
+      "path": "predictions/synthetic/seed_17/test/heldout/snr_-10/index.json",
+      "predictions": 7665,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "c95a329db23aa9a6625e8d64b83a3ccdb0b94c8e496e19cca6fe22d2085f0ce4",
+      "path": "predictions/synthetic/seed_17/test/heldout/snr_-15/index.json",
+      "predictions": 8572,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "b48d9cb58bb8b88aa1e460e461b2adf553645b5e8eb4f870132201b733cd7acf",
+      "path": "predictions/synthetic/seed_17/test/train/mixed_snr/index.json",
+      "predictions": 3039,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "c4ec4499a5001f0b2ad08818335226655262e22f6be47b136c46f3744df59d67",
+      "path": "predictions/synthetic/seed_17/test/train/snr_+00/index.json",
+      "predictions": 2351,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "02d5b0b8383eeb87d2bc5cc90b4ab8ba60100f7f23bf443642a5d6f826879779",
+      "path": "predictions/synthetic/seed_17/test/train/snr_+05/index.json",
+      "predictions": 2183,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "f2a8d0a7d0d9b2af79f9bf92eab756cffde8ad6bcba9593607dbf2cd368f4ca1",
+      "path": "predictions/synthetic/seed_17/test/train/snr_+10/index.json",
+      "predictions": 2001,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "f3a7fa25d9f9dd212dad53d17ab2ea386a6ca11b102683d4f140b77f39eb7f22",
+      "path": "predictions/synthetic/seed_17/test/train/snr_+20/index.json",
+      "predictions": 1801,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "747449b840e175c7c2c79019921b9c5bedc1ceb9d39a888b01cf80faeea84743",
+      "path": "predictions/synthetic/seed_17/test/train/snr_-05/index.json",
+      "predictions": 2809,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "a7a78a0504090d2981a055329a52e85df820cd88d1f6d7b8e81aa0f8fa4460b0",
+      "path": "predictions/synthetic/seed_17/test/train/snr_-10/index.json",
+      "predictions": 4140,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "e9f26368d22a618fffb63e21a823c21e9598153eb738c22a4f268ad327e6c6e4",
+      "path": "predictions/synthetic/seed_17/test/train/snr_-15/index.json",
+      "predictions": 5768,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "831e86069e1e4b17d857f9a5cf57d078de8379472b940221b1b63653af69ed75",
+      "path": "predictions/synthetic/seed_29/test/train/mixed_snr/index.json",
+      "predictions": 2709,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "36a00a2293d1a2b943716ad3c7df43d2a654089c22cfb9fc8fb5ca12bc06e30d",
+      "path": "predictions/synthetic/seed_29/test/train/snr_-05/index.json",
+      "predictions": 2643,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "8da0b170d941931cc0fc4944f4144578a39e3e010848f281db925c7be425a4c1",
+      "path": "predictions/synthetic/seed_29/test/train/snr_-10/index.json",
+      "predictions": 3762,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "db650dda58c10fcb2e434a960c8a3af3dead43904cc2ac541f6ac5eed543319f",
+      "path": "predictions/synthetic/seed_29/test/train/snr_-15/index.json",
+      "predictions": 4738,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "615cefe7bfdbdcf62a76a5657ee40c0fcf2e41831a4e42700fda45d5123759dd",
+      "path": "predictions/synthetic/seed_29/test/train/snr_+00/index.json",
+      "predictions": 2125,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "a4f0ab3cfa21b0cba6f01c8ee621b17acbb01b0e7273551aa3193b73e1af2742",
+      "path": "predictions/synthetic/seed_29/test/train/snr_+05/index.json",
+      "predictions": 1917,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "be5c24e22f2978709dc09215125cc9859b00d201b93219668ea083026560c37a",
+      "path": "predictions/synthetic/seed_29/test/train/snr_+10/index.json",
+      "predictions": 1810,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "f3e3df280af710f4a431071d47ff986617f9954a161cdd23f4b3608f8c206b0d",
+      "path": "predictions/synthetic/seed_29/test/train/snr_+20/index.json",
+      "predictions": 1666,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "b9afe1b1dcb94353d6cc8bad56ca873af274511459866945414f6001f95068c4",
+      "path": "predictions/synthetic/seed_29/test/heldout/mixed_snr/index.json",
+      "predictions": 7191,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "d173f4f2ff890f5af614169b1d5450e86b4038af3306fd37c669bf7f3c6d905a",
+      "path": "predictions/synthetic/seed_29/test/heldout/snr_-15/index.json",
+      "predictions": 8163,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "add3cd8c12700120543a977e9d5130f53b75d49edc2bfa510b119d3d84531949",
+      "path": "predictions/synthetic/seed_29/test/heldout/snr_-10/index.json",
+      "predictions": 7776,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "169788509c2e1209c2cb84878349629678b60b7b36736b4798cae1cc8964ccac",
+      "path": "predictions/synthetic/seed_29/test/heldout/snr_-05/index.json",
+      "predictions": 7209,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "bdacf58d9c61be44fa9fbe09fe73c057571818a1a4ffec68c19e4a8cd3c45e8d",
+      "path": "predictions/synthetic/seed_29/test/heldout/snr_+00/index.json",
+      "predictions": 6891,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "23e863a72b939779ad433033f4e2674053c96d3e0d95323f370e1b8db657ee74",
+      "path": "predictions/synthetic/seed_29/test/heldout/snr_+05/index.json",
+      "predictions": 6824,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "ce06aee590d6019d7d63449eec3665a21c0544f016db805571bf9aeae532bcda",
+      "path": "predictions/synthetic/seed_29/test/heldout/snr_+10/index.json",
+      "predictions": 6808,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "50fe5fe375ba3bca32bab5aee4768f314d14b71aaecdfc484a21618623bafbae",
+      "path": "predictions/synthetic/seed_29/test/heldout/snr_+20/index.json",
+      "predictions": 6652,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "d78f78d0fc61a5a189bbe4639e2b9b31aeb5b725db9e7a652223e6f048a7526a",
+      "path": "predictions/synthetic/seed_43/test/train/mixed_snr/index.json",
+      "predictions": 2601,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "ed87e2df913e513d0c318a1a3846318e490ef2dbebed06b7f39b74ba8855da56",
+      "path": "predictions/synthetic/seed_43/test/train/snr_-15/index.json",
+      "predictions": 4715,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "718bfabcf3986ed4690a3894374f79438c801fa2311aadf24ebd49d30a3601c2",
+      "path": "predictions/synthetic/seed_43/test/train/snr_-10/index.json",
+      "predictions": 3654,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "2f7c25eb52d7e50fca3cf23639ade4e817b7d068a4a6fb3c0b87b6e793f9b9ac",
+      "path": "predictions/synthetic/seed_43/test/train/snr_+00/index.json",
+      "predictions": 1979,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "4e7f723d12a1dafda6423b7eed9989c7c1a2be99a4b0570b645c10aae0734048",
+      "path": "predictions/synthetic/seed_43/test/train/snr_-05/index.json",
+      "predictions": 2410,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "e2b33859df4734181ba3291e5704b1b7cf4ac6ec1d432a8703bf9b2f5a9d0284",
+      "path": "predictions/synthetic/seed_43/test/train/snr_+05/index.json",
+      "predictions": 1887,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "da37aef1e5c8364f01772cc0495c1e2991c20e7339dfa72fb4a2f9a807dfa049",
+      "path": "predictions/synthetic/seed_43/test/train/snr_+10/index.json",
+      "predictions": 1808,
+      "scenes": 2000
+    },
+    {
+      "events": 1473,
+      "index_sha256": "ca712097dda1b6cdd46d8360b564ccb2da9f004b051394296141c608c82cdc90",
+      "path": "predictions/synthetic/seed_43/test/train/snr_+20/index.json",
+      "predictions": 1779,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "281d0b9b933754e61b900284d63c174a5e1617dab592c7ef721a433f60e739f7",
+      "path": "predictions/synthetic/seed_43/test/heldout/mixed_snr/index.json",
+      "predictions": 8441,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "54c7d700966b527084941a25227a0d2c3078ecd6ec2d7a825c0db0af0fb9bea6",
+      "path": "predictions/synthetic/seed_43/test/heldout/snr_-15/index.json",
+      "predictions": 9400,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "b6a846b32923c829b44bb314c2057517216ad7343406f57c4133f4b7cd2666cc",
+      "path": "predictions/synthetic/seed_43/test/heldout/snr_-10/index.json",
+      "predictions": 8792,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "b5c557b3e99d5b6012dd6132dad62b6421ea5b05ec37db0d54de4d5a1b1ff95c",
+      "path": "predictions/synthetic/seed_43/test/heldout/snr_-05/index.json",
+      "predictions": 8276,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "a2a438907d448a4aa533607c722373a6f3d325b18c5e772d9ce6654be687bb32",
+      "path": "predictions/synthetic/seed_43/test/heldout/snr_+00/index.json",
+      "predictions": 8063,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "00c28d7729456ff1221b4d8cb9b2e6bbfeb59b4394c59e9822abab3da44d8c37",
+      "path": "predictions/synthetic/seed_43/test/heldout/snr_+05/index.json",
+      "predictions": 8066,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "ff030333736c87e0b27dd13990e0c4a0832226e7ead0c5057fb36ccf49a63377",
+      "path": "predictions/synthetic/seed_43/test/heldout/snr_+10/index.json",
+      "predictions": 8144,
+      "scenes": 2000
+    },
+    {
+      "events": 1418,
+      "index_sha256": "306cffd06ebff06b1112ffb6f42d74fadd1049ecab3e8f24c96e84faa45d48b8",
+      "path": "predictions/synthetic/seed_43/test/heldout/snr_+20/index.json",
+      "predictions": 8368,
+      "scenes": 2000
+    }
+  ],
+  "conditions": 48,
+  "experimental_code_modified": false,
+  "family_truth_signatures": {
+    "heldout": "256a159b3496fb8ad3ac5a591189319778e3def57b3d161008337b3605cc96dc",
+    "train": "ba5b42f85c292a7735dd65707aed4b3b365471b03dbc1e035c3e13926527e9f8"
+  },
+  "freeze_sha256": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+  "gpu_used": false,
+  "limitations": [
+    "Temporal union activity of bounded synthetic source supports, not physical source instances.",
+    "Three detector seeds and repeated SNR conditions share scenes; 96,000 evaluations are not independent source recordings.",
+    "Heldout family jointly changes source/background/propagation.",
+    "High AP can coexist with poor fixed-threshold event F1 due extra predicted intervals."
+  ],
+  "metric_rows": 144,
+  "prediction_shards_hashed": 768,
+  "raw_waveforms_accessed": false,
+  "recomputed_metrics": [
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.37066666666666664,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9947101244075081,
+      "seed": 17,
+      "temporal_ap": 0.9201880969681238
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.3624,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9947101244075081,
+      "seed": 17,
+      "temporal_ap": 0.8938616009666381
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.34346666666666664,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9947101244075081,
+      "seed": 17,
+      "temporal_ap": 0.8456566600139779
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.400169324114576,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9997271749091919,
+      "seed": 17,
+      "temporal_ap": 0.9523185186455888
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.3967828418230563,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9997271749091919,
+      "seed": 17,
+      "temporal_ap": 0.9454204208501115
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.38549456751799066,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9997271749091919,
+      "seed": 17,
+      "temporal_ap": 0.918698318144201
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.4126984126984127,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9999387085844341,
+      "seed": 17,
+      "temporal_ap": 0.9599581200271793
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.4121159167030727,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9999387085844341,
+      "seed": 17,
+      "temporal_ap": 0.957579490792356
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.4039609727683122,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9999387085844341,
+      "seed": 17,
+      "temporal_ap": 0.9373682845851795
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.41175614724283427,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.999915682868994,
+      "seed": 17,
+      "temporal_ap": 0.9602984336981345
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.41146515349919977,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.999915682868994,
+      "seed": 17,
+      "temporal_ap": 0.9594622739216722
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.4073912410883166,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.999915682868994,
+      "seed": 17,
+      "temporal_ap": 0.9479999811001
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.41153342070773263,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9995446106505671,
+      "seed": 17,
+      "temporal_ap": 0.962281495123462
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.41124217271006264,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9995446106505671,
+      "seed": 17,
+      "temporal_ap": 0.961378926789248
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.4092034367263725,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9995446106505671,
+      "seed": 17,
+      "temporal_ap": 0.9534031530941507
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.37260852355191976,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9968389349544062,
+      "seed": 17,
+      "temporal_ap": 0.9361944051295691
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.36337247658002375,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9968389349544062,
+      "seed": 17,
+      "temporal_ap": 0.9155298796337841
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.3480670273123103,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9968389349544062,
+      "seed": 17,
+      "temporal_ap": 0.8807729643996359
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.32905007805932507,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9888966076493241,
+      "seed": 17,
+      "temporal_ap": 0.873215925597491
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.31415876065810017,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9888966076493241,
+      "seed": 17,
+      "temporal_ap": 0.8390571187007773
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.29230214963372164,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9888966076493241,
+      "seed": 17,
+      "temporal_ap": 0.7817691242748269
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.27774833032969365,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9790807176250323,
+      "seed": 17,
+      "temporal_ap": 0.7612670309683652
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.25484999469945935,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9790807176250323,
+      "seed": 17,
+      "temporal_ap": 0.6931535034984628
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.2135057775893141,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9790807176250323,
+      "seed": 17,
+      "temporal_ap": 0.5720001390447801
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.721927966101695,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9965685362361417,
+      "seed": 17,
+      "temporal_ap": 0.9032113293534776
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.6885593220338984,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9965685362361417,
+      "seed": 17,
+      "temporal_ap": 0.8437571310633966
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.6371822033898306,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9965685362361417,
+      "seed": 17,
+      "temporal_ap": 0.765839010261067
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.8858006042296073,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999999999999953,
+      "seed": 17,
+      "temporal_ap": 0.992818297446631
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.8743202416918429,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999999999999953,
+      "seed": 17,
+      "temporal_ap": 0.9754617665869743
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.8459214501510574,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999999999999953,
+      "seed": 17,
+      "temporal_ap": 0.9348789720683873
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.9145885286783042,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.999999999999996,
+      "seed": 17,
+      "temporal_ap": 0.9953551123605481
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.912718204488778,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.999999999999996,
+      "seed": 17,
+      "temporal_ap": 0.9920739370456649
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.8965087281795511,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.999999999999996,
+      "seed": 17,
+      "temporal_ap": 0.9697926853925894
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.9343949044585987,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999999999999954,
+      "seed": 17,
+      "temporal_ap": 0.9949310047740381
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.9343949044585987,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999999999999954,
+      "seed": 17,
+      "temporal_ap": 0.9939708921912102
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.9273885350318471,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999999999999954,
+      "seed": 17,
+      "temporal_ap": 0.9829935860803177
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.9575718015665796,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999999999999922,
+      "seed": 17,
+      "temporal_ap": 0.9957964113705794
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.9575718015665796,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999999999999922,
+      "seed": 17,
+      "temporal_ap": 0.9954268782108221
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.9523498694516971,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999999999999922,
+      "seed": 17,
+      "temporal_ap": 0.9875723875144302
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.8107344632768362,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9994825258647619,
+      "seed": 17,
+      "temporal_ap": 0.9692578570717282
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.7898305084745763,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9994825258647619,
+      "seed": 17,
+      "temporal_ap": 0.9359378817002972
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.7564971751412429,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9994825258647619,
+      "seed": 17,
+      "temporal_ap": 0.8857986994407637
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.6149659863945578,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9960289519731359,
+      "seed": 17,
+      "temporal_ap": 0.8907283261035844
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.5709750566893425,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9960289519731359,
+      "seed": 17,
+      "temporal_ap": 0.8026895908759991
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.4811791383219955,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9960289519731359,
+      "seed": 17,
+      "temporal_ap": 0.6294284771218805
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.3199566160520607,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9758098526149095,
+      "seed": 17,
+      "temporal_ap": 0.4091277611506234
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.23246565437454808,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9758098526149095,
+      "seed": 17,
+      "temporal_ap": 0.2549016862692485
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.1569052783803326,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9758098526149095,
+      "seed": 17,
+      "temporal_ap": 0.14908849816091277
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.7418738049713193,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9971604657893355,
+      "seed": 29,
+      "temporal_ap": 0.8951331485360674
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.6981698989347173,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9971604657893355,
+      "seed": 29,
+      "temporal_ap": 0.8261282192026141
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.6511881999453701,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9971604657893355,
+      "seed": 29,
+      "temporal_ap": 0.7442157067486644
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.8257249497559576,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9998049154951315,
+      "seed": 29,
+      "temporal_ap": 0.9755137656629417
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.800459374102785,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9998049154951315,
+      "seed": 29,
+      "temporal_ap": 0.9383617430169271
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.7660063163939133,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9998049154951315,
+      "seed": 29,
+      "temporal_ap": 0.8876448566085385
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.6454523866065067,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.996651006800974,
+      "seed": 29,
+      "temporal_ap": 0.8933184413665961
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.5984326763239136,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.996651006800974,
+      "seed": 29,
+      "temporal_ap": 0.796048531684193
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.5005936832106388,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.996651006800974,
+      "seed": 29,
+      "temporal_ap": 0.615742426916261
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.32628398791540786,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9770062102297512,
+      "seed": 29,
+      "temporal_ap": 0.36968587959412796
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.2215508559919436,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9770062102297512,
+      "seed": 29,
+      "temporal_ap": 0.22177638297013125
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.1526686807653575,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9770062102297512,
+      "seed": 29,
+      "temporal_ap": 0.1343060809989934
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.9083566324945636,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999983575593276,
+      "seed": 29,
+      "temporal_ap": 0.9919507838957013
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.8959304131717925,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999983575593276,
+      "seed": 29,
+      "temporal_ap": 0.9727350501142206
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.872941907424666,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999983575593276,
+      "seed": 29,
+      "temporal_ap": 0.9427484289876986
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.942499196916158,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999999999999964,
+      "seed": 29,
+      "temporal_ap": 0.9955963245225992
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.9392868615483456,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999999999999964,
+      "seed": 29,
+      "temporal_ap": 0.9890613616680577
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.9232251847092836,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999999999999964,
+      "seed": 29,
+      "temporal_ap": 0.9673729490475634
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.9576271186440678,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999999999999971,
+      "seed": 29,
+      "temporal_ap": 0.9971199972948809
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.9569752281616688,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999999999999971,
+      "seed": 29,
+      "temporal_ap": 0.9940214534984666
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.9471968709256845,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999999999999971,
+      "seed": 29,
+      "temporal_ap": 0.9811228822249389
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.972203838517538,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999999999999954,
+      "seed": 29,
+      "temporal_ap": 0.996830039204021
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.972203838517538,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999999999999954,
+      "seed": 29,
+      "temporal_ap": 0.9950505829475828
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.9675711449371277,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999999999999954,
+      "seed": 29,
+      "temporal_ap": 0.9882263006152421
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.348011541839167,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9951767001990003,
+      "seed": 29,
+      "temporal_ap": 0.8927605098458247
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.33847697904905283,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9951767001990003,
+      "seed": 29,
+      "temporal_ap": 0.8640929944847348
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.31890603437460796,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9951767001990003,
+      "seed": 29,
+      "temporal_ap": 0.8113765905308392
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.28354700854700854,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9810602398530404,
+      "seed": 29,
+      "temporal_ap": 0.7640669950975396
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.25769230769230766,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9810602398530404,
+      "seed": 29,
+      "temporal_ap": 0.689836540418898
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.21602564102564104,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9810602398530404,
+      "seed": 29,
+      "temporal_ap": 0.5672538595918265
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.3153308106868478,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.98987001333005,
+      "seed": 29,
+      "temporal_ap": 0.8528824844124958
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.29858961128310973,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.98987001333005,
+      "seed": 29,
+      "temporal_ap": 0.812643223931008
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.2708404999426671,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.98987001333005,
+      "seed": 29,
+      "temporal_ap": 0.7430676397178743
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.3495459634282871,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9963380941644031,
+      "seed": 29,
+      "temporal_ap": 0.8945684568571035
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.3381017539494962,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9963380941644031,
+      "seed": 29,
+      "temporal_ap": 0.8716322334177524
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.31571090931707924,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9963380941644031,
+      "seed": 29,
+      "temporal_ap": 0.8273625254284436
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.3672779295096892,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9995994281735303,
+      "seed": 29,
+      "temporal_ap": 0.9254517681282434
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.36155546885160617,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9995994281735303,
+      "seed": 29,
+      "temporal_ap": 0.9141025800564241
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.3464689816621147,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9995994281735303,
+      "seed": 29,
+      "temporal_ap": 0.8881903876853008
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.371695383401289,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9999971133590466,
+      "seed": 29,
+      "temporal_ap": 0.9393802697202535
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.36880178876759173,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9999971133590466,
+      "seed": 29,
+      "temporal_ap": 0.9325235001705616
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.3603840589241089,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9999971133590466,
+      "seed": 29,
+      "temporal_ap": 0.917334849508723
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.37768584011744294,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9999976938399662,
+      "seed": 29,
+      "temporal_ap": 0.9515061829061695
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.3766181769651675,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9999976938399662,
+      "seed": 29,
+      "temporal_ap": 0.9490192842016562
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.37181369277992793,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9999976938399662,
+      "seed": 29,
+      "temporal_ap": 0.9393023930143847
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.39926584780460256,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9999942411316509,
+      "seed": 29,
+      "temporal_ap": 0.9636498931439808
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.39926584780460256,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9999942411316509,
+      "seed": 29,
+      "temporal_ap": 0.9634498891855678
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.3967245517436115,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9999942411316509,
+      "seed": 29,
+      "temporal_ap": 0.955312174259956
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.7668364459535937,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9965352259247616,
+      "seed": 43,
+      "temporal_ap": 0.9018270889619892
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.7362761743067345,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9965352259247616,
+      "seed": 43,
+      "temporal_ap": 0.8500284370106956
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.6847764572722128,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9965352259247616,
+      "seed": 43,
+      "temporal_ap": 0.7701882448638515
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.3422022103970528,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9749151709073264,
+      "seed": 43,
+      "temporal_ap": 0.38750650106401774
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.24519033974621368,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9749151709073264,
+      "seed": 43,
+      "temporal_ap": 0.24722028638267918
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.17478510028653296,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9749151709073264,
+      "seed": 43,
+      "temporal_ap": 0.1540387299848862
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.6661735700197239,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9962701226895465,
+      "seed": 43,
+      "temporal_ap": 0.8849462411174918
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.6193293885601578,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9962701226895465,
+      "seed": 43,
+      "temporal_ap": 0.7963746241637764
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.5300788954635108,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9962701226895465,
+      "seed": 43,
+      "temporal_ap": 0.6331388684580388
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.9380191693290735,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999999999999964,
+      "seed": 43,
+      "temporal_ap": 0.995068576134246
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.9322683706070287,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999999999999964,
+      "seed": 43,
+      "temporal_ap": 0.9862176296602276
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.91629392971246,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999999999999964,
+      "seed": 43,
+      "temporal_ap": 0.9667141828596352
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.862968515742129,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9994770467271243,
+      "seed": 43,
+      "temporal_ap": 0.9725920373424166
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.8425787106446777,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9994770467271243,
+      "seed": 43,
+      "temporal_ap": 0.9427536490998975
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.8101949025487256,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9994770467271243,
+      "seed": 43,
+      "temporal_ap": 0.8977572598891552
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.9579667644183774,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999999999999974,
+      "seed": 43,
+      "temporal_ap": 0.9966671489730433
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.9579667644183774,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999999999999974,
+      "seed": 43,
+      "temporal_ap": 0.9962423309812773
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.9507983056370153,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999999999999974,
+      "seed": 43,
+      "temporal_ap": 0.9871407125042478
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.9645436638214051,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999999999999984,
+      "seed": 43,
+      "temporal_ap": 0.9962007407121762
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.9645436638214051,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999999999999984,
+      "seed": 43,
+      "temporal_ap": 0.9962007407121762
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.9592908732764281,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999999999999984,
+      "seed": 43,
+      "temporal_ap": 0.9870601218852899
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.9683377308707124,
+      "family": "train",
+      "iou": 0.3,
+      "presence_ap": 0.9999999999999971,
+      "seed": 43,
+      "temporal_ap": 0.9965912372230675
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.9683377308707124,
+      "family": "train",
+      "iou": 0.5,
+      "presence_ap": 0.9999999999999971,
+      "seed": 43,
+      "temporal_ap": 0.9965912372230675
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.9643799472295514,
+      "family": "train",
+      "iou": 0.7,
+      "presence_ap": 0.9999999999999971,
+      "seed": 43,
+      "temporal_ap": 0.9896425881003474
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.31062303899596594,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9957169727440599,
+      "seed": 43,
+      "temporal_ap": 0.9582175537849389
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.30412371134020616,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9957169727440599,
+      "seed": 43,
+      "temporal_ap": 0.9347116999922228
+    },
+    {
+      "condition": "mixed_snr",
+      "event_f1": 0.29090094128193633,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9957169727440599,
+      "seed": 43,
+      "temporal_ap": 0.8906526314188649
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.26118210862619806,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9829869216993451,
+      "seed": 43,
+      "temporal_ap": 0.8551957169656622
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.24141373801916932,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9829869216993451,
+      "seed": 43,
+      "temporal_ap": 0.7782868650790934
+    },
+    {
+      "condition": "snr_-15",
+      "event_f1": 0.20567092651757188,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9829869216993451,
+      "seed": 43,
+      "temporal_ap": 0.6402745888094931
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.2948704161737821,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9916039008988534,
+      "seed": 43,
+      "temporal_ap": 0.9282572685815824
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.2819658027744919,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9916039008988534,
+      "seed": 43,
+      "temporal_ap": 0.8855204139363817
+    },
+    {
+      "condition": "snr_-10",
+      "event_f1": 0.2613184213356275,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9916039008988534,
+      "seed": 43,
+      "temporal_ap": 0.8162042699114166
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.31897528905010203,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.998467483373281,
+      "seed": 43,
+      "temporal_ap": 0.9699956366213034
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.31036046248016325,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.998467483373281,
+      "seed": 43,
+      "temporal_ap": 0.9438281781014756
+    },
+    {
+      "condition": "snr_-05",
+      "event_f1": 0.29562457492632055,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.998467483373281,
+      "seed": 43,
+      "temporal_ap": 0.900379230778747
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.32742850526803285,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9998025968356764,
+      "seed": 43,
+      "temporal_ap": 0.984416115364856
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.32511288641889546,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9998025968356764,
+      "seed": 43,
+      "temporal_ap": 0.9768270314945345
+    },
+    {
+      "condition": "snr_+00",
+      "event_f1": 0.31492416348269076,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9998025968356764,
+      "seed": 43,
+      "temporal_ap": 0.94770824758941
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.3277887635221589,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9999712473763015,
+      "seed": 43,
+      "temporal_ap": 0.9859108622010048
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.32662556705827617,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9999712473763015,
+      "seed": 43,
+      "temporal_ap": 0.9824455803198673
+    },
+    {
+      "condition": "snr_+05",
+      "event_f1": 0.3203443061533093,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9999712473763015,
+      "seed": 43,
+      "temporal_ap": 0.9619112999391685
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.3267292318387209,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9999508060289553,
+      "seed": 43,
+      "temporal_ap": 0.9886494145458024
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.32649750897926083,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9999508060289553,
+      "seed": 43,
+      "temporal_ap": 0.9881056432805977
+    },
+    {
+      "condition": "snr_+10",
+      "event_f1": 0.32232649750897924,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9999508060289553,
+      "seed": 43,
+      "temporal_ap": 0.9715079587314596
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.3275821869899744,
+      "family": "heldout",
+      "iou": 0.3,
+      "presence_ap": 0.9999471957818882,
+      "seed": 43,
+      "temporal_ap": 0.9859604691665954
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.3275821869899744,
+      "family": "heldout",
+      "iou": 0.5,
+      "presence_ap": 0.9999471957818882,
+      "seed": 43,
+      "temporal_ap": 0.9856374413574024
+    },
+    {
+      "condition": "snr_+20",
+      "event_f1": 0.3245511774306365,
+      "family": "heldout",
+      "iou": 0.7,
+      "presence_ap": 0.9999471957818882,
+      "seed": 43,
+      "temporal_ap": 0.9697729913976296
+    }
+  ],
+  "scene_condition_seed_records": 96000,
+  "source_report_sha256": "9987efd6a42e4439559caa09684a042179a67e66461300a5fbb8ef62d12ede1d",
+  "status": "passed"
+}

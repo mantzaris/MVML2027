@@ -1,0 +1,9 @@
+{
+  "criterion": ">=0.98 integration legality; enforced by constrained decoding, not unconstrained competence",
+  "n_actions": 24008,
+  "schema_validity_by_construction": true,
+  "scope": "actual development and calibration acoustic states",
+  "status": "passed",
+  "test_accessed": false,
+  "valid_fraction": 1.0
+}

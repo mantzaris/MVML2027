@@ -1,0 +1,7 @@
+{
+  "checks": 5,
+  "experiment_files_changed": false,
+  "scope": "CPU metadata fixtures: absent/incomplete reviews stay pending, intact reviewed completion retained, changed artifacts rejected",
+  "source_sha256": "88f8860e248eeac52cdc791d6cbe61f29d006f838805fc8029ad95e9973ddb2e",
+  "status": "passed"
+}

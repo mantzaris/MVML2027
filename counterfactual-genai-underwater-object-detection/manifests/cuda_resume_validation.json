@@ -1,0 +1,11 @@
+{
+  "corrupt_latest_fallback_exact_match": true,
+  "cross_process_next_step_exact_match": true,
+  "data_cursor_restored": true,
+  "fixture_directory": ".local/validation/cuda-resume-3bc7c706d883",
+  "gpu_uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+  "limitation": "Small deterministic CUDA fixture, not the final research models.",
+  "optimizer_scheduler_and_rng_match": true,
+  "original_clean_checkpoint_preserved": true,
+  "status": "passed"
+}

@@ -1,0 +1,41 @@
+{
+  "adopted_verified_existing_artifacts": true,
+  "command_hash": "436953511300895dfe18caee33e53c531ff61ddc9b6515c62838cc77fdddda7b",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/run_on_ada.py",
+      "--",
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/verify_cuda.py"
+    ]
+  ],
+  "completed_utc": "2026-11-23T17:17:22.771198+00:00",
+  "input_hash": "8d5fa9656eb8614784b22136a3447e77414ecd76e1c554bd97bb6d9d210b70b5",
+  "inputs": {
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "scripts/run_on_ada.py": "b2dac0f369d8cfa70f7825e1fa6b2cfaf4a249441056e897b7099cc644fefed7",
+    "scripts/verify_cuda.py": "599fd25094f903f705f5d2dee440d13c016f7077063f8830bebd49bcbd567daa"
+  },
+  "migration": {
+    "evidence": {
+      "basis": "native completion artifacts revalidated",
+      "evidence_sha256": {},
+      "expanded_dependencies": "first pinned at migration/adoption; no retrospective source-hash claim",
+      "hardware_guard": "run_on_ada.py revalidates actual hardware before every GPU child",
+      "historical_scope": "observed device identity receipt; no historical code hash"
+    },
+    "migrated_utc": "2026-11-23T17:29:10.658356+00:00",
+    "original_receipt": "runs/stages/migration_originals/gpu_identity.ad856ae3ea2fd03693e34da32d548c9a9d35e7df93d002e9b5352d372823b66b.json",
+    "original_receipt_sha256": "ad856ae3ea2fd03693e34da32d548c9a9d35e7df93d002e9b5352d372823b66b",
+    "reason": "Legacy receipt had output and command hashes but no stage input signature"
+  },
+  "outputs": {
+    "manifests/gpu_verification.json": "2f55ceeda90ec16c6784afb9832a9c5892a5a797887d2bff7968090c7890dd7f"
+  },
+  "schema_version": 2,
+  "stage": "gpu_identity",
+  "supervisor_sha256": "cf61372f4957f942357fb01734029d61567b5ade9fe13c208d37aa6accb71c09"
+}

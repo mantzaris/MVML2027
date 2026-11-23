@@ -1,0 +1,21 @@
+{
+  "completed_training": [
+    "background_flow_5000_steps",
+    "synthetic_temporal_3_seeds",
+    "supplemental_12_heads"
+  ],
+  "final_test_evaluated": false,
+  "gpu_uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+  "next": "Verified real acquisition, representation extraction, real fitting, development/calibration, freeze, locked evaluations and manuscript review",
+  "project_root": "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection",
+  "real_train_audio_verified": 3735,
+  "real_train_foundation_features_complete": true,
+  "real_train_representations_complete": true,
+  "research_results_exist": true,
+  "stage": "real_features_complete_waiting_for_development_acquisition",
+  "started_utc": "2026-11-23T16:29:08.565889+00:00",
+  "status": "running",
+  "status_source": "runs/horizon_status.json",
+  "updated_utc": "2026-11-23T17:33:41.059543+00:00",
+  "user_authorized": "Full planned research and restartable checkpoints, 2026-11-23"
+}

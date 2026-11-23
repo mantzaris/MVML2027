@@ -1,0 +1,10 @@
+{
+  "log": "logs/pre_freeze_utility_tests.log",
+  "log_sha256": "23a24c05e6f9b1d4136c29f6f24716fce8d923cb3c21ee92d4c63eeef334d6cf",
+  "passed": 59,
+  "scope": "CPU reference/control and recovery fixtures only; prior separate CUDA validations retained",
+  "skipped_gpu_opt_in": 7,
+  "status": "passed",
+  "tests_run": 66,
+  "utc": "2026-11-23T18:20:33.803115+00:00"
+}
