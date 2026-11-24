@@ -1,0 +1,26 @@
+{
+  "abstract_conclusion_changed": false,
+  "archive": "manuscript/revisions/latex_v6_before_figure_insights",
+  "changes": [
+    {
+      "new": "Figure~\\ref{fig:5}(a) turns the detection comparisons into practical design choices. Numeric fusion supplies a low-cost reference, while fixed and agent verification occupy similar AP levels at widely separated processing costs. The logarithmic time axis makes this separation visible. Figure~\\ref{fig:5}(b) adds a second resource criterion: fixed and heuristic verification use much less peak GPU memory than the agent variants. The similar memory demands of both agent variants identify controller orchestration as a useful target for resource optimization.\\par\n\nRead alongside Figure~\\ref{fig:2}, these results establish complementary references: a stronger-scoring spectrogram-CNN configuration for accuracy, and numeric-fusion and fixed-verification paths among the five methods benchmarked for resource use. Figure~\\ref{fig:4} isolates a separate design choice: removing the continuous verification score strengthens observed ranking while preserving tool use and calibration procedures. Scoring gains and processing-time savings therefore arise from distinct, controlled comparisons, allowing each proposed change to be evaluated against the relevant baseline.\\par\n\nFigure~\\ref{fig:3} extends the observed fixed/agent AP match across the tested noise conditions on the separate corruption subset, supporting the fixed sequence as a reusable reference for verification designs. Together, the figures connect representation choice, score design and tool control to measurable outcomes. Their value is a reproducible way to identify which components merit development and which simpler configurations preserve observed performance. Timings include decoding, transfer, all executed transforms, generation and controller calls on the measured GPU system, grounding these resource choices in the implemented warm-batch workflow.\\par\n",
+      "old": "All substantial transforms, fitting and inference use the 32 GB RTX 5000 Ada, selected by UUID. CPU orchestration, I/O, statistical reporting and a small independent spline-reference fixture are incidental. Transfer-inclusive measurement captures the Thunderbolt system's actual processing demands. Live timings include decoding, transfer, GPU transforms, requested generation, controller calls, classification and frozen calibration. Full primary transform recomputation and unqueried canonical generation companions are charged, making the cost comparison traceable to the implemented workflow.\\par\n\nCheckpoints preserve model, optimizer, scheduler, random states, configuration fingerprints and the next-batch cursor. Atomic file replacement, fsync, checksum validation and a prior generation support interrupted-run recovery. A separate-process CUDA fixture reproduced the next optimizer step exactly and recovered from a corrupted latest checkpoint copy, demonstrating restart consistency under the tested conditions.\\par\n\nThese design insights are descriptive within the evaluated system: AIS proxy labels, balanced cohort prevalence, recurring vessels forming one test component, a shared generator seed and a single external GPU/system. Controlled temporal studies use constructed activity labels. Fixed/agent score agreement concerns this observed cohort rather than population equivalence. Independent deployments, human event annotation and additional generator/system settings provide the next validation targets; recorded tool decisions establish behavior, while saved detector outputs establish performance.\\par\n",
+      "region": "Section 7 final three paragraphs"
+    }
+  ],
+  "created_utc": "2026-11-24T14:50:35.870764+00:00",
+  "equations_tables_bibliography_changed": false,
+  "experimental_changes": false,
+  "figure_assets_changed": false,
+  "metric_source_sha256": {
+    "results/tables/final_real_results.json": "6723b5eb6036a49469a6d91d1035410523ffb3c929785a58816f4cff0c27e4ee",
+    "results/tables/runtime_benchmark.json": "c0722e8e7a5f7e101819fd1d93f65016e49df5c737dc9233a87d1a376494a539"
+  },
+  "replacement_words": 231,
+  "revision": 7,
+  "scientific_review": "Independent positive_framing_review agent passed: evidence, resource attribution, separate scoring/runtime comparisons, CNN timing scope and corruption-subset scope preserved.",
+  "scope": "Replace three Section 7 operational/limitation paragraphs with interpretation of Figures 2\u20135 and experimental design value",
+  "source_scope_check": "Exact reverse replacement reproduces prior source; all other manuscript text unchanged",
+  "source_sha256": "88c59fb6a87e5ac1edb5e6a53685aac9bbdcdce51aaef450a6783152c97eeb80",
+  "supplement_changed": false
+}

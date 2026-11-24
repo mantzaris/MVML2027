@@ -1,0 +1,110 @@
+{
+  "archived_reportlab_review": "manuscript/revisions/latex_v6_before_current_pdf_names/reports/main_pdf_visual_review.json",
+  "archived_reportlab_review_sha256": "85c9f55e5c4028ad0937c05630a2528eec260fee0b0f21a94a46645ae6893b63",
+  "canonical_build_pdf": "manuscript/latex_build/main.pdf",
+  "canonical_build_pdf_sha256": "9a0ea38f207f0f7f9147004536b67a7b9f01781c6301cf1c513061b49742233d",
+  "current_editorial_review": "reports/editorial_revision_8_review.json",
+  "page_count": 8,
+  "pages": [
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact render equality transfers the archived visual review.",
+      "page": 1,
+      "path": "manuscript/latex_renders/main/page-1.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-1.png",
+      "review_transferred_by_exact_render_equality": true,
+      "reviewers": [],
+      "sha256": "90e01ece1230826d6ff5ee007e901993816d074a00a2b9c5e17c5712c76f6d51",
+      "status": "passed"
+    },
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact render equality transfers the archived visual review.",
+      "page": 2,
+      "path": "manuscript/latex_renders/main/page-2.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-2.png",
+      "review_transferred_by_exact_render_equality": true,
+      "reviewers": [],
+      "sha256": "396f9121d7dd0b1d6cdb9abb048e2803a966269efe2a270dc857a9df7a908219",
+      "status": "passed"
+    },
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact render equality transfers the archived visual review.",
+      "page": 3,
+      "path": "manuscript/latex_renders/main/page-3.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-3.png",
+      "review_transferred_by_exact_render_equality": true,
+      "reviewers": [],
+      "sha256": "6d378fc9fb81a164094c9045517d3078fe64a338babbbff0adecd8d95a5948fd",
+      "status": "passed"
+    },
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact render equality transfers the archived visual review.",
+      "page": 4,
+      "path": "manuscript/latex_renders/main/page-4.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-4.png",
+      "review_transferred_by_exact_render_equality": true,
+      "reviewers": [],
+      "sha256": "2fb2fc9ca2de8e1af5f0832d10c48082209f1b2fb369fcd1847174e1ab629e4e",
+      "status": "passed"
+    },
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact render equality transfers the archived visual review.",
+      "page": 5,
+      "path": "manuscript/latex_renders/main/page-5.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-5.png",
+      "review_transferred_by_exact_render_equality": true,
+      "reviewers": [],
+      "sha256": "5cf469e52daa24fb2f6ebf2c717e3ed8ccd78b99cf8541ad2bbdc20985f75cf5",
+      "status": "passed"
+    },
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact render equality transfers the archived visual review.",
+      "page": 6,
+      "path": "manuscript/latex_renders/main/page-6.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-6.png",
+      "review_transferred_by_exact_render_equality": true,
+      "reviewers": [],
+      "sha256": "6de2efd91f93caf483283853c5d282cf61c331a0d83c2ddfe1aac82108462f4e",
+      "status": "passed"
+    },
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact render equality transfers the archived visual review.",
+      "page": 7,
+      "path": "manuscript/latex_renders/main/page-7.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-7.png",
+      "review_transferred_by_exact_render_equality": true,
+      "reviewers": [],
+      "sha256": "e731897409e8939f9527c921766d609250373478f0004f450797accb68780810",
+      "status": "passed"
+    },
+    {
+      "freshly_individually_viewed": true,
+      "notes": "Complete revised page inspected; conclusion, references and footer readable without clipping or overlap.",
+      "page": 8,
+      "path": "manuscript/latex_renders/main/page-8.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-8.png",
+      "review_transferred_by_exact_render_equality": false,
+      "reviewers": [
+        "root",
+        "independent positive_framing_review agent"
+      ],
+      "sha256": "39aaa7ef183ea823a7f579732904c755d95e81d1e020e357dff81dc015e4a96b",
+      "status": "passed"
+    }
+  ],
+  "pdf": "manuscript/main_paper.pdf",
+  "pdf_path": "manuscript/main_paper.pdf",
+  "pdf_sha256": "9a0ea38f207f0f7f9147004536b67a7b9f01781c6301cf1c513061b49742233d",
+  "prior_latex_review": "manuscript/revisions/latex_v7_before_qualitative_conclusion/reports/main_pdf_visual_review.json",
+  "producer": "LaTeX",
+  "reportlab_regenerated": false,
+  "review_method": "Fresh individual page 8 inspection by root and independent reviewer; all other pages match archived reviewed renders exactly.",
+  "reviewed_utc": "2026-11-24T15:04:14.015714+00:00",
+  "status": "passed"
+}

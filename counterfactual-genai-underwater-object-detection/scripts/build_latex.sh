@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Compile standalone LaTeX drafts without touching the existing ReportLab PDFs.
+# Compile standalone LaTeX drafts and synchronize the user-facing manuscript PDFs.
 set -euo pipefail
 
 LATEX_PROJECT_ROOT=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
@@ -21,11 +21,14 @@ Default: build both standalone manuscripts, including BibTeX and page renders.
   main           manuscript/main.tex + manuscript/main.bib; 1-8 pages
   supplementary  manuscript/supplementary.tex + supplementary.bib; 3-4 pages
 
-Validated PDFs: manuscript/latex_build/{main,supplementary}.pdf
+Current reading PDFs: manuscript/main_paper.pdf and manuscript/supplement.pdf
+Validated build copies: manuscript/latex_build/{main,supplementary}.pdf
 Latest renders: manuscript/latex_renders/{main,supplementary}/page-*.png
 Every attempt retains its TeX/BibTeX logs and auxiliary files in
 manuscript/latex_build/runs/. Failed builds do not replace validated PDFs.
-The existing manuscript/main_paper.pdf and supplement.pdf are not touched.
+Each successful target atomically updates its matching reading PDF.
+Historical ReportLab PDFs and receipts are preserved under manuscript/revisions/.
+No app or browser preview is opened.
 USAGE
 }
 
@@ -142,6 +145,15 @@ print(json.dumps(summary, indent=2))
 PY
     run_logged "$LATEX_DOC_BUILD/pdftoppm.stdout.log" \
         pdftoppm -png -r 110 "$LATEX_PDF" "$LATEX_DOC_RENDER/page"
+    # Stage the user-facing copy after every compile/render gate has passed.
+    # A single-document build updates only its corresponding reading filename.
+    case "$LATEX_DOCUMENT" in
+        main) LATEX_PUBLIC_NAME=main_paper ;;
+        supplementary) LATEX_PUBLIC_NAME=supplement ;;
+    esac
+    LATEX_PUBLIC_PDF="$LATEX_PROJECT_ROOT/manuscript/$LATEX_PUBLIC_NAME.pdf"
+    LATEX_PUBLIC_STAGE="$LATEX_PROJECT_ROOT/manuscript/.$LATEX_PUBLIC_NAME.$LATEX_RUN_ID.pdf"
+    cp -- "$LATEX_PDF" "$LATEX_PUBLIC_STAGE"
     if [[ -d "$LATEX_RENDER_ROOT/$LATEX_DOCUMENT" ]]; then
         mv -- "$LATEX_RENDER_ROOT/$LATEX_DOCUMENT" "$LATEX_RENDER_ROOT/history/$LATEX_DOCUMENT.$LATEX_RUN_ID.previous"
     fi
@@ -150,6 +162,9 @@ PY
     cp -- "$LATEX_PDF" "$LATEX_BUILD_ROOT/.$LATEX_DOCUMENT.$LATEX_RUN_ID.pdf"
     mv -- "$LATEX_BUILD_ROOT/.$LATEX_DOCUMENT.$LATEX_RUN_ID.pdf" "$LATEX_BUILD_ROOT/$LATEX_DOCUMENT.pdf"
     cp -- "$LATEX_DOC_BUILD/validation.json" "$LATEX_BUILD_ROOT/$LATEX_DOCUMENT.validation.json"
+    # Publish the reading copy last; readers never see a partially copied PDF.
+    mv -T -- "$LATEX_PUBLIC_STAGE" "$LATEX_PUBLIC_PDF"
+    printf 'Current reading PDF: %s\n' "$LATEX_PUBLIC_PDF"
     printf 'Validated PDF: %s\nRendered pages: %s\n' \
         "$LATEX_BUILD_ROOT/$LATEX_DOCUMENT.pdf" "$LATEX_RENDER_ROOT/$LATEX_DOCUMENT"
 done

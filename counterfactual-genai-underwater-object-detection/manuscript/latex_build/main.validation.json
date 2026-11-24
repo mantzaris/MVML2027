@@ -1,15 +1,18 @@
 {
   "document": "main",
-  "pages": 8,
   "page_count_bounds": [
     1,
     8
   ],
+  "pages": 8,
+  "reading_pdf": "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/main_paper.pdf",
+  "reading_pdf_sha256": "201bcccd1cfa96867a0b7bf3a035f5dc589d6c9380c098a5d639772fc0623eb5",
+  "scope": "Build gates passed; page 8 visually inspected by two reviewers; other seven page renders exactly match prior reviewed pages; reading PDF equals validated output.",
   "sha256": {
-    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/latex_build/runs/20261123T214419Z-542082/main/main.pdf": "395b3473c1c5af23a00cc95377831111211cf0708414737fecb1f14b2b7c83e3",
-    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/main.tex": "14fe39768fc7525638f296ee3db161d955f18010e01ba3b2f2d72e79ba2dc407",
-    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/main.bib": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd"
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/latex_build/runs/20261124T150928Z-1999515/main/main.pdf": "201bcccd1cfa96867a0b7bf3a035f5dc589d6c9380c098a5d639772fc0623eb5",
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/main.bib": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd",
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/main.tex": "ceacb6d82ff3a636fffe951f8601cf09921b78eb4edf0c27247febd8e45fbb0a"
   },
-  "visual_inspection_complete": false,
-  "scope": "Compilation and arithmetic checks only; rendered pages still require visual review."
+  "visual_inspection_complete": true,
+  "visual_review": "reports/editorial_revision_9_review.json"
 }

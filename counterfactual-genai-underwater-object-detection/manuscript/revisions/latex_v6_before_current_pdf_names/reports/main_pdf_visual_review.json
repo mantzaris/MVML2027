@@ -1,0 +1,123 @@
+{
+  "checks": [
+    "No clipped or overlapping text, labels, equations or tables",
+    "Five figures legible at rendered resolution",
+    "Negative findings and universal acquisition disclosed",
+    "Primary AP of mean-seed probabilities distinguished from mean seed-specific AP",
+    "One dependence component and absent primary CI stated",
+    "Separate simulator/semi-synthetic temporalCNN scope stated",
+    "No placeholders leaked into empirical manuscript",
+    "Title, abstract and introduction foreground representations",
+    "Numeric controller inputs distinguished from 2D CNN image-like processing",
+    "HHT explicitly exploratory"
+  ],
+  "experimental_sources_modified": false,
+  "freshly_inspected_pages": [
+    1,
+    2
+  ],
+  "gpu_used": false,
+  "issues": [],
+  "page_count": 8,
+  "pages": [
+    {
+      "freshly_viewed_in_revision3": true,
+      "layout_status": "passed",
+      "notes": "Fresh individual view_image(original) review by root and independent design_review agent; no clipping/overlap; representation and agent-input wording matches code.",
+      "page": 1,
+      "previous_render_sha256": "c5b0776aa7104a6700c32bc333a594a6a8c637e1f8657863684db250e51a8a72",
+      "render_path": "manuscript/renders/main_paper-1.png",
+      "render_sha256": "0983406141f6a83bf03f69b846295478e7c5301853dd0d52d58039678f722391",
+      "review_transferred_by_exact_render_equality": false,
+      "scientific_consistency_status": "passed"
+    },
+    {
+      "freshly_viewed_in_revision3": true,
+      "layout_status": "passed",
+      "notes": "Fresh individual view_image(original) review by root and independent design_review agent; no clipping/overlap; representation and agent-input wording matches code.",
+      "page": 2,
+      "previous_render_sha256": "ca0e08200d3807e2a96fd59866c5efce1e4dfb39ad52f2af8b1ac28aa6bfe725",
+      "render_path": "manuscript/renders/main_paper-2.png",
+      "render_sha256": "09ad112c77aa38b89b50094d355fc7ec64806facfa1e60b134241db872677072",
+      "review_transferred_by_exact_render_equality": false,
+      "scientific_consistency_status": "passed"
+    },
+    {
+      "freshly_viewed_in_revision3": false,
+      "layout_status": "passed",
+      "notes": "Unchanged PNG verified against archived individually reviewed page.",
+      "page": 3,
+      "previous_render_sha256": "cc41be2b00d3ac6ee40e0f7e9b2a1cfbfa15656f089b0904d5dabdec391e8d7b",
+      "render_path": "manuscript/renders/main_paper-3.png",
+      "render_sha256": "cc41be2b00d3ac6ee40e0f7e9b2a1cfbfa15656f089b0904d5dabdec391e8d7b",
+      "review_transferred_by_exact_render_equality": true,
+      "scientific_consistency_status": "passed"
+    },
+    {
+      "freshly_viewed_in_revision3": false,
+      "layout_status": "passed",
+      "notes": "Unchanged PNG verified against archived individually reviewed page.",
+      "page": 4,
+      "previous_render_sha256": "7f8a07be304af9e4e0a79a077a6a42923d50e8a4987e06f67ae7d419a7653246",
+      "render_path": "manuscript/renders/main_paper-4.png",
+      "render_sha256": "7f8a07be304af9e4e0a79a077a6a42923d50e8a4987e06f67ae7d419a7653246",
+      "review_transferred_by_exact_render_equality": true,
+      "scientific_consistency_status": "passed"
+    },
+    {
+      "freshly_viewed_in_revision3": false,
+      "layout_status": "passed",
+      "notes": "Unchanged PNG verified against archived individually reviewed page.",
+      "page": 5,
+      "previous_render_sha256": "08a903be1ad51439b3ca0ee54bf2468a32055854c630e152e070e52cb0591273",
+      "render_path": "manuscript/renders/main_paper-5.png",
+      "render_sha256": "08a903be1ad51439b3ca0ee54bf2468a32055854c630e152e070e52cb0591273",
+      "review_transferred_by_exact_render_equality": true,
+      "scientific_consistency_status": "passed"
+    },
+    {
+      "freshly_viewed_in_revision3": false,
+      "layout_status": "passed",
+      "notes": "Unchanged PNG verified against archived individually reviewed page.",
+      "page": 6,
+      "previous_render_sha256": "d2fc0d1fab3bd60ebab4c02beb5e859191787c75e7b9c5588cc9809eee8a1561",
+      "render_path": "manuscript/renders/main_paper-6.png",
+      "render_sha256": "d2fc0d1fab3bd60ebab4c02beb5e859191787c75e7b9c5588cc9809eee8a1561",
+      "review_transferred_by_exact_render_equality": true,
+      "scientific_consistency_status": "passed"
+    },
+    {
+      "freshly_viewed_in_revision3": false,
+      "layout_status": "passed",
+      "notes": "Unchanged PNG verified against archived individually reviewed page.",
+      "page": 7,
+      "previous_render_sha256": "640ba2c0f435986467d43216a166fc5d4b4ae276c29487b02fb1c9e70cafd6c9",
+      "render_path": "manuscript/renders/main_paper-7.png",
+      "render_sha256": "640ba2c0f435986467d43216a166fc5d4b4ae276c29487b02fb1c9e70cafd6c9",
+      "review_transferred_by_exact_render_equality": true,
+      "scientific_consistency_status": "passed"
+    },
+    {
+      "freshly_viewed_in_revision3": false,
+      "layout_status": "passed",
+      "notes": "Unchanged PNG verified against archived individually reviewed page.",
+      "page": 8,
+      "previous_render_sha256": "86d666db22cc94716da5653cd9a4f42335bfe2b8f753fc580655990d28897a0e",
+      "render_path": "manuscript/renders/main_paper-8.png",
+      "render_sha256": "86d666db22cc94716da5653cd9a4f42335bfe2b8f753fc580655990d28897a0e",
+      "review_transferred_by_exact_render_equality": true,
+      "scientific_consistency_status": "passed"
+    }
+  ],
+  "pdf": "manuscript/main_paper.pdf",
+  "pdf_sha256": "f06576740738d9a29497baa235e5b704713ca75a8695be99994a667133744b31",
+  "pre_review_build_manifest_sha256": "ac5a9bfef2604d719e05fc046dc24979793854c593c3d60435e841a791e62bf4",
+  "previous_review": "manuscript/revisions/v2_before_representation_title/reports/main_pdf_visual_review.json",
+  "quantitative_source_audit": {
+    "path": "manifests/real_test_independent_audit.json",
+    "sha256": "45599b915d08fa3493d7b3ece6f1bcd79a2d96794e1c474123de4d1e119ba985"
+  },
+  "reviewed_utc": "2026-11-23T20:25:01.024039+00:00",
+  "reviewer": "root and independent design_review agent",
+  "status": "passed"
+}

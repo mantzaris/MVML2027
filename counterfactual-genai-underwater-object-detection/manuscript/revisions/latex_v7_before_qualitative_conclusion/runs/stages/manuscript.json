@@ -1,0 +1,95 @@
+{
+  "adopted_verified_existing_artifacts": false,
+  "adoption_evidence": null,
+  "command_hash": "38f3a9beb58cfd8d62188ced684d5af615d36c052e90a844dd6ff5461d08e206",
+  "command_scope": "commands, command_hash, inputs, input_hash and completed_utc describe the archived historical ReportLab execution. Current output bytes are explicitly superseded by the LaTeX publication below; ReportLab was not rerun.",
+  "commands": [
+    [
+      "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/.venv/bin/python",
+      "scripts/build_results_report.py",
+      "--real",
+      "results/tables/final_real_results.json"
+    ]
+  ],
+  "completed_utc": "2026-11-23T20:22:12.078342+00:00",
+  "document_output_supersession": {
+    "actual_producer": [
+      "bash",
+      "scripts/build_latex.sh"
+    ],
+    "build_directories": {
+      "main": "manuscript/latex_build/runs/20261124T145038Z-1971420/main",
+      "supplementary": "manuscript/latex_build/runs/20261124T003505Z-787663/supplementary"
+    },
+    "build_script_sha256": "7fc928ee0221e65a84a08b65776b731851b4e1e33ed4d9f777c9902f24227627",
+    "current_outputs": {
+      "manuscript/main_paper.pdf": "4c3f32b15b2a31d85c98a8228e6bae8dc177c0e7266612c0e5574bff3a828420",
+      "manuscript/supplement.pdf": "2b32ac10e28739e291f479389ac652d749b5cb51e60ad7c09213bbb17542d456"
+    },
+    "experimental_changes": false,
+    "historical_command_rerun": false,
+    "historical_outputs": {
+      "manuscript/main_paper.pdf": {
+        "archived_path": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/main_paper.pdf",
+        "sha256": "f06576740738d9a29497baa235e5b704713ca75a8695be99994a667133744b31"
+      },
+      "manuscript/supplement.pdf": {
+        "archived_path": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/supplement.pdf",
+        "sha256": "4d50fa38eb608f8ad8278bc773703f71122916ea4a2c6e6bc19a483aedfe6eb0"
+      }
+    },
+    "historical_receipt": "manuscript/revisions/latex_v6_before_current_pdf_names/runs/stages/manuscript.json",
+    "historical_receipt_sha256": "60e13e1371419ff26ec638040dc5d1aa38252793fb438dad7334dd5ef69a7fc0",
+    "last_editorial_update_utc": "2026-11-24T14:53:25.263562+00:00",
+    "previous_editorial_receipt": "manuscript/revisions/latex_v6_before_figure_insights/runs/stages/manuscript.json",
+    "previous_editorial_receipt_sha256": "44372f468e83687c9cda41306f0e3f4e28c2d2ea3d1a8765c80368d11ad79c0f",
+    "reason": "User reads main_paper.pdf and supplement.pdf and requests these names track current LaTeX builds",
+    "review": "reports/editorial_revision_7_review.json",
+    "source_and_asset_sha256": {
+      "manuscript/figures/figure1_method.pdf": "d0b50567cb48012fbbecf181ce19c207dbbec7f00fd97340f9601909ed670553",
+      "manuscript/figures/figure2_real_detection.pdf": "77e37f0b61498189d1bcf77a638b06f76b2ae0d245ae1cfeb8f09e85fd839048",
+      "manuscript/figures/figure3_robustness.pdf": "f550aed50dea41486c9dbb3d75a68ddeaba7f7d333a9b929e4473ecb8ee2186a",
+      "manuscript/figures/figure4_mechanism_ablation.pdf": "9616310010c136eeac2413edaa389fbc2897d869dc7e85c0445681a6d01a71f4",
+      "manuscript/figures/figure5_accuracy_compute.pdf": "181d92db555564f7a5bdf1eb0da1cc09bd0fd10bdc951d96a56e80c8a852a86c",
+      "manuscript/figures/figureS1_hht_numerics.pdf": "382c363ff5c8f3d045e7a56444cce9b5b408111bf931d965810857eb1c72eba1",
+      "manuscript/figures/figureS2_controlled_temporal.pdf": "0112150f2bac7b510e64ddef1dd304eaa84674c2dbb11ec676f06a0553b009a5",
+      "manuscript/figures/figureS3_representation_study.pdf": "d185ea0ae6c7a2ec480390f001674ffa684927103b9f8deebeec23971940855f",
+      "manuscript/main.bib": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd",
+      "manuscript/main.tex": "88c59fb6a87e5ac1edb5e6a53685aac9bbdcdce51aaef450a6783152c97eeb80",
+      "manuscript/supplementary.bib": "62e880a8ff61728d49e373cc7eaca854ae7eec39b7bc67cc1d046f5d14f5e824",
+      "manuscript/supplementary.tex": "1b381a3805cd5a5c84d84ec31177773f47575442ed6bfd268dde980555f3896f"
+    },
+    "source_revision": 7,
+    "superseded_utc": "2026-11-24T00:38:42.120754+00:00"
+  },
+  "input_hash": "025a61affc3e55389324e683ff8dc3ccf1287df1cc80e690e8e8cfda1cae33de",
+  "inputs": {
+    "configs/gpu.json": "3a0b0e3d074f0d878b516c4c68a6cb80e4f0b2b33be5350ebecf1859adc5103b",
+    "configs/research.json": "a7654d700844e87b6edecb92eca8ce6d0afd4568c79f9dd1f4e277534b660f1b",
+    "data/manifests/split_audit.json": "b2a544e6f0f46f1ab23e9a0552932793a1a6709c8178a6ce5ee1309293e7ebf4",
+    "manifests/dsp_validation.json": "413b3ff1c2997bd7b88acf6b6f61c967a7b0057bd9a0b4699b899734f716649d",
+    "reports/synthetic_results.json": "9987efd6a42e4439559caa09684a042179a67e66461300a5fbb8ef62d12ede1d",
+    "requirements-research.lock": "7f34f4d4210f253101c61ac3bd38e46c1d62c440662a29453d45b382f7b30abd",
+    "results/tables/final_real_results.json": "6723b5eb6036a49469a6d91d1035410523ffb3c929785a58816f4cff0c27e4ee",
+    "results/tables/real_results.json": "0d415b55f96822a6c2c4ebc059e0c65bd80f535c1e909d6cdfe5c57b11b02775",
+    "results/tables/robustness.json": "4902576e4ad172dc93d647aafa026e2773e0837ca53044a0383ecda72d4d34c8",
+    "results/tables/runtime_benchmark.json": "c0722e8e7a5f7e101819fd1d93f65016e49df5c737dc9233a87d1a376494a539",
+    "results/tables/semisynthetic_results.json": "a96abe8d7e766c06e9e81faf378ed484a3dea932729d17157fe93e1e0f170884",
+    "results/tables/supplemental_views.json": "9631edfaf4e5d86eb28c28df2fe923d9900ced850e34832f2acf0dd66ab94e7c",
+    "scripts/build_results_report.py": "a7ebc65d0ad009b76fd4f63bf11a6d98682e0073025fcaa044cbca4c88f7fbbd",
+    "scripts/project_env.sh": "c18e53d597691930e800dbf46376db8172f49c20c599a3a9de0da1fa0070a229",
+    "src/uac/runtime.py": "424f4d5478abe1cc18702d9c6197a100eaf011b0e2960d9565cec785e08555f5"
+  },
+  "outputs": {
+    "manuscript/main_paper.pdf": "4c3f32b15b2a31d85c98a8228e6bae8dc177c0e7266612c0e5574bff3a828420",
+    "manuscript/supplement.pdf": "2b32ac10e28739e291f479389ac652d749b5cb51e60ad7c09213bbb17542d456"
+  },
+  "report_only_revision": {
+    "archive": "manuscript/revisions/v2_before_representation_title/runs/stages/manuscript.json",
+    "previous_receipt_sha256": "aa68a62b4639f6e292ce0932e27262fb3984e8ad943e7907bd88abe358306863",
+    "reason": "User-requested representation-focused title and accurate numeric/image input scope"
+  },
+  "schema_version": 2,
+  "stage": "manuscript",
+  "supervisor_sha256": "88f8860e248eeac52cdc791d6cbe61f29d006f838805fc8029ad95e9973ddb2e"
+}

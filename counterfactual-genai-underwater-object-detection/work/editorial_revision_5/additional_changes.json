@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-11-23T23:18:00.018153+00:00",
+  "main_caption_changes": [
+    {
+      "new": "Real-recording configuration comparison against AIS labels. Dots/ranges describe detector-seed variability. The operating-point panel uses thresholds fixed on calibration data and reports mean seed-specific rates in percent. Core methods and the locked comparator provide reference points; the exported tables retain all methods.",
+      "old": "Natural-real detection against AIS labels. Dots/ranges show detector seeds, not independent-record confidence intervals. The operating-point panel uses thresholds fixed on calibration data and shows mean seed-specific rates in percent. Core methods plus the locked comparator are shown; all methods are retained in the exported tables."
+    },
+    {
+      "new": "Seed-17 added-noise sensitivity on a separate 120-record metadata-selected subset. The full primary test uses 1,200 records and three seeds. Shared parents and noise draws enable direct comparison of numeric fusion, STFT, fixed verification and the agent; the clean subset supplies a reference.",
+      "old": "Seed-17 robustness on a separate 120-record metadata-selected subset, not the full 1,200-record three-seed test cohort. Added-noise curves share parents and noise draws; the clean subset is shown separately. The locked wavelet comparator is not part of this four-method study."
+    },
+    {
+      "new": "Temporal AP means over seeds and declared conditions within each origin/family and IoU: mixed plus fixed SNRs for fully synthetic, three insertion SNRs for semi-synthetic. Each origin retains its own reference results.",
+      "old": "Temporal AP means over seeds and declared conditions within each origin/family and IoU: mixed plus fixed SNRs for fully synthetic, three insertion SNRs for semi-synthetic. Origins are not pooled."
+    },
+    {
+      "new": "Component AP and matched continuous-score contrasts identify scoring choices. Diamonds compare AP of mean-seed probabilities; dots/ranges describe paired detector-seed differences. Both \\(V=0\\) controls retain query, validity and calibration routing. Results describe the single test dependence component; uncertainty markers represent seed variability.",
+      "old": "Component AP and matched continuous-score contrasts. Diamonds compare AP of mean-seed probabilities; dots/ranges are paired detector-seed differences, not confidence intervals. Both \\(V=0\\) controls retain query, validity and calibration routing. One dependence component precludes an independent-component interval; these are descriptive contributions."
+    },
+    {
+      "new": "Performance and processing cost for five timed methods, including heuristic verification. Mean detector-seed test AP is paired with seed 17 live cost on 32 calibration clips at batch 32. Horizontal bars show the range of three warmed passes. Model loading is recorded separately; memory is allocated GPU peak. The comparison maps tradeoffs among the measured methods.",
+      "old": "Mean detector-seed test AP and actual seed 17 live cost on 32 calibration clips at batch 32, with three warmed passes; horizontal bars show their range, not a confidence interval. Five timed methods include heuristic verification. Model loading is excluded and separately recorded; memory is allocated GPU peak. This measured-method comparison is not an overall cost frontier over unmeasured stronger baselines."
+    }
+  ],
+  "supplement_scope_change": {
+    "new": "Synthetic results describe the specified generation families and activity labels. Real-data comparisons describe vessel-tracking presence under artificial class balance, a fixed generator seed, one deployment and one connected test component; AP, precision and calibration are cohort-specific.",
+    "old": "Interpretation follows the labels and sampling design: constructed activity, vessel-tracking presence, artificial class balance, a fixed generator seed, one deployment and one connected test component. AP, precision and calibration describe this cohort."
+  }
+}

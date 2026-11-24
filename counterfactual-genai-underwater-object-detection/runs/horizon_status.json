@@ -1,11 +1,11 @@
 {
   "completion_receipt": "runs/research_complete.json",
-  "completion_receipt_sha256": "af11ae4a1db491a1d1def312c66e1ff8c48b65d84ed9ef6c663ae3d290c0afc4",
-  "latex_sources_revision": 3,
+  "completion_receipt_sha256": "677d58d069157f420ae5ef0431e7cc166c290265493d13c054b428c8ae84b722",
+  "latex_sources_revision": 9,
   "report_revision": 3,
   "research_status": "complete",
   "stages_completed": 38,
   "status": "complete",
-  "updated_utc": "2026-11-23T21:47:46.944334+00:00",
+  "updated_utc": "2026-11-24T15:11:20.369697+00:00",
   "visual_review_complete": true
 }

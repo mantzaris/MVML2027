@@ -1,0 +1,16 @@
+{
+  "document": "supplementary",
+  "page_count_bounds": [
+    3,
+    4
+  ],
+  "pages": 4,
+  "scope": "Compilation and layout checks passed; all current rendered page contents individually inspected. Identical main-page pixels retain review across the final precision-only rebuild.",
+  "sha256": {
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/latex_build/runs/20261123T231923Z-679204/supplementary/supplementary.pdf": "6b79122980eaaadb518d30afccf059cd364ed4086991544a32a529829215858d",
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/supplementary.bib": "62e880a8ff61728d49e373cc7eaca854ae7eec39b7bc67cc1d046f5d14f5e824",
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/supplementary.tex": "1b381a3805cd5a5c84d84ec31177773f47575442ed6bfd268dde980555f3896f"
+  },
+  "visual_inspection_complete": true,
+  "visual_review": "reports/editorial_revision_5_review.json"
+}

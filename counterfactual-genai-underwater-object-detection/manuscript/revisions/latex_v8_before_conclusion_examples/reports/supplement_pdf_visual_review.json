@@ -1,0 +1,66 @@
+{
+  "archived_reportlab_review": "manuscript/revisions/latex_v6_before_current_pdf_names/reports/supplement_pdf_visual_review.json",
+  "archived_reportlab_review_sha256": "829d02132278934f3adb29f30e8508a192ace62604b2740917a3b80101e3977a",
+  "canonical_build_pdf": "manuscript/latex_build/supplementary.pdf",
+  "canonical_build_pdf_sha256": "2b32ac10e28739e291f479389ac652d749b5cb51e60ad7c09213bbb17542d456",
+  "page_count": 4,
+  "pages": [
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact current render equality transfers prior LaTeX visual review; reading PDF is byte-identical to validated LaTeX output.",
+      "page": 1,
+      "path": "manuscript/latex_renders/supplementary/page-1.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/latex_renders/supplementary/page-1.png",
+      "review_transferred_by_exact_render_equality": true,
+      "review_transferred_from_revision_4": false,
+      "reviewers": [],
+      "sha256": "1a7139610d9d56769a40f268de0d965574e5b6c89f546fea4fa40a731323aa18",
+      "status": "passed"
+    },
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact current render equality transfers prior LaTeX visual review; reading PDF is byte-identical to validated LaTeX output.",
+      "page": 2,
+      "path": "manuscript/latex_renders/supplementary/page-2.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/latex_renders/supplementary/page-2.png",
+      "review_transferred_by_exact_render_equality": true,
+      "review_transferred_from_revision_4": false,
+      "reviewers": [],
+      "sha256": "822addf5bad7783db2d831e99484f188a333e280e9e1767734d910058d5703e2",
+      "status": "passed"
+    },
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact current render equality transfers prior LaTeX visual review; reading PDF is byte-identical to validated LaTeX output.",
+      "page": 3,
+      "path": "manuscript/latex_renders/supplementary/page-3.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/latex_renders/supplementary/page-3.png",
+      "review_transferred_by_exact_render_equality": true,
+      "review_transferred_from_revision_4": false,
+      "reviewers": [],
+      "sha256": "9f0cfea0f71b8f8bd2b9a9637bb7455dccfc9a7205b4814fcbcbd9afdbf0cf17",
+      "status": "passed"
+    },
+    {
+      "freshly_individually_viewed": false,
+      "notes": "Exact current render equality transfers prior LaTeX visual review; reading PDF is byte-identical to validated LaTeX output.",
+      "page": 4,
+      "path": "manuscript/latex_renders/supplementary/page-4.png",
+      "previous_reviewed_render": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/latex_renders/supplementary/page-4.png",
+      "review_transferred_by_exact_render_equality": true,
+      "review_transferred_from_revision_4": false,
+      "reviewers": [],
+      "sha256": "e6191b08edf0d28516fe784f6500f58374c8ad0f44d0c86805027a4cff7ff353",
+      "status": "passed"
+    }
+  ],
+  "pdf": "manuscript/supplement.pdf",
+  "pdf_path": "manuscript/supplement.pdf",
+  "pdf_sha256": "2b32ac10e28739e291f479389ac652d749b5cb51e60ad7c09213bbb17542d456",
+  "prior_latex_review": "reports/latex_refresh_20261124T002709Z_review.json",
+  "producer": "LaTeX",
+  "reportlab_regenerated": false,
+  "review_method": "Exact byte equality with validated LaTeX PDF and pixel equality with previously reviewed LaTeX renders",
+  "reviewed_utc": "2026-11-24T00:38:42.120754+00:00",
+  "status": "passed"
+}

@@ -1,0 +1,26 @@
+{
+  "changes": [
+    {
+      "new": "Setting \\(V=0\\) raised ensemble AP by 0.0257 in both fixed and agent controls, consistently across all three seeds. Figure~\\ref{fig:4} retains the original \\(V\\)-minus-zero contrasts of -0.0257 and -0.0257. Preserved queries, validity and calibration routing locate this stronger scoring configuration's value in the continuous-score comparison.",
+      "old": "Score-removal controls identify a stronger scoring configuration: setting \\(V=0\\) raised ensemble AP by 0.0257 for both fixed verification and the agent, with the same direction across all three detector seeds. Figure~\\ref{fig:4} retains the original \\(V\\)-minus-zero contrasts of -0.0257 and -0.0257. These descriptive comparisons preserve queries, validity and calibration routing, locating the difference in the continuous score while holding tool use fixed."
+    },
+    {
+      "new": "All 2,205 development clip-seed decisions followed wavelet then Fourier then verify, supplying an executable reference for comparison with fixed orchestration.",
+      "old": "All 2,205 development clip-seed decisions followed wavelet then Fourier then verify. The recorded sequence supplies an executable reference for comparing language-model orchestration with a fixed checklist."
+    },
+    {
+      "new": "All 3,600 held-out test clip-seed decisions followed wavelet, Fourier, then verify, acquiring every primary view. This shared sequence explains the close fixed/agent predictions and supports simpler orchestration. Generated evidence entered final scoring after acquisition was complete.",
+      "old": "All 3,600 held-out test clip-seed decisions acquired all three views in the same wavelet, Fourier, then verify sequence. This consistency explains the close fixed/agent predictions and identifies a simpler implementation route. Verification was the final action: generated evidence contributed to final scoring after acquisition was complete."
+    },
+    {
+      "new": "The fixed and agent \\(V=0\\) controls preserve base logits, acquired views, queries, validity masks, fitting rows and the two-input positive calibration procedure. Zeroing \\(V\\) removes contrast, dispersion and boundary penalty together; the agent retains its verification-enabled path. Tool use is unchanged, so this tests scoring value; the separate runtime comparison establishes orchestration savings.",
+      "old": "The fixed and agent \\(V=0\\) controls preserve base logits, acquired views, queries, validity masks, fitting rows and the same two-input positive calibration procedure. Setting the entire continuous score \\(V\\) to zero jointly removes contrast, dispersion and boundary penalty. The agent control retains the verification-enabled action path, separating score contribution from policy choice. Because queries remain intact, this comparison measures scoring value; computational savings are established separately by the fixed/agent runtime comparison."
+    },
+    {
+      "new": "The paired day-bootstrap interval for the agent-minus-Wavelet AP difference, [-0.039, +0.012], records sensitivity to resampling this collection. Recurring vessel identities make it a nonconfirmatory diagnostic.",
+      "old": "The paired day-bootstrap interval [-0.039, +0.012] records sensitivity to resampling this collection. Recurring vessel identities make it a nonconfirmatory diagnostic."
+    }
+  ],
+  "created_utc": "2026-11-23T23:19:21.351350+00:00",
+  "scope": "Condense mechanism prose to preserve page limit; explicitly attach bootstrap interval to agent-minus-Wavelet comparison"
+}

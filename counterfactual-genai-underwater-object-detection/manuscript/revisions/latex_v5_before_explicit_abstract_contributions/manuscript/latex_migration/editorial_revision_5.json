@@ -1,0 +1,35 @@
+{
+  "abstract": "Underwater monitoring requires methods that extract useful clues from noisy sound while making efficient use of computing resources. We present a reproducible framework for comparing complementary descriptions of the same recording: its tones, their timing and changes across scales. The methodological contribution integrates generated background replacements, approximately matched control edits, tests with and without the verification score, recorded agent choices and measured processing costs. This controlled design makes the contribution of each added AI step assessable. A language-model agent selects tools from numerical detector summaries. On the studied recordings, labelled using vessel-tracking records, a neural network using sound images (spectrograms) achieved stronger detection scores than the preselected wavelet detector. A separate network established effective reference performance for constructed activity intervals in synthetic scenes. Fixed verification reproduced the agent's observed detection score with substantially less computation, identifying a practical opportunity to simplify orchestration. Score-removal tests identified a stronger scoring configuration while preserving tool use and calibration, and numerical checks clarified which signal-processing components were ready for primary evaluation. Real-data comparisons describe the evaluated cohort, with repeated vessels across days; synthetic results describe constructed activity. Together, these findings provide tested baselines and a reusable way to connect acoustic representation, verification design and computational demand, supporting more informed choices for underwater monitoring.",
+  "abstract_words": 209,
+  "archive": "manuscript/revisions/latex_v4_before_contribution_framing",
+  "conclusion_paragraphs": [
+    "This study delivers a reproducible GPU framework connecting acoustic representation, generative verification and computational demand. Its distinctive contribution combines paired generated and control edits, score-removal tests that preserve tool use and calibration, observable decisions and measured processing cost. These elements make the value of additional AI components directly assessable.",
+    "The experiments identified a stronger spectrogram-CNN configuration on the balanced real cohort: ensemble AP 0.6692 versus 0.5906 for the development-selected wavelet detector. A separate temporal CNN achieved mean AP 0.847 at IoU 0.5 for constructed activity in in-family synthetic scenes, averaging seeds and declared noise conditions. Fixed verification reproduced the agent's observed ensemble AP 0.5738 with about one-seventh its measured warm-batch processing time. Recorded tool paths support this simpler orchestration, while removing the continuous verification score increased observed AP by 0.0257 in both matched control families.",
+    "These findings establish practical design knowledge: which tested configurations score more strongly, how fixed orchestration retains observed detection performance, and how numerical checks guide representation selection. Real-data comparisons describe the vessel-tracking cohort with repeated vessels across days; temporal results describe constructed activity. The baselines and controlled protocol provide a reusable basis for choosing acoustic representations and assessing the accuracy and computational demands of subsequent AI components."
+  ],
+  "conclusion_words": 201,
+  "created_utc": "2026-11-23T23:21:37.798733+00:00",
+  "editorial_preference": "For every manuscript edit, lead with the research contribution, methodological distinction, practical importance and insight gained. Explain what each comparison establishes for representation choice, verification design, reusable baselines and computational demand. Present fixed verification as retaining the agent's observed score on the evaluated cohort while reducing measured processing time; present matched score-removal tests as identifying a stronger scoring configuration. Treat numerical checks as evidence for representation readiness and further development. Tie substitution claims to the actual metric and conditions tested. Preserve measured values, label provenance and statistical scope, stated affirmatively and concisely. Keep the abstract qualitative and accessible to nonexpert readers.",
+  "experimental_changes": false,
+  "numerical_results_in_abstract": false,
+  "provenance_sha256": {
+    "work/editorial_revision_5/additional_changes.json": "c4ec742756ac636cff4e26a0f2c1c931a3f76cfb2822530d86db1dfbb33cf63a",
+    "work/editorial_revision_5/final_precision_fix.json": "0a2560c27c8463eba36d162793b9cc13e182816c332dcde27b6101ddbce9bb0c",
+    "work/editorial_revision_5/layout_and_review_fixes.json": "690933ed20a01b5e0167a70e4c151b1ca19cab5820b28961b7e8680f3c4b3131",
+    "work/editorial_revision_5/main_changes.json": "0f2551d7409cd6911092b265361fa4f60536b65103fce44bc330bdebaea15e6f",
+    "work/editorial_revision_5/supplement_changes.json": "4833c43aeff444f140ab5a8decbd236624daba60a91fe40f8d488aac8b2d0e44"
+  },
+  "revision": 5,
+  "scientific_scope_review": "Independent positive_framing_review agent passed after precise bootstrap comparison label and ensemble-versus-seed direction clarification",
+  "scope": "Contribution-first editorial revision throughout main and supplementary prose and captions",
+  "supplement_closing_paragraph": "The controlled study supplies tested baselines and repeatable checks for acoustic representation design. Across three detector seeds, STFT reached mean presence AP 0.995 on in-family test scenes and 0.880 on the held-out generated family, quantifying sensitivity to changed conditions. Missing-input tests extend this comparison to incomplete evidence. Numerical checks distinguished accurate reconstruction from converged modes, keeping the high-scoring bounded HHT approximation exploratory. Together, these results make representation choice and numerical reliability separately assessable. Synthetic results describe the specified generation families and activity labels. Real-data comparisons describe vessel-tracking presence under artificial class balance, a fixed generator seed, one deployment and one connected test component; AP, precision and calibration are cohort-specific.",
+  "unchanged": [
+    "equations",
+    "table bodies",
+    "figure assets and dimensions",
+    "bibliographies",
+    "citations",
+    "preamble and page breaks",
+    "experimental code/configurations/data/results/checkpoints"
+  ]
+}

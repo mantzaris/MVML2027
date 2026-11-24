@@ -1,0 +1,254 @@
+% Canonical editable LaTeX source. All prose, equations and tables are in this file.
+% Build from the submission directory: bash scripts/build_latex.sh
+% Bibliography is separate; figures are existing measured vector-PDF assets.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=25mm]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{amsmath}
+\usepackage{graphicx,booktabs,array,tabularx}
+\usepackage[table]{xcolor}
+\usepackage{caption,titlesec,fancyhdr,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cite}
+\graphicspath{{figures/}}
+\setlength{\parindent}{7mm}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{1em}
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+\setlength{\abovedisplayshortskip}{4pt}
+\setlength{\belowdisplayshortskip}{4pt}
+\titleformat{\section}{\sffamily\bfseries\fontsize{12}{14}\selectfont}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\sffamily\bfseries\fontsize{11}{13}\selectfont}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{7pt}{5pt}
+\titlespacing*{\subsection}{0pt}{6pt}{4pt}
+\DeclareCaptionFont{draftcaption}{\fontsize{9.5}{11}\selectfont}
+\captionsetup{font=draftcaption,labelfont=normalfont,labelsep=period,skip=4pt,hypcap=false}
+\captionsetup[figure]{name=Fig.}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\sffamily\fontsize{8}{10}\selectfont\color{gray}MVML 2027 | Anonymous research draft}
+\fancyfoot[R]{\sffamily\fontsize{8}{10}\selectfont\color{gray}\thepage}
+\setlength{\footskip}{25pt}
+\newcommand{\draftfigure}[4]{%
+  \par\noindent\begin{minipage}{\linewidth}\centering
+  \includegraphics[width=\linewidth,height=#2in,keepaspectratio]{#1.pdf}
+  \captionof{figure}{#3}\label{fig:#4}
+  \end{minipage}\par\vspace{3pt}}
+\newcommand{\drafttitle}[1]{\begin{center}\sffamily\bfseries\fontsize{16}{19}\selectfont #1\end{center}}
+\renewcommand{\refname}{References}
+
+
+\begin{document}
+
+\fontsize{11}{13}\selectfont
+
+\nocite{portia,signals1,signals2,uabench,physicsgen,huang1998,flowmatching,qwen,waveletship,uniqueship,speechocean,wav2vec2}
+
+\drafttitle{Multi-Representation Underwater Acoustic Object Detection with Generative AI Reasoning Agents}
+
+\begin{center}Anonymous authors\end{center}
+
+{\fontsize{10}{11.5}\selectfont\noindent \textbf{\textit{Abstract - }}Detecting vessels in noisy underwater recordings requires useful sound clues and efficient computation. We contribute a reproducible framework that links sound representation, tests of AI-generated evidence and processing cost. First, it compares descriptions of the same sound, including its tones and how they change over time. Second, it compares detector responses to two edits: replacing a short sound segment with AI-generated background, and applying a control edit designed to cause similar disturbance. Tests with and without the generated-evidence score identify a stronger scoring configuration while keeping the remaining procedures unchanged. Third, it compares a language-model agent selecting tools from numerical detector summaries with fixed procedures, measuring detection scores and processing time. On recordings labelled using vessel tracking, a neural network using sound images (spectrograms) scored more strongly than the preselected comparison method, providing a tested reference detector. Fixed verification reproduced the agent's observed detection score with substantially less processing time, establishing a simpler alternative on this cohort. A separate network successfully detected known activity periods in synthetic scenes, providing a controlled test of activity timing. Numerical checks made signal-analysis reliability an explicit criterion for choosing representations. Together, these results provide reusable baselines, controlled checks of generated evidence and practical guidance for selecting detection methods and allocating computing resources.\par}
+
+{\fontsize{9}{11}\selectfont\noindent \textbf{Keywords:} underwater acoustics; object detection; generative AI; reasoning agents; signal representations; spectrograms; wavelets; Hilbert-Huang transform\par}
+
+\section{Introduction}
+
+Fourier spectra, spectrograms and wavelets expose different frequency and time structure in the same underwater waveform. We combine representation benchmarking, controlled verification and measured computing cost to guide detector design (Fig.~\ref{fig:1}). The language model receives numerical detector outputs; a separate convolutional neural network (CNN) processes spectrograms. Labels indicate vessel presence from automatic identification system (AIS) records.\par
+
+\draftfigure{figure1_method}{3.4}{Comparison and verification workflow. Fourier, short-time Fourier transform (STFT) and wavelet views are primary. A bounded Hilbert--Huang transform (HHT) approximation explores decomposition into oscillating components. The agent chooses tools; numerical detectors score evidence.}{1}
+
+\clearpage
+
+\section{Related Work and Method}
+
+Physics-aware audio-language frameworks combine complementary acoustic representations with generated reports \cite{signals1,signals2}. Underwater audio-language benchmarks test waveform dependence \cite{uabench}, and generative augmentation addresses data scarcity \cite{physicsgen}. Wavelet front ends \cite{waveletship}, HHT decomposition \cite{huang1998} and speech-to-ocean transfer \cite{speechocean} provide established foundations. Our contribution integrates paired generated/control edits, score-removal comparisons, observable tool choices and measured cost into a reproducible protocol for assessing acoustic AI design choices.\par
+
+\subsection{Acoustic representations and detection}
+
+Native audio is preserved; channel 0 is CUDA-resampled to 16 kHz. Fourier, multi-resolution STFT and analytic Morlet views provide 32, 64 and 56 features. Scaling uses training data only. Numerical checks define a separate exploratory role for the 32-feature bounded linear-envelope HHT approximation, with convergence assessed independently of predictive performance.\par
+
+\begin{equation}\label{eq:fourier}
+X[k]=\sum_{n=0}^{N-1}x[n]e^{-j2\pi kn/N}
+\end{equation}
+
+\begin{equation}\label{eq:stft}
+S(m,k)=\left|\sum_n x[n]w[n-mH]e^{-j2\pi kn/N}\right|^2
+\end{equation}
+
+\begin{equation}\label{eq:hht}
+x(t)=\sum_q c_q(t)+r(t),\quad f_q(t)=\frac{1}{2\pi}\frac{d\phi_q(t)}{dt}
+\end{equation}
+
+The primary verification replaces the fixed central 1.5 seconds [0.75, 2.25] of each three-second clip while preserving exterior context. This repeatable probe measures sensitivity of window-presence scores. Baselines include feature heads, a 2D log-mel spectrogram CNN, and frozen speech-ASR pretrained/fine-tuned facebook/wav2vec2-base-960h \cite{wav2vec2}, mean/SD pooled into 1,536 features.\par
+
+\subsection{Generative replacement and paired control}
+
+A conditional waveform flow \cite{flowmatching} learns background completion. For editable mask \(M\), background \(b\), observation \(u\) and Gaussian \(z\), training uses \(y(t)=M[(1-t)z+tb]+(1-M)u\). A same-support sham approximately matches perturbation energy and coarse spectrum: after masking, RMS mismatch must be below 0.05 and eight-band normalized-power \(L_1\) error below 0.2. Other gates check finite features, exterior invariance and amplitude; rejected edits retain the base score. The full-record null supplies a computational reference, context-unconditional except for observed-RMS scaling.\par
+
+\begin{equation}\label{eq:delta}
+\delta_{vk}=[L_v(x)-L_v(x^{-k})]-[L_v(x)-L_v(x^{0k})]
+\end{equation}
+
+\begin{equation}\label{eq:score}
+V=\mathrm{median}_{v,k}(\delta_{vk})-\lambda\,\mathrm{MAD}_{v,k}(\delta_{vk})-\gamma R
+\end{equation}
+
+\(L\) is a view-head logit clipped to \([-8,8]\). We use \(K=4\) draws, 8 Euler steps, \(\lambda=0.5\) and \(\gamma=0.1\); medians use the lower central order statistic. \(R\) measures exterior change and boundary perturbation. Nonnegative logistic calibration combines base evidence with \(V\). The correlated views describe one waveform; paired controls make the contribution of this robust aggregation and calibration directly measurable.\par
+
+\clearpage
+
+\section{Data and Experimental Protocol}
+
+The real study uses a custom PORTIA v2 cohort and split \cite{portia}, with AIS-linked vessel co-occurrence as the label target. Single-vessel-task positives and binary-task negatives are combined after excluding 2,388 window IDs with conflicting cross-task labels. Days are allocated before learning; vessel IDs that cross allocated partitions are reserved by test/calibration/development/train priority. A 60-second temporal guard separates partitions. The balanced test cohort contains 600 positive and 600 background clips, providing a controlled reference prevalence for cohort-specific AP, precision and probability calibration.\par
+
+\par\noindent\begin{minipage}{\linewidth}
+\captionof{table}{Custom cohort: AIS single-vessel positives and binary-task backgrounds.}\label{tab:1}
+\centering\fontsize{8.5}{10}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.22}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr0.218391\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.195402\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.229885\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.195402\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.160920\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{blue!5}
+\textbf{Partition} & \textbf{Vessel clips} & \textbf{Background clips} & \textbf{Vessel IDs} & \textbf{Days} \\ \midrule
+Training & 1735 & 2000 & 30 & 8 \\
+Development & 400 & 335 & 16 & 3 \\
+Calibration & 300 & 300 & 11 & 2 \\
+Test & 600 & 600 & 42 & 5 \\
+\bottomrule\end{tabular}
+\end{minipage}\par\vspace{3pt}
+
+Repeated vessel identities connect all five test days into one dependence component. The 1,200 clips therefore support descriptive comparisons within this collection. AIS labels establish vessel co-occurrence; human audibility and natural event boundaries require separate annotation. This distinction keeps real presence and constructed temporal evidence interpretable.\par
+
+\subsection{Models, controller and controls}
+
+Three detector seeds are evaluated with one shared generator trained at seed 17. The frozen non-thinking Qwen3-4B-Instruct-2507 \cite{qwen} tool controller runs wholly on the RTX 5000 Ada. It starts from STFT evidence and can acquire Fourier/wavelet evidence, verify, or stop within three additional actions. A finite token trie restricts generation to legal JSON actions and enumerated reasons for the current candidate and tool budget; the model greedily chooses legal prefixes. The strict parser independently checks schema validity. Calibrated probabilities remain under numeric-detector control, separating tool orchestration from acoustic scoring.\par
+
+{\fontsize{9}{11}\selectfont\noindent Development replay identified a concrete integration requirement: unconstrained action validity was 50.0\%. A decoding amendment then enforced legal actions before test evaluation. Archived traces and source snapshots make this engineering diagnosis reproducible.\par}
+
+Acoustic/foundation baselines, fixed and heuristic verification, the agent without generation, matched \(V=0\) controls and component ablations provide a common reference for attributing performance and computing cost.\par
+
+\subsection{Outcomes and uncertainty}
+
+The real primary endpoint is AP against AIS-presence labels. Thresholds are selected on calibration data for a target empirical negative-clip FPR; test recall and FPR are both reported. AP, AUROC and Brier score cover every retained record before referral. Controlled temporal AP uses one-to-one matching at stated IoU thresholds. The single day-vessel component supports descriptive primary comparisons. An optional 2,000-draw paired day bootstrap supplies nonconfirmatory sensitivity analysis; recurring vessels preclude independent-day inference. Detector-seed variability is descriptive.\par
+
+\clearpage
+
+\section{Real Detection and Configuration Choices}
+
+The spectrogram-CNN configuration reached ensemble AP 0.6692, versus 0.5906 for the development-selected Wavelet comparator. Fixed verification and the agent both reached 0.5738: fixed-minus-agent AP was +0.000000, with maximum probability difference 1.2e-07. This identifies an observed score-preserving orchestration choice. The agent-to-Wavelet difference was -0.0168. Ensemble AP evaluates averaged per-record probabilities; Table~\ref{tab:2} instead averages per-seed AP.\par
+
+{\fontsize{9}{11}\selectfont\noindent The paired day-bootstrap interval for the agent-minus-Wavelet AP difference, [-0.039, +0.012], records sensitivity to resampling this collection. Recurring vessel identities make it a nonconfirmatory diagnostic.\par}
+
+\draftfigure{figure2_real_detection}{2.85}{Real-recording configuration comparison against AIS labels. Dots/ranges describe detector-seed variability. The operating-point panel uses thresholds fixed on calibration data and reports mean seed-specific rates in percent. Core methods and the locked comparator provide reference points; the exported tables retain all methods.}{2}
+
+\par\noindent\begin{minipage}{\linewidth}
+\captionof{table}{Core comparisons and locked comparator: mean seed-specific metrics. This differs from AP of averaged seed probabilities. All methods are exported.}\label{tab:2}
+\centering\fontsize{8.5}{10}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.22}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr0.322222\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.088889\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.111111\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.122222\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.111111\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.122222\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.122222\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{blue!5}
+\textbf{Method} & \textbf{Seeds} & \textbf{AP} & \textbf{AUROC} & \textbf{Brier} & \textbf{Recall} & \textbf{FPR} \\ \midrule
+Spectral CNN & 3 & 0.665 & 0.658 & 0.242 & 0.4\% & 0.0\% \\
+Numeric fusion & 3 & 0.616 & 0.604 & 0.249 & 0.8\% & 0.0\% \\
+Wavelet & 3 & 0.590 & 0.595 & 0.250 & 0.8\% & 0.2\% \\
+Frozen wav2vec 2.0 & 3 & 0.566 & 0.587 & 0.246 & 0.1\% & 0.1\% \\
+Fixed verification & 3 & 0.573 & 0.590 & 0.249 & 1.1\% & 0.2\% \\
+Heuristic verification & 3 & 0.575 & 0.596 & 0.252 & 1.6\% & 0.9\% \\
+Generative agent & 3 & 0.573 & 0.590 & 0.249 & 1.1\% & 0.2\% \\
+Agent without generation & 3 & 0.616 & 0.604 & 0.249 & 0.7\% & 0.0\% \\
+Fixed, \(V=0\) & 3 & 0.595 & 0.590 & 0.249 & 1.2\% & 0.0\% \\
+Agent, \(V=0\) & 3 & 0.595 & 0.590 & 0.249 & 1.2\% & 0.0\% \\
+\bottomrule\end{tabular}
+\end{minipage}\par\vspace{3pt}
+
+{\fontsize{9}{11}\selectfont\noindent Mean-seed AP was 0.6654 for the spectral CNN and 0.5729 for the agent, with the development-locked Wavelet comparator retained as the primary reference. At the frozen operating point, agent recall was 1.06\% and FPR 0.17\%, quantifying a conservative, low-sensitivity operating choice for future threshold studies.\par}
+
+\clearpage
+
+\section{Robustness and Controlled Temporal Detection}
+
+Figure~\ref{fig:3} measures added-noise sensitivity on a separate 120-record metadata-selected subset at seed 17/batch 8, retaining AIS labels. Its four methods are numeric fusion, STFT, fixed verification and the agent. Fully synthetic and semi-synthetic temporal studies establish separate spectral-CNN references using known unions of activity. These complementary experiments distinguish recording-level presence from constructed interval detection; overlapping sources share a union label.\par
+
+\draftfigure{figure3_robustness}{2.6}{Seed-17 added-noise sensitivity on a separate 120-record metadata-selected subset. The full primary test uses 1,200 records and three seeds. Shared parents and noise draws enable direct comparison of numeric fusion, STFT, fixed verification and the agent; the clean subset supplies a reference.}{3}
+
+{\fontsize{9}{11}\selectfont\noindent Fixed and agent AP coincided in all 5 tested noise conditions, extending the observed orchestration match across this corruption study. Agent seed-17 AP was 0.6667 on the clean subset and 0.4981 at -5 dB added-noise SNR, quantifying sensitivity under a common noise protocol.\par}
+
+\par\noindent\begin{minipage}{\linewidth}
+\captionof{table}{Temporal AP means over seeds and declared conditions within each origin/family and IoU: mixed plus fixed SNRs for fully synthetic, three insertion SNRs for semi-synthetic. Each origin retains its own reference results.}\label{tab:3}
+\centering\fontsize{8.5}{10}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.22}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr0.435294\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.129412\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.282353\linewidth-2\tabcolsep\relax}>{\raggedright\arraybackslash}p{\dimexpr0.152941\linewidth-2\tabcolsep\relax}}
+\toprule\rowcolor{blue!5}
+\textbf{Origin / family} & \textbf{IoU} & \textbf{Mean temporal AP} & \textbf{Seeds} \\ \midrule
+Fully synthetic / held-out & 0.3 & 0.924 & 3 \\
+Fully synthetic / held-out & 0.5 & 0.902 & 3 \\
+Fully synthetic / held-out & 0.7 & 0.858 & 3 \\
+Fully synthetic / within-family & 0.3 & 0.892 & 3 \\
+Fully synthetic / within-family & 0.5 & 0.847 & 3 \\
+Fully synthetic / within-family & 0.7 & 0.790 & 3 \\
+Real-excerpt insertion & 0.3 & 0.584 & 3 \\
+Real-excerpt insertion & 0.5 & 0.383 & 3 \\
+Real-excerpt insertion & 0.7 & 0.301 & 3 \\
+\bottomrule\end{tabular}
+\end{minipage}\par\vspace{3pt}
+
+Controlled source stems make received interval support observable for bounded harmonic, modulated and chirped constructions. A separate semi-synthetic study inserts real AIS-positive excerpts into same-day looped real backgrounds. Known insertion unions supply temporal labels; source excerpts retain their original noise. Keeping these origins separate provides reproducible tests of constructed activity and transfer, with naturally annotated event boundaries reserved for future evaluation.\par
+
+\clearpage
+
+\section{Mechanism and Component Ablations}
+
+Setting \(V=0\) raised ensemble AP by 0.0257 in both fixed and agent controls, with each seed showing an increase. Figure~\ref{fig:4} retains the original \(V\)-minus-zero contrasts of -0.0257 and -0.0257. Preserved queries, validity and calibration routing locate this stronger scoring configuration's value in the continuous-score comparison.\par
+
+{\fontsize{9}{11}\selectfont\noindent All 2,205 development clip-seed decisions followed wavelet then Fourier then verify, supplying an executable reference for comparison with fixed orchestration.\par}
+
+{\fontsize{9}{11}\selectfont\noindent All 3,600 held-out test clip-seed decisions followed wavelet, Fourier, then verify, acquiring every primary view. This shared sequence explains the close fixed/agent predictions and supports simpler orchestration. Generated evidence entered final scoring after acquisition was complete.\par}
+
+The fixed and agent \(V=0\) controls preserve base logits, acquired views, queries, validity masks, fitting rows and the two-input positive calibration procedure. Zeroing \(V\) removes contrast, dispersion and boundary penalty together; the agent retains its verification-enabled path. Tool use is unchanged, so this tests scoring value; the separate runtime comparison establishes orchestration savings.\par
+
+\draftfigure{figure4_mechanism_ablation}{3.0}{Component AP and matched continuous-score contrasts identify scoring choices. Diamonds compare AP of mean-seed probabilities; dots/ranges describe paired detector-seed differences. Both \(V=0\) controls retain query, validity and calibration routing. Results describe the single test dependence component; uncertainty markers represent seed variability.}{4}
+
+\subsection{Counterfactual interpretation}
+
+The paired edits provide a repeatable test of detector sensitivity. The sham uses the same support and approximately matched perturbation energy; both edits can affect target detectability. This supports component-utility comparisons while source-selective physical removal requires separate validation. Invalid or unavailable verification retains the base detector output and remains in the evaluation denominator.\par
+
+\subsection{Numerical checks for representation selection}
+
+Numerical checks distinguish representation accuracy from component validity. HHT reconstruction and a simple-tone check passed; noisy-scene modes were flagged for extrema or convergence issues in 95.8\% of the three-second fixture and 100.0\% of the ten-second fixture. The exploratory HHT head reached mean-seed AP 0.6929. Together, these results establish why predictive scoring and decomposition validation are separate selection criteria, with bounded HHT retained for exploratory analysis.\par
+
+\clearpage
+
+\section{Compute, Reproducibility and Design Guidance}
+
+\draftfigure{figure5_accuracy_compute}{3.1}{Performance and processing cost for five timed methods, including heuristic verification. Mean detector-seed test AP is paired with seed 17 live cost on 32 calibration clips at batch 32. Horizontal bars show the range of three warmed passes. Model loading is recorded separately; memory is allocated GPU peak. The comparison maps tradeoffs among the measured methods.}{5}
+
+Fixed verification retained the agent's observed ensemble AP with about one-seventh its measured warm-batch processing time. Costs were 49.4 ms/clip for fixed verification, 346.9 for the agent, 39.0 for the heuristic, 7.1 for numeric fusion and 299.4 for the agent without generation. The agent/fixed ratio was 7.02; agent peak allocation was 11.37 GiB. These throughput measurements support orchestration choices under the measured batch conditions.\par
+
+All substantial transforms, fitting and inference use the 32 GB RTX 5000 Ada, selected by UUID. CPU orchestration, I/O, statistical reporting and a small independent spline-reference fixture are incidental. Transfer-inclusive measurement captures the Thunderbolt system's actual processing demands. Live timings include decoding, transfer, GPU transforms, requested generation, controller calls, classification and frozen calibration. Full primary transform recomputation and unqueried canonical generation companions are charged, making the cost comparison traceable to the implemented workflow.\par
+
+Checkpoints preserve model, optimizer, scheduler, random states, configuration fingerprints and the next-batch cursor. Atomic file replacement, fsync, checksum validation and a prior generation support interrupted-run recovery. A separate-process CUDA fixture reproduced the next optimizer step exactly and recovered from a corrupted latest checkpoint copy, demonstrating restart consistency under the tested conditions.\par
+
+These design insights are descriptive within the evaluated system: AIS proxy labels, balanced cohort prevalence, recurring vessels forming one test component, a shared generator seed and a single external GPU/system. Controlled temporal studies use constructed activity labels. Fixed/agent score agreement concerns this observed cohort rather than population equivalence. Independent deployments, human event annotation and additional generator/system settings provide the next validation targets; recorded tool decisions establish behavior, while saved detector outputs establish performance.\par
+
+\clearpage
+
+\section{Conclusion}
+
+This study delivers a reproducible GPU framework connecting acoustic representation, generative verification and computational demand. Its distinctive contribution combines paired generated and control edits, score-removal tests that preserve tool use and calibration, observable decisions and measured processing cost. These elements make the value of additional AI components directly assessable.\par
+
+The experiments identified a stronger spectrogram-CNN configuration on the balanced real cohort: ensemble AP 0.6692 versus 0.5906 for the development-selected wavelet detector. A separate temporal CNN achieved mean AP 0.847 at IoU 0.5 for constructed activity in in-family synthetic scenes, averaging seeds and declared noise conditions. Fixed verification reproduced the agent's observed ensemble AP 0.5738 with about one-seventh its measured warm-batch processing time. Recorded tool paths support this simpler orchestration, while removing the continuous verification score increased observed AP by 0.0257 in both matched control families.\par
+
+These findings establish practical design knowledge: which tested configurations score more strongly, how fixed orchestration retains observed detection performance, and how numerical checks guide representation selection. Real-data comparisons describe the vessel-tracking cohort with repeated vessels across days; temporal results describe constructed activity. The baselines and controlled protocol provide a reusable basis for choosing acoustic representations and assessing the accuracy and computational demands of subsequent AI components.\par
+
+{\fontsize{9}{11}\selectfont
+
+\bibliographystyle{IEEEtran}
+
+\bibliography{main}
+
+}
+
+\end{document}

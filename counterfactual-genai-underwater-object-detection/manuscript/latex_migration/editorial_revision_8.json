@@ -1,0 +1,29 @@
+{
+  "abstract_changed": false,
+  "archive": "manuscript/revisions/latex_v7_before_qualitative_conclusion",
+  "changes": [
+    {
+      "new": "This study clarifies how different descriptions of the same underwater sound support detector design. Fourier features summarize frequency content, spectrograms preserve changes over time, and wavelets expose structure across scales. The stronger spectrogram-network configuration provides a tested reference for learning time--frequency patterns, while numerical checks establish representation reliability as a complementary selection criterion. Separate synthetic experiments extend this assessment to known activity periods.\\par\n\nPaired generated and control edits, matched score-removal tests and recorded tool decisions distinguish scoring choices from tool control. The experiments identify a stronger scoring option and show that fixed verification retains the agent's observed detection score with less processing on the evaluated cohort. This supplies a practical method for deciding how generated evidence should enter a detector and when simpler control is sufficient.\\par\n\nIn practice, these findings support choosing representations and detectors together, evaluating added AI components against reusable baselines, and matching processing demands to the intended setting. For future coastal monitoring and distributed listening systems, this offers a route to more economical, testable designs. Independent recordings and human event annotations provide the next step toward applying these choices across sites and changing acoustic conditions.\\par\n",
+      "old": "This study delivers a reproducible GPU framework connecting acoustic representation, generative verification and computational demand. Its distinctive contribution combines paired generated and control edits, score-removal tests that preserve tool use and calibration, observable decisions and measured processing cost. These elements make the value of additional AI components directly assessable.\\par\n\nThe experiments identified a stronger spectrogram-CNN configuration on the balanced real cohort: ensemble AP 0.6692 versus 0.5906 for the development-selected wavelet detector. A separate temporal CNN achieved mean AP 0.847 at IoU 0.5 for constructed activity in in-family synthetic scenes, averaging seeds and declared noise conditions. Fixed verification reproduced the agent's observed ensemble AP 0.5738 with about one-seventh its measured warm-batch processing time. Recorded tool paths support this simpler orchestration, while removing the continuous verification score increased observed AP by 0.0257 in both matched control families.\\par\n\nThese findings establish practical design knowledge: which tested configurations score more strongly, how fixed orchestration retains observed detection performance, and how numerical checks guide representation selection. Real-data comparisons describe the vessel-tracking cohort with repeated vessels across days; temporal results describe constructed activity. The baselines and controlled protocol provide a reusable basis for choosing acoustic representations and assessing the accuracy and computational demands of subsequent AI components.\\par\n",
+      "region": "Conclusion"
+    }
+  ],
+  "conclusion_changed": true,
+  "conclusion_words": 188,
+  "created_utc": "2026-11-24T15:02:13.214570+00:00",
+  "equations_tables_bibliography_changed": false,
+  "experimental_changes": false,
+  "figure_assets_changed": false,
+  "gpu_framework_emphasis_removed": true,
+  "metric_source_sha256": {
+    "results/tables/final_real_results.json": "6723b5eb6036a49469a6d91d1035410523ffb3c929785a58816f4cff0c27e4ee",
+    "results/tables/runtime_benchmark.json": "c0722e8e7a5f7e101819fd1d93f65016e49df5c737dc9233a87d1a376494a539"
+  },
+  "numerical_results_in_conclusion": false,
+  "revision": 8,
+  "scientific_review": "Independent positive_framing_review agent passed: qualitative representation insights, stronger CNN as configuration result, cohort-scoped simpler verification and future monitoring applications with further validation.",
+  "scope": "Qualitative conclusion: representation understanding, methodological insights and practical value for future applications",
+  "source_scope_check": "Exact reverse replacement reproduces prior source; all text outside conclusion unchanged",
+  "source_sha256": "a4418ab58af56c81db96bdfc28a400542a21f5e787fbb451a4d92472ae99f5b3",
+  "supplement_changed": false
+}

@@ -1,0 +1,16 @@
+{
+  "document": "main",
+  "page_count_bounds": [
+    1,
+    8
+  ],
+  "pages": 8,
+  "scope": "Compilation passed; revised page 1 individually inspected by root and independent reviewer. Pages 2-8 exactly equal reviewed revision 5 renders.",
+  "sha256": {
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/latex_build/runs/20261123T235548Z-731010/main/main.pdf": "2438af2da541f44109c95a9738b46259fd3fc5116c5da2339d68adebb9faa60b",
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/main.bib": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd",
+    "/home/meow/Documents/repos/MVML2027/counterfactual-genai-underwater-object-detection/manuscript/main.tex": "fd9b80ba8ea43c055aa3726bc89effe437ad83ec5e3024e2f5d1c9233e0ba36a"
+  },
+  "visual_inspection_complete": true,
+  "visual_review": "reports/editorial_revision_6_review.json"
+}

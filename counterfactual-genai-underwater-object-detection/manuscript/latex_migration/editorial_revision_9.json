@@ -1,0 +1,37 @@
+{
+  "abstract_changed": false,
+  "archive": "manuscript/revisions/latex_v8_before_conclusion_examples",
+  "changes": [
+    {
+      "new": "Three representation--detector pairings illustrate the practical findings. Log-mel spectrograms paired with a convolutional neural network (CNN) achieved stronger detection rankings than the preselected wavelet-feature detector on the real cohort. Numeric fusion, a neural detector combining Fourier, short-time Fourier and wavelet features, supplied the fastest processing among the timed methods. A separate temporal CNN operating on spectrograms detected known activity periods in synthetic scenes. These examples establish complementary references for recording-level detection, economical processing and activity timing; numerical checks add representation reliability to these selection criteria.\\par",
+      "old": "This study clarifies how different descriptions of the same underwater sound support detector design. Fourier features summarize frequency content, spectrograms preserve changes over time, and wavelets expose structure across scales. The stronger spectrogram-network configuration provides a tested reference for learning time--frequency patterns, while numerical checks establish representation reliability as a complementary selection criterion. Separate synthetic experiments extend this assessment to known activity periods.\\par",
+      "region": "Conclusion opening paragraph"
+    }
+  ],
+  "conclusion_changed": true,
+  "conclusion_words": 210,
+  "created_utc": "2026-11-24T15:09:24.201980+00:00",
+  "equations_tables_bibliography_changed": false,
+  "experimental_changes": false,
+  "figure_assets_changed": false,
+  "gpu_framework_emphasis_removed": true,
+  "metric_source_sha256": {
+    "reports/synthetic_results.json": "9987efd6a42e4439559caa09684a042179a67e66461300a5fbb8ef62d12ede1d",
+    "results/tables/final_real_results.json": "6723b5eb6036a49469a6d91d1035410523ffb3c929785a58816f4cff0c27e4ee",
+    "results/tables/runtime_benchmark.json": "c0722e8e7a5f7e101819fd1d93f65016e49df5c737dc9233a87d1a376494a539",
+    "scripts/train_detectors.py": "54284f65b66b14a982a6ff8d827a29d915d97116dc9109c781d0dae663c95f9d",
+    "src/uac/models.py": "a714436319bd7edeb921fe8cd48e09b36abfdd702ad5f27ab6236f594ba32f37"
+  },
+  "numerical_results_in_conclusion": false,
+  "revision": 9,
+  "scientific_review": "Independent positive_framing_review agent: three examples grounded in real configuration comparison, five-method runtime benchmark and separate synthetic temporal study; source and layout reviewed.",
+  "scope": "Concrete qualitative representation-detector examples in the conclusion, retaining methodological and future-application discussion",
+  "source_scope_check": "Exact reverse replacement reproduces prior source; all text outside conclusion opening paragraph unchanged",
+  "source_sha256": "ceacb6d82ff3a636fffe951f8601cf09921b78eb4edf0c27247febd8e45fbb0a",
+  "standout_examples": [
+    "log-mel spectrogram with CNN: stronger observed ranking than preselected wavelet-feature detector",
+    "Fourier/STFT/wavelet neural feature fusion: fastest among timed methods",
+    "separate spectrogram temporal CNN: known synthetic activity periods"
+  ],
+  "supplement_changed": false
+}

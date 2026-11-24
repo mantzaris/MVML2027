@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-23T23:20:45.875396+00:00",
+  "new": "with each seed showing an increase",
+  "old": "consistently across all three seeds",
+  "previous_reviewed_main_renders": {
+    "manuscript/latex_renders/main/page-1.png": "67f2a9d1b494caac4410e088ce9edfc88b7ebb4268ddefd1fa5f3e6f7fe588fe",
+    "manuscript/latex_renders/main/page-2.png": "396f9121d7dd0b1d6cdb9abb048e2803a966269efe2a270dc857a9df7a908219",
+    "manuscript/latex_renders/main/page-3.png": "6d378fc9fb81a164094c9045517d3078fe64a338babbbff0adecd8d95a5948fd",
+    "manuscript/latex_renders/main/page-4.png": "2fb2fc9ca2de8e1af5f0832d10c48082209f1b2fb369fcd1847174e1ab629e4e",
+    "manuscript/latex_renders/main/page-5.png": "5cf469e52daa24fb2f6ebf2c717e3ed8ccd78b99cf8541ad2bbdc20985f75cf5",
+    "manuscript/latex_renders/main/page-6.png": "39d7ec42b7ca30ea20d11766f762634477e10e2c36dba7d9faafae6ba3a7fc02",
+    "manuscript/latex_renders/main/page-7.png": "0d708786ed11ab6a280a7201747cc156c836c028d731381ab84805dfb8aebf86",
+    "manuscript/latex_renders/main/page-8.png": "f642d28b2fd9adb738fe4a09aeb9304b2601eeca2f4df908669b9c8359cb48bd"
+  },
+  "reason": "Distinguish ensemble AP magnitude from shared direction of seed-specific contrasts"
+}

@@ -1,0 +1,13 @@
+{
+  "abstract": "Underwater monitoring needs methods that detect vessel activity in noisy recordings without unnecessary computing expense. We present a reproducible framework that examines the same sound through its tones, their timing and changes across scales. Its distinctive contribution combines generated background replacements with approximately matched control edits, tests with and without the resulting verification score, recorded agent decisions and measured processing costs. The score-removal tests preserve tool use and calibration procedures to assess the added verification evidence. A language-model agent selects analysis tools from numerical detector summaries. On the studied recordings, labelled using vessel-tracking records, a neural network using sound images (spectrograms) achieved stronger detection scores than the preselected wavelet detector. A separate neural network successfully detected constructed activity intervals in synthetic scenes. Fixed verification attained the agent's observed detection score with substantially less processing time, identifying a simpler, faster alternative. The agent followed a fixed tool sequence and did not improve detection. Control tests exposed an unhelpful verification score, while numerical checks kept an unreliable signal-decomposition approximation outside the primary analysis. Real-data comparisons remain descriptive because vessels recur across test days; synthetic results do not establish accuracy on naturally occurring events. The study provides tested reference configurations and a reusable method for choosing useful acoustic representations and judging whether generative AI components justify their computational cost.",
+  "abstract_words": 216,
+  "archive": "manuscript/revisions/latex_v3_before_qualitative_abstract",
+  "conclusion_and_supplement_changed": false,
+  "created_utc": "2026-11-23T21:59:32.861887+00:00",
+  "experimental_changes": false,
+  "numerical_results_in_abstract": false,
+  "revision": 4,
+  "scientific_scope_review": "Independent abstract_review agent reviewed candidate; requested precise scope for score-removal controls, unreliable-approximation wording and natural-event limitation; all incorporated",
+  "scope": "Only main abstract prose revised for nonexpert readability, qualitative methodological novelty and practical value",
+  "source_scope": "All content outside the abstract preserved byte-for-byte"
+}

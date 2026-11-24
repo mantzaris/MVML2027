@@ -1,0 +1,40 @@
+{
+  "allowed_document_changes": [
+    "EXECUTION_LOG.md",
+    "NEXT_STEPS.md",
+    "README.md",
+    "RESEARCH_RESULTS.md",
+    "manuscript/README.md",
+    "manuscript/build_manifest.json",
+    "manuscript/latex_build/main.pdf",
+    "manuscript/latex_build/main.validation.json",
+    "manuscript/latex_build/supplementary.pdf",
+    "manuscript/latex_build/supplementary.validation.json",
+    "manuscript/main_paper.pdf",
+    "manuscript/supplement.pdf",
+    "reports/main_pdf_visual_review.json",
+    "reports/supplement_pdf_visual_review.json",
+    "runs/stages/manuscript.json",
+    "scripts/build_latex.sh"
+  ],
+  "archive_files_verified": 38,
+  "changed_before_review_renewal": [
+    "NEXT_STEPS.md",
+    "README.md",
+    "RESEARCH_RESULTS.md",
+    "manuscript/README.md",
+    "manuscript/latex_build/main.pdf",
+    "manuscript/latex_build/main.validation.json",
+    "manuscript/latex_build/supplementary.pdf",
+    "manuscript/latex_build/supplementary.validation.json",
+    "manuscript/main_paper.pdf",
+    "manuscript/supplement.pdf",
+    "scripts/build_latex.sh"
+  ],
+  "experimental_changes": false,
+  "freeze_sha256": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+  "frozen_artifacts_verified": 185,
+  "prior_artifacts_checked": 392,
+  "status": "passed",
+  "verified_utc": "2026-11-24T00:38:42.048925+00:00"
+}

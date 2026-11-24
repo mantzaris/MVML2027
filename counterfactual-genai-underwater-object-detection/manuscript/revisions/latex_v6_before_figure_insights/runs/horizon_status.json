@@ -1,0 +1,11 @@
+{
+  "completion_receipt": "runs/research_complete.json",
+  "completion_receipt_sha256": "0d71f7ea7c11f1a187092871b760e4f6f3c6388aefa8a6f9828efa7859b3cd93",
+  "latex_sources_revision": 6,
+  "report_revision": 3,
+  "research_status": "complete",
+  "stages_completed": 38,
+  "status": "complete",
+  "updated_utc": "2026-11-24T00:38:42.265320+00:00",
+  "visual_review_complete": true
+}

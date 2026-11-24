@@ -1,0 +1,23 @@
+{
+  "allowed_document_changes": [
+    "EXECUTION_LOG.md",
+    "manuscript/README.md",
+    "manuscript/latex_build/main.pdf",
+    "manuscript/latex_build/main.validation.json",
+    "manuscript/latex_build/supplementary.pdf",
+    "manuscript/latex_build/supplementary.validation.json"
+  ],
+  "changed_before_review_renewal": [
+    "manuscript/latex_build/main.pdf",
+    "manuscript/latex_build/main.validation.json",
+    "manuscript/latex_build/supplementary.pdf",
+    "manuscript/latex_build/supplementary.validation.json"
+  ],
+  "experimental_changes": false,
+  "freeze_sha256": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+  "frozen_artifacts_verified": 185,
+  "prior_artifacts_checked": 380,
+  "source_changes": false,
+  "status": "passed",
+  "verified_utc": "2026-11-24T00:29:27.260663+00:00"
+}

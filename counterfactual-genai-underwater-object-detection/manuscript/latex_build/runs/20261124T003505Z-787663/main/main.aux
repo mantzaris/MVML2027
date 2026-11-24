@@ -1,0 +1,65 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{portia,signals1,signals2,uabench,physicsgen,huang1998,flowmatching,qwen,waveletship,uniqueship,speechocean,wav2vec2}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Comparison and verification workflow. Fourier, short-time Fourier transform (STFT) and wavelet views are primary. A bounded Hilbert--Huang transform (HHT) approximation explores decomposition into oscillating components. The agent chooses tools; numerical detectors score evidence.}}{1}{figure.1}\protected@file@percent }
+\newlabel{fig:1}{{1}{1}{Comparison and verification workflow. Fourier, short-time Fourier transform (STFT) and wavelet views are primary. A bounded Hilbert--Huang transform (HHT) approximation explores decomposition into oscillating components. The agent chooses tools; numerical detectors score evidence}{figure.1}{}}
+\citation{signals1,signals2}
+\citation{uabench}
+\citation{physicsgen}
+\citation{waveletship}
+\citation{huang1998}
+\citation{speechocean}
+\citation{wav2vec2}
+\citation{flowmatching}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work and Method}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Acoustic representations and detection}{2}{subsection.2.1}\protected@file@percent }
+\newlabel{eq:fourier}{{1}{2}{Acoustic representations and detection}{equation.2.1}{}}
+\newlabel{eq:stft}{{2}{2}{Acoustic representations and detection}{equation.2.2}{}}
+\newlabel{eq:hht}{{3}{2}{Acoustic representations and detection}{equation.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Generative replacement and paired control}{2}{subsection.2.2}\protected@file@percent }
+\newlabel{eq:delta}{{4}{2}{Generative replacement and paired control}{equation.2.4}{}}
+\newlabel{eq:score}{{5}{2}{Generative replacement and paired control}{equation.2.5}{}}
+\citation{portia}
+\citation{qwen}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Data and Experimental Protocol}{3}{section.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Custom cohort: AIS single-vessel positives and binary-task backgrounds.}}{3}{table.1}\protected@file@percent }
+\newlabel{tab:1}{{1}{3}{Custom cohort: AIS single-vessel positives and binary-task backgrounds}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Models, controller and controls}{3}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Outcomes and uncertainty}{3}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Real Detection and Configuration Choices}{4}{section.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Real-recording configuration comparison against AIS labels. Dots/ranges describe detector-seed variability. The operating-point panel uses thresholds fixed on calibration data and reports mean seed-specific rates in percent. Core methods and the locked comparator provide reference points; the exported tables retain all methods.}}{4}{figure.2}\protected@file@percent }
+\newlabel{fig:2}{{2}{4}{Real-recording configuration comparison against AIS labels. Dots/ranges describe detector-seed variability. The operating-point panel uses thresholds fixed on calibration data and reports mean seed-specific rates in percent. Core methods and the locked comparator provide reference points; the exported tables retain all methods}{figure.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Core comparisons and locked comparator: mean seed-specific metrics. This differs from AP of averaged seed probabilities. All methods are exported.}}{4}{table.2}\protected@file@percent }
+\newlabel{tab:2}{{2}{4}{Core comparisons and locked comparator: mean seed-specific metrics. This differs from AP of averaged seed probabilities. All methods are exported}{table.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Robustness and Controlled Temporal Detection}{5}{section.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Seed-17 added-noise sensitivity on a separate 120-record metadata-selected subset. The full primary test uses 1,200 records and three seeds. Shared parents and noise draws enable direct comparison of numeric fusion, STFT, fixed verification and the agent; the clean subset supplies a reference.}}{5}{figure.3}\protected@file@percent }
+\newlabel{fig:3}{{3}{5}{Seed-17 added-noise sensitivity on a separate 120-record metadata-selected subset. The full primary test uses 1,200 records and three seeds. Shared parents and noise draws enable direct comparison of numeric fusion, STFT, fixed verification and the agent; the clean subset supplies a reference}{figure.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Temporal AP means over seeds and declared conditions within each origin/family and IoU: mixed plus fixed SNRs for fully synthetic, three insertion SNRs for semi-synthetic. Each origin retains its own reference results.}}{5}{table.3}\protected@file@percent }
+\newlabel{tab:3}{{3}{5}{Temporal AP means over seeds and declared conditions within each origin/family and IoU: mixed plus fixed SNRs for fully synthetic, three insertion SNRs for semi-synthetic. Each origin retains its own reference results}{table.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Mechanism and Component Ablations}{6}{section.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Component AP and matched continuous-score contrasts identify scoring choices. Diamonds compare AP of mean-seed probabilities; dots/ranges describe paired detector-seed differences. Both \(V=0\) controls retain query, validity and calibration routing. Results describe the single test dependence component; uncertainty markers represent seed variability.}}{6}{figure.4}\protected@file@percent }
+\newlabel{fig:4}{{4}{6}{Component AP and matched continuous-score contrasts identify scoring choices. Diamonds compare AP of mean-seed probabilities; dots/ranges describe paired detector-seed differences. Both \(V=0\) controls retain query, validity and calibration routing. Results describe the single test dependence component; uncertainty markers represent seed variability}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Counterfactual interpretation}{6}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Numerical checks for representation selection}{6}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Compute, Reproducibility and Design Guidance}{7}{section.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Performance and processing cost for five timed methods, including heuristic verification. Mean detector-seed test AP is paired with seed 17 live cost on 32 calibration clips at batch 32. Horizontal bars show the range of three warmed passes. Model loading is recorded separately; memory is allocated GPU peak. The comparison maps tradeoffs among the measured methods.}}{7}{figure.5}\protected@file@percent }
+\newlabel{fig:5}{{5}{7}{Performance and processing cost for five timed methods, including heuristic verification. Mean detector-seed test AP is paired with seed 17 live cost on 32 calibration clips at batch 32. Horizontal bars show the range of three warmed passes. Model loading is recorded separately; memory is allocated GPU peak. The comparison maps tradeoffs among the measured methods}{figure.5}{}}
+\bibstyle{IEEEtran}
+\bibdata{main}
+\bibcite{portia}{1}
+\bibcite{signals1}{2}
+\bibcite{signals2}{3}
+\bibcite{uabench}{4}
+\bibcite{physicsgen}{5}
+\bibcite{huang1998}{6}
+\bibcite{flowmatching}{7}
+\bibcite{qwen}{8}
+\bibcite{waveletship}{9}
+\bibcite{uniqueship}{10}
+\bibcite{speechocean}{11}
+\bibcite{wav2vec2}{12}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{8}{section.8}\protected@file@percent }
+\gdef \@abspage@last{8}

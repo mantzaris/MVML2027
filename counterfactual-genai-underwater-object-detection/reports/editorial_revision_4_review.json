@@ -1,0 +1,230 @@
+{
+  "abstract_words": 216,
+  "changed_prior_documents": [
+    "EXECUTION_LOG.md",
+    "RESEARCH_RESULTS.md",
+    "manuscript/README.md",
+    "manuscript/latex_build/main.pdf",
+    "manuscript/latex_build/main.validation.json",
+    "manuscript/latex_renders/main/page-1.png",
+    "manuscript/main.tex"
+  ],
+  "conclusion_words": 195,
+  "documents": {
+    "main": {
+      "bib": "manuscript/main.bib",
+      "bib_sha256": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd",
+      "build_directory": "manuscript/latex_build/runs/20261123T215938Z-565958/main",
+      "compile_warnings": [],
+      "log_sha256": "0d5f112d3947894485718f08570e00451b1f79a1bc7fb8cd460935372fb5983a",
+      "page_count": 8,
+      "pages": [
+        {
+          "freshly_individually_viewed": true,
+          "notes": "Root and independent reviewer inspected all page 1 content: readable, no clipping/overlap, complete figure/caption and footer.",
+          "page": 1,
+          "path": "manuscript/latex_renders/main/page-1.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/main/page-1.png",
+          "review_transferred_by_exact_render_equality": false,
+          "reviewers": [
+            "root",
+            "independent integrity_review agent"
+          ],
+          "sha256": "024639af7321e553c9ab9ca3abe57e4e277ceba8ed59a9e8581fe6909ab6c7db",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Revision 3 visual review transferred by exact render equality.",
+          "page": 2,
+          "path": "manuscript/latex_renders/main/page-2.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/main/page-2.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "2f50f037bdc82f8e234ce1bc3d130a0f03de4d24de85c22cb3e264564f7b4963",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Revision 3 visual review transferred by exact render equality.",
+          "page": 3,
+          "path": "manuscript/latex_renders/main/page-3.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/main/page-3.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "4c5853fe3b6404c36140372629c2e72e27955ca367e01b0f61977132c6ad7b0e",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Revision 3 visual review transferred by exact render equality.",
+          "page": 4,
+          "path": "manuscript/latex_renders/main/page-4.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/main/page-4.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "928c4cdbb42f222cff0198c52bbf64dea286c63059eb126c1e1dc4f317b89ecd",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Revision 3 visual review transferred by exact render equality.",
+          "page": 5,
+          "path": "manuscript/latex_renders/main/page-5.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/main/page-5.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "8c09f718d9af7120db595ecd20899ede185e25be75c52b6ac74c7325ad6c9d1f",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Revision 3 visual review transferred by exact render equality.",
+          "page": 6,
+          "path": "manuscript/latex_renders/main/page-6.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/main/page-6.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "0f1a0a9a3ab2146dee7ebdccc7fc95997103516a7c487131778f5b73f45e4922",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Revision 3 visual review transferred by exact render equality.",
+          "page": 7,
+          "path": "manuscript/latex_renders/main/page-7.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/main/page-7.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "e9d581f325b70a2fd81861f9fc36e0e04b7b98522886796979498a4920ce7840",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Revision 3 visual review transferred by exact render equality.",
+          "page": 8,
+          "path": "manuscript/latex_renders/main/page-8.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/main/page-8.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "8337097cd56755a98ea924fb4bca458823e9837e9c9ecda547764e1f4daaa3b6",
+          "status": "passed"
+        }
+      ],
+      "pdf": "manuscript/latex_build/main.pdf",
+      "pdf_sha256": "a50787e2e7f0ce20db7edc3f3101215176182d1f54e614818451d2099531d95a",
+      "tex": "manuscript/main.tex",
+      "tex_sha256": "081df398d042f0654ee8eadbc0ef7a3a84433549898bb076c35d57d026430004"
+    },
+    "supplementary": {
+      "bib": "manuscript/supplementary.bib",
+      "bib_sha256": "62e880a8ff61728d49e373cc7eaca854ae7eec39b7bc67cc1d046f5d14f5e824",
+      "build_directory": "manuscript/latex_build/runs/20261123T214419Z-542082/supplementary",
+      "compile_warnings": [],
+      "log_sha256": "468a1f0654587a1fc4ce7c2ef4b24d43dcd48d6184ca82158c92c3e183327f81",
+      "page_count": 4,
+      "pages": [
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Unchanged supplement source, PDF and render; revision 3 visual review retained.",
+          "page": 1,
+          "path": "manuscript/latex_renders/supplementary/page-1.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/supplementary/page-1.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "f41d843cd0610ce646a02da0442716c185cadabb86ddf533a58bef8299aeab37",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Unchanged supplement source, PDF and render; revision 3 visual review retained.",
+          "page": 2,
+          "path": "manuscript/latex_renders/supplementary/page-2.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/supplementary/page-2.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "3d0e34b243561c6463284325d124ba13163f94a9bf3822a922c4f949ba1f1026",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Unchanged supplement source, PDF and render; revision 3 visual review retained.",
+          "page": 3,
+          "path": "manuscript/latex_renders/supplementary/page-3.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/supplementary/page-3.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "d5666c9de1a08f65fac1c283e269420c0052c94ef400af4a6ecb4e78a7e89aac",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Unchanged supplement source, PDF and render; revision 3 visual review retained.",
+          "page": 4,
+          "path": "manuscript/latex_renders/supplementary/page-4.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v3_before_qualitative_abstract/manuscript/latex_renders/supplementary/page-4.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "81a93fd29ed99a3c6f5db94a825dc95c6ae38e00ca4cea4753a8b24e2ff7f658",
+          "status": "passed"
+        }
+      ],
+      "pdf": "manuscript/latex_build/supplementary.pdf",
+      "pdf_sha256": "7355a49e007fdedf67bfa64b137434f79217d39ad220192729799a9b07415b67",
+      "tex": "manuscript/supplementary.tex",
+      "tex_sha256": "e6053be6c894081db7b7b042b2f3956062ec009cd5022cece3041a2808f60b5d",
+      "unchanged_from_review": "reports/editorial_revision_3_review.json"
+    }
+  },
+  "experimental_changes": false,
+  "freeze_sha256": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+  "frozen_artifacts_verified": 185,
+  "metric_source_sha256": {
+    "manifests/real_test_independent_audit.json": "45599b915d08fa3493d7b3ece6f1bcd79a2d96794e1c474123de4d1e119ba985",
+    "reports/synthetic_results.json": "9987efd6a42e4439559caa09684a042179a67e66461300a5fbb8ef62d12ede1d",
+    "results/tables/final_real_results.json": "6723b5eb6036a49469a6d91d1035410523ffb3c929785a58816f4cff0c27e4ee",
+    "results/tables/supplemental_views.json": "9631edfaf4e5d86eb28c28df2fe923d9900ced850e34832f2acf0dd66ab94e7c"
+  },
+  "metric_verification_note": "Quantitative findings carried forward unchanged from revision 3; all 345 completion-bound and 185 frozen artifact checksums passed immediately before this document-only renewal.",
+  "numerical_results_in_abstract": false,
+  "prior_artifacts_verified": 345,
+  "prior_completion_receipt": "manuscript/revisions/latex_v3_before_qualitative_abstract/runs/research_complete.json",
+  "prior_completion_receipt_sha256": "af11ae4a1db491a1d1def312c66e1ff8c48b65d84ed9ef6c663ae3d290c0afc4",
+  "publication_or_submission_performed": false,
+  "reviewed_utc": "2026-11-23T22:05:09.028728+00:00",
+  "reviewers": [
+    "root",
+    "independent abstract_review agent",
+    "independent integrity_review agent"
+  ],
+  "revision": 4,
+  "scope": "Abstract-only qualitative explanation of methodological contribution, successful configurations, diagnostic value and computational importance for nonexpert readers",
+  "source_scope_checks": [
+    "Only main abstract changed; all bytes outside abstract preserved",
+    "Conclusion and complete supplementary manuscript unchanged",
+    "All equations, tables, figures and bibliographies unchanged",
+    "No numerical results or citations in abstract; 216 words",
+    "Methodological contribution is controlled integration, without invention or priority claims",
+    "Real spectrogram-network comparison descriptive; architecture and representation not isolated",
+    "Separate synthetic temporal detection not attributed to reasoning agent",
+    "Agent numerical summaries distinguished from neural-network spectrogram input",
+    "Same observed fixed/agent detection score does not imply statistical equivalence",
+    "Score-removal preservation claim limited to tool use and calibration procedures",
+    "No improved agent accuracy, physical source removal or naturally annotated-event claim"
+  ],
+  "source_snapshot": "manuscript/latex_migration/editorial_revision_4.json",
+  "source_snapshot_sha256": "a66b9ba98d012e48c7623d3e49fc980489173a168b5a066891cfbf0ec96d22f8",
+  "status": "passed",
+  "verified_success_metrics": {
+    "agent_to_fixed_warm_batch_time_ratio": 7.018834694564517,
+    "cnn_ensemble_ap": 0.669191200709769,
+    "controlled_temporal_in_family_mean_ap_iou05": 0.8474596676783168,
+    "locked_wavelet_ensemble_ap": 0.5906101516678453,
+    "methodology_scope": "Paired cross-representation replacement/control statistic, acquisition/calibration-preserving score ablations and measured controller cost; no first-method or improved-agent claim",
+    "supplement_stft_mean_ap": {
+      "heldout": 0.8799748690770229,
+      "train": 0.994708468316155
+    },
+    "temporal_estimand": "Mean over 3 seeds and 8 declared mixed/fixed SNR conditions; separate supervised temporalCNN, synthetic union activity"
+  }
+}

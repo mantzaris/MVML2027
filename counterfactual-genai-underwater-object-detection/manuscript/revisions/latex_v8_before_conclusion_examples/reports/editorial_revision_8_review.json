@@ -1,0 +1,233 @@
+{
+  "changed_prior_documents": [
+    "EXECUTION_LOG.md",
+    "RESEARCH_RESULTS.md",
+    "manuscript/README.md",
+    "manuscript/build_manifest.json",
+    "manuscript/latex_build/main.pdf",
+    "manuscript/latex_build/main.validation.json",
+    "manuscript/latex_renders/main/page-8.png",
+    "manuscript/main.tex",
+    "manuscript/main_paper.pdf",
+    "reports/main_pdf_visual_review.json",
+    "runs/stages/manuscript.json"
+  ],
+  "changed_render_pages": [
+    "main/page-8.png"
+  ],
+  "conclusion_words": 188,
+  "documents": {
+    "main": {
+      "bib": "manuscript/main.bib",
+      "bib_sha256": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd",
+      "build_directory": "manuscript/latex_build/runs/20261124T150215Z-1988535/main",
+      "compile_warnings": [],
+      "log_sha256": "26c4f7a752286ba646091011332c37b5a4c42212632234ccdad3bde36ef8ff86",
+      "page_count": 8,
+      "pages": [
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact render equality transfers the archived visual review.",
+          "page": 1,
+          "path": "manuscript/latex_renders/main/page-1.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-1.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "90e01ece1230826d6ff5ee007e901993816d074a00a2b9c5e17c5712c76f6d51",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact render equality transfers the archived visual review.",
+          "page": 2,
+          "path": "manuscript/latex_renders/main/page-2.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-2.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "396f9121d7dd0b1d6cdb9abb048e2803a966269efe2a270dc857a9df7a908219",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact render equality transfers the archived visual review.",
+          "page": 3,
+          "path": "manuscript/latex_renders/main/page-3.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-3.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "6d378fc9fb81a164094c9045517d3078fe64a338babbbff0adecd8d95a5948fd",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact render equality transfers the archived visual review.",
+          "page": 4,
+          "path": "manuscript/latex_renders/main/page-4.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-4.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "2fb2fc9ca2de8e1af5f0832d10c48082209f1b2fb369fcd1847174e1ab629e4e",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact render equality transfers the archived visual review.",
+          "page": 5,
+          "path": "manuscript/latex_renders/main/page-5.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-5.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "5cf469e52daa24fb2f6ebf2c717e3ed8ccd78b99cf8541ad2bbdc20985f75cf5",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact render equality transfers the archived visual review.",
+          "page": 6,
+          "path": "manuscript/latex_renders/main/page-6.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-6.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "6de2efd91f93caf483283853c5d282cf61c331a0d83c2ddfe1aac82108462f4e",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact render equality transfers the archived visual review.",
+          "page": 7,
+          "path": "manuscript/latex_renders/main/page-7.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-7.png",
+          "review_transferred_by_exact_render_equality": true,
+          "reviewers": [],
+          "sha256": "e731897409e8939f9527c921766d609250373478f0004f450797accb68780810",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": true,
+          "notes": "Complete revised page inspected; conclusion, references and footer readable without clipping or overlap.",
+          "page": 8,
+          "path": "manuscript/latex_renders/main/page-8.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v7_before_qualitative_conclusion/manuscript/latex_renders/main/page-8.png",
+          "review_transferred_by_exact_render_equality": false,
+          "reviewers": [
+            "root",
+            "independent positive_framing_review agent"
+          ],
+          "sha256": "39aaa7ef183ea823a7f579732904c755d95e81d1e020e357dff81dc015e4a96b",
+          "status": "passed"
+        }
+      ],
+      "pdf": "manuscript/latex_build/main.pdf",
+      "pdf_sha256": "9a0ea38f207f0f7f9147004536b67a7b9f01781c6301cf1c513061b49742233d",
+      "reading_pdf": "manuscript/main_paper.pdf",
+      "reading_pdf_sha256": "9a0ea38f207f0f7f9147004536b67a7b9f01781c6301cf1c513061b49742233d",
+      "tex": "manuscript/main.tex",
+      "tex_sha256": "a4418ab58af56c81db96bdfc28a400542a21f5e787fbb451a4d92472ae99f5b3"
+    },
+    "supplementary": {
+      "bib": "manuscript/supplementary.bib",
+      "bib_sha256": "62e880a8ff61728d49e373cc7eaca854ae7eec39b7bc67cc1d046f5d14f5e824",
+      "build_directory": "manuscript/latex_build/runs/20261124T003505Z-787663/supplementary",
+      "compile_warnings": [],
+      "log_sha256": "37e89f8fe45752aafd7d225003d2fc510b70ae39cd715018b41010e99de1542c",
+      "page_count": 4,
+      "pages": [
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact current render equality transfers prior LaTeX visual review; reading PDF is byte-identical to validated LaTeX output.",
+          "page": 1,
+          "path": "manuscript/latex_renders/supplementary/page-1.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/latex_renders/supplementary/page-1.png",
+          "review_transferred_by_exact_render_equality": true,
+          "review_transferred_from_revision_4": false,
+          "reviewers": [],
+          "sha256": "1a7139610d9d56769a40f268de0d965574e5b6c89f546fea4fa40a731323aa18",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact current render equality transfers prior LaTeX visual review; reading PDF is byte-identical to validated LaTeX output.",
+          "page": 2,
+          "path": "manuscript/latex_renders/supplementary/page-2.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/latex_renders/supplementary/page-2.png",
+          "review_transferred_by_exact_render_equality": true,
+          "review_transferred_from_revision_4": false,
+          "reviewers": [],
+          "sha256": "822addf5bad7783db2d831e99484f188a333e280e9e1767734d910058d5703e2",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact current render equality transfers prior LaTeX visual review; reading PDF is byte-identical to validated LaTeX output.",
+          "page": 3,
+          "path": "manuscript/latex_renders/supplementary/page-3.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/latex_renders/supplementary/page-3.png",
+          "review_transferred_by_exact_render_equality": true,
+          "review_transferred_from_revision_4": false,
+          "reviewers": [],
+          "sha256": "9f0cfea0f71b8f8bd2b9a9637bb7455dccfc9a7205b4814fcbcbd9afdbf0cf17",
+          "status": "passed"
+        },
+        {
+          "freshly_individually_viewed": false,
+          "notes": "Exact current render equality transfers prior LaTeX visual review; reading PDF is byte-identical to validated LaTeX output.",
+          "page": 4,
+          "path": "manuscript/latex_renders/supplementary/page-4.png",
+          "previous_reviewed_render": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/latex_renders/supplementary/page-4.png",
+          "review_transferred_by_exact_render_equality": true,
+          "review_transferred_from_revision_4": false,
+          "reviewers": [],
+          "sha256": "e6191b08edf0d28516fe784f6500f58374c8ad0f44d0c86805027a4cff7ff353",
+          "status": "passed"
+        }
+      ],
+      "pdf": "manuscript/latex_build/supplementary.pdf",
+      "pdf_sha256": "2b32ac10e28739e291f479389ac652d749b5cb51e60ad7c09213bbb17542d456",
+      "reading_pdf": "manuscript/supplement.pdf",
+      "reading_pdf_sha256": "2b32ac10e28739e291f479389ac652d749b5cb51e60ad7c09213bbb17542d456",
+      "tex": "manuscript/supplementary.tex",
+      "tex_sha256": "1b381a3805cd5a5c84d84ec31177773f47575442ed6bfd268dde980555f3896f"
+    }
+  },
+  "experimental_changes": false,
+  "freeze_sha256": "2d338276e3478315bf9668311d78c991ccc6a7163254befeb8633bc6c0fd7e9b",
+  "frozen_artifacts_verified": 185,
+  "integrity_audit": "work/editorial_revision_8/pre_completion_integrity.json",
+  "integrity_audit_sha256": "6102a29f7dfcaceed38a30f824e3c8ebc7b179fd54db0d0e96b1322d61c27fcf",
+  "manuscript_stage_supersession": "runs/stages/manuscript.json",
+  "metadata_note_corrected_utc": "2026-11-24T15:06:02.557423+00:00",
+  "metric_source_sha256": {
+    "results/tables/final_real_results.json": "6723b5eb6036a49469a6d91d1035410523ffb3c929785a58816f4cff0c27e4ee",
+    "results/tables/runtime_benchmark.json": "c0722e8e7a5f7e101819fd1d93f65016e49df5c737dc9233a87d1a376494a539"
+  },
+  "numerical_results_in_conclusion": false,
+  "prior_artifacts_verified": 481,
+  "prior_completion_receipt": "manuscript/revisions/latex_v7_before_qualitative_conclusion/runs/research_complete.json",
+  "prior_completion_receipt_sha256": "c11cc7917a273296f8dd720adf5efc6ac598ede5a02b2e23921c5303b424f29d",
+  "publication_or_submission_performed": false,
+  "reviewed_utc": "2026-11-24T15:04:14.015714+00:00",
+  "reviewers": [
+    "root",
+    "independent positive_framing_review agent (scientific and visual review)",
+    "independent integrity_review agent (complete pre-edit baseline audit)"
+  ],
+  "revision": 8,
+  "scope": "Qualitative conclusion: representation understanding, methodological insights and practical value for future applications",
+  "source_scope_checks": [
+    "Exact reverse replacement reproduces revision 7 main source",
+    "All text outside the Conclusion unchanged; no numerical results or GPU-framework emphasis in revised conclusion",
+    "Representation and model choice described together; stronger CNN is a configuration result",
+    "Scoring and tool-control findings remain distinct and cohort-scoped",
+    "Future monitoring applications presented as development opportunities with independent recordings and human event annotations as next validation step",
+    "Supplement source, PDFs and visual review unchanged",
+    "All equations, tables, figure assets and bibliographies unchanged",
+    "Main page 8 individually inspected by two reviewers; seven other main pages and four supplement pages retain exact reviewed render hashes",
+    "Reading PDFs match canonical LaTeX outputs at eight and four pages",
+    "Historical stage provenance preserved; exact supervisor skip predicates passed"
+  ],
+  "source_snapshot": "manuscript/latex_migration/editorial_revision_8.json",
+  "source_snapshot_sha256": "11b35de95ef20958b7c13b0c0529009c6c682ad996a2bf6fe72dc7b4b7ee30d0",
+  "status": "passed",
+  "ui_preview_opened": false,
+  "unchanged_experimental_stage_receipts": 37
+}

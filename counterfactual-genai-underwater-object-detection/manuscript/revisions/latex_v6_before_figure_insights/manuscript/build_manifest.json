@@ -1,0 +1,65 @@
+{
+  "build_command": [
+    "bash",
+    "scripts/build_latex.sh"
+  ],
+  "build_directories": {
+    "main": "manuscript/latex_build/runs/20261124T003505Z-787663/main",
+    "supplementary": "manuscript/latex_build/runs/20261124T003505Z-787663/supplementary"
+  },
+  "build_script_sha256": "7fc928ee0221e65a84a08b65776b731851b4e1e33ed4d9f777c9902f24227627",
+  "built_utc": "2026-11-24T00:38:42.120754+00:00",
+  "historical_reportlab_execution": {
+    "manifest": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/build_manifest.json",
+    "manifest_sha256": "118e53b8a888c540e25f4c20d93d06c6fbdc78f8d6dbb874435d16f54a4161d1",
+    "outputs": {
+      "manuscript/main_paper.pdf": {
+        "archived_path": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/main_paper.pdf",
+        "sha256": "f06576740738d9a29497baa235e5b704713ca75a8695be99994a667133744b31"
+      },
+      "manuscript/supplement.pdf": {
+        "archived_path": "manuscript/revisions/latex_v6_before_current_pdf_names/manuscript/supplement.pdf",
+        "sha256": "4d50fa38eb608f8ad8278bc773703f71122916ea4a2c6e6bc19a483aedfe6eb0"
+      }
+    },
+    "report_builder_sha256": "a7ebc65d0ad009b76fd4f63bf11a6d98682e0073025fcaa044cbca4c88f7fbbd",
+    "report_only_revision": 3
+  },
+  "inputs": {
+    "manuscript/figures/figure1_method.pdf": "d0b50567cb48012fbbecf181ce19c207dbbec7f00fd97340f9601909ed670553",
+    "manuscript/figures/figure2_real_detection.pdf": "77e37f0b61498189d1bcf77a638b06f76b2ae0d245ae1cfeb8f09e85fd839048",
+    "manuscript/figures/figure3_robustness.pdf": "f550aed50dea41486c9dbb3d75a68ddeaba7f7d333a9b929e4473ecb8ee2186a",
+    "manuscript/figures/figure4_mechanism_ablation.pdf": "9616310010c136eeac2413edaa389fbc2897d869dc7e85c0445681a6d01a71f4",
+    "manuscript/figures/figure5_accuracy_compute.pdf": "181d92db555564f7a5bdf1eb0da1cc09bd0fd10bdc951d96a56e80c8a852a86c",
+    "manuscript/figures/figureS1_hht_numerics.pdf": "382c363ff5c8f3d045e7a56444cce9b5b408111bf931d965810857eb1c72eba1",
+    "manuscript/figures/figureS2_controlled_temporal.pdf": "0112150f2bac7b510e64ddef1dd304eaa84674c2dbb11ec676f06a0553b009a5",
+    "manuscript/figures/figureS3_representation_study.pdf": "d185ea0ae6c7a2ec480390f001674ffa684927103b9f8deebeec23971940855f",
+    "manuscript/main.bib": "f5482423297cf473f139a8583367712a643ebd28c9fb3192ee7e4a6afa9f17cd",
+    "manuscript/main.tex": "fd9b80ba8ea43c055aa3726bc89effe437ad83ec5e3024e2f5d1c9233e0ba36a",
+    "manuscript/supplementary.bib": "62e880a8ff61728d49e373cc7eaca854ae7eec39b7bc67cc1d046f5d14f5e824",
+    "manuscript/supplementary.tex": "1b381a3805cd5a5c84d84ec31177773f47575442ed6bfd268dde980555f3896f"
+  },
+  "latex_outputs": {
+    "manuscript/latex_build/main.pdf": "4c29123a2f98e2bfed2e464287f6bc683bd37939314ef8bbd19b03d44c84c73a",
+    "manuscript/latex_build/supplementary.pdf": "2b32ac10e28739e291f479389ac652d749b5cb51e60ad7c09213bbb17542d456"
+  },
+  "outputs": {
+    "manuscript/main_paper.pdf": "4c29123a2f98e2bfed2e464287f6bc683bd37939314ef8bbd19b03d44c84c73a",
+    "manuscript/supplement.pdf": "2b32ac10e28739e291f479389ac652d749b5cb51e60ad7c09213bbb17542d456"
+  },
+  "page_counts": {
+    "main_paper.pdf": 8,
+    "supplement.pdf": 4
+  },
+  "producer": "LaTeX",
+  "schema_version": 2,
+  "scope": "Current user-facing reading PDFs synchronized from validated LaTeX builds; no scientific changes",
+  "source_revision": 6,
+  "status": "rendered_and_visually_reviewed",
+  "visual_inspection_complete": true,
+  "visual_review_receipts": {
+    "reports/main_pdf_visual_review.json": "630dec38bdbc1e856997b9e8c1c48917b6db4778c1cec0c4ae71fd42ed46bdce",
+    "reports/supplement_pdf_visual_review.json": "a795fea5ecbe1cd9257c574f347fad1ad2754c62a1fe211f13e6d7343994cfa1"
+  },
+  "visual_review_utc": "2026-11-24T00:38:42.120754+00:00"
+}
