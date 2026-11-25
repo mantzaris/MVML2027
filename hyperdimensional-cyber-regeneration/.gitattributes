@@ -1,0 +1,4 @@
+# Preserve generated artifact bytes so provenance hashes survive checkouts.
+*.pdf binary
+*.png binary
+results/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol

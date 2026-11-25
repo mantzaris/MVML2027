@@ -1,0 +1,46 @@
+{
+  "settings": {
+    "train": 20000,
+    "val": 2000,
+    "test": 4000,
+    "epochs": 40,
+    "pretrain": 5,
+    "patience": 8,
+    "batch": 256,
+    "lr": 0.001,
+    "seeds": [
+      11,
+      23,
+      37,
+      51,
+      71
+    ],
+    "pilot": false
+  },
+  "hardware": "NVIDIA RTX 5000 Ada Generation",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "source_hashes": {
+    "src/regen.py": "d91df018bb8a5a71b02a5e09bc8dd494496570b2dc3507776af927f6448be570",
+    "scripts/run_study.py": "3407a17644f491460d9bf03178e4666af8ef8a3a54089df9c0b45fc8bf6e5420"
+  },
+  "source_commit": "e9acc2f6f8de4851c5bc8d6d10c956241de41d97",
+  "dataset_hashes": {
+    "train": "1af19b1c0d9b9fa93bf0801e9e1c7861eec0b234b2d6bed32482e3f97a5bb571",
+    "validation": "68d8d4d6b6501acb1a8eef8ee3d117479e044204fe83b0ceb51965ee0a1c0932"
+  },
+  "gpu_wall_seconds": 923.7730828809999,
+  "deviations": [
+    "Independent planning snapshots with prior-time observations; no temporal recovery-delay estimate.",
+    "64 training facts; 128/256-fact extrapolation. Facts are not host counts.",
+    "40 max epochs, patience 8, batch 256; 5 masked pretraining epochs.",
+    "No exhaustive hyperparameter search; validation selects gate threshold and early stopping.",
+    "Full decoder executes before selection; gate sparsity does not establish compute savings.",
+    "Latency: warmed CUDA batch-one model plus candidate scoring; excludes serialization/transfers.",
+    "Peak VRAM is incremental allocation above resident-model/data baseline.",
+    "Figures use seed-level confidence intervals; primary paired contrast separately uses hierarchical bootstrap.",
+    "All methods use the same sparse report codec; HDC is internal memory, not a wire-compression claim.",
+    "No independent link-loss/burst, no-evidence, or pair-repair sweep in this run.",
+    "Synthetic controlled test; no external CybORG validation."
+  ]
+}

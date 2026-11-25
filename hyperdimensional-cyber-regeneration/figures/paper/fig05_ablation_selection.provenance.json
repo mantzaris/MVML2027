@@ -1,0 +1,15 @@
+{
+  "title": "Controls, repair budgets, larger fact states, and paired ablation effects.",
+  "script": "scripts/make_results.py",
+  "script_sha256": "c9a01b7feace295209e6629963859664d5f052f4c79abff6b6ae808aa094d2f8",
+  "base_commit": "e9acc2f6f8de4851c5bc8d6d10c956241de41d97",
+  "inputs": {
+    "summary.csv": "164ab8acece9da536227fef42305bba53f7e8e9b82d293c2f8bdabd37dce4584"
+  },
+  "aggregation": "Mean within training seed; intervals use Student t across independent trained seeds.",
+  "uncertainty_limit": "Intervals do not include additional resampling of test topology clusters.",
+  "output_sha256": {
+    "pdf": "31e72e93cfc6e0a6a7bfbf932cc56607f947e4742839aeb6b3aad8bbe7b5075f",
+    "png": "99a24a6415780e7c9072eeaf0ba35788760f2fffb663206ee436986afc96f60f"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Calibration and fact reconstruction at reference conditions; marker area in panel D encodes confident-fact coverage.",
+  "script": "scripts/make_results.py",
+  "script_sha256": "c9a01b7feace295209e6629963859664d5f052f4c79abff6b6ae808aa094d2f8",
+  "base_commit": "e9acc2f6f8de4851c5bc8d6d10c956241de41d97",
+  "inputs": {
+    "summary.csv": "164ab8acece9da536227fef42305bba53f7e8e9b82d293c2f8bdabd37dce4584",
+    "calibration.csv": "e025aff2b28d9add7f15768c29faf5b9cc831fd2179f194845f3f1c229ef7900"
+  },
+  "aggregation": "Mean within training seed; intervals use Student t across independent trained seeds.",
+  "uncertainty_limit": "Intervals do not include additional resampling of test topology clusters.",
+  "output_sha256": {
+    "pdf": "37bbf049ab5d35be8f92ec7a8c6f234bd9bb1225dc34e4c19d41860c1a23ab19",
+    "png": "66b6cc423e327fa27959e1202796a5aba73fc35bd5f585990b3e991ab374e036"
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "procedure": "Reconstructed after the run from frozen checkpoints using validation only.",
+  "validation_seed": 22027,
+  "validation_snapshots": 2000,
+  "batch_size": 256,
+  "temperature": 0.1,
+  "threshold_grid": [
+    0.0,
+    0.1,
+    0.3,
+    0.5
+  ],
+  "aggregation": "Mean of batch-mean expected regrets, matching the original runner exactly.",
+  "tie_breaking": "First minimum in ascending threshold grid, matching numpy.argmin.",
+  "source_manifest_sha256": "2170de647a9ccd7f7ac0f649fc5c6d1ae96c4034c61c7a0c8fc7132e95419ad3",
+  "rows": [
+    {
+      "seed": 11,
+      "method": "B2",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.09822039306163788,
+        0.09822039306163788,
+        0.09822039306163788,
+        0.09822039306163788
+      ],
+      "checkpoint_sha256": "d6ef550b37801e0ff049eb5020a323ea68af32f167e53c88a78cfc6444fc2b60"
+    },
+    {
+      "seed": 11,
+      "method": "P",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.1942044198513031,
+        0.1942044198513031,
+        0.1952032446861267,
+        0.22256359457969666
+      ],
+      "checkpoint_sha256": "2abbc062183d78c65ab3a22d8641c3f67e60cb75448ea80ce3b54c9a59e8dcee"
+    },
+    {
+      "seed": 11,
+      "method": "no_provenance",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19888773560523987,
+        0.19888773560523987,
+        0.1991809904575348,
+        0.22586043179035187
+      ],
+      "checkpoint_sha256": "29b3a5fbb0b9f9a140f3b4208e357a26400f9b6b972e58329c500bf96b70a99c"
+    },
+    {
+      "seed": 11,
+      "method": "no_semantic",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19547247886657715,
+        0.19547247886657715,
+        0.19633793830871582,
+        0.2240915596485138
+      ],
+      "checkpoint_sha256": "32d3ef4b6ff10c910c94638f86261689ea3dabe6e5766e4d9c9bf3ea9309c72e"
+    },
+    {
+      "seed": 11,
+      "method": "dense_gate",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19518429040908813,
+        0.19518429040908813,
+        0.1966894567012787,
+        0.22243505716323853
+      ],
+      "checkpoint_sha256": "a57abea19da16881a03f4c430df11bb5da9815a42310317d505b9105d6477689"
+    },
+    {
+      "seed": 23,
+      "method": "B2",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.09711430966854095,
+        0.09711430966854095,
+        0.09711430966854095,
+        0.09711430966854095
+      ],
+      "checkpoint_sha256": "df03c23394d6d0da07948a76be3993ae075996e90acd2398f369c772e4cb487b"
+    },
+    {
+      "seed": 23,
+      "method": "P",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.1939651072025299,
+        0.1939651072025299,
+        0.19498607516288757,
+        0.21813994646072388
+      ],
+      "checkpoint_sha256": "81daa959c95cd813efdcf1f83997d64e5ebf73475f872feee17dc08fa5197a61"
+    },
+    {
+      "seed": 23,
+      "method": "no_provenance",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19681040942668915,
+        0.19681040942668915,
+        0.19744464755058289,
+        0.21875613927841187
+      ],
+      "checkpoint_sha256": "cf7b7d12e98173322cc442aa4d3ac2d35035fc9aaa248b2bf228dd714f06a7ba"
+    },
+    {
+      "seed": 23,
+      "method": "no_semantic",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19344361126422882,
+        0.19344361126422882,
+        0.1941458284854889,
+        0.22027891874313354
+      ],
+      "checkpoint_sha256": "0028e9c03a5b2ae551625f6c5e07490e264bbbe7c433d7710eb74a738ad497f0"
+    },
+    {
+      "seed": 23,
+      "method": "dense_gate",
+      "threshold": 0.3,
+      "validation_scores": [
+        0.20019496977329254,
+        0.20019496977329254,
+        0.20001569390296936,
+        0.22123511135578156
+      ],
+      "checkpoint_sha256": "13056eb5fee1b20a980732e4e5ec94f72dbe13da2f0f0a888e9ecd499120a89e"
+    },
+    {
+      "seed": 37,
+      "method": "B2",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.09943011403083801,
+        0.09943011403083801,
+        0.09943011403083801,
+        0.09943011403083801
+      ],
+      "checkpoint_sha256": "fb7643eb959c40839f015feed5208b5706f1e37dcdf1e0326595db537ca923f2"
+    },
+    {
+      "seed": 37,
+      "method": "P",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.1979997158050537,
+        0.1979997158050537,
+        0.19895608723163605,
+        0.22549258172512054
+      ],
+      "checkpoint_sha256": "8e8bc9ae274bd9d1eb939769870f77c8e5e9294da3c3719b156e069e5f2b6968"
+    },
+    {
+      "seed": 37,
+      "method": "no_provenance",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.1953999400138855,
+        0.1953999400138855,
+        0.19542573392391205,
+        0.21602217853069305
+      ],
+      "checkpoint_sha256": "70f7e1b0f5bfec824140fbe1f3ae80dd186327f3822aeb5707ac701965985e77"
+    },
+    {
+      "seed": 37,
+      "method": "no_semantic",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19842016696929932,
+        0.19842016696929932,
+        0.19866254925727844,
+        0.22396893799304962
+      ],
+      "checkpoint_sha256": "6218cb815e8d2f80e09ba23b786fb12ab175675e0ce7f50376b0ee558b6e2a9c"
+    },
+    {
+      "seed": 37,
+      "method": "dense_gate",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19745908677577972,
+        0.19745908677577972,
+        0.19840258359909058,
+        0.22799283266067505
+      ],
+      "checkpoint_sha256": "fab5e77de7cca7c26eb6ab635eb8808491aee3818e8a8f3551c241c0dfaa235f"
+    },
+    {
+      "seed": 51,
+      "method": "B2",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.09744618088006973,
+        0.09744618088006973,
+        0.09744618088006973,
+        0.09744618088006973
+      ],
+      "checkpoint_sha256": "4552f21a73cf70739eaa44a4a7119f1d91c18790c1bdc076391e69a1f02d2ab6"
+    },
+    {
+      "seed": 51,
+      "method": "P",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19814687967300415,
+        0.19814687967300415,
+        0.19844546914100647,
+        0.2175353467464447
+      ],
+      "checkpoint_sha256": "99da07ac291596290a3baa48b77d8f41aca49ac174caea8ab10f33acd1ad5794"
+    },
+    {
+      "seed": 51,
+      "method": "no_provenance",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.1979847103357315,
+        0.1979847103357315,
+        0.1995830535888672,
+        0.21217337250709534
+      ],
+      "checkpoint_sha256": "2c063fc21e84c63c9822df80037bba9a75c2311527abcaf3be58c8cb292e3e2f"
+    },
+    {
+      "seed": 51,
+      "method": "no_semantic",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19621121883392334,
+        0.19621121883392334,
+        0.1972915679216385,
+        0.23936191201210022
+      ],
+      "checkpoint_sha256": "4c6c84d00ed79f970541c57012ace92a66ed6fa4cc4a94979d62a8dcf49179a0"
+    },
+    {
+      "seed": 51,
+      "method": "dense_gate",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.1975124478340149,
+        0.1975124478340149,
+        0.19776637852191925,
+        0.2168765813112259
+      ],
+      "checkpoint_sha256": "dc851938ca549f394ada8154a82fd7e9068a50ed9a49aa936320ec5d1bcda8e3"
+    },
+    {
+      "seed": 71,
+      "method": "B2",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.0993526428937912,
+        0.0993526428937912,
+        0.0993526428937912,
+        0.0993526428937912
+      ],
+      "checkpoint_sha256": "d141ba26997fa4f545ca009b4eacace2d0b4a3cc75792bc8f66eb2c3dacf5985"
+    },
+    {
+      "seed": 71,
+      "method": "P",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19660557806491852,
+        0.19660557806491852,
+        0.1969723403453827,
+        0.2151181548833847
+      ],
+      "checkpoint_sha256": "dc1cd17fe1ff9ad85e78ec88aa2fd611ab7bd8d09503876cd880966bf73cc705"
+    },
+    {
+      "seed": 71,
+      "method": "no_provenance",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19652730226516724,
+        0.19652730226516724,
+        0.1966191977262497,
+        0.2134854793548584
+      ],
+      "checkpoint_sha256": "05eab25ce296829cfbeceae67cd4dd39a2454c3e376b9569891f4817c1fd3c02"
+    },
+    {
+      "seed": 71,
+      "method": "no_semantic",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.19569513201713562,
+        0.19569513201713562,
+        0.19659364223480225,
+        0.2159668654203415
+      ],
+      "checkpoint_sha256": "72bd7b728e1f7a0706a27e6c44e1bc067edb7a6327aec9de242b3795a52cd99b"
+    },
+    {
+      "seed": 71,
+      "method": "dense_gate",
+      "threshold": 0.0,
+      "validation_scores": [
+        0.20183415710926056,
+        0.20183415710926056,
+        0.20299658179283142,
+        0.22568881511688232
+      ],
+      "checkpoint_sha256": "23bd075d10876cd8f02389e44e849452dee08ae53e4165e5f2d9ada0d1a1db07"
+    }
+  ]
+}

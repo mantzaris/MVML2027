@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "results/summary.csv": "164ab8acece9da536227fef42305bba53f7e8e9b82d293c2f8bdabd37dce4584",
+    "results/curves.csv": "e45b3fbb7bc32f22fb164cbd2bb06b58c3c199ab43aae9b8d72a27858231537f",
+    "results/study_manifest.json": "2170de647a9ccd7f7ac0f649fc5c6d1ae96c4034c61c7a0c8fc7132e95419ad3",
+    "results/paired_comparison.json": "866e8c58144288e0f988297c42e830e1afdaa2ee251851016ddb144e4e039cbb",
+    "supplemental/figS1_training.png": "f2a8f3de99e66b8a7884098e4bc9ba3ced7a4fb247bd6353829bb0b05de0b89a",
+    "supplemental/figS2_seed_variation.png": "87190f0f6758a0b2eaa034ef4180fea2ea467281b9bd16aff7e146e29b1a4383",
+    "results/pipeline_timing.json": "15cb952a7788ee506218c97f5574cb9ada28c576dc449acf780c79de6393fa74"
+  },
+  "script_sha256": "36b3fe06629b82284ce718309c609fdd2930dcf53216249e0c154bb5630e8003",
+  "pdf_sha256": "19db0f2c76d3c4e5f3e4703a2de34824bde50f97b65b2f6372bf6d6368d6090a",
+  "pages": 3,
+  "figures": [
+    "figS1_training",
+    "figS2_seed_variation"
+  ],
+  "supplement_policy": "Not explicitly confirmed in public author guidelines"
+}

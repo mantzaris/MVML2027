@@ -1,0 +1,183 @@
+{
+  "condition": {
+    "corruption": 0.2,
+    "attack": "targeted",
+    "facts": 64,
+    "budget": 2048,
+    "repair_fraction": 0.1,
+    "raw_tag": "severity_0.2_targeted_64_2048_0.1"
+  },
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "snapshots_per_seed": 4000,
+  "topology_clusters": 250,
+  "eligible_snapshots": 3967,
+  "no_feasible_snapshots": 33,
+  "no_feasible_rate": 0.00825,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_rng_seed": 20271125,
+  "bootstrap_design": "Paired crossed two-factor bootstrap: resample training seeds and topology clusters with replacement; the same resampled clusters are used for every resampled seed. Within each cluster retain all snapshots. Percentile 95% intervals.",
+  "estimand": "Mean across training seeds of conditional Recall@3 and unconditional candidate-oracle regret. Conditions and candidate sets are fixed; uncertainty covers seeds and this synthetic topology generator.",
+  "limitations": "Only five training seeds; shared finite train/validation data; no uncertainty over generator design or external real-world environments. Two primary intervals are descriptive and not family-wise multiplicity adjusted. An interval including zero does not establish equivalence.",
+  "contrasts": {
+    "recall3": {
+      "direction": "P minus B2",
+      "higher_is_better": true,
+      "estimate": -0.003932442651877993,
+      "percentile_95_ci": [
+        -0.005904692248285278,
+        -0.002320858732119077
+      ],
+      "seed_effects": {
+        "11": -0.003024955886059995,
+        "23": -0.00403327451474666,
+        "37": -0.00403327451474666,
+        "51": -0.004285354171918326,
+        "71": -0.004285354171918326
+      },
+      "P_mean": 0.996067557348122,
+      "B2_mean": 1.0
+    },
+    "regret": {
+      "direction": "P minus B2",
+      "higher_is_better": false,
+      "estimate": 0.11991957288961859,
+      "percentile_95_ci": [
+        0.1133525610221666,
+        0.1263829324684106
+      ],
+      "seed_effects": {
+        "11": 0.11729975518817082,
+        "23": 0.12186461362615228,
+        "37": 0.1213600846286863,
+        "51": 0.11968224005727097,
+        "71": 0.1193911709478125
+      },
+      "P_mean": 0.1573192866901867,
+      "B2_mean": 0.037399713800568134
+    }
+  },
+  "raw_input_sha256": {
+    "results/runs/11/P_severity_0.2_targeted_64_2048_0.1.npz": "02b593f6f86cb0eeaae3b1ca23db96a9c86af829f39a41b764d10d460f1aaf36",
+    "results/runs/11/B2_severity_0.2_targeted_64_2048_0.1.npz": "1a96d587603702d37ab6b7986064fe507a5b9260e7155f3932d0267f82e85ad7",
+    "results/runs/23/P_severity_0.2_targeted_64_2048_0.1.npz": "a6c784cae6f19c7d7470b330f7491c09aa10ba7989032fc49dc7892c47b0dccf",
+    "results/runs/23/B2_severity_0.2_targeted_64_2048_0.1.npz": "1c80b530711503b0d3c8773de033a656f759b28d9e87ab9dd7747ae33dc1057f",
+    "results/runs/37/P_severity_0.2_targeted_64_2048_0.1.npz": "e72f0d1877413afbc0d5fcbfe7cac51d0d3f7df87d01b308863ec2ed8564cbf7",
+    "results/runs/37/B2_severity_0.2_targeted_64_2048_0.1.npz": "60e68139a557a0ac1b1ac4533443029626e336f484412ed516904c45df37f087",
+    "results/runs/51/P_severity_0.2_targeted_64_2048_0.1.npz": "ffaa7cd993fc11ba94056ed056f73a9025f05414ba96dda14027bd2b95389cb5",
+    "results/runs/51/B2_severity_0.2_targeted_64_2048_0.1.npz": "07125cbbb478b57895b2269870fe2ffa80751253a6db7f293c4ee07e8be2e3f2",
+    "results/runs/71/P_severity_0.2_targeted_64_2048_0.1.npz": "843aada07c6eb79dd48d80b567d3b7f33ff607b72d9dacaa5c4c332d244ad990",
+    "results/runs/71/B2_severity_0.2_targeted_64_2048_0.1.npz": "963ffc1ee3749b43ebaa90e40387251ae6863840e00c1954ac21e34a8454aa7a"
+  },
+  "secondary_descriptive_comparisons": {
+    "B5": {
+      "recall3": {
+        "direction": "P minus B5",
+        "mean_difference": 0.06987650394439697,
+        "seed_differences": {
+          "11": 0.0705823302268982,
+          "23": 0.0705823302268982,
+          "37": 0.07133853435516357,
+          "51": 0.06932193040847778,
+          "71": 0.06755739450454712
+        },
+        "inference": "Descriptive secondary comparison; no significance or multiplicity claim."
+      },
+      "regret": {
+        "direction": "P minus B5",
+        "mean_difference": -0.28367876410484316,
+        "seed_differences": {
+          "11": -0.28345614671707153,
+          "23": -0.2849186956882477,
+          "37": -0.28305305540561676,
+          "51": -0.28376734256744385,
+          "71": -0.2831985801458359
+        },
+        "inference": "Descriptive secondary comparison; no significance or multiplicity claim."
+      }
+    },
+    "random_gate": {
+      "recall3": {
+        "direction": "P minus random_gate",
+        "mean_difference": 0.07506933212280273,
+        "seed_differences": {
+          "11": 0.07562392950057983,
+          "23": 0.07486766576766968,
+          "37": 0.0751197338104248,
+          "51": 0.07461559772491455,
+          "71": 0.0751197338104248
+        },
+        "inference": "Descriptive secondary comparison; no significance or multiplicity claim."
+      },
+      "regret": {
+        "direction": "P minus random_gate",
+        "mean_difference": -0.29487974643707277,
+        "seed_differences": {
+          "11": -0.29588252305984497,
+          "23": -0.2956139147281647,
+          "37": -0.29264579713344574,
+          "51": -0.29383981227874756,
+          "71": -0.2964166849851608
+        },
+        "inference": "Descriptive secondary comparison; no significance or multiplicity claim."
+      }
+    },
+    "dense_gate": {
+      "recall3": {
+        "direction": "P minus dense_gate",
+        "mean_difference": 0.00045375823974609376,
+        "seed_differences": {
+          "11": 0.0015125274658203125,
+          "23": -0.00025206804275512695,
+          "37": 0.0,
+          "51": 0.0010083317756652832,
+          "71": 0.0
+        },
+        "inference": "Descriptive secondary comparison; no significance or multiplicity claim."
+      },
+      "regret": {
+        "direction": "P minus dense_gate",
+        "mean_difference": -0.002604246139526367,
+        "seed_differences": {
+          "11": -0.0026323050260543823,
+          "23": -0.0060749351978302,
+          "37": -0.00017631053924560547,
+          "51": -0.0008223354816436768,
+          "71": -0.003315344452857971
+        },
+        "inference": "Descriptive secondary comparison; no significance or multiplicity claim."
+      }
+    },
+    "B4": {
+      "recall3": {
+        "direction": "P minus B4",
+        "mean_difference": -0.0037811875343322756,
+        "seed_differences": {
+          "11": -0.0030249357223510742,
+          "23": -0.0037811994552612305,
+          "37": -0.0037811994552612305,
+          "51": -0.004285335540771484,
+          "71": -0.004033267498016357
+        },
+        "inference": "Descriptive secondary comparison; no significance or multiplicity claim."
+      },
+      "regret": {
+        "direction": "P minus B4",
+        "mean_difference": 0.10603586733341216,
+        "seed_differences": {
+          "11": 0.10728475078940392,
+          "23": 0.10440874472260475,
+          "37": 0.10099286213517189,
+          "51": 0.11020319908857346,
+          "71": 0.10728977993130684
+        },
+        "inference": "Descriptive secondary comparison; no significance or multiplicity claim."
+      }
+    }
+  }
+}

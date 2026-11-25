@@ -1,0 +1,538 @@
+{
+  "purpose": "Input-evidence and decision inspection; not a causal attribution or a full planner explanation.",
+  "selection": {
+    "training_seed": 37,
+    "method": "P",
+    "test_seed": 32027,
+    "condition": "severity",
+    "corruption": 0.2,
+    "attack": "targeted",
+    "facts": 64,
+    "budget_bytes_per_remote_source": 2048,
+    "repair_fraction": 0.1,
+    "snapshot_index": 959,
+    "topology_group": 32027000059,
+    "rule": "Stable ascending regret order, row at index N//2 (upper sample median).",
+    "selection_uses_evaluation_truth": true,
+    "selection_note": "Chosen only for illustration after aggregate metrics were fixed.",
+    "threshold": 0.0,
+    "threshold_selection_split": "validation",
+    "checkpoint_sha256": "8e8bc9ae274bd9d1eb939769870f77c8e5e9294da3c3719b156e069e5f2b6968",
+    "original_regret_reproduction_max_absolute_error": 0.0
+  },
+  "observable_inputs_and_model_decision": {
+    "delivered_remote_bytes": {
+      "1": 592,
+      "2": 568
+    },
+    "selected_fact_ids": [
+      1,
+      32,
+      42,
+      43,
+      46,
+      59
+    ],
+    "changed_fact_ids": [
+      1,
+      32,
+      42,
+      43,
+      46,
+      59
+    ],
+    "supporting_observations": [
+      {
+        "fact_id": 1,
+        "parent_fact_id": 1,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": true,
+            "report": 1.0,
+            "age": 0.4659656882286072
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": false,
+            "report": null,
+            "age": null
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.9629449844360352
+          }
+        ],
+        "noisy_history": 0.07999999821186066,
+        "provisional_belief": 0.8486590385437012,
+        "reconstruction": 0.008240253664553165,
+        "final_belief": 0.008240253664553165,
+        "gate_probability": 0.6413501501083374,
+        "gate_selected": true,
+        "belief_changed": true
+      },
+      {
+        "fact_id": 5,
+        "parent_fact_id": 5,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": true,
+            "report": 1.0,
+            "age": 0.05121520534157753
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": true,
+            "report": 0.0,
+            "age": 0.12351034581661224
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.38799914717674255
+          }
+        ],
+        "noisy_history": 0.9199999570846558,
+        "provisional_belief": 0.6842238306999207,
+        "reconstruction": 0.9994040727615356,
+        "final_belief": 0.6842238306999207,
+        "gate_probability": 0.3682518005371094,
+        "gate_selected": false,
+        "belief_changed": false
+      },
+      {
+        "fact_id": 14,
+        "parent_fact_id": 5,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": true,
+            "report": 0.0,
+            "age": 0.29421383142471313
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.6500037908554077
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": false,
+            "report": null,
+            "age": null
+          }
+        ],
+        "noisy_history": 0.9199999570846558,
+        "provisional_belief": 0.5335984230041504,
+        "reconstruction": 0.5334261655807495,
+        "final_belief": 0.5335984230041504,
+        "gate_probability": 0.2954987585544586,
+        "gate_selected": false,
+        "belief_changed": false
+      },
+      {
+        "fact_id": 19,
+        "parent_fact_id": 3,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": true,
+            "report": 1.0,
+            "age": 0.17666594684123993
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": true,
+            "report": 0.0,
+            "age": 0.01892908290028572
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.6950304508209229
+          }
+        ],
+        "noisy_history": 0.9199999570846558,
+        "provisional_belief": 0.6611228585243225,
+        "reconstruction": 0.9946519136428833,
+        "final_belief": 0.6611228585243225,
+        "gate_probability": 0.19280779361724854,
+        "gate_selected": false,
+        "belief_changed": false
+      },
+      {
+        "fact_id": 32,
+        "parent_fact_id": 6,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": true,
+            "report": 1.0,
+            "age": 0.24562279880046844
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.4518992006778717
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.0005879375385120511
+          }
+        ],
+        "noisy_history": 0.07999999821186066,
+        "provisional_belief": 0.9100184440612793,
+        "reconstruction": 0.00134215597063303,
+        "final_belief": 0.00134215597063303,
+        "gate_probability": 0.6552379727363586,
+        "gate_selected": true,
+        "belief_changed": true
+      },
+      {
+        "fact_id": 42,
+        "parent_fact_id": 2,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": true,
+            "report": 1.0,
+            "age": 0.7685490846633911
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.36961856484413147
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.8171024322509766
+          }
+        ],
+        "noisy_history": 0.9199999570846558,
+        "provisional_belief": 0.9800000190734863,
+        "reconstruction": 0.09289755672216415,
+        "final_belief": 0.09289755672216415,
+        "gate_probability": 0.5634918808937073,
+        "gate_selected": true,
+        "belief_changed": true
+      },
+      {
+        "fact_id": 43,
+        "parent_fact_id": 7,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": true,
+            "report": 1.0,
+            "age": 0.39906635880470276
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": false,
+            "report": null,
+            "age": null
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.8114427328109741
+          }
+        ],
+        "noisy_history": 0.9199999570846558,
+        "provisional_belief": 0.9800000190734863,
+        "reconstruction": 0.0076960367150604725,
+        "final_belief": 0.0076960367150604725,
+        "gate_probability": 0.7003709077835083,
+        "gate_selected": true,
+        "belief_changed": true
+      },
+      {
+        "fact_id": 46,
+        "parent_fact_id": 7,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": false,
+            "report": null,
+            "age": null
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.12668856978416443
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": false,
+            "report": null,
+            "age": null
+          }
+        ],
+        "noisy_history": 0.07999999821186066,
+        "provisional_belief": 0.7805640697479248,
+        "reconstruction": 0.01385359838604927,
+        "final_belief": 0.01385359838604927,
+        "gate_probability": 0.6421837210655212,
+        "gate_selected": true,
+        "belief_changed": true
+      },
+      {
+        "fact_id": 54,
+        "parent_fact_id": 4,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": true,
+            "report": 1.0,
+            "age": 0.21372559666633606
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.20530962944030762
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.9690662622451782
+          }
+        ],
+        "noisy_history": 0.9199999570846558,
+        "provisional_belief": 0.9800000190734863,
+        "reconstruction": 0.9997995495796204,
+        "final_belief": 0.9800000190734863,
+        "gate_probability": 0.03359655663371086,
+        "gate_selected": false,
+        "belief_changed": false
+      },
+      {
+        "fact_id": 58,
+        "parent_fact_id": 5,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": true,
+            "report": 1.0,
+            "age": 0.8608462810516357
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": true,
+            "report": 0.0,
+            "age": 0.3758089244365692
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": false,
+            "report": null,
+            "age": null
+          }
+        ],
+        "noisy_history": 0.9199999570846558,
+        "provisional_belief": 0.5239224433898926,
+        "reconstruction": 0.9748537540435791,
+        "final_belief": 0.5239224433898926,
+        "gate_probability": 0.2568490207195282,
+        "gate_selected": false,
+        "belief_changed": false
+      },
+      {
+        "fact_id": 59,
+        "parent_fact_id": 1,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": false,
+            "report": null,
+            "age": null
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.976533055305481
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": false,
+            "report": null,
+            "age": null
+          }
+        ],
+        "noisy_history": 0.07999999821186066,
+        "provisional_belief": 0.7167746424674988,
+        "reconstruction": 0.007455433253198862,
+        "final_belief": 0.007455433253198862,
+        "gate_probability": 0.6316838264465332,
+        "gate_selected": true,
+        "belief_changed": true
+      },
+      {
+        "fact_id": 60,
+        "parent_fact_id": 0,
+        "sources": [
+          {
+            "source_id": 0,
+            "local": true,
+            "available": true,
+            "report": 1.0,
+            "age": 0.9521988034248352
+          },
+          {
+            "source_id": 1,
+            "local": false,
+            "available": false,
+            "report": null,
+            "age": null
+          },
+          {
+            "source_id": 2,
+            "local": false,
+            "available": true,
+            "report": 1.0,
+            "age": 0.6045540571212769
+          }
+        ],
+        "noisy_history": 0.9199999570846558,
+        "provisional_belief": 0.9800000190734863,
+        "reconstruction": 0.9991912245750427,
+        "final_belief": 0.9800000190734863,
+        "gate_probability": 0.06435120850801468,
+        "gate_selected": false,
+        "belief_changed": false
+      }
+    ],
+    "top_three_candidates": [
+      {
+        "rank": 1,
+        "candidate_id": 21,
+        "required_fact_ids": [
+          54,
+          58
+        ],
+        "known_value": 1.0782270431518555,
+        "known_cost": 0.14276577532291412,
+        "predicted_utility": 0.4108434319496155,
+        "relaxed_prerequisite_probability": 0.5134440064430237
+      },
+      {
+        "rank": 2,
+        "candidate_id": 15,
+        "required_fact_ids": [
+          5,
+          19
+        ],
+        "known_value": 1.1410553455352783,
+        "known_cost": 0.1107451468706131,
+        "predicted_utility": 0.4054180979728699,
+        "relaxed_prerequisite_probability": 0.4523560106754303
+      },
+      {
+        "rank": 3,
+        "candidate_id": 26,
+        "required_fact_ids": [
+          14,
+          60
+        ],
+        "known_value": 0.8037720918655396,
+        "known_cost": 0.11830499768257141,
+        "predicted_utility": 0.3020086884498596,
+        "relaxed_prerequisite_probability": 0.5229264497756958
+      }
+    ],
+    "logical_rule": "Each non-root fact implies its listed parent."
+  },
+  "evaluator_only_hidden_truth": {
+    "not_available_to_model": true,
+    "selected_candidate_regret": 0.0948488712310791,
+    "oracle_candidate_id": 15,
+    "oracle_utility": 1.0303101539611816,
+    "top_three_actual_outcomes": [
+      {
+        "candidate_id": 21,
+        "true_utility": 0.9354612827301025,
+        "true_feasible": true
+      },
+      {
+        "candidate_id": 15,
+        "true_utility": 1.0303101539611816,
+        "true_feasible": true
+      },
+      {
+        "candidate_id": 26,
+        "true_utility": -0.11830499768257141,
+        "true_feasible": false
+      }
+    ],
+    "supporting_true_facts": {
+      "1": 0,
+      "5": 1,
+      "14": 0,
+      "19": 1,
+      "32": 0,
+      "42": 0,
+      "43": 0,
+      "46": 0,
+      "54": 1,
+      "58": 1,
+      "59": 0,
+      "60": 1
+    },
+    "genuine_changed_fact_ids": [
+      12,
+      20,
+      41
+    ],
+    "delivered_changed_report_fraction": 0.20000000298023224,
+    "delivered_intervention_fraction": 0.20000000298023224
+  }
+}

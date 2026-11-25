@@ -1,0 +1,15 @@
+{
+  "title": "Paired seed-level effects and actual delivered report changes under matched requested intervention rates.",
+  "script": "scripts/make_results.py",
+  "script_sha256": "c9a01b7feace295209e6629963859664d5f052f4c79abff6b6ae808aa094d2f8",
+  "base_commit": "e9acc2f6f8de4851c5bc8d6d10c956241de41d97",
+  "inputs": {
+    "summary.csv": "164ab8acece9da536227fef42305bba53f7e8e9b82d293c2f8bdabd37dce4584"
+  },
+  "aggregation": "Mean within training seed; intervals use Student t across independent trained seeds.",
+  "uncertainty_limit": "Intervals do not include additional resampling of test topology clusters.",
+  "output_sha256": {
+    "pdf": "d8daba78412d11809261865cd3d052dfcbeb7776200da75936044622a0d0f59f",
+    "png": "87190f0f6758a0b2eaa034ef4180fea2ea467281b9bd16aff7e146e29b1a4383"
+  }
+}

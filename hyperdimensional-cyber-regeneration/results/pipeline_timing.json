@@ -1,0 +1,147 @@
+{
+  "hardware": "NVIDIA RTX 5000 Ada Generation",
+  "seed": 37,
+  "facts": 64,
+  "scenario": "first fixed reference test snapshot; timing audit only",
+  "payload_bytes": 1340,
+  "scope": "Bounded host-wall timing from prepared evidence to ranked candidate IDs.\n\nThis is a post-training timing audit, not a second evaluation or selection run.\nIt includes real codec packing/unpacking, transfers, CUDA feature reconstruction,\nmodel inference and candidate ranking. Sensing, bandwidth admission, graph/action\ncatalogue construction, transport delay and cold model loading are excluded.",
+  "precision": "FP32 inference; TF32 allowed",
+  "warmups": 5,
+  "round_trip_predictions": "all 11 methods matched original CUDA features/predictions at atol 1e-6",
+  "source_sha256": "375e1e9e275615cd8734ee5fb8a2162e00396bf1df3fa26c8c5bffbb20599222",
+  "threshold_sha256": "8326d3a3425f5e1007cc0f3e1d7c31bbacf2f3dd7e3eae927f194898e95fd283",
+  "rows": [
+    {
+      "method": "B0",
+      "median_ms": 2.7025375002267538,
+      "p10_ms": 2.6254907012116746,
+      "p95_ms": 3.1738155501443543,
+      "repeats": 50,
+      "top3": [
+        8,
+        20,
+        0
+      ]
+    },
+    {
+      "method": "B1",
+      "median_ms": 4.237436501171032,
+      "p10_ms": 4.028169699449791,
+      "p95_ms": 4.942087249855831,
+      "repeats": 50,
+      "top3": [
+        13,
+        4,
+        31
+      ]
+    },
+    {
+      "method": "B2",
+      "median_ms": 4.304521999074495,
+      "p10_ms": 4.043320199161826,
+      "p95_ms": 4.813613300302677,
+      "repeats": 50,
+      "top3": [
+        13,
+        4,
+        31
+      ]
+    },
+    {
+      "method": "B3",
+      "median_ms": 3.106524999566318,
+      "p10_ms": 2.9294409998328774,
+      "p95_ms": 3.4594650498547708,
+      "repeats": 50,
+      "top3": [
+        13,
+        8,
+        21
+      ]
+    },
+    {
+      "method": "B4",
+      "median_ms": 4.020220999336743,
+      "p10_ms": 3.7875877009355463,
+      "p95_ms": 4.59082684965324,
+      "repeats": 50,
+      "top3": [
+        13,
+        4,
+        31
+      ]
+    },
+    {
+      "method": "B5",
+      "median_ms": 5.620619999717746,
+      "p10_ms": 5.235158101095294,
+      "p95_ms": 10.247431950301689,
+      "repeats": 50,
+      "top3": [
+        13,
+        8,
+        15
+      ]
+    },
+    {
+      "method": "P",
+      "median_ms": 5.246523000096204,
+      "p10_ms": 5.049241199412791,
+      "p95_ms": 6.208171500293246,
+      "repeats": 50,
+      "top3": [
+        13,
+        22,
+        27
+      ]
+    },
+    {
+      "method": "random_gate",
+      "median_ms": 5.320228499840596,
+      "p10_ms": 5.095817399524094,
+      "p95_ms": 6.104952749683434,
+      "repeats": 50,
+      "top3": [
+        13,
+        8,
+        15
+      ]
+    },
+    {
+      "method": "no_provenance",
+      "median_ms": 5.287293000037607,
+      "p10_ms": 5.066034700030286,
+      "p95_ms": 6.025153100108582,
+      "repeats": 50,
+      "top3": [
+        13,
+        27,
+        22
+      ]
+    },
+    {
+      "method": "no_semantic",
+      "median_ms": 5.116008000186412,
+      "p10_ms": 4.855272000531841,
+      "p95_ms": 5.958496700259275,
+      "repeats": 50,
+      "top3": [
+        13,
+        22,
+        27
+      ]
+    },
+    {
+      "method": "dense_gate",
+      "median_ms": 4.397797999445174,
+      "p10_ms": 3.8849805989229935,
+      "p95_ms": 5.026919699503196,
+      "repeats": 50,
+      "top3": [
+        13,
+        22,
+        27
+      ]
+    }
+  ]
+}

@@ -8,7 +8,9 @@
 
 **Project root:** `~/Documents/repos/MVML2027/hyperdimensional-cyber-regeneration/`
 
-**Research stage:** Proposed method and experimental protocol
+**Research stage:** Original proposal; a first CUDA snapshot study is now implemented.
+
+**Execution record:** The [frozen executable protocol](configs/executed_study.json), [method mapping](docs/METHOD_IMPLEMENTATION.md), and [measured results](docs/RESULTS.md) define the completed experiment. The sections below preserve the original broader plan. Sequential episodes, multiple wire codecs, link-burst tests, and external cyber-range validation remain extensions; they are not claimed as completed.
 
 ## Research contribution
 
@@ -216,7 +218,7 @@ CybORG/CAGE Challenge 4 [R7] provides a possible second public simulation settin
 
 Use a pilot of at most four GPU-hours to measure feasible batch sizes and throughput. A provisional total cap of 200 GPU-hours covers the main comparison and core ablations; revise the experiment grid using measured pilot cost before launching it. This is a planning budget, not authorization to provision paid infrastructure.
 
-The GPU readiness utility exits with a clear failure if CUDA or PyTorch is missing. The completed hardware smoke check is not a research experiment; model-training and evaluation results are still pending.
+The GPU readiness utility exits with a clear failure if CUDA or PyTorch is missing. The hardware smoke check alone is not a research result. The subsequent research run is documented separately in the execution record above.
 
 ## Metrics and statistical protocol
 

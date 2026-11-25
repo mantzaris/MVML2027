@@ -1,33 +1,47 @@
 # Hyperdimensional cyber regeneration
 
-GPU research project for MVML 2027, informed by DARPA HYPER-CAP, topic DPA27BZ02-DV001.
+CUDA research project for MVML 2027, informed by DARPA HYPER-CAP (DPA27BZ02-DV001).
 
-**Working paper title:** Learning to Regenerate Cyber Planning States under Deception with Hyperdimensional Neurosymbolic Models.
+**Working title:** Learning to Regenerate Cyber Planning States under Deception with Hyperdimensional Neurosymbolic Models.
 
-The study develops a learned, budgeted regeneration operator that repairs decision-relevant beliefs and evaluates the resulting cyber courses of action using a common symbolic planner. It builds on GraphMAE, decision-focused learning, semantic loss, and vector-symbolic computing.
+The implemented study learns a decision-impact gate for repairing beliefs in a synthetic prerequisite-planning task. It builds on GraphMAE-style feature pretraining, decision-focused learning, semantic loss, and fixed-codebook hyperdimensional retrieval. The experiment compares seven main methods and four ablations on the attached NVIDIA RTX 5000 Ada Generation.
 
-- [Research plan](RESEARCH_PLAN.md): problem, proposed equations, prior work, baselines, GPU execution, evaluation, milestones, and bid alignment.
-- [Figure plan](docs/FIGURE_PLAN.md): six multipanel paper figures, including four mandatory empirical result figures.
-- [References](docs/REFERENCES.md): primary sources and exactly what is inherited.
-- [Study configuration](configs/study.yaml): proposed experiment settings, not a training implementation.
-- [Design figure gallery](figures/design/index.html): four original vector diagrams of the research design, with no simulated performance claims.
-- [GPU setup](docs/GPU_SETUP.md): verified NVIDIA RTX 5000 Ada Generation, PyTorch 2.9.1, and CUDA 12.8.
-- [GPU launcher](scripts/run_gpu.py): selects the Ada GPU by UUID and runs the project environment.
-- [GPU readiness check](scripts/check_gpu.py): verifies CUDA and BF16 forward/backward computation.
-- [Project instructions](AGENTS.md): scope, GPU requirement, evidence standards, and direct-to-main workflow.
+This is a controlled snapshot study with noisy prior-time evidence, three partial observers, and 32 shared candidate conjunctions. It does not implement a full sequential cyber range. The original research plan includes extensions beyond this experiment; the frozen executable protocol and implementation notes define what was actually measured. Favorable performance and methodological novelty are hypotheses, not assumptions.
 
-All project code, data, logs, manuscripts, figures, and temporary work belong in this directory. Use `work/` for scratch files and `results/` for actual experiment outputs. This initial package contains the research design; no research model has been trained and no empirical result figures have been generated.
+## Research record
 
-Run the verified Ada GPU environment from this directory:
+- [Measured results and interpretation](docs/RESULTS.md), including the primary paired comparison and limitations.
+- [Four empirical paper figures](figures/paper/index.html), with vector PDFs, PNG previews, and provenance sidecars.
+- [Three-page supplemental PDF](supplemental/Supplement.pdf), containing two additional empirical figures.
+- [Implemented method and equations](docs/METHOD_IMPLEMENTATION.md), including the proposed decision-impact repair teacher.
+- [Implementation audit](docs/IMPLEMENTATION_AUDIT.md) and [original research plan](RESEARCH_PLAN.md).
+- [Frozen executable settings](configs/executed_study.json), [run manifest](results/study_manifest.json), and [compact measurement tables](results/README.md).
+- [References and inherited methods](docs/REFERENCES.md), [GPU setup](docs/GPU_SETUP.md), and [project instructions](AGENTS.md).
 
-```bash
-python3 scripts/run_gpu.py
-```
+## Reproduce on the Ada GPU
 
-The diagram generator uses Python's standard library and can run without a GPU:
+The launcher selects the attached Ada by UUID and refuses CPU fallback. Training uses BF16 autocast with FP32 losses and HDC accumulators; measured model inference uses FP32 with TF32 allowed. See the setup document for recreating the pinned environment.
 
 ```bash
-python3 scripts/render_design_figures.py
+# From this project directory; requires the attached Ada GPU and project .venv.
+python3 scripts/run_gpu.py -- -m unittest discover -s tests -v
+python3 scripts/run_gpu.py -- scripts/run_study.py
+python3 scripts/run_gpu.py -- scripts/explain_example.py
+python3 scripts/run_gpu.py -- scripts/measure_pipeline.py
+
+# CPU statistics and document rendering use recorded CUDA measurements.
+.venv/bin/python scripts/analyze_results.py
+.venv/bin/python scripts/make_results.py
+.venv/bin/python scripts/make_supplement.py
+.venv/bin/python scripts/verify_artifacts.py
 ```
 
-The figure generator is a documentation utility. Research training and model inference must use the CUDA launcher. Keep environments, raw logs, and checkpoints out of Git. Keep commits on the repository's existing `main` branch.
+The full run trains six models for each of five seeds and evaluates 11 methods across 14 conditions, with 20,000 training, 2,000 validation, and 4,000 test snapshots per condition. The test scenarios are paired across methods and training seeds; they are not 3.08 million independent worlds. All generated research tensors and model computation stay on CUDA. Plotting, statistics, serialization, and PDF rendering use the CPU.
+
+`results/pipeline_timing.json` separately measures a bounded host processing loop including packet serialization/deserialization, transfers, feature construction, inference, and candidate ranking. The figures' CUDA latency excludes those host contributions. Neither timing is an operational network deployment measurement.
+
+## Artifact policy
+
+All project work belongs in this directory. Source, compact CSV/JSON summaries, selected figures, and the supplemental PDF are tracked. The local `.venv/`, `work/`, raw `results/runs/`, and `results/checkpoints/` are ignored. Re-running overwrites aggregate results and retrains checkpoints; use a local backup before preserving multiple studies. Do not force-add ignored artifacts.
+
+The existing [design diagrams](figures/design/index.html) explain the proposal and are not empirical result figures. The requested supplemental length is implemented, but the public MVML guidelines inspected do not explicitly confirm a separate supplemental upload allowance. Confirm that category before submission.

@@ -1,5 +1,22 @@
 # Multipanel figures for the research paper
 
+## Executed snapshot-study figures
+
+The completed [empirical gallery](../figures/paper/index.html) implements the following four main figures and two extra figures in the [three-page supplement](../supplemental/Supplement.pdf). The original panel proposals below remain a roadmap for broader work. Temporal recovery, comparisons between wire codecs, and HDC-dimension sweeps were not executed and are not shown as measured results.
+
+| Delivered figure | Recorded panels |
+| --- | --- |
+| 2: Deception and decision quality | Recall and regret by requested intervention rate; deception mechanisms; paired P-minus-B2 seed effects. |
+| 3: Reconstruction and calibration | Plan-success reliability; calibration sample support; fact Brier; repair and confident-error rates. Confidence coverage is tabulated in the results report. |
+| 4: Evidence and GPU resources | Common-codec payload limits; warmed CUDA inference/quality; incremental GPU allocation; underlying model training time. Separate host-loop timing is recorded in JSON. |
+| 5: Selection and ablations | All eleven controls; repair-budget regret; size/topology extrapolation; paired regret contrasts. |
+| S1 (additional) | Training and validation objectives, with differing objective scales and early stopping documented. |
+| S2 (additional) | Paired seed variability by mechanism; delivered interventions versus actual report-value changes. |
+
+All plots use actual recorded measurements. Main-figure error bars are 95% training-seed t intervals conditional on the shared test pool. The separate primary paired comparison uses a crossed seed/topology-cluster bootstrap. Filenames retain the proposed paper numbering; the four earlier design figures are not part of these empirical counts. An inspectable held-out case is available in `results/example_trace.json` rather than a new architecture figure.
+
+## Original figure proposal
+
 The paper must contain at least four empirical figures generated from recorded GPU experiments. Six figures are planned; Figures 2–5 are mandatory empirical figures. Four separate design diagrams already explain the protocol and must never be presented as measured results.
 
 Use a consistent method palette, line styles and marker shapes, readable panel labels, and accessible colors. Preserve a vector PDF/SVG master and a 300 dpi PNG preview. Use Matplotlib or another standard scientific plotting library for measured plots. At final manuscript size use approximately 8–10 pt labels and avoid legends obscuring data.

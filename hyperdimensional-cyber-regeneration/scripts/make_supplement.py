@@ -25,8 +25,14 @@ def main():
     if not manifest_path.is_file(): raise FileNotFoundError("A completed study manifest is required")
     manifest=json.loads(manifest_path.read_text())
     settings=manifest.get("settings",{})
+    comparison_path=ROOT/"results/paired_comparison.json"
+    if not comparison_path.is_file(): raise FileNotFoundError("Run scripts/analyze_results.py before the final supplement")
+    comparison=json.loads(comparison_path.read_text())
     for name in ["figS1_training.png","figS2_seed_variation.png"]:
         if not (SUPP/name).is_file(): raise FileNotFoundError(name)
+        fig_provenance=json.loads((SUPP/name.replace(".png",".provenance.json")).read_text())
+        for source,digest in fig_provenance["inputs"].items():
+            if hashfile(ROOT/"results"/source)!=digest: raise ValueError("Supplementary figures are stale; regenerate them")
     SUPP.mkdir(exist_ok=True)
     fonts=Path("/usr/share/fonts/truetype/dejavu")
     if (fonts/"DejaVuSans.ttf").is_file():
@@ -66,7 +72,7 @@ def main():
     text("GPU study of selective regeneration for cyber planning under deception","SubtitleStudy")
     train=settings.get("train","not recorded");val=settings.get("val","not recorded");test=settings.get("test","not recorded")
     seeds=sorted({int(r["seed"]) for r in rows})
-    text(f"This supplement documents a controlled synthetic study with {train:,} training, {val:,} validation, and {test:,} test snapshots per condition, "
+    text(f"This supplement documents a controlled synthetic study with {train:,} shared training snapshots, {val:,} shared validation snapshots, and {test:,} paired test snapshots in each evaluation condition, "
          f"and {len(seeds)} independent training seeds ({', '.join(map(str,seeds))})."
          if all(isinstance(n,int) for n in [train,val,test]) else
          f"This supplement documents a controlled synthetic study with {len(seeds)} independently trained seeds. Exact sample counts are recorded in results/study_manifest.json.")
@@ -74,9 +80,9 @@ def main():
     text("A sample is a belief-repair snapshot with three partial observers, prior-time evidence, and a hidden current state. "
          "It is not a 64-step operational episode. Deceptive reports and genuine state changes are distinct generator mechanisms. "
          "The same candidate prerequisites, paired test samples, and utility rule are used for every method. Hidden truth supervises training and scores evaluation; it is excluded from the model input.")
-    text("B0 is the probabilistic evidence baseline; B1 adapts GraphMAE feature reconstruction [1]; B2 adds decision-aware supervision [2]. "
+    text("B0 applies symbolic constraints to the fused prior; B1 adapts GraphMAE feature reconstruction [1]; B2 adds decision-aware supervision [2]. "
          "B3 uses HDC cleanup, B4 reconstructs all beliefs, and B5 uses an entropy gate. P combines HDC with the learned decision-impact gate. "
-         "Additional controls remove provenance or semantic constraints [3], randomize the gate, or replace HDC with a dense representation.")
+         "Additional controls remove direct source/age cues or semantic constraints [3], randomize the gate, or replace HDC with a dense representation. The source-cue control retains the shared age-weighted prior. B4, B5, and random-gate controls reuse P's trained decoder.")
     head("S2  Reference-condition measurements")
     data=[["Method","Recall@3","Regret","Brier","GPU ms"]]
     for m in CORE:
@@ -88,12 +94,12 @@ def main():
                 cells.append(f"{mean:.3f} ± {ci:.3f}")
             data.append(cells)
     table(data,[55,111,111,111,111])
-    text("Table S1. Mean and 95% Student-t intervals across training seeds at 20% targeted corruption and the reference communication allowance. "
+    text("Table S1. Mean and 95% Student-t intervals across training seeds at a 20% requested targeted report-intervention rate and the reference communication allowance. "
          "Recall@3 is conditional on a feasible candidate existing. Brier is fact-level. GPU milliseconds measure model inference plus candidate ranking, excluding host transfers and serialization.","CaptionStudy")
     head("S3  Decision-impact teacher")
     story.append(Preformatted("Delta_f = max(0, R(b; U*) - R(b[f <- y_f]; U*))\ng* = top-K strictly positive single-fact regret reductions",
                               ParagraphStyle("EquationStudy",fontName="Courier",fontSize=9,leading=14,backColor=colors.HexColor("#f1f5f9"),borderPadding=8)))
-    text("The teacher extends decision-focused prediction by supervising which beliefs to regenerate. It uses simulator truth only during training. "
+    text("Here R is soft expected candidate regret with temperature 0.1. The teacher extends decision-focused prediction by supervising which beliefs to regenerate. It uses simulator truth only during training. "
          "Independent one-fact improvements are an additive approximation; they do not solve interacting repair selection exactly.","CaptionStudy")
     story.append(PageBreak())
 
@@ -112,32 +118,39 @@ def main():
     head("S5  Timing and memory interpretation")
     text("Research tensor operations execute on the NVIDIA RTX 5000 Ada GPU. Batch-one latency covers CUDA model inference and utility ranking. "
          "These measurements do not include host-side message serialization, device transfer, or an operational planner's full loop. "
-         "Reported peak VRAM is the incremental CUDA allocation above the already resident model/data baseline, not total model or machine memory. Training time includes the implemented optimization stage; "
-         "a mask that changes fewer facts does not by itself establish sparse-decoder compute savings.")
-    text("The main paper figures separate planning quality, uncertainty, communication allowance, and GPU resource measurements. "
+         "Reported peak VRAM is the incremental CUDA allocation above the already resident model/data baseline, not total model or machine memory. Recorded training wall time includes optimization, validation, and orchestration; "
+         "B4/B5 reuse P training, so their model-training costs are not additional runs. A mask that changes fewer facts does not by itself establish sparse-decoder compute savings.")
+    pipeline_path=ROOT/"results/pipeline_timing.json"
+    if pipeline_path.is_file():
+        text("A separate host wall-time audit in results/pipeline_timing.json includes prepared-evidence pack/unpack, transfers, fusion, and inference/ranking. "
+             "It excludes sensing and graph/candidate generation.","CaptionStudy")
+    text("All methods share the same sparse symbolic wirecodec. Payload limits change evidence availability; no HDC wire-compression advantage is measured. The main figures separate planning quality, uncertainty, evidence availability, and GPU resources. "
          "The measured synthetic costs must not be extrapolated directly to disconnected tactical hardware or realistic cyber missions.")
     story.append(PageBreak())
 
     text("Seed variability and limits of inference","TitleStudy")
     image("figS2_seed_variation.png")
-    text("Figure S2. Additional paired seed-level contrasts between P and B2 by deception mechanism, with feasible-candidate availability shown separately. "
-         "Positive recall differences favor P. Availability describes the denominator of recall@3 and is not a model achievement.","CaptionStudy")
-    contrasts=np.array(list(paired(ref).values()))
-    if len(contrasts):
-        mu=contrasts.mean();ci=2.776*contrasts.std(ddof=1)/np.sqrt(len(contrasts)) if len(contrasts)>1 else 0
-        head("S6  Primary comparison and uncertainty")
-        text(f"At the reference condition, the paired P-minus-B2 recall difference is {mu:+.4f}, with a 95% training-seed interval "
-             f"[{mu-ci:+.4f}, {mu+ci:+.4f}]. "
-             +("This interval crosses zero; it does not establish a positive recall advantage." if mu-ci<=0<=mu+ci else
-               "The observed difference favors P within this fixed synthetic evaluation." if mu-ci>0 else
-               "The observed difference favors B2 within this fixed synthetic evaluation."))
-    text("Intervals summarize variation over independent model-training seeds conditional on the fixed test pool. "
-         "They do not include a hierarchical bootstrap over new topology clusters. The study is a controlled mechanism test, not a claim of deployment readiness, "
-         "globally optimal planning, or robustness to arbitrary deception.")
+    text("Figure S2. Additional paired seed-level contrasts between P and B2 by deception mechanism, with delivered interventions and actual report-value changes shown separately. "
+         "Positive recall differences favor P. Coherent all-ready overwrites can leave already-ready reports unchanged; equal requested intervention rates need not imply equal value-change rates.","CaptionStudy")
+    head("S6  Primary comparison and uncertainty")
+    recall=comparison["contrasts"]["recall3"]; regret=comparison["contrasts"]["regret"]
+    rlo,rhi=recall["percentile_95_ci"]; glo,ghi=regret["percentile_95_ci"]
+    conclusion=("These intervals include zero and do not establish an improvement." if rlo<=0<=rhi and glo<=0<=ghi else
+                "Both primary estimates favor B2 in this controlled setting." if rhi<0 and glo>0 else
+                "The directions and intervals should be assessed separately for recall and regret.")
+    text(f"At the reference condition, P-minus-B2 recall is {recall['estimate']:+.4f} (95% interval [{rlo:+.4f}, {rhi:+.4f}]); "
+         f"the regret difference is {regret['estimate']:+.4f} [{glo:+.4f}, {ghi:+.4f}] (lower regret is better). " + conclusion)
+    text(f"Primary intervals use {comparison['bootstrap_repetitions']:,} paired crossed bootstrap draws over training seeds and "
+         f"{comparison['topology_clusters']} topology clusters, sharing cluster draws across seeds. Main-figure and Table S1 intervals instead use "
+         "Student-t variation across training seeds only. Neither includes uncertainty over the generator design or the finite shared training/validation set; "
+         "intervals are descriptive without multiplicity adjustment.")
+    text("False-repair and confident-error metrics average snapshot-level conditional fractions, returning zero for empty denominators. "
+         "This controlled mechanism study does not establish deployment readiness, globally optimal planning, or arbitrary-deception robustness.","SmallStudy")
     deviations=manifest.get("deviations",manifest.get("protocol_deviations",[]))
     if deviations:
         head("S7  Recorded scope differences")
-        text(" ".join(escape(str(d)) for d in deviations),"SmallStudy")
+        scope_notes=[str(d) for d in deviations if str(d).startswith(("No independent", "Synthetic controlled", "64 training facts"))]
+        text("The complete deviation register is in results/study_manifest.json. " + " ".join(escape(d) for d in scope_notes),"SmallStudy")
     else:
         head("S7  Scope")
         text("The empirical study implements the recorded snapshot protocol. Its evidence does not establish longitudinal recovery delays, "
@@ -161,7 +174,10 @@ def main():
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
     reader=PdfReader(str(path))
     if len(reader.pages)!=3: raise RuntimeError(f"Expected 3 pages; rendered {len(reader.pages)}")
-    prov={"inputs":{str(p.relative_to(ROOT)):hashfile(p) for p in [ROOT/"results/summary.csv",ROOT/"results/curves.csv",manifest_path]},
+    inputs=[ROOT/"results/summary.csv",ROOT/"results/curves.csv",manifest_path,comparison_path,
+            SUPP/"figS1_training.png",SUPP/"figS2_seed_variation.png"]
+    if pipeline_path.is_file(): inputs.append(pipeline_path)
+    prov={"inputs":{str(p.relative_to(ROOT)):hashfile(p) for p in inputs},
           "script_sha256":hashfile(Path(__file__)),"pdf_sha256":hashfile(path),"pages":len(reader.pages),
           "figures":["figS1_training","figS2_seed_variation"],"supplement_policy":"Not explicitly confirmed in public author guidelines"}
     (SUPP/"Supplement.provenance.json").write_text(json.dumps(prov,indent=2)+"\n")

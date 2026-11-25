@@ -62,7 +62,7 @@ The hardware smoke check verified FP32 CUDA matrix multiplication, bipolar HDC b
 Run the device-selection tests without touching the GPU:
 
 ```bash
-python3 -B -m unittest discover -s tests -v
+python3 -B -m unittest discover -s tests -p test_gpu_selection.py -v
 ```
 
 ## Keep the repository small
@@ -71,4 +71,4 @@ The virtual environment, installation log, raw GPU report, caches, generated dat
 
 Commit source, dependency pins, concise result summaries, manifests, and selected publication figures. Check the actual staged paths and blob sizes before committing. Do not use force-add to bypass the artifact ignore rules.
 
-The GPU smoke check is complete. The research simulator, training pipeline, baselines, and empirical paper figures remain future implementation work.
+The research simulator and CUDA training pipeline are now implemented. See [the project README](../README.md) for the full experiment and figure-generation commands; run scientific correctness checks through the Ada launcher.
