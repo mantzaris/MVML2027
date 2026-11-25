@@ -1,0 +1,112 @@
+{
+  "stage": "frozen_before_fresh_test",
+  "name": "Shared-context candidate ranking and inexpensive ML",
+  "train": 20000,
+  "val": 2000,
+  "test": 4000,
+  "train_seed": 12027,
+  "validation_seed": 22027,
+  "test_seed": 62027,
+  "pilot_test_seed": 72027,
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "batch": 256,
+  "epochs": 40,
+  "pretrain": 5,
+  "patience": 8,
+  "lr": 0.001,
+  "risk_beta": 2.0,
+  "temperature": 0.1,
+  "loss_weights": {
+    "fact_bce": 1,
+    "plan_brier": 1,
+    "decision_regret": 0.25,
+    "semantic": 0.1
+  },
+  "new_training_variants": [
+    "SCR",
+    "CAND_CTX",
+    "CAND_LOCAL",
+    "LOGIT",
+    "DAE"
+  ],
+  "new_inference_ablation": null,
+  "training_groups": [
+    "benign",
+    "targeted",
+    "random",
+    "coherent"
+  ],
+  "training_attack_severities": [
+    0.1,
+    0.2,
+    0.4
+  ],
+  "mixture_assignment": "Index modulo 4 selects group; floor(index/4) modulo 3 selects attack severity. Original hidden worlds and candidate sets retained; one observation realization per world.",
+  "early_stopping": "Mean of four validation group means of each family total loss. Same rule, different candidate versus fact prediction targets.",
+  "primary": "SCR minus ID macro regret across benign0 and targeted/random/coherent0.2, facts64/budget2048/missing0.2",
+  "bootstrap": "2000 paired crossed seed/topology draws; same clusters across seeds and paired conditions",
+  "old_test_role": "32027/42027/52027 development only. New pilot72027. Frozen fresh confirmation pool62027.",
+  "novelty_scope": "Task-specific composition of canonical prerequisite set aggregation and a shared latent expert gate; Deep Sets, mixtures, denoising autoencoders and decision-focused learning are established.",
+  "budget_scope": "SCR/CTX/LOCAL predict candidate feasibility directly; fact-level repair metrics do not exist. ID/JH/DAE/LOGIT reconstruct all fact beliefs.",
+  "wire_scope": "All methods retain the same sparse report codec; no HDC wire-compression claim.",
+  "consistency_regularizer": "LOGIT/DAE only: mean squared ReLU(child marginal minus parent marginal). Direct models have no fact marginals and no fact consistency term.",
+  "secondary": [
+    "CAND_CTX",
+    "CAND_LOCAL",
+    "DAE",
+    "LOGIT",
+    "JH",
+    "B2",
+    "P"
+  ],
+  "pretraining": "Only DAE receives 5 observed-feature denoising epochs (mask .25, Gaussian noise std .05). Other new models start supervised training directly. Prior checkpoints unchanged.",
+  "candidate_loss_weights": {
+    "candidate_bce": 1,
+    "plan_brier": 1,
+    "decision_regret": 0.25
+  },
+  "architecture": {
+    "phi": [
+      28,
+      32,
+      32
+    ],
+    "candidate_head": [
+      162,
+      64,
+      4
+    ],
+    "context_gate": [
+      64,
+      32,
+      4
+    ],
+    "single_head": [
+      162,
+      64,
+      1
+    ],
+    "local": "Same 162-wide input, global 64 entries zeroed",
+    "DAE": [
+      56,
+      32,
+      8,
+      32,
+      56
+    ],
+    "LOGIT": [
+      56,
+      1
+    ]
+  },
+  "inputs": "Observed x_f, parent x, observed global moments. No candidate-specific values/costs tensors in feasibility heads; inherited x channel12 contains catalogue value-weighted criticality. No group/corruption/truth/oracle labels at inference.",
+  "canonicalization": "Pool required nonroot children, unique touched roots and two log1p cardinalities; adding a redundant root is invariant.",
+  "shadow_union": "Core conditions only: fraction q(Rj union Rj+1)>min(qj,qj+1)+1e-4. Up to10 required facts versus training2..5; diagnostic only, no test tuning.",
+  "gate_diagnostics": "Entropy in nats and mean four latent weights; expert identities are not identified attack classes."
+}
