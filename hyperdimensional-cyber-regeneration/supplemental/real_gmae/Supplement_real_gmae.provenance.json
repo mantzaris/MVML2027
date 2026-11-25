@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "results/real_gmae/summary.csv": "fdfa31269e5c7b611c2e083496f4db31dcdbdad0d158d8efaa1903885766ba90",
+    "results/real_gmae/manifest.json": "bf200ea8e43c4186a3e5cdac8aa945eee72aef496528705ea7dc25c0aa50e38f",
+    "results/real_gmae/comparisons.json": "e0e20ace04c9ea8b4c9a32c8a0c05a1ab0e6069c7af30ba330454dedc6a63f47",
+    "results/real_gmae/gpu_audit.json": "0687fe3ecdab35b8ea06ebe281e9cc51b34f1b4b48ae111a03d21f33d47bec97",
+    "results/real/ctu13_data_manifest.json": "303ff7a1f72c319b00ccdb7b46159d5a7b327377a31763915471b8f53c6f62c3",
+    "supplemental/real_gmae/gmae_figS1_training.png": "f170322eaae562adf8d9459e52108d26536d0b0268696f36518ecb71d3c8a64d",
+    "supplemental/real_gmae/gmae_figS2_seed_effects.png": "6dd2429153b31c6e63d6d56ea7336dfccb5fc2660a40de98fb4f4933cf2528e6",
+    "scripts/make_real_gmae_results.py": "b5ea8732b386f80b51890624b76a9af8b99f66da5fadfc2b09172d85983b41b5",
+    "scripts/analyze_real_gmae.py": "7e401bb0ae40a7acb7c76ee81a6028de40b7922fcb52d7b8158e3d975c123bc4",
+    "scripts/analyze_real.py": "f572781afbbf8d6284ea9602fc8b86e29e4ffe4024cc4193423ec05def062cf4"
+  },
+  "script": "scripts/make_real_gmae_supplement.py",
+  "script_sha256": "25a28154f5bfc2514db4687ac14b9e625d8748c83115576c8f029f5c308ffee7",
+  "dependency_sha256": {
+    "scripts/make_real_gmae_results.py": "b5ea8732b386f80b51890624b76a9af8b99f66da5fadfc2b09172d85983b41b5",
+    "scripts/analyze_real_gmae.py": "7e401bb0ae40a7acb7c76ee81a6028de40b7922fcb52d7b8158e3d975c123bc4"
+  },
+  "pdf_sha256": "6377a847b9c0d9b9bbae211d868b971b35fab4f218fb7d45cf7cfa2b9a3cb12e",
+  "pages": 3,
+  "figures": [
+    "gmae_figS1_training",
+    "gmae_figS2_seed_effects"
+  ],
+  "scope": "Exploratory reuse of CTU-13 captures; artificial corruption; no operational COA outcomes."
+}

@@ -8,6 +8,29 @@ The implemented study learns a decision-impact gate for repairing beliefs in a s
 
 This is a controlled snapshot study with noisy prior-time evidence, three partial observers, and 32 shared candidate conjunctions. It does not implement a full sequential cyber range. The original research plan includes extensions beyond this experiment; the frozen executable protocol and implementation notes define what was actually measured. Favorable performance and methodological novelty are hypotheses, not assumptions.
 
+## GraphMAE follow-up: two variants and matched controls
+
+The [GraphMAE variant study](docs/REAL_GMAE_VARIANTS.md) tests **EDGE_GMAE**, which gates graph messages using shared observable-feature coverage and compatibility, and **CONS_GMAE**, which combines two-view masked reconstruction, latent consistency and prediction consistency under additional feature hiding. Both retain the baseline's 121,643 parameters. **EDGE_DENSE** removes gated-model pretraining; **CONS_PRE** removes supervised prediction consistency.
+
+This is an exploratory follow-up on the already examined CTU-13 test captures. The implementation and constants were frozen before new test inference, and all 20 new training/checkpoint/threshold selections finish before that inference. Nine earlier baselines are imported with exact input, source and checkpoint provenance. New runs use the same five seeds, observations and validation protocol; extra forward passes are accounted for rather than described as equal compute.
+
+The completed Ada follow-up gives clean macro attack AP **0.99411 for EDGE_GMAE**, **0.98348 for CONS_GMAE**, and **0.97830 for GMAE**. Their gains are **+0.01580** and **+0.00518**; nominal two-comparison 97.5% intervals are **[−0.00036, +0.04321]** and **[−0.00257, +0.01639]**, respectively. Both include zero. EDGE has a positive unadjusted 95% interval, but no adjusted superiority claim follows. **EDGE_DENSE reaches 0.99500**, so the clean result does not credit masked pretraining for the gain. The replay audit exactly reproduces 3,570,325 model/flow evaluations.
+
+- [Protocol, equations and related work](docs/REAL_GMAE_VARIANTS.md), [configuration](configs/study_real_gmae.json), and [results](docs/RESULTS_REAL_GMAE.md).
+- [Four main figures](figures/real_gmae/index.html), [three-page supplement](supplemental/real_gmae/Supplement_real_gmae.pdf), and [artifact record](results/real_gmae/README.md).
+
+```bash
+python3 scripts/run_gpu.py -- -m unittest discover -s tests -p test_real_gmae_variants.py -v
+python3 scripts/run_gpu.py -- scripts/run_real_gmae.py
+python3 scripts/run_gpu.py -- scripts/audit_real_gmae.py
+.venv/bin/python scripts/analyze_real_gmae.py
+.venv/bin/python scripts/make_real_gmae_results.py
+.venv/bin/python scripts/make_real_gmae_supplement.py
+.venv/bin/python scripts/verify_real_gmae_artifacts.py
+```
+
+The runner requires the preceding CTU-13 study and its ignored raw predictions/checkpoints, and refuses to overwrite a completed follow-up. Large arrays, weights and logs stay ignored. The two main variant-minus-GMAE comparisons use shared crossed seed/time-block bootstrap draws with 95% and nominal two-comparison 97.5% marginal intervals. These conditional intervals do not remove the limitation of reusing test captures; independent data is needed for confirmation.
+
 ## External application: captured CTU-13 telemetry
 
 The [real-data study](docs/REAL_DATA_METHOD.md) applies nine methods to actual CTU-13 university network measurements captured during controlled botnet executions. Its target is retrospective completed-flow classification: **From-Botnet versus From-Normal**, with all background and incoming-only labels excluded. The 799,777 retained flows are approximately 4% of 19,976,700 rows across all 13 official tables. Results describe this verified-label subset; they do not establish operational course-of-action outcomes or performance on the full traffic population.

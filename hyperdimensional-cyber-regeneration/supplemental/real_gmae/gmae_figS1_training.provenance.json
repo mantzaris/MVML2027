@@ -1,0 +1,35 @@
+{
+  "title": "Comparable base-loss optimization histories",
+  "script": "scripts/make_real_gmae_results.py",
+  "script_sha256": "b5ea8732b386f80b51890624b76a9af8b99f66da5fadfc2b09172d85983b41b5",
+  "dependency_sha256": {
+    "scripts/analyze_real_gmae.py": "7e401bb0ae40a7acb7c76ee81a6028de40b7922fcb52d7b8158e3d975c123bc4",
+    "scripts/analyze_real.py": "f572781afbbf8d6284ea9602fc8b86e29e4ffe4024cc4193423ec05def062cf4"
+  },
+  "base_commit": "20f45324b933459c94dcd9889b61efdc277cbf9e",
+  "inputs": {
+    "results/real_gmae/curves.csv": "05022de97e8248a219522ba1051245d93cb82e30b877ed7454a0c546aa95030f",
+    "results/real_gmae/manifest.json": "bf200ea8e43c4186a3e5cdac8aa945eee72aef496528705ea7dc25c0aa50e38f",
+    "scripts/analyze_real_gmae.py": "7e401bb0ae40a7acb7c76ee81a6028de40b7922fcb52d7b8158e3d975c123bc4",
+    "scripts/analyze_real.py": "f572781afbbf8d6284ea9602fc8b86e29e4ffe4024cc4193423ec05def062cf4"
+  },
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "test_captures": [
+    10,
+    11,
+    12
+  ],
+  "aggregation": "Equal capture means within training seed, then five-seed mean and descriptive 95% Student-t interval unless marked paired block bootstrap. Two primary contrasts show 95% and 97.5% marginal percentile intervals on shared draws. PR curves illustrate seed 37 and at most700 display points. Calibration pools bins by support. Timing quantiles describe common-session repeats, not confidence intervals.",
+  "scope": "Exploratory follow-up on previously inspected CTU-13 test captures. Captured telemetry with controlled botnet activity; artificial feature corruption is not observed deception. No operational COA outcomes.",
+  "baseline_reuse": "Nine earlier baseline predictions/checkpoints and training times are imported unchanged. GPUaudit remeasures all 13 inference architectures in one follow-up session.",
+  "output_sha256": {
+    "png": "f170322eaae562adf8d9459e52108d26536d0b0268696f36518ecb71d3c8a64d",
+    "pdf": "48fd476293f0201b65af40bd6fa9b461af97f555ee4e31c124bbce186e2e850b"
+  }
+}

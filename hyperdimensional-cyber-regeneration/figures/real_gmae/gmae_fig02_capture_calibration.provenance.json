@@ -1,0 +1,56 @@
+{
+  "title": "Capture-specific PR curves and reliability",
+  "script": "scripts/make_real_gmae_results.py",
+  "script_sha256": "b5ea8732b386f80b51890624b76a9af8b99f66da5fadfc2b09172d85983b41b5",
+  "dependency_sha256": {
+    "scripts/analyze_real_gmae.py": "7e401bb0ae40a7acb7c76ee81a6028de40b7922fcb52d7b8158e3d975c123bc4",
+    "scripts/analyze_real.py": "f572781afbbf8d6284ea9602fc8b86e29e4ffe4024cc4193423ec05def062cf4"
+  },
+  "base_commit": "20f45324b933459c94dcd9889b61efdc277cbf9e",
+  "inputs": {
+    "results/real_gmae/summary.csv": "fdfa31269e5c7b611c2e083496f4db31dcdbdad0d158d8efaa1903885766ba90",
+    "results/real_gmae/manifest.json": "bf200ea8e43c4186a3e5cdac8aa945eee72aef496528705ea7dc25c0aa50e38f",
+    "results/real_gmae/comparisons.json": "e0e20ace04c9ea8b4c9a32c8a0c05a1ab0e6069c7af30ba330454dedc6a63f47",
+    "results/real_gmae/calibration.csv": "9ad0db22ddd0fad000131da98d4a4618750547315f0766fc0bab3062e21f288d",
+    "results/real_gmae/calibration_audit.json": "9aeb29e10ea04140223c9e271d6f0221131863d2af300011caa757ecc475e2d8",
+    "results/runs/real/37/GMAE_clean_10.npz": "f4f51617c755a850cb535757ce1343e3ecc4b10806bd3c24f55f61667c08579f",
+    "results/runs/real/37/DENSE_clean_10.npz": "06c0e9998ef7aced655c485d8c784374a31e4a62e54d42f41da6e2ecdd5604dc",
+    "results/runs/real/37/HDC_clean_10.npz": "657318bbbb90289b176d61cc0a4d439a6e51d7856257d36bf0aec8dedff1c61b",
+    "results/runs/real/37/DAE_clean_10.npz": "4d42896856fcc81b03cca4c05c1bb00701f355b2d71006d53d301f3f45f58e21",
+    "results/runs/real_gmae/37/EDGE_GMAE_clean_10.npz": "aad420ac636c35a53cde46ce628394d5adce6a973620f1a7b1529b3c686b70a5",
+    "results/runs/real_gmae/37/CONS_GMAE_clean_10.npz": "43df2bf020e8b400fe85942adfec34026959ea91ffff272f6758d7b958c1c093",
+    "results/runs/real/37/GMAE_clean_11.npz": "d68cc303b41d6813365f4819559c02d2e978a1ba20516ab8fe84c8cf94a84e06",
+    "results/runs/real/37/DENSE_clean_11.npz": "ef6fa103fe58c3ce3bff92ff080e7ef8fd0c30cb5528bf385c5f412a3ab334dd",
+    "results/runs/real/37/HDC_clean_11.npz": "1afaf9fe95346c551cea229cf3a37ecf04e3a8fa7c80f44b5d1b824e7c245368",
+    "results/runs/real/37/DAE_clean_11.npz": "3f121133ab281fc21547f6842d7cd4285c90009e94af1d9b9889e03651340c00",
+    "results/runs/real_gmae/37/EDGE_GMAE_clean_11.npz": "325d5a113647c3cdfa468c5fd5bfe95867ccbbe9008688f239792adca1c91f9c",
+    "results/runs/real_gmae/37/CONS_GMAE_clean_11.npz": "189c2bb1943f7476ddcda2ae2383227aa8025c1e4aa1f136c6189b3fe58d51d8",
+    "results/runs/real/37/GMAE_clean_12.npz": "6f02d970bbe0a288dee239f018472d656152336e84d5fdd1f1a4c69c43d8035a",
+    "results/runs/real/37/DENSE_clean_12.npz": "87e62dc42d5a8f0ae1c8d43d47d53aac60dfe5194f916ef1ddd11c61079ad810",
+    "results/runs/real/37/HDC_clean_12.npz": "a9a6ce8f733601942bdb5d9bdb8ba0143103b44d417eb8e9616391e47f75b345",
+    "results/runs/real/37/DAE_clean_12.npz": "c21f347adc4b13c71452a74eb213b8fe93d8475d78a6b095e3fa32cc13332a9c",
+    "results/runs/real_gmae/37/EDGE_GMAE_clean_12.npz": "becf252438b773652f1cb288a54da5f4c8901754992cf728bf9ee781a43e69d9",
+    "results/runs/real_gmae/37/CONS_GMAE_clean_12.npz": "97a46a0de86ebb96382d27000ba015722a3fe898b835f0c32675dfa76368db8d",
+    "scripts/analyze_real_gmae.py": "7e401bb0ae40a7acb7c76ee81a6028de40b7922fcb52d7b8158e3d975c123bc4",
+    "scripts/analyze_real.py": "f572781afbbf8d6284ea9602fc8b86e29e4ffe4024cc4193423ec05def062cf4"
+  },
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "test_captures": [
+    10,
+    11,
+    12
+  ],
+  "aggregation": "Equal capture means within training seed, then five-seed mean and descriptive 95% Student-t interval unless marked paired block bootstrap. Two primary contrasts show 95% and 97.5% marginal percentile intervals on shared draws. PR curves illustrate seed 37 and at most700 display points. Calibration pools bins by support. Timing quantiles describe common-session repeats, not confidence intervals.",
+  "scope": "Exploratory follow-up on previously inspected CTU-13 test captures. Captured telemetry with controlled botnet activity; artificial feature corruption is not observed deception. No operational COA outcomes.",
+  "baseline_reuse": "Nine earlier baseline predictions/checkpoints and training times are imported unchanged. GPUaudit remeasures all 13 inference architectures in one follow-up session.",
+  "output_sha256": {
+    "png": "142da5717969afcd0f81367123184e70d169cd7a6bb6d10f76b30069bb47f5df",
+    "pdf": "6eea2bc61ef39d838c1ae100345479f90c1d04f4f8f457245f2a594ce8aa1d36"
+  }
+}

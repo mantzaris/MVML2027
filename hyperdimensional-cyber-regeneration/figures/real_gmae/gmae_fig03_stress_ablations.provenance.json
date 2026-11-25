@@ -1,0 +1,36 @@
+{
+  "title": "Artificial stress, controls and frozen-threshold operating points",
+  "script": "scripts/make_real_gmae_results.py",
+  "script_sha256": "b5ea8732b386f80b51890624b76a9af8b99f66da5fadfc2b09172d85983b41b5",
+  "dependency_sha256": {
+    "scripts/analyze_real_gmae.py": "7e401bb0ae40a7acb7c76ee81a6028de40b7922fcb52d7b8158e3d975c123bc4",
+    "scripts/analyze_real.py": "f572781afbbf8d6284ea9602fc8b86e29e4ffe4024cc4193423ec05def062cf4"
+  },
+  "base_commit": "20f45324b933459c94dcd9889b61efdc277cbf9e",
+  "inputs": {
+    "results/real_gmae/summary.csv": "fdfa31269e5c7b611c2e083496f4db31dcdbdad0d158d8efaa1903885766ba90",
+    "results/real_gmae/manifest.json": "bf200ea8e43c4186a3e5cdac8aa945eee72aef496528705ea7dc25c0aa50e38f",
+    "results/real_gmae/comparisons.json": "e0e20ace04c9ea8b4c9a32c8a0c05a1ab0e6069c7af30ba330454dedc6a63f47",
+    "scripts/analyze_real_gmae.py": "7e401bb0ae40a7acb7c76ee81a6028de40b7922fcb52d7b8158e3d975c123bc4",
+    "scripts/analyze_real.py": "f572781afbbf8d6284ea9602fc8b86e29e4ffe4024cc4193423ec05def062cf4"
+  },
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "test_captures": [
+    10,
+    11,
+    12
+  ],
+  "aggregation": "Equal capture means within training seed, then five-seed mean and descriptive 95% Student-t interval unless marked paired block bootstrap. Two primary contrasts show 95% and 97.5% marginal percentile intervals on shared draws. PR curves illustrate seed 37 and at most700 display points. Calibration pools bins by support. Timing quantiles describe common-session repeats, not confidence intervals.",
+  "scope": "Exploratory follow-up on previously inspected CTU-13 test captures. Captured telemetry with controlled botnet activity; artificial feature corruption is not observed deception. No operational COA outcomes.",
+  "baseline_reuse": "Nine earlier baseline predictions/checkpoints and training times are imported unchanged. GPUaudit remeasures all 13 inference architectures in one follow-up session.",
+  "output_sha256": {
+    "png": "dc93e1d665dc7e38052b21ae746c7983e79479d8635cf600a29ba03fdfec7b44",
+    "pdf": "55f7c7458e145cfcc181194c3083dfd5bae75b238de5383e869b5383b019c879"
+  }
+}
