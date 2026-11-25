@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+work/*
+!work/.gitkeep
+data/generated/
+data/external/
+results/runs/
+results/checkpoints/
+*.pt
+*.pth
+*.ckpt
+wandb/
