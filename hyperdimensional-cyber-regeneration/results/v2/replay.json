@@ -1,0 +1,158 @@
+{
+  "passed": true,
+  "training_seed": 37,
+  "fresh_test_seed": 42027,
+  "hardware": "NVIDIA RTX 5000 Ada Generation",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "precision": "FP32 inference; TF32 allowed; deterministic algorithms",
+  "absolute_tolerance": 1e-05,
+  "model_condition_replays": 8,
+  "model_snapshot_evaluations": 32000,
+  "scope": "Replay verification, not a new efficacy estimate or model selection exercise.",
+  "source_manifest_sha256": "3413f94e81b4ad5014c56938414594083447fa21e0739bfa6befc16726e06208",
+  "replay_script_sha256": "d2fd6c49a7ae82e90dac9f1ee140471e1ac1bf47ca6502a2f19397844fd2a7a7",
+  "maximum_absolute_errors": {
+    "planprob": 0.0,
+    "regret": 0.0,
+    "plan_brier": 0.0
+  },
+  "rows": [
+    {
+      "method": "JH",
+      "condition": "severity",
+      "corruption": 0.0,
+      "attack": "targeted",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v2/37_JH.pt",
+      "checkpoint_sha256": "cc53d197beec613d505584b75417c96981d5ce4421bc2f65cf0bc920255e4fbf",
+      "raw_path": "results/runs/v2/37/JH_severity_0.0_targeted_64_2048_0.1.npz",
+      "raw_sha256": "d810e3845e63c3def16e352cc477e61b2b0b3414b34025ae9f872b2943038267",
+      "input_data_sha256": "86276999fa5b7828400539298872f2fd9c295bab27e56bd3d1d3bbf86ac2f69f"
+    },
+    {
+      "method": "ID",
+      "condition": "severity",
+      "corruption": 0.0,
+      "attack": "targeted",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v2/37_ID.pt",
+      "checkpoint_sha256": "cce28d3d3b210b2ce0d03838a9a9f08c949d964ecf36dd9fd09bd92cabce1f0b",
+      "raw_path": "results/runs/v2/37/ID_severity_0.0_targeted_64_2048_0.1.npz",
+      "raw_sha256": "5e66338264db40654a2fbb909197582da40d49eb1032bb5463793d12741ecc79",
+      "input_data_sha256": "86276999fa5b7828400539298872f2fd9c295bab27e56bd3d1d3bbf86ac2f69f"
+    },
+    {
+      "method": "JH",
+      "condition": "severity",
+      "corruption": 0.2,
+      "attack": "targeted",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v2/37_JH.pt",
+      "checkpoint_sha256": "cc53d197beec613d505584b75417c96981d5ce4421bc2f65cf0bc920255e4fbf",
+      "raw_path": "results/runs/v2/37/JH_severity_0.2_targeted_64_2048_0.1.npz",
+      "raw_sha256": "6422704426a3fc36c4298e0a7928e9e6c46d4c119036514b2dd648ee834df28f",
+      "input_data_sha256": "198c031b79c759a3f791d7d5d7cb4537e9175efa3011c10b8dc3b727d1c73c50"
+    },
+    {
+      "method": "ID",
+      "condition": "severity",
+      "corruption": 0.2,
+      "attack": "targeted",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v2/37_ID.pt",
+      "checkpoint_sha256": "cce28d3d3b210b2ce0d03838a9a9f08c949d964ecf36dd9fd09bd92cabce1f0b",
+      "raw_path": "results/runs/v2/37/ID_severity_0.2_targeted_64_2048_0.1.npz",
+      "raw_sha256": "338cac3d32138a45eb7defec23c5b1f87a38f58df9808db3aacd8eb9ba6d0f23",
+      "input_data_sha256": "198c031b79c759a3f791d7d5d7cb4537e9175efa3011c10b8dc3b727d1c73c50"
+    },
+    {
+      "method": "JH",
+      "condition": "attack",
+      "corruption": 0.2,
+      "attack": "random",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v2/37_JH.pt",
+      "checkpoint_sha256": "cc53d197beec613d505584b75417c96981d5ce4421bc2f65cf0bc920255e4fbf",
+      "raw_path": "results/runs/v2/37/JH_attack_0.2_random_64_2048_0.1.npz",
+      "raw_sha256": "0cca85a83bde3d730c8de6016a13d2a8403f954aaa86abde67327d9d6b59b9d5",
+      "input_data_sha256": "72c2ea4d17de9c7725be307a14673a97b888190a959ec92654fb8856eb79db75"
+    },
+    {
+      "method": "ID",
+      "condition": "attack",
+      "corruption": 0.2,
+      "attack": "random",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v2/37_ID.pt",
+      "checkpoint_sha256": "cce28d3d3b210b2ce0d03838a9a9f08c949d964ecf36dd9fd09bd92cabce1f0b",
+      "raw_path": "results/runs/v2/37/ID_attack_0.2_random_64_2048_0.1.npz",
+      "raw_sha256": "244dbabd1fbb7b3430a143549fdb35850d91ddc869759c8a82dbb106774ee573",
+      "input_data_sha256": "72c2ea4d17de9c7725be307a14673a97b888190a959ec92654fb8856eb79db75"
+    },
+    {
+      "method": "JH",
+      "condition": "attack",
+      "corruption": 0.2,
+      "attack": "coherent",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v2/37_JH.pt",
+      "checkpoint_sha256": "cc53d197beec613d505584b75417c96981d5ce4421bc2f65cf0bc920255e4fbf",
+      "raw_path": "results/runs/v2/37/JH_attack_0.2_coherent_64_2048_0.1.npz",
+      "raw_sha256": "c295d72701715fa35c62eb3d69812584731fd37557c91a24a90a256cdb4c5c58",
+      "input_data_sha256": "f1390f6626c5f3d73e232a4e7880b73ae4067425bbf65cadd869914b5c27048d"
+    },
+    {
+      "method": "ID",
+      "condition": "attack",
+      "corruption": 0.2,
+      "attack": "coherent",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v2/37_ID.pt",
+      "checkpoint_sha256": "cce28d3d3b210b2ce0d03838a9a9f08c949d964ecf36dd9fd09bd92cabce1f0b",
+      "raw_path": "results/runs/v2/37/ID_attack_0.2_coherent_64_2048_0.1.npz",
+      "raw_sha256": "265b324add72ed90bee49297089193b04dd08f8f86bf56bc4341362eb6f7cc4a",
+      "input_data_sha256": "f1390f6626c5f3d73e232a4e7880b73ae4067425bbf65cadd869914b5c27048d"
+    }
+  ]
+}

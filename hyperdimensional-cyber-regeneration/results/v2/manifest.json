@@ -1,0 +1,565 @@
+{
+  "settings": {
+    "pilot": false,
+    "train": 20000,
+    "val": 2000,
+    "test": 4000,
+    "train_seed": 12027,
+    "validation_seed": 22027,
+    "test_seed": 42027,
+    "seeds": [
+      11,
+      23,
+      37,
+      51,
+      71
+    ],
+    "batch": 256,
+    "epochs": 40,
+    "pretrain": 5,
+    "patience": 8,
+    "lr": 0.001,
+    "risk_beta": 2.0
+  },
+  "hardware": "NVIDIA RTX 5000 Ada Generation",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "source_commit": "66aa407f19647ea05bbfc18d987e6aec4c56d449",
+  "source_hashes": {
+    "src/regen.py": "d91df018bb8a5a71b02a5e09bc8dd494496570b2dc3507776af927f6448be570",
+    "src/regen_v2.py": "c8dfb8fcaf8ee949b4446a0398db15b0041d6e800d99b5948fb50f0555f7a8f5",
+    "scripts/run_study.py": "3407a17644f491460d9bf03178e4666af8ef8a3a54089df9c0b45fc8bf6e5420",
+    "scripts/run_v2.py": "8dfcf1e204bfc88da8b6a1944f41bc811171b052bc2a16aebcdcd76609339e90",
+    "configs/study_v2.json": "b0d7d3b4194886ffd297e07a27c08dd6b7511b00de8ac62b04b5c0c1ade4d57e"
+  },
+  "data_hashes": {
+    "train": "cb9b0a84993842da5906c070dfaf688667104ab1867caf2e6d84fd157c2a57d2",
+    "validation": "c173567d3736b1df2c0068ce81031796ab26430eb47b2d9daa079f45a98a9d69"
+  },
+  "frozen_protocol": {
+    "stage": "frozen_before_fresh_test",
+    "name": "Dependency-factored robust regeneration",
+    "train": 20000,
+    "val": 2000,
+    "test": 4000,
+    "train_seed": 12027,
+    "validation_seed": 22027,
+    "test_seed": 42027,
+    "pilot_test_seed": 52027,
+    "seeds": [
+      11,
+      23,
+      37,
+      51,
+      71
+    ],
+    "batch": 256,
+    "epochs": 40,
+    "pretrain": 5,
+    "patience": 8,
+    "lr": 0.001,
+    "risk_beta": 2.0,
+    "temperature": 0.1,
+    "loss_weights": {
+      "fact_bce": 1,
+      "plan_brier": 1,
+      "decision_regret": 0.25,
+      "semantic": 0.1
+    },
+    "new_training_variants": [
+      "JH",
+      "JD",
+      "IH",
+      "ID",
+      "JH_ERM"
+    ],
+    "new_inference_ablation": "JH_product",
+    "training_groups": [
+      "benign",
+      "targeted",
+      "random",
+      "coherent"
+    ],
+    "training_attack_severities": [
+      0.1,
+      0.2,
+      0.4
+    ],
+    "mixture_assignment": "Index modulo 4 selects group; floor(index/4) modulo 3 selects attack severity. Original hidden worlds and candidate sets retained; one observation realization per world.",
+    "early_stopping": "Mean of four validation group means of total loss, identical for every variant.",
+    "primary": "JH minus ID macro regret across benign0 and targeted/random/coherent0.2, all facts64/budget2048/missing0.2",
+    "bootstrap": "2000 paired crossed seed/topology draws; same clusters across seeds and paired conditions",
+    "old_test_role": "Seed32027 and its published results are development evidence for this second approach, not confirmatory evidence.",
+    "novelty_scope": "Investigated composition of dependency-consistent probability regeneration, candidate supervision and smoothed group-risk training; Bayesian factorization and group robustness are established ideas.",
+    "budget_scope": "New models regenerate all beliefs. ID is the fair full-reconstruction primary comparator; sparse P comparisons also change the repair budget.",
+    "wire_scope": "All methods retain the same sparse report codec; no HDC wire-compression claim.",
+    "consistency_regularizer": "Mean squared ReLU(child marginal minus parent marginal), identical for all new variants; zero for coherent conditional marginals."
+  },
+  "checkpoints": [
+    {
+      "seed": 11,
+      "method": "JH",
+      "epoch": 38,
+      "score": 0.24517488479614258,
+      "checkpoint_sha256": "3f005ab751a64430fbf20e59f791a2401bab933ad7b54f4b7677892fa2d4b9d2",
+      "parameters": 120350
+    },
+    {
+      "seed": 11,
+      "method": "JD",
+      "epoch": 37,
+      "score": 0.24658697843551636,
+      "checkpoint_sha256": "19e3cce7f44d75b7d989f12a9a193032ac651702b3ad872865a481aca3a4fa72",
+      "parameters": 119966
+    },
+    {
+      "seed": 11,
+      "method": "IH",
+      "epoch": 35,
+      "score": 0.24460822343826294,
+      "checkpoint_sha256": "dab0ea00100368bf607bcd1961d19634270fd2c8e482642fd1800de915907546",
+      "parameters": 120350
+    },
+    {
+      "seed": 11,
+      "method": "ID",
+      "epoch": 38,
+      "score": 0.2456667274236679,
+      "checkpoint_sha256": "33406cf2b2824ff02d3dc4e61bbdf473ee540cb964982246b33324506a11520e",
+      "parameters": 119966
+    },
+    {
+      "seed": 11,
+      "method": "JH_ERM",
+      "epoch": 39,
+      "score": 0.24434414505958557,
+      "checkpoint_sha256": "4923c756cedeaf13efe9288b3cf6bb856d64923b260abacf77554d1dac61f8ca",
+      "parameters": 120350
+    },
+    {
+      "seed": 23,
+      "method": "JH",
+      "epoch": 39,
+      "score": 0.2462666779756546,
+      "checkpoint_sha256": "8bdb86e129678eee6fa846d178d8d425758327072d4438555493f8610cdf8a34",
+      "parameters": 120350
+    },
+    {
+      "seed": 23,
+      "method": "JD",
+      "epoch": 39,
+      "score": 0.245204359292984,
+      "checkpoint_sha256": "85cf58c7f5bcfba16738560e67223ad03533172a90cc70dbb46a8f92c4cb5e5a",
+      "parameters": 119966
+    },
+    {
+      "seed": 23,
+      "method": "IH",
+      "epoch": 39,
+      "score": 0.24352863430976868,
+      "checkpoint_sha256": "a527053a01d951cc97a2ed65e9088df57973a8393563d3c601ff8f1fa3dcad44",
+      "parameters": 120350
+    },
+    {
+      "seed": 23,
+      "method": "ID",
+      "epoch": 39,
+      "score": 0.24384251236915588,
+      "checkpoint_sha256": "ccaecaad46fc06371e40bab117d514d0adf3e7b565b5e3be7fd217d401e59b48",
+      "parameters": 119966
+    },
+    {
+      "seed": 23,
+      "method": "JH_ERM",
+      "epoch": 39,
+      "score": 0.24450545012950897,
+      "checkpoint_sha256": "48d133430927a17dc75403184e776547f520a4c1ddf0cbdbed8948ee74d0305f",
+      "parameters": 120350
+    },
+    {
+      "seed": 37,
+      "method": "JH",
+      "epoch": 39,
+      "score": 0.24695679545402527,
+      "checkpoint_sha256": "cc53d197beec613d505584b75417c96981d5ce4421bc2f65cf0bc920255e4fbf",
+      "parameters": 120350
+    },
+    {
+      "seed": 37,
+      "method": "JD",
+      "epoch": 39,
+      "score": 0.24794349074363708,
+      "checkpoint_sha256": "57e9dfd75c7a65bf096fd8bab17cc0b8ade6dc1a0259ebfe92b23fcf002f508f",
+      "parameters": 119966
+    },
+    {
+      "seed": 37,
+      "method": "IH",
+      "epoch": 39,
+      "score": 0.24239860475063324,
+      "checkpoint_sha256": "d01107824bb230b9b90c51176596aaca5d82df91dd7659db996a98e301e51490",
+      "parameters": 120350
+    },
+    {
+      "seed": 37,
+      "method": "ID",
+      "epoch": 37,
+      "score": 0.24787673354148865,
+      "checkpoint_sha256": "cce28d3d3b210b2ce0d03838a9a9f08c949d964ecf36dd9fd09bd92cabce1f0b",
+      "parameters": 119966
+    },
+    {
+      "seed": 37,
+      "method": "JH_ERM",
+      "epoch": 39,
+      "score": 0.2430393397808075,
+      "checkpoint_sha256": "539911d92cbca9ca729102cccd687f9857f0949adcfb180c526987ee702148a1",
+      "parameters": 120350
+    },
+    {
+      "seed": 51,
+      "method": "JH",
+      "epoch": 38,
+      "score": 0.24756154417991638,
+      "checkpoint_sha256": "eb02dd1e61c2ddd861eb8e7770b6f369008ca3b1c90558ef9d081b2a4c074a74",
+      "parameters": 120350
+    },
+    {
+      "seed": 51,
+      "method": "JD",
+      "epoch": 38,
+      "score": 0.24493737518787384,
+      "checkpoint_sha256": "897c6779664abde8569dbf429a919c4710add9a4e4404a75533ca80263719b32",
+      "parameters": 119966
+    },
+    {
+      "seed": 51,
+      "method": "IH",
+      "epoch": 38,
+      "score": 0.2462022453546524,
+      "checkpoint_sha256": "1e9307b1d3f03a41d0797fa119a35231397a56d0ab4b66a9b020b5e46a3ad666",
+      "parameters": 120350
+    },
+    {
+      "seed": 51,
+      "method": "ID",
+      "epoch": 38,
+      "score": 0.24749664962291718,
+      "checkpoint_sha256": "5bc79c19bf1d466b1ac9850b0924ec3b3927987014f76697b1046a9682571507",
+      "parameters": 119966
+    },
+    {
+      "seed": 51,
+      "method": "JH_ERM",
+      "epoch": 36,
+      "score": 0.24586589634418488,
+      "checkpoint_sha256": "98bc429e2339b9410f50aeb50035a8f6ef1882b603e75340748dec9d8f6cda67",
+      "parameters": 120350
+    },
+    {
+      "seed": 71,
+      "method": "JH",
+      "epoch": 38,
+      "score": 0.24636995792388916,
+      "checkpoint_sha256": "861b298ce095b6550786e5c7923f6afa065d58ee7c673fc1f5338e4290cddacb",
+      "parameters": 120350
+    },
+    {
+      "seed": 71,
+      "method": "JD",
+      "epoch": 38,
+      "score": 0.24448664486408234,
+      "checkpoint_sha256": "4066327373ca48357d91167b113a2176218c0695d5fac4f025d519c1da3f1302",
+      "parameters": 119966
+    },
+    {
+      "seed": 71,
+      "method": "IH",
+      "epoch": 39,
+      "score": 0.2457248717546463,
+      "checkpoint_sha256": "24d669eec84c9bf7b5d959dafc6963b3e09204fe5fc45224851b32bd2ad1c217",
+      "parameters": 120350
+    },
+    {
+      "seed": 71,
+      "method": "ID",
+      "epoch": 38,
+      "score": 0.24407872557640076,
+      "checkpoint_sha256": "fa24976adf44b83b7cb2a7adbc0e23202d61f679e9c161ebcc20e4885590c728",
+      "parameters": 119966
+    },
+    {
+      "seed": 71,
+      "method": "JH_ERM",
+      "epoch": 38,
+      "score": 0.24511635303497314,
+      "checkpoint_sha256": "9a40ed28901bc32e06a61abf380e15c906f6fc69e239cf8030cc6d4a4716e41f",
+      "parameters": 120350
+    }
+  ],
+  "test_hashes": {
+    "severity_0.0_targeted_64_2048_0.1": "86276999fa5b7828400539298872f2fd9c295bab27e56bd3d1d3bbf86ac2f69f",
+    "severity_0.1_targeted_64_2048_0.1": "66c56011451b79f566c70543b9a59264aa55b172735f7c477d406d31c46724dc",
+    "severity_0.2_targeted_64_2048_0.1": "198c031b79c759a3f791d7d5d7cb4537e9175efa3011c10b8dc3b727d1c73c50",
+    "severity_0.4_targeted_64_2048_0.1": "b2d9b1025adc21b09523396c9fea2c55b808990276af2e843bc3a34606edc2dd",
+    "attack_0.2_random_64_2048_0.1": "72c2ea4d17de9c7725be307a14673a97b888190a959ec92654fb8856eb79db75",
+    "attack_0.2_coherent_64_2048_0.1": "f1390f6626c5f3d73e232a4e7880b73ae4067425bbf65cadd869914b5c27048d",
+    "bandwidth_0.2_targeted_64_0_0.1": "1dd15f76dfa1b16517481377bae5b1cc281aac29547136b5b9d320191f8d4ca6",
+    "bandwidth_0.2_targeted_64_512_0.1": "253d7d8c48a4425772e4e761f9c7ade4ab7da36b2925df92b18208dbb625c8a4",
+    "bandwidth_0.2_targeted_64_8192_0.1": "198c031b79c759a3f791d7d5d7cb4537e9175efa3011c10b8dc3b727d1c73c50",
+    "size_0.2_coherent_128_2048_0.1": "b3254dd43c659e5f13edb883aa1cd8dd05828bd38fa767a121d2285ab44e4537",
+    "size_0.2_coherent_256_2048_0.1": "94eccbeb65d28fd83e353eca4e751fd6f2aba3d5e73536251f80ea930c834afd",
+    "attack_severity_0.1_random_64_2048_0.1": "b4c039faff419ea5044d21aede9cfd6ca092d3c7beb84201be1037ff62c190fa",
+    "attack_severity_0.4_random_64_2048_0.1": "0cf4004bafd7969b11654d803b60c51615686dee15db2dddb3ebf4d29ee0601d",
+    "attack_severity_0.1_coherent_64_2048_0.1": "e6d951618e9e9ebabc9b4f91e060655ce5ff7aac6912e141242ef67957a8286b",
+    "attack_severity_0.4_coherent_64_2048_0.1": "175552be7ac7d365087a7aac625f615df2c9b9d265cae9f18ab1c38002318956",
+    "missing_0.2_targeted_64_2048_0.1": "050aef539590b182ddb9012e613ad4225907294dbe822e876a47751938277984",
+    "missing_0.2_random_64_2048_0.1": "86d412f3772dbbb511a35232f5abfff7099c323ac6563e6d647c6dc60571ed1d",
+    "missing_0.2_coherent_64_2048_0.1": "d6bcf117bd9e178757960ca5a160045eee504c0ff3a6512e93552e59fcde5d40"
+  },
+  "legacy_checkpoint_hashes": {
+    "results/checkpoints/11_B1.pt": "2a800efd7b8b28e80f716cbf8e9b8a19a0e9014e6b3cede29553b128cae775d9",
+    "results/checkpoints/11_B2.pt": "d6ef550b37801e0ff049eb5020a323ea68af32f167e53c88a78cfc6444fc2b60",
+    "results/checkpoints/11_P.pt": "2abbc062183d78c65ab3a22d8641c3f67e60cb75448ea80ce3b54c9a59e8dcee",
+    "results/checkpoints/11_no_provenance.pt": "29b3a5fbb0b9f9a140f3b4208e357a26400f9b6b972e58329c500bf96b70a99c",
+    "results/checkpoints/11_no_semantic.pt": "32d3ef4b6ff10c910c94638f86261689ea3dabe6e5766e4d9c9bf3ea9309c72e",
+    "results/checkpoints/11_dense_gate.pt": "a57abea19da16881a03f4c430df11bb5da9815a42310317d505b9105d6477689",
+    "results/checkpoints/23_B1.pt": "dc152e993ab98fcf3722669ab1218c0c787d9790dfdd680335ed3c14f7ba65d1",
+    "results/checkpoints/23_B2.pt": "df03c23394d6d0da07948a76be3993ae075996e90acd2398f369c772e4cb487b",
+    "results/checkpoints/23_P.pt": "81daa959c95cd813efdcf1f83997d64e5ebf73475f872feee17dc08fa5197a61",
+    "results/checkpoints/23_no_provenance.pt": "cf7b7d12e98173322cc442aa4d3ac2d35035fc9aaa248b2bf228dd714f06a7ba",
+    "results/checkpoints/23_no_semantic.pt": "0028e9c03a5b2ae551625f6c5e07490e264bbbe7c433d7710eb74a738ad497f0",
+    "results/checkpoints/23_dense_gate.pt": "13056eb5fee1b20a980732e4e5ec94f72dbe13da2f0f0a888e9ecd499120a89e",
+    "results/checkpoints/37_B1.pt": "00c18d9419bfbda90bfe31492abfae672e108ccd884fe3ed8378350ca41cd3f2",
+    "results/checkpoints/37_B2.pt": "fb7643eb959c40839f015feed5208b5706f1e37dcdf1e0326595db537ca923f2",
+    "results/checkpoints/37_P.pt": "8e8bc9ae274bd9d1eb939769870f77c8e5e9294da3c3719b156e069e5f2b6968",
+    "results/checkpoints/37_no_provenance.pt": "70f7e1b0f5bfec824140fbe1f3ae80dd186327f3822aeb5707ac701965985e77",
+    "results/checkpoints/37_no_semantic.pt": "6218cb815e8d2f80e09ba23b786fb12ab175675e0ce7f50376b0ee558b6e2a9c",
+    "results/checkpoints/37_dense_gate.pt": "fab5e77de7cca7c26eb6ab635eb8808491aee3818e8a8f3551c241c0dfaa235f",
+    "results/checkpoints/51_B1.pt": "a453ecd8f4b7d21fc839edad20d7c9aab375fdfc3863fc5345de1b1477ac170b",
+    "results/checkpoints/51_B2.pt": "4552f21a73cf70739eaa44a4a7119f1d91c18790c1bdc076391e69a1f02d2ab6",
+    "results/checkpoints/51_P.pt": "99da07ac291596290a3baa48b77d8f41aca49ac174caea8ab10f33acd1ad5794",
+    "results/checkpoints/51_no_provenance.pt": "2c063fc21e84c63c9822df80037bba9a75c2311527abcaf3be58c8cb292e3e2f",
+    "results/checkpoints/51_no_semantic.pt": "4c6c84d00ed79f970541c57012ace92a66ed6fa4cc4a94979d62a8dcf49179a0",
+    "results/checkpoints/51_dense_gate.pt": "dc851938ca549f394ada8154a82fd7e9068a50ed9a49aa936320ec5d1bcda8e3",
+    "results/checkpoints/71_B1.pt": "a884da1c10291881d9613c3199c36d547a9fd9c6a8380b46b743a108550ef4d9",
+    "results/checkpoints/71_B2.pt": "d141ba26997fa4f545ca009b4eacace2d0b4a3cc75792bc8f66eb2c3dacf5985",
+    "results/checkpoints/71_P.pt": "dc1cd17fe1ff9ad85e78ec88aa2fd611ab7bd8d09503876cd880966bf73cc705",
+    "results/checkpoints/71_no_provenance.pt": "05eab25ce296829cfbeceae67cd4dd39a2454c3e376b9569891f4817c1fd3c02",
+    "results/checkpoints/71_no_semantic.pt": "72bd7b728e1f7a0706a27e6c44e1bc067edb7a6327aec9de242b3795a52cd99b",
+    "results/checkpoints/71_dense_gate.pt": "23bd075d10876cd8f02389e44e849452dee08ae53e4165e5f2d9ada0d1a1db07"
+  },
+  "legacy_thresholds_sha256": "8326d3a3425f5e1007cc0f3e1d7c31bbacf2f3dd7e3eae927f194898e95fd283",
+  "wall_seconds": 1399.2867617090014,
+  "methods": [
+    "JH",
+    "JD",
+    "IH",
+    "ID",
+    "JH_ERM",
+    "JH_product",
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "P",
+    "random_gate",
+    "no_provenance",
+    "no_semantic",
+    "dense_gate"
+  ],
+  "conditions": [
+    [
+      "severity",
+      0.0,
+      "targeted",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "severity",
+      0.1,
+      "targeted",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "severity",
+      0.2,
+      "targeted",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "severity",
+      0.4,
+      "targeted",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "attack",
+      0.2,
+      "random",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "attack",
+      0.2,
+      "coherent",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "bandwidth",
+      0.2,
+      "targeted",
+      64,
+      0,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "bandwidth",
+      0.2,
+      "targeted",
+      64,
+      512,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "bandwidth",
+      0.2,
+      "targeted",
+      64,
+      8192,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "size",
+      0.2,
+      "coherent",
+      128,
+      2048,
+      0.1,
+      "ood",
+      0.2
+    ],
+    [
+      "size",
+      0.2,
+      "coherent",
+      256,
+      2048,
+      0.1,
+      "ood",
+      0.2
+    ],
+    [
+      "attack_severity",
+      0.1,
+      "random",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "attack_severity",
+      0.4,
+      "random",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "attack_severity",
+      0.1,
+      "coherent",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "attack_severity",
+      0.4,
+      "coherent",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.2
+    ],
+    [
+      "missing",
+      0.2,
+      "targeted",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.5
+    ],
+    [
+      "missing",
+      0.2,
+      "random",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.5
+    ],
+    [
+      "missing",
+      0.2,
+      "coherent",
+      64,
+      2048,
+      0.1,
+      "test",
+      0.5
+    ]
+  ],
+  "scope": [
+    "Fresh test seed42027; v1test32027 motivated the design and is notconfirmatory.",
+    "Controlled static prerequisite snapshots, not full operational cyber episodes.",
+    "Full regeneration changes repair policy; primary comparison uses full models on identical mixedtraining data.",
+    "Joint probabilities exact only under assumed conditional star-forest posterior, not arbitrary true posterior.",
+    "CUDA times warmed inference plus candidate scoring; incremental peak allocation excludesresidentstate.",
+    "Five seeds share worlds; bootstrap crosses seeds and paired topology clusters.",
+    "Original methods retain oldcheckpointtraining and validation thresholds; mixeddata controls isolate trainingchanges.",
+    "All methods use the same sparse report codec; HDC remains internal retrievalfeatures."
+  ]
+}

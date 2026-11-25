@@ -1,0 +1,123 @@
+{
+  "seed": 37,
+  "test_seed": 42027,
+  "snapshot": 0,
+  "facts": 64,
+  "payload_bytes": 1256,
+  "rows": [
+    {
+      "method": "JH",
+      "median_ms": 4.9854389999381965,
+      "p10_ms": 4.850340000848519,
+      "p95_ms": 5.943342701266374,
+      "repeats": 50,
+      "top3": [
+        14,
+        0,
+        31
+      ]
+    },
+    {
+      "method": "JD",
+      "median_ms": 4.941525999129226,
+      "p10_ms": 4.51385630058212,
+      "p95_ms": 5.84493334954459,
+      "repeats": 50,
+      "top3": [
+        14,
+        0,
+        31
+      ]
+    },
+    {
+      "method": "IH",
+      "median_ms": 4.579637499773526,
+      "p10_ms": 4.417280099187337,
+      "p95_ms": 5.339980849385029,
+      "repeats": 50,
+      "top3": [
+        14,
+        0,
+        21
+      ]
+    },
+    {
+      "method": "ID",
+      "median_ms": 4.223205999551283,
+      "p10_ms": 4.075237700089929,
+      "p95_ms": 4.971640699477575,
+      "repeats": 50,
+      "top3": [
+        14,
+        0,
+        8
+      ]
+    },
+    {
+      "method": "JH_ERM",
+      "median_ms": 5.182869999771356,
+      "p10_ms": 4.936753000038152,
+      "p95_ms": 6.250400800217903,
+      "repeats": 50,
+      "top3": [
+        14,
+        0,
+        16
+      ]
+    },
+    {
+      "method": "JH_product",
+      "median_ms": 4.644829001335893,
+      "p10_ms": 4.460017201017763,
+      "p95_ms": 5.378395399566216,
+      "repeats": 50,
+      "top3": [
+        14,
+        0,
+        31
+      ]
+    },
+    {
+      "method": "P",
+      "median_ms": 5.035449500610412,
+      "p10_ms": 4.7883480996461,
+      "p95_ms": 5.871103000117728,
+      "repeats": 50,
+      "top3": [
+        8,
+        0,
+        2
+      ]
+    },
+    {
+      "method": "B2",
+      "median_ms": 4.212711500258592,
+      "p10_ms": 4.013001200655708,
+      "p95_ms": 5.001299149807892,
+      "repeats": 50,
+      "top3": [
+        8,
+        14,
+        0
+      ]
+    }
+  ],
+  "hardware": "NVIDIA RTX 5000 Ada Generation",
+  "scope": "Bounded prepared-evidence wall timing for frozen v2 and original models.\n\nIncludes packet packing/unpacking, CPU orchestration, H2D evidence/metadata,\nGPU feature fusion, belief inference, candidate ranking and D2H top-three IDs.\nExcludes sensing, bandwidth admission, topology/catalogue construction, network\ntransport delays, cold model loading and complete operational cyber planning.",
+  "warmups": 5,
+  "prediction_roundtrip": "All eight marginal and candidate probability paths match prepared original inputs at atol1e-6",
+  "checkpoint_hashes": {
+    "JH": "cc53d197beec613d505584b75417c96981d5ce4421bc2f65cf0bc920255e4fbf",
+    "JD": "57e9dfd75c7a65bf096fd8bab17cc0b8ade6dc1a0259ebfe92b23fcf002f508f",
+    "IH": "d01107824bb230b9b90c51176596aaca5d82df91dd7659db996a98e301e51490",
+    "ID": "cce28d3d3b210b2ce0d03838a9a9f08c949d964ecf36dd9fd09bd92cabce1f0b",
+    "JH_ERM": "539911d92cbca9ca729102cccd687f9857f0949adcfb180c526987ee702148a1",
+    "P": "8e8bc9ae274bd9d1eb939769870f77c8e5e9294da3c3719b156e069e5f2b6968",
+    "B2": "fb7643eb959c40839f015feed5208b5706f1e37dcdf1e0326595db537ca923f2"
+  },
+  "manifest_sha256": "3413f94e81b4ad5014c56938414594083447fa21e0739bfa6befc16726e06208",
+  "source_hashes": {
+    "scripts/measure_v2_pipeline.py": "cfdb7b91227011c958727cd1bbf0cea9980ecd4af260cba8f62ba546054f19d0",
+    "scripts/measure_pipeline.py": "375e1e9e275615cd8734ee5fb8a2162e00396bf1df3fa26c8c5bffbb20599222"
+  }
+}

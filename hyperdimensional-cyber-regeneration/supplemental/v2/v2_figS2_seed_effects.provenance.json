@@ -1,0 +1,15 @@
+{
+  "title": "Per-seed effects and incremental GPU allocation; does not measure total deployment memory.",
+  "script": "scripts/make_v2_results.py",
+  "script_sha256": "82ad07cdad92e1a78bb58b391e699737891f7222eb9efd62d69085027b34e544",
+  "base_commit": "66aa407f19647ea05bbfc18d987e6aec4c56d449",
+  "inputs": {
+    "results/v2/summary.csv": "96eedc19a6d97e1fc3ba99d38875939214750e3a5a129a67dced663eaf22148f"
+  },
+  "aggregation": "Where drawn, error bars/bands use equal condition means within seed and Student-t 95% intervals across five training seeds. Reliability curves pool candidate predictions by bin count; training curves average available seeds at each epoch.",
+  "uncertainty_limit": "Figure intervals condition on the shared fresh test pool; primary crossed seed/topology bootstrap is recorded separately.",
+  "output_sha256": {
+    "pdf": "23b9e0f617abeac3a9c847f4c5c88b4a583853288294cf7b06d7d0bb54576fd0",
+    "png": "4477e5ffba32058fd500e19580bc2b56a2d641678c379aa8b5e56bef1b071ea1"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "All retained methods and matched comparisons for representation, objective and joint scoring.",
+  "script": "scripts/make_v2_results.py",
+  "script_sha256": "82ad07cdad92e1a78bb58b391e699737891f7222eb9efd62d69085027b34e544",
+  "base_commit": "66aa407f19647ea05bbfc18d987e6aec4c56d449",
+  "inputs": {
+    "results/v2/summary.csv": "96eedc19a6d97e1fc3ba99d38875939214750e3a5a129a67dced663eaf22148f"
+  },
+  "aggregation": "Where drawn, error bars/bands use equal condition means within seed and Student-t 95% intervals across five training seeds. Reliability curves pool candidate predictions by bin count; training curves average available seeds at each epoch.",
+  "uncertainty_limit": "Figure intervals condition on the shared fresh test pool; primary crossed seed/topology bootstrap is recorded separately.",
+  "output_sha256": {
+    "pdf": "9df917f1969a624e31e99973be3f7a39f5e08e27f9b8f1ff370af7892d7dd19a",
+    "png": "9cad637cc1ea5e0898d4c170e1531b7be7ff04c1b2d7523336db514cc0169f64"
+  }
+}

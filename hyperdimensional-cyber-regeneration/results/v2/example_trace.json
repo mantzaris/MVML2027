@@ -1,0 +1,344 @@
+{
+  "purpose": "Inspect the dependency-scoring mechanism, not a causal explanation or a complete operational plan.",
+  "selection": {
+    "training_seed": 37,
+    "method": "JH",
+    "test_seed": 42027,
+    "condition": "severity",
+    "corruption": 0.2,
+    "attack": "targeted",
+    "facts": 64,
+    "budget_per_remote_observer": 2048,
+    "snapshot_index": 3347,
+    "topology_group": 42027000209,
+    "rule": "Stable ascending regret order, element N//2 (upper sample median).",
+    "selection_uses_evaluation_truth": true,
+    "selection_note": "Selection is post hoc for illustration only; no model choice or tuning.",
+    "checkpoint_sha256": "cc53d197beec613d505584b75417c96981d5ce4421bc2f65cf0bc920255e4fbf",
+    "inference_batch_start": 3328,
+    "inference_batch_size": 256,
+    "displayed_choice_regret_checked": true
+  },
+  "observable_inputs_and_model_decision": {
+    "top_three_candidates": [
+      {
+        "candidate_id": 16,
+        "required_fact_ids": [
+          8,
+          43
+        ],
+        "distinct_required_root_ids": [
+          2
+        ],
+        "root_factors": {
+          "2": 0.9999078512191772
+        },
+        "conditional_child_factors": {
+          "8": 0.9544675350189209,
+          "43": 0.9933751225471497
+        },
+        "joint_success_probability": 0.9480569362640381,
+        "product_of_marginals": 0.9479695558547974,
+        "predicted_utility": 1.0201057195663452,
+        "known_value": 1.1359961032867432,
+        "known_cost": 0.05688324570655823
+      },
+      {
+        "candidate_id": 2,
+        "required_fact_ids": [
+          2,
+          50,
+          56
+        ],
+        "distinct_required_root_ids": [
+          1,
+          2
+        ],
+        "root_factors": {
+          "1": 0.9999858140945435,
+          "2": 0.9999078512191772
+        },
+        "conditional_child_factors": {
+          "50": 0.8040582537651062,
+          "56": 0.9993719458580017
+        },
+        "joint_success_probability": 0.8034678101539612,
+        "product_of_marginals": 0.8033938407897949,
+        "predicted_utility": 0.7468047738075256,
+        "known_value": 1.0738120079040527,
+        "known_cost": 0.11596859991550446
+      },
+      {
+        "candidate_id": 8,
+        "required_fact_ids": [
+          28,
+          61
+        ],
+        "distinct_required_root_ids": [
+          6,
+          7
+        ],
+        "root_factors": {
+          "6": 0.9998568296432495,
+          "7": 0.999923586845398
+        },
+        "conditional_child_factors": {
+          "28": 0.9972556233406067,
+          "61": 0.9450966715812683
+        },
+        "joint_success_probability": 0.942296028137207,
+        "product_of_marginals": 0.942296028137207,
+        "predicted_utility": 0.5602499842643738,
+        "known_value": 0.7329385876655579,
+        "known_cost": 0.13039512932300568
+      }
+    ],
+    "supporting_observations": [
+      {
+        "fact_id": 1,
+        "parent_id": 1,
+        "reports": [
+          {
+            "source": 1,
+            "reported_value": 1.0,
+            "synthetic_age": 0.07474171370267868
+          },
+          {
+            "source": 2,
+            "reported_value": 1.0,
+            "synthetic_age": 0.31444716453552246
+          }
+        ],
+        "prior_belief": 0.9800000190734863,
+        "regenerated_marginal": 0.9999858140945435,
+        "conditional_or_root_factor": 0.9999858140945435
+      },
+      {
+        "fact_id": 2,
+        "parent_id": 2,
+        "reports": [
+          {
+            "source": 1,
+            "reported_value": 0.0,
+            "synthetic_age": 0.07601502537727356
+          },
+          {
+            "source": 2,
+            "reported_value": 1.0,
+            "synthetic_age": 0.11332334578037262
+          }
+        ],
+        "prior_belief": 0.5535484552383423,
+        "regenerated_marginal": 0.9999078512191772,
+        "conditional_or_root_factor": 0.9999078512191772
+      },
+      {
+        "fact_id": 6,
+        "parent_id": 6,
+        "reports": [
+          {
+            "source": 0,
+            "reported_value": 1.0,
+            "synthetic_age": 0.3619612157344818
+          },
+          {
+            "source": 1,
+            "reported_value": 0.0,
+            "synthetic_age": 0.4109143316745758
+          },
+          {
+            "source": 2,
+            "reported_value": 0.0,
+            "synthetic_age": 0.8413928151130676
+          }
+        ],
+        "prior_belief": 0.4183141589164734,
+        "regenerated_marginal": 0.9998568296432495,
+        "conditional_or_root_factor": 0.9998568296432495
+      },
+      {
+        "fact_id": 7,
+        "parent_id": 7,
+        "reports": [
+          {
+            "source": 0,
+            "reported_value": 1.0,
+            "synthetic_age": 0.846048891544342
+          },
+          {
+            "source": 1,
+            "reported_value": 1.0,
+            "synthetic_age": 0.2450760453939438
+          },
+          {
+            "source": 2,
+            "reported_value": 1.0,
+            "synthetic_age": 0.30638137459754944
+          }
+        ],
+        "prior_belief": 0.9800000190734863,
+        "regenerated_marginal": 0.999923586845398,
+        "conditional_or_root_factor": 0.999923586845398
+      },
+      {
+        "fact_id": 8,
+        "parent_id": 2,
+        "reports": [
+          {
+            "source": 1,
+            "reported_value": 0.0,
+            "synthetic_age": 0.05213722959160805
+          }
+        ],
+        "prior_belief": 0.21518437564373016,
+        "regenerated_marginal": 0.9543795585632324,
+        "conditional_or_root_factor": 0.9544675350189209
+      },
+      {
+        "fact_id": 28,
+        "parent_id": 7,
+        "reports": [
+          {
+            "source": 0,
+            "reported_value": 1.0,
+            "synthetic_age": 0.9025605916976929
+          },
+          {
+            "source": 1,
+            "reported_value": 1.0,
+            "synthetic_age": 0.4311000108718872
+          },
+          {
+            "source": 2,
+            "reported_value": 1.0,
+            "synthetic_age": 0.07749441266059875
+          }
+        ],
+        "prior_belief": 0.9024602770805359,
+        "regenerated_marginal": 0.9971794486045837,
+        "conditional_or_root_factor": 0.9972556233406067
+      },
+      {
+        "fact_id": 43,
+        "parent_id": 2,
+        "reports": [
+          {
+            "source": 1,
+            "reported_value": 0.0,
+            "synthetic_age": 0.2861205041408539
+          },
+          {
+            "source": 2,
+            "reported_value": 1.0,
+            "synthetic_age": 0.5973253846168518
+          }
+        ],
+        "prior_belief": 0.5369642972946167,
+        "regenerated_marginal": 0.9932835698127747,
+        "conditional_or_root_factor": 0.9933751225471497
+      },
+      {
+        "fact_id": 50,
+        "parent_id": 1,
+        "reports": [],
+        "prior_belief": 0.9199999570846558,
+        "regenerated_marginal": 0.8040468692779541,
+        "conditional_or_root_factor": 0.8040582537651062
+      },
+      {
+        "fact_id": 56,
+        "parent_id": 2,
+        "reports": [
+          {
+            "source": 0,
+            "reported_value": 1.0,
+            "synthetic_age": 0.9170255064964294
+          },
+          {
+            "source": 2,
+            "reported_value": 1.0,
+            "synthetic_age": 0.89121013879776
+          }
+        ],
+        "prior_belief": 0.9800000190734863,
+        "regenerated_marginal": 0.9992798566818237,
+        "conditional_or_root_factor": 0.9993719458580017
+      },
+      {
+        "fact_id": 61,
+        "parent_id": 6,
+        "reports": [
+          {
+            "source": 1,
+            "reported_value": 0.0,
+            "synthetic_age": 0.467515230178833
+          },
+          {
+            "source": 2,
+            "reported_value": 1.0,
+            "synthetic_age": 0.11890128999948502
+          }
+        ],
+        "prior_belief": 0.5874791145324707,
+        "regenerated_marginal": 0.9449613690376282,
+        "conditional_or_root_factor": 0.9450966715812683
+      }
+    ],
+    "remote_payload_bytes": {
+      "1": 604,
+      "2": 628
+    },
+    "scoring_semantics": "Each distinct required root contributes once, followed by each required child's conditional factor.",
+    "assumption": "Joint score is exact under the conditional star-forest posterior, not a claim of exact true posterior inference."
+  },
+  "evaluator_only_hidden_truth": {
+    "not_available_to_model": true,
+    "selected_candidate_regret": 0.008246302604675293,
+    "oracle_candidate_id": 7,
+    "oracle_utility": 1.0873591899871826,
+    "top_three_actual_outcomes": [
+      {
+        "candidate_id": 16,
+        "true_utility": 1.0791128873825073,
+        "truly_feasible": true
+      },
+      {
+        "candidate_id": 2,
+        "true_utility": 0.9578434228897095,
+        "truly_feasible": true
+      },
+      {
+        "candidate_id": 8,
+        "true_utility": 0.6025434732437134,
+        "truly_feasible": true
+      }
+    ],
+    "supporting_true_facts": {
+      "1": 1,
+      "2": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "28": 1,
+      "43": 1,
+      "50": 1,
+      "56": 1,
+      "61": 1
+    },
+    "genuine_changed_fact_ids": [
+      0,
+      5,
+      14,
+      17,
+      20,
+      26,
+      33,
+      34,
+      35,
+      42,
+      58,
+      62,
+      63
+    ]
+  }
+}

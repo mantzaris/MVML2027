@@ -54,7 +54,19 @@ Here \(s_i^*\) is hard candidate feasibility and the regret term uses softmax we
 
 Every second-study variant uses the same consistency penalty: the mean squared positive violation of child marginal less than or equal to parent marginal. It is zero for coherent marginals, including uncertain conditional posteriors. This avoids incorrectly treating an independent-product implication penalty as the structured model's violation probability. The penalty is a consistency regularizer, not a probability of logical violation. Candidate scoring uses the model's joint semantics unless the explicit product ablation is selected.
 
-The runner controls corruption-group-balanced sampling and mean versus robust group aggregation. Group labels supervise the training aggregation; they are not model input. The precise group definitions, aggregation parameters, validation rule, sample counts, seeds, and fresh test seed must be frozen in the executed second-study configuration before test evaluation.
+Training assigns each of the same 20,000 hidden worlds to one observed condition: benign or one of three attack mechanisms, with equal group counts. Attack severities cycle through 0.1, 0.2 and 0.4. Group labels supervise loss aggregation and never enter model input. Validation uses the same balanced construction on 2,000 independent worlds. All variants select checkpoints using the mean of the four validation group losses, with the same epoch and patience budget.
+
+For group-average losses $L_g$, the new robust variants minimize the entropy-regularized group risk
+
+$$
+\mathcal L_{\rm group}=\frac{1}{\beta}\log\left(\frac{1}{G}\sum_{g=1}^{G}e^{\beta L_g}\right)
+=\max_{w\in\Delta_G}\left[\sum_gw_g L_g-\frac{1}{\beta}D_{\rm KL}(w\Vert\operatorname{Uniform}(G))\right],\qquad G=4,\ \beta=2.
+\tag{7}
+$$
+
+This established variational identity explains the weighting: higher-loss groups receive more weight, constrained by a penalty for departing from uniform group weights. It is a smooth emphasis on the four modeled groups, not an unconstrained worst-case adversary or a guarantee for unseen mechanisms. JH_ERM replaces Equation (7) with the ordinary group mean. In minibatches the means are estimated from the available members of each group.
+
+The [frozen configuration](../configs/study_v2.json) was committed before evaluation on new test seed 42027. The primary endpoint averages regret equally over benign0 and targeted/random/coherent0.2; it compares JH with full-reconstruction ID. Tests reuse the same worlds across compatible conditions and use five independent training seeds. The old test seed 32027 is explicitly development evidence for this redesign.
 
 ## Comparisons that separate the changes
 

@@ -8,6 +8,29 @@ The implemented study learns a decision-impact gate for repairing beliefs in a s
 
 This is a controlled snapshot study with noisy prior-time evidence, three partial observers, and 32 shared candidate conjunctions. It does not implement a full sequential cyber range. The original research plan includes extensions beyond this experiment; the frozen executable protocol and implementation notes define what was actually measured. Favorable performance and methodological novelty are hypotheses, not assumptions.
 
+## Second approach and fresh comparison
+
+[Dependency-aware full regeneration](docs/METHOD_V2.md) addresses the first gate's sparse-repair regret and mechanism dependence. It predicts a coherent conditional state, counts shared prerequisite uncertainty once when scoring candidates, and trains across four observation groups. Its proposed composition builds on established probabilistic logic and group-risk learning; novelty and improvements remain empirical questions.
+
+The [second results report](docs/RESULTS_V2.md) compares five newly trained variants, one scoring ablation, and all eleven original methods on fresh test seed 42027. Its fair primary comparator is a full-reconstruction dense model trained on the same mixed data. The original study below remains unchanged.
+
+- [Four second-study comparison figures](figures/v2/index.html)
+- [Second-study three-page supplement](supplemental/v2/Supplement_v2.pdf), with two additional figures
+- [Frozen protocol](configs/study_v2.json), [audit](docs/V2_AUDIT.md), and [artifact record](results/v2/README.md)
+
+```bash
+python3 scripts/run_gpu.py -- -m unittest discover -s tests -p test_v2.py -v
+python3 scripts/run_gpu.py -- scripts/run_v2.py
+python3 scripts/run_gpu.py -- scripts/measure_v2_pipeline.py
+python3 scripts/run_gpu.py -- scripts/replay_v2.py
+.venv/bin/python scripts/analyze_v2.py
+.venv/bin/python scripts/make_v2_results.py
+.venv/bin/python scripts/make_v2_supplement.py
+.venv/bin/python scripts/verify_v2_artifacts.py
+```
+
+Second-study raw arrays and checkpoints use ignored `results/runs/v2/` and `results/checkpoints/v2/`. Generated data, raw logs, and environments are excluded from Git.
+
 ## Research record
 
 - [Measured results and interpretation](docs/RESULTS.md), including the primary paired comparison and limitations.

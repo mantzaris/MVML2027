@@ -1,0 +1,16 @@
+{
+  "title": "New model training and validation optimization traces.",
+  "script": "scripts/make_v2_results.py",
+  "script_sha256": "82ad07cdad92e1a78bb58b391e699737891f7222eb9efd62d69085027b34e544",
+  "base_commit": "66aa407f19647ea05bbfc18d987e6aec4c56d449",
+  "inputs": {
+    "results/v2/curves.csv": "dc51e02b673f20d19c8ab149dc1fdbc5d90f45b2adefbd51242883fc2715aff0",
+    "results/v2/summary.csv": "96eedc19a6d97e1fc3ba99d38875939214750e3a5a129a67dced663eaf22148f"
+  },
+  "aggregation": "Where drawn, error bars/bands use equal condition means within seed and Student-t 95% intervals across five training seeds. Reliability curves pool candidate predictions by bin count; training curves average available seeds at each epoch.",
+  "uncertainty_limit": "Figure intervals condition on the shared fresh test pool; primary crossed seed/topology bootstrap is recorded separately.",
+  "output_sha256": {
+    "pdf": "e248adfdd5f9f03762eeff8f3dad817e1d78678b74492d05e6c5efa77642c14a",
+    "png": "0dc74616b1b1f78a65183a47174ae1c887273b99b9e41d23a40ac6a4941d940e"
+  }
+}

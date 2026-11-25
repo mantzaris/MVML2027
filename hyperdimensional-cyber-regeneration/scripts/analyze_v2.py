@@ -184,6 +184,8 @@ def write_report(rows, result, manifest):
         "",
         "This report records the second, prospectively frozen experiment. The first study's results motivated its design; they were not a fresh confirmation set. Original reports and measurements are preserved.",
         "",
+        f"Hardware: {manifest.get('hardware', 'see manifest')}; PyTorch {manifest.get('torch', 'see manifest')}, CUDA {manifest.get('cuda', 'see manifest')}. The run trains 25 new model instances (five variants × five seeds), using {manifest.get('settings', {}).get('train')} training and {manifest.get('settings', {}).get('val')} validation snapshots. Recorded study wall time: {manifest.get('wall_seconds', 0)/60:.2f} minutes. It evaluates 17 methods across 18 conditions, giving 1,530 seed/method/condition records.",
+        "",
         "## Changes and comparison logic",
         "",
         "The new approach (JH) regenerates the full belief state, predicts root readiness and child readiness conditional on its root, and computes candidate success with each shared root counted once. It replaces the first method's fixed six-fact gate and perfect-truth single-fact teacher. HDC retrieval remains an optional input augmentation, tested against a dense representation.",
@@ -211,6 +213,12 @@ def write_report(rows, result, manifest):
             raise ValueError(f"Incomplete four-condition comparison: {method}")
         avg = lambda key: float(np.mean([float(r[key]) for r in chosen]))
         lines.append(f"| {method}: {label} | {100*avg('recall3'):.3f} | {avg('regret'):.5f} | {avg('brier'):.5f} | {avg('plan_brier'):.5f} |")
+    diagnostic = lambda method, key: float(np.mean([float(r[key]) for r in condition_rows(rows, method)]))
+    lines += ["", "Coherence and prediction quality are separate properties. The mean fraction of facts violating the supplied child≤parent marginal inequality (tolerance 1e-6) is "
+              f"{100*diagnostic('JH', 'logical_violation'):.4f}% for JH, {100*diagnostic('JD', 'logical_violation'):.4f}% for JD, "
+              f"{100*diagnostic('IH', 'logical_violation'):.4f}% for IH and {100*diagnostic('ID', 'logical_violation'):.4f}% for ID. "
+              "A zero violation rate does not prove that the inferred facts are true or that candidate ranking is better.", "",
+              f"JH changes {100*diagnostic('JH', 'changed_fraction'):.2f}% of beliefs numerically from their provisional values, versus {100*diagnostic('P', 'changed_fraction'):.2f}% for original P (absolute-change threshold 1e-4). This measured intervention difference is part of the full-versus-sparse policy change, not a compute-saving result."]
     lines += ["", "## Secondary mechanism comparisons", "",
               "All effects below are JH minus comparator macro regret. Secondary intervals are descriptive and not corrected for multiple comparisons. A negative effect favors JH.", "",
               "| Comparator | Effect | 95% interval | What changes |", "|---|---:|---|---|"]
@@ -227,11 +235,22 @@ def write_report(rows, result, manifest):
         lines.append(f"| {comp} | {metric['estimate']:+.5f} | [{ci[0]:+.5f}, {ci[1]:+.5f}] | {meanings[comp]} |")
     lines += ["", "## Condition-specific diagnosis", "",
               "These descriptive means expose regressions that an overall macro average could conceal. Training now covers the listed mechanisms; these are fresh worlds, not unseen attack-family tests.", "",
-              "| Condition | JH regret | ID regret | Original P regret | JH − ID |", "|---|---:|---:|---:|---:|"]
+              "| Condition | JH regret | ID regret | Original P regret | Original B2 regret | JH − ID | JH − B2 |", "|---|---:|---:|---:|---:|---:|---:|"]
     for label, _, _, _ in CONDITIONS:
         mean = lambda method: float(np.mean([float(r["regret"]) for r in condition_rows(rows, method, label=label)]))
-        jh, independent, old = mean("JH"), mean("ID"), mean("P")
-        lines.append(f"| {label} | {jh:.5f} | {independent:.5f} | {old:.5f} | {jh-independent:+.5f} |")
+        jh, independent, old, specialist = mean("JH"), mean("ID"), mean("P"), mean("B2")
+        lines.append(f"| {label} | {jh:.5f} | {independent:.5f} | {old:.5f} | {specialist:.5f} | {jh-independent:+.5f} | {jh-specialist:+.5f} |")
+    lower, higher = [], []
+    for label, _, _, _ in CONDITIONS:
+        avg = lambda method: float(np.mean([float(r["regret"]) for r in condition_rows(rows, method, label=label)]))
+        difference = avg("JH") - avg("B2")
+        if difference < -1e-10:
+            lower.append(label)
+        elif difference > 1e-10:
+            higher.append(label)
+    lines += ["", "Relative to original B2, JH has lower mean regret in " + (", ".join(lower) if lower else "none of the four core conditions")
+              + " and higher mean regret in " + (", ".join(higher) if higher else "none of the four core conditions")
+              + ". These are descriptive condition means. The old specialist was trained only on targeted 20% interventions, whereas new models train on a broader mixture; a macro improvement cannot be interpreted as universal dominance or a benefit of factorization alone."]
     lines += ["", "## Limits and evidence boundaries", "",
               "- Full regeneration changes all fact beliefs as needed. It does not satisfy the old six-fact intervention cap, and improvements against old P must not be presented as a win at an equal sparse-repair budget.",
               "- The factorization is coherent under the model's assumed root/child conditional structure. It is not an exact posterior for arbitrary correlated deception, arbitrary graphs or multiple causal parents. Corrupted observations can still make the inferred probabilities wrong.",
@@ -242,6 +261,17 @@ def write_report(rows, result, manifest):
               "- New method composition and equations are proposed research contributions. Probabilistic factorization, semantic constraints, masked feature learning and robust group losses have established antecedents; this experiment alone does not establish a first-ever novelty claim.",
               "", "## Reproducibility", "",
               "`results/v2/manifest.json` records the executed settings, source identity and environment. `results/v2/comparisons.json` records paired effects, per-seed/per-condition effects, bootstrap design and hashes of every raw input used in the contrasts. Aggregate metrics and curves are retained under `results/v2/`; raw arrays and checkpoints remain ignored. Regenerate this report with `.venv/bin/python scripts/analyze_v2.py` only after the full second run completes.", ""]
+    pipeline_path = OUT / "pipeline_timing.json"
+    if pipeline_path.is_file():
+        pipeline = json.loads(pipeline_path.read_text())
+        timing = {r["method"]: r for r in pipeline["rows"]}
+        lines += ["## Prepared-evidence host-wall timing", "",
+                  "A separate audit measures 50 repetitions after five warmups on seed 37 and the first 64-fact fresh-test snapshot. It includes actual packet packing/unpacking, transfers, GPU feature construction, model inference, ranking and candidate IDs returned to the host. Every measured marginal and candidate-probability path is checked against the original inputs before timing.", "",
+                  "| Method | Median (ms) | 10th–95th percentiles (ms) |", "|---|---:|---|" ]
+        for method in ["JH", "JD", "IH", "ID", "JH_ERM", "JH_product", "P", "B2"]:
+            row = timing[method]
+            lines.append(f"| {method} | {row['median_ms']:.3f} | {row['p10_ms']:.3f}–{row['p95_ms']:.3f} |")
+        lines += ["", f"The shared packet payload contains {pipeline['payload_bytes']} bytes. This bounded loop excludes sensing, bandwidth admission, topology/catalogue construction, network delays and cold model loading. These percentiles describe repeated timings on one fixed snapshot, not uncertainty across deployments or training seeds. Main figure CUDA timings exclude this host work and must be interpreted separately.", ""]
     (ROOT / "docs/RESULTS_V2.md").write_text("\n".join(lines))
 
 
@@ -255,6 +285,16 @@ def main():
     if not manifest_path.is_file():
         raise RuntimeError("A completed second-study manifest is required")
     manifest = json.loads(manifest_path.read_text())
+    expected = {"seeds": SEEDS, "test_seed": 42027, "test": 4000, "pilot": False}
+    settings = manifest.get("settings", {})
+    mismatches = {key: settings.get(key) for key, value in expected.items() if settings.get(key) != value}
+    if mismatches:
+        raise ValueError(f"Manifest does not describe the frozen fresh-test run: {mismatches}")
+    if len(manifest.get("conditions", [])) != 18 or set(manifest.get("methods", [])) != set(METHODS):
+        raise ValueError("Completed manifest must list all 18 conditions and 17 methods")
+    for relative, digest in manifest.get("source_hashes", {}).items():
+        if sha256(ROOT / relative) != digest:
+            raise ValueError(f"Executed source changed since the study: {relative}")
     with (OUT / "summary.csv").open() as stream:
         rows = list(csv.DictReader(stream))
     if sorted({int(r["seed"]) for r in rows}) != SEEDS:
@@ -266,8 +306,15 @@ def main():
     keys = ["seed", "method", "condition", "corruption", "attack", "facts", "budget", "repair_fraction"]
     if len({tuple(row[k] for k in keys) for row in rows}) != len(rows):
         raise ValueError("Duplicate method/seed/condition summary rows")
+    expected_conditions = {(s[0], float(s[1]), s[2], int(s[3]), int(s[4]), float(s[5]), float(s[7]))
+                           for s in manifest["conditions"]}
     for method in METHODS:
         for seed in SEEDS:
+            observed_conditions = {(r["condition"], float(r["corruption"]), r["attack"], int(r["facts"]),
+                                    int(r["budget"]), float(r["repair_fraction"]), float(r["missing"]))
+                                   for r in rows if r["method"] == method and int(r["seed"]) == seed}
+            if observed_conditions != expected_conditions:
+                raise ValueError(f"Condition catalogue mismatch: {method}, seed {seed}")
             if sum(r["method"] == method and int(r["seed"]) == seed for r in rows) != 18:
                 raise ValueError(f"Expected 18 conditions: {method}, seed {seed}")
             if len(condition_rows(rows, method, seed)) != 4:

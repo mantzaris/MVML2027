@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "results/v2/summary.csv": "96eedc19a6d97e1fc3ba99d38875939214750e3a5a129a67dced663eaf22148f",
+    "results/v2/curves.csv": "dc51e02b673f20d19c8ab149dc1fdbc5d90f45b2adefbd51242883fc2715aff0",
+    "results/v2/manifest.json": "3413f94e81b4ad5014c56938414594083447fa21e0739bfa6befc16726e06208",
+    "results/v2/comparisons.json": "f7dc06ff26138e964087df07688e11d39f59e9c99dc3744096311e4457547329",
+    "supplemental/v2/v2_figS1_training.png": "0dc74616b1b1f78a65183a47174ae1c887273b99b9e41d23a40ac6a4941d940e",
+    "supplemental/v2/v2_figS2_seed_effects.png": "4477e5ffba32058fd500e19580bc2b56a2d641678c379aa8b5e56bef1b071ea1",
+    "results/v2/pipeline_timing.json": "60c148ff19ac37f588881f9322e6df016045ddb16675c643e6051a6c00cb394c"
+  },
+  "script_sha256": "126735c9bb08c7f7c321f38811ec77fe671cecce95b450c67a8bed0e68833f96",
+  "pdf_sha256": "bc4ca894cd126432c6a4191b0fca776d1de0602a21a4f924f6f198a3b9cdd7ac",
+  "pages": 3,
+  "figures": [
+    "v2_figS1_training",
+    "v2_figS2_seed_effects"
+  ],
+  "supplement_policy": "Separate supplemental allowance not explicitly confirmed in public instructions"
+}
