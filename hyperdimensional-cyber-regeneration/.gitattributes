@@ -5,3 +5,4 @@ results/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 results/v2/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 results/v3/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 results/real/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+results/real_gmae/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol

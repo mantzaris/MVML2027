@@ -1,0 +1,113 @@
+{
+  "name": "Exploratory GraphMAE telemetry variants",
+  "stage": "frozen_before_new_model_test_inference_previously_seen_test_captures",
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "train_scenarios": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    13
+  ],
+  "validation_scenarios": [
+    9
+  ],
+  "test_scenarios": [
+    10,
+    11,
+    12
+  ],
+  "conditions": [
+    "clean",
+    "missing20",
+    "missing50",
+    "spoof20",
+    "spoof40"
+  ],
+  "training_conditions": [
+    "clean",
+    "missing20",
+    "spoof20"
+  ],
+  "training_assignment": "Window index modulo three chooses one fixed corrupted observation; no label-dependent selection.",
+  "methods": [
+    "EDGE_GMAE",
+    "EDGE_DENSE",
+    "CONS_GMAE",
+    "CONS_PRE"
+  ],
+  "window": 32,
+  "bootstrap_block_windows": 64,
+  "epochs": 40,
+  "pretrain_epochs": 5,
+  "pretrained_methods": [
+    "EDGE_GMAE",
+    "CONS_GMAE",
+    "CONS_PRE"
+  ],
+  "patience": 8,
+  "batch": 256,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "objective": "Common BCE plus Brier per-window loss, weighted by inverse capture frequency. CONS_GMAE adds 0.5 prediction MSE against detached original-view probabilities under extra 20% coordinate masking. Validation selection uses common BCE plus Brier only.",
+  "early_stopping": "Mean validation objective across clean/missing20/spoof20 on capture9, no test access.",
+  "threshold": "Maximize attack F1 on clean validation capture9; ties choose highest threshold. Fix it for every test condition.",
+  "primary": [
+    "EDGE_GMAE minus GMAE clean macro attack AP",
+    "CONS_GMAE minus GMAE clean macro attack AP"
+  ],
+  "bootstrap": "1,000 shared paired crossed seed/time-block draws; fixed captures with equal weights and 64-window blocks; exact weighted AP. Report 95% and 97.5% marginal percentile intervals for two planned contrasts. Bonferroni interpretation is approximate and conditional; results remain exploratory because the test captures were previously examined.",
+  "preprocessing": "First six numeric/log features z-scored using observed training values, then clip5; ports scaled65535, binaryflags unchanged. All14 observation masks appended. No IP, absolute timestamp, row/scenario identifier or label field enters numeric features.",
+  "graph": "Undirected endpoint-sharing graph inside each fixed chronological window, derived from observed source/destination identities; not a prerequisite implication graph. Host identities can recur across splits.",
+  "scope": "Real captured university traffic with controlled botnet executions, not production incident ground truth. Primary endpoint is retrospective window-end flow classification, not operational COA success. Background/To-only labels excluded, so population is verified-label subset.",
+  "stress": "Missingness independently masks14featurecoordinates. Spoofing independently replaces20/40percent observed first8numericcoordinates with training-verified-benign means; masks/graph unchanged. These are artificial telemetry manipulations on captured data, not measured adversarial deception.",
+  "novelty": "Specific observed-coordinate gating and corruption-consistent telemetry adaptations of established graph-masked, robust-graph and consistency ideas; no first-ever architecture claim.",
+  "communication": "No distributed serializer or network-link simulation in this external application; input tensor size and bounded host transfers are measured, not communication compression.",
+  "imported_methods": [
+    "LOGIT",
+    "DAE",
+    "DENSE",
+    "GMAE",
+    "HDC",
+    "SCR_FLOW",
+    "CTX_FLOW",
+    "LOCAL_FLOW",
+    "NB"
+  ],
+  "variants": {
+    "EDGE_GMAE": {
+      "gate_floor": 0.1,
+      "distance_exponent": -0.5,
+      "overlap_denominator": 14,
+      "learned_extra_parameters": 0,
+      "masked_target_features_in_gate": false
+    },
+    "CONS_GMAE": {
+      "pretraining_node_mask_rate": 0.3,
+      "pretraining_views": 2,
+      "latent_consistency_coefficient": 0.5,
+      "latent_target": "Symmetric stop-gradient opposite view",
+      "supervised_mask_rate": 0.2,
+      "supervised_consistency_coefficient": 0.5,
+      "supervised_target": "stop-gradient original prediction",
+      "inference_architecture": "exact GMAE architecture"
+    }
+  },
+  "controls": {
+    "EDGE_DENSE": "Same gated architecture, zero pretraining",
+    "CONS_PRE": "Same two-view latent-consistency pretraining, zero supervised consistency"
+  },
+  "selection": "No hyperparameter sweep. Constants fixed in code/configuration before new test inference. All 20 training and validation-threshold selections finish before any new held-out inference.",
+  "cost": "Equal maximum epochs and optimizer-update schedules, not equal FLOPs: consistency uses additional forward passes and edge gating adds pairwise feature work. Imported baseline times are historical; a common-session audit remeasures costs.",
+  "test_reuse": "Previously examined CTU-13 test outcomes motivated this follow-up. All new test comparisons are exploratory; fresh datasets or captures are needed for confirmation."
+}
