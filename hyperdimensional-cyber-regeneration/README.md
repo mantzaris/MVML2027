@@ -8,6 +8,12 @@ The implemented study learns a decision-impact gate for repairing beliefs in a s
 
 This is a controlled snapshot study with noisy prior-time evidence, three partial observers, and 32 shared candidate conjunctions. It does not implement a full sequential cyber range. The original research plan includes extensions beyond this experiment; the frozen executable protocol and implementation notes define what was actually measured. Favorable performance and methodological novelty are hypotheses, not assumptions.
 
+## Anonymous manuscript draft
+
+The [consolidated anonymous paper](manuscript/anonymous/main.pdf) is **eight pages with four figures**; the [anonymous supplement](manuscript/anonymous/supplement.pdf) is **four pages with four additional figures**. Both preserve the exploratory interpretation, negative findings and matched controls. The main focuses on captured-telemetry graph learning; the supplement retains synthetic regeneration and candidate-scoring evidence separately.
+
+[Editable anonymous source archive](manuscript/anonymous-source.zip), [rebuild instructions and provenance](manuscript/README.md), and [conference format notes](manuscript/FORMAT_NOTES.md) accompany the PDFs. Public guidelines confirm the eight-page main limit but do not confirm a separate supplemental-upload allowance. The prior study reports and figures below remain unchanged.
+
 ## GraphMAE follow-up: two variants and matched controls
 
 The [GraphMAE variant study](docs/REAL_GMAE_VARIANTS.md) tests **EDGE_GMAE**, which gates graph messages using shared observable-feature coverage and compatibility, and **CONS_GMAE**, which combines two-view masked reconstruction, latent consistency and prediction consistency under additional feature hiding. Both retain the baseline's 121,643 parameters. **EDGE_DENSE** removes gated-model pretraining; **CONS_PRE** removes supervised prediction consistency.

@@ -1,0 +1,26 @@
+{
+  "document_sha256": {
+    "main": "56edcf32a7c7bfd055b8d30e738c304ca3d03084772c462335fd9597c0276fac",
+    "supplement": "c5c9ed75e966c900e72a171580abaa71e1ea0448cd8646dc27c9b18052487095"
+  },
+  "pages": {
+    "main": 8,
+    "supplement": 4
+  },
+  "figures": {
+    "main": 4,
+    "supplement": 4
+  },
+  "main_abstract_words": 183,
+  "anonymous_archive_entries": 15,
+  "anonymous_archive_sha256": "489e03a889d6cbc294c82e8db8d799f38b6d1f78eba5ea9fd2116394a681d85b",
+  "checks": {
+    "source_and_figure_hash_parity": "passed",
+    "archive_direct_identifier_and_author_metadata_scan": "passed",
+    "latex_overfull_and_font_warning_scan": "passed",
+    "pdf_page_and_figure_counts": "passed",
+    "scientific_equation_and_result_review": "passed",
+    "rendered_page_visual_review": "all 8 main and 4 supplemental pages inspected; no clipping or missing content"
+  },
+  "scope": "Document build from recorded research; no new model training/inference. Visual review applies to these PDF hashes."
+}

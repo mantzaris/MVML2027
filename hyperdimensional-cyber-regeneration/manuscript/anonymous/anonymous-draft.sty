@@ -1,0 +1,45 @@
+% Anonymous draft style; follows the MVML 2027 template's written instructions.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{anonymous-draft}[2026/11/25 Anonymous scientific manuscript]
+\usepackage[letterpaper,margin=25mm]{geometry}
+\usepackage[no-math]{fontspec}
+\setmainfont{Tinos}
+\setsansfont{Arimo}
+\usepackage{amsmath,amssymb}
+\usepackage{newtxmath}
+\SetSymbolFont{operators}{normal}{OT1}{ntxtlf}{m}{n}
+\SetSymbolFont{operators}{bold}{OT1}{ntxtlf}{b}{n}
+\SetMathAlphabet{\mathit}{normal}{OT1}{ntxtlf}{m}{it}
+\SetMathAlphabet{\mathit}{bold}{OT1}{ntxtlf}{b}{it}
+\SetMathAlphabet{\mathbf}{normal}{OT1}{ntxtlf}{b}{n}
+\SetMathAlphabet{\mathbf}{bold}{OT1}{ntxtlf}{b}{n}
+\usepackage{graphicx,booktabs,array,tabularx,float,placeins}
+\usepackage{titlesec,caption,enumitem}
+\usepackage[unicode,hidelinks]{hyperref}
+\hypersetup{pdfauthor={},pdfcreator={XeLaTeX},pdfsubject={Anonymous research draft}}
+\setlength{\parindent}{7mm}
+\setlength{\parskip}{0pt}
+\setlength{\textfloatsep}{9pt plus 2pt minus 1pt}
+\setlength{\floatsep}{9pt plus 2pt minus 1pt}
+\setlength{\intextsep}{8pt plus 2pt minus 1pt}
+\setlength{\abovedisplayskip}{6pt plus 1pt minus 1pt}
+\setlength{\belowdisplayskip}{6pt plus 1pt minus 1pt}
+\titleformat{\section}{\sffamily\bfseries\fontsize{12}{14}\selectfont}{\thesection.}{0.45em}{}
+\titleformat{\subsection}{\sffamily\bfseries\fontsize{11}{13}\selectfont}{\thesubsection.}{0.45em}{}
+\titlespacing*{\section}{0pt}{9pt plus 2pt minus 1pt}{4pt}
+\titlespacing*{\subsection}{0pt}{7pt plus 1pt minus 1pt}{3pt}
+\captionsetup{font={small},labelfont=bf,labelsep=period,justification=justified,singlelinecheck=false,skip=4pt}
+\renewcommand{\topfraction}{.90}
+\renewcommand{\bottomfraction}{.85}
+\renewcommand{\textfraction}{.08}
+\renewcommand{\floatpagefraction}{.78}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\setlength{\emergencystretch}{1.5em}
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+\urlstyle{same}
+\AtBeginDocument{\fontsize{11}{12.65}\selectfont}
+\newcommand{\drafttitle}[1]{\begin{center}{\sffamily\bfseries\fontsize{16}{18}\selectfont #1\par}\vspace{5pt}{\fontsize{10}{12}\selectfont Anonymous draft\par}\end{center}\vspace{2pt}}

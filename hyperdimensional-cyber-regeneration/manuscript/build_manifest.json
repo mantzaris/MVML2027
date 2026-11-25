@@ -1,0 +1,80 @@
+{
+  "description": "Internal provenance; excluded from anonymous archive. No new model experiments.",
+  "pdf_checks": {
+    "main": {
+      "pages": 8,
+      "figures": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "page_size_points": [
+        612,
+        792
+      ],
+      "metadata": {
+        "/Creator": "XeLaTeX",
+        "/Title": "Observation-Aware Graph Learning for Corrupted Cyber Telemetry",
+        "/Subject": "Anonymous research draft",
+        "/Producer": "xdvipdfmx (20220710)",
+        "/CreationDate": "D:20261125185649-05'00'"
+      },
+      "outbound_links": [
+        "https://arxiv.org/abs/2205.10803",
+        "https://arxiv.org/abs/2304.04779",
+        "https://arxiv.org/abs/2304.04779",
+        "https://arxiv.org/abs/2005.10203",
+        "https://proceedings.mlr.press/v306/tang26l.html",
+        "https://www.stratosphereips.org/datasets-ctu13",
+        "https://www.stratosphereips.org/datasets-ctu13"
+      ],
+      "sha256": "56edcf32a7c7bfd055b8d30e738c304ca3d03084772c462335fd9597c0276fac"
+    },
+    "supplement": {
+      "pages": 4,
+      "figures": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "page_size_points": [
+        612,
+        792
+      ],
+      "metadata": {
+        "/Creator": "XeLaTeX",
+        "/Title": "Observation-Aware Graph Learning for Corrupted Cyber Telemetry \u2013 Supplementary Material",
+        "/Subject": "Anonymous research draft",
+        "/Producer": "xdvipdfmx (20220710)",
+        "/CreationDate": "D:20261125185651-05'00'"
+      },
+      "outbound_links": [],
+      "sha256": "c5c9ed75e966c900e72a171580abaa71e1ea0448cd8646dc27c9b18052487095"
+    }
+  },
+  "sources": {
+    "manuscript/anonymous/anonymous-draft.sty": "657859d84481e73e64fe3c5cf90936306fee9cb62b368be2379fd180aeb910bd",
+    "manuscript/anonymous/figures/fig1.pdf": "f98deaf952913816ad09ab76c3f658fea7cb3b4c20994efccad83ffbb090c4e9",
+    "manuscript/anonymous/figures/fig2.pdf": "ec75ea370fe6968717e0e6cd7385fdcf5f4d958c4bc1341acf5b258ca7db7586",
+    "manuscript/anonymous/figures/fig3.pdf": "89f1a86837077a9e9154ed0e60c659168e3adeeb72acf585861602e2bd0c7022",
+    "manuscript/anonymous/figures/fig4.pdf": "02642292f21d466927abd9d9e6c9a5c6fbfc475be721eb209f0f925200a0cd9e",
+    "manuscript/anonymous/figures/figS1.pdf": "ec9cf1480a14a7018806d56061f66ff0323a324be3717348d1e8fe479280d38d",
+    "manuscript/anonymous/figures/figS2.pdf": "98e573d0dd9fa6f8bbdd42d1fe523938104e7cae2e75d422dc589faf317460d8",
+    "manuscript/anonymous/figures/figS3.pdf": "e9505d17482dab63e842ddd75449253161ccbfcf43dd985eb259705d7f5140d7",
+    "manuscript/anonymous/figures/figS4.pdf": "ab7a6af83ac50358c9b970d0c7dbfe8bf07c8aa2f953265d7dcc09974b4a2019",
+    "manuscript/anonymous/main.md": "706b9682304e99f209d772719b2de551bd5c5747aa0a4ac729018f690420c95c",
+    "manuscript/anonymous/main.pdf": "56edcf32a7c7bfd055b8d30e738c304ca3d03084772c462335fd9597c0276fac",
+    "manuscript/anonymous/main.tex": "38a9a3e8a1a73b3903740db4ec56ffe2b24f30654488844962b025c61406d84e",
+    "manuscript/anonymous/supplement.md": "394c530370ce64565a05c4ff682ff26b310746be1eb6150ae5673f36182bdd68",
+    "manuscript/anonymous/supplement.pdf": "c5c9ed75e966c900e72a171580abaa71e1ea0448cd8646dc27c9b18052487095",
+    "manuscript/anonymous/supplement.tex": "d95d34f8f8391dd1f43f1679e2633313c2476edfc0d195bf439ea6618977228b"
+  },
+  "archive": {
+    "path": "manuscript/anonymous-source.zip",
+    "sha256": "489e03a889d6cbc294c82e8db8d799f38b6d1f78eba5ea9fd2116394a681d85b"
+  },
+  "builder_sha256": "01dc987d8a5a7109c4f88bcdf73c168294ae0d94f406069eb68ea01336c61997",
+  "figure_provenance_sha256": "d0ee212d693c22052299bbfb1bc06ed013a640675abc2f511519273a9ae13d8a"
+}
