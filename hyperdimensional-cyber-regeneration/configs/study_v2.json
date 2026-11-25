@@ -1,0 +1,59 @@
+{
+  "stage": "frozen_before_fresh_test",
+  "name": "Dependency-factored robust regeneration",
+  "train": 20000,
+  "val": 2000,
+  "test": 4000,
+  "train_seed": 12027,
+  "validation_seed": 22027,
+  "test_seed": 42027,
+  "pilot_test_seed": 52027,
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "batch": 256,
+  "epochs": 40,
+  "pretrain": 5,
+  "patience": 8,
+  "lr": 0.001,
+  "risk_beta": 2.0,
+  "temperature": 0.1,
+  "loss_weights": {
+    "fact_bce": 1,
+    "plan_brier": 1,
+    "decision_regret": 0.25,
+    "semantic": 0.1
+  },
+  "new_training_variants": [
+    "JH",
+    "JD",
+    "IH",
+    "ID",
+    "JH_ERM"
+  ],
+  "new_inference_ablation": "JH_product",
+  "training_groups": [
+    "benign",
+    "targeted",
+    "random",
+    "coherent"
+  ],
+  "training_attack_severities": [
+    0.1,
+    0.2,
+    0.4
+  ],
+  "mixture_assignment": "Index modulo 4 selects group; floor(index/4) modulo 3 selects attack severity. Original hidden worlds and candidate sets retained; one observation realization per world.",
+  "early_stopping": "Mean of four validation group means of total loss, identical for every variant.",
+  "primary": "JH minus ID macro regret across benign0 and targeted/random/coherent0.2, all facts64/budget2048/missing0.2",
+  "bootstrap": "2000 paired crossed seed/topology draws; same clusters across seeds and paired conditions",
+  "old_test_role": "Seed32027 and its published results are development evidence for this second approach, not confirmatory evidence.",
+  "novelty_scope": "Investigated composition of dependency-consistent probability regeneration, candidate supervision and smoothed group-risk training; Bayesian factorization and group robustness are established ideas.",
+  "budget_scope": "New models regenerate all beliefs. ID is the fair full-reconstruction primary comparator; sparse P comparisons also change the repair budget.",
+  "wire_scope": "All methods retain the same sparse report codec; no HDC wire-compression claim.",
+  "consistency_regularizer": "Mean squared ReLU(child marginal minus parent marginal), identical for all new variants; zero for coherent conditional marginals."
+}
