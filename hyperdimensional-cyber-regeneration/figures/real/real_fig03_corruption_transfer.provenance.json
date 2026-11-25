@@ -1,0 +1,29 @@
+{
+  "title": "Artificial telemetry stresses and conditional operating-cost tradeoffs",
+  "script": "scripts/make_real_results.py",
+  "script_sha256": "3d161ccbbf85e83552fdf6d3bea30e57e2713eef11a8c2e6e61aa1d4d1b21b9c",
+  "base_commit": "c49c22297975420fe5244caacbcd9c72cce9c1b1",
+  "inputs": {
+    "results/real/summary.csv": "528b2c35076324ca9d378fcead8eeb4f86c9ff44c47708aa3b4977e151f19652",
+    "results/real/manifest.json": "ac1d9a491c538e0e8525f8d4cb313228e593d7b03ee601ac358c0a8e47581f5a"
+  },
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "test_captures": [
+    10,
+    11,
+    12
+  ],
+  "aggregation": "Equal capture means within each training seed; mean and Student-t 95% interval across five seeds unless explicitly marked primary block-bootstrap. Raw PR curves illustrate seed37, not independent-seed averaging; at most700 score-threshold points are displayed. Calibration pools recorded flows by bin support.",
+  "scope": "Real captured CTU-13 traffic with controlled botnet executions. Artificial telemetry missingness/replacement stress is not observed deception. No real course-of-action outcomes are supplied.",
+  "uncertainty_limit": "Three test captures are fixed. Seed intervals condition on their recorded flow pool; the primary crossed temporal-block interval is recorded separately.",
+  "output_sha256": {
+    "pdf": "a3a6f141037603d4e64a3e8950d836de61b39c373e7d636685560cadf6ffb5a0",
+    "png": "ddd6a7603036b29920aa46ea68cca80950f38935730c546f78f3e3a0202bd855"
+  }
+}

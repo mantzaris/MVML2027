@@ -1,0 +1,20 @@
+{
+  "inputs": {
+    "results/real/summary.csv": "528b2c35076324ca9d378fcead8eeb4f86c9ff44c47708aa3b4977e151f19652",
+    "results/real/manifest.json": "ac1d9a491c538e0e8525f8d4cb313228e593d7b03ee601ac358c0a8e47581f5a",
+    "results/real/comparisons.json": "ffd0c6ed58bd68409d08296ea8edb366e54a2a0650e58bc82ab6246e409e15b0",
+    "results/real/ctu13_data_manifest.json": "303ff7a1f72c319b00ccdb7b46159d5a7b327377a31763915471b8f53c6f62c3",
+    "supplemental/real/real_figS1_training.png": "0ed98f235b53cf930f55fd149ebb1e190ec51cf9a807dd23cd397736d170871a",
+    "supplemental/real/real_figS2_seed_operating_points.png": "e09836b394d1af38c98cd24be120791867aa68c34e39ed49be5d448e0c1be43b",
+    "results/real/pipeline_timing.json": "25fb2e82e1c4d46eae05a1bfe6d80c167b7a8308cec5d6498e15c53f63c28ce8"
+  },
+  "script": "scripts/make_real_supplement.py",
+  "script_sha256": "f7a5000673623de4de432834084983e21c37a8202dd77470c43ea9b3002c59ff",
+  "pdf_sha256": "2c507732dd17dffd3e69fbd8e2cb57758bae07268794dc02e3c6ef52097c82c2",
+  "pages": 3,
+  "figures": [
+    "real_figS1_training",
+    "real_figS2_seed_operating_points"
+  ],
+  "scope": "Captured telemetry classification with constructed feature-corruption stress; not real course-of-action outcomes."
+}

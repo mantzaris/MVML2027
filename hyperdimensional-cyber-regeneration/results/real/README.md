@@ -1,0 +1,19 @@
+# Captured-telemetry external study
+
+The study retrains eight model adaptations and fits a conventional Gaussian naive-Bayes reference on the verified-label subset of CTU-13. It uses real recorded university traffic with controlled botnet executions, not measured operational course-of-action outcomes. Artificial missingness/spoofing conditions are identified separately.
+
+- `ctu13_data_manifest.json` records all thirteen authoritative file/parsed-array hashes, source labels, excluded rows, selected feature definitions and completion-time split checks. The raw 19,976,700 rows contain 799,777 retained known labels (about 4%).
+- `manifest.json` records the frozen source commit/hashes, data-manifest hash, training-only normalization, training/validation fingerprints, fifteen test-case input hashes, 45 fitted checkpoint records, fixed validation thresholds and 675 raw archive hashes.
+- `summary.csv` has 675 rows: nine methods × five seeds × five observation conditions × three fixed held-out captures. AP/AUC are attack-class metrics with ties handled explicitly. F1/recall/FPR use the clean-validation-selected threshold without test refitting.
+- `calibration.csv` contains ten probability bins per model/seed/condition/capture; empty-bin accuracy is unavailable. Flow counts are not claimed independent samples.
+- `calibration_audit.json` records deterministic bin reconstruction from raw predictions, exact flow-count coverage and rounding corrections. There are 321 scores one FP32 rounding step above 1 (maximum excess 1.1921e−7); only calibration-bin assignment/display clips them to [0,1]. Raw rankings, summary metrics and checkpoint predictions remain recorded as executed.
+- `curves.csv` records pretraining/supervised/validation losses. Model targets are shared, but pretraining exposure differs; later epochs may contain fewer models after actual early stopping.
+- `comparisons.json` gives the primary SCR_FLOW-minus-GMAE clean macro-AP contrast and its 1,000-draw paired crossed seed/time-block bootstrap interval. Three captures have fixed equal weights, with contiguous 64-window blocks resampled within each capture. Secondary intervals describe training-seed variation only.
+- `pipeline_timing.json` records a bounded prepared-measurement host-to-GPU-to-host loop, including scaling, endpoint adjacency and inference. It excludes CSV parsing, network-flow extraction, waiting for flow completion, cold loading and network transit.
+- `replay.json` audits seed-37 SCR_FLOW/GMAE/DAE across all three test captures and five conditions: 2,142,195 model/flow evaluations against saved outputs.
+
+Raw `.binetflow` files and numeric arrays live under ignored `data/external/ctu13/`; predictions under ignored `results/runs/real/`; weights under ignored `results/checkpoints/real/`; downloads and run logs under ignored `work/`. Do not force-add those paths. A clean clone can regenerate them from the attributed public source using the preparation/training scripts; raw/checkpoint hash auditing requires those local files.
+
+All model computation and research tensor transformations use the Ada GPU. CPU parses records and performs statistical/reporting work. Windows, graph edges and context are constructed after selecting verified labels, so results do not describe an unfiltered live stream. Hosts may recur across captures, and the data dates to 2011. No deployment, real deception, HDC wire-compression, full planning, or first-ever architecture claim follows from this benchmark alone.
+
+See [method/protocol](../../docs/REAL_DATA_METHOD.md), [results](../../docs/RESULTS_REAL.md), [four main figures](../../figures/real/index.html), and [three-page supplement](../../supplemental/real/Supplement_real.pdf). Dataset attribution and source URLs are in [the source catalogue](../../data/ctu13_sources.json).

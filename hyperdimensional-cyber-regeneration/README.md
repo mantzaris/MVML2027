@@ -8,6 +8,37 @@ The implemented study learns a decision-impact gate for repairing beliefs in a s
 
 This is a controlled snapshot study with noisy prior-time evidence, three partial observers, and 32 shared candidate conjunctions. It does not implement a full sequential cyber range. The original research plan includes extensions beyond this experiment; the frozen executable protocol and implementation notes define what was actually measured. Favorable performance and methodological novelty are hypotheses, not assumptions.
 
+## External application: captured CTU-13 telemetry
+
+The [real-data study](docs/REAL_DATA_METHOD.md) applies nine methods to actual CTU-13 university network measurements captured during controlled botnet executions. Its target is retrospective completed-flow classification: **From-Botnet versus From-Normal**, with all background and incoming-only labels excluded. The 799,777 retained flows are approximately 4% of 19,976,700 rows across all 13 official tables. Results describe this verified-label subset; they do not establish operational course-of-action outcomes or performance on the full traffic population.
+
+The split follows actual capture timestamps and flow completion: **442,084 training flows** from captures 1–8 and 13, **214,880 validation flows** from capture 9, and **142,813 test flows** from captures 10–12. All training records complete before validation starts, and validation completes before test traffic starts. Hosts may recur across captures, so this is a future-capture split, not a host-disjoint split. Fourteen observable features and their masks enter the models; endpoint identities are used only to construct genuine shared-endpoint graphs within fixed 32-flow windows.
+
+Eight neural adaptations—**SCR_FLOW, CTX_FLOW, LOCAL_FLOW, LOGIT, DAE, DENSE, GMAE and HDC**—are freshly trained on captured data, alongside CUDA-fitted Gaussian naive Bayes (**NB**). No synthetic-study weights transfer. SCR_FLOW adapts the shared-context mixture to flow classification; the graph models use observed endpoint relationships without inventing prerequisite implications. The clean-data primary contrast is SCR_FLOW minus GMAE in macro attack average precision across the three held-out captures. Artificial feature masking and benign-value replacement separately test telemetry corruption; they are not observed real-world deception.
+
+The completed Ada run covers five training seeds and 675 method/condition/capture records. Clean macro attack AP is **0.96616 for SCR_FLOW versus 0.97830 for GMAE**: paired difference **−0.01215**, 95% crossed seed/time-block interval **[−0.04490, +0.01159]**. This establishes neither an improvement nor equivalence. DENSE has the numerically highest clean mean AP (**0.98151**); Gaussian naive Bayes reaches **0.91784** and the small DAE **0.86743**. The separate checkpoint audit exactly reproduces 2,142,195 model/flow evaluations.
+
+- [Method, adaptation equation and limitations](docs/REAL_DATA_METHOD.md), [frozen protocol](configs/study_real.json), and [results and interpretation](docs/RESULTS_REAL.md).
+- [Four main comparison figures](figures/real/index.html) and [real-study supplemental PDF](supplemental/real/Supplement_real.pdf).
+- [Artifact and execution record](results/real/README.md), [official sources and attribution](data/ctu13_sources.json), [download hashes](data/ctu13_downloads.json), and [data audit and temporal split](results/real/ctu13_data_manifest.json).
+
+The method and configuration define the external experiment; the results and artifact record establish its measured outcomes and completion status. This experiment can be reproduced independently of earlier synthetic checkpoints:
+
+```bash
+# Download only official text flow tables, verify hashes, and parse all 13 captures.
+.venv/bin/python scripts/prepare_ctu13.py all --workers 2
+python3 scripts/run_gpu.py -- -m unittest discover -s tests -p 'test_real*.py' -v
+python3 scripts/run_gpu.py -- scripts/run_real.py
+python3 scripts/run_gpu.py -- scripts/measure_real_pipeline.py
+python3 scripts/run_gpu.py -- scripts/replay_real.py
+.venv/bin/python scripts/analyze_real.py
+.venv/bin/python scripts/make_real_results.py
+.venv/bin/python scripts/make_real_supplement.py
+.venv/bin/python scripts/verify_real_artifacts.py
+```
+
+Scaling, model fitting, inference and metric tensor calculations run on the attached Ada GPU. CPU handles text parsing, serialization, bootstrap statistics, plotting and PDF rendering. The source tables (approximately 2.73 GB) and prepared arrays remain in ignored `data/external/ctu13/`; raw experiment arrays, checkpoints and logs remain in ignored run/checkpoint/work directories. Only compact provenance, measurements, code and selected final figures/documents belong in Git.
+
 ## Third approach: direct candidate scoring and inexpensive ML
 
 The [third method](docs/METHOD_V3.md) tests **SCR**, a shared-context candidate scorer that predicts each candidate's feasibility directly. It combines canonical prerequisite sets with learned set embeddings and a four-expert mixture. It does not reconstruct a complete fact state. Single-expert controls test the effects of global context and the mixture; **LOGIT** and a pretrained **denoising autoencoder (DAE)** provide inexpensive fact-reconstruction comparisons.

@@ -1,0 +1,169 @@
+{
+  "seed": 37,
+  "scenario": 10,
+  "condition": "clean",
+  "window": 0,
+  "flows": 32,
+  "rows": [
+    {
+      "method": "LOGIT",
+      "median_ms": 1.134517999162199,
+      "p10_ms": 1.1128961981739849,
+      "p95_ms": 1.4765994004847016,
+      "repeats": 50,
+      "returned_probabilities": 32,
+      "output_bytes": 128
+    },
+    {
+      "method": "DAE",
+      "median_ms": 1.4360870009113569,
+      "p10_ms": 1.4057322026928887,
+      "p95_ms": 1.7708955494526888,
+      "repeats": 50,
+      "returned_probabilities": 32,
+      "output_bytes": 128
+    },
+    {
+      "method": "DENSE",
+      "median_ms": 2.991391500472673,
+      "p10_ms": 2.827199898820254,
+      "p95_ms": 3.479912650982442,
+      "repeats": 50,
+      "returned_probabilities": 32,
+      "output_bytes": 128
+    },
+    {
+      "method": "GMAE",
+      "median_ms": 2.856049499314395,
+      "p10_ms": 2.7133979008794995,
+      "p95_ms": 3.399766799157078,
+      "repeats": 50,
+      "returned_probabilities": 32,
+      "output_bytes": 128
+    },
+    {
+      "method": "HDC",
+      "median_ms": 3.209164999134373,
+      "p10_ms": 3.079158497712342,
+      "p95_ms": 3.8285863482087734,
+      "repeats": 50,
+      "returned_probabilities": 32,
+      "output_bytes": 128
+    },
+    {
+      "method": "SCR_FLOW",
+      "median_ms": 2.312076001544483,
+      "p10_ms": 2.195879097780562,
+      "p95_ms": 2.811498449773353,
+      "repeats": 50,
+      "returned_probabilities": 32,
+      "output_bytes": 128
+    },
+    {
+      "method": "CTX_FLOW",
+      "median_ms": 1.9822449994535418,
+      "p10_ms": 1.9165444016834954,
+      "p95_ms": 2.356019401122466,
+      "repeats": 50,
+      "returned_probabilities": 32,
+      "output_bytes": 128
+    },
+    {
+      "method": "LOCAL_FLOW",
+      "median_ms": 2.0176859998173313,
+      "p10_ms": 1.9563163008569973,
+      "p95_ms": 2.539336899280897,
+      "repeats": 50,
+      "returned_probabilities": 32,
+      "output_bytes": 128
+    },
+    {
+      "method": "NB",
+      "median_ms": 1.1328839991620043,
+      "p10_ms": 1.0970344006636878,
+      "p95_ms": 1.4116961985564556,
+      "repeats": 50,
+      "returned_probabilities": 32,
+      "output_bytes": 128
+    }
+  ],
+  "hardware": "NVIDIA RTX 5000 Ada Generation",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "warmups": 5,
+  "scope": "Bounded wall timing from decoded flow measurements to attack probabilities.\n\nIncludes CPU orchestration, H2D transfer of numeric measurements/observation\nmasks/hashed endpoint metadata/valid flags, CUDA training-fitted normalization,\nCUDA endpoint-sharing graph construction, model inference, and D2H float32\nprobabilities. Excludes CSV scanning/decoding, raw packet/NetFlow construction,\nnetwork transport, waiting for flow or window completion, and cold model/key\nloading. This fixed-window audit is not operational end-to-end detection time.",
+  "input_component_bytes": {
+    "features": 1792,
+    "observed": 448,
+    "src": 256,
+    "dst": 256,
+    "valid": 32
+  },
+  "input_bytes": 2784,
+  "output_bytes": 128,
+  "input_byte_scope": "Actual decoded host tensors transferred per window; not a wire codec or compression measurement.",
+  "resident_normalization_bytes": 112,
+  "model_and_statistics_resident": true,
+  "labels_in_measured_inputs": false,
+  "input_roundtrip": "Prepared features, adjacency and validity exactly match the stored-case reconstruction.",
+  "prediction_roundtrip": "All nine batch-one prediction paths match direct prepared-reference inputs at absolute tolerance 1e-6.",
+  "original_batch_first_window_max_absolute_errors": {
+    "LOGIT": 0.0,
+    "DAE": 0.0,
+    "DENSE": 0.0,
+    "GMAE": 0.0,
+    "HDC": 0.0,
+    "SCR_FLOW": 0.0,
+    "CTX_FLOW": 0.0,
+    "LOCAL_FLOW": 0.0,
+    "NB": 0.0
+  },
+  "original_batch_probability_tolerance": 1e-05,
+  "checkpoint_hashes": {
+    "LOGIT": {
+      "path": "results/checkpoints/real/37_LOGIT.pt",
+      "sha256": "c271944825c70a305fa90bbba5a1f1900cc3532b5d586c3f125253bbe0117859"
+    },
+    "DAE": {
+      "path": "results/checkpoints/real/37_DAE.pt",
+      "sha256": "2dc538a0a102fa08641ff012951ad4e1e655d54ce218475bf7fe210cb0d89fd7"
+    },
+    "DENSE": {
+      "path": "results/checkpoints/real/37_DENSE.pt",
+      "sha256": "3fc71129e0bd81ed6ed413fbf60c00a9632096c343f962b570811071139b3eeb"
+    },
+    "GMAE": {
+      "path": "results/checkpoints/real/37_GMAE.pt",
+      "sha256": "9c3d9679c80a5f4b7083e93584626295b8acf0947592ebe2c23f3390539491e1"
+    },
+    "HDC": {
+      "path": "results/checkpoints/real/37_HDC.pt",
+      "sha256": "062252daa1453d51d60645c53b644378019192369df815c5082c7bbd53256438"
+    },
+    "SCR_FLOW": {
+      "path": "results/checkpoints/real/37_SCR_FLOW.pt",
+      "sha256": "f971341dce764bbee62e193e1a4aae33ea7a0e7c870069a687639d075fea51a5"
+    },
+    "CTX_FLOW": {
+      "path": "results/checkpoints/real/37_CTX_FLOW.pt",
+      "sha256": "9a289690ae9ff82676ff5919190f169b1cd8a7e1c55994a52954b5a504e44d26"
+    },
+    "LOCAL_FLOW": {
+      "path": "results/checkpoints/real/37_LOCAL_FLOW.pt",
+      "sha256": "1bce04178a93a3c668f51e58e70f205d65d65736b5a37377a63381d897e6e05c"
+    },
+    "NB": {
+      "path": "results/checkpoints/real/37_NB.pt",
+      "sha256": "388083d4b9e1c1d1f230f660982648569900ec865488834d5637db5d72c4c4fd"
+    }
+  },
+  "manifest_sha256": "ac1d9a491c538e0e8525f8d4cb313228e593d7b03ee601ac358c0a8e47581f5a",
+  "data_manifest_sha256": "303ff7a1f72c319b00ccdb7b46159d5a7b327377a31763915471b8f53c6f62c3",
+  "case_input_sha256": "922ac1d6405b2904c49f89e73a4fb7df8a685ae7b51f74c864e833c6f65ed458",
+  "source_hashes": {
+    "scripts/measure_real_pipeline.py": "d1ad21ff2ddf571dd9aaafbc3f9574076f6aa92df546b69038cf9caf479210ff",
+    "src/real_data.py": "4e3aa876696cbca6a125e098b7ff84f77b9894f6d760456af4940d6ccfebef2c",
+    "src/real_models.py": "90c8e344536440a7fbce048729b14e6d16bcca961d603c2f4735569a9273210f",
+    "src/real_metrics.py": "7176d88d0ac997b86cada4b587232fbb03ee5a775fe1461d362d3657a2d3cb37"
+  }
+}

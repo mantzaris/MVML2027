@@ -1,0 +1,30 @@
+{
+  "title": "External discrimination, calibration loss and paired model contrasts",
+  "script": "scripts/make_real_results.py",
+  "script_sha256": "3d161ccbbf85e83552fdf6d3bea30e57e2713eef11a8c2e6e61aa1d4d1b21b9c",
+  "base_commit": "c49c22297975420fe5244caacbcd9c72cce9c1b1",
+  "inputs": {
+    "results/real/summary.csv": "528b2c35076324ca9d378fcead8eeb4f86c9ff44c47708aa3b4977e151f19652",
+    "results/real/manifest.json": "ac1d9a491c538e0e8525f8d4cb313228e593d7b03ee601ac358c0a8e47581f5a",
+    "results/real/comparisons.json": "ffd0c6ed58bd68409d08296ea8edb366e54a2a0650e58bc82ab6246e409e15b0"
+  },
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "test_captures": [
+    10,
+    11,
+    12
+  ],
+  "aggregation": "Equal capture means within each training seed; mean and Student-t 95% interval across five seeds unless explicitly marked primary block-bootstrap. Raw PR curves illustrate seed37, not independent-seed averaging; at most700 score-threshold points are displayed. Calibration pools recorded flows by bin support.",
+  "scope": "Real captured CTU-13 traffic with controlled botnet executions. Artificial telemetry missingness/replacement stress is not observed deception. No real course-of-action outcomes are supplied.",
+  "uncertainty_limit": "Three test captures are fixed. Seed intervals condition on their recorded flow pool; the primary crossed temporal-block interval is recorded separately.",
+  "output_sha256": {
+    "pdf": "34d68ebd1e22d8bbecef6b0a1d52ddaa0fbfdfb2e92165a7d37e804d5b5bf930",
+    "png": "d80266ec3d529995eb32a0428b7b55507e83413cceda26c33ae1175ce332a2b4"
+  }
+}

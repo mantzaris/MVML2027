@@ -350,3 +350,54 @@ python3 scripts/run_gpu.py -- scripts/replay_v3.py
 ```
 
 Training and inference stay on CUDA. Statistical analysis, plotting, PDF rendering and file handling may use CPU. Keep raw arrays, logs and checkpoints under ignored `results/runs/v3/`, `results/checkpoints/v3/` and `work/`; commit concise summaries, provenance, source and selected final artifacts. The manifest and audit establish execution status, and the results report establishes measured conclusions.
+
+
+## External-data update: captured flows and retrained model adaptations
+
+This addendum extends the original publication scope from public synthetic experiments to public captured telemetry, as requested for the next investigation. Earlier plans, implementations and results remain preserved above and in their study directories. The external study addresses ML generalization and robustness relevant to the planning proposal; it does not convert traffic labels into mission readiness or measured course-of-action outcomes. The [method specification](docs/REAL_DATA_METHOD.md) and [frozen executable configuration](configs/study_real.json) define the study, while the results record determines its measured conclusions.
+
+**Data and split.** CTU-13 contains university traffic captured in 2011 while real botnets were deliberately executed. This is genuine captured telemetry under controlled botnet activity, not production incident ground truth. Use all 13 official bidirectional `.binetflow` text tables, retaining only From-Botnet and From-Normal labels; background, incoming-only and ambiguous labels are not assumed benign. The retained 799,777 flows comprise about 4% of 19,976,700 table rows. The provider states CC-BY without a license version; source attribution, exact URLs and file hashes remain in the [source manifest](data/ctu13_sources.json), [download record](data/ctu13_downloads.json) and [data audit](results/real/ctu13_data_manifest.json).
+
+The fixed future-capture split has 442,084 training flows from captures 1–8 and 13; 214,880 validation flows from capture 9; and 142,813 test flows from captures 10–12. Actual completed-flow extents, not capture numbering or headline dates, establish ordering. Capture 8 extends into August 17 and capture 13 starts August 15. The latest training completion (August 17, 09:47:11) precedes validation start (12:01:01); validation completion (17:12:13) precedes test start (August 18, 10:19:15). These are provider-local timestamps used consistently for ordering, not a claimed UTC timezone. Normal hosts can recur across the split. The three held-out captures include two Rbot recordings and one NSIS.ay recording, so equal-capture macro results do not estimate unseen-organization or arbitrary-family generalization.
+
+**Observations and new adaptation.** Fourteen numeric/protocol/state features and 14 observation indicators describe each retained flow. Raw IP addresses, absolute times, capture IDs, original row IDs and label fields are excluded from numerical features. Training-only scaling applies to the first six features. Fixed nonoverlapping chronological windows contain up to 32 retained flows; predictions are retrospective, after constituent flows complete. Filtering unknown-label traffic changes these windows and their context, which must accompany any deployment interpretation.
+
+The new SCR_FLOW adaptation pools flow embeddings into shared window mean/std context and uses a four-expert probability mixture, building directly on the third study's shared-context equation:
+
+$$
+h_i=\phi_\theta(x_i),\qquad
+ g_W=[\operatorname{mean}_{i\in W}h_i,\operatorname{std}_{i\in W}h_i],\qquad
+ \widehat p_i=\sum_{k=1}^{4}\operatorname{softmax}_k(a_\theta(g_W))\,
+ \sigma\!\left(\rho_{\theta,k}([h_i,g_W])\right).
+\tag{REAL.1}
+$$
+
+The [method document](docs/REAL_DATA_METHOD.md) specifies masks, widths and training. Equation REAL.1 adapts established pooling and mixture mechanisms; it is not a claim of a new general architecture. CTX_FLOW uses a single head with global context, while LOCAL_FLOW zeros that context with the same head shape. DENSE and GraphMAE-adapted GMAE use genuine endpoint-sharing edges within each window. HDC adds fixed-codebook associative retrieval to the GMAE principle. LOGIT and a small denoising autoencoder (DAE) provide inexpensive learned references; Gaussian naive Bayes (NB) supplies a conventional closed-form baseline. All eight neural models are freshly trained, and NB is fitted, on these captured training flows. No earlier synthetic checkpoint is reused. Endpoint equality is a relationship in observed traffic, not a prerequisite implication, and the symbolic guarantees of earlier planning models are not asserted here.
+
+**Frozen evaluation.** Five neural training seeds use AdamW, learning rate 0.001, batch 256, up to 40 supervised epochs and validation patience 8. DAE, GMAE and HDC additionally receive five reconstruction-pretraining epochs. Inverse capture-window-frequency weights balance training capture contributions. Validation averages clean, 20% missing and 20% spoofed observations; attack-F1 thresholds are selected on clean validation only and fixed for testing. The primary contrast is SCR_FLOW minus GMAE macro attack average precision on clean captures 10–12. Paired uncertainty crosses training seeds with contiguous 64-window time blocks within each fixed capture. Secondary calibration, discrimination, false-positive rates, runtime, memory and stress comparisons remain descriptive.
+
+Artificial missingness removes 20% or 50% of observable coordinates; spoofing replaces 20% or 40% of the first eight observed numeric coordinates with training-verified-benign means. Protocol/state flags and endpoint metadata remain unchanged. These manipulations test robustness on real measurements but are not captured adversarial deception, valid packet-level attacks or corruption of graph metadata. The external study has no distributed serializer or network-link simulation, so input tensor size does not establish communication compression. Neural training, NB fitting, normalization and inference all use the attached RTX 5000 Ada; CPU is reserved for parsing, file handling, bootstrap statistics and artifact rendering.
+
+The external record will retain four rich main figures and a supplemental PDF within the requested 2–4 pages, with extra empirical figures. Conference suitability comes from representation adaptation, matched observations, calibration, learned versus inexpensive baselines, and measured compute. The proposal connection is evidence for a perception/representation component under partial or corrupted observations. Operational planning, causal incident response and mission-state regeneration require separate evidence. The conference's separate supplemental-upload allowance remains subject to confirmation in its submission system.
+
+External-study record:
+
+- [Methods and adaptation equation](docs/REAL_DATA_METHOD.md), [frozen protocol](configs/study_real.json), and [results and interpretation](docs/RESULTS_REAL.md).
+- [Four main figures](figures/real/index.html), [supplemental PDF](supplemental/real/Supplement_real.pdf), and [artifact and execution record](results/real/README.md).
+- [Sources and attribution](data/ctu13_sources.json), [download hashes](data/ctu13_downloads.json), and [full data/temporal audit](results/real/ctu13_data_manifest.json).
+
+Reproduce independently of the earlier synthetic studies, from this project directory:
+
+```bash
+.venv/bin/python scripts/prepare_ctu13.py all --workers 2
+python3 scripts/run_gpu.py -- -m unittest discover -s tests -p 'test_real*.py' -v
+python3 scripts/run_gpu.py -- scripts/run_real.py
+python3 scripts/run_gpu.py -- scripts/measure_real_pipeline.py
+python3 scripts/run_gpu.py -- scripts/replay_real.py
+.venv/bin/python scripts/analyze_real.py
+.venv/bin/python scripts/make_real_results.py
+.venv/bin/python scripts/make_real_supplement.py
+.venv/bin/python scripts/verify_real_artifacts.py
+```
+
+The parser's required action is `download`, `prepare` or `all`; `all --workers 2` downloads and prepares every table with two concurrent downloads. Retain the source tables (approximately 2.73 GB) and parsed arrays only under ignored `data/external/ctu13/`. Keep raw experiment arrays, checkpoints and logs under ignored run/checkpoint/work directories. Commit compact provenance, protocol, source, measurements and selected final artifacts. Do not infer completed experimentation or improved performance from this plan; the external results and execution record establish those facts.

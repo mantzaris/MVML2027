@@ -1,0 +1,6767 @@
+{
+  "manifest_sha256": "ac1d9a491c538e0e8525f8d4cb313228e593d7b03ee601ac358c0a8e47581f5a",
+  "summary_sha256": "528b2c35076324ca9d378fcead8eeb4f86c9ff44c47708aa3b4977e151f19652",
+  "raw_hash_catalogue_sha256": "2bc531d5471f361465cc77ff4b45ea10466709942361646bd83d277b0dfec3cc",
+  "analysis_source_sha256": "f572781afbbf8d6284ea9602fc8b86e29e4ffe4024cc4193423ec05def062cf4",
+  "calibration_sha256": "29dbd4bcf430fb9fa46d7e6106493c02e2c20efff1254ad14a6468173632cce7",
+  "raw_archives": 675,
+  "calibration_rows": 6750,
+  "predictions_total": 32132925,
+  "binned_total": 32132925,
+  "out_of_range_predictions": 321,
+  "maximum_bound_excess": 1.1920928955078125e-07,
+  "tolerance": 1e-06,
+  "policy": "Retain raw scores for AP/AUC/Brier parity; clip to[0,1] only for reliability display and bin membership. Regenerated from raw to include every prediction.",
+  "per_case": [
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 162,
+      "max_excess": 1.1920928955078125e-07
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 85,
+      "max_excess": 1.1920928955078125e-07
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 28,
+      "max_excess": 1.1920928955078125e-07
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 22,
+      "max_excess": 1.1920928955078125e-07
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 4,
+      "max_excess": 1.1920928955078125e-07
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 19,
+      "max_excess": 1.1920928955078125e-07
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 51,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 1,
+      "max_excess": 1.1920928955078125e-07
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 10,
+      "n": 122157,
+      "binned": 122157,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 11,
+      "n": 10873,
+      "binned": 10873,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "clean",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "missing20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "missing50",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "spoof20",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOGIT",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DAE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "DENSE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "GMAE",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "HDC",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "SCR_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "CTX_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "LOCAL_FLOW",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    },
+    {
+      "seed": 71,
+      "method": "NB",
+      "condition": "spoof40",
+      "scenario": 12,
+      "n": 9783,
+      "binned": 9783,
+      "out_of_range": 0,
+      "max_excess": 0.0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Recorded training and validation objectives",
+  "script": "scripts/make_real_results.py",
+  "script_sha256": "3d161ccbbf85e83552fdf6d3bea30e57e2713eef11a8c2e6e61aa1d4d1b21b9c",
+  "base_commit": "c49c22297975420fe5244caacbcd9c72cce9c1b1",
+  "inputs": {
+    "results/real/curves.csv": "6e8a07f89c4df566716cfdf171e9c08f7e40cc9905868966acca34df741253b4",
+    "results/real/manifest.json": "ac1d9a491c538e0e8525f8d4cb313228e593d7b03ee601ac358c0a8e47581f5a"
+  },
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "test_captures": [
+    10,
+    11,
+    12
+  ],
+  "aggregation": "Equal capture means within each training seed; mean and Student-t 95% interval across five seeds unless explicitly marked primary block-bootstrap. Raw PR curves illustrate seed37, not independent-seed averaging; at most700 score-threshold points are displayed. Calibration pools recorded flows by bin support.",
+  "scope": "Real captured CTU-13 traffic with controlled botnet executions. Artificial telemetry missingness/replacement stress is not observed deception. No real course-of-action outcomes are supplied.",
+  "uncertainty_limit": "Three test captures are fixed. Seed intervals condition on their recorded flow pool; the primary crossed temporal-block interval is recorded separately.",
+  "output_sha256": {
+    "pdf": "86ce19d05463262194aa89068a4b154cb86d4a64055879bfe285dfd06068cad5",
+    "png": "0ed98f235b53cf930f55fd149ebb1e190ec51cf9a807dd23cd397736d170871a"
+  }
+}

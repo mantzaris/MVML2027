@@ -1,0 +1,48 @@
+{
+  "title": "Per-capture precision-recall and pooled reliability",
+  "script": "scripts/make_real_results.py",
+  "script_sha256": "3d161ccbbf85e83552fdf6d3bea30e57e2713eef11a8c2e6e61aa1d4d1b21b9c",
+  "base_commit": "c49c22297975420fe5244caacbcd9c72cce9c1b1",
+  "inputs": {
+    "results/real/summary.csv": "528b2c35076324ca9d378fcead8eeb4f86c9ff44c47708aa3b4977e151f19652",
+    "results/real/manifest.json": "ac1d9a491c538e0e8525f8d4cb313228e593d7b03ee601ac358c0a8e47581f5a",
+    "results/real/calibration.csv": "29dbd4bcf430fb9fa46d7e6106493c02e2c20efff1254ad14a6468173632cce7",
+    "results/runs/real/37/LOGIT_clean_10.npz": "8d46d1952a89432480c1f934870fa713e961b4be5ec2aaabc316f1b45b266be9",
+    "results/runs/real/37/DAE_clean_10.npz": "4d42896856fcc81b03cca4c05c1bb00701f355b2d71006d53d301f3f45f58e21",
+    "results/runs/real/37/GMAE_clean_10.npz": "f4f51617c755a850cb535757ce1343e3ecc4b10806bd3c24f55f61667c08579f",
+    "results/runs/real/37/HDC_clean_10.npz": "657318bbbb90289b176d61cc0a4d439a6e51d7856257d36bf0aec8dedff1c61b",
+    "results/runs/real/37/CTX_FLOW_clean_10.npz": "ebb5259dffa6701f006898c97e96c71257b8ba40078aa910985cdf683b139c94",
+    "results/runs/real/37/SCR_FLOW_clean_10.npz": "80f2c136b64ae267681f458e953b7282e24498184998dca2efdc856e95dfe442",
+    "results/runs/real/37/LOGIT_clean_11.npz": "98068bcae711d10dfbc887bb32fc8263872d47a0aa3223fde15686433c35fd59",
+    "results/runs/real/37/DAE_clean_11.npz": "3f121133ab281fc21547f6842d7cd4285c90009e94af1d9b9889e03651340c00",
+    "results/runs/real/37/GMAE_clean_11.npz": "d68cc303b41d6813365f4819559c02d2e978a1ba20516ab8fe84c8cf94a84e06",
+    "results/runs/real/37/HDC_clean_11.npz": "1afaf9fe95346c551cea229cf3a37ecf04e3a8fa7c80f44b5d1b824e7c245368",
+    "results/runs/real/37/CTX_FLOW_clean_11.npz": "6af2a398a350cb8c17369b6a4a4497b9f8aced2d2309dc647c2316b26c5d3db1",
+    "results/runs/real/37/SCR_FLOW_clean_11.npz": "c4c994be0b26d610d0308c0bc1e27a758096be64759391ca860b5d1c17529a74",
+    "results/runs/real/37/LOGIT_clean_12.npz": "754dc3efd0c2ea81ce00afcd888e0b33b820958653662b7686bfd2f3907a730c",
+    "results/runs/real/37/DAE_clean_12.npz": "c21f347adc4b13c71452a74eb213b8fe93d8475d78a6b095e3fa32cc13332a9c",
+    "results/runs/real/37/GMAE_clean_12.npz": "6f02d970bbe0a288dee239f018472d656152336e84d5fdd1f1a4c69c43d8035a",
+    "results/runs/real/37/HDC_clean_12.npz": "a9a6ce8f733601942bdb5d9bdb8ba0143103b44d417eb8e9616391e47f75b345",
+    "results/runs/real/37/CTX_FLOW_clean_12.npz": "8a1fabd0636f95a294f2098710ff1d7bd32d029cb951590a9a2b386dad351513",
+    "results/runs/real/37/SCR_FLOW_clean_12.npz": "72055ed0dfee773d9a98290fbd03412560692fec6cb7fe41fd56a99d953d6c63"
+  },
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "test_captures": [
+    10,
+    11,
+    12
+  ],
+  "aggregation": "Equal capture means within each training seed; mean and Student-t 95% interval across five seeds unless explicitly marked primary block-bootstrap. Raw PR curves illustrate seed37, not independent-seed averaging; at most700 score-threshold points are displayed. Calibration pools recorded flows by bin support.",
+  "scope": "Real captured CTU-13 traffic with controlled botnet executions. Artificial telemetry missingness/replacement stress is not observed deception. No real course-of-action outcomes are supplied.",
+  "uncertainty_limit": "Three test captures are fixed. Seed intervals condition on their recorded flow pool; the primary crossed temporal-block interval is recorded separately.",
+  "output_sha256": {
+    "pdf": "65a1abae657a3f887abc3bc99fd6ba6426cde1d80d522b67fca41bd3da802649",
+    "png": "236cb05672b57aa1ee1146bf7d358d1c0d1d98e8d610289340b7f6b42bfc30e7"
+  }
+}
