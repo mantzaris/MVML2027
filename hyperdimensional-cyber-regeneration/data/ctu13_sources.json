@@ -1,0 +1,213 @@
+{
+  "dataset": "CTU-13 bidirectional labeled NetFlow",
+  "retrieval_date": "2026-11-25",
+  "authority": "Stratosphere Laboratory / Czech Technical University",
+  "homepage": "https://www.stratosphereips.org/datasets-ctu13",
+  "license": "Creative Commons CC-BY (provider does not state a version on this page)",
+  "license_url": "https://www.stratosphereips.org/datasets-overview",
+  "permission_url": "https://www.stratosphereips.org/datasets-faq",
+  "citation": "Garcia, S., Grill, M., Stiborek, J., Zunino, A. An empirical comparison of botnet detection methods. Computers & Security 45 (2014), 100\u2013123. doi:10.1016/j.cose.2014.05.011",
+  "capture_scope": "Actual university network traffic with deliberately executed real botnets, collected in 2011; controlled captures, not independently labeled production incidents.",
+  "format": "Argus bidirectional text CSV, 15 columns",
+  "columns": [
+    "StartTime",
+    "Dur",
+    "Proto",
+    "SrcAddr",
+    "Sport",
+    "Dir",
+    "DstAddr",
+    "Dport",
+    "State",
+    "sTos",
+    "dTos",
+    "TotPkts",
+    "TotBytes",
+    "SrcBytes",
+    "Label"
+  ],
+  "label_rule": "Only labels containing From-Botnet are positive and From-Normal are negative. All other labels, including Background and To-Botnet/To-Normal, are excluded from supervised rows.",
+  "label_authority": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-42/",
+  "splits": {
+    "train": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      13
+    ],
+    "validation": [
+      9
+    ],
+    "test": [
+      10,
+      11,
+      12
+    ]
+  },
+  "split_rationale": "Capture-disjoint chronological split fixed from provider metadata before inspecting held-out feature distributions or model outcomes. Training captures start Aug10\u201316 (scenario13 starts Aug15); scenario8 continues into Aug17. Validation scenario9 starts later Aug17; test10/11/12 are Aug18\u201319. Preparation verifies exact retained-record extrema do not overlap.",
+  "identity_limit": "Host identities recur across captures. This is not a host-disjoint test. IP addresses, raw identity, labels, scenario IDs and absolute timestamps must not become predictive features.",
+  "sources": [
+    {
+      "scenario": 1,
+      "capture_id": 42,
+      "family": "Neris",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-42/detailed-bidirectional-flow-labels/capture20110810.binetflow",
+      "source_filename": "capture20110810.binetflow",
+      "local_filename": "scenario_01.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-42/",
+      "listed_size": "369M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "train"
+    },
+    {
+      "scenario": 2,
+      "capture_id": 43,
+      "family": "Neris",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-43/detailed-bidirectional-flow-labels/capture20110811.binetflow",
+      "source_filename": "capture20110811.binetflow",
+      "local_filename": "scenario_02.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-43/",
+      "listed_size": "236M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "train"
+    },
+    {
+      "scenario": 3,
+      "capture_id": 44,
+      "family": "Rbot",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-44/detailed-bidirectional-flow-labels/capture20110812.binetflow",
+      "source_filename": "capture20110812.binetflow",
+      "local_filename": "scenario_03.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-44/",
+      "listed_size": "610M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "train"
+    },
+    {
+      "scenario": 4,
+      "capture_id": 45,
+      "family": "Rbot",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-45/detailed-bidirectional-flow-labels/capture20110815.binetflow",
+      "source_filename": "capture20110815.binetflow",
+      "local_filename": "scenario_04.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-45/",
+      "listed_size": "147M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "train"
+    },
+    {
+      "scenario": 5,
+      "capture_id": 46,
+      "family": "Virut",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-46/detailed-bidirectional-flow-labels/capture20110815-2.binetflow",
+      "source_filename": "capture20110815-2.binetflow",
+      "local_filename": "scenario_05.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-46/",
+      "listed_size": "17M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "train"
+    },
+    {
+      "scenario": 6,
+      "capture_id": 47,
+      "family": "DonBot",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-47/detailed-bidirectional-flow-labels/capture20110816.binetflow",
+      "source_filename": "capture20110816.binetflow",
+      "local_filename": "scenario_06.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-47/",
+      "listed_size": "73M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "train",
+      "family_note": "The current official scenario-6 README calls this capture DonBot; some historical CTU-13 descriptions call it Menti."
+    },
+    {
+      "scenario": 7,
+      "capture_id": 48,
+      "family": "Sogou",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-48/detailed-bidirectional-flow-labels/capture20110816-2.binetflow",
+      "source_filename": "capture20110816-2.binetflow",
+      "local_filename": "scenario_07.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-48/",
+      "listed_size": "15M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "train"
+    },
+    {
+      "scenario": 8,
+      "capture_id": 49,
+      "family": "Murlo",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-49/detailed-bidirectional-flow-labels/capture20110816-3.binetflow",
+      "source_filename": "capture20110816-3.binetflow",
+      "local_filename": "scenario_08.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-49/",
+      "listed_size": "385M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "train"
+    },
+    {
+      "scenario": 9,
+      "capture_id": 50,
+      "family": "Neris",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-50/detailed-bidirectional-flow-labels/capture20110817.binetflow",
+      "source_filename": "capture20110817.binetflow",
+      "local_filename": "scenario_09.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-50/",
+      "listed_size": "273M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "validation"
+    },
+    {
+      "scenario": 10,
+      "capture_id": 51,
+      "family": "Rbot",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-51/detailed-bidirectional-flow-labels/capture20110818.binetflow",
+      "source_filename": "capture20110818.binetflow",
+      "local_filename": "scenario_10.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-51/",
+      "listed_size": "171M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "test"
+    },
+    {
+      "scenario": 11,
+      "capture_id": 52,
+      "family": "Rbot",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-52/detailed-bidirectional-flow-labels/capture20110818-2.binetflow",
+      "source_filename": "capture20110818-2.binetflow",
+      "local_filename": "scenario_11.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-52/",
+      "listed_size": "14M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "test"
+    },
+    {
+      "scenario": 12,
+      "capture_id": 53,
+      "family": "NSIS.ay",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-53/detailed-bidirectional-flow-labels/capture20110819.binetflow",
+      "source_filename": "capture20110819.binetflow",
+      "local_filename": "scenario_12.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-53/",
+      "listed_size": "43M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "test"
+    },
+    {
+      "scenario": 13,
+      "capture_id": 54,
+      "family": "Virut",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-54/detailed-bidirectional-flow-labels/capture20110815-3.binetflow",
+      "source_filename": "capture20110815-3.binetflow",
+      "local_filename": "scenario_13.binetflow",
+      "documentation_url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-54/",
+      "listed_size": "251M",
+      "listed_size_note": "Rounded Apache directory listing, not a byte-precise integrity constraint",
+      "split": "train"
+    }
+  ]
+}

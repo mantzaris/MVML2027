@@ -1,0 +1,150 @@
+{
+  "dataset": "CTU-13 bidirectional labeled NetFlow",
+  "source_manifest_sha256": "1273620de5e61a46d0cad58f0bd8db1b61557e97af95490b29a47576f1f9a124",
+  "files": [
+    {
+      "scenario": 1,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-42/detailed-bidirectional-flow-labels/capture20110810.binetflow",
+      "path": "data/external/ctu13/scenario_01.binetflow",
+      "bytes": 386629271,
+      "sha256": "be09f7f6a06beef0134152dc88bff85f0027db4affe07b3fbe956bbb49be5430",
+      "last_modified": "Fri, 30 Jan 2015 16:20:07 GMT",
+      "etag": "\"170b7e97-50de0fa50fbc0\"",
+      "retrieved_utc": "2026-11-25T22:31:51Z",
+      "download_seconds": 64.83645786800116
+    },
+    {
+      "scenario": 2,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-43/detailed-bidirectional-flow-labels/capture20110811.binetflow",
+      "path": "data/external/ctu13/scenario_02.binetflow",
+      "bytes": 247231783,
+      "sha256": "7b5bbca3cc8acc5ac13153ec96cf0168a9e2e8ba084b36576e9853ffebb72dca",
+      "last_modified": "Fri, 30 Jan 2015 16:20:34 GMT",
+      "etag": "\"ebc7527-50de0fbecf880\"",
+      "retrieved_utc": "2026-11-25T22:31:35Z",
+      "download_seconds": 47.96483541099951
+    },
+    {
+      "scenario": 3,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-44/detailed-bidirectional-flow-labels/capture20110812.binetflow",
+      "path": "data/external/ctu13/scenario_03.binetflow",
+      "bytes": 639643247,
+      "sha256": "0ebcd1df082bb5f85f8254c3857b02fdbb597c9b2ee7c50f908cc24ca92c0054",
+      "last_modified": "Fri, 30 Jan 2015 16:20:56 GMT",
+      "etag": "\"26202e6f-50de0fd3caa00\"",
+      "retrieved_utc": "2026-11-25T22:32:36Z",
+      "download_seconds": 109.39097825099816
+    },
+    {
+      "scenario": 4,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-45/detailed-bidirectional-flow-labels/capture20110815.binetflow",
+      "path": "data/external/ctu13/scenario_04.binetflow",
+      "bytes": 153789874,
+      "sha256": "30353fcffe971e97839ccffaa1675535490420f1ba1f65e5c90f6a815a8ab2c0",
+      "last_modified": "Fri, 30 Jan 2015 16:21:22 GMT",
+      "etag": "\"92aa5b2-50de0fec96480\"",
+      "retrieved_utc": "2026-11-25T22:32:29Z",
+      "download_seconds": 53.95410880399868
+    },
+    {
+      "scenario": 5,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-46/detailed-bidirectional-flow-labels/capture20110815-2.binetflow",
+      "path": "data/external/ctu13/scenario_05.binetflow",
+      "bytes": 17766203,
+      "sha256": "ef5c9ed6895d4ca5aec723449dae30054ccd1f6b091713a52ffcb681ff78a02c",
+      "last_modified": "Tue, 31 Jan 2017 07:16:41 GMT",
+      "etag": "\"10f173b-5475eb6bd2cf5\"",
+      "retrieved_utc": "2026-11-25T22:31:55Z",
+      "download_seconds": 3.7614110440008517
+    },
+    {
+      "scenario": 6,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-47/detailed-bidirectional-flow-labels/capture20110816.binetflow",
+      "path": "data/external/ctu13/scenario_06.binetflow",
+      "bytes": 76780048,
+      "sha256": "801800eeda9a5a44868b1e3e492f93dc6d52b5d14566c1d8431c9e85d0d2adaa",
+      "last_modified": "Fri, 30 Jan 2015 16:22:18 GMT",
+      "etag": "\"4939210-50de1021fe280\"",
+      "retrieved_utc": "2026-11-25T22:32:02Z",
+      "download_seconds": 6.729482062997704
+    },
+    {
+      "scenario": 7,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-48/detailed-bidirectional-flow-labels/capture20110816-2.binetflow",
+      "path": "data/external/ctu13/scenario_07.binetflow",
+      "bytes": 15630512,
+      "sha256": "df0b5338190b967bd340a0d6c1bb3c34d1bbfb4b7ffa764c2dd26f77f1a26680",
+      "last_modified": "Fri, 30 Jan 2015 16:22:46 GMT",
+      "etag": "\"ee80b0-50de103cb2180\"",
+      "retrieved_utc": "2026-11-25T22:32:05Z",
+      "download_seconds": 3.234096127001976
+    },
+    {
+      "scenario": 8,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-49/detailed-bidirectional-flow-labels/capture20110816-3.binetflow",
+      "path": "data/external/ctu13/scenario_08.binetflow",
+      "bytes": 403955463,
+      "sha256": "c3884b629e152e3144c2d7250d01939c199fa8a135a88f0c775ee3be0237f01f",
+      "last_modified": "Fri, 30 Jan 2015 16:23:03 GMT",
+      "etag": "\"1813df07-50de104ce87c0\"",
+      "retrieved_utc": "2026-11-25T22:33:05Z",
+      "download_seconds": 59.51999362099741
+    },
+    {
+      "scenario": 9,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-50/detailed-bidirectional-flow-labels/capture20110817.binetflow",
+      "path": "data/external/ctu13/scenario_09.binetflow",
+      "bytes": 285841002,
+      "sha256": "c8de257b6207ec3624467da62e91841073256fbdad5434db5eb5667588178bab",
+      "last_modified": "Fri, 30 Jan 2015 16:23:29 GMT",
+      "etag": "\"1109966a-50de1065b4240\"",
+      "retrieved_utc": "2026-11-25T22:33:25Z",
+      "download_seconds": 56.08928301900232
+    },
+    {
+      "scenario": 10,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-51/detailed-bidirectional-flow-labels/capture20110818.binetflow",
+      "path": "data/external/ctu13/scenario_10.binetflow",
+      "bytes": 179074339,
+      "sha256": "840a7030d57cb965a4e6e19c61e89b20647a4aefe5608c2da90623710e7cd74f",
+      "last_modified": "Fri, 30 Jan 2015 16:23:57 GMT",
+      "etag": "\"aac7523-50de108068140\"",
+      "retrieved_utc": "2026-11-25T22:33:41Z",
+      "download_seconds": 64.75300496900309
+    },
+    {
+      "scenario": 11,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-52/detailed-bidirectional-flow-labels/capture20110818-2.binetflow",
+      "path": "data/external/ctu13/scenario_11.binetflow",
+      "bytes": 14596615,
+      "sha256": "cee542d4b5efe4fa1cd59b87ece5aaea9a13d8f0abe56cd07cee31590736428c",
+      "last_modified": "Mon, 02 Feb 2015 08:54:31 GMT",
+      "etag": "\"deba07-50e171a401fc0\"",
+      "retrieved_utc": "2026-11-25T22:33:08Z",
+      "download_seconds": 3.2299258200000622
+    },
+    {
+      "scenario": 12,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-53/detailed-bidirectional-flow-labels/capture20110819.binetflow",
+      "path": "data/external/ctu13/scenario_12.binetflow",
+      "bytes": 44718958,
+      "sha256": "1098f0addacedc321c7baefad63ef0d9a0f26630d0155087d37e8da770dd9f2e",
+      "last_modified": "Tue, 10 May 2016 14:52:48 GMT",
+      "etag": "\"2aa5b6e-5327e1418f000\"",
+      "retrieved_utc": "2026-11-25T22:33:27Z",
+      "download_seconds": 19.333565133001684
+    },
+    {
+      "scenario": 13,
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-54/detailed-bidirectional-flow-labels/capture20110815-3.binetflow",
+      "path": "data/external/ctu13/scenario_13.binetflow",
+      "bytes": 262668288,
+      "sha256": "d1d8aaea885870c64615261bd78ebf569e7d5b41adab2a6f3008702f4ded4503",
+      "last_modified": "Fri, 30 Jan 2015 16:25:03 GMT",
+      "etag": "\"fa80000-50de10bf595c0\"",
+      "retrieved_utc": "2026-11-25T22:34:11Z",
+      "download_seconds": 46.21749446200192
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,56 @@
+# External application to captured CTU-13 network flows
+
+This study moves from the project's synthetic planning snapshots to actual captured network measurements. It asks whether the learned representation and reconstruction families transfer as **retrained model adaptations** to flow-label prediction. It does not treat intrusion labels as host readiness, invent prerequisite implications, or claim that captured flows supply measured course-of-action outcomes.
+
+## Data, attribution and target
+
+[CTU-13](https://www.stratosphereips.org/datasets-ctu13) contains university traffic mixed with controlled executions of real botnets, captured in 2011. The authors recommend their bidirectional NetFlow representation. The public [dataset overview](https://www.stratosphereips.org/datasets-overview) states CC-BY without specifying a version; the [FAQ](https://www.stratosphereips.org/datasets-faq) permits use with attribution. Cite Garcia, Grill, Stiborek and Zunino, *An empirical comparison of botnet detection methods*, Computers & Security 45 (2014), 100–123, [doi:10.1016/j.cose.2014.05.011](https://doi.org/10.1016/j.cose.2014.05.011).
+
+Only official `.binetflow` text tables are used. No malware executable or packet-payload archive is needed. The exact URLs, hashes, schema, label counts, exclusions and license source are recorded in `data/ctu13_sources.json`, `data/ctu13_downloads.json` and `results/real/ctu13_data_manifest.json`.
+
+The supervised target is the provider's **From-Botnet** versus **From-Normal** label. Background, incoming-only and ambiguous labels are excluded rather than assumed benign. These are author-annotated host-associated traffic labels, not independently adjudicated malicious intent for every packet. All 13 files contain 19,976,700 rows; 799,777 have the retained labels. This roughly 4% verified-label subset is not the prevalence or distribution of all observed traffic.
+
+## Chronological split and observations
+
+Training uses captures 1–8 and 13; validation uses capture 9; testing uses captures 10, 11 and 12. Capture 13 starts on August 15 despite its numerical identifier; capture 8 extends into August 17. Actual recorded completion times were checked: the latest training completion is August 17 at 09:47:11, before validation begins at 12:01:01. Validation ends at 17:12:13, before test traffic starts August 18 at 10:19:15. Provider-local timestamps are interpreted consistently for ordering; the parser's fixed epoch convention does not assert a true UTC timezone.
+
+Counts are 442,084 training, 214,880 validation and 142,813 test flows. The test captures contain two Rbot recordings (a training-seen family) and one NSIS.ay recording (not in training). The primary average fixes these three captures equally; it is not a population estimate across arbitrary malware families or organizations. Normal hosts may recur across captures, so the split is not host-disjoint.
+
+Fourteen observable features are parsed: log duration, log packets, log bytes, log source bytes, source-byte fraction, log bytes per packet, scaled source/destination ports, TCP/UDP/ICMP flags, and S/F/R state flags. Invalid coordinates receive a zero placeholder and an explicit missingness indicator. Only the first six values are standardized, using observed **training** coordinates; values are then clipped to ±5. The 14 observation indicators are appended, giving a 28-coordinate input. Raw IP addresses, absolute times, scenario identifiers, row identifiers and labels never enter the numerical feature vector.
+
+Within each capture, fixed nonoverlapping groups of 32 retained flows are sorted by start time and original row number; the final partial group is masked. A window's predictions are retrospective, after its constituent flows have completed. Flow aggregates are not available at packet arrival, so this is not a causal packet-by-packet detector. Excluding unknown-label rows can leave temporal gaps. Context and endpoint graphs are also built after this filtering, so they describe the verified-label subset rather than an unfiltered live stream. Time blocks for inference retain 64 adjacent windows (up to 2,048 labeled flows), not a fixed elapsed-time duration.
+
+The graph controls connect two valid flow nodes when they share an observed source or destination endpoint. Endpoint identifiers enter only this graph construction, never numerical embeddings. Graph structure can still carry repeated-host behavioral information. An edge does not imply that either flow's class logically determines the other's. There is no fabricated child⇒parent rule.
+
+## Models and relation to the previous studies
+
+Every neural model is freshly trained on these real measurements; synthetic-study weights are not reused. New files preserve all earlier implementations and their frozen results.
+
+- **SCR_FLOW** adapts the shared-context mixture: a 28→32→32 flow encoder, masked window mean/std context of width 64, a 96→64→4 probability head and a 64→32→4 common gate. For flow i in window W,
+  \[h_i=\phi(x_i),\quad g_W=[\operatorname{mean}_{i\in W}h_i,\operatorname{std}_{i\in W}h_i],\quad \widehat p_i=\sum_{k=1}^{4}\operatorname{softmax}_k(a(g_W))\sigma(\rho_k([h_i,g_W])).\]
+  This is an explicit flow-classification adaptation of equation V3.2. It retains the shared context and mixture mechanism; real data provides no candidate-prerequisite canonicalization. Experts have no supervised botnet-family identity.
+- **CTX_FLOW** uses one head with the same global context. **LOCAL_FLOW** zeros the context vector while retaining the same head shape and parameter count. SCR versus CTX also changes capacity; CTX versus LOCAL isolates access to the pooled context.
+- **LOGIT** is a 28→1 sigmoid predictor. **DAE** has a 28→32→8 encoder, 8→32→14 reconstruction decoder and 8→1 classifier. Five pretraining epochs additionally mask 25% of observed coordinates, clear their indicators and add Gaussian noise of standard deviation 0.05 only to retained observed values. Targets are the pre-extra-corruption observed values, not labels or hidden clean truth. The retained decoder is not active at inference.
+- **DENSE** is a three-layer graph classifier of width 128. **GMAE** has exactly the same architecture but receives five GraphMAE-adapted masked-node reconstruction epochs (30% node masking, latent remasking, neighbor propagation and observed-coordinate MSE on masked nodes). This is an adaptation of the pretraining principle, not an exact reproduction of the original paper.
+- **HDC** uses the GMAE objective and schedule with 28 additional associative-retrieval coordinates. A fixed 4,096-dimensional bipolar codebook binds observations to chronological window slots and retrieves them; seed 27027 and capacity 64 are recorded. Generic flow coordinates replace the earlier three specialized report channels. HDC versus GMAE tests this representation change with matched objectives/pretraining; parameter count also increases. Slot keys do not guarantee invariance under arbitrary reordering unless the keys are transported with the flows.
+- **NB** is a conventional Gaussian naive-Bayes evidence update. It estimates class priors, means and variances from training only, omits unavailable features in likelihoods, and floors variances at 0.001. Binary indicators also receive a Gaussian approximation. Its 58 fitted statistics are counted explicitly; fitting uses closed-form CUDA reductions rather than gradient epochs.
+
+Neural supervised loss is valid-flow binary cross-entropy plus Brier score within each window. Inverse capture-window-frequency weights give training captures equal expected weight. Preprocessing remains fitted on all training flows. All models receive the same observations and labels. Different pretraining and parameter counts remain explicit; this is not an equal-total-FLOP comparison. The symbolic probability guarantees of JH/JD do not transfer to these labels and are not claimed.
+
+## Artificial telemetry stress on real observations
+
+The natural `clean` condition is the primary endpoint. Additional missingness independently removes 20% or 50% of the 14 observed coordinates. Spoofing independently replaces 20% or 40% of observed numeric coordinates 0–7 with means from training verified-normal flows, while retaining their observed flags. Protocol/state flags and endpoint graph metadata remain unchanged. No test labels choose the corrupted coordinates or replacement values.
+
+These are controlled feature-corruption experiments on captured data, **not observed real-world deception attacks**. They do not model packet-valid adversarial evasion, an adaptive adversary, corrupted topology metadata or a network-link codec. Training assigns windows modulo three to clean, missing20 or spoof20 once, with fixed random seeds. Validation averages these three conditions. Missing50 and spoof40 test stronger corruption at fixed settings.
+
+## Frozen evaluation and compute
+
+Five training seeds (11, 23, 37, 51, 71), AdamW lr 0.001, batch 256, max 40 supervised epochs and validation patience 8 are fixed before model predictions on test captures. GMAE, HDC and DAE receive five pretraining epochs; other neural models receive none. The threshold maximizes attack F1 on clean validation capture 9, with ties choosing the highest threshold, and remains fixed across test conditions. Validation/test class prevalence differs substantially; thresholds are not refitted to test traffic.
+
+The primary contrast is **SCR_FLOW minus GMAE macro attack average precision on clean captures 10/11/12**, higher being better. AP and ROC-AUC account for tied scores exactly. Also report Brier, balanced accuracy, F1, attack recall, false-positive rate, calibration, actual training duration, warmed GPU inference, memory and a bounded host-preprocessing timing audit.
+
+Use 1,000 paired crossed training-seed/time-block bootstrap draws for the primary AP contrast. Draw training seeds with replacement; within each fixed test capture draw 64-window blocks with replacement, sharing draws across models and seeds. Recompute weighted AP, with fixed equal capture weights. Jointly reject a draw with no positive labels in any capture and disclose the count. Secondary comparisons are descriptive seed intervals, not additional confirmatory tests. Blocks approximate local dependence; the analysis cannot establish independence of distant flows, account for all repeated-host dependence or quantify unseen-organization uncertainty.
+
+Training, scaling, HDC operations, inference and metric tensor calculations use the RTX 5000 Ada. CPU handles CSV parsing, serialization, bootstrap statistics, plotting and PDF rendering. The external study has no distributed report codec: input tensor size and bounded host transfers are measured, not packet communication or HDC compression gains. Raw tables, prepared arrays, weights and logs are ignored by Git; concise provenance, source, results, four rich figures and a three-page supplement are retained.
+
+The external evidence addresses ML generalization and robustness of representation learning. It does not validate operational COA planning, causal incident response, full mission-state regeneration, or the entire DARPA proposal.
