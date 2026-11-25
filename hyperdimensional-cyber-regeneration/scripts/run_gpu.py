@@ -60,6 +60,7 @@ def main():
             raise RuntimeError("Project .venv is missing. Follow docs/GPU_SETUP.md.")
         gpu = select_gpu(query_gpus(), args.gpu_name, args.gpu_uuid)
         env = os.environ.copy()
+        env["CUBLAS_WORKSPACE_CONFIG"] = ":4096:8"
         env["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
         env["CUDA_VISIBLE_DEVICES"] = gpu.uuid
         env["REGEN_EXPECTED_GPU_NAME"] = gpu.name
