@@ -4,6 +4,9 @@ project: hyperdimensional-cyber-regeneration
 status: planned
 device:
   required_backend: cuda
+  preferred_gpu_name: NVIDIA RTX 5000 Ada Generation
+  launcher: scripts/run_gpu.py
+  verified_local_vram_gib: 31.48
   allow_cpu_fallback: false
   target_vram_gib: 24
   model_autocast: bfloat16_when_supported

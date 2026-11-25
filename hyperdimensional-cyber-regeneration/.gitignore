@@ -13,3 +13,17 @@ results/checkpoints/
 *.pth
 *.ckpt
 wandb/
+
+# Local runtime, logs, and large experimental artifacts
+logs/
+results/raw/
+results/traces/
+results/profiles/
+*.log
+*.jsonl
+*.tfevents*
+*.npy
+*.npz
+*.safetensors
+*.whl
+.pytest_cache/

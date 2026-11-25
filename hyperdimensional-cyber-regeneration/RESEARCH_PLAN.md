@@ -199,7 +199,7 @@ CybORG/CAGE Challenge 4 [R7] provides a possible second public simulation settin
 
 ## GPU compute and reproducibility
 
-**Primary research platform:** one NVIDIA CUDA GPU with approximately 24 GiB VRAM. The exact GPU model, driver, CUDA runtime, PyTorch build, power limit, and usable VRAM must be recorded at the first run. This is a design target, not a claim that a usable GPU has already been provisioned.
+**Verified local platform:** the attached NVIDIA RTX 5000 Ada Generation, with 32 GB nominal memory and 31.48 GiB reported by CUDA, driver 590.48.01, Python 3.12.3, and PyTorch 2.9.1+cu128. CUDA, HDC algebra, and BF16 forward/backward operations passed the hardware smoke check on November 25, 2026. Use the [Ada launcher](docs/GPU_SETUP.md) and retain a 24 GiB memory envelope for the planned constrained-memory comparison. Record the device, power limit, runtime, and usable memory again in each research-run manifest.
 
 - Place HDC encoding, similarity search, graph neural layers, counterfactual teacher batches, loss computation, and learned inference on CUDA.
 - Use BF16 autocast where supported; retain FP32 probabilities, logarithms, HDC accumulation, losses, and calibration calculations. Validate mixed-precision output against an FP32 GPU reference on a fixed batch. Follow the installed PyTorch release's AMP documentation [R10].
@@ -216,7 +216,7 @@ CybORG/CAGE Challenge 4 [R7] provides a possible second public simulation settin
 
 Use a pilot of at most four GPU-hours to measure feasible batch sizes and throughput. A provisional total cap of 200 GPU-hours covers the main comparison and core ablations; revise the experiment grid using measured pilot cost before launching it. This is a planning budget, not authorization to provision paid infrastructure.
 
-The GPU readiness utility exits with a clear failure if CUDA or PyTorch is missing. Current documentation work and diagram rendering do not constitute GPU experiment execution.
+The GPU readiness utility exits with a clear failure if CUDA or PyTorch is missing. The completed hardware smoke check is not a research experiment; model-training and evaluation results are still pending.
 
 ## Metrics and statistical protocol
 

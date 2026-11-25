@@ -15,3 +15,7 @@ These instructions apply to this project directory and its descendants.
 - Record model settings, environment, dataset hashes, code commit, raw metrics, and figure provenance.
 - Treat novelty and expected improvements as hypotheses until literature review and experiments justify stronger claims.
 - Keep published material based on public sources and the project's synthetic scenarios.
+
+- Use `python3 scripts/run_gpu.py -- ...` to select the attached NVIDIA RTX 5000 Ada Generation. Never silently select the Quadro T2000.
+- Keep virtual environments, installation logs, raw run logs, traces, checkpoints, downloaded datasets, and package caches out of Git. Commit concise summaries, manifests, source, and selected final figures.
+- Inspect staged paths and blob sizes before each commit. Avoid repetitive or large logs; keep GPU verification output under ignored `work/`.

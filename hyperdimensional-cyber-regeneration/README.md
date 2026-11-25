@@ -11,15 +11,17 @@ The study develops a learned, budgeted regeneration operator that repairs decisi
 - [References](docs/REFERENCES.md): primary sources and exactly what is inherited.
 - [Study configuration](configs/study.yaml): proposed experiment settings, not a training implementation.
 - [Design figure gallery](figures/design/index.html): four original vector diagrams of the research design, with no simulated performance claims.
-- [GPU readiness check](scripts/check_gpu.py): refuses to substitute CPU computation for CUDA research runs.
+- [GPU setup](docs/GPU_SETUP.md): verified NVIDIA RTX 5000 Ada Generation, PyTorch 2.9.1, and CUDA 12.8.
+- [GPU launcher](scripts/run_gpu.py): selects the Ada GPU by UUID and runs the project environment.
+- [GPU readiness check](scripts/check_gpu.py): verifies CUDA and BF16 forward/backward computation.
 - [Project instructions](AGENTS.md): scope, GPU requirement, evidence standards, and direct-to-main workflow.
 
-All project code, data, logs, manuscripts, figures, and temporary work belong in this directory. Use `work/` for scratch files and `results/` for actual experiment outputs. This initial package contains the research design; no model has been trained and no empirical result figures have been generated.
+All project code, data, logs, manuscripts, figures, and temporary work belong in this directory. Use `work/` for scratch files and `results/` for actual experiment outputs. This initial package contains the research design; no research model has been trained and no empirical result figures have been generated.
 
-Run the GPU readiness check from this directory:
+Run the verified Ada GPU environment from this directory:
 
 ```bash
-python3 scripts/check_gpu.py
+python3 scripts/run_gpu.py
 ```
 
 The diagram generator uses Python's standard library and can run without a GPU:
@@ -28,4 +30,4 @@ The diagram generator uses Python's standard library and can run without a GPU:
 python3 scripts/render_design_figures.py
 ```
 
-These are documentation utilities. Future training and model inference must require CUDA. Keep commits on the repository's existing `main` branch.
+The figure generator is a documentation utility. Research training and model inference must use the CUDA launcher. Keep environments, raw logs, and checkpoints out of Git. Keep commits on the repository's existing `main` branch.
