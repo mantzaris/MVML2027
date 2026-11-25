@@ -1,0 +1,26 @@
+{
+  "title": "Fresh-test decisions and paired contrasts among candidate and belief models.",
+  "script": "scripts/make_v3_results.py",
+  "script_sha256": "bd4df5d273df3ab209eab1c46d59fa6b6dd402018d62109196e306b7051a483c",
+  "base_commit": "daa9e0f82be0725376f1923a697c1bbd0e96dba6",
+  "inputs": {
+    "results/v3/summary.csv": "5e9dfbe3ac95ed282a6df314300e617d74358d3e895b24c53889bea7ab34df3c",
+    "results/v3/manifest.json": "cf756e72c869906fd9f052eaa993848a97111f57a446082f780fe9a05a024837"
+  },
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    71
+  ],
+  "test_generator_seed": 62027,
+  "filtering": "Core: 64 facts, 2048-byte budget, 20% missing; benign plus targeted/random/coherent at 20% requested intervention. Reference: targeted 20% only. Shift panels label changed variable.",
+  "aggregation": "Equal condition mean within seed, then mean and Student-t 95% interval across five training seeds. Calibration pools probabilities by bin counts. Optimization traces average all five training seeds at every epoch; all 25 new models reached the 40-epoch cap.",
+  "uncertainty_limit": "Intervals condition on one shared fresh test pool; crossed seed/topology bootstrap is recorded separately. Pooled candidate counts are not independent sample counts.",
+  "not_applicable": "Direct candidate models have no fact posterior: fact Brier and logical consistency are not applicable, not zero.",
+  "output_sha256": {
+    "pdf": "1db90dea844cf912e24082d8d393bf3c92c1b36e648e89530468042813201d64",
+    "png": "ef330513ebeed3a1fd8f0bb3d9a364abfba1ca42818f4301561712d96b0dd4dc"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "passed": true,
+  "training_seed": 37,
+  "fresh_test_seed": 62027,
+  "hardware": "NVIDIA RTX 5000 Ada Generation",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "precision": "FP32 inference; TF32 allowed; deterministic algorithms",
+  "absolute_tolerance": 1e-05,
+  "model_condition_replays": 12,
+  "model_snapshot_evaluations": 48000,
+  "scope": "Replay verification, not a new efficacy estimate or model selection exercise.",
+  "source_manifest_sha256": "cf756e72c869906fd9f052eaa993848a97111f57a446082f780fe9a05a024837",
+  "replay_script_sha256": "7786f40bea8793112b7168aa1481815719f5f94ac81127a6ab431e5b8b0158cf",
+  "maximum_absolute_errors": {
+    "planprob": 0.0,
+    "regret": 0.0,
+    "plan_brier": 0.0
+  },
+  "rows": [
+    {
+      "method": "SCR",
+      "condition": "severity",
+      "corruption": 0.0,
+      "attack": "targeted",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_SCR.pt",
+      "checkpoint_sha256": "43e72240e9ede69430dc2e7506b6af2bec42e4412517c7987b9ec556202f7b6b",
+      "raw_path": "results/runs/v3/37/SCR_severity_0.0_targeted_64_2048_0.1.npz",
+      "raw_sha256": "3da13554677176303a0ec53879a7012abc2a898bceef155e5b69569294d17a45",
+      "input_data_sha256": "a665c34374fa5632571f682017426c170b3736db875e2ea83f7a6f1d264cf89e"
+    },
+    {
+      "method": "DAE",
+      "condition": "severity",
+      "corruption": 0.0,
+      "attack": "targeted",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_DAE.pt",
+      "checkpoint_sha256": "39fff5f17017d0ef202699bd4a5ab91e8e188902c7907f52fa7f5794577364b0",
+      "raw_path": "results/runs/v3/37/DAE_severity_0.0_targeted_64_2048_0.1.npz",
+      "raw_sha256": "d8fcb165a5819ef5b7446e671d075a991b6f877f8b6a9145801255c04206ebac",
+      "input_data_sha256": "a665c34374fa5632571f682017426c170b3736db875e2ea83f7a6f1d264cf89e"
+    },
+    {
+      "method": "LOGIT",
+      "condition": "severity",
+      "corruption": 0.0,
+      "attack": "targeted",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_LOGIT.pt",
+      "checkpoint_sha256": "02b13e956d8be9f783f80ab240faaf1b0c369c2cee7f0ed99191d65847b5b77a",
+      "raw_path": "results/runs/v3/37/LOGIT_severity_0.0_targeted_64_2048_0.1.npz",
+      "raw_sha256": "7fd87df9f8acc4eaef7e2cd21fc5e3304d08b15e3c35c80dcdbcb0bb3c2b0966",
+      "input_data_sha256": "a665c34374fa5632571f682017426c170b3736db875e2ea83f7a6f1d264cf89e"
+    },
+    {
+      "method": "SCR",
+      "condition": "severity",
+      "corruption": 0.2,
+      "attack": "targeted",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_SCR.pt",
+      "checkpoint_sha256": "43e72240e9ede69430dc2e7506b6af2bec42e4412517c7987b9ec556202f7b6b",
+      "raw_path": "results/runs/v3/37/SCR_severity_0.2_targeted_64_2048_0.1.npz",
+      "raw_sha256": "20bb93b1f5865a86ddb80b39d4f8b49caa69a96a5d904d0188bd3e3c2dac2183",
+      "input_data_sha256": "4048d6e32608920f36f1bf4bab0ffc985ff1e456f47c2be0a6ee3c63a1373e01"
+    },
+    {
+      "method": "DAE",
+      "condition": "severity",
+      "corruption": 0.2,
+      "attack": "targeted",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_DAE.pt",
+      "checkpoint_sha256": "39fff5f17017d0ef202699bd4a5ab91e8e188902c7907f52fa7f5794577364b0",
+      "raw_path": "results/runs/v3/37/DAE_severity_0.2_targeted_64_2048_0.1.npz",
+      "raw_sha256": "e4f34788171522d64357c326f835ba18209f1595cc1ebcef9933eff3c2b6450a",
+      "input_data_sha256": "4048d6e32608920f36f1bf4bab0ffc985ff1e456f47c2be0a6ee3c63a1373e01"
+    },
+    {
+      "method": "LOGIT",
+      "condition": "severity",
+      "corruption": 0.2,
+      "attack": "targeted",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_LOGIT.pt",
+      "checkpoint_sha256": "02b13e956d8be9f783f80ab240faaf1b0c369c2cee7f0ed99191d65847b5b77a",
+      "raw_path": "results/runs/v3/37/LOGIT_severity_0.2_targeted_64_2048_0.1.npz",
+      "raw_sha256": "8308ffc9549875cf255f2d3d50a690fad37a812c984cbc663bfa0f533b5d4202",
+      "input_data_sha256": "4048d6e32608920f36f1bf4bab0ffc985ff1e456f47c2be0a6ee3c63a1373e01"
+    },
+    {
+      "method": "SCR",
+      "condition": "attack",
+      "corruption": 0.2,
+      "attack": "random",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_SCR.pt",
+      "checkpoint_sha256": "43e72240e9ede69430dc2e7506b6af2bec42e4412517c7987b9ec556202f7b6b",
+      "raw_path": "results/runs/v3/37/SCR_attack_0.2_random_64_2048_0.1.npz",
+      "raw_sha256": "fc2d4eed9ef50318f6f44ad9ce9ebcba662ae9741597d87eaf7e38779f0b18d4",
+      "input_data_sha256": "d4904c3d8a4bbbc9f59c5f352c98bc75abc63c39d511e25812f9a22b88059372"
+    },
+    {
+      "method": "DAE",
+      "condition": "attack",
+      "corruption": 0.2,
+      "attack": "random",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_DAE.pt",
+      "checkpoint_sha256": "39fff5f17017d0ef202699bd4a5ab91e8e188902c7907f52fa7f5794577364b0",
+      "raw_path": "results/runs/v3/37/DAE_attack_0.2_random_64_2048_0.1.npz",
+      "raw_sha256": "23f3f775338400c15d434cf9786fcc672b8cc3ef2b3fb02142ef4c9f6390244a",
+      "input_data_sha256": "d4904c3d8a4bbbc9f59c5f352c98bc75abc63c39d511e25812f9a22b88059372"
+    },
+    {
+      "method": "LOGIT",
+      "condition": "attack",
+      "corruption": 0.2,
+      "attack": "random",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_LOGIT.pt",
+      "checkpoint_sha256": "02b13e956d8be9f783f80ab240faaf1b0c369c2cee7f0ed99191d65847b5b77a",
+      "raw_path": "results/runs/v3/37/LOGIT_attack_0.2_random_64_2048_0.1.npz",
+      "raw_sha256": "25aca5547fa5856525e9ea773a17710ede05b121e1ea67a678b3f4acd62ba408",
+      "input_data_sha256": "d4904c3d8a4bbbc9f59c5f352c98bc75abc63c39d511e25812f9a22b88059372"
+    },
+    {
+      "method": "SCR",
+      "condition": "attack",
+      "corruption": 0.2,
+      "attack": "coherent",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_SCR.pt",
+      "checkpoint_sha256": "43e72240e9ede69430dc2e7506b6af2bec42e4412517c7987b9ec556202f7b6b",
+      "raw_path": "results/runs/v3/37/SCR_attack_0.2_coherent_64_2048_0.1.npz",
+      "raw_sha256": "e37f67ca6677f5c4825b9232172bf05f22e75ef4f54b0a2d1f1705bea6ae940f",
+      "input_data_sha256": "6bee120803a5caafe528781fdc40eef0f76e863cee17b967d38778c20c4eb875"
+    },
+    {
+      "method": "DAE",
+      "condition": "attack",
+      "corruption": 0.2,
+      "attack": "coherent",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_DAE.pt",
+      "checkpoint_sha256": "39fff5f17017d0ef202699bd4a5ab91e8e188902c7907f52fa7f5794577364b0",
+      "raw_path": "results/runs/v3/37/DAE_attack_0.2_coherent_64_2048_0.1.npz",
+      "raw_sha256": "e69c6b9bba78984458845b73df1eb7743b4469b72b1000db9bccd4bbb1139509",
+      "input_data_sha256": "6bee120803a5caafe528781fdc40eef0f76e863cee17b967d38778c20c4eb875"
+    },
+    {
+      "method": "LOGIT",
+      "condition": "attack",
+      "corruption": 0.2,
+      "attack": "coherent",
+      "snapshots": 4000,
+      "max_absolute_errors": {
+        "planprob": 0.0,
+        "regret": 0.0,
+        "plan_brier": 0.0
+      },
+      "checkpoint_path": "results/checkpoints/v3/37_LOGIT.pt",
+      "checkpoint_sha256": "02b13e956d8be9f783f80ab240faaf1b0c369c2cee7f0ed99191d65847b5b77a",
+      "raw_path": "results/runs/v3/37/LOGIT_attack_0.2_coherent_64_2048_0.1.npz",
+      "raw_sha256": "d4d77ede1a560d82015e01bd289de4ae9350390b520319c6f0f369ee4b06b08a",
+      "input_data_sha256": "6bee120803a5caafe528781fdc40eef0f76e863cee17b967d38778c20c4eb875"
+    }
+  ]
+}

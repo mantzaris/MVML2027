@@ -8,6 +8,32 @@ The implemented study learns a decision-impact gate for repairing beliefs in a s
 
 This is a controlled snapshot study with noisy prior-time evidence, three partial observers, and 32 shared candidate conjunctions. It does not implement a full sequential cyber range. The original research plan includes extensions beyond this experiment; the frozen executable protocol and implementation notes define what was actually measured. Favorable performance and methodological novelty are hypotheses, not assumptions.
 
+## Third approach: direct candidate scoring and inexpensive ML
+
+The [third method](docs/METHOD_V3.md) tests **SCR**, a shared-context candidate scorer that predicts each candidate's feasibility directly. It combines canonical prerequisite sets with learned set embeddings and a four-expert mixture. It does not reconstruct a complete fact state. Single-expert controls test the effects of global context and the mixture; **LOGIT** and a pretrained **denoising autoencoder (DAE)** provide inexpensive fact-reconstruction comparisons.
+
+The frozen comparison uses the same 20,000 mixed training observations and 2,000 validation observations as study 2. Five training seeds and fresh test seed **62027** compare all 22 methods over 18 conditions. The primary endpoint is SCR minus the dense mixed-data model ID in macro candidate-oracle regret across four reference conditions. The completed study gives SCR regret **0.11152** versus ID **0.08644**; the paired difference is **+0.02508 [0.02091, 0.02919]**, favoring ID. SCR improves over its single-expert control (0.12431), while DAE (0.12873) and LOGIT (0.16455) trade accuracy for lower measured latency. Different prediction targets and pretraining make the primary comparison one of complete pipelines. Fact-level repair and consistency metrics are unavailable for direct candidate models.
+
+- [Third-study results and interpretation](docs/RESULTS_V3.md)
+- [Four third-study empirical figures](figures/v3/index.html)
+- [Third-study supplemental PDF](supplemental/v3/Supplement_v3.pdf), with two additional figures
+- [Frozen protocol](configs/study_v3.json), [audit](docs/V3_AUDIT.md), and [artifact record](results/v3/README.md)
+
+These paths hold the third-study record; the manifest and audit identify the completed execution and verification. All models run on the attached Ada GPU, including LOGIT and DAE. Plotting and document generation consume recorded experiment outputs.
+
+```bash
+python3 scripts/run_gpu.py -- -m unittest discover -s tests -p test_v3.py -v
+python3 scripts/run_gpu.py -- scripts/run_v3.py
+python3 scripts/run_gpu.py -- scripts/measure_v3_pipeline.py
+python3 scripts/run_gpu.py -- scripts/replay_v3.py
+.venv/bin/python scripts/analyze_v3.py
+.venv/bin/python scripts/make_v3_results.py
+.venv/bin/python scripts/make_v3_supplement.py
+.venv/bin/python scripts/verify_v3_artifacts.py
+```
+
+The third study reuses frozen earlier checkpoints for its historical comparisons. Reproduction therefore requires the original and second-study checkpoints locally, or reproducing those studies first. Third-study raw arrays and checkpoints remain in ignored `results/runs/v3/` and `results/checkpoints/v3/`; source, compact measurements and selected final artifacts are tracked.
+
 ## Second approach and fresh comparison
 
 [Dependency-aware full regeneration](docs/METHOD_V2.md) addresses the first gate's sparse-repair regret and mechanism dependence. It predicts a coherent conditional state, counts shared prerequisite uncertainty once when scoring candidates, and trains across four observation groups. Its proposed composition builds on established probabilistic logic and group-risk learning; novelty and improvements remain empirical questions.

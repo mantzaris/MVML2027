@@ -1,0 +1,111 @@
+{
+  "seed": 37,
+  "test_seed": 62027,
+  "snapshot": 0,
+  "facts": 64,
+  "payload_bytes": 1244,
+  "rows": [
+    {
+      "method": "SCR",
+      "median_ms": 5.517041998245986,
+      "p10_ms": 5.016016798617784,
+      "p95_ms": 6.443684900477819,
+      "repeats": 50,
+      "top3": [
+        13,
+        16,
+        17
+      ]
+    },
+    {
+      "method": "CAND_CTX",
+      "median_ms": 5.193315500946483,
+      "p10_ms": 4.809434799608425,
+      "p95_ms": 6.0751192508178065,
+      "repeats": 50,
+      "top3": [
+        16,
+        17,
+        5
+      ]
+    },
+    {
+      "method": "CAND_LOCAL",
+      "median_ms": 4.826400501769967,
+      "p10_ms": 4.672473199752858,
+      "p95_ms": 5.728016850844142,
+      "repeats": 50,
+      "top3": [
+        17,
+        16,
+        5
+      ]
+    },
+    {
+      "method": "LOGIT",
+      "median_ms": 2.912886000558501,
+      "p10_ms": 2.8024350001942366,
+      "p95_ms": 3.778246951696928,
+      "repeats": 50,
+      "top3": [
+        16,
+        17,
+        5
+      ]
+    },
+    {
+      "method": "DAE",
+      "median_ms": 3.0639770011475775,
+      "p10_ms": 2.677410399337532,
+      "p95_ms": 3.6081512993405336,
+      "repeats": 50,
+      "top3": [
+        5,
+        16,
+        17
+      ]
+    },
+    {
+      "method": "ID",
+      "median_ms": 3.4432530010235496,
+      "p10_ms": 3.40689329932502,
+      "p95_ms": 4.105312898718693,
+      "repeats": 50,
+      "top3": [
+        13,
+        16,
+        22
+      ]
+    },
+    {
+      "method": "JH",
+      "median_ms": 4.231626999171567,
+      "p10_ms": 4.070756898727268,
+      "p95_ms": 5.194831300104852,
+      "repeats": 50,
+      "top3": [
+        13,
+        22,
+        27
+      ]
+    }
+  ],
+  "hardware": "NVIDIA RTX 5000 Ada Generation",
+  "scope": "Bounded prepared-evidence wall timing for v3 candidate and reconstruction models.\n\nIncludes packet packing/unpacking, CPU orchestration, H2D evidence/metadata,\nGPU feature fusion, belief inference, candidate ranking and D2H top-three IDs.\nExcludes sensing, bandwidth admission, topology/catalogue construction, network\ntransport delays, cold model loading and complete operational cyber planning.",
+  "warmups": 5,
+  "prediction_roundtrip": "All seven candidate probability paths and four available marginal paths match prepared inputs at atol1e-6",
+  "checkpoint_hashes": {
+    "SCR": "43e72240e9ede69430dc2e7506b6af2bec42e4412517c7987b9ec556202f7b6b",
+    "CAND_CTX": "5180587297c27a5de37e4501833d90e12f2f2f4b378d84472c45a01c5b55b980",
+    "CAND_LOCAL": "8986cd4c6dc934c86a26a5b20abfb3d5e4ba36878ad9326d268e1ecbce7ac10d",
+    "LOGIT": "02b13e956d8be9f783f80ab240faaf1b0c369c2cee7f0ed99191d65847b5b77a",
+    "DAE": "39fff5f17017d0ef202699bd4a5ab91e8e188902c7907f52fa7f5794577364b0",
+    "ID": "cce28d3d3b210b2ce0d03838a9a9f08c949d964ecf36dd9fd09bd92cabce1f0b",
+    "JH": "cc53d197beec613d505584b75417c96981d5ce4421bc2f65cf0bc920255e4fbf"
+  },
+  "manifest_sha256": "cf756e72c869906fd9f052eaa993848a97111f57a446082f780fe9a05a024837",
+  "source_hashes": {
+    "scripts/measure_v3_pipeline.py": "4baf115c1fc1e26613d4ab9e3270564e248b39e5596da161dbd2f2e8d9fdab5e",
+    "scripts/measure_pipeline.py": "375e1e9e275615cd8734ee5fb8a2162e00396bf1df3fa26c8c5bffbb20599222"
+  }
+}

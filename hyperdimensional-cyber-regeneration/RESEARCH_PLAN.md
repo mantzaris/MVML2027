@@ -293,3 +293,60 @@ Keep publication experiments public and synthetic. Treat any later handling of c
 Maintain `docs/` for protocol decisions, `configs/` for settings, `scripts/` and future `src/` for code, `data/` for manifests/data, `results/` for measurements, `figures/` for visual outputs, future `manuscript/` for the paper, and `work/` for temporary files.
 
 Do not expand into a full autonomous cyber platform before the primary comparison is complete. The deliverable is a defensible learning contribution and a reusable module for the broader planning bid.
+
+
+## Third-study update: direct feasibility prediction and cheap reconstruction
+
+This addendum defines a third investigation alongside the original proposal preserved above and the [second study](docs/METHOD_V2.md). Its question is whether bypassing fact reconstruction improves candidate selection, and whether inexpensive ML can match more elaborate representations. The [third method specification](docs/METHOD_V3.md) and [frozen executable configuration](configs/study_v3.json) define this experiment. No improvement or broad novelty claim is assumed.
+
+**SCR (shared-context candidate ranking)** encodes each observed fact together with its known parent's features. It pools required nonroot children and unique touched roots, so an explicitly repeated ancestor does not change the representation when the received feature tensor is fixed. Global embedding means and standard deviations drive a four-expert mixture shared across the candidates:
+
+$$
+\widehat s_j=\sum_{k=1}^{4}\operatorname{softmax}_k(a_\theta(g))\,
+\sigma\!\left(\rho_{\theta,k}([u_j,g])\right),
+\qquad \widehat U_j=v_j\widehat s_j-c_j.
+\tag{V3.2}
+$$
+
+The [method document](docs/METHOD_V3.md) defines the canonical representation, objective and numerical conventions, and attributes set pooling to Deep Sets and gating to mixtures of experts. This task-specific composition is an investigation building on previous approaches. The latent experts are not identified attack classes. Predicted candidate probabilities need not define a coherent joint world model, and SCR supplies no regenerated fact state or fact-level explanation. Its contribution to the bid is a possible candidate-ranking component, with these limitations explicit.
+
+The new comparisons are:
+
+| Method | Role in the third investigation |
+| --- | --- |
+| SCR | Four-expert direct candidate predictor with shared global context. |
+| CAND_CTX | One-expert candidate predictor with the same global context; tests the additional mixture, with parameter count also changing. |
+| CAND_LOCAL | The same single-expert architecture with global inputs zeroed; tests global context access against CAND_CTX. |
+| LOGIT | Shared 56-feature linear sigmoid fact predictor followed by marginal-product candidate scoring. |
+| DAE | Small feature-denoising autoencoder, supervised fact decoder and marginal-product candidate scoring. |
+| Earlier ID/JH and all original methods | Frozen mixed-data and original references, retaining the conventional and GraphMAE-adapted comparisons. |
+
+DAE uses a 56→32→8 encoder and 8→32→56 decoder. Five pretraining epochs reconstruct the original observed feature vector after 25% masking and Gaussian noise with standard deviation 0.05; the target can itself contain manipulated evidence. A supervised 8→1 head then predicts fact readiness. LOGIT has no hidden layers or prior-logit shortcut. Both use the second study's fact-based objective. The three direct models instead use candidate feasibility BCE, candidate Brier loss and a soft decision-regret term. This difference in targets, together with pretraining differences, must accompany comparisons across model families.
+
+Inference consumes only received observations, known prerequisites and candidate requirements. Candidate-specific value and cost tensors do not enter feasibility heads, but the inherited observed feature vector includes value-weighted candidate criticality. Training truth supplies supervision only. Direct-model fact Brier, repair rates and fact consistency are unavailable, not zero.
+
+The frozen protocol uses exactly the second study's 20,000 mixed training observations and 2,000 validation observations, with five training seeds, batch 256, a maximum of 40 supervised epochs, patience 8 and AdamW learning rate 0.001. New models train on CUDA; the launcher selects the attached NVIDIA RTX 5000 Ada Generation and rejects CPU fallback. Earlier checkpoints remain unchanged. Fresh test seed **62027** contains 4,000 snapshots for each of 18 conditions, shared across all 22 methods. Pilot seed **72027** is separate; earlier test results are development evidence.
+
+The primary endpoint is SCR minus ID in macro candidate-oracle regret over benign and targeted/random/coherent 20% intervention conditions. Secondary comparisons separate the mixture, global context and cheap reconstruction. Report Recall@3 with its eligibility definition, candidate Brier/calibration, parameter count, inference latency, bounded host-loop timing, memory and the unchanged report bytes. Paired uncertainty crosses training seeds and topology clusters; it does not treat all model evaluations as independent worlds. A shadow-union stress diagnostic probes whether longer conjunctions receive probabilities larger than their subsets. It is not used to tune on the fresh test pool.
+
+Four rich empirical main figures and two additional supplemental figures will use only recorded results. The supplemental target remains within the requested 2–4 pages; the separate-upload allowance must still be checked against the conference's submission system. This investigation fits MVML through learned representations, prediction targets, calibration and measured computational comparisons. The original HDC/neurosymbolic baselines remain necessary for assessing the proposal's explanatory and distributed-reasoning tradeoffs. Static synthetic candidate ranking does not demonstrate a complete operational cyber planner.
+
+Third-study record:
+
+- [Results and interpretation](docs/RESULTS_V3.md), [four main figures](figures/v3/index.html), and [supplemental PDF](supplemental/v3/Supplement_v3.pdf).
+- [Method and equations](docs/METHOD_V3.md), [configuration](configs/study_v3.json), [audit](docs/V3_AUDIT.md), and [artifact record](results/v3/README.md).
+
+Reproduce from this project directory after the prior studies' frozen checkpoints are available:
+
+```bash
+python3 scripts/run_gpu.py -- -m unittest discover -s tests -p test_v3.py -v
+python3 scripts/run_gpu.py -- scripts/run_v3.py
+python3 scripts/run_gpu.py -- scripts/measure_v3_pipeline.py
+python3 scripts/run_gpu.py -- scripts/replay_v3.py
+.venv/bin/python scripts/analyze_v3.py
+.venv/bin/python scripts/make_v3_results.py
+.venv/bin/python scripts/make_v3_supplement.py
+.venv/bin/python scripts/verify_v3_artifacts.py
+```
+
+Training and inference stay on CUDA. Statistical analysis, plotting, PDF rendering and file handling may use CPU. Keep raw arrays, logs and checkpoints under ignored `results/runs/v3/`, `results/checkpoints/v3/` and `work/`; commit concise summaries, provenance, source and selected final artifacts. The manifest and audit establish execution status, and the results report establishes measured conclusions.

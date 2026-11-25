@@ -1,0 +1,20 @@
+{
+  "inputs": {
+    "results/v3/summary.csv": "5e9dfbe3ac95ed282a6df314300e617d74358d3e895b24c53889bea7ab34df3c",
+    "results/v3/curves.csv": "ea1f034e1bf21c1c60bca6b46d2f3fc57c9c72b673028ee2ea92f5ab81ce21b2",
+    "results/v3/manifest.json": "cf756e72c869906fd9f052eaa993848a97111f57a446082f780fe9a05a024837",
+    "results/v3/comparisons.json": "1abdb5653b7a14aca524d0a5fb9736911af34dcbe4d0064c4c419c37f3c6682d",
+    "supplemental/v3/v3_figS1_training.png": "884b473b54e8eadb6bf01488117cd1188a58563b5ac4c17b77dbe3f444341b05",
+    "supplemental/v3/v3_figS2_seed_effects.png": "0a8b33c15a0738e51facc9880d409c4c814689cd12123d1fb55ed47a4a9ff086",
+    "results/v3/pipeline_timing.json": "26d6b42c784b41b5fd76ea1b0ec09b7ac056481b5490bf407bc39a6433ffce38"
+  },
+  "script": "scripts/make_v3_supplement.py",
+  "script_sha256": "22da7e7c75d5a6a3c0d572dbf71257ee04bf8f443fd61b3aab8456943035bf3e",
+  "pdf_sha256": "3961d06a479635e950a291b9a50ef5472e5fd0846a0d7d288996c4d60bde7a38",
+  "pages": 3,
+  "figures": [
+    "v3_figS1_training",
+    "v3_figS2_seed_effects"
+  ],
+  "supplement_policy": "Separate supplemental allowance not explicitly confirmed in public instructions"
+}

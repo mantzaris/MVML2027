@@ -52,7 +52,7 @@ def load_model(method, manifest):
     digest = sha(path)
     if digest != record["checkpoint_sha256"]:
         raise AssertionError(f"Checkpoint changed: {path}")
-    model = RegeneratorV3(method).cuda()
+    model = make_model(method).cuda()
     model.load_state_dict(torch.load(path, map_location="cuda", weights_only=True))
     return model.eval(), path, digest
 
