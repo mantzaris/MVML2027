@@ -1,7 +1,7 @@
 {
   "document_sha256": {
-    "main": "3a92c9e59bd6f1fec1751e2b7403ffa7c76c51d2e28817704e01f6fc5a6239c9",
-    "supplement": "ad4151323aba2e377f4c9dc835052f9c788af5a24de214651b24c4e9ea0bf737"
+    "main": "8f3ef7b67020aa1f2690367e1f374d09a0c2bf4677c491d202e9132be3e81316",
+    "supplement": "19225270c52964a0fb1805cb900b6baffe8f74b574d762cfbdb9a6c5055bf421"
   },
   "pages": {
     "main": 8,
@@ -13,23 +13,57 @@
   },
   "main_abstract_words": 212,
   "anonymous_archive_entries": 15,
-  "anonymous_archive_sha256": "da56d494875ac0dca12e4fa03f7adaee8f1138c28e5da290634605aad6b96c65",
+  "anonymous_archive_sha256": "3b32f6444dff10d3a1eb498ed24091eb339965c8711a1e12c17816f9abd80505",
   "checks": {
     "source_and_figure_hash_parity": "passed",
     "archive_direct_identifier_and_author_metadata_scan": "passed",
     "latex_overfull_and_font_warning_scan": "passed",
     "pdf_page_and_figure_counts": "passed",
     "scientific_equation_and_result_review": "passed",
-    "rendered_page_visual_review": "Main pages 2\u20138 and supplemental page 3 visually inspected; main page 1 and supplemental pages 1/2/4 pixel-identical to previously reviewed renders. Limitations remain together; stress discussion and conclusion are unbroken.",
+    "rendered_page_visual_review": "Revised main page 8 visually inspected. Main pages 1\u20137 and all four supplement pages pixel-identical to previously reviewed renderings. Conclusion and all twelve references fit on page 8.",
     "abstract_structure_and_scope": "One paragraph; context, methodology, data, experiments, qualitative findings and significance; no numerical results, references or unsupported significance/operational-planning claims; below 300-word template limit.",
-    "citation_order_and_support": "Twelve references, all cited in first-appearance order; five additions verified from primary sources; CTU-13 consistently numbered [8] in main and supplement."
+    "citation_order_and_support": "Twelve references, all cited in first-appearance order; five additions verified from primary sources; CTU-13 consistently numbered [8] in main and supplement.",
+    "conclusion_contribution_success_and_scope": "Independent review passed: two specific extensions, recorded successes scoped to evaluated mean AP, condition-dependent pretraining insight, exploratory future planning value; no first-ever, significance or operational-planning claim."
   },
-  "scope": "Limitations shortened and five references added with in-text attribution. Abstract, measured results, conclusion text, equations and figures unchanged. Supplement changes only CTU-13 citation numbering. Main: 8 pages/4 figures; supplement: 4 pages/4 figures. No model training/inference.",
+  "scope": "Conclusion revision only. All other narrative, references, equations, results and figures unchanged. Main: 8 pages/4 figures; supplement: 4 pages/4 figures. No model training/inference.",
   "title": "Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty",
   "title_words": 9,
   "limitations_words_before": 145,
   "limitations_words_after": 68,
   "limitations_priorities": 3,
   "reference_count": 12,
-  "reference_verification_sha256": "d9ae61ecf22d977c8cba130b3c4311c17f150b75264f4161fb182683affe2375"
+  "reference_verification_sha256": "d9ae61ecf22d977c8cba130b3c4311c17f150b75264f4161fb182683affe2375",
+  "conclusion_words_before": 67,
+  "conclusion_words_after": 93,
+  "conclusion_claim_audit": {
+    "source_sha256": "fdfa31269e5c7b611c2e083496f4db31dcdbdad0d158d8efaa1903885766ba90",
+    "aggregation": "Equal capture and seed weighting, using 15 records per method/condition; observed means only.",
+    "conditions": {
+      "clean": {
+        "highest_mean_ap_method": "EDGE_DENSE",
+        "highest_mean_ap": 0.9950021452127215,
+        "cons_minus_gmae_mean_ap": 0.005175130998185895
+      },
+      "missing20": {
+        "highest_mean_ap_method": "EDGE_GMAE",
+        "highest_mean_ap": 0.9883974797754533,
+        "cons_minus_gmae_mean_ap": 0.006250712669568559
+      },
+      "missing50": {
+        "highest_mean_ap_method": "EDGE_GMAE",
+        "highest_mean_ap": 0.9596221302464302,
+        "cons_minus_gmae_mean_ap": 0.01695270507070812
+      },
+      "spoof20": {
+        "highest_mean_ap_method": "EDGE_GMAE",
+        "highest_mean_ap": 0.9922123659394704,
+        "cons_minus_gmae_mean_ap": 0.006293249477979268
+      },
+      "spoof40": {
+        "highest_mean_ap_method": "EDGE_GMAE",
+        "highest_mean_ap": 0.9853510158984605,
+        "cons_minus_gmae_mean_ap": 0.010654781625205278
+      }
+    }
+  }
 }

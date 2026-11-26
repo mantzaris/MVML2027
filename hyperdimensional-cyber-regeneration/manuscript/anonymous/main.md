@@ -180,7 +180,7 @@ Retrospective flow classification leaves operational planning untested; sequenti
 
 ## 7. Conclusion
 
-Observation-aware edge weighting produces a promising mean improvement over a GraphMAE-adapted telemetry classifier, with a measurable latency cost. Consistency training provides a smaller mean gain without changing inference architecture. Both adjusted primary intervals include zero, and the best clean mean comes from gating without pretraining. The resulting research direction is precise: test whether availability-aware aggregation transfers to independently reserved traffic and whether reconstruction contributes under realistic missingness.
+We introduced and tested two telemetry-specific extensions of masked graph learning: parameter-free aggregation weighted by visible-feature overlap and compatibility, and latent and prediction consistency across masked views. Gated models achieved the highest observed mean average precision in every evaluated condition; consistency training improved the reference model's mean performance while preserving its inference architecture. Matched controls highlight aggregation as a productive design choice and reveal the condition-dependent contribution of masked pretraining. These exploratory findings provide tested mechanisms and measured computational tradeoffs to guide evidence regeneration and future integration with vector-symbolic and neurosymbolic cyber planning.
 
 ## References
 
