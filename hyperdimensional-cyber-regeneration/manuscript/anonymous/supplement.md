@@ -1,6 +1,6 @@
 # Supplementary Material
 
-## Observation-Aware Graph Learning for Corrupted Cyber Telemetry
+## Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty
 
 ### S1. From selective repair to structured regeneration
 

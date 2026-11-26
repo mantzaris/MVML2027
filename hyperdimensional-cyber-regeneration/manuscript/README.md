@@ -1,6 +1,6 @@
 # Anonymous manuscript package
 
-**Title:** Observation-Aware Graph Learning for Corrupted Cyber Telemetry.
+**Title:** Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty.
 
 The anonymous draft consolidates the completed synthetic regeneration studies, inexpensive ML comparisons, captured CTU-13 application, and two GraphMAE variants. The main paper centers on the captured-flow experiment. Earlier synthetic decision-regret findings remain separate in the supplement; they are not evidence of real-world course-of-action performance.
 

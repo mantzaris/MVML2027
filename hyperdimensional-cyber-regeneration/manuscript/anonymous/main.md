@@ -1,4 +1,4 @@
-# Observation-Aware Graph Learning for Corrupted Cyber Telemetry
+# Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty
 
 ## Abstract
 

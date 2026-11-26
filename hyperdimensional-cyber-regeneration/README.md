@@ -2,7 +2,7 @@
 
 CUDA research project for MVML 2027, informed by DARPA HYPER-CAP (DPA27BZ02-DV001).
 
-**Working title:** Learning to Regenerate Cyber Planning States under Deception with Hyperdimensional Neurosymbolic Models.
+**Manuscript title:** Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty.
 
 The implemented study learns a decision-impact gate for repairing beliefs in a synthetic prerequisite-planning task. It builds on GraphMAE-style feature pretraining, decision-focused learning, semantic loss, and fixed-codebook hyperdimensional retrieval. The experiment compares seven main methods and four ablations on the attached NVIDIA RTX 5000 Ada Generation.
 

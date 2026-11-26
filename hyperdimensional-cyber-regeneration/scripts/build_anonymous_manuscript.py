@@ -18,7 +18,7 @@ from pypdf import PdfReader
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'manuscript/anonymous'
 WORK = ROOT / 'work/manuscript/build'
-TITLE = 'Observation-Aware Graph Learning for Corrupted Cyber Telemetry'
+TITLE = 'Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty'
 STYLE = r'''% Anonymous draft style; follows the MVML 2027 template's written instructions.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{anonymous-draft}[2026/11/25 Anonymous scientific manuscript]
@@ -133,7 +133,7 @@ def convert(name: str) -> str:
             else: out.append(r'\drafttitle{'+inline(title)+'}')
             i+=1; continue
         if supp and l.startswith('## '):
-            out.append(r'\begin{center}{\sffamily\bfseries\fontsize{12}{14}\selectfont '+inline(l[3:])+r'\par}\end{center}')
+            out.append(r'\begin{center}{\sffamily\bfseries\fontsize{12}{14}\selectfont '+inline(l[3:]).replace(' under Adversarial Uncertainty', r'\\ under Adversarial Uncertainty')+r'\par}\end{center}')
             i+=1;continue
         if l=='## Abstract':
             i+=1; chunks=[]

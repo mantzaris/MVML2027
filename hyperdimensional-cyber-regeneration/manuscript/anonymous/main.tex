@@ -2,11 +2,11 @@
 
 \usepackage{anonymous-draft}
 
-\hypersetup{pdftitle={Observation-Aware Graph Learning for Corrupted Cyber Telemetry}}
+\hypersetup{pdftitle={Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty}}
 
 \begin{document}
 
-\drafttitle{Observation-Aware Graph Learning for Corrupted Cyber Telemetry}
+\drafttitle{Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty}
 
 \begingroup\fontsize{10}{11.5}\selectfont\setlength{\parindent}{0pt}\textbf{Abstract.} Incomplete and manipulated telemetry can weaken the representations supplied to cyber decision support. We investigate whether observation-aware aggregation and consistency training improve a masked graph autoencoder adapted to network-flow classification. EDGE\_GMAE weights existing endpoint-sharing edges using the overlap and discrepancy of currently visible measurements. CONS\_GMAE combines two-view reconstruction, detached latent alignment, and masked-view prediction consistency. Both retain the comparator's 121,643 trainable parameters. We evaluate thirteen approaches on 799,777 selected CTU-13 flows, using chronological capture splits, five training seeds, and artificial missingness and feature replacement. Clean capture-macro average precision rises from 0.97830 for the GraphMAE-adapted comparator to 0.99411 for EDGE\_GMAE and 0.98348 for CONS\_GMAE. However, paired seed/time-block 97.5\% intervals for both differences include zero. The gated control without pretraining achieves the highest descriptive clean mean, 0.99500, preventing attribution of the clean gain to masked pretraining. EDGE\_GMAE also records 0.95962 average precision at 50\% missingness, versus 0.93553 for the comparator. These findings identify a promising aggregation rule and its computational tradeoffs, while preserving important uncertainty: the test captures informed this follow-up, artificial corruption is not observed deception, and flow classification does not establish course-of-action performance.\par\endgroup\vspace{5pt}
 
