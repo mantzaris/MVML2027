@@ -1,7 +1,7 @@
 {
   "document_sha256": {
-    "main": "f1bbf4314b8986d551b059d70a67c5dd7c40491c9f099598c58920b23be2155e",
-    "supplement": "9eae24cdae16b26b252dc9fc0f4b54dd86db2172efa5ca199c8fb7be2a60df46"
+    "main": "29b881211bf835727bb6b07940525955a964409dd0b9e55422c1f956af55fb92",
+    "supplement": "a3f4331487881e166328354212fc34238bf9330edeb75dee5008f56613173244"
   },
   "pages": {
     "main": 8,
@@ -11,18 +11,19 @@
     "main": 4,
     "supplement": 4
   },
-  "main_abstract_words": 183,
+  "main_abstract_words": 212,
   "anonymous_archive_entries": 15,
-  "anonymous_archive_sha256": "867ae75605b5b010502fcb85b6316a7bf08e23d891b9dc1031fec85dc500a85e",
+  "anonymous_archive_sha256": "1e4431b8224dc4b460d1a0b2aab9ba267a64f91cf8ebefc2a32106d055ebc048",
   "checks": {
     "source_and_figure_hash_parity": "passed",
     "archive_direct_identifier_and_author_metadata_scan": "passed",
     "latex_overfull_and_font_warning_scan": "passed",
     "pdf_page_and_figure_counts": "passed",
     "scientific_equation_and_result_review": "passed",
-    "rendered_page_visual_review": "Both revised first pages visually inspected; all 10 other pages pixel-identical to the previously reviewed renderings."
+    "rendered_page_visual_review": "All 8 revised main pages visually inspected. All 4 supplement pages pixel-identical to the previously reviewed renderings.",
+    "abstract_structure_and_scope": "One paragraph; context, methodology, data, experiments, qualitative findings and significance; no numerical results, references or unsupported significance/operational-planning claims; below 300-word template limit."
   },
-  "scope": "Title and title-layout revision only. Narrative, equations, measured results and figures unchanged. Main: 8 pages and 4 figures; supplement: 4 pages and 4 figures. No model training/inference. Checks apply to these PDF hashes.",
+  "scope": "Abstract revision only. Body narrative, equations, measured results, figures and supplemental content unchanged. Main: 8 pages and 4 figures; supplement: 4 pages and 4 figures. No model training/inference. Checks apply to these PDF hashes.",
   "title": "Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty",
   "title_words": 9
 }
