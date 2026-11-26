@@ -146,7 +146,7 @@ def convert(name: str) -> str:
             sub=l.startswith('### '); title=l[4:] if sub else l[3:]; title=re.sub(r'^\d+(?:\.\d+)*\.\s*','',title)
             if not supp and title in ('Resource costs and verification','Limitations and Scope'):
                 out.append(r'\FloatBarrier')
-            if not supp and title=='Conclusion':
+            if not supp and title in ('Resource costs and verification','Conclusion'):
                 out.append(r'\clearpage')
             if title=='References':
                 refs=True; out.append(r'\section*{References}\begin{enumerate}[label={[\arabic*]},leftmargin=6mm,labelsep=1.5mm,itemsep=3pt,parsep=0pt,topsep=0pt]')

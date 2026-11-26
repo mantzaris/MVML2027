@@ -2,33 +2,37 @@
 
 ## Abstract
 
-Cyber planning under adversarial uncertainty depends on evidence representations that remain informative when telemetry is incomplete or manipulated. Learning to regenerate and combine such evidence is a key challenge for vector-symbolic and neurosymbolic decision support. We investigate observation-aware graph learning through methods that weight endpoint-sharing relationships by visible-feature availability and compatibility, and encourage consistent representations and predictions across partially observed views. The methodology builds on masked graph autoencoding and separates the roles of neighborhood aggregation, reconstruction, and consistency training. Evaluation uses selected labeled network flows from the public CTU-13 botnet dataset, organized into graphs with chronological capture splits. Experiments compare graph learners, associative representations, contextual predictors, and inexpensive statistical and neural baselines across recorded telemetry, controlled missingness, and feature replacement, supported by matched ablations and GPU resource measurements. Exploratory comparisons show promising improvements in discrimination and probability estimation from observation-aware aggregation, together with greater tolerance of missing measurements. Consistency training offers another route to improving the reference model while retaining its inference architecture. The ablations reveal how aggregation and reconstruction contribute under different observation conditions and clarify the relationship between predictive quality and computational cost. Together, the methods and controlled evaluation provide practical guidance for learning useful cyber representations and a foundation for evidence regeneration in future vector-symbolic and neurosymbolic planning systems.
+Cyber planners need useful evidence even when network measurements are incomplete or manipulated. Learning how to combine these measurements is a step toward regenerating evidence for vector-symbolic and neurosymbolic decision support. We study two extensions of masked graph autoencoding, which learns by reconstructing deliberately hidden measurements. The first gives greater weight to connections between network flows when their available measurements overlap and agree. The second encourages similar internal representations and predictions when different measurements are hidden. We evaluate these methods on selected labeled flows from the public CTU-13 botnet dataset, using graphs that connect flows sharing an endpoint and separating captures chronologically. Experiments compare graph models, associative representations, contextual predictors, and inexpensive statistical and neural baselines under recorded measurements, controlled missingness, and feature replacement. Matched controls help identify which changes contribute, while GPU measurements establish their computing costs. Exploratory results show promising improvements in identifying botnet traffic and estimating its probability, together with greater tolerance of missing measurements. Consistency training improves the reference model's observed mean performance while keeping the same prediction architecture. The comparisons clarify when weighting connections and learning to reconstruct measurements are useful. These findings provide practical guidance for learning from incomplete cyber evidence and a foundation for future integration with vector-symbolic and neurosymbolic planning.
 
 **Keywords:** graph learning; masked autoencoders; missing data; consistency regularization; network-flow classification; cyber decision support.
 
 ## 1. Introduction
 
-Cyber decision support depends on representations of evidence whose availability and trustworthiness can vary. A shared endpoint links two network flows, but does not guarantee that their measurements are equally informative or that their labels agree. Uniform neighborhood aggregation may therefore mix poorly observed or incompatible reports. Masked reconstruction offers a different intervention: learning from intentionally removed measurements might improve representations when observations disappear. Whether either intervention improves downstream decisions requires controlled comparisons.
+Cyber planners need to decide what to trust before deciding what to do. Consider a hypothetical defender choosing whether to isolate a host or collect more evidence. Some traffic measurements are missing, while others have been altered. Flows that share an endpoint provide useful context, but they may describe different activities. Combining all neighboring observations equally could therefore obscure the evidence needed for that decision.
 
-The broader motivation is regeneration of incomplete knowledge for cyber course-of-action planning and replanning. Earlier synthetic investigations in this project examined selective hyperdimensional reconstruction, dependency-constrained regeneration, and direct candidate scoring. Their results did not support assuming that structural coherence or additional complexity improves decision regret. The supplement retains those studies separately (Figures S1–S2). Here we study a narrower measurable component: retrospective classification of recorded flows under controlled telemetry corruption. An endpoint graph expresses observed relationships; it is not a symbolic prerequisite graph.
+This paper studies the learning problem beneath that scenario: how to represent network traffic when measurements are incomplete or misleading. Our experiments classify completed network flows; they do not test the isolation decision itself. Earlier synthetic studies examined repairing beliefs and scoring candidate actions. They showed that more complex or logically consistent representations did not automatically improve decisions; the supplement reports those results separately (Figures S1–S2).
 
-We introduce two task-specific variants of a GraphMAE-adapted classifier [1]. EDGE_GMAE adds a parameter-free rule based on visible-coordinate overlap and discrepancy. CONS_GMAE changes training through reconstruction and prediction consistency while preserving inference architecture. Our contribution is their explicit formulation and evaluation with matched controls, conventional inexpensive models, uncertainty, and GPU cost measurements. We report observed improvements without claiming confirmed superiority, first-ever graph weighting or consistency, or demonstrated operational replanning.
+We test two task-specific extensions of a GraphMAE-adapted classifier [1], which learns by reconstructing hidden measurements. EDGE_GMAE weights connections using the overlap and agreement of available measurements. CONS_GMAE encourages similar representations and predictions when additional measurements are hidden. Simpler models and matched controls help identify which changes contribute, while GPU measurements establish their computing costs. Observed gains remain exploratory because earlier test results motivated this follow-up.
 
 ## 2. Related Work
 
-GraphMAE reconstructs masked node attributes and uses latent remasking [1]. Our comparator follows these mechanisms but uses observed-coordinate mean squared error (MSE), rather than the original scaled cosine error; it is an adaptation, not an exact reproduction. GraphMAE2 already combines multiple remasked reconstruction views with latent representation prediction [2]. Consequently, adding consistency to masked graph learning is established in principle.
+GraphMAE learns to reconstruct hidden node measurements and also masks internal representations before decoding [1]. Our comparator follows these mechanisms, using mean squared error (MSE) on observed measurements instead of the original scaled cosine error. It is therefore an adaptation. GraphMAE2 already combines multiple reconstruction views with prediction of internal representations [2]; consistency in masked graph learning is established in principle.
 
-Robust graph learning also precedes this work. Pro-GNN learns graph structure jointly with prediction [3]; structure-aware DropEdge includes feature-dependent edge sampling [4]. Reliability-ranked masking and decoupled reconstruction have been studied directly for graph autoencoders [5]. More recent work emphasizes neighborhood-context consistency, coverage, and potentially useful heterophilic edges [6]. These findings motivate caution: similarity is not equivalent to useful information. Our narrower contribution is deterministic weighting that explicitly excludes unavailable coordinates, combined with leakage-controlled masked pretraining and telemetry-specific comparisons. We do not experimentally reproduce these additional literature methods; they establish lineage and delimit novelty.
+Earlier methods also seek to make graph learning more robust. Pro-GNN learns graph structure alongside predictions [3], while structure-aware DropEdge uses node features to sample edges [4]. Other work selects measurements to mask by estimated reliability and separates reconstruction tasks [5]. Recent findings emphasize consistent neighborhood information and the value of connections between dissimilar nodes [6]. Similarity alone therefore need not identify useful evidence. Our contribution is a fixed weighting rule that excludes unavailable measurements, prevents hidden reconstruction targets from affecting weights, and is tested on network traffic. These additional literature methods establish context; they are not experimental baselines here.
 
 ## 3. Observation-Aware Graph Learning
 
 ### 3.1. Representation and comparator
 
-Each chronological window contains up to 32 retained flows. An undirected edge joins flows sharing any observed source or destination endpoint. Each flow supplies fourteen sanitized measurements and fourteen availability indicators. The GMAE comparator uses a width-128, three-layer residual encoder with self/neighbor transformations, layer normalization, and GELU activations. A readout predicts the probability of the retained botnet label. Five pretraining epochs independently mask 30% of valid nodes, replace their input with a learned token, remask their latent representation, and reconstruct attributes through a neighbor-propagating decoder. Reconstruction MSE covers only originally observed coordinates of additionally masked real nodes.
+Each chronological window contains up to 32 retained flows. Connections join flows sharing any observed source or destination endpoint, allowing the model to use related traffic as context. Each flow has fourteen processed measurements and fourteen flags indicating which are available. The GMAE comparator uses a width-128, three-layer residual encoder with self/neighbor transformations, layer normalization, and GELU activations. Its output is the probability of the botnet label.
 
-Supervised training averages binary cross-entropy plus Brier loss over valid flows within each window. Inverse capture-window-frequency weights give training captures equal expected contribution. DENSE has the same architecture without masked pretraining. Parameters include the decoder, which is inactive during classification.
+During five pretraining epochs, 30% of valid nodes are independently masked and their inputs replaced with a learned token. The model also masks their internal representations before a decoder reconstructs measurements using neighboring nodes. Reconstruction MSE covers only originally observed measurements of these additionally masked, non-padding nodes.
+
+Supervised training averages binary cross-entropy plus Brier loss over valid flows in each window. Weighting each capture inversely by its number of windows gives captures equal expected contribution. DENSE uses the same architecture without masked pretraining. Parameter counts include the decoder, which is inactive during classification.
 
 ### 3.2. Visible-evidence aggregation
+
+For illustration, suppose two flows share a server but one lacks a byte count. The weighting rule compares only measurements available in both flows, reducing the influence of links with little shared evidence.
 
 Let \(x_i\in\mathbb R^{14}\) be a normalized measurement vector, \(m_i\in\{0,1\}^{14}\) its current visibility indicators, \(A\) the supplied endpoint adjacency, and \(V\) the valid nodes of one window. Define shared support and discrepancy:
 
@@ -53,15 +57,15 @@ P_{ij}=\frac{\bar A_{ij}}{\max(1,\sum_\ell\bar A_{i\ell})}.
 \tag{2}
 \]
 
-EDGE_GMAE substitutes \(P\) in the same encoder and decoder. The floor retains weak neighbor information when overlap is absent; self loops remain one before normalization. No learned gate parameters are added. Crucially, pretraining computes the gate from each masked input view, clearing visibility for additionally masked nodes. Hidden reconstruction targets cannot influence edge weights.
+EDGE_GMAE uses \(P\) to weight connections in the same encoder and decoder. A minimum weight retains weak neighbor information even without shared measurements; each node retains a self weight of one before normalization. The rule adds no learned parameters. Pretraining computes weights after masking inputs and clearing their availability flags, so hidden reconstruction targets cannot affect connection weights.
 
-EDGE_DENSE removes masked pretraining from this gated architecture. Thus EDGE_GMAE versus GMAE changes aggregation with the objective fixed; EDGE_DENSE versus DENSE tests gating without pretraining; and EDGE_GMAE versus EDGE_DENSE tests pretraining within the gated representation. Equation (2) is a compatibility heuristic, not a truth probability. Coordinated replacement values can appear compatible, and useful dissimilar neighbors can be suppressed.
+EDGE_DENSE uses these weights without masked pretraining. Comparing EDGE_GMAE with GMAE tests weighting under the same training objective; EDGE_DENSE versus DENSE tests it without pretraining; EDGE_GMAE versus EDGE_DENSE tests pretraining under the same weighting rule. Equation (2) measures agreement, not truth: coordinated false values may agree, while useful but different neighbors may receive less weight.
 
 ### 3.3. Reconstruction and prediction consistency
 
-Stochastic-view consistency has precedents in semi-supervised learning [7].
+Consistency training encourages a model to give similar answers when some input details change, an established idea in semi-supervised learning [7]. Here, the change is hiding additional measurements.
 
-CONS_GMAE retains GMAE inference. During pretraining, two independently sampled 30% node masks produce latent views \(h^{(1)}\) and \(h^{(2)}\) and reconstruction losses \(L_{\mathrm{rec}}^{(1)},L_{\mathrm{rec}}^{(2)}\). With stop-gradient operator \(\operatorname{sg}\),
+CONS_GMAE uses the same prediction architecture as GMAE. During pretraining, two independently sampled 30% node masks produce internal representations \(h^{(1)}\) and \(h^{(2)}\) and reconstruction losses \(L_{\mathrm{rec}}^{(1)},L_{\mathrm{rec}}^{(2)}\). The stop-gradient operator \(\operatorname{sg}\) holds a target fixed while updating the other view:
 
 \[
 C=\frac{1}{2|V|}\sum_{i\in V}
@@ -72,9 +76,9 @@ L_{\mathrm{pre}}=\tfrac12(L_{\mathrm{rec}}^{(1)}+L_{\mathrm{rec}}^{(2)})+0.5C.
 \tag{3}
 \]
 
-Alignment covers valid nodes only. Both target views use the current shared model; there is no separate or moving-average teacher, additional projector, or inaccessible clean target.
+The consistency term compares valid nodes only. Both views use the same current model, without a separate teacher, moving-average target, extra projection layer, or inaccessible clean measurements.
 
-Supervision additionally removes 20% of currently observed coordinates, clearing values and indicators to obtain \(\tilde x\). For \(p=f_\theta(x,A)\) and \(\tilde p=f_\theta(\tilde x,A)\),
+For example, a flow might be viewed once with its duration visible and once with it hidden. Supervised consistency encourages similar predictions. Training hides 20% of currently observed coordinates, clearing values and flags to obtain \(\tilde x\). For \(p=f_\theta(x,A)\) and \(\tilde p=f_\theta(\tilde x,A)\),
 
 \[
 L_{\mathrm{sup}}=L_{\mathrm{BCE+Brier}}(p,y)
@@ -82,7 +86,7 @@ L_{\mathrm{sup}}=L_{\mathrm{BCE+Brier}}(p,y)
 \tag{4}
 \]
 
-The supplied observation can already be corrupted, so its detached prediction is not an oracle. CONS_PRE uses Equation (3) but omits the additional term in Equation (4). This comparison isolates supervised consistency; CONS_PRE versus GMAE changes both reconstruction-view count and latent alignment and therefore does not isolate the cosine term. A two-view, zero-alignment control remains absent.
+The supplied observation may already be corrupted, so matching its prediction does not guarantee correctness. CONS_PRE uses Equation (3) without the extra term in Equation (4), isolating supervised consistency. Comparing CONS_PRE with GMAE changes both the number of views and their alignment; a control using two views without alignment is still needed to separate those effects.
 
 ## 4. Experimental Design
 
@@ -108,9 +112,9 @@ Training and inference ran on an NVIDIA RTX 5000 Ada Generation GPU, with PyTorc
 
 ### 4.3. Estimands and uncertainty
 
-The primary endpoint is attack average precision (AP), averaging three fixed test captures equally within each seed, then averaging seeds. Two specified contrasts compare EDGE_GMAE and CONS_GMAE with GMAE. We use 1,000 shared paired bootstrap draws crossing seed resampling with contiguous 64-window blocks within each capture, recomputing exact tie-aware AP. Captures 10/11/12 contain 60/6/5 blocks; no draw lacked positive labels.
+The primary measure is attack average precision (AP), which rewards placing botnet flows near the top of a ranked list. We average three fixed test captures equally within each seed, then average seeds. Two specified contrasts compare EDGE_GMAE and CONS_GMAE with GMAE. We use 1,000 shared paired bootstrap draws crossing seed resampling with contiguous 64-window blocks within each capture, recomputing exact tie-aware AP. Captures 10/11/12 contain 60/6/5 blocks; no draw lacked positive labels.
 
-We report 95% and 97.5% marginal percentile intervals; the latter target nominal 95% family coverage for two comparisons under the bootstrap approximation. Captures are fixed, not population-resampled. Small block populations, temporal dependence, and adaptive reuse limit interpretation; multiplicity adjustment does not restore an untouched test. Other comparisons and seed-t intervals are descriptive. ROC-AUC, Brier score, recall, false-positive rate (FPR), and resource measurements complement AP. Reliability diagrams assess probability calibration separately from discrimination [12].
+We report 95% and 97.5% marginal percentile intervals; the latter target nominal 95% family coverage for two comparisons under the bootstrap approximation. Captures are fixed, not population-resampled. Small block populations, temporal dependence, and adaptive reuse limit interpretation; multiplicity adjustment does not restore an untouched test. Other comparisons and seed-t intervals are descriptive. ROC-AUC, Brier score, recall, false-positive rate (FPR), and resource measurements complement AP. Brier score measures probability error; lower is better. Calibration asks whether predicted probabilities match observed botnet frequencies [12].
 
 ## 5. Results
 
@@ -140,9 +144,9 @@ Table 1. Clean capture-macro means over five seed slots. AP and AUC are higher-b
 
 Figure 1. Clean performance and uncertainty. (A) Thirteen-method capture-macro AP with descriptive 95% seed-t intervals. (B) Paired seed/time-block 95% and 97.5% intervals for the two specified contrasts. Both wider intervals cross zero; descriptive rankings do not establish superiority. Figure labels abbreviate EDGE_GMAE, EDGE_DENSE, CONS_GMAE and CONS_PRE as EDGE, EDGE-0, CONS and CONS-P; SCR, CTX and LOCAL omit the _FLOW suffix.
 
-EDGE_DENSE, without pretraining, has the highest mean AP, 0.99500. GMAE also trails DENSE descriptively. Consequently, the gated family's clean gain cannot be credited to masked pretraining. EDGE_GMAE's capture-specific AP improvements are 0.00079, 0.04242, and 0.00420; the largest is concentrated in capture 11. Capture conditions and malware family are confounded, so this pattern does not identify a family-specific causal mechanism.
+EDGE_DENSE achieves the highest mean AP, 0.99500, without pretraining. GMAE also has a lower observed mean than DENSE. Both weighted models improve on GMAE's observed clean mean, including the model trained without pretraining. EDGE_GMAE's AP improvements are 0.00079, 0.04242, and 0.00420 across captures; the largest occurs in capture 11. Capture conditions and malware family vary together, so this pattern cannot explain which caused the difference.
 
-Figure 2 separates capture-specific AP and pooled reliability. EDGE_GMAE reduces Brier score from 0.05973 to 0.04262 and FPR from 0.07330 to 0.04265, while recall remains similar (0.81815 versus 0.81600). Prior shift makes frozen operating points consequential: LOGIT's FPR approaches one. Cheap NB exceeds DAE in AP, while contextual CTX_FLOW exceeds LOCAL_FLOW. These comparisons discourage assuming that more elaborate reconstruction or HDC augmentation necessarily helps.
+Figure 2 shows rankings within captures and calibration across pooled predictions. EDGE_GMAE reduces Brier score from 0.05973 to 0.04262 and FPR from 0.07330 to 0.04265, while recall remains similar (0.81815 versus 0.81600). This means lower average probability error and a lower false-alarm rate at the selected thresholds. Botnet prevalence changes across splits, making fixed thresholds consequential: LOGIT's FPR approaches one. Inexpensive NB exceeds DAE in AP, and CTX_FLOW exceeds LOCAL_FLOW, supporting careful comparisons before adding complexity.
 
 [FIGURE2]
 
@@ -150,9 +154,9 @@ Figure 2. Capture-specific discrimination and pooled calibration. (A) Clean AP f
 
 ### 5.2. Stress and matched controls
 
-At 50% missingness, AP is 0.93553 for GMAE, 0.95962 for EDGE_GMAE, 0.95360 for EDGE_DENSE, and 0.95249 for CONS_GMAE. At 40% numeric replacement, values are 0.96716, 0.98535, 0.98432, and 0.97781, respectively (Figure 3). Thus gated pretraining has a descriptive advantage over its no-pretraining control under severe missingness, despite no clean advantage.
+At 50% missingness, AP is 0.93553 for GMAE, 0.95962 for EDGE_GMAE, 0.95360 for EDGE_DENSE, and 0.95249 for CONS_GMAE. At 40% numeric replacement, values are 0.96716, 0.98535, 0.98432, and 0.97781, respectively (Figure 3). Pretraining helps the weighted model under severe missingness in these comparisons, although it offers no clean advantage.
 
-CONS_GMAE's clean increment over CONS_PRE is only 0.00076; CONS_PRE is slightly higher under both missingness levels. The additional supervised consistency term therefore lacks a consistent descriptive benefit. These observations concern fixed artificial stresses, not robustness to adaptive adversaries.
+CONS_GMAE's clean gain over CONS_PRE is only 0.00076; CONS_PRE is slightly better under both missingness levels. Training for stable predictions adds no consistent observed benefit beyond pretraining. These fixed feature tests do not simulate an adversary adapting to the model.
 
 [FIGURE3]
 
@@ -160,7 +164,7 @@ Figure 3. Artificial corruption and matched controls. (A) Capture-macro AP for s
 
 ### 5.3. Resource costs and verification
 
-A common-session timing audit uses the same prepared 32-flow window for all thirteen inference architectures. Median bounded host-to-GPU-to-host latency is 2.374 ms for GMAE, 2.929 ms for EDGE_GMAE, and 2.381 ms for CONS_GMAE; corresponding p95 values are 2.805, 3.714, and 2.839 ms. EDGE's parameter-free gate adds computation and doubles incremental peak allocation from 0.093 to 0.187 MiB. CONS preserves inference architecture but increases mean training time from the historical GMAE measurement of 24.148 s to 29.994 s. Early stopping and separate training sessions prevent interpreting timings as controlled FLOP comparisons.
+A common-session timing audit uses the same prepared 32-flow window for all thirteen inference architectures. Median bounded host-to-GPU-to-host latency is 2.374 ms for GMAE, 2.929 ms for EDGE_GMAE, and 2.381 ms for CONS_GMAE; corresponding p95 values are 2.805, 3.714, and 2.839 ms. EDGE's weighting rule adds no learned parameters but requires extra comparisons, doubling additional peak memory from 0.093 to 0.187 MiB. CONS preserves inference architecture but increases mean training time from the historical GMAE measurement of 24.148 s to 29.994 s. Early stopping and separate training sessions mean these timings do not compare identical amounts of computation.
 
 Timing includes decoded-input transfer, normalization, endpoint graph construction, inference, and prediction return. It excludes flow extraction, waiting for completion/windows, cold loading, and network transit. Incremental memory excludes resident model/data allocations. These are bounded processing costs, not complete detection latency or communication compression (Figure 4).
 
@@ -168,19 +172,19 @@ Timing includes decoded-input transfer, normalization, endpoint graph constructi
 
 Figure 4. Measured computational tradeoffs. (A) Actual supervised and pretraining times for six graph methods; baseline training measurements are imported. (B) Common-session wall latency versus AP for eight methods, with p10–p95 repeat quantiles horizontally. Timing quantiles describe repeated measurements, not confidence intervals. Unequal forward passes and early stopping affect training cost.
 
-Audits checked 975 summary records, 6,825 recomputed metrics, and 65 checkpoint hashes. Seventy-five replay cases for GMAE and the four new methods reproduced probabilities, AP, and Brier exactly. Training trajectories and seed effects appear in Figures S3–S4. These checks establish artifact consistency, not external validity.
+Audits checked 975 summary records, 6,825 recomputed metrics, and 65 checkpoint hashes. Seventy-five replay cases for GMAE and the four new methods reproduced probabilities, AP, and Brier exactly. Training trajectories and seed effects appear in Figures S3–S4. These checks confirm that saved results can be reproduced; performance on new traffic still requires testing.
 
 ## 6. Limitations and Scope
 
-Selected labels, recurring hosts, and reused historical test captures restrict generalization; newly reserved contemporary traffic from independent organizations would guide improvements in transferability.
+Selected labels, recurring hosts, and reused historical test captures limit evidence about new settings; reserved contemporary traffic from independent organizations would help improve transfer to new networks.
 
-Matched controls leave reconstruction and consistency contributions partly unresolved; a two-view zero-alignment control would isolate mechanisms and guide simpler, more effective training.
+Existing controls do not fully separate reconstruction from consistency; training on two masked views without aligning them would clarify which steps help and could simplify training.
 
-Retrospective flow classification leaves operational planning untested; sequential cyber testbeds would reveal how representation improvements affect replanning quality, mission utility, and communication costs.
+Completed-flow classification leaves planning untested; sequential cyber testbeds would show how improved evidence affects action choices, replanning, and communication costs.
 
 ## 7. Conclusion
 
-We introduced and tested two telemetry-specific extensions of masked graph learning: parameter-free aggregation weighted by visible-feature overlap and compatibility, and latent and prediction consistency across masked views. Gated models achieved the highest observed mean average precision in every evaluated condition; consistency training improved the reference model's mean performance while preserving its inference architecture. Matched controls highlight aggregation as a productive design choice and reveal the condition-dependent contribution of masked pretraining. These exploratory findings provide tested mechanisms and measured computational tradeoffs to guide evidence regeneration and future integration with vector-symbolic and neurosymbolic cyber planning.
+We tested two task-specific extensions of masked graph learning: weighting connections by shared, agreeing measurements, and encouraging stable representations and predictions when measurements disappear. Weighted models achieved the highest observed mean average precision across tested conditions. Consistency training also improved the reference model's mean performance without changing its prediction architecture. Matched controls show when learning to reconstruct hidden measurements helps, with an advantage under severe missingness. These exploratory findings identify practical ways to combine incomplete evidence and quantify their computing costs. Future vector-symbolic and neurosymbolic planners could use these insights to build evidence for comparing actions and replanning.
 
 ## References
 

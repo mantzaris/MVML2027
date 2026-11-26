@@ -14,9 +14,9 @@
 
 \section*{S1. From selective repair to structured regeneration}
 
-Three earlier synthetic studies measured candidate-oracle regret on independent generated snapshots with three partial observers, noisy prior-time evidence and abstract conjunction candidates. Each used 20,000 training and 2,000 validation snapshots and five seeds (11, 23, 37, 51, 71); later studies used separate 4,000-snapshot test pools. These decision targets differ from real-flow average precision (AP).\par
+Three synthetic studies used independent snapshots, three partial observers and noisy prior evidence. Regret is the chosen candidate's utility loss against an oracle with hidden truth. Utility earns value only when all prerequisites hold and always subtracts cost. Each used 20,000 training and 2,000 validation snapshots and five seeds (11, 23, 37, 51, 71); later studies used separate 4,000-snapshot test pools. Regret differs from captured-flow average precision (AP).\par
 
-The initial hyperdimensional model (P) changed at most six of 64 beliefs. With 20\% targeted intervention and 2,048 bytes per remote observer, it underperformed dense decision-aware full reconstruction (B2):\par
+Hyperdimensional model P changed at most six of 64 beliefs. With 20\% targeted intervention and 2,048 bytes per remote observer, dense decision-aware full reconstruction (B2) achieved lower regret:\par
 
 \begin{center}
 \fontsize{9.5}{11}\selectfont
@@ -32,9 +32,9 @@ Eligible Recall@3 (\%) & 99.607 & 100.000 & -0.393 [-0.590, -0.232] \\
 \end{tabularx}
 \end{center}
 
-Regret includes all 4,000 snapshots; recall excludes 33 without a feasible candidate. Sparse edits did not save decoder computation because full reconstruction preceded gating.\par
+Regret includes all 4,000 snapshots; recall excludes 33 without feasible candidates. Sparse edits saved no decoder computation: full reconstruction preceded gating.\par
 
-A second study factorized root and child-conditional probabilities (JH), enforced child probability no greater than its parent, and counted shared roots once when scoring conjunctions. Equal-weight mean regret across benign, targeted, random and coherent conditions was 0.08593 for JH versus 0.08424 for dense independent prediction (ID): difference +0.00169, 95\% interval [-0.00017, 0.00350]. Logical violation rates fell from 4.5692\% (ID) to zero (JH), without an established decision benefit. P/B2 had targeted-only training versus mixed corruptions for new models, confounding architecture comparisons. All shared a symbolic report codec; no hyperdimensional communication advantage was demonstrated.\par
+JH predicted root and child-conditional probabilities, kept child probabilities no higher than their parents, and counted shared roots once per candidate. Equally weighted regret across benign, targeted, random and coherent conditions was 0.08593 (JH) versus 0.08424 (dense independent ID): +0.00169, 95\% interval [-0.00017, 0.00350]. Logical violations fell from 4.5692\% (ID) to zero (JH), without established decision benefit. P/B2's targeted-only training versus mixed corruptions for new models confounds architecture comparisons. All shared a symbolic report codec; no hyperdimensional communication advantage was demonstrated.\par
 
 \begin{figure}[H]
 \centering
@@ -46,11 +46,11 @@ A second study factorized root and child-conditional probabilities (JH), enforce
 
 \section*{S2. Direct candidate prediction and inexpensive alternatives}
 
-A third study directly scored candidates without reconstructing fact probabilities. SCR mixes four candidate experts using observable global context. CAND\_CTX uses one expert with context; CAND\_LOCAL removes that context. Logistic regression (LOGIT) and a small denoising autoencoder (DAE) provide inexpensive fact-prediction comparisons. DAE pretraining reconstructs supplied, potentially corrupted observations; its targets are not oracle truth. Previously fitted ID and JH models were reevaluated unchanged on this study's new test pool.\par
+The third study predicted candidate feasibility without fact reconstruction. SCR combines four experts using observable global context; CAND\_CTX uses one contextual expert and CAND\_LOCAL omits context. Logistic regression (LOGIT) and a small denoising autoencoder (DAE) predict facts. DAE reconstructs supplied, potentially corrupted observations, not oracle truth. Previously fitted ID and JH models were reevaluated unchanged on the new test pool.\par
 
-Across the same four corruption mechanisms, SCR had mean regret 0.11152 versus 0.08644 for ID: paired difference +0.02508, 95\% crossed-bootstrap interval [0.02091, 0.02919]. SCR therefore underperformed ID, while improving descriptively over CAND\_CTX (0.12431), CAND\_LOCAL (0.12725), DAE (0.12873) and LOGIT (0.16455). The secondary SCR-minus-CAND\_CTX difference was -0.01279 [-0.01595, -0.00970], with unequal parameter counts and no multiplicity adjustment.\par
+Across the same four corruption mechanisms, SCR had mean regret 0.11152 versus 0.08644 for ID: paired difference +0.02508, 95\% crossed-bootstrap interval [0.02091, 0.02919]. SCR underperformed ID, but had lower descriptive regret than CAND\_CTX (0.12431), CAND\_LOCAL (0.12725), DAE (0.12873) and LOGIT (0.16455). The secondary SCR-minus-CAND\_CTX difference was -0.01279 [-0.01595, -0.00970], with unequal parameter counts and no multiplicity adjustment.\par
 
-On shadow candidates formed by requirement unions, adding requirements should not increase feasibility probability; SCR violated this ordering in 41.153\% of comparisons, versus zero for the product-based DAE, LOGIT, ID and JH scores. Unions contained up to ten requirements, whereas training candidates had two to five. This is an informative query-length stress test, not proof that these violations caused the regret gap. Direct heads have no fact posterior; missing fact-coherence metrics do not mean zero semantic error.\par
+Hypothetically, an action needing two prerequisites cannot be more feasible than either alone. Shadow queries combined pairs of candidates' requirements; SCR violated this probability ordering in 41.153\% of comparisons, versus zero for product-based DAE, LOGIT, ID and JH scores. Unions contained up to ten requirements, versus two to five during training. This query-length stress does not establish the regret gap's cause. Direct models output no fact probabilities; unavailable fact-coherence metrics do not mean zero semantic error.\par
 
 All 25 newly fitted models reached the 40-epoch limit; selected checkpoints were at epochs 36–39, counted from zero. Convergence was not established. Thirty no-feasible snapshots remained in regret but not eligible recall. No synthetic weights transferred to the captured-flow experiments.\par
 
@@ -68,7 +68,7 @@ CTU-13 [8] records controlled botnets in university traffic. Only From-Normal/Fr
 
 Graphs connect endpoint-sharing flows within 32-flow windows formed after label filtering. Fourteen features and fourteen availability masks omit numerical endpoint identities, times and capture identifiers. Training statistics standardize the first six features; inputs are clipped to [-5, 5]. Completed-flow classification is retrospective, not packet-causal or course-of-action evaluation.\par
 
-Each training window is assigned once to clean, 20\% missing or 20\% centroid-replacement conditions in a cycle. Missingness clears features and masks; replacement substitutes the training-normal centroid for selected observed coordinates among the first eight, preserving categorical flags. Both preserve endpoints. Checkpoints minimize mean validation BCE plus Brier loss over these conditions. Clean-validation F1 chooses thresholds, favoring the highest tie, fixed across test conditions.\par
+Training windows receive fixed cyclic assignments: clean, 20\% missing or 20\% centroid replacement. Missingness clears features and visibility; replacement uses the training-normal centroid for selected observed coordinates among the first eight, retaining categorical flags. Both preserve endpoints. Checkpoints minimize mean validation BCE plus Brier loss over these conditions. Thresholds maximize clean-validation F1, choosing the highest tie, and stay fixed across test conditions.\par
 
 \begin{center}
 \fontsize{9.5}{11}\selectfont
@@ -101,11 +101,11 @@ New fits and thresholds were frozen before test inference; nine imported baselin
 
 Clean capture-macro AP differences versus GMAE were +0.01580 for EDGE\_GMAE and +0.00518 for CONS\_GMAE. Their ordinary 95\% intervals were [0.00097, 0.03710] and [-0.00184, 0.01441]. The respective 97.5\% marginal intervals, applying a nominal two-comparison Bonferroni adjustment, were [-0.00036, 0.04321] and [-0.00257, 0.01639]. Neither adjusted interval excludes zero; neither superiority nor equivalence is established. Prior inspection of these test captures makes the follow-up exploratory.\par
 
-A shared paired bootstrap crossed model seeds with contiguous 64-window blocks within each fixed capture: 60, 6 and 5 blocks for captures 10, 11 and 12. It recomputed tie-aware AP with equal capture weights for 1,000 draws; no zero-positive draws were rejected. Individual flows were not treated as independent replicates, and captures were not resampled as a population of organizations. Small block populations and test reuse limit inference.\par
+The shared paired bootstrap resampled model seeds and contiguous 64-window blocks within each fixed capture: 60, 6 and 5 blocks for captures 10, 11 and 12. It recomputed tie-aware AP with equal capture weights for 1,000 draws; no zero-positive draws were rejected. Flows were not independent replicates; captures were not sampled to represent organizations. Small block populations and test reuse limit inference.\par
 
-EDGE's mean gains were +0.00079, +0.04242 and +0.00420 by capture, concentrating the effect in capture 11. The no-pretraining EDGE\_DENSE control had the largest clean mean AP (0.99500), compared with EDGE\_GMAE (0.99411). At 50\% artificial missingness, their AP values were 0.95360 and 0.95962; these are descriptive secondary comparisons. CONS\_PRE (0.98272 clean AP) was close to CONS\_GMAE (0.98348). CONS\_PRE changes both view count and latent alignment relative to GMAE, so it does not isolate alignment's contribution.\par
+EDGE's mean gains were +0.00079, +0.04242 and +0.00420 by capture, concentrating the effect in capture 11. The no-pretraining EDGE\_DENSE control had the largest clean mean AP (0.99500), compared with EDGE\_GMAE (0.99411). At 50\% artificial missingness, their AP values were 0.95360 and 0.95962; these are descriptive secondary comparisons. CONS\_PRE (0.98272 clean AP) was close to CONS\_GMAE (0.98348). Compared with GMAE, CONS\_PRE changes both view count and latent alignment, leaving alignment's contribution unresolved.\par
 
-Evidence checks covered 975 evaluation archives, 6,825 recomputed metrics and 65 checkpoint hashes. Seventy-five checkpoint replays reproduced 3,570,325 model-flow predictions exactly. Calibration counts include 46,414,225 repeated model-flow predictions, not that many independent flows. Only reliability-bin assignment and display clip 321 scores within 1.19e-7 above one; raw ranking metrics remain unchanged. Common-session host-wall median latency was 2.374/2.929/2.381 ms per window for GMAE/EDGE/CONS, including decoded-input transfer and graph construction but excluding capture ingestion and flow completion.\par
+Evidence checks covered 975 evaluation archives, 6,825 recomputed metrics and 65 checkpoint hashes. Seventy-five checkpoint replays reproduced 3,570,325 model-flow predictions exactly. Calibration counts include 46,414,225 repeated model-flow predictions, not that many independent flows. Reliability bins and displays clip 321 scores slightly above one (within 1.19e-7); raw ranking metrics remain unchanged. Common-session host-wall median latency was 2.374/2.929/2.381 ms per window for GMAE/EDGE/CONS, including decoded-input transfer and graph construction but excluding capture ingestion and flow completion.\par
 
 \begin{figure}[H]
 \centering
