@@ -59,6 +59,8 @@ EDGE_DENSE removes masked pretraining from this gated architecture. Thus EDGE_GM
 
 ### 3.3. Reconstruction and prediction consistency
 
+Stochastic-view consistency has precedents in semi-supervised learning [7].
+
 CONS_GMAE retains GMAE inference. During pretraining, two independently sampled 30% node masks produce latent views \(h^{(1)}\) and \(h^{(2)}\) and reconstruction losses \(L_{\mathrm{rec}}^{(1)},L_{\mathrm{rec}}^{(2)}\). With stop-gradient operator \(\operatorname{sg}\),
 
 \[
@@ -86,7 +88,7 @@ The supplied observation can already be corrupted, so its detached prediction is
 
 ### 4.1. Recorded data and artificial corruption
 
-CTU-13 contains 2011 university traffic recorded during controlled executions of real botnets [7]. Across all thirteen bidirectional-flow tables, we retain author labels From-Normal and From-Botnet: 799,777 of 19,976,700 rows (4.00%). Background and other uncertain labels are excluded rather than assumed benign. Filtering precedes window and graph construction.
+CTU-13 contains 2011 university traffic recorded during controlled executions of real botnets [8]. Across all thirteen bidirectional-flow tables, we retain author labels From-Normal and From-Botnet: 799,777 of 19,976,700 rows (4.00%). Background and other uncertain labels are excluded rather than assumed benign. Filtering precedes window and graph construction.
 
 Captures 1–8 and 13 provide 442,084 training flows; capture 9 provides 214,880 validation flows; captures 10–12 provide 142,813 test flows. All training flows finish before validation starts, and validation finishes before testing starts, checked using completion times rather than capture identifiers. Hosts may recur, so separation is temporal and by capture, not by host. Test captures 10–11 contain Rbot; capture 12 contains NSIS.ay, absent from training. Pooled botnet-label prevalences are 0.324, 0.861, and 0.817 for training, validation, and test, respectively.
 
@@ -96,11 +98,11 @@ Missing20/50 independently hide 20%/50% of observed feature coordinates. Spoof20
 
 ### 4.2. Comparators and optimization
 
-Nine previously executed baselines are imported unchanged, with matched input and prediction fingerprints. Gaussian naive Bayes (NB; 58 fitted statistics) skips missing-coordinate likelihoods. LOGIT uses 29 parameters. DAE uses a \(28\to32\to8\) encoder, \(8\to32\to14\) decoder, and supervised readout: 1,951 parameters, five denoising epochs, 25% additional feature masking, and retained-coordinate Gaussian noise. HDC appends associative retrieval features from a fixed 4,096-dimensional bipolar codebook to the graph model, giving 125,227 parameters. This does not measure network compression.
+Nine previously executed baselines are imported unchanged, with matched input and prediction fingerprints. Gaussian naive Bayes (NB; 58 fitted statistics) skips missing-coordinate likelihoods. LOGIT uses 29 parameters. Our denoising autoencoder (DAE) [9] uses a \(28\to32\to8\) encoder, \(8\to32\to14\) decoder, and supervised readout: 1,951 parameters, five denoising epochs, 25% additional feature masking, and retained-coordinate Gaussian noise. HDC appends vector-symbolic associative retrieval features [10] from a fixed 4,096-dimensional bipolar codebook to the graph model, giving 125,227 parameters. This does not measure network compression.
 
 SCR_FLOW uses window means and standard deviations of learned per-flow embeddings as context and a four-expert probability mixture (10,664 parameters); CTX_FLOW uses a single contextual expert and LOCAL_FLOW zeroes that context (8,257 parameters each). These controls distinguish contextual aggregation from graph reconstruction and inexpensive local learning.
 
-All four new graph variants retain GMAE's 121,643 parameters. Seeds are 11, 23, 37, 51, and 71; optimization uses AdamW, learning rate 0.001, weight decay \(10^{-4}\), batches of 256 windows, at most 40 supervised epochs, and patience eight. Checkpoints minimize the same validation BCE-plus-Brier objective, excluding method-specific regularizers. Clean-validation attack-F1 thresholds are frozen across test conditions. All twenty new fits and thresholds were completed before new test inference. However, earlier test results motivated these variants, making this an exploratory reused-test study.
+All four new graph variants retain GMAE's 121,643 parameters. Seeds are 11, 23, 37, 51, and 71; optimization uses AdamW [11], learning rate 0.001, weight decay \(10^{-4}\), batches of 256 windows, at most 40 supervised epochs, and patience eight. Checkpoints minimize the same validation BCE-plus-Brier objective, excluding method-specific regularizers. Clean-validation attack-F1 thresholds are frozen across test conditions. All twenty new fits and thresholds were completed before new test inference. However, earlier test results motivated these variants, making this an exploratory reused-test study.
 
 Training and inference ran on an NVIDIA RTX 5000 Ada Generation GPU, with PyTorch 2.9.1/CUDA 12.8, BF16 training autocast, and FP32 inference with TF32 permitted. CPU work handled parsing, statistics, and rendering. Equal parameters and epoch caps do not imply equal computation: CONS adds training passes and EDGE adds pairwise comparisons. NB repeats the same deterministic fit in five seed slots.
 
@@ -108,7 +110,7 @@ Training and inference ran on an NVIDIA RTX 5000 Ada Generation GPU, with PyTorc
 
 The primary endpoint is attack average precision (AP), averaging three fixed test captures equally within each seed, then averaging seeds. Two specified contrasts compare EDGE_GMAE and CONS_GMAE with GMAE. We use 1,000 shared paired bootstrap draws crossing seed resampling with contiguous 64-window blocks within each capture, recomputing exact tie-aware AP. Captures 10/11/12 contain 60/6/5 blocks; no draw lacked positive labels.
 
-We report 95% and 97.5% marginal percentile intervals; the latter target nominal 95% family coverage for two comparisons under the bootstrap approximation. Captures are fixed, not population-resampled. Small block populations, temporal dependence, and adaptive reuse limit interpretation; multiplicity adjustment does not restore an untouched test. Other comparisons and seed-t intervals are descriptive. ROC-AUC, Brier score, recall, false-positive rate (FPR), and resource measurements complement AP.
+We report 95% and 97.5% marginal percentile intervals; the latter target nominal 95% family coverage for two comparisons under the bootstrap approximation. Captures are fixed, not population-resampled. Small block populations, temporal dependence, and adaptive reuse limit interpretation; multiplicity adjustment does not restore an untouched test. Other comparisons and seed-t intervals are descriptive. ROC-AUC, Brier score, recall, false-positive rate (FPR), and resource measurements complement AP. Reliability diagrams assess probability calibration separately from discrimination [12].
 
 ## 5. Results
 
@@ -170,11 +172,11 @@ Audits checked 975 summary records, 6,825 recomputed metrics, and 65 checkpoint 
 
 ## 6. Limitations and Scope
 
-Only 4% of source rows enter this known-label benchmark. Host-associated labels, recurring hosts, high and shifting prevalence, and filtering before graph construction restrict generalization to unfiltered traffic. Completed-flow statistics and entire windows make prediction retrospective, not packet-causal. Three historical test captures cannot establish performance in new organizations, and their prior inspection requires independent confirmation.
+Selected labels, recurring hosts, and reused historical test captures restrict generalization; newly reserved contemporary traffic from independent organizations would guide improvements in transferability.
 
-The gate's fixed scale mixes standardized measurements with bounded ports and flags. It may suppress informative heterophily or accept coordinated false values. Consistency may reinforce incorrect predictions; no claim of collapse prevention follows from its objective. Additional studies need a two-view zero-alignment control, graph-corruption conditions, contemporary datasets, and newly reserved evaluation populations.
+Matched controls leave reconstruction and consistency contributions partly unresolved; a two-view zero-alignment control would isolate mechanisms and guide simpler, more effective training.
 
-The connection to hyperdimensional neurosymbolic planning is a potential perception/representation component. This experiment establishes neither complete mission-state regeneration, logical correctness, distributed communication savings, actual deception detection, nor successful course-of-action planning. Synthetic decision-regret results remain separate evidence in the supplement.
+Retrospective flow classification leaves operational planning untested; sequential cyber testbeds would reveal how representation improvements affect replanning quality, mission utility, and communication costs.
 
 ## 7. Conclusion
 
@@ -194,4 +196,14 @@ Observation-aware edge weighting produces a promising mean improvement over a Gr
 
 [6] G. Tang, K. Liu, X. Yang, and Y. Qian, “Reconstruction Outcomes Look Similar but Processes Differ: Improving Context Consistency and Coverage in Graph Masked Auto-Encoder,” in Proc. ICML, PMLR, vol. 306, 2026, pp. 118954–118971. https://proceedings.mlr.press/v306/tang26l.html.
 
-[7] S. García, M. Grill, J. Stiborek, and A. Zunino, “An empirical comparison of botnet detection methods,” Computers & Security, vol. 45, pp. 100–123, 2014, doi:10.1016/j.cose.2014.05.011. Dataset: https://www.stratosphereips.org/datasets-ctu13.
+[7] S. Laine and T. Aila, “Temporal Ensembling for Semi-Supervised Learning,” in Proc. International Conference on Learning Representations, 2017. https://arxiv.org/abs/1610.02242.
+
+[8] S. García, M. Grill, J. Stiborek, and A. Zunino, “An empirical comparison of botnet detection methods,” Computers & Security, vol. 45, pp. 100–123, 2014, doi:10.1016/j.cose.2014.05.011. Dataset: https://www.stratosphereips.org/datasets-ctu13.
+
+[9] P. Vincent, H. Larochelle, Y. Bengio, and P.-A. Manzagol, “Extracting and Composing Robust Features with Denoising Autoencoders,” in Proc. International Conference on Machine Learning, 2008, pp. 1096–1103, doi:10.1145/1390156.1390294.
+
+[10] D. Kleyko, D. A. Rachkovskij, E. Osipov, and A. Rahimi, “A Survey on Hyperdimensional Computing aka Vector Symbolic Architectures, Part I: Models and Data Transformations,” ACM Computing Surveys, vol. 55, no. 6, pp. 1–40, 2022, doi:10.1145/3538531.
+
+[11] I. Loshchilov and F. Hutter, “Decoupled Weight Decay Regularization,” in Proc. International Conference on Learning Representations, 2019. https://arxiv.org/abs/1711.05101.
+
+[12] C. Guo, G. Pleiss, Y. Sun, and K. Q. Weinberger, “On Calibration of Modern Neural Networks,” in Proc. International Conference on Machine Learning, PMLR, vol. 70, 2017, pp. 1321–1330. https://proceedings.mlr.press/v70/guo17a.html.

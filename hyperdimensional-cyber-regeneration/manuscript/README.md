@@ -12,6 +12,7 @@ The anonymous draft consolidates the completed synthetic regeneration studies, i
 | [Main narrative](anonymous/main.md) / [supplement narrative](anonymous/supplement.md) | Editable text used by the build script |
 | [Format notes](FORMAT_NOTES.md) | Official template interpretation, local font substitutions and unconfirmed supplemental-upload policy |
 | [Figure provenance](figure_provenance.json) / [build manifest](build_manifest.json) | Internal hashes, source checks, PDF page/figure counts and metadata checks |
+| [Reference verification](reference_verification.json) | Primary sources and attribution checks for the five added references |
 
 The measured EDGE_GMAE gain is promising but exploratory. Both nominal two-comparison adjusted intervals include zero, and EDGE_DENSE has the largest descriptive clean mean, so the paper does not credit masked pretraining with that gain. It explicitly discloses prior test inspection, the limited known-label subset, artificial feature stresses and the absence of operational planning outcomes. It includes negative findings and matched controls alongside the improvements.
 

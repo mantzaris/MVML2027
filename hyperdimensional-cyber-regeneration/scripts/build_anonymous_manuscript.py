@@ -146,6 +146,8 @@ def convert(name: str) -> str:
             sub=l.startswith('### '); title=l[4:] if sub else l[3:]; title=re.sub(r'^\d+(?:\.\d+)*\.\s*','',title)
             if not supp and title in ('Resource costs and verification','Limitations and Scope'):
                 out.append(r'\FloatBarrier')
+            if not supp and title=='Conclusion':
+                out.append(r'\clearpage')
             if title=='References':
                 refs=True; out.append(r'\section*{References}\begin{enumerate}[label={[\arabic*]},leftmargin=6mm,labelsep=1.5mm,itemsep=3pt,parsep=0pt,topsep=0pt]')
             elif supp: out.append(r'\section*{'+inline(title)+'}')
@@ -181,7 +183,18 @@ def convert(name: str) -> str:
         else: out.append(inline(text)+r'\par')
     if refs:out.append(r'\end{enumerate}')
     out.append(r'\end{document}')
-    return '\n\n'.join(out)+'\n'
+    rendered='\n\n'.join(out)+'\n'
+    if not supp:
+        # Declare the results table early enough for a top-page float while
+        # retaining its narrative location in the editable Markdown source.
+        block=re.search(r'\\begin\{table\}.*?\\end\{table\}',rendered,re.S)
+        assert block
+        table_text=block.group()
+        rendered=rendered[:block.start()]+rendered[block.end():]
+        anchor=r'\subsection{Comparators and optimization}'
+        assert anchor in rendered
+        rendered=rendered.replace(anchor,table_text+'\n\n'+anchor,1)
+    return rendered
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 

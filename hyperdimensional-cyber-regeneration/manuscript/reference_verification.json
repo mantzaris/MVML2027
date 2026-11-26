@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-26",
+  "description": "Primary-source verification for five added references; internal record excluded from anonymous archive.",
+  "limitations_words_before": 145,
+  "limitations_words_after": 68,
+  "reference_count_before": 7,
+  "reference_count_after": 12,
+  "additions": [
+    {
+      "number": 7,
+      "sources": [
+        "https://arxiv.org/abs/1610.02242",
+        "https://research.nvidia.com/sites/default/files/publications/laine2017iclr_paper.pdf"
+      ],
+      "claim": "Prediction consistency across stochastic views predates this work. Current detached targets are not a temporal ensemble."
+    },
+    {
+      "number": 9,
+      "doi": "10.1145/1390156.1390294",
+      "sources": [
+        "https://icml.cc/2008/papers/592.pdf",
+        "https://doi.org/10.1145/1390156.1390294"
+      ],
+      "claim": "Denoising autoencoders reconstruct targets from corrupted inputs; our telemetry targets are supplied observations."
+    },
+    {
+      "number": 10,
+      "doi": "10.1145/3538531",
+      "sources": [
+        "https://arxiv.org/abs/2111.06077",
+        "https://api.crossref.org/works/10.1145/3538531"
+      ],
+      "claim": "HDC/VSA combines distributed vector representations with algebraic operations.",
+      "note": "Uses online2022 publication year consistent with authors journal reference; publisher metadata also lists print2023. No unverified article number."
+    },
+    {
+      "number": 11,
+      "sources": [
+        "https://arxiv.org/abs/1711.05101"
+      ],
+      "claim": "AdamW optimizer attribution; source confirms ICLR2019."
+    },
+    {
+      "number": 12,
+      "sources": [
+        "https://proceedings.mlr.press/v70/guo17a.html",
+        "https://proceedings.mlr.press/v70/guo17a/guo17a.pdf"
+      ],
+      "claim": "Calibration and discrimination are distinct; reliability diagrams visualize calibration. No post-hoc temperature scaling is claimed."
+    }
+  ],
+  "renumbering": {
+    "CTU-13": "Old [7] becomes [8] in main and supplement; first-citation order preserved."
+  }
+}

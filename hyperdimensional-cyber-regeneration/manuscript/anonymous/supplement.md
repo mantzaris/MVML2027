@@ -37,7 +37,7 @@ All 25 newly fitted models reached the 40-epoch limit; selected checkpoints were
 
 ### S3. Captured-flow protocol and optimization diagnostics
 
-CTU-13 [7] records controlled botnets in university traffic. Only From-Normal/From-Botnet rows enter: 799,777/19,976,700 (4.00%). Training uses 442,084 flows (captures 1–8, 13); validation 214,880 (capture 9); testing 142,813 (captures 10–12). Training flows complete before validation, and validation before testing. Hosts can recur. Capture 12 contains NSIS.ay, absent from training; captures 10–11 contain Rbot. Reference numbering follows the main manuscript.
+CTU-13 [8] records controlled botnets in university traffic. Only From-Normal/From-Botnet rows enter: 799,777/19,976,700 (4.00%). Training uses 442,084 flows (captures 1–8, 13); validation 214,880 (capture 9); testing 142,813 (captures 10–12). Training flows complete before validation, and validation before testing. Hosts can recur. Capture 12 contains NSIS.ay, absent from training; captures 10–11 contain Rbot. Reference numbering follows the main manuscript.
 
 Graphs connect endpoint-sharing flows within 32-flow windows formed after label filtering. Fourteen features and fourteen availability masks omit numerical endpoint identities, times and capture identifiers. Training statistics standardize the first six features; inputs are clipped to [-5, 5]. Completed-flow classification is retrospective, not packet-causal or course-of-action evaluation.
 
