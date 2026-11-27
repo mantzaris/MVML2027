@@ -14,9 +14,9 @@
 
 \section*{S1. From selective repair to structured regeneration}
 
-Three synthetic studies used independent snapshots, three partial observers and noisy prior evidence. Regret is the chosen candidate's utility loss against an oracle with hidden truth. Utility earns value only when all prerequisites hold and always subtracts cost. Each used 20,000 training and 2,000 validation snapshots and five seeds (11, 23, 37, 51, 71); later studies used separate 4,000-snapshot test pools. Regret differs from captured-flow average precision (AP).\par
+Three synthetic studies used independent snapshots, three partial observers and noisy prior evidence. Regret is the chosen candidate's utility loss against an oracle with hidden truth. Utility earns value only when all prerequisites hold and always subtracts cost. Each used 20,000 training and 2,000 validation snapshots and five seeds (11, 23, 37, 51, 71). Later studies used separate 4,000-snapshot test pools. Regret differs from flow average precision (AP).\par
 
-Hyperdimensional model P changed at most six of 64 beliefs. With 20\% targeted intervention and 2,048 bytes per remote observer, dense decision-aware full reconstruction (B2) achieved lower regret:\par
+Hyperdimensional model P changed at most six of 64 beliefs. With 20\% targeted intervention and 2,048 bytes per remote observer, dense decision-aware full reconstruction (B2) achieved lower regret.\par
 
 \begin{center}
 \fontsize{9.5}{11}\selectfont
@@ -32,43 +32,43 @@ Eligible Recall@3 (\%) & 99.607 & 100.000 & -0.393 [-0.590, -0.232] \\
 \end{tabularx}
 \end{center}
 
-Regret includes all 4,000 snapshots; recall excludes 33 without feasible candidates. Sparse edits saved no decoder computation: full reconstruction preceded gating.\par
+Regret includes all 4,000 snapshots. Recall excludes 33 without feasible candidates. Sparse edits saved no decoder computation. Full reconstruction preceded gating.\par
 
-JH predicted root and child-conditional probabilities, kept child probabilities no higher than their parents, and counted shared roots once per candidate. Equally weighted regret across benign, targeted, random and coherent conditions was 0.08593 (JH) versus 0.08424 (dense independent ID): +0.00169, 95\% interval [-0.00017, 0.00350]. Logical violations fell from 4.5692\% (ID) to zero (JH), without established decision benefit. P/B2's targeted-only training versus mixed corruptions for new models confounds architecture comparisons. All shared a symbolic report codec; no hyperdimensional communication advantage was demonstrated.\par
+JH predicted root and child-conditional probabilities, kept child probabilities no higher than their parents, and counted shared roots once per candidate. Equally weighted regret across benign, targeted, random and coherent conditions was 0.08593 (JH) versus 0.08424 (dense independent ID) (difference +0.00169, 95\% interval [-0.00017, 0.00350]). Logical violations fell from 4.5692\% (ID) to zero (JH), without established decision benefit. P/B2's targeted-only training versus new models' mixed corruptions confounds architecture comparisons. All shared a symbolic report codec. No hyperdimensional communication advantage was demonstrated.\par
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{figures/figS1.pdf}
-\caption{Structured synthetic regeneration. Panels show (a) four-condition mean regret and (b) child-above-parent violation rates for matched new variants. ID/IH use independent dense/hyperdimensional predictions; JD/JH use dependency factorization. JH\_ERM uses mean group risk; JH\_product scores marginal products from the JH checkpoint. Plot intervals are descriptive seed-t intervals. Text intervals cross seeds and 250 topology clusters using 2,000 paired bootstrap draws.}
+\caption{Structured synthetic regeneration. Panels show (a) four-condition mean regret and (b) child-above-parent violation rates for matched new variants. ID/IH use independent dense/hyperdimensional predictions. JD/JH use dependency factorization. JH\_ERM uses mean group risk. JH\_product scores marginal products from the JH checkpoint. Plot intervals are descriptive seed-t intervals. Text intervals cross seeds and 250 topology clusters using 2,000 paired bootstrap draws.}
 \end{figure}
 
 \newpage
 
 \section*{S2. Direct candidate prediction and inexpensive alternatives}
 
-The third study predicted candidate feasibility without fact reconstruction. SCR combines four experts using observable global context; CAND\_CTX uses one contextual expert and CAND\_LOCAL omits context. Logistic regression (LOGIT) and a small denoising autoencoder (DAE) predict facts. DAE reconstructs supplied, potentially corrupted observations, not oracle truth. Previously fitted ID and JH models were reevaluated unchanged on the new test pool.\par
+The third study predicted candidate feasibility without fact reconstruction. SCR combines four experts using observable global context. CAND\_CTX uses one contextual expert and CAND\_LOCAL omits context. Logistic regression (LOGIT) and a small denoising autoencoder (DAE) predict facts. DAE reconstructs supplied, potentially corrupted observations, not oracle truth. Previously fitted ID and JH models were reevaluated unchanged on the new test pool.\par
 
-Across the same four corruption mechanisms, SCR had mean regret 0.11152 versus 0.08644 for ID: paired difference +0.02508, 95\% crossed-bootstrap interval [0.02091, 0.02919]. SCR underperformed ID, but had lower descriptive regret than CAND\_CTX (0.12431), CAND\_LOCAL (0.12725), DAE (0.12873) and LOGIT (0.16455). The secondary SCR-minus-CAND\_CTX difference was -0.01279 [-0.01595, -0.00970], with unequal parameter counts and no multiplicity adjustment.\par
+Across the same four corruption mechanisms, SCR had mean regret 0.11152 versus 0.08644 for ID (paired difference +0.02508, 95\% crossed-bootstrap interval [0.02091, 0.02919]). SCR underperformed ID, but had lower descriptive regret than CAND\_CTX (0.12431), CAND\_LOCAL (0.12725), DAE (0.12873) and LOGIT (0.16455). The secondary SCR-minus-CAND\_CTX difference was -0.01279 [-0.01595, -0.00970], with unequal parameter counts and no multiplicity adjustment.\par
 
-Hypothetically, an action needing two prerequisites cannot be more feasible than either alone. Shadow queries combined pairs of candidates' requirements; SCR violated this probability ordering in 41.153\% of comparisons, versus zero for product-based DAE, LOGIT, ID and JH scores. Unions contained up to ten requirements, versus two to five during training. This query-length stress does not establish the regret gap's cause. Direct models output no fact probabilities; unavailable fact-coherence metrics do not mean zero semantic error.\par
+Hypothetically, an action needing two prerequisites cannot be more feasible than either alone. Shadow queries combined pairs of candidates' requirements. SCR violated this probability ordering in 41.153\% of comparisons, versus zero for product-based DAE, LOGIT, ID and JH scores. Unions contained up to ten requirements, versus two to five during training. This query-length stress does not establish the regret gap's cause. Direct models output no fact probabilities. Unavailable fact-coherence metrics do not mean zero semantic error.\par
 
-All 25 newly fitted models reached the 40-epoch limit; selected checkpoints were at epochs 36–39, counted from zero. Convergence was not established. Thirty no-feasible snapshots remained in regret but not eligible recall. No synthetic weights transferred to the captured-flow experiments.\par
+All 25 newly fitted models reached the 40-epoch limit. Selected checkpoints were at epochs 36–39, counted from zero. Convergence was not established. Thirty no-feasible snapshots remained in regret but not eligible recall. No synthetic weights transferred to the captured-flow experiments.\par
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{figures/figS2.pdf}
-\caption{Direct candidate and inexpensive models. Panels show (a) four-condition mean regret and (b) added-requirement monotonicity violations on shadow-union candidates. Lower is better for both metrics. Error bars are descriptive intervals across five seeds; the primary SCR-versus-ID interval in the text crosses seeds and topology clusters. This study uses a separate fresh test pool from Figure S1.}
+\caption{Direct candidate and inexpensive models. Panels show (a) four-condition mean regret and (b) added-requirement monotonicity violations on shadow-union candidates. Lower is better for both metrics. Error bars are descriptive intervals across five seeds. The primary SCR-versus-ID interval in the text crosses seeds and topology clusters. This study uses a separate fresh test pool from Figure S1.}
 \end{figure}
 
 \newpage
 
 \section*{S3. Captured-flow protocol and optimization diagnostics}
 
-CTU-13 [8] records controlled botnets in university traffic. Only From-Normal/From-Botnet rows enter: 799,777/19,976,700 (4.00\%). Training uses 442,084 flows (captures 1–8, 13); validation 214,880 (capture 9); testing 142,813 (captures 10–12). Training flows complete before validation, and validation before testing. Hosts can recur. Capture 12 contains NSIS.ay, absent from training; captures 10–11 contain Rbot. Reference numbering follows the main manuscript.\par
+CTU-13 [8] records controlled botnets in university traffic. Only From-Normal/From-Botnet rows enter, totaling 799,777/19,976,700 (4.00\%). Training uses 442,084 flows (captures 1–8, 13), validation 214,880 (capture 9) and testing 142,813 (captures 10–12). Training flows complete before validation, and validation before testing. Hosts can recur. Capture 12 contains NSIS.ay, absent from training. Captures 10–11 contain Rbot. Reference numbering follows the main manuscript.\par
 
-Graphs connect endpoint-sharing flows within 32-flow windows formed after label filtering. Fourteen features and fourteen availability masks omit numerical endpoint identities, times and capture identifiers. Training statistics standardize the first six features; inputs are clipped to [-5, 5]. Completed-flow classification is retrospective, not packet-causal or course-of-action evaluation.\par
+Graphs connect endpoint-sharing flows within 32-flow windows formed after label filtering. Fourteen features and fourteen availability masks omit numerical endpoint identities, times and capture identifiers. Training statistics standardize the first six features. Inputs are clipped to [-5, 5]. Completed-flow classification is retrospective, not packet-causal or course-of-action evaluation.\par
 
-Training windows receive fixed cyclic assignments: clean, 20\% missing or 20\% centroid replacement. Missingness clears features and visibility; replacement uses the training-normal centroid for selected observed coordinates among the first eight, retaining categorical flags. Both preserve endpoints. Checkpoints minimize mean validation BCE plus Brier loss over these conditions. Thresholds maximize clean-validation F1, choosing the highest tie, and stay fixed across test conditions.\par
+Training windows receive fixed cyclic assignments to clean, 20\% missing or 20\% centroid replacement. Missingness clears features and visibility. Replacement uses the training-normal centroid for selected observed coordinates among the first eight, retaining categorical flags. Both preserve endpoints. Checkpoints minimize mean validation BCE plus Brier loss over these conditions. Thresholds maximize clean-validation F1, choosing the highest tie, and stay fixed across test conditions.\par
 
 \begin{center}
 \fontsize{9.5}{11}\selectfont
@@ -82,30 +82,30 @@ Device / framework & NVIDIA RTX 5000 Ada / PyTorch 2.9.1+cu128, CUDA 12.8 \\
 Seeds / optimizer & 11, 23, 37, 51, 71 / AdamW \\
 Learning rate / decay / supervised gradient clip & 0.001 / 0.0001 / 5 \\
 Batch / supervision / stopping patience & 256 windows / at most 40 epochs / 8 epochs \\
-New graph variants: parameters / pretraining & 121,643 / 5 epochs; EDGE\_DENSE uses none \\
+New graph variant parameters / pretraining & 121,643 / 5 epochs (EDGE\_DENSE uses none) \\
 \bottomrule
 \end{tabularx}
 \end{center}
 
-New fits and thresholds were frozen before test inference; nine imported baselines remain unchanged. Consistency adds training passes despite matching parameter counts, and its original view can be corrupted.\par
+New fits and thresholds were frozen before test inference. Nine imported baselines remain unchanged. Consistency adds training passes despite matching parameter counts, and its original view can be corrupted.\par
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{figures/figS3.pdf}
-\caption{Optimization diagnostics. Curves show supervised BCE plus Brier loss, excluding consistency penalties. Baseline curves are unchanged. Each epoch averages seeds still represented after stopping; changing seed composition can affect the tail. These curves establish neither convergence nor equal training computation.}
+\caption{Optimization diagnostics. Curves show supervised BCE plus Brier loss, excluding consistency penalties. Baseline curves are unchanged. Each epoch averages seeds still represented after stopping. Changing seed composition can affect the tail. These curves establish neither convergence nor equal training computation.}
 \end{figure}
 
 \newpage
 
 \section*{S4. Paired uncertainty, controls and evidence checks}
 
-Clean capture-macro AP differences versus GMAE were +0.01580 for EDGE\_GMAE and +0.00518 for CONS\_GMAE. Their ordinary 95\% intervals were [0.00097, 0.03710] and [-0.00184, 0.01441]. The respective 97.5\% marginal intervals, applying a nominal two-comparison Bonferroni adjustment, were [-0.00036, 0.04321] and [-0.00257, 0.01639]. Neither adjusted interval excludes zero; neither superiority nor equivalence is established. Prior inspection of these test captures makes the follow-up exploratory.\par
+Clean capture-macro AP differences versus GMAE were +0.01580 for EDGE\_GMAE and +0.00518 for CONS\_GMAE. Their ordinary 95\% intervals were [0.00097, 0.03710] and [-0.00184, 0.01441]. The respective 97.5\% marginal intervals, applying a nominal two-comparison Bonferroni adjustment, were [-0.00036, 0.04321] and [-0.00257, 0.01639]. Neither adjusted interval excludes zero. Neither superiority nor equivalence is established. Prior inspection of these test captures makes the follow-up exploratory.\par
 
-The shared paired bootstrap resampled model seeds and contiguous 64-window blocks within each fixed capture: 60, 6 and 5 blocks for captures 10, 11 and 12. It recomputed tie-aware AP with equal capture weights for 1,000 draws; no zero-positive draws were rejected. Flows were not independent replicates; captures were not sampled to represent organizations. Small block populations and test reuse limit inference.\par
+The shared paired bootstrap resampled model seeds and contiguous 64-window blocks within each fixed capture (60, 6 and 5 blocks for captures 10, 11 and 12). It recomputed tie-aware AP with equal capture weights for 1,000 draws. No zero-positive draws were rejected. Flows were not independent replicates. Captures were not sampled to represent organizations. Small block populations and test reuse limit inference.\par
 
-EDGE's mean gains were +0.00079, +0.04242 and +0.00420 by capture, concentrating the effect in capture 11. The no-pretraining EDGE\_DENSE control had the largest clean mean AP (0.99500), compared with EDGE\_GMAE (0.99411). At 50\% artificial missingness, their AP values were 0.95360 and 0.95962; these are descriptive secondary comparisons. CONS\_PRE (0.98272 clean AP) was close to CONS\_GMAE (0.98348). Compared with GMAE, CONS\_PRE changes both view count and latent alignment, leaving alignment's contribution unresolved.\par
+EDGE's mean gains were +0.00079, +0.04242 and +0.00420 by capture, concentrating the effect in capture 11. The no-pretraining EDGE\_DENSE control had the largest clean mean AP (0.99500), compared with EDGE\_GMAE (0.99411). At 50\% artificial missingness, their AP values were 0.95360 and 0.95962. These are descriptive secondary comparisons. CONS\_PRE (0.98272 clean AP) was close to CONS\_GMAE (0.98348). Compared with GMAE, CONS\_PRE changes both view count and latent alignment, leaving alignment's contribution unresolved.\par
 
-Evidence checks covered 975 evaluation archives, 6,825 recomputed metrics and 65 checkpoint hashes. Seventy-five checkpoint replays reproduced 3,570,325 model-flow predictions exactly. Calibration counts include 46,414,225 repeated model-flow predictions, not that many independent flows. Reliability bins and displays clip 321 scores slightly above one (within 1.19e-7); raw ranking metrics remain unchanged. Common-session host-wall median latency was 2.374/2.929/2.381 ms per window for GMAE/EDGE/CONS, including decoded-input transfer and graph construction but excluding capture ingestion and flow completion.\par
+Evidence checks covered 975 evaluation archives, 6,825 recomputed metrics and 65 checkpoint hashes. Seventy-five checkpoint replays reproduced 3,570,325 model-flow predictions exactly. Calibration counts include 46,414,225 repeated model-flow predictions, not that many independent flows. Reliability bins and displays clip 321 scores slightly above one (within 1.19e-7). Raw ranking metrics remain unchanged. Common-session host-wall median latency was 2.374/2.929/2.381 ms per window for GMAE/EDGE/CONS, including decoded-input transfer and graph construction but excluding capture ingestion and flow completion.\par
 
 \begin{figure}[H]
 \centering
