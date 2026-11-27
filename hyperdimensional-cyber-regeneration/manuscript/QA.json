@@ -1,7 +1,7 @@
 {
   "document_sha256": {
-    "main": "ba4bb61a384dfd421ea5595ec25e3adcaf2f86b95afe18972203989bd57e5b5b",
-    "supplement": "32ac1ffdd12003a0c75bb00629c915736ef015ad2ef3201d79e6ee839446a4f9"
+    "main": "c1603c7b55eadce7b34b0e55f97b926f39d9c1df57b62d786a9bc56a78eeb33a",
+    "supplement": "22686d3df421ad2940cb83561b799663f77b36878ff4c865fc0515deb349662b"
   },
   "pages": {
     "main": 8,
@@ -13,20 +13,21 @@
   },
   "main_abstract_words": 208,
   "anonymous_archive_entries": 15,
-  "anonymous_archive_sha256": "b1ff36a574a0b28804e69dba0c7b15e9ab6d023933708da163b80cab101a9792",
+  "anonymous_archive_sha256": "43376024d7c404a7c07a82a99a070a9499aaa5941ef5107c2bf5d1b616066461",
   "checks": {
     "source_and_figure_hash_parity": "passed",
     "archive_direct_identifier_and_author_metadata_scan": "passed",
     "latex_overfull_and_font_warning_scan": "passed",
     "pdf_page_and_figure_counts": "passed",
-    "scientific_equation_and_result_review": "Passed: all numeric tokens in original order, displayed equations, figure assets and references unchanged. Punctuation changes in narrative, captions and a supplemental table label preserve meaning. Independent grammar and source review passed.",
-    "rendered_page_visual_review": "All eight main and four supplement pages visually reviewed after the punctuation revision. Tables, equations, figures and complete captions remain readable and unclipped. The conclusion and all twelve references fit main page 8, and tight Figure S1 remains fully on supplement page 1.",
+    "scientific_equation_and_result_review": "Passed: displayed equations, result tables, captions, figure assets and references unchanged. All numerical information preserved, with one explicit addition of the existing 28-dimensional LOGIT input. Shared synthetic settings and training-confound caveat relocated within the supplement. One confidence interval typeset as inline math to prevent a minus-sign line break.",
+    "rendered_page_visual_review": "Changed main pages 1, 3, 4 and 7 and all four supplement pages visually reviewed. Main pages 2, 5, 6 and 8 pixel-identical to previously reviewed pages. All figures, captions and introductions fit without clipping or overlap. The negative confidence bound stays together on supplemental page 4.",
     "abstract_structure_and_scope": "One paragraph; context, methodology, data, experiments, qualitative findings and significance; no numerical results, references or unsupported significance/operational-planning claims; below 300-word template limit.",
     "citation_order_and_support": "Twelve references, all cited in first-appearance order; five additions verified from primary sources; CTU-13 consistently numbered [8] in main and supplement.",
     "conclusion_contribution_success_and_scope": "Independent review passed: two task-specific methods, successes limited to observed means, condition-dependent pretraining insight, and future planning relevance without an operational-planning claim.",
-    "readability_and_examples": "Plainer abstract, introduction, method explanations, metric interpretation, results, limitations, conclusion and supplemental prose. Four clearly illustrative examples: isolation versus gathering evidence; missing byte count on shared-server flows; duration hidden in a training view; an action requiring two prerequisites. Synthetic utility definition verified against src/regen.py:159-162 and scripts/run_v3.py:143-150."
+    "readability_and_examples": "Plainer abstract, introduction, method explanations, metric interpretation, results, limitations, conclusion and supplemental prose. Four clearly illustrative examples: isolation versus gathering evidence; missing byte count on shared-server flows; duration hidden in a training view; an action requiring two prerequisites. Synthetic utility definition verified against src/regen.py:159-162 and scripts/run_v3.py:143-150.",
+    "main_self_containment": "Independent review passed. Main includes definitions, dataset/splits/features, methods, controls, optimization, results, uncertainty, costs and scope. No supplemental pointers remain. LOGIT dimension, pretraining epochs and F1 threshold/tie selection checked against implementation."
   },
-  "scope": "Punctuation revision of main and supplement, replacing prose semicolons and unnecessary colons with sentences or connecting words. Results, equations, figure assets, references and scientific scope preserved. Main 8 pages/4 figures and supplement 4 pages/4 figures. No model training/inference.",
+  "scope": "Main paper made independent of supplemental findings and figure pointers. Supplement gains an overview and purpose statements for all four sections. Main 8 pages/4 figures and supplement 4 pages/4 figures. Scientific results and scope preserved. No model training/inference.",
   "title": "Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty",
   "title_words": 9,
   "limitations_words_before": 145,
@@ -92,5 +93,23 @@
       }
     },
     "retained_punctuation": "Standard keyword separators, two equation-introduction colons, bibliography and link syntax."
+  },
+  "self_containment_revision": {
+    "main_supplement_pointers_before": 2,
+    "main_supplement_pointers_after": 0,
+    "main_clarifications": [
+      "Flow classification and endpoint graphs are distinguished from operational planning.",
+      "LOGIT is logistic regression on 28 inputs with 29 parameters.",
+      "Pretrained graph variants use five epochs; EDGE_DENSE uses none.",
+      "Thresholds maximize clean-validation attack F1, choosing highest thresholds on ties."
+    ],
+    "supplement_context": [
+      "Overview separates synthetic decision studies from recorded-flow diagnostics.",
+      "S1 explains evaluating belief repair and logical constraints by action quality.",
+      "S2 motivates direct candidate prediction and inexpensive comparisons.",
+      "S3 explains preparation and training diagnostics.",
+      "S4 distinguishes variation across seeds/captures, reproducibility and generalization."
+    ],
+    "preserved_evidence": "All original empirical values retained. Shared synthetic setup and training confound moved from S1 to S2."
   }
 }

@@ -2,9 +2,11 @@
 
 ## Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty
 
+Sections S1–S2 examine synthetic decisions. Sections S3–S4 add training and uncertainty diagnostics for the main recorded-flow classification study.
+
 ### S1. From selective repair to structured regeneration
 
-Three synthetic studies used independent snapshots, three partial observers and noisy prior evidence. Regret is the chosen candidate's utility loss against an oracle with hidden truth. Utility earns value only when all prerequisites hold and always subtracts cost. Each used 20,000 training and 2,000 validation snapshots and five seeds (11, 23, 37, 51, 71). Later studies used separate 4,000-snapshot test pools. Regret differs from flow average precision (AP).
+This section tests whether repairing beliefs or enforcing logical constraints improves action choices in synthetic scenarios. Regret is the chosen candidate's utility loss against an oracle with hidden truth. Utility earns value only when all prerequisites hold and always subtracts cost.
 
 Hyperdimensional model P changed at most six of 64 beliefs. With 20% targeted intervention and 2,048 bytes per remote observer, dense decision-aware full reconstruction (B2) achieved lower regret.
 
@@ -15,13 +17,17 @@ Hyperdimensional model P changed at most six of 64 beliefs. With 20% targeted in
 
 Regret includes all 4,000 snapshots. Recall excludes 33 without feasible candidates. Sparse edits saved no decoder computation. Full reconstruction preceded gating.
 
-JH predicted root and child-conditional probabilities, kept child probabilities no higher than their parents, and counted shared roots once per candidate. Equally weighted regret across benign, targeted, random and coherent conditions was 0.08593 (JH) versus 0.08424 (dense independent ID) (difference +0.00169, 95% interval [-0.00017, 0.00350]). Logical violations fell from 4.5692% (ID) to zero (JH), without established decision benefit. P/B2's targeted-only training versus new models' mixed corruptions confounds architecture comparisons. All shared a symbolic report codec. No hyperdimensional communication advantage was demonstrated.
+JH predicted root and child-conditional probabilities, kept child probabilities no higher than their parents, and counted shared roots once per candidate. Equally weighted regret across benign, targeted, random and coherent conditions was 0.08593 (JH) versus 0.08424 (dense independent ID) (difference +0.00169, 95% interval [-0.00017, 0.00350]). Logical violations fell from 4.5692% (ID) to zero (JH), without established decision benefit. All shared a symbolic report codec. No hyperdimensional communication advantage was demonstrated.
 
 ![Figure S1. Structured synthetic regeneration. Panels show (a) four-condition mean regret and (b) child-above-parent violation rates for matched new variants. ID/IH use independent dense/hyperdimensional predictions. JD/JH use dependency factorization. JH_ERM uses mean group risk. JH_product scores marginal products from the JH checkpoint. Plot intervals are descriptive seed-t intervals. Text intervals cross seeds and 250 topology clusters using 2,000 paired bootstrap draws.](figures/figS1.pdf)
 
 \newpage
 
 ### S2. Direct candidate prediction and inexpensive alternatives
+
+This section asks whether predicting action feasibility directly can replace fact reconstruction. Simpler models test whether extra context and complexity improve choices.
+
+The shared synthetic setup used independent snapshots, three partial observers and noisy prior evidence. All three studies used 20,000 training and 2,000 validation snapshots and five seeds (11, 23, 37, 51, 71). Later studies used separate 4,000-snapshot test pools. Regret differs from flow average precision (AP). P/B2's targeted-only training versus new models' mixed corruptions confounds architecture comparisons.
 
 The third study predicted candidate feasibility without fact reconstruction. SCR combines four experts using observable global context. CAND_CTX uses one contextual expert and CAND_LOCAL omits context. Logistic regression (LOGIT) and a small denoising autoencoder (DAE) predict facts. DAE reconstructs supplied, potentially corrupted observations, not oracle truth. Previously fitted ID and JH models were reevaluated unchanged on the new test pool.
 
@@ -36,6 +42,8 @@ All 25 newly fitted models reached the 40-epoch limit. Selected checkpoints were
 \newpage
 
 ### S3. Captured-flow protocol and optimization diagnostics
+
+This section explains how flows were prepared and models trained, so the learning curves can be interpreted and the comparison reproduced.
 
 CTU-13 [8] records controlled botnets in university traffic. Only From-Normal/From-Botnet rows enter, totaling 799,777/19,976,700 (4.00%). Training uses 442,084 flows (captures 1–8, 13), validation 214,880 (capture 9) and testing 142,813 (captures 10–12). Training flows complete before validation, and validation before testing. Hosts can recur. Capture 12 contains NSIS.ay, absent from training. Captures 10–11 contain Rbot. Reference numbering follows the main manuscript.
 
@@ -59,7 +67,9 @@ New fits and thresholds were frozen before test inference. Nine imported baselin
 
 ### S4. Paired uncertainty, controls and evidence checks
 
-Clean capture-macro AP differences versus GMAE were +0.01580 for EDGE_GMAE and +0.00518 for CONS_GMAE. Their ordinary 95% intervals were [0.00097, 0.03710] and [-0.00184, 0.01441]. The respective 97.5% marginal intervals, applying a nominal two-comparison Bonferroni adjustment, were [-0.00036, 0.04321] and [-0.00257, 0.01639]. Neither adjusted interval excludes zero. Neither superiority nor equivalence is established. Prior inspection of these test captures makes the follow-up exploratory.
+This section examines whether average gains are consistent across training seeds and traffic captures. Replaying saved models checks whether the reported results can be reproduced. Performance on new traffic remains a separate question.
+
+Clean capture-macro AP differences versus GMAE were +0.01580 for EDGE_GMAE and +0.00518 for CONS_GMAE. Their ordinary 95% intervals were [0.00097, 0.03710] and [-0.00184, 0.01441]. The respective 97.5% marginal intervals, applying a nominal two-comparison Bonferroni adjustment, were \([-0.00036, 0.04321]\) and [-0.00257, 0.01639]. Neither adjusted interval excludes zero. Neither superiority nor equivalence is established. Prior inspection of these test captures makes the follow-up exploratory.
 
 The shared paired bootstrap resampled model seeds and contiguous 64-window blocks within each fixed capture (60, 6 and 5 blocks for captures 10, 11 and 12). It recomputed tie-aware AP with equal capture weights for 1,000 draws. No zero-positive draws were rejected. Flows were not independent replicates. Captures were not sampled to represent organizations. Small block populations and test reuse limit inference.
 

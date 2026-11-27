@@ -2,7 +2,7 @@
 
 **Title:** Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty.
 
-The anonymous draft consolidates the completed synthetic regeneration studies, inexpensive ML comparisons, captured CTU-13 application, and two GraphMAE variants. The main paper centers on the captured-flow experiment. Earlier synthetic decision-regret findings remain separate in the supplement; they are not evidence of real-world course-of-action performance.
+The anonymous package contains the completed synthetic regeneration studies, inexpensive ML comparisons, captured CTU-13 application, and two GraphMAE variants. The main paper presents the captured-flow study with its methods, results, uncertainty and scope, without references to supplemental figures or dependence on the synthetic results. The supplement introduces the purpose of each section and separates earlier synthetic decision experiments from additional captured-flow diagnostics. Synthetic decision-regret findings are not evidence of real-world course-of-action performance.
 
 | Deliverable | Content |
 | --- | --- |
