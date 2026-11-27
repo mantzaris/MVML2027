@@ -18,7 +18,7 @@
         "/Title": "Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty",
         "/Subject": "Anonymous research draft",
         "/Producer": "xdvipdfmx (20220710)",
-        "/CreationDate": "D:20261126193733-05'00'"
+        "/CreationDate": "D:20261126194144-05'00'"
       },
       "outbound_links": [
         "https://arxiv.org/abs/2205.10803",
@@ -33,7 +33,7 @@
         "https://proceedings.mlr.press/v70/guo17a.html",
         "https://proceedings.mlr.press/v70/guo17a.html"
       ],
-      "sha256": "c1603c7b55eadce7b34b0e55f97b926f39d9c1df57b62d786a9bc56a78eeb33a"
+      "sha256": "8947b6d55293068e112ca71d8829e74280c11f08f7e5319b351ff0c395a89aee"
     },
     "supplement": {
       "pages": 4,
@@ -52,13 +52,14 @@
         "/Title": "Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty \u2013 Supplementary Material",
         "/Subject": "Anonymous research draft",
         "/Producer": "xdvipdfmx (20220710)",
-        "/CreationDate": "D:20261126193736-05'00'"
+        "/CreationDate": "D:20261126194146-05'00'"
       },
       "outbound_links": [],
-      "sha256": "22686d3df421ad2940cb83561b799663f77b36878ff4c865fc0515deb349662b"
+      "sha256": "9b3ace836e7d2c94be9a196ac4b04458659242e751d028c454c27e6892d254e9"
     }
   },
   "sources": {
+    "manuscript/anonymous/BUILD.txt": "10292484acfb805c33d355750746d7f00fab67dee24c04c17d9e164c7694fa51",
     "manuscript/anonymous/anonymous-draft.sty": "657859d84481e73e64fe3c5cf90936306fee9cb62b368be2379fd180aeb910bd",
     "manuscript/anonymous/figures/fig1.pdf": "f98deaf952913816ad09ab76c3f658fea7cb3b4c20994efccad83ffbb090c4e9",
     "manuscript/anonymous/figures/fig2.pdf": "ec75ea370fe6968717e0e6cd7385fdcf5f4d958c4bc1341acf5b258ca7db7586",
@@ -69,15 +70,15 @@
     "manuscript/anonymous/figures/figS3.pdf": "e9505d17482dab63e842ddd75449253161ccbfcf43dd985eb259705d7f5140d7",
     "manuscript/anonymous/figures/figS4.pdf": "ab7a6af83ac50358c9b970d0c7dbfe8bf07c8aa2f953265d7dcc09974b4a2019",
     "manuscript/anonymous/main.md": "55461d4db5f2c537d46666ec4ab89109c0eb9e60507b4e82c7d76b7dc16311d7",
-    "manuscript/anonymous/main.pdf": "c1603c7b55eadce7b34b0e55f97b926f39d9c1df57b62d786a9bc56a78eeb33a",
+    "manuscript/anonymous/main.pdf": "8947b6d55293068e112ca71d8829e74280c11f08f7e5319b351ff0c395a89aee",
     "manuscript/anonymous/main.tex": "2b89cf6e98ecf8fab85fa9d0ccf5a1c0f160de13399806129104a08811220bfa",
     "manuscript/anonymous/supplement.md": "ff5e21c6b264f0706cfe717742b06278710f43204f4d7d67424727cb13438262",
-    "manuscript/anonymous/supplement.pdf": "22686d3df421ad2940cb83561b799663f77b36878ff4c865fc0515deb349662b",
+    "manuscript/anonymous/supplement.pdf": "9b3ace836e7d2c94be9a196ac4b04458659242e751d028c454c27e6892d254e9",
     "manuscript/anonymous/supplement.tex": "05156862479aa1426ee29ab34ea2f6693e7a7cea75d1e57572db683f3162b3da"
   },
   "archive": {
     "path": "manuscript/anonymous-source.zip",
-    "sha256": "43376024d7c404a7c07a82a99a070a9499aaa5941ef5107c2bf5d1b616066461"
+    "sha256": "c6b3abdc8fec9b5f45c78374222b15e5ae9a50ea62ecfe952675ff0b5abbe114"
   },
   "builder_sha256": "f0abff1568067114d70669ada34490763410b74f320ee44a7694f1e9e301d47b",
   "figure_provenance_sha256": "d0ee212d693c22052299bbfb1bc06ed013a640675abc2f511519273a9ae13d8a"

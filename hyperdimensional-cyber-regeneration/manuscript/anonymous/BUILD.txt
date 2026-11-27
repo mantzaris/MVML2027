@@ -1,0 +1,27 @@
+Anonymous manuscript source package
+
+Compile with XeLaTeX (not pdfLaTeX). Required fonts are Tinos and Arimo.
+Required TeX packages include fontspec, newtxmath, amsmath, amssymb,
+graphicx, booktabs, array, tabularx, float, placeins, titlesec, caption,
+enumitem, geometry and hyperref.
+
+From the extracted directory, run:
+
+  xelatex -interaction=nonstopmode -halt-on-error -no-shell-escape main.tex
+  xelatex -interaction=nonstopmode -halt-on-error -no-shell-escape main.tex
+
+Compile supplement.tex separately using the same command twice.
+No BibTeX step is needed. References are included in main.tex.
+Keep the figures directory alongside the TeX files.
+
+main.pdf is the eight-page paper with four figures.
+supplement.pdf is the four-page companion with four additional figures.
+The main paper can be read independently of the supplement.
+
+The .md files provide editable narrative copies. The .tex files are the
+complete buildable sources. Editing Markdown alone will not update TeX.
+No datasets, training checkpoints or experiment logs are needed to build.
+
+Tinos and Arimo are metric-compatible alternatives to Times New Roman
+and Arial. Confirm the final conference formatting and upload requirements
+before submission, including anonymity and any supplemental upload.

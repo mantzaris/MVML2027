@@ -1,7 +1,7 @@
 {
   "document_sha256": {
-    "main": "c1603c7b55eadce7b34b0e55f97b926f39d9c1df57b62d786a9bc56a78eeb33a",
-    "supplement": "22686d3df421ad2940cb83561b799663f77b36878ff4c865fc0515deb349662b"
+    "main": "8947b6d55293068e112ca71d8829e74280c11f08f7e5319b351ff0c395a89aee",
+    "supplement": "9b3ace836e7d2c94be9a196ac4b04458659242e751d028c454c27e6892d254e9"
   },
   "pages": {
     "main": 8,
@@ -12,8 +12,8 @@
     "supplement": 4
   },
   "main_abstract_words": 208,
-  "anonymous_archive_entries": 15,
-  "anonymous_archive_sha256": "43376024d7c404a7c07a82a99a070a9499aaa5941ef5107c2bf5d1b616066461",
+  "anonymous_archive_entries": 16,
+  "anonymous_archive_sha256": "c6b3abdc8fec9b5f45c78374222b15e5ae9a50ea62ecfe952675ff0b5abbe114",
   "checks": {
     "source_and_figure_hash_parity": "passed",
     "archive_direct_identifier_and_author_metadata_scan": "passed",
@@ -25,9 +25,10 @@
     "citation_order_and_support": "Twelve references, all cited in first-appearance order; five additions verified from primary sources; CTU-13 consistently numbered [8] in main and supplement.",
     "conclusion_contribution_success_and_scope": "Independent review passed: two task-specific methods, successes limited to observed means, condition-dependent pretraining insight, and future planning relevance without an operational-planning claim.",
     "readability_and_examples": "Plainer abstract, introduction, method explanations, metric interpretation, results, limitations, conclusion and supplemental prose. Four clearly illustrative examples: isolation versus gathering evidence; missing byte count on shared-server flows; duration hidden in a training view; an action requiring two prerequisites. Synthetic utility definition verified against src/regen.py:159-162 and scripts/run_v3.py:143-150.",
-    "main_self_containment": "Independent review passed. Main includes definitions, dataset/splits/features, methods, controls, optimization, results, uncertainty, costs and scope. No supplemental pointers remain. LOGIT dimension, pretraining epochs and F1 threshold/tie selection checked against implementation."
+    "main_self_containment": "Independent review passed. Main includes definitions, dataset/splits/features, methods, controls, optimization, results, uncertainty, costs and scope. No supplemental pointers remain. LOGIT dimension, pretraining epochs and F1 threshold/tie selection checked against implementation.",
+    "source_package_rebuild": "Passed: 16 files, ZIP integrity and source parity, unchanged extracted PDF text, 8/4 pages, blank author metadata. BUILD.txt documents XeLaTeX dependencies and pending conference-format/upload checks."
   },
-  "scope": "Main paper made independent of supplemental findings and figure pointers. Supplement gains an overview and purpose statements for all four sections. Main 8 pages/4 figures and supplement 4 pages/4 figures. Scientific results and scope preserved. No model training/inference.",
+  "scope": "Source package regenerated with anonymous build instructions. Main and supplement text unchanged, with 8 and 4 pages. Archive integrity, file parity and author metadata checked. No experiments rerun.",
   "title": "Toward Vector-Symbolic and Neurosymbolic Cyber Planning under Adversarial Uncertainty",
   "title_words": 9,
   "limitations_words_before": 145,
